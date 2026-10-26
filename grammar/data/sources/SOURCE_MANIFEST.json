@@ -1,0 +1,40 @@
+{
+ "grammar_version": "grammar-0.2.0",
+ "concepts_version": "concepts-0.2.1",
+ "oracle_file": "oracle-cards-20261021210201.jsonl.gz",
+ "oracle_file_sha256": "16929bdb0b0b743e1d836b81a21e038d67d658572f64ab72ca0d71642a12631f",
+ "kb_file": "mtg_cards_v0.2.sqlite",
+ "collection_oracle_ids": "3368",
+ "cards_parsed": "31385",
+ "built_utc": "2026-10-22T03:53:41Z",
+ "build_seconds": "52.4",
+ "scryfall_bulk_updated_at": "2026-10-21T21:02:01.935+00:00",
+ "scryfall_download_uri": "https://data.scryfall.io/oracle-cards/oracle-cards-20261021210201.jsonl.gz",
+ "catalogs": "Scryfall /catalog/* fetched 2026-10-22, copied to data/catalogs/",
+ "kb_external_oracle_run": "7e517de93bb47238",
+ "semantics_version": "semantics-0.1.1",
+ "n_ability_contracts": "6858",
+ "validation_version": "validation-0.1.0",
+ "rulings_file": "data/rulings/rulings-20261021210033.jsonl.gz",
+ "rulings_file_sha256": "409a959cb016a513e90f61e9604cb6dd5d8a4fa691dfb5414940b6af2099648c",
+ "rulings_source": "Scryfall bulk-data \"rulings\", updated 2026-10-21T21:00:33Z",
+ "sets_cached": [
+  "eoc",
+  "eoe",
+  "msh",
+  "tla",
+  "tle",
+  "tmc",
+  "tmt",
+  "trc",
+  "trk"
+ ],
+ "heldout_freeze": {
+  "file": "validation/heldout_trk_trc_predictions.json",
+  "sha256": "bc22d31b15e0d2ef0954507763d1c29ebf8fef22f33e2885c4f54b34446329ab",
+  "sets": [
+   "trk",
+   "trc"
+  ]
+ }
+}

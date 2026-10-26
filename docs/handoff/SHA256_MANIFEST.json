@@ -1,0 +1,29 @@
+{
+  "generated": "2026-10-25",
+  "files": {
+    "00_PROJECT_START_HERE.md": {
+      "bytes": 4981,
+      "sha256": "ffeb0c8dfb6b98517b920459827d338e96022287715661dc4a20a1eb7c9886b2"
+    },
+    "01_GRAMMAR_CONTRACT_VERIFICATION.md": {
+      "bytes": 5922,
+      "sha256": "56e7bcae70216517fd739542525e5013e242fbceb1872715bb36cb32e2db3e48"
+    },
+    "02_EVALUATOR_VALIDATION_REGISTER.md": {
+      "bytes": 4410,
+      "sha256": "3ced3c71bdb431ebbd1a14207a569060243a66384edf3ab5f2fccfca67756fd6"
+    },
+    "DIO_v3.1.1_A1-A7_COMPATIBILITY_ACCEPTED.md": {
+      "bytes": 4434,
+      "sha256": "c0df5f6a8e67a184bd6d821a46ff5fa4360e4220cc9d2ef1bc18b7bbb1bffa13"
+    },
+    "DIO_v3.1.1_registry_delta_v0.1.json": {
+      "bytes": 4224,
+      "sha256": "c963fcdea69eb4f7355ed8cb8bf1911cb2b87967c905256d8ce99ff3b8ea732c"
+    },
+    "PROJECT_FILE_ACTIONS.md": {
+      "bytes": 2684,
+      "sha256": "c3ca659bc3efa1b77105231bcd1c291a9f872dd0d7978757514fb2a9aa2ae7ad"
+    }
+  }
+}

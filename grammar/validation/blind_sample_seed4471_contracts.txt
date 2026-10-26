@@ -1,0 +1,283 @@
+#60356 Flaring Cinder: When this creature enters and whenever you cast a spell with mana value 4 or greater, you may discard a card. If you do, draw a card.
+[trigger] 
+  TRIGGER any of: spell.cast(actor='you'{player=you,relation_to_observer=observer_controller} object='a spell with mana value 4 or greater'{filters={'axis': 'mana_value', 'op': '>=', 'value': 4},quantity=1,zone=stack}) | battlefield.enter(subject='this creature'{self=True})
+  PRODUCES card.discard (op.card.discard) actor=you(implicit) object='a card'{quantity=1} cert=optional
+  PRODUCES card.draw (op.card.draw) actor=you(implicit) object='a card'{quantity=1} cert=conditional
+  PROCESS proc.if_you_do
+
+#26567 Vision Skeins: Each player draws two cards.
+[cast] 
+  PRODUCES card.draw (op.card.draw) actor='each player'{cardinality=per_player,player=any_player,relation_to_observer=any} object='two cards'{quantity=2} cert=guaranteed
+
+#43279 The Neutrinos: Whenever another creature you control enters, ~ get +1/+0 until end of turn.
+[trigger] 
+  TRIGGER any of: battlefield.enter(subject='another creature you control'{card_type=creature,controller=you,exclude_self=True,quantity=1,zone=battlefield})
+  TIMING time.until_eot
+  MODIFIES characteristics.change (op.pt.modify) pt_change='+1/+0'{pt_change=+1/+0} subject='~'{self=True} cert=guaranteed
+
+#6569 Swallowed by Leviathan: Choose target spell. Surveil 2, then counter the chosen spell unless its controller pays {1} for each card in your graveyard.
+[cast] 
+  TARGET target spell
+  STATE st.unless_payment mana='{1}'{symbols=1} player='its controller'{player=controller_of_referenced_object}
+  AMP amp.count 'for <obj.each> in <zone>'
+  PREVENTS spell.countered (op.spell.counter) actor=you(implicit) object='the chosen spell'{reference=antecedent,zone=stack} cert=guaranteed
+  PRODUCES state.chosen_value (op.choice.value) actor=you(implicit) object='target spell'{selection=target,zone=stack} cert=guaranteed
+  KEYWORD kwa.surveil
+
+#5934 Grub, Storied Matriarch // Grub, Notorious Auntie: Whenever this creature enters or transforms into ~, return up to one target Goblin card from your graveyard to your hand.
+[trigger] 
+  TRIGGER any of: battlefield.enter(subject='this creature'{self=True}) | permanent.transform(into='~'{self=True} subject='this creature'{self=True})
+  TARGET up to one target goblin card
+  TRANSFORMS card.return_to_hand (op.zone.return) actor=you(implicit) from='your graveyard'{zone=graveyard,zone_owner=you} object='up to one target goblin card'{quantity_max=1,selection=target,subtype=goblin} to='your hand'{zone=hand,zone_owner=you} cert=guaranteed
+
+#41675 Retrofitter Foundry: {3}: Untap this artifact.
+[activate] 
+  COST cost.mana mana='{3}'{symbols=3}
+  PRODUCES permanent.untap (op.permanent.untap) actor=you(implicit) object='this artifact'{self=True} cert=guaranteed
+
+#55836 Clockwork Drawbridge: {2}{W}, {T}: Tap target creature.
+[activate] 
+  COST cost.mana mana='{2}{W}'{symbols=2/W}
+  COST cost.tap_self self='None'{self=True}
+  TARGET target creature
+  PRODUCES permanent.tap (op.permanent.tap) actor=you(implicit) object='target creature'{card_type=creature,selection=target,zone=battlefield} cert=guaranteed
+
+#10268 Seaside Citadel: This land enters tapped.
+[replacement] 
+  PREVENTS battlefield.enter (op.entry.tapped) actor=you(implicit) subject='this land'{self=True} cert=guaranteed
+
+#34114 Izzet Keyrune: {T}: Add {U} or {R}.
+[activate] 
+  COST cost.tap_self self='None'{self=True}
+  PRODUCES mana.add (op.mana.add) actor=you(implicit) mana='{U}'{symbols=U} mana_2='{R}'{symbols=R} cert=guaranteed mana={'alternatives': [['U'], ['R']], 'mode': 'alternatives', 'quantity': 1}
+  PRODUCES permanent.tapped_for_mana (None) subject='None'{self=True} cert=None
+
+#41359 Deceive the Messenger: Target creature gets -3/-0 until end of turn.
+[cast] 
+  TARGET target creature
+  TIMING time.until_eot
+  MODIFIES characteristics.change (op.pt.modify) pt_change='-3/-0'{pt_change=-3/-0} subject='target creature'{card_type=creature,selection=target,zone=battlefield} cert=guaranteed
+
+#48893 Heartwood Crafter // Soul Tether: Create a Heartwood token.
+[cast] 
+  PRODUCES token.create (op.token.create) actor=you(implicit) object='token'{token=True,zone=battlefield} cert=guaranteed
+
+#59501 Mutant Surveyor: Start your engines!
+[continuous] 
+  KEYWORD kw.start_your_engines
+
+#41537 Legacy Weapon: {W}{U}{B}{R}{G}: Exile target permanent.
+[activate] 
+  COST cost.mana mana='{W}{U}{B}{R}{G}'{symbols=W/U/B/R/G}
+  TARGET target permanent
+  TRANSFORMS exile.enter (op.zone.exile) actor=you(implicit) object='target permanent'{selection=target,zone=battlefield} cert=guaranteed
+
+#10043 Tanglepool Bridge: {T}: Add {G} or {U}.
+[activate] 
+  COST cost.tap_self self='None'{self=True}
+  PRODUCES mana.add (op.mana.add) actor=you(implicit) mana='{G}'{symbols=G} mana_2='{U}'{symbols=U} cert=guaranteed mana={'alternatives': [['G'], ['U']], 'mode': 'alternatives', 'quantity': 1}
+  PRODUCES permanent.tapped_for_mana (None) subject='None'{self=True} cert=None
+
+#30621 Arcane Sanctum: {T}: Add {W}, {U}, or {B}.
+[activate] 
+  COST cost.tap_self self='None'{self=True}
+  PRODUCES mana.add (op.mana.add) actor=you(implicit) mana='{W}'{symbols=W} mana_2='{U}'{symbols=U} mana_3='{B}'{symbols=B} cert=guaranteed mana={'alternatives': [['W'], ['U'], ['B']], 'mode': 'alternatives', 'quantity': 1}
+  PRODUCES permanent.tapped_for_mana (None) subject='None'{self=True} cert=None
+
+#5702 Michelangelo, Weirdness to 11: When ~ enters, create a Mutagen token.
+[trigger] 
+  TRIGGER any of: battlefield.enter(subject='~'{self=True})
+  PRODUCES token.create (op.token.create) actor=you(implicit) object='token'{token=True,zone=battlefield} cert=guaranteed
+
+#45212 Icecave Crasher: Whenever a land you control enters, this creature gets +1/+0 until end of turn.
+[trigger] 
+  TRIGGER any of: battlefield.enter(subject='a land you control'{card_type=land,controller=you,quantity=1,zone=battlefield})
+  TIMING time.until_eot
+  MODIFIES characteristics.change (op.pt.modify) pt_change='+1/+0'{pt_change=+1/+0} subject='this creature'{self=True} cert=guaranteed
+
+#19409 Skilled Battlecarver: During your turn, this creature has first strike.
+[continuous] 
+  TIMING time.window
+  MODIFIES characteristics.change (op.ability.grant) ability='first strike'{ability=first strike} object='this creature'{self=True} cert=guaranteed
+
+#41234 Hapatra, Vizier of Poisons: Whenever ~ deals combat damage to a player, you may put a -1/-1 counter on target creature.
+[trigger] 
+  TRIGGER any of: combat.damage(subject='~'{self=True} to='a player'{player=any_player,relation_to_observer=any})
+  TARGET target creature
+  PRODUCES counter.put (op.counter.put) actor=you(implicit) amount='1'{quantity=1} counter='-1/-1 counter'{counter_kind=-1/-1} on='target creature'{card_type=creature,selection=target,zone=battlefield} cert=optional
+
+#20629 Terra, Magical Adept // Esper Terra: {4}{R}{G}, {T}: Exile ~, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery.
+[activate] 
+  COST cost.mana mana='{4}{R}{G}'{symbols=4/R/G}
+  COST cost.tap_self self='None'{self=True}
+  TIMING time.sorcery_speed
+  TRANSFORMS exile.enter (op.zone.exile) actor=you(implicit) object='~'{self=True} cert=guaranteed
+  TRANSFORMS card.return_to_hand (op.zone.return) actor=you(implicit) object='it'{reference=antecedent,surface=it} possessor='its owner'{player=owner_of_referenced_object} to='the battlefield'{zone=battlefield} cert=guaranteed
+
+#61163 Bolg's Company: {T}, Sacrifice another Goblin: Add {B}{R}.
+[activate] 
+  COST cost.tap_self self='None'{self=True}
+  COST cost.sacrifice_other object='another goblin'{exclude_self=True,quantity=1,subtype=goblin,zone=battlefield}
+  PRODUCES mana.add (op.mana.add) actor=you(implicit) mana='{B}{R}'{symbols=B/R} cert=guaranteed mana={'mode': 'fixed', 'quantity': 2, 'units': ['B', 'R']}
+  PRODUCES permanent.tapped_for_mana (None) subject='None'{self=True} cert=None
+
+#13135 Eirdu, Carrier of Dawn // Isilu, Carrier of Twilight: At the beginning of your first main phase, you may pay {B}. If you do, transform ~.
+[trigger] 
+  TRIGGER any of: turn.phase.begin(possessor='None'{player=you,relation_to_observer=observer_controller}) step={'which': 'first main phase', 'whose_turn': 'you'}
+  CONSUMES None (op.pay) actor=you(implicit) mana='{B}'{symbols=B} cert=optional
+  TRANSFORMS permanent.transform (op.permanent.transform) actor=you(implicit) object='~'{self=True} cert=conditional
+  PROCESS proc.if_you_do
+
+#544 Saltcrusted Steppe: {1}, {T}: Put a storage counter on this land.
+[activate] 
+  COST cost.mana mana='{1}'{symbols=1}
+  COST cost.tap_self self='None'{self=True}
+  PRODUCES counter.put (op.counter.put) actor=you(implicit) amount='1'{quantity=1} counter='storage counter'{counter_kind=storage} on='this land'{self=True} cert=guaranteed
+
+#29361 Nature's Lore: Search your library for a Forest card, put that card onto the battlefield, then shuffle.
+[cast] 
+  PRODUCES card.search (op.card.search) actor=you(implicit) for='a forest card'{quantity=1,subtype=forest} zone='your library'{zone=library,zone_owner=you} cert=guaranteed
+  PRODUCES library.shuffle (op.library.shuffle) actor=you(implicit) cert=guaranteed
+  TRANSFORMS zone.enter (op.zone.put) actor=you(implicit) object='that card'{reference=antecedent} onto='the battlefield'{zone=battlefield} cert=guaranteed
+
+#2498 Wrecking Ball: Destroy target creature or land.
+[cast] 
+  TARGET target creature or land
+  PRODUCES permanent.destroy (op.permanent.destroy) actor=you(implicit) object='target creature or land'{card_type=creature/land,selection=target,zone=battlefield} cert=guaranteed
+
+#12264 Ringing Strike Mastery: When this Aura enters, tap enchanted creature.
+[trigger] 
+  TRIGGER any of: battlefield.enter(subject='this aura'{self=True})
+  PRODUCES permanent.tap (op.permanent.tap) actor=you(implicit) object='enchanted creature'{attached_to=this,card_type=creature,zone=battlefield} cert=guaranteed
+
+#37288 Stingerquill Charm: Create a 2/2 colorless Wizard Soldier creature token named Cadet. It gains haste until end of turn.
+[mode] 
+  TIMING time.until_eot
+  MODIFIES characteristics.change (op.ability.grant) ability='haste'{ability=haste} subject='it'{reference=antecedent,surface=it} cert=guaranteed
+  PRODUCES token.create (op.token.create) actor=you(implicit) object='a 2/2 colorless wizard soldier creature token'{base_pt=2/2,card_type=creature,color=colorless,quantity=1,subtype=soldier/wizard,token=True,zone=battlefield} cert=guaranteed
+
+#11324 Abigale, Poet Laureate // Heroic Stanza: Put a +1/+1 counter on target creature.
+[cast] 
+  TARGET target creature
+  PRODUCES counter.put (op.counter.put) actor=you(implicit) amount='1'{quantity=1} counter='+1/+1 counter'{counter_kind=+1/+1} on='target creature'{card_type=creature,selection=target,zone=battlefield} cert=guaranteed
+
+#23305 Carrot Cake: {2}, {T}, Sacrifice this artifact: You gain 3 life.
+[activate] 
+  COST cost.mana mana='{2}'{symbols=2}
+  COST cost.tap_self self='None'{self=True}
+  COST cost.sacrifice_self object='this artifact'{self=True}
+  PRODUCES life.gain (op.life.gain) actor=you(implicit) amount='3'{quantity=3} cert=guaranteed
+
+#47875 Grafted Growth: When this Aura enters, put a +1/+1 counter on target creature or Vehicle you control.
+[trigger] 
+  TRIGGER any of: battlefield.enter(subject='this aura'{self=True})
+  TARGET target creature or vehicle you control
+  PRODUCES counter.put (op.counter.put) actor=you(implicit) amount='1'{quantity=1} counter='+1/+1 counter'{counter_kind=+1/+1} on='target creature or vehicle you control'{card_type=creature,controller=you,selection=target,subtype=vehicle,zone=battlefield} cert=guaranteed
+
+#48469 Appa, Loyal Sky Bison: Airbend another target nonland permanent you control.
+[mode] 
+  KEYWORD kwa.airbend
+
+#57389 Maze Abomination: Multicolored creatures you control have deathtouch.
+[continuous] 
+  MODIFIES characteristics.change (op.ability.grant) ability='deathtouch'{ability=deathtouch} object='multicolored creatures you control'{card_type=creature,color_count=>=2,controller=you,zone=battlefield} cert=guaranteed
+
+#16314 Rising of the Day: Legendary creatures you control get +1/+0.
+[continuous] 
+  MODIFIES characteristics.change (op.pt.modify) pt_change='+1/+0'{pt_change=+1/+0} subject='legendary creatures you control'{card_type=creature,controller=you,supertype=legendary,zone=battlefield} cert=guaranteed
+
+#57649 Bill Ferny, Bree Swindler: Create a Treasure token.
+[mode] 
+  PRODUCES token.create (op.token.create) actor=you(implicit) object='a treasure token'{quantity=1,subtype=treasure,token=True,zone=battlefield} cert=guaranteed
+
+#173 Solemn Simulacrum: When this creature dies, you may draw a card.
+[trigger] 
+  TRIGGER any of: permanent.dies(subject='this creature'{self=True})
+  PRODUCES card.draw (op.card.draw) actor=you(implicit) object='a card'{quantity=1} cert=optional
+
+#12252 Haunting Voyage: Choose a creature type. Return up to two creature cards of that type from your graveyard to the battlefield. If this spell was foretold, return all creature cards of that type from your graveyard to the battlefield instead.
+[cast] 
+  STATE st.cast_option subject='this spell'{self=True}
+  PRODUCES state.chosen_value (op.choice.value) actor=you(implicit) object='a creature'{card_type=creature,quantity=1,zone=battlefield} cert=guaranteed
+  TRANSFORMS card.return_to_hand (op.zone.return) actor=you(implicit) from='your graveyard'{zone=graveyard,zone_owner=you} object='up to two creature cards of that type'{card_type=creature,quantity_max=2} to='the battlefield'{zone=battlefield} cert=guaranteed
+  TRANSFORMS card.return_to_hand (op.zone.return) actor=you(implicit) from='your graveyard'{zone=graveyard,zone_owner=you} object='all creature cards of that type'{card_type=creature,cardinality=each_object} to='the battlefield'{zone=battlefield} cert=guaranteed
+  PROCESS proc.instead
+
+#32787 Cryoshatter: When enchanted creature becomes tapped or is dealt damage, destroy it.
+[trigger] 
+  TRIGGER any of: permanent.tap(subject='enchanted creature'{attached_to=this,card_type=creature,zone=battlefield}) | damage.deal(subject='enchanted creature'{attached_to=this,card_type=creature,zone=battlefield})
+  PRODUCES permanent.destroy (op.permanent.destroy) actor=you(implicit) object='it'{reference=antecedent,surface=it} cert=guaranteed
+
+#59203 Fire Nation Palace: {T}: Add {R}.
+[activate] 
+  COST cost.tap_self self='None'{self=True}
+  PRODUCES mana.add (op.mana.add) actor=you(implicit) mana='{R}'{symbols=R} cert=guaranteed mana={'mode': 'fixed', 'quantity': 1, 'units': ['R']}
+  PRODUCES permanent.tapped_for_mana (None) subject='None'{self=True} cert=None
+
+#25443 Cornered by Black Mages: Create a 0/1 black Wizard creature token with "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent."
+[cast] 
+  PRODUCES token.create (op.token.create) actor=you(implicit) granted_ability='whenever you cast a noncreature spell, this token deals 1 damage to each opponent.'{granted_text=whenever you cast a noncreature spell, this token deals 1 damage to each opponent.} object='a 0/1 black wizard creature token'{base_pt=0/1,card_type=creature,color=black,quantity=1,subtype=wizard,token=True,zone=battlefield} cert=guaranteed
+
+#13535 Crash and Burn: Destroy target Vehicle.
+[mode] 
+  TARGET target vehicle
+  PRODUCES permanent.destroy (op.permanent.destroy) actor=you(implicit) object='target vehicle'{selection=target,subtype=vehicle,zone=battlefield} cert=guaranteed
+
+#22453 Casualties of War: Choose one or more —
+[cast] 
+  CHOICE choice.modal 'choose <n> or more'
+
+#13036 Spawn-Gang Commander: {1}{C}, Sacrifice an Eldrazi: This creature deals 2 damage to any target.
+[activate] 
+  COST cost.mana mana='{1}{C}'{symbols=1/C}
+  COST cost.sacrifice_other object='an eldrazi'{quantity=1,subtype=eldrazi,zone=battlefield}
+  TARGET any target
+  PRODUCES damage.deal (op.damage.deal) actor=you(implicit) amount='2'{quantity=2} subject='this creature'{self=True} to='any target'{selection=target,zone=battlefield} cert=guaranteed
+
+#52675 Hunter's Axe: Equipped creature gets +2/+0 and has "Whenever this creature attacks, it gains your choice of trample or deathtouch until end of turn."
+[continuous] 
+  MODIFIES characteristics.change (op.pt.modify) pt_change='+2/+0'{pt_change=+2/+0} subject='equipped creature'{attached_to=this,card_type=creature,zone=battlefield} cert=guaranteed
+  MODIFIES characteristics.change (op.ability.grant) granted_ability='whenever this creature attacks, it gains your choice of trample or deathtouch until end of turn.'{granted_text=whenever this creature attacks, it gains your choice of trample or deathtouch until end of turn.} cert=guaranteed
+
+#31823 Magnificent End: ~ deals 5 damage to target creature.
+[cast] 
+  TARGET target creature
+  PRODUCES damage.deal (op.damage.deal) actor=you(implicit) amount='5'{quantity=5} subject='~'{self=True} to='target creature'{card_type=creature,selection=target,zone=battlefield} cert=guaranteed
+
+#22987 Pyrrhic Strike: As an additional cost to cast this spell, you may blight 2.
+[cast] 
+  COST cost.additional object='this spell'{self=True}
+  COST cost.keyword amount='2'{quantity=2}
+
+#48070 Pull from the Grave: Return up to two target creature cards from your graveyard to your hand. You gain 2 life.
+[cast] 
+  TARGET up to two target creature cards
+  PRODUCES life.gain (op.life.gain) actor=you(implicit) amount='2'{quantity=2} cert=guaranteed
+  TRANSFORMS card.return_to_hand (op.zone.return) actor=you(implicit) from='your graveyard'{zone=graveyard,zone_owner=you} object='up to two target creature cards'{card_type=creature,quantity_max=2,selection=target} to='your hand'{zone=hand,zone_owner=you} cert=guaranteed
+
+#15509 Benediction of Moons: You gain 1 life for each player.
+[cast] 
+  AMP amp.player 'for <player.each>'
+  PRODUCES life.gain (op.life.gain) actor=you(implicit) amount='1'{quantity=1} cert=guaranteed
+
+#20893 Ophiomancer: At the beginning of each upkeep, if you control no Snakes, create a 1/1 black Snake creature token with deathtouch.
+[trigger] 
+  TRIGGER any of: turn.step.begin() step={'which': 'upkeep', 'whose_turn': 'each'}
+  STATE st.control actor='you'{player=you,relation_to_observer=observer_controller} object='snakes'{subtype=snake,zone=battlefield}
+  PRODUCES token.create (op.token.create) actor=you(implicit) object='a 1/1 black snake creature token with deathtouch'{base_pt=1/1,card_type=creature,color=black,has_ability=deathtouch,quantity=1,subtype=snake,token=True,zone=battlefield} cert=guaranteed
+
+#39419 North Pole Patrol: {T}: Untap another target permanent you control.
+[activate] 
+  COST cost.tap_self self='None'{self=True}
+  TARGET another target permanent you control
+  PRODUCES permanent.untap (op.permanent.untap) actor=you(implicit) object='another target permanent you control'{controller=you,exclude_self=True,quantity=1,selection=target,zone=battlefield} cert=guaranteed
+
+#35876 Skarrg, the Rage Pits: {R}{G}, {T}: Target creature gets +1/+1 and gains trample until end of turn.
+[activate] 
+  COST cost.mana mana='{R}{G}'{symbols=R/G}
+  COST cost.tap_self self='None'{self=True}
+  TARGET target creature
+  TIMING time.until_eot
+  MODIFIES characteristics.change (op.pt.modify) pt_change='+1/+1'{pt_change=+1/+1} subject='target creature'{card_type=creature,selection=target,zone=battlefield} cert=guaranteed
+  MODIFIES characteristics.change (op.ability.grant) ability='trample'{ability=trample} cert=guaranteed
+

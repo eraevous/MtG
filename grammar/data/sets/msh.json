@@ -1,0 +1,4875 @@
+{
+"set": {
+"code": "msh",
+"name": "Marvel Super Heroes",
+"set_type": "expansion",
+"released_at": "2026-06-26",
+"card_count": 453,
+"parent_set_code": null
+},
+"retrieved_utc": "2026-10-22T03:34:11Z",
+"members": [
+{
+"oracle_id": "ddf7201a-6672-416d-be6b-202dafbeccab",
+"name": "Agent 13, Sharon Carter",
+"collector_number": "1",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Investigate"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a2d90efe-80f2-4069-b135-a8bd00ccd2b0",
+"name": "Agent Maria Hill",
+"collector_number": "2",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "cd403866-bef1-413a-85e2-c86e295b3589",
+"name": "Agent of Atlas",
+"collector_number": "3",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Spy Hero",
+"keywords": [
+"Prowess"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dae20bcd-dc24-4f9d-9400-a6f013b49f14",
+"name": "Agent Phil Coulson",
+"collector_number": "4",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "203b72d2-a273-49cc-bd10-2fbc07ed2fc8",
+"name": "Agents of S.H.I.E.L.D.",
+"collector_number": "5",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Spy Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3477e1cc-46af-46f4-9ea2-bdf0bf1f880e",
+"name": "Avengers Assemble!",
+"collector_number": "6",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6effbf59-3933-4a77-9a6a-fd3bedf45c26",
+"name": "Borough Backup",
+"collector_number": "7",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Landcycling",
+"Basic landcycling",
+"Typecycling",
+"Cycling"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a1a791be-71e6-4c1f-8717-08ca62d40de2",
+"name": "Brave Brawler",
+"collector_number": "8",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Warrior Hero",
+"keywords": [
+"Power-up",
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ac1b6ffc-12a9-4d9c-a9fc-68a839a40738",
+"name": "Captain America, Super-Soldier",
+"collector_number": "9",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"First strike"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "942ac2ac-7528-4768-8398-8520a8ee15e5",
+"name": "Captain America, Wings of Freedom",
+"collector_number": "10",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"Flying",
+"First strike",
+"Ward"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2e665a03-bece-43df-bd15-b4496e233f2e",
+"name": "Captain Marvel, Earth's Protector",
+"collector_number": "11",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Kree Hero",
+"keywords": [
+"Flying",
+"Power-up",
+"Lifelink",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b74c072d-77ac-460d-9d9c-75b25874f58b",
+"name": "Captain Mar-Vell, Space-Born",
+"collector_number": "12",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Kree Soldier Hero",
+"keywords": [
+"Flying",
+"Vigilance",
+"Cosmic Awareness"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "685181dd-0124-4c76-9270-f9dd17e6a221",
+"name": "Colleen Wing, Street Samurai",
+"collector_number": "13",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Samurai Hero",
+"keywords": [
+"Scry"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "06296d4d-a1b3-4e9a-a2fd-a0183bb892a1",
+"name": "Crowd of True Believers",
+"collector_number": "14",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Citizen",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ca3cda24-0ecd-4edf-b1b3-54311ad58a51",
+"name": "Helicarrier Strike",
+"collector_number": "15",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "87f1a840-021c-4699-a2c4-f2926daf98eb",
+"name": "Hero in Training",
+"collector_number": "16",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e9d20b6d-fa4f-473b-9866-230fd92a1319",
+"name": "Invisible Woman, Sue Storm",
+"collector_number": "17",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c867a778-97ef-4872-b890-b088b96a1281",
+"name": "Jennifer Walters // The Sensational She-Hulk",
+"collector_number": "18",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Advisor Hero // Legendary Creature \u2014 Gamma Hero",
+"keywords": [
+"Reach",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "09eb988a-e2eb-42e1-a786-01be63d2263f",
+"name": "Kree Commandos",
+"collector_number": "19",
+"rarity": "common",
+"type_line": "Creature \u2014 Kree Soldier Villain",
+"keywords": [
+"Flying",
+"Prowess",
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c95d1558-09a4-4dbc-b08a-fe21b47bc5d2",
+"name": "Luke Cage, Power Man",
+"collector_number": "20",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Unbreakable Skin"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b175e826-09e8-4fae-9f2e-b902f95b282d",
+"name": "The Mind Stone",
+"collector_number": "21",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Infinity Stone",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1fd00656-83ba-4feb-b089-224007936b99",
+"name": "Mockingbird, Ace Agent",
+"collector_number": "22",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Double strike"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8dd929cb-0fe1-4cb3-bc8d-96ca37f194f3",
+"name": "Monica Rambeau // Photon, Living Light",
+"collector_number": "23",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Hero // Legendary Creature \u2014 Elemental Hero",
+"keywords": [
+"Flying",
+"Prowess",
+"Transform",
+"Hexproof"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "36330947-5ef9-4bff-b541-bfbddd9715a3",
+"name": "Murdock's Crusade",
+"collector_number": "24",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Street Justice",
+"Legal Justice",
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "62916107-14c0-4516-9fed-a032b1a80e5d",
+"name": "Nick Fury, Agent of S.H.I.E.L.D.",
+"collector_number": "25",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Power-up",
+"Transform"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e3559565-0512-4525-addb-bf27903bcd13",
+"name": "Night Nurse, Healer of Heroes",
+"collector_number": "26",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Doctor Hero",
+"keywords": [
+"Lifelink",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6d397d26-7e52-47b2-9880-2c10e90cfba4",
+"name": "Okoye, Dora Milaje Leader",
+"collector_number": "27",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d7f3178d-7b7c-4346-af50-a7b0206bee22",
+"name": "Origin of the Avengers",
+"collector_number": "28",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Scry"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ead0820e-fc6b-4ab2-9110-048d6d53985d",
+"name": "Panther Pounce",
+"collector_number": "29",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Investigate"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1df7a09f-fbc8-4c2a-a903-bab9e680eda7",
+"name": "Patriot, Shield Wielder",
+"collector_number": "30",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0bbceb51-1fb8-44d7-8afc-b4746d292262",
+"name": "Political Triumph",
+"collector_number": "31",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [
+"Scry"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3966c94b-e597-4b3f-a4f5-001d52fff9fe",
+"name": "Quake, Agent of S.H.I.E.L.D.",
+"collector_number": "32",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Inhuman Spy Hero",
+"keywords": [
+"Seismic Takedown"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "60754d4b-2add-4928-8d30-8ce9c0f54f91",
+"name": "Raft Security Officer",
+"collector_number": "33",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e85567e8-1102-4d44-a15b-d5f1fdef8465",
+"name": "Red Guardian, Super-Soldier",
+"collector_number": "34",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier Villain",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1fe549c3-79be-40ef-b57c-de59f24df5ab",
+"name": "The Sentry, Golden Guardian",
+"collector_number": "35",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Indestructible",
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6fd44fb9-3433-4cb0-95a4-4ac8170b2166",
+"name": "S.H.I.E.L.D. Spy Kit",
+"collector_number": "36",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip",
+"Scry"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "192e150a-96b0-42d6-9d39-03d0bed61f41",
+"name": "Super Villain Lockup",
+"collector_number": "37",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6f2ba142-5e7c-4709-ae03-e028cb2a9872",
+"name": "Super-Soldier Serum",
+"collector_number": "38",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e8d0eafe-540a-4b2e-a989-e98ff3c31105",
+"name": "Take Up the Shield",
+"collector_number": "39",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "282d6e61-3240-4f1e-9c2d-8ddb59b03af4",
+"name": "Wakandan Drone Flock",
+"collector_number": "40",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Scry",
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9b9b086c-d201-4574-a1e9-0d6f8de53d7d",
+"name": "Web Up",
+"collector_number": "41",
+"rarity": "common",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4f0c055f-f614-44b0-9374-c53541f89185",
+"name": "White Widow, Free Agent",
+"collector_number": "42",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f24efc60-fdac-4a5d-bcbc-784ec5ae6d96",
+"name": "Aerial Doombot",
+"collector_number": "43",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Villain",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fa732888-5b7d-4087-a6e5-1db1c98fbd4c",
+"name": "A.I.M. Scientists",
+"collector_number": "44",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Scientist Villain",
+"keywords": [
+"Landcycling",
+"Basic landcycling",
+"Typecycling",
+"Cycling",
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e929b730-9aa2-49e1-9a65-50afc0fbe3e0",
+"name": "Atlantean Cavalry",
+"collector_number": "45",
+"rarity": "common",
+"type_line": "Creature \u2014 Merfolk Soldier",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b5c8e24a-f4d7-42dc-8117-905ad0bad888",
+"name": "Atlantis Attacks",
+"collector_number": "46",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e3b70a85-4296-411f-a673-7992b0c8a9aa",
+"name": "Attuma, Atlantean Warlord",
+"collector_number": "47",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Merfolk Warrior Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "45ddfa35-7b3c-4916-b231-dc721b7b56d9",
+"name": "Bold Biochemist",
+"collector_number": "48",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Scientist",
+"keywords": [
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b6c0ee14-2028-4e8b-9acd-ff78821bca9b",
+"name": "Bruce Banner // The Incredible Hulk",
+"collector_number": "49",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero // Legendary Creature \u2014 Gamma Berserker Hero",
+"keywords": [
+"Reach",
+"Enrage",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "33f89437-885b-4850-88b7-239f5dfcc8b1",
+"name": "Depower",
+"collector_number": "50",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1091c83a-a4b9-457f-a69a-9a44a7e10759",
+"name": "Echo, Perceptive Prodigy",
+"collector_number": "51",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "92e222c2-28e6-4d43-8b48-480ebcd88495",
+"name": "Falcon, Winged Wonder",
+"collector_number": "52",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Surveil",
+"Avian Telepathy"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e69db5f0-beed-48e8-bc25-768b1e8be5ea",
+"name": "Falcon's Wing Harness",
+"collector_number": "53",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "82fa14d8-5019-4e1b-a86c-923d9292b87a",
+"name": "Frozen in Ice",
+"collector_number": "54",
+"rarity": "common",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0e5f97b5-bb8c-4688-a141-5db4d4eeccf0",
+"name": "Futurist Forge",
+"collector_number": "55",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "233e3b4b-faaf-451d-8a2e-e9f5a6ced671",
+"name": "Giant-Sized Flying Ant",
+"collector_number": "56",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect",
+"keywords": [
+"Flying",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "503928cd-1abd-44cd-92c3-6dc19bb07f78",
+"name": "Hydraulic Helper",
+"collector_number": "57",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Defender"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "deb16a9a-2fa9-4ad3-bb20-7c16066e3d14",
+"name": "I Am Iron Man",
+"collector_number": "58",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3e715032-0d21-441b-b2d4-c91084728718",
+"name": "Iron Lad, Diverging Destiny",
+"collector_number": "59",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "df3d5b86-7b75-4df9-8985-7159cde12261",
+"name": "Ironheart, Clever Champion",
+"collector_number": "60",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Improvise"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "184dba74-63ed-4820-9174-68adf26bfabf",
+"name": "Justice, Vance Astrovik",
+"collector_number": "61",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "da6e24a4-8adc-41a1-b5eb-3e31dc1250c9",
+"name": "Kang the Conqueror",
+"collector_number": "62",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "19ef0329-08de-4835-8079-2e791e19f3a6",
+"name": "Kid Loki",
+"collector_number": "63",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 God Hero Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bec686dd-a9ea-4db5-bc20-8e40420b9a9b",
+"name": "Leader, Super-Genius",
+"collector_number": "64",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Gamma Scientist Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c112852f-61d5-4b94-b864-c7d0b5333b29",
+"name": "Loki, God of Mischief",
+"collector_number": "65",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 God Sorcerer Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7fa5237e-dd79-4646-b935-cb8c6ee803ab",
+"name": "Mister Fantastic, Reed Richards",
+"collector_number": "66",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero",
+"keywords": [
+"Reach"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ebedff30-ae43-4861-aab2-afe1fc88337e",
+"name": "Ms. Marvel, Kamala Khan",
+"collector_number": "67",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Inhuman Hero",
+"keywords": [
+"Reach",
+"Vigilance",
+"Embiggen Fist"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d3678fce-6897-4f2c-bf50-243facb6581b",
+"name": "Multiversal Incursion",
+"collector_number": "68",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dff11626-ad4d-443a-b7db-f508790b5fd2",
+"name": "Namor the Sub-Mariner",
+"collector_number": "69",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Merfolk Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "636b44dc-f7e4-42d2-abf6-ae49432b6052",
+"name": "Pym Particles",
+"collector_number": "70",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f91c860e-3feb-4a5a-b7ef-4e7d38d61c75",
+"name": "Rewrite History",
+"collector_number": "71",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "25443ea4-3177-4e29-a2b1-f3fee60b3205",
+"name": "Secret Invasion",
+"collector_number": "72",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c1669020-8f81-471a-9083-7e9ce3e8f387",
+"name": "S.H.I.E.L.D. Deployment Drone",
+"collector_number": "73",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "12d51534-a98d-487b-9ba9-c10861dff992",
+"name": "S.H.I.E.L.D. Flying Car",
+"collector_number": "74",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Vehicle",
+"keywords": [
+"Flying",
+"Crew",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a8c047fc-20a9-4c62-b8a6-9ead56d60ad0",
+"name": "Shuri, Wakandan Inventor",
+"collector_number": "75",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Artificer Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bd49a05c-ed51-4d69-ab9b-11192442ec17",
+"name": "Stature, Size Shifter",
+"collector_number": "76",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d82929f2-57ad-45be-a834-984437046026",
+"name": "Super Intelligence",
+"collector_number": "77",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "606092eb-8fe3-4ef7-aaf1-2d3b2687d27a",
+"name": "Super Suit",
+"collector_number": "78",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "939e6f71-185e-41f2-9d54-72cce06f1dce",
+"name": "Thirst for Knowledge",
+"collector_number": "79",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4a46ea59-6c5d-4bed-9951-b5590f9a1bdb",
+"name": "Tony Stark // The Invincible Iron Man",
+"collector_number": "80",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Artificer Hero // Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Transform",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "170ee399-d3cd-40ef-a340-193c0f0f6002",
+"name": "Trickster's Stratagem",
+"collector_number": "81",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1abe8246-d2f9-407b-8c16-83da0a6b7de3",
+"name": "We Say Thee Nay!",
+"collector_number": "82",
+"rarity": "common",
+"type_line": "Instant \u2014 Arcane",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fc17b7a3-7711-4449-80bd-692e8ed9087d",
+"name": "Wiccan, Rising Magician",
+"collector_number": "83",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Mutant Warlock Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5ad8963b-8091-4787-9147-20a1fe7bf0fb",
+"name": "The Wondrous Wasp",
+"collector_number": "84",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Wasp's Sting",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "31816924-1430-4581-86e8-325e2ca16217",
+"name": "Agents of HYDRA",
+"collector_number": "85",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Spy Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "95161e23-e4c4-411f-bce5-58a02abc0958",
+"name": "Arnim Zola, Bio-Fanatic",
+"collector_number": "86",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0fe6c042-1182-4392-8938-fee36149d74f",
+"name": "Baron Helmut Zemo",
+"collector_number": "87",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble Villain",
+"keywords": [
+"Boast",
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c91e64d4-e687-4ccd-a56e-796cff6e052c",
+"name": "Baron Strucker, HYDRA Overlord",
+"collector_number": "88",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "579f9a86-a1af-4c2a-a7e5-8fea0bd0eb61",
+"name": "Black Widow, Super Spy",
+"collector_number": "89",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "369aa9a6-af8a-432c-adff-ced2bb203dc7",
+"name": "Construct a Cosmic Cube",
+"collector_number": "90",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ac950d10-e373-42d3-907b-ee56e45a2084",
+"name": "Crossbones, Malicious Mercenary",
+"collector_number": "91",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Mercenary Villain",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6897f9e0-f654-4c0a-9fda-2ad4e264bf9a",
+"name": "Cruel Alliance",
+"collector_number": "92",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e98cd00c-b812-4c6a-81d4-e3f94b64fc58",
+"name": "Dark Deed",
+"collector_number": "93",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "035cddbc-39c9-42af-9e26-c88419b43b49",
+"name": "Decoy Ploy",
+"collector_number": "94",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9e4fa592-71f8-4c71-8c91-78e6326cd736",
+"name": "Doctor Doom",
+"collector_number": "95",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f398a742-22c1-4da9-9d49-fdce2eb93d01",
+"name": "Doom Reigns Supreme",
+"collector_number": "96",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b46647a1-0c91-451b-8c0b-be8fe02faee2",
+"name": "Elektra, Daughter of the Hand",
+"collector_number": "97",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Ninja Villain",
+"keywords": [
+"Sneak"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "edf429a8-6a4d-4d2a-b0ca-c0c72a0698a3",
+"name": "Grim Reaper, Lethal Legionnaire",
+"collector_number": "98",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2774fcb7-8988-4a18-b5ec-7534dd8b2e05",
+"name": "Hour of Defeat",
+"collector_number": "99",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Surveil"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "27692079-a517-4d38-b452-7409980b5912",
+"name": "HYDRA Infiltration",
+"collector_number": "100",
+"rarity": "common",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6de67fad-0d01-443d-9ae0-4126ae903069",
+"name": "HYDRA Troopers",
+"collector_number": "101",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier Villain",
+"keywords": [
+"Mill"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "342df67f-44d8-4b0a-b1d7-4241966d0598",
+"name": "Kingpin's Enforcers",
+"collector_number": "102",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Villain",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1c233e08-d5a3-48d7-9074-20393896a480",
+"name": "Klaw, Sonic Subjugator",
+"collector_number": "103",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rogue Villain",
+"keywords": [
+"Sonic Attack"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b5b0e85f-6651-4667-829c-2253ff8b130d",
+"name": "Madame Masque",
+"collector_number": "104",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fcb1caea-e1ac-48f0-a67a-d4aadad490d9",
+"name": "The Masters of Evil",
+"collector_number": "105",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fe7cc414-42d0-4dad-8516-7a0be0860a67",
+"name": "M.O.D.O.K.",
+"collector_number": "106",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Villain",
+"keywords": [
+"Mental Organism",
+"Flying",
+"Lifelink",
+"Designed Only for Killing",
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "aeeb50f2-8e02-4d40-a1dd-28b1c5c85c7e",
+"name": "Moonstone, Harsh Mistress",
+"collector_number": "107",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Doctor Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c38f7447-e646-438d-81bd-fe2a71c8a79c",
+"name": "Ninja of the Hand",
+"collector_number": "108",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Ninja Villain",
+"keywords": [
+"Power-up",
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d89aa87a-d59a-41e2-b92f-15c9bc6d3d13",
+"name": "Project Deathlok Soldier",
+"collector_number": "109",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Zombie Soldier",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4e60c38c-cbf5-4ff7-8fff-634f7e3086cc",
+"name": "Red Room Recruit",
+"collector_number": "110",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Spy Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4f69d2f9-c16a-4752-9026-794a29d73af8",
+"name": "Robot Domination",
+"collector_number": "111",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8ceb1acf-5ff3-4f1a-af04-9f07ad454526",
+"name": "Ronin, Shadow Stalker",
+"collector_number": "112",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rogue Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b92c2da9-eaa4-404b-8114-5527eec6390e",
+"name": "Roxxon Brutes",
+"collector_number": "113",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Berserker Villain",
+"keywords": [
+"Landcycling",
+"Menace",
+"Basic landcycling",
+"Typecycling",
+"Cycling"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "51023277-5434-4913-b9dc-df2a3fde1652",
+"name": "Stolen Stark Tech",
+"collector_number": "114",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4644013f-c96a-450e-a7bc-ddfa7a563050",
+"name": "Super-Skrull",
+"collector_number": "115",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Skrull Shapeshifter Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2f15abe7-54aa-40ed-a15d-5b827f1c3923",
+"name": "Swordsman, Sharp Scoundrel",
+"collector_number": "116",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d90a5213-3363-4cd1-97d6-4fc057f78b2a",
+"name": "Thunderbolts Conspiracy",
+"collector_number": "117",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e50fecff-8872-42f5-8882-41ad13d9d1ae",
+"name": "Too Evil to Stay Dead",
+"collector_number": "118",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0edaf433-4ded-4841-bc86-136780c0767f",
+"name": "Unliving Legionnaire",
+"collector_number": "119",
+"rarity": "common",
+"type_line": "Creature \u2014 Vampire Villain",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3b46800b-711b-4cbb-b296-26115b4f6839",
+"name": "Visions of Villainy",
+"collector_number": "120",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "00ed7aca-b3c1-4d48-acd5-b1596daeb4c3",
+"name": "Whiplash, Vengeful Engineer",
+"collector_number": "121",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Artificer Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "39f2a632-30d2-4b35-9e7f-fef27713a4f7",
+"name": "Widow's Bite",
+"collector_number": "122",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0a364879-31bd-4760-833d-165cde1e96c6",
+"name": "Yellowjacket, Heartless Marauder",
+"collector_number": "123",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rogue Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "34493cf5-7586-48ef-806d-57273b2ab034",
+"name": "Avengers Disassembled",
+"collector_number": "124",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6344c96a-efa5-4125-8219-d333228391cf",
+"name": "Blazing Crescendo",
+"collector_number": "125",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d8863742-6c1c-415a-ad27-7def6d119c6a",
+"name": "Crimson Operative",
+"collector_number": "126",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Human Villain",
+"keywords": [
+"Prowess"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c2b2b743-dfc7-439e-8563-1ccce54422bd",
+"name": "Death to Our Enemies",
+"collector_number": "127",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [
+"Treasure"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d7562f89-4808-44ab-8dc9-fc4078e8a47b",
+"name": "Evil's Thrall",
+"collector_number": "128",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "52ec472e-a745-4e25-b9a7-8e1eb8873594",
+"name": "Fin Fang Foom",
+"collector_number": "129",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Alien Dragon Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6b59bb1f-f2d4-4d47-bd57-23927d588381",
+"name": "Hawkeye, Master Marksman",
+"collector_number": "130",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Archer Hero",
+"keywords": [
+"Explosive",
+"Reach",
+"First strike",
+"Trick Arrows",
+"Boomerang",
+"Net"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c8f8b4ed-8455-45cd-a24c-e2f42cd5e5b1",
+"name": "Hawkeye, Young Avenger",
+"collector_number": "131",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Archer Hero",
+"keywords": [
+"Reach"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "83798eb8-b14f-4620-bce2-1a6804a24dc7",
+"name": "Hawkeye's Bow",
+"collector_number": "132",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2283729c-11db-471c-9f63-46092c97bd00",
+"name": "Hex Magic",
+"collector_number": "133",
+"rarity": "uncommon",
+"type_line": "Sorcery \u2014 Arcane",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6eb7a870-b626-4326-9e4c-45193f8ce138",
+"name": "Hire a Crew",
+"collector_number": "134",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5f97d49c-d0fa-4776-9455-93c1a172cd83",
+"name": "HULK SMASH!",
+"collector_number": "135",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5b6f2770-e774-4a77-801f-a3fda093c3dd",
+"name": "Human Torch, Johnny Storm",
+"collector_number": "136",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a2558476-5506-4a09-93fc-b8ab33c98985",
+"name": "HYDRA Assault Robot",
+"collector_number": "137",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bbf873c2-94c1-46b8-912e-e29e48e0212c",
+"name": "Iron Fist, Living Weapon",
+"collector_number": "138",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6677cd5a-0785-499b-ba99-f6bdcfb196d5",
+"name": "Jessica Jones, Private Eye",
+"collector_number": "139",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Detective Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0618a217-2a6e-4fa1-bfe6-89c6612a594d",
+"name": "K'un-Lun Warrior",
+"collector_number": "140",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3c2b9bb2-8201-47e8-84d5-f3518cac03cb",
+"name": "Kree Sentinel",
+"collector_number": "141",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Kree Robot Villain",
+"keywords": [
+"Reach",
+"Landcycling",
+"Basic landcycling",
+"Typecycling",
+"Cycling"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f34b9bc4-7bfe-47fd-ba23-4eeeb46026eb",
+"name": "Lightning Strike",
+"collector_number": "142",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9c78778a-6335-4949-8ade-11d0f085cb2b",
+"name": "Loki Laufeyson",
+"collector_number": "143",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 God Sorcerer Villain",
+"keywords": [
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "945e8443-9647-4eab-b091-ee8e7bc347f5",
+"name": "Machinesmith Automaton",
+"collector_number": "144",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Villain",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5b090ba3-0ecb-4585-b5b7-9d6028c32487",
+"name": "Misty Knight, Hero for Hire",
+"collector_number": "145",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Detective Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7f9a8845-d760-44a7-a4c9-8a20dba4e14a",
+"name": "Mj\u00f6lnir, Hammer of Thor",
+"collector_number": "146",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a5424e33-ff4e-4c82-8aa9-9d25ced7830a",
+"name": "Photon Blast Barrage",
+"collector_number": "147",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b76ce131-e51a-445e-8216-00df5904ab93",
+"name": "Quicksilver, Brash Blur",
+"collector_number": "148",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Power-up",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a14a838a-49f4-45e3-9ec0-3c803af45a68",
+"name": "Red Hulk",
+"collector_number": "149",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Berserker Villain",
+"keywords": [
+"Reach",
+"Enrage",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "150f920c-c942-4feb-824f-79dd9b531687",
+"name": "Repulsor Blast",
+"collector_number": "150",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d8ae8c38-501e-44ea-9faf-cf9d11ba6616",
+"name": "The Scarlet Witch",
+"collector_number": "151",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Warlock Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2fb0f2d2-ed1f-4181-91f2-684a71c34998",
+"name": "Speed, Young Avenger",
+"collector_number": "152",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7c07970d-063a-44a1-9761-b80aafa90dac",
+"name": "Stark Industries Executive",
+"collector_number": "153",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Advisor",
+"keywords": [
+"Treasure"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88923ca1-a793-42f0-b9f8-ed9ff9c1185d",
+"name": "Super Speed",
+"collector_number": "154",
+"rarity": "common",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "98b99d7c-d006-471a-8583-0468743c1597",
+"name": "Team Tactics",
+"collector_number": "155",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2842217a-173e-4879-8b25-fefe2fc1123f",
+"name": "Thor, God of Thunder",
+"collector_number": "156",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 God Warrior Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7d765055-da62-43f7-9580-98e9d164753b",
+"name": "Truck Toss",
+"collector_number": "157",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "70c96b50-ac2b-493d-bd15-fc66eb767111",
+"name": "Vision of Love",
+"collector_number": "158",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a257426d-70c9-4d58-bd8b-97ec38f6e133",
+"name": "Volcanic Villain",
+"collector_number": "159",
+"rarity": "common",
+"type_line": "Creature \u2014 Elemental Villain",
+"keywords": [
+"Power-up",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e2c49754-711e-43b3-82f1-5376a4d99701",
+"name": "Wonder Man, Hollywood Hero",
+"collector_number": "160",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Performer Hero",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "34c0f75d-10a9-428d-b202-3defb3949090",
+"name": "Ant-Man's Army",
+"collector_number": "161",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect",
+"keywords": [
+"Treasure",
+"Food"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "49a32f34-01a9-4f25-bf38-b4d46ca67b2d",
+"name": "Call Damage Control",
+"collector_number": "162",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3cd15225-e9b6-4998-b545-76536c72e948",
+"name": "Claim the Kingdom",
+"collector_number": "163",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [
+"Landfall"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "699610c9-c991-4faf-b712-d015ef0799ad",
+"name": "Doc Samson, Super Psychiatrist",
+"collector_number": "164",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Doctor Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2b87bcac-ec64-4012-9e75-f459d3640eb3",
+"name": "Earth's Mightiest Heroes",
+"collector_number": "165",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4bdfc580-de51-445b-b170-8c6832e44704",
+"name": "Epic Fight",
+"collector_number": "166",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Fight",
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+"name": "Giant Growth",
+"collector_number": "167",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0efe1357-bfbb-42c0-9cc9-6a919d686c66",
+"name": "Go Nuts!",
+"collector_number": "168",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Fight",
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6cb65b68-91b2-45ba-867b-3b31d6dd5643",
+"name": "Guerrilla Gorilla",
+"collector_number": "169",
+"rarity": "common",
+"type_line": "Creature \u2014 Ape Soldier Hero",
+"keywords": [
+"Reach"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4c27ba61-6812-4dd7-8efc-65435a8df7b5",
+"name": "Hellcat, Undying Vigilante",
+"collector_number": "170",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c3a8cc79-3771-484d-84dd-1a97f8bd12c2",
+"name": "Hercules, Prince of Power",
+"collector_number": "171",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Demigod Warrior Hero",
+"keywords": [
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "31cae00a-3a74-4a59-80b0-a656f524e878",
+"name": "Heroic Feast",
+"collector_number": "172",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Food"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "03c934a6-be57-480d-8c84-4e46d9ccb406",
+"name": "Hulkling, Burgeoning Bruiser",
+"collector_number": "173",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Kree Skrull Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88eeb519-5782-4732-bd34-81d1ee6dbc8f",
+"name": "Ka-Zar of the Savage Land",
+"collector_number": "174",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Barbarian Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "39145960-a212-46b4-addb-4b187f6bf6fd",
+"name": "Knight of Wundagore",
+"collector_number": "175",
+"rarity": "common",
+"type_line": "Creature \u2014 Cat Knight Villain",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4a7c7ecc-df72-4da0-af35-dd0af58ec02c",
+"name": "Mister Hyde, Monster Within",
+"collector_number": "176",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "34994475-b914-44f6-8ca1-c2747b6d5956",
+"name": "Mole Man, Moloid Master",
+"collector_number": "177",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Mill",
+"Landfall"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bbee7921-19c9-4c70-8462-f16e7e9c25db",
+"name": "Pet Avengers",
+"collector_number": "178",
+"rarity": "common",
+"type_line": "Creature \u2014 Dragon Cat Dog Bird Frog Hero",
+"keywords": [
+"Power-up",
+"Reach"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2b3d76e7-faaa-4e6f-9e21-a88dd719247e",
+"name": "Powerful Broker",
+"collector_number": "179",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "454c4e8b-e417-4381-a931-6a11356ef64e",
+"name": "Punishing Punch",
+"collector_number": "180",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "de1ad369-5aa3-4c54-8fb1-30b7f1d4d542",
+"name": "Rapid Rescue",
+"collector_number": "181",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Mill"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c6284597-1983-4a21-a461-724135220e0d",
+"name": "Reptil, Dinomorpher",
+"collector_number": "182",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Brontosaurus",
+"Tyrannosaurus Rex"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f7b2606c-42b8-46d6-bcaa-8d4506b348eb",
+"name": "Restorative Technique",
+"collector_number": "183",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4bccfa67-0c6f-42a1-b8d4-0842a8230d1e",
+"name": "Rick Jones, Destined Sidekick",
+"collector_number": "184",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Advisor",
+"keywords": [
+"Mill"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6e21ebdf-b97c-494e-a1d5-19db1b7d3016",
+"name": "Savage Land Dinosaur",
+"collector_number": "185",
+"rarity": "common",
+"type_line": "Creature \u2014 Dinosaur",
+"keywords": [
+"Landcycling",
+"Trample",
+"Basic landcycling",
+"Typecycling",
+"Cycling"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "556f127f-6131-4171-b1ed-11420c21d345",
+"name": "Serpent Specialist",
+"collector_number": "186",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Snake Villain",
+"keywords": [
+"Power-up",
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "700ef9c8-698b-45f7-a1fd-dec74e553224",
+"name": "Shang-Chi, Master of Kung Fu",
+"collector_number": "187",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bbd0a2a4-f81b-4a6b-bc4d-d7e53dc51333",
+"name": "She-Hulk, Jade Defender",
+"collector_number": "188",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Hero",
+"keywords": [
+"Power-up",
+"Reach",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e1b577ad-1488-43b5-83d9-e40bd60c74be",
+"name": "Super Strength",
+"collector_number": "189",
+"rarity": "common",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d566d5f1-5abd-405b-8553-d267ecbe72ab",
+"name": "The Thing, Ben Grimm",
+"collector_number": "190",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "39d993be-30ad-4756-a494-fd8808d474c9",
+"name": "Tigra, Feline Fury",
+"collector_number": "191",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Cat Human Hero",
+"keywords": [
+"Trample",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f44bde8b-43e9-4719-ac60-b8f0cee8df9b",
+"name": "Training Regimen",
+"collector_number": "192",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "80312910-5d53-44f1-9982-e46dc7532abb",
+"name": "The Unbeatable Squirrel Girl",
+"collector_number": "193",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Squirrel Human Hero",
+"keywords": [
+"I LOVE Squirrels!"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "33b1379f-b329-42cd-92ed-4811d44ed8dd",
+"name": "Undercover Skrull",
+"collector_number": "194",
+"rarity": "common",
+"type_line": "Creature \u2014 Skrull Shapeshifter Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4ae15bd1-e0ea-4c1a-a311-dae421381ebc",
+"name": "Wakandan Royal Guard",
+"collector_number": "195",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e2084d73-5a4c-4b17-942a-93c1a1f7ac2a",
+"name": "White Tiger, Ava Ayala",
+"collector_number": "196",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8c4da760-8913-46ca-b00c-bba6d877d482",
+"name": "World War Hulk",
+"collector_number": "197",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "72101185-4336-480a-b4d7-f8ceb0007a51",
+"name": "Abomination, Terrifying Titan",
+"collector_number": "198",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Villain",
+"keywords": [
+"Power-up",
+"Trample",
+"Fight"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ec8e310f-e871-498f-8d80-c3617c5e1433",
+"name": "Absorbing Man",
+"collector_number": "199",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7c854a07-e031-458e-a335-9c31865020b8",
+"name": "Alien Invasion",
+"collector_number": "200",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b0ed9fbe-324d-467a-a326-c6f85a4c688a",
+"name": "Ant-Man, Colony Commander",
+"collector_number": "201",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rogue Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8a09d4a2-4796-4a15-ab75-a3a0b717f62d",
+"name": "Ares, God of War",
+"collector_number": "202",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 God Warrior Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1ad83cac-2c85-477b-ab00-1369f9683db5",
+"name": "Armor Wars",
+"collector_number": "203",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6c7e4e51-099a-4398-a4b7-e2f0ddd36429",
+"name": "The Astonishing Ant-Man",
+"collector_number": "204",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d911cf65-7273-4162-a766-7d4107699dc2",
+"name": "Avengers: Under Siege",
+"collector_number": "205",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Treasure"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "191ba5f0-45f4-4b7f-910d-4bd4d2d28b33",
+"name": "Beast, Erudite Aerialist",
+"collector_number": "206",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Mutant Scientist Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b0bf1964-c543-4c53-9f09-0dd7c608d5c5",
+"name": "Black Panther, Vanguard",
+"collector_number": "207",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e6c181f1-f4f7-4a96-b50c-717cf2a02098",
+"name": "Black Widow, Double Agent",
+"collector_number": "208",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero Villain",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "10db57b4-f895-4514-b610-2252ba676353",
+"name": "Bullseye, Death Dealer",
+"collector_number": "209",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Assassin Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "67aa946d-e694-494e-ba0c-44880d5bc03e",
+"name": "Captain America, Living Legend",
+"collector_number": "210",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "64132f93-66ac-4794-8c07-a88f9ed0e22b",
+"name": "Cloak and Dagger, Entwined",
+"collector_number": "211",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Lifelink",
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e05f23ba-f2b2-4c40-83fa-8defce3cb978",
+"name": "The Coming of Galactus",
+"collector_number": "212",
+"rarity": "mythic",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88aadf60-91f9-4932-a2bc-63365a139d36",
+"name": "Daredevil, Man Without Fear",
+"collector_number": "213",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Radar Sense",
+"Vigilance",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88f34d15-c338-40a7-b56c-c5b650847430",
+"name": "Ghost, Spectral Saboteur",
+"collector_number": "214",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rogue Villain",
+"keywords": [
+"Intangibility",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3508fd7d-ca02-47f9-8b0a-525f7bde4f57",
+"name": "Hulk, Gamma Goliath",
+"collector_number": "215",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Berserker Hero",
+"keywords": [
+"Power-up",
+"Reach",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "94bc796d-8c04-4835-8a99-7e5dce9540ee",
+"name": "Iron Man, Master of Machines",
+"collector_number": "216",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b43350a8-fc4d-41ed-becd-f0277512bb5f",
+"name": "Kang, Temporal Tyrant",
+"collector_number": "217",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1c3ba54a-a8ef-4838-b3aa-cb6df827a619",
+"name": "Killmonger, Scourge of Wakanda",
+"collector_number": "218",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Mercenary Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fe00278d-4385-4e3f-919c-12a794fd86f5",
+"name": "King T'Challa // Black Panther, Hope Enduring",
+"collector_number": "219",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble Hero // Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [
+"Transform",
+"Double strike",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3eeeb159-aa45-4a9b-9618-8542604b9830",
+"name": "The Kingpin of Crime",
+"collector_number": "220",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Extort"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d812c8e3-a475-4ad2-a93f-7208ad873676",
+"name": "Madame Hydra",
+"collector_number": "221",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "57d02dc8-e22e-4874-9f02-490a2528a28f",
+"name": "The Mighty Thor, Jane Foster",
+"collector_number": "222",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human God Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bfe0818b-ae13-4174-85c8-24b895d28df0",
+"name": "Moon Girl and Devil Dinosaur",
+"collector_number": "223",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Dinosaur Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0ff9c0cc-4fb3-4117-9a8e-5b51f62306c4",
+"name": "The Ruinous Wrecking Crew",
+"collector_number": "224",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c09c424b-6aba-4190-9f55-f0307d746386",
+"name": "Scientist Supreme of A.I.M.",
+"collector_number": "225",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3688ad0d-653b-4d5d-a57e-444db679d83e",
+"name": "The Serpent Society",
+"collector_number": "226",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Snake Villain",
+"keywords": [
+"Ward",
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "53d3ef8f-8e0f-4119-8cdc-a0bf076b4e91",
+"name": "Speedball, New Warrior",
+"collector_number": "227",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "85dec6cf-6f27-4eb0-834b-5f6fbbe25fc8",
+"name": "Spider-Man, To the Rescue",
+"collector_number": "228",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Spider Human Hero",
+"keywords": [
+"Reach",
+"Vigilance",
+"Flash",
+"No One Dies!"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "04e53f36-9f16-4678-9caf-9afda85f76b4",
+"name": "Spider-Woman, Secret Agent",
+"collector_number": "229",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Spider Human Spy Hero",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "06e9287b-56d4-443e-97ba-b5dcdc4fa989",
+"name": "Storm, Windrider",
+"collector_number": "230",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "11d74dc2-8c11-4d4b-b727-8216d2eb6b4e",
+"name": "The Super Hero Civil War",
+"collector_number": "231",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Fight"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dcd97730-b793-4c0c-b158-625ac3656b4a",
+"name": "Taskmaster, Mercenary Mimic",
+"collector_number": "232",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Mercenary Villain",
+"keywords": [
+"Photographic Reflexes"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "090d815b-b2c8-48cd-a0b3-dc662d5352ac",
+"name": "Thanos, the Mad Titan",
+"collector_number": "233",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Eternal Villain",
+"keywords": [
+"Deathtouch",
+"Power-up",
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ec9b74d0-e4fe-4764-b628-992a62f2a1cf",
+"name": "Thor Odinson",
+"collector_number": "234",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 God Warrior Hero",
+"keywords": [
+"Flying",
+"Prowess",
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e380e37d-926b-4a4b-a275-7844bf4956d5",
+"name": "Titania, Rugged Rumbler",
+"collector_number": "235",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Ward"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2b6fa8b6-4865-4eb6-974b-00f6b16b6f0f",
+"name": "U.S.Agent, John Walker",
+"collector_number": "236",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "240410a0-3288-4336-b1ad-34936e64ccf2",
+"name": "Vision Quest",
+"collector_number": "237",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ae6d1aa3-4ceb-4fc1-a3a6-033afd4b3bce",
+"name": "War Machine, Legacy of Iron",
+"collector_number": "238",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6f4c94b6-f829-4646-a574-083997b78dfb",
+"name": "Winter Soldier, Icy Assassin",
+"collector_number": "239",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Assassin Villain",
+"keywords": [
+"Vigilance",
+"Menace"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8429ba6a-6c06-4a83-a6ee-023b64b825f8",
+"name": "Wolverine, Fierce Fighter",
+"collector_number": "240",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Berserker Hero",
+"keywords": [
+"Heal",
+"Haste",
+"Fight"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e25062ba-7176-4d59-ac3e-26d19b26f02a",
+"name": "Worlds Within Worlds",
+"collector_number": "241",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "10916f33-aaa6-43a1-9835-b60fd061161f",
+"name": "A.I.M. Synthoids",
+"collector_number": "242",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Villain",
+"keywords": [
+"Surveil"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "55f7b005-31ea-4865-a8f3-460d15bed795",
+"name": "Arc Reactor",
+"collector_number": "243",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Improvise"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8255a797-ddd3-4db0-a3f5-dd8f38c3b908",
+"name": "Captain America's Shield",
+"collector_number": "244",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Indestructible",
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0866a630-d962-4aa9-a15f-08b2947540ef",
+"name": "Cosmic Cube",
+"collector_number": "245",
+"rarity": "mythic",
+"type_line": "Artifact",
+"keywords": [
+"Ward"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "60105eb8-bdca-44b9-a970-68a7615526e8",
+"name": "Dependable Quinjet",
+"collector_number": "246",
+"rarity": "common",
+"type_line": "Artifact \u2014 Vehicle",
+"keywords": [
+"Flying",
+"Crew"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "393ff8c5-4da0-4290-b498-222cc0244026",
+"name": "H.E.R.B.I.E. Scout Unit",
+"collector_number": "247",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Scout",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "958d81c2-ca09-4275-890e-3bb595317325",
+"name": "Iron Man Armor",
+"collector_number": "248",
+"rarity": "mythic",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0f2335bf-6a13-4483-997a-fd19d30c4d48",
+"name": "S.H.I.E.L.D. Helicarrier",
+"collector_number": "249",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Vehicle",
+"keywords": [
+"Flying",
+"Crew"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f93fa6ec-1f13-4109-aa60-11e148f7ba88",
+"name": "Super-Adaptoid",
+"collector_number": "250",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Robot Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a82d855c-50c8-43f2-99ba-a84fe84539c5",
+"name": "The Ten Rings",
+"collector_number": "251",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a8f25e67-2112-4355-9298-363ed04a5cb8",
+"name": "Ultron, Artificial Malevolence",
+"collector_number": "252",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Robot Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "51c1f21d-1512-4885-bfdc-58790cf77d51",
+"name": "Ultron Drone",
+"collector_number": "253",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Villain",
+"keywords": [
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "be0b86fc-8450-41d4-9836-6de11cecb857",
+"name": "Vibranium Energy Daggers",
+"collector_number": "254",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Indestructible",
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "32aee76a-e738-4898-985a-801d1cce15ea",
+"name": "The Vision",
+"collector_number": "255",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Robot Hero",
+"keywords": [
+"Density Control",
+"Flying",
+"Vigilance",
+"Technopathy",
+"Solar Beam"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f67a599c-200a-4831-9e73-126c7435a396",
+"name": "Viv Vision, Teen Synthezoid",
+"collector_number": "256",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Robot Hero",
+"keywords": [
+"Flying",
+"Power-up",
+"Cybernetic Senses"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8417f2d5-93c9-474a-a143-5c4e17097a88",
+"name": "A.I.M. Labs",
+"collector_number": "257",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e3614df6-ce84-4180-ade1-a1751e8e3c9a",
+"name": "Asgardian Citadel",
+"collector_number": "258",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "10fc2009-4212-47c6-8a97-ab0f45c1f91b",
+"name": "Avengers Hangar",
+"collector_number": "259",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c5fc8e7c-a87e-4586-a13c-d30e0a3aafbf",
+"name": "Avengers Tower",
+"collector_number": "260",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "71bc69a5-7cec-4abd-b97d-13f8e1f9afac",
+"name": "Baxter Building",
+"collector_number": "261",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c3172c5d-c745-4422-b651-cd414c8da11b",
+"name": "Birnin Zana Plaza",
+"collector_number": "262",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9bd013df-ad75-4099-940b-1765c58faf26",
+"name": "Castle Doom",
+"collector_number": "263",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "40760bfa-a423-487c-ba29-043b2d00c736",
+"name": "Dark Fortress",
+"collector_number": "264",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5554db95-9676-4c24-b82a-8173513d7927",
+"name": "Fisk Tower",
+"collector_number": "265",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "36b58705-c5a5-4547-8d8b-a7c35e1f69ae",
+"name": "Gathering Place",
+"collector_number": "266",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7785ffd4-f169-475d-9558-ce4877b3378a",
+"name": "Gleaming Bastion",
+"collector_number": "267",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1337d89e-a883-4568-a14f-9ca3305cc3df",
+"name": "Hell's Kitchen",
+"collector_number": "268",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7069d241-4e66-40bf-afd1-551a4a5457f0",
+"name": "Hidden Lair",
+"collector_number": "269",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4b17048f-8c7f-4e29-8f56-16db4c2106e6",
+"name": "Los Diablos Missile Base",
+"collector_number": "270",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5a8977fc-0732-4807-b876-01819aedd70b",
+"name": "Pym Technologies",
+"collector_number": "271",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "52401cb4-1bce-4191-9220-0d93ea4108b8",
+"name": "Stark Industries",
+"collector_number": "272",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d49a7525-eca5-48e1-b94b-d618a706fd02",
+"name": "Subterranean Cavern",
+"collector_number": "273",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3648376-dc8b-409b-b2d1-c29e326a059c",
+"name": "Surveillance Room",
+"collector_number": "274",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [
+"Surveil"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "99c70f4e-de8a-426d-99aa-17b2f87625ba",
+"name": "Training Compound",
+"collector_number": "275",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "cd2888aa-71f3-47ee-ba33-7bb95d5bc836",
+"name": "Villainous Hideout",
+"collector_number": "276",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "277",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "278",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "279",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "280",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "281",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "282",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "283",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "284",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "285",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "286",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "287",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "288",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "289",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "290",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "291",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "292",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "293",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "294",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "295",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "296",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3477e1cc-46af-46f4-9ea2-bdf0bf1f880e",
+"name": "Avengers Assemble!",
+"collector_number": "297",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d7f3178d-7b7c-4346-af50-a7b0206bee22",
+"name": "Origin of the Avengers",
+"collector_number": "298",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Scry"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6f2ba142-5e7c-4709-ae03-e028cb2a9872",
+"name": "Super-Soldier Serum",
+"collector_number": "299",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d3678fce-6897-4f2c-bf50-243facb6581b",
+"name": "Multiversal Incursion",
+"collector_number": "300",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "25443ea4-3177-4e29-a2b1-f3fee60b3205",
+"name": "Secret Invasion",
+"collector_number": "301",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "34493cf5-7586-48ef-806d-57273b2ab034",
+"name": "Avengers Disassembled",
+"collector_number": "302",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7f9a8845-d760-44a7-a4c9-8a20dba4e14a",
+"name": "Mj\u00f6lnir, Hammer of Thor",
+"collector_number": "303",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8c4da760-8913-46ca-b00c-bba6d877d482",
+"name": "World War Hulk",
+"collector_number": "304",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1ad83cac-2c85-477b-ab00-1369f9683db5",
+"name": "Armor Wars",
+"collector_number": "305",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d911cf65-7273-4162-a766-7d4107699dc2",
+"name": "Avengers: Under Siege",
+"collector_number": "306",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Treasure"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e05f23ba-f2b2-4c40-83fa-8defce3cb978",
+"name": "The Coming of Galactus",
+"collector_number": "307",
+"rarity": "mythic",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "11d74dc2-8c11-4d4b-b727-8216d2eb6b4e",
+"name": "The Super Hero Civil War",
+"collector_number": "308",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Fight"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "240410a0-3288-4336-b1ad-34936e64ccf2",
+"name": "Vision Quest",
+"collector_number": "309",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "55f7b005-31ea-4865-a8f3-460d15bed795",
+"name": "Arc Reactor",
+"collector_number": "310",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Improvise"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8255a797-ddd3-4db0-a3f5-dd8f38c3b908",
+"name": "Captain America's Shield",
+"collector_number": "311",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Indestructible",
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0866a630-d962-4aa9-a15f-08b2947540ef",
+"name": "Cosmic Cube",
+"collector_number": "312",
+"rarity": "mythic",
+"type_line": "Artifact",
+"keywords": [
+"Ward"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a82d855c-50c8-43f2-99ba-a84fe84539c5",
+"name": "The Ten Rings",
+"collector_number": "313",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "62916107-14c0-4516-9fed-a032b1a80e5d",
+"name": "Nick Fury, Agent of S.H.I.E.L.D.",
+"collector_number": "314",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Power-up",
+"Transform"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c91e64d4-e687-4ccd-a56e-796cff6e052c",
+"name": "Baron Strucker, HYDRA Overlord",
+"collector_number": "315",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ac1b6ffc-12a9-4d9c-a9fc-68a839a40738",
+"name": "Captain America, Super-Soldier",
+"collector_number": "316",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"First strike"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8255a797-ddd3-4db0-a3f5-dd8f38c3b908",
+"name": "Captain America's Shield",
+"collector_number": "317",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Indestructible",
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d812c8e3-a475-4ad2-a93f-7208ad873676",
+"name": "Madame Hydra",
+"collector_number": "318",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "95161e23-e4c4-411f-bce5-58a02abc0958",
+"name": "Arnim Zola, Bio-Fanatic",
+"collector_number": "319",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7fa5237e-dd79-4646-b935-cb8c6ee803ab",
+"name": "Mister Fantastic, Reed Richards",
+"collector_number": "320",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero",
+"keywords": [
+"Reach"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5b6f2770-e774-4a77-801f-a3fda093c3dd",
+"name": "Human Torch, Johnny Storm",
+"collector_number": "321",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d566d5f1-5abd-405b-8553-d267ecbe72ab",
+"name": "The Thing, Ben Grimm",
+"collector_number": "322",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e9d20b6d-fa4f-473b-9866-230fd92a1319",
+"name": "Invisible Woman, Sue Storm",
+"collector_number": "323",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88aadf60-91f9-4932-a2bc-63365a139d36",
+"name": "Daredevil, Man Without Fear",
+"collector_number": "324",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Radar Sense",
+"Vigilance",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "10db57b4-f895-4514-b610-2252ba676353",
+"name": "Bullseye, Death Dealer",
+"collector_number": "325",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Assassin Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b46647a1-0c91-451b-8c0b-be8fe02faee2",
+"name": "Elektra, Daughter of the Hand",
+"collector_number": "326",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Ninja Villain",
+"keywords": [
+"Sneak"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3eeeb159-aa45-4a9b-9618-8542604b9830",
+"name": "The Kingpin of Crime",
+"collector_number": "327",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Extort"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c867a778-97ef-4872-b890-b088b96a1281",
+"name": "Jennifer Walters // The Sensational She-Hulk",
+"collector_number": "328",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Advisor Hero // Legendary Creature \u2014 Gamma Hero",
+"keywords": [
+"Reach",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a14a838a-49f4-45e3-9ec0-3c803af45a68",
+"name": "Red Hulk",
+"collector_number": "329",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Berserker Villain",
+"keywords": [
+"Reach",
+"Enrage",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bec686dd-a9ea-4db5-bc20-8e40420b9a9b",
+"name": "Leader, Super-Genius",
+"collector_number": "330",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Gamma Scientist Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b6c0ee14-2028-4e8b-9acd-ff78821bca9b",
+"name": "Bruce Banner // The Incredible Hulk",
+"collector_number": "331",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero // Legendary Creature \u2014 Gamma Berserker Hero",
+"keywords": [
+"Reach",
+"Enrage",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "5f97d49c-d0fa-4776-9455-93c1a172cd83",
+"name": "HULK SMASH!",
+"collector_number": "332",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "72101185-4336-480a-b4d7-f8ceb0007a51",
+"name": "Abomination, Terrifying Titan",
+"collector_number": "333",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Gamma Villain",
+"keywords": [
+"Power-up",
+"Trample",
+"Fight"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c5fc8e7c-a87e-4586-a13c-d30e0a3aafbf",
+"name": "Avengers Tower",
+"collector_number": "334",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "85dec6cf-6f27-4eb0-834b-5f6fbbe25fc8",
+"name": "Spider-Man, To the Rescue",
+"collector_number": "335",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Spider Human Hero",
+"keywords": [
+"Reach",
+"Vigilance",
+"Flash",
+"No One Dies!"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9e4fa592-71f8-4c71-8c91-78e6326cd736",
+"name": "Doctor Doom",
+"collector_number": "336",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0866a630-d962-4aa9-a15f-08b2947540ef",
+"name": "Cosmic Cube",
+"collector_number": "337",
+"rarity": "mythic",
+"type_line": "Artifact",
+"keywords": [
+"Ward"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2842217a-173e-4879-8b25-fefe2fc1123f",
+"name": "Thor, God of Thunder",
+"collector_number": "338",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 God Warrior Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7f9a8845-d760-44a7-a4c9-8a20dba4e14a",
+"name": "Mj\u00f6lnir, Hammer of Thor",
+"collector_number": "339",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6344c96a-efa5-4125-8219-d333228391cf",
+"name": "Blazing Crescendo",
+"collector_number": "340",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3477e1cc-46af-46f4-9ea2-bdf0bf1f880e",
+"name": "Avengers Assemble!",
+"collector_number": "341",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2e665a03-bece-43df-bd15-b4496e233f2e",
+"name": "Captain Marvel, Earth's Protector",
+"collector_number": "342",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Kree Hero",
+"keywords": [
+"Flying",
+"Power-up",
+"Lifelink",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c112852f-61d5-4b94-b864-c7d0b5333b29",
+"name": "Loki, God of Mischief",
+"collector_number": "343",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 God Sorcerer Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a8f25e67-2112-4355-9298-363ed04a5cb8",
+"name": "Ultron, Artificial Malevolence",
+"collector_number": "344",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Robot Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8dd929cb-0fe1-4cb3-bc8d-96ca37f194f3",
+"name": "Monica Rambeau // Photon, Living Light",
+"collector_number": "345",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Hero // Legendary Creature \u2014 Elemental Hero",
+"keywords": [
+"Flying",
+"Prowess",
+"Transform",
+"Hexproof"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fe00278d-4385-4e3f-919c-12a794fd86f5",
+"name": "King T'Challa // Black Panther, Hope Enduring",
+"collector_number": "346",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble Hero // Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [
+"Transform",
+"Double strike",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "579f9a86-a1af-4c2a-a7e5-8fea0bd0eb61",
+"name": "Black Widow, Super Spy",
+"collector_number": "347",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e8d0eafe-540a-4b2e-a989-e98ff3c31105",
+"name": "Take Up the Shield",
+"collector_number": "348",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2b87bcac-ec64-4012-9e75-f459d3640eb3",
+"name": "Earth's Mightiest Heroes",
+"collector_number": "349",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4a46ea59-6c5d-4bed-9951-b5590f9a1bdb",
+"name": "Tony Stark // The Invincible Iron Man",
+"collector_number": "350",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Artificer Hero // Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Transform",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4bdfc580-de51-445b-b170-8c6832e44704",
+"name": "Epic Fight",
+"collector_number": "351",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Fight",
+"Double"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ac1b6ffc-12a9-4d9c-a9fc-68a839a40738",
+"name": "Captain America, Super-Soldier",
+"collector_number": "352",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"First strike"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "942ac2ac-7528-4768-8398-8520a8ee15e5",
+"name": "Captain America, Wings of Freedom",
+"collector_number": "353",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"Flying",
+"First strike",
+"Ward"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2e665a03-bece-43df-bd15-b4496e233f2e",
+"name": "Captain Marvel, Earth's Protector",
+"collector_number": "354",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Kree Hero",
+"keywords": [
+"Flying",
+"Power-up",
+"Lifelink",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c867a778-97ef-4872-b890-b088b96a1281",
+"name": "Jennifer Walters // The Sensational She-Hulk",
+"collector_number": "355",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Advisor Hero // Legendary Creature \u2014 Gamma Hero",
+"keywords": [
+"Reach",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8dd929cb-0fe1-4cb3-bc8d-96ca37f194f3",
+"name": "Monica Rambeau // Photon, Living Light",
+"collector_number": "356",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Hero // Legendary Creature \u2014 Elemental Hero",
+"keywords": [
+"Flying",
+"Prowess",
+"Transform",
+"Hexproof"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "62916107-14c0-4516-9fed-a032b1a80e5d",
+"name": "Nick Fury, Agent of S.H.I.E.L.D.",
+"collector_number": "357",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Power-up",
+"Transform"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1fe549c3-79be-40ef-b57c-de59f24df5ab",
+"name": "The Sentry, Golden Guardian",
+"collector_number": "358",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Indestructible",
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b6c0ee14-2028-4e8b-9acd-ff78821bca9b",
+"name": "Bruce Banner // The Incredible Hulk",
+"collector_number": "359",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero // Legendary Creature \u2014 Gamma Berserker Hero",
+"keywords": [
+"Reach",
+"Enrage",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "df3d5b86-7b75-4df9-8985-7159cde12261",
+"name": "Ironheart, Clever Champion",
+"collector_number": "360",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Improvise"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ebedff30-ae43-4861-aab2-afe1fc88337e",
+"name": "Ms. Marvel, Kamala Khan",
+"collector_number": "361",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Inhuman Hero",
+"keywords": [
+"Reach",
+"Vigilance",
+"Embiggen Fist"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dff11626-ad4d-443a-b7db-f508790b5fd2",
+"name": "Namor the Sub-Mariner",
+"collector_number": "362",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Merfolk Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4a46ea59-6c5d-4bed-9951-b5590f9a1bdb",
+"name": "Tony Stark // The Invincible Iron Man",
+"collector_number": "363",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Artificer Hero // Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Transform",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "579f9a86-a1af-4c2a-a7e5-8fea0bd0eb61",
+"name": "Black Widow, Super Spy",
+"collector_number": "364",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9e4fa592-71f8-4c71-8c91-78e6326cd736",
+"name": "Doctor Doom",
+"collector_number": "365",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b46647a1-0c91-451b-8c0b-be8fe02faee2",
+"name": "Elektra, Daughter of the Hand",
+"collector_number": "366",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Ninja Villain",
+"keywords": [
+"Sneak"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6b59bb1f-f2d4-4d47-bd57-23927d588381",
+"name": "Hawkeye, Master Marksman",
+"collector_number": "367",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Archer Hero",
+"keywords": [
+"Explosive",
+"Reach",
+"First strike",
+"Trick Arrows",
+"Boomerang",
+"Net"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d8ae8c38-501e-44ea-9faf-cf9d11ba6616",
+"name": "The Scarlet Witch",
+"collector_number": "368",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Warlock Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2842217a-173e-4879-8b25-fefe2fc1123f",
+"name": "Thor, God of Thunder",
+"collector_number": "369",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 God Warrior Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "700ef9c8-698b-45f7-a1fd-dec74e553224",
+"name": "Shang-Chi, Master of Kung Fu",
+"collector_number": "370",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "80312910-5d53-44f1-9982-e46dc7532abb",
+"name": "The Unbeatable Squirrel Girl",
+"collector_number": "371",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Squirrel Human Hero",
+"keywords": [
+"I LOVE Squirrels!"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88aadf60-91f9-4932-a2bc-63365a139d36",
+"name": "Daredevil, Man Without Fear",
+"collector_number": "372",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Radar Sense",
+"Vigilance",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fe00278d-4385-4e3f-919c-12a794fd86f5",
+"name": "King T'Challa // Black Panther, Hope Enduring",
+"collector_number": "373",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble Hero // Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [
+"Transform",
+"Double strike",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3eeeb159-aa45-4a9b-9618-8542604b9830",
+"name": "The Kingpin of Crime",
+"collector_number": "374",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Extort"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "06e9287b-56d4-443e-97ba-b5dcdc4fa989",
+"name": "Storm, Windrider",
+"collector_number": "375",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "090d815b-b2c8-48cd-a0b3-dc662d5352ac",
+"name": "Thanos, the Mad Titan",
+"collector_number": "376",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Eternal Villain",
+"keywords": [
+"Deathtouch",
+"Power-up",
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6f4c94b6-f829-4646-a574-083997b78dfb",
+"name": "Winter Soldier, Icy Assassin",
+"collector_number": "377",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Assassin Villain",
+"keywords": [
+"Vigilance",
+"Menace"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8429ba6a-6c06-4a83-a6ee-023b64b825f8",
+"name": "Wolverine, Fierce Fighter",
+"collector_number": "378",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Berserker Hero",
+"keywords": [
+"Heal",
+"Haste",
+"Fight"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "32aee76a-e738-4898-985a-801d1cce15ea",
+"name": "The Vision",
+"collector_number": "379",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Robot Hero",
+"keywords": [
+"Density Control",
+"Flying",
+"Vigilance",
+"Technopathy",
+"Solar Beam"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "40760bfa-a423-487c-ba29-043b2d00c736",
+"name": "Dark Fortress",
+"collector_number": "380",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "36b58705-c5a5-4547-8d8b-a7c35e1f69ae",
+"name": "Gathering Place",
+"collector_number": "381",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7785ffd4-f169-475d-9558-ce4877b3378a",
+"name": "Gleaming Bastion",
+"collector_number": "382",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7069d241-4e66-40bf-afd1-551a4a5457f0",
+"name": "Hidden Lair",
+"collector_number": "383",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "99c70f4e-de8a-426d-99aa-17b2f87625ba",
+"name": "Training Compound",
+"collector_number": "384",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b175e826-09e8-4fae-9f2e-b902f95b282d",
+"name": "The Mind Stone",
+"collector_number": "385",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Infinity Stone",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b175e826-09e8-4fae-9f2e-b902f95b282d",
+"name": "The Mind Stone",
+"collector_number": "386",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Infinity Stone",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ac1b6ffc-12a9-4d9c-a9fc-68a839a40738",
+"name": "Captain America, Super-Soldier",
+"collector_number": "387",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"First strike"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c867a778-97ef-4872-b890-b088b96a1281",
+"name": "Jennifer Walters // The Sensational She-Hulk",
+"collector_number": "388",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Advisor Hero // Legendary Creature \u2014 Gamma Hero",
+"keywords": [
+"Reach",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "62916107-14c0-4516-9fed-a032b1a80e5d",
+"name": "Nick Fury, Agent of S.H.I.E.L.D.",
+"collector_number": "389",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Power-up",
+"Transform"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b6c0ee14-2028-4e8b-9acd-ff78821bca9b",
+"name": "Bruce Banner // The Incredible Hulk",
+"collector_number": "390",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero // Legendary Creature \u2014 Gamma Berserker Hero",
+"keywords": [
+"Reach",
+"Enrage",
+"Transform",
+"Trample"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dff11626-ad4d-443a-b7db-f508790b5fd2",
+"name": "Namor the Sub-Mariner",
+"collector_number": "391",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Merfolk Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4a46ea59-6c5d-4bed-9951-b5590f9a1bdb",
+"name": "Tony Stark // The Invincible Iron Man",
+"collector_number": "392",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Artificer Hero // Legendary Artifact Creature \u2014 Human Hero",
+"keywords": [
+"Flying",
+"Transform",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "579f9a86-a1af-4c2a-a7e5-8fea0bd0eb61",
+"name": "Black Widow, Super Spy",
+"collector_number": "393",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9e4fa592-71f8-4c71-8c91-78e6326cd736",
+"name": "Doctor Doom",
+"collector_number": "394",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b46647a1-0c91-451b-8c0b-be8fe02faee2",
+"name": "Elektra, Daughter of the Hand",
+"collector_number": "395",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Ninja Villain",
+"keywords": [
+"Sneak"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "700ef9c8-698b-45f7-a1fd-dec74e553224",
+"name": "Shang-Chi, Master of Kung Fu",
+"collector_number": "396",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "6c7e4e51-099a-4398-a4b7-e2f0ddd36429",
+"name": "The Astonishing Ant-Man",
+"collector_number": "397",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88aadf60-91f9-4932-a2bc-63365a139d36",
+"name": "Daredevil, Man Without Fear",
+"collector_number": "398",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Radar Sense",
+"Vigilance",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fe00278d-4385-4e3f-919c-12a794fd86f5",
+"name": "King T'Challa // Black Panther, Hope Enduring",
+"collector_number": "399",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble Hero // Legendary Creature \u2014 Human Warrior Hero",
+"keywords": [
+"Transform",
+"Double strike",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "090d815b-b2c8-48cd-a0b3-dc662d5352ac",
+"name": "Thanos, the Mad Titan",
+"collector_number": "400",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Eternal Villain",
+"keywords": [
+"Deathtouch",
+"Power-up",
+"Lifelink"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a8f25e67-2112-4355-9298-363ed04a5cb8",
+"name": "Ultron, Artificial Malevolence",
+"collector_number": "401",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Robot Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dae20bcd-dc24-4f9d-9400-a6f013b49f14",
+"name": "Agent Phil Coulson",
+"collector_number": "402",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Spy Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "da6e24a4-8adc-41a1-b5eb-3e31dc1250c9",
+"name": "Kang the Conqueror",
+"collector_number": "403",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Flying",
+"Power-up"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "12d51534-a98d-487b-9ba9-c10861dff992",
+"name": "S.H.I.E.L.D. Flying Car",
+"collector_number": "404",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Vehicle",
+"keywords": [
+"Flying",
+"Crew",
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0fe6c042-1182-4392-8938-fee36149d74f",
+"name": "Baron Helmut Zemo",
+"collector_number": "405",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble Villain",
+"keywords": [
+"Boast",
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "369aa9a6-af8a-432c-adff-ced2bb203dc7",
+"name": "Construct a Cosmic Cube",
+"collector_number": "406",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f398a742-22c1-4da9-9d49-fdce2eb93d01",
+"name": "Doom Reigns Supreme",
+"collector_number": "407",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Plan",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "fe7cc414-42d0-4dad-8516-7a0be0860a67",
+"name": "M.O.D.O.K.",
+"collector_number": "408",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Villain",
+"keywords": [
+"Mental Organism",
+"Flying",
+"Lifelink",
+"Designed Only for Killing",
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "4644013f-c96a-450e-a7bc-ddfa7a563050",
+"name": "Super-Skrull",
+"collector_number": "409",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Skrull Shapeshifter Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d90a5213-3363-4cd1-97d6-4fc057f78b2a",
+"name": "Thunderbolts Conspiracy",
+"collector_number": "410",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "52ec472e-a745-4e25-b9a7-8e1eb8873594",
+"name": "Fin Fang Foom",
+"collector_number": "411",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Alien Dragon Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b76ce131-e51a-445e-8216-00df5904ab93",
+"name": "Quicksilver, Brash Blur",
+"collector_number": "412",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Power-up",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2b87bcac-ec64-4012-9e75-f459d3640eb3",
+"name": "Earth's Mightiest Heroes",
+"collector_number": "413",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [
+"Teamwork"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "31cae00a-3a74-4a59-80b0-a656f524e878",
+"name": "Heroic Feast",
+"collector_number": "414",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Food"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "34994475-b914-44f6-8ca1-c2747b6d5956",
+"name": "Mole Man, Moloid Master",
+"collector_number": "415",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Mill",
+"Landfall"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "ec8e310f-e871-498f-8d80-c3617c5e1433",
+"name": "Absorbing Man",
+"collector_number": "416",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7c854a07-e031-458e-a335-9c31865020b8",
+"name": "Alien Invasion",
+"collector_number": "417",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "8a09d4a2-4796-4a15-ab75-a3a0b717f62d",
+"name": "Ares, God of War",
+"collector_number": "418",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 God Warrior Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "64132f93-66ac-4794-8c07-a88f9ed0e22b",
+"name": "Cloak and Dagger, Entwined",
+"collector_number": "419",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Lifelink",
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "57d02dc8-e22e-4874-9f02-490a2528a28f",
+"name": "The Mighty Thor, Jane Foster",
+"collector_number": "420",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human God Hero",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bfe0818b-ae13-4174-85c8-24b895d28df0",
+"name": "Moon Girl and Devil Dinosaur",
+"collector_number": "421",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Dinosaur Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "0ff9c0cc-4fb3-4117-9a8e-5b51f62306c4",
+"name": "The Ruinous Wrecking Crew",
+"collector_number": "422",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c09c424b-6aba-4190-9f55-f0307d746386",
+"name": "Scientist Supreme of A.I.M.",
+"collector_number": "423",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Scientist Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "3688ad0d-653b-4d5d-a57e-444db679d83e",
+"name": "The Serpent Society",
+"collector_number": "424",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Snake Villain",
+"keywords": [
+"Ward",
+"Deathtouch"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "dcd97730-b793-4c0c-b158-625ac3656b4a",
+"name": "Taskmaster, Mercenary Mimic",
+"collector_number": "425",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Mercenary Villain",
+"keywords": [
+"Photographic Reflexes"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "e25062ba-7176-4d59-ac3e-26d19b26f02a",
+"name": "Worlds Within Worlds",
+"collector_number": "426",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "958d81c2-ca09-4275-890e-3bb595317325",
+"name": "Iron Man Armor",
+"collector_number": "427",
+"rarity": "mythic",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "f93fa6ec-1f13-4109-aa60-11e148f7ba88",
+"name": "Super-Adaptoid",
+"collector_number": "428",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Robot Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "9bd013df-ad75-4099-940b-1765c58faf26",
+"name": "Castle Doom",
+"collector_number": "429",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d8ae8c38-501e-44ea-9faf-cf9d11ba6616",
+"name": "The Scarlet Witch",
+"collector_number": "431",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Warlock Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "88aadf60-91f9-4932-a2bc-63365a139d36",
+"name": "Daredevil, Man Without Fear",
+"collector_number": "432",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [
+"Radar Sense",
+"Vigilance",
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "433",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "434",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "435",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "436",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "437",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "438",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "439",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "440",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "441",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "442",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b74c072d-77ac-460d-9d9c-75b25874f58b",
+"name": "Captain Mar-Vell, Space-Born",
+"collector_number": "443",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Kree Soldier Hero",
+"keywords": [
+"Flying",
+"Vigilance",
+"Cosmic Awareness"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "1df7a09f-fbc8-4c2a-a903-bab9e680eda7",
+"name": "Patriot, Shield Wielder",
+"collector_number": "444",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Hero",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "7fa5237e-dd79-4646-b935-cb8c6ee803ab",
+"name": "Mister Fantastic, Reed Richards",
+"collector_number": "445",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Scientist Hero",
+"keywords": [
+"Reach"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c91e64d4-e687-4ccd-a56e-796cff6e052c",
+"name": "Baron Strucker, HYDRA Overlord",
+"collector_number": "446",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "aeeb50f2-8e02-4d40-a1dd-28b1c5c85c7e",
+"name": "Moonstone, Harsh Mistress",
+"collector_number": "447",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Doctor Villain",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "2fb0f2d2-ed1f-4181-91f2-684a71c34998",
+"name": "Speed, Young Avenger",
+"collector_number": "448",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Mutant Hero",
+"keywords": [
+"Haste"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "67aa946d-e694-494e-ba0c-44880d5bc03e",
+"name": "Captain America, Living Legend",
+"collector_number": "449",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier Hero",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "b43350a8-fc4d-41ed-becd-f0277512bb5f",
+"name": "Kang, Temporal Tyrant",
+"collector_number": "450",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "d812c8e3-a475-4ad2-a93f-7208ad873676",
+"name": "Madame Hydra",
+"collector_number": "451",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Villain",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "c5fc8e7c-a87e-4586-a13c-d30e0a3aafbf",
+"name": "Avengers Tower",
+"collector_number": "452",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "71bc69a5-7cec-4abd-b97d-13f8e1f9afac",
+"name": "Baxter Building",
+"collector_number": "453",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-06-26"
+},
+{
+"oracle_id": "cd2888aa-71f3-47ee-ba33-7bb95d5bc836",
+"name": "Villainous Hideout",
+"collector_number": "454",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [
+"Connive"
+],
+"released_at": "2026-06-26"
+}
+]
+}

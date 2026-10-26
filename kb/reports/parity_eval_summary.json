@@ -1,0 +1,50 @@
+{
+ "calls": 29,
+ "facts": {
+  "calls": 29,
+  "fact_misses": {},
+  "mode": "facts",
+  "regex_calls_during_queries": 37014,
+  "regex_sites": {
+   "decoder.py:decode": 37014
+  },
+  "seconds": 34.9
+ },
+ "identical_calls_regex_vs_facts": 29,
+ "note": "regex and facts read the same inventory (0.3.0 NON_DECK, Sheet text); policy restores the 3 Offspring rows and reads Oracle rules text for the 6 reconciled cards. Runs used different PYTHONHASHSEED values.",
+ "policy": {
+  "calls": 29,
+  "fact_misses": {},
+  "mode": "policy",
+  "regex_calls_during_queries": 37038,
+  "regex_sites": {
+   "decoder.py:decode": 37038
+  },
+  "seconds": 32.1
+ },
+ "policy_differs_from_regex_in": [
+  "build:[\"The Necrobloom\"]",
+  "inventory:[]"
+ ],
+ "regex": {
+  "calls": 29,
+  "fact_misses": null,
+  "mode": "regex",
+  "regex_calls_during_queries": 2087946,
+  "regex_sites": {
+   "__init__.py:findall": 4387,
+   "__init__.py:search": 962798,
+   "__init__.py:split": 30376,
+   "__init__.py:sub": 24979,
+   "api.py:upgrades": 1679,
+   "deckeval.py:card_destinations": 48,
+   "deckeval.py:propose_configuration": 1435,
+   "decoder.py:decode": 17542,
+   "semantics.py:clause_audit": 3946,
+   "structure.py:<genexpr>": 8002,
+   "structure.py:closing_profile": 2640,
+   "structure.py:resource_claims": 7548
+  },
+  "seconds": 37.6
+ }
+}

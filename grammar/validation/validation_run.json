@@ -1,0 +1,31 @@
+{
+ "version": "validation-0.1.0",
+ "run_utc": "2026-10-22T03:54:05Z",
+ "contracts": 8637,
+ "heldout_frozen": {
+  "sets": [
+   "trk",
+   "trc"
+  ],
+  "sha256": "bc22d31b15e0d2ef0954507763d1c29ebf8fef22f33e2885c4f54b34446329ab",
+  "contracts": 419,
+  "path": "validation/heldout_trk_trc_predictions.json",
+  "reused": true
+ },
+ "rulings_ingested_new": 79663,
+ "rulings_bulk": {
+  "file": "rulings-20261021210033.jsonl.gz",
+  "sha256": "409a959cb016a513e90f61e9604cb6dd5d8a4fa691dfb5414940b6af2099648c"
+ },
+ "macros": {
+  "kwa.earthbend": 3,
+  "kw.station": 2,
+  "kw.sneak": 2
+ },
+ "ruling_status": {
+  "unconverted": 2493,
+  "ambiguous": 5,
+  "confirmed": 22,
+  "insufficient_representation": 2
+ }
+}

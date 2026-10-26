@@ -1,0 +1,2517 @@
+{
+  "title": "MTG Grammar and Rules Vocabulary Registry",
+  "version": "0.1.0",
+  "created": "2026-10-15",
+  "basis": {
+    "ontology": "DIO v3.1.1 (2026-10-06)",
+    "addendum": "DIO addendum (2026-10-09)",
+    "rules": "Comprehensive Rules effective 2026-09-25"
+  },
+  "status_definitions": {
+    "ontology_defined": "This exact controlled vocabulary is explicitly declared in local MTG-DIO v3.1.1 or its hook table; this is not a certification of every game use.",
+    "rules_verified": "This concept or semantic distinction has been checked against the 2026-09-25 Comprehensive Rules; registry values are normalized where stated and may not be official token spellings.",
+    "proposed": "Suggested new value domain or enumeration for our vocabulary layer, not canonized into DIO or comprehensive rules. May include examples that are valid Magic concepts.",
+    "inventory_observed_candidate": "Reserved future per-card annotation status; local inventory parser outputs do not constitute verified operation semantics."
+  },
+  "sources": {
+    "DIO": {
+      "title": "MTG Deck Interaction Ontology v3.1.1",
+      "date": "2026-10-06",
+      "local_file": "MTG DECK INTERACTION ONTOLOGY v3_1_1.md"
+    },
+    "ADD": {
+      "title": "MTG Deck Interaction Ontology v3.1.1 Addendum",
+      "date": "2026-10-09",
+      "local_file": "MTG DECK INTERACTION ONTOLOGY v3.1.1 — ADDENDUM(1).md"
+    },
+    "CR": {
+      "title": "Magic Comprehensive Rules (effective September 25, 2026; judge rules mirror)",
+      "date": "2026-09-25",
+      "url": "https://blogs.magicjudges.org/rules/comprehensive-rules/"
+    },
+    "MTGJSON": {
+      "title": "MTGJSON EnumValues / Keywords / CardTypes",
+      "url": "https://www.mtgjson.com/downloads/all-files/"
+    },
+    "SCRYFALL": {
+      "title": "Scryfall API catalogs",
+      "url": "https://scryfall.com/docs/api/catalogs"
+    }
+  },
+  "validation_principles": [
+    "Never infer full mechanical interaction from a shared word or hook identifier alone.",
+    "Requirements are AND across groups, OR within groups; amplifiers are not gates.",
+    "Timing, priority, payment, zone, identity and event checkpoints must be verified when relevant.",
+    "Always distinguish output hook, source operation, and card-level connection evidence.",
+    "A list of vocabulary values is not an exhaustive set of all legal game states or all card text.",
+    "Do not treat an automatically parsed inventory operation as verified; it is a candidate until its full rule contract is checked."
+  ],
+  "domains": [
+    {
+      "domain": "unit.level",
+      "purpose": "Holarchy level of an InteractionUnit.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§3",
+      "closed": true,
+      "values": [
+        {
+          "value": "effect_bundle"
+        },
+        {
+          "value": "ability"
+        },
+        {
+          "value": "card"
+        },
+        {
+          "value": "package"
+        },
+        {
+          "value": "subsystem"
+        },
+        {
+          "value": "deck"
+        }
+      ]
+    },
+    {
+      "domain": "hook.kind",
+      "purpose": "Hook category.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4",
+      "closed": true,
+      "values": [
+        {
+          "value": "event"
+        },
+        {
+          "value": "state"
+        },
+        {
+          "value": "resource"
+        },
+        {
+          "value": "object"
+        },
+        {
+          "value": "permission"
+        },
+        {
+          "value": "capability"
+        },
+        {
+          "value": "historical_condition"
+        },
+        {
+          "value": "information"
+        }
+      ]
+    },
+    {
+      "domain": "hook.certainty",
+      "purpose": "Whether an exposed hook is assured or contingent.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4",
+      "closed": true,
+      "values": [
+        {
+          "value": "guaranteed"
+        },
+        {
+          "value": "optional"
+        },
+        {
+          "value": "conditional"
+        },
+        {
+          "value": "opportunity"
+        }
+      ]
+    },
+    {
+      "domain": "operation.kind",
+      "purpose": "Kind of executable contract.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5",
+      "closed": true,
+      "values": [
+        {
+          "value": "cast"
+        },
+        {
+          "value": "activate"
+        },
+        {
+          "value": "trigger"
+        },
+        {
+          "value": "continuous"
+        },
+        {
+          "value": "replacement"
+        },
+        {
+          "value": "special_action"
+        },
+        {
+          "value": "state_based"
+        },
+        {
+          "value": "composite"
+        }
+      ]
+    },
+    {
+      "domain": "primitive.relation",
+      "purpose": "Primitive relations; roles are derived, not intrinsic.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5",
+      "closed": true,
+      "values": [
+        {
+          "value": "PRODUCES"
+        },
+        {
+          "value": "OBSERVES"
+        },
+        {
+          "value": "CONSUMES"
+        },
+        {
+          "value": "TRANSFORMS"
+        },
+        {
+          "value": "MODIFIES"
+        },
+        {
+          "value": "PERMITS"
+        },
+        {
+          "value": "PREVENTS"
+        }
+      ]
+    },
+    {
+      "domain": "requirement_group.class",
+      "purpose": "Diagnosis of why a prerequisite can fail.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.1",
+      "closed": true,
+      "values": [
+        {
+          "value": "trigger"
+        },
+        {
+          "value": "cost"
+        },
+        {
+          "value": "timing"
+        },
+        {
+          "value": "access"
+        },
+        {
+          "value": "eligibility"
+        },
+        {
+          "value": "assembly"
+        },
+        {
+          "value": "state"
+        },
+        {
+          "value": "history"
+        },
+        {
+          "value": "information"
+        }
+      ]
+    },
+    {
+      "domain": "requirement_group.checkpoint",
+      "purpose": "When the predicate must be tested.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.1",
+      "closed": true,
+      "values": [
+        {
+          "value": "trigger"
+        },
+        {
+          "value": "initiation"
+        },
+        {
+          "value": "payment"
+        },
+        {
+          "value": "resolution"
+        },
+        {
+          "value": "entry"
+        },
+        {
+          "value": "state_check"
+        }
+      ]
+    },
+    {
+      "domain": "timing.turn_scope",
+      "purpose": "Coarse timing scope; does not replace priority rules.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.2",
+      "closed": true,
+      "values": [
+        {
+          "value": "your_turn"
+        },
+        {
+          "value": "opponent_turn"
+        },
+        {
+          "value": "any_turn"
+        }
+      ]
+    },
+    {
+      "domain": "timing.speed",
+      "purpose": "Eligibility/time-class shorthand, not a claim every action is a spell.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.2",
+      "closed": true,
+      "values": [
+        {
+          "value": "sorcery"
+        },
+        {
+          "value": "instant"
+        },
+        {
+          "value": "mana_ability"
+        },
+        {
+          "value": "special_action"
+        },
+        {
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "domain": "timing.ordinal_condition",
+      "purpose": "Ordinal gating; use capacity state for limited activations.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.2",
+      "closed": true,
+      "values": [
+        {
+          "value": "first_each_turn"
+        },
+        {
+          "value": "second_each_turn"
+        },
+        {
+          "value": "next"
+        }
+      ]
+    },
+    {
+      "domain": "cost.method",
+      "purpose": "Casting cost method; additional costs remain relevant.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.3",
+      "closed": true,
+      "values": [
+        {
+          "value": "base"
+        },
+        {
+          "value": "alternative"
+        },
+        {
+          "value": "without_paying_mana_cost"
+        }
+      ]
+    },
+    {
+      "domain": "choice.choice_time",
+      "purpose": "When a choice binds.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.5",
+      "closed": true,
+      "values": [
+        {
+          "value": "initiation"
+        },
+        {
+          "value": "payment"
+        },
+        {
+          "value": "resolution"
+        },
+        {
+          "value": "entry"
+        },
+        {
+          "value": "replacement"
+        },
+        {
+          "value": "trigger"
+        }
+      ]
+    },
+    {
+      "domain": "choice.scope",
+      "purpose": "Choice cardinality/scope distribution.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§5.5",
+      "closed": true,
+      "values": [
+        {
+          "value": "shared"
+        },
+        {
+          "value": "per_object"
+        },
+        {
+          "value": "per_trigger"
+        },
+        {
+          "value": "per_event"
+        }
+      ]
+    },
+    {
+      "domain": "object.substrate",
+      "purpose": "Underlying kind of object represented.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6",
+      "closed": true,
+      "values": [
+        {
+          "value": "physical_card"
+        },
+        {
+          "value": "token"
+        },
+        {
+          "value": "card_copy"
+        },
+        {
+          "value": "spell_copy"
+        },
+        {
+          "value": "ability_copy"
+        },
+        {
+          "value": "emblem_like"
+        }
+      ]
+    },
+    {
+      "domain": "characteristic_effect.axis",
+      "purpose": "Characteristics alterable by continuous/copy effects.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6.2",
+      "closed": true,
+      "values": [
+        {
+          "value": "name"
+        },
+        {
+          "value": "color"
+        },
+        {
+          "value": "type"
+        },
+        {
+          "value": "subtype"
+        },
+        {
+          "value": "supertype"
+        },
+        {
+          "value": "ability"
+        },
+        {
+          "value": "power_toughness"
+        }
+      ]
+    },
+    {
+      "domain": "characteristic_effect.operation",
+      "purpose": "Change applied to a characteristic.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6.2",
+      "closed": true,
+      "values": [
+        {
+          "value": "set"
+        },
+        {
+          "value": "add"
+        },
+        {
+          "value": "remove"
+        },
+        {
+          "value": "retain"
+        },
+        {
+          "value": "copy"
+        }
+      ]
+    },
+    {
+      "domain": "state.kind",
+      "purpose": "Stored or persistent state category.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6.3",
+      "closed": true,
+      "values": [
+        {
+          "value": "counter"
+        },
+        {
+          "value": "status"
+        },
+        {
+          "value": "attachment"
+        },
+        {
+          "value": "designation"
+        },
+        {
+          "value": "link"
+        },
+        {
+          "value": "tracked_effect"
+        },
+        {
+          "value": "capacity"
+        },
+        {
+          "value": "permission"
+        },
+        {
+          "value": "chosen_value"
+        },
+        {
+          "value": "history"
+        }
+      ]
+    },
+    {
+      "domain": "state.scope",
+      "purpose": "Bearer/lifetime scope.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6.3",
+      "closed": true,
+      "values": [
+        {
+          "value": "object_instance"
+        },
+        {
+          "value": "physical_card"
+        },
+        {
+          "value": "player"
+        },
+        {
+          "value": "turn"
+        },
+        {
+          "value": "combat"
+        },
+        {
+          "value": "game"
+        },
+        {
+          "value": "linked_object"
+        }
+      ]
+    },
+    {
+      "domain": "transition.continuity",
+      "purpose": "Object continuity through a transition.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6.4",
+      "closed": true,
+      "values": [
+        {
+          "value": "same_object"
+        },
+        {
+          "value": "new_object"
+        },
+        {
+          "value": "additional_object_created"
+        },
+        {
+          "value": "old_object_ends"
+        }
+      ]
+    },
+    {
+      "domain": "transition.entry_origin",
+      "purpose": "Origin class of a battlefield entry.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§6.4",
+      "closed": true,
+      "values": [
+        {
+          "value": "stack"
+        },
+        {
+          "value": "nonstack"
+        },
+        {
+          "value": "none"
+        }
+      ]
+    },
+    {
+      "domain": "connection.status",
+      "purpose": "Connection proof/validation status; not equivalent to vocabulary verification.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§7",
+      "closed": true,
+      "values": [
+        {
+          "value": "verified"
+        },
+        {
+          "value": "conditional"
+        },
+        {
+          "value": "candidate"
+        },
+        {
+          "value": "incompatible"
+        },
+        {
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "domain": "connection.strength",
+      "purpose": "Strength of the qualified connection.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§7",
+      "closed": true,
+      "values": [
+        {
+          "value": "direct"
+        },
+        {
+          "value": "conditional"
+        },
+        {
+          "value": "package_dependent"
+        },
+        {
+          "value": "latent"
+        },
+        {
+          "value": "broken"
+        }
+      ]
+    },
+    {
+      "domain": "connection.polarity",
+      "purpose": "Whether relationship helps or harms context.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§7",
+      "closed": true,
+      "values": [
+        {
+          "value": "positive"
+        },
+        {
+          "value": "negative"
+        },
+        {
+          "value": "mixed"
+        },
+        {
+          "value": "context_dependent"
+        }
+      ]
+    },
+    {
+      "domain": "hook.identifier.zone_access",
+      "purpose": "Qualified hook identifiers in core vocabulary: zone access.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "zone.enter"
+        },
+        {
+          "value": "zone.leave"
+        },
+        {
+          "value": "battlefield.enter"
+        },
+        {
+          "value": "battlefield.leave"
+        },
+        {
+          "value": "graveyard.enter"
+        },
+        {
+          "value": "graveyard.leave"
+        },
+        {
+          "value": "hand.enter"
+        },
+        {
+          "value": "hand.leave"
+        },
+        {
+          "value": "exile.enter"
+        },
+        {
+          "value": "exile.leave"
+        },
+        {
+          "value": "library.enter"
+        },
+        {
+          "value": "library.leave"
+        },
+        {
+          "value": "command.enter"
+        },
+        {
+          "value": "command.leave"
+        },
+        {
+          "value": "card.return_to_hand"
+        },
+        {
+          "value": "card.return_to_battlefield"
+        },
+        {
+          "value": "card.cast_from_zone"
+        },
+        {
+          "value": "card.play_from_zone"
+        }
+      ],
+      "caveat": "Slash-compressed families expanded into individual dotted identifiers; full effect specificity requires qualifiers and event facets."
+    },
+    {
+      "domain": "hook.identifier.stack_ability",
+      "purpose": "Qualified hook identifiers in core vocabulary: stack ability.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "spell.cast"
+        },
+        {
+          "value": "spell.resolve"
+        },
+        {
+          "value": "spell.countered"
+        },
+        {
+          "value": "spell.copied"
+        },
+        {
+          "value": "ability.activated"
+        },
+        {
+          "value": "ability.triggered"
+        },
+        {
+          "value": "ability.copied"
+        },
+        {
+          "value": "ability.resolved"
+        },
+        {
+          "value": "object.becomes_target"
+        },
+        {
+          "value": "permission.cast"
+        },
+        {
+          "value": "permission.play"
+        },
+        {
+          "value": "permission.activate"
+        }
+      ],
+      "caveat": "Slash-compressed families expanded into individual dotted identifiers; full effect specificity requires qualifiers and event facets."
+    },
+    {
+      "domain": "hook.identifier.resource",
+      "purpose": "Qualified hook identifiers in core vocabulary: resource.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "card.draw"
+        },
+        {
+          "value": "card.discard"
+        },
+        {
+          "value": "card.mill"
+        },
+        {
+          "value": "card.reveal"
+        },
+        {
+          "value": "card.look"
+        },
+        {
+          "value": "card.search"
+        },
+        {
+          "value": "library.shuffle"
+        },
+        {
+          "value": "permanent.sacrifice"
+        },
+        {
+          "value": "permanent.destroy"
+        },
+        {
+          "value": "token.create"
+        },
+        {
+          "value": "counter.put"
+        },
+        {
+          "value": "counter.remove"
+        },
+        {
+          "value": "counter.move"
+        },
+        {
+          "value": "mana.add"
+        },
+        {
+          "value": "mana.spend"
+        },
+        {
+          "value": "life.gain"
+        },
+        {
+          "value": "life.lose"
+        },
+        {
+          "value": "life.pay"
+        },
+        {
+          "value": "damage.deal"
+        },
+        {
+          "value": "land.play"
+        }
+      ],
+      "caveat": "Slash-compressed families expanded into individual dotted identifiers; full effect specificity requires qualifiers and event facets."
+    },
+    {
+      "domain": "hook.identifier.state_characteristic",
+      "purpose": "Qualified hook identifiers in core vocabulary: state characteristic.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "permanent.tap"
+        },
+        {
+          "value": "permanent.untap"
+        },
+        {
+          "value": "permanent.transform"
+        },
+        {
+          "value": "permanent.turn_face_up"
+        },
+        {
+          "value": "permanent.turn_face_down"
+        },
+        {
+          "value": "permanent.phase_in"
+        },
+        {
+          "value": "permanent.phase_out"
+        },
+        {
+          "value": "permanent.attach"
+        },
+        {
+          "value": "permanent.detach"
+        },
+        {
+          "value": "control.change"
+        },
+        {
+          "value": "characteristics.change"
+        },
+        {
+          "value": "object.becomes_copy"
+        },
+        {
+          "value": "designation.gain"
+        },
+        {
+          "value": "designation.lose"
+        },
+        {
+          "value": "threshold.crossed"
+        },
+        {
+          "value": "threshold.reached"
+        },
+        {
+          "value": "comparison.satisfied"
+        }
+      ],
+      "caveat": "Slash-compressed families expanded into individual dotted identifiers; full effect specificity requires qualifiers and event facets."
+    },
+    {
+      "domain": "hook.identifier.combat",
+      "purpose": "Qualified hook identifiers in core vocabulary: combat.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "attacker.declared"
+        },
+        {
+          "value": "blocker.declared"
+        },
+        {
+          "value": "creature.attacking"
+        },
+        {
+          "value": "creature.blocked"
+        },
+        {
+          "value": "creature.unblocked"
+        },
+        {
+          "value": "combat.damage"
+        },
+        {
+          "value": "noncombat.damage"
+        },
+        {
+          "value": "creature.removed_from_combat"
+        },
+        {
+          "value": "combat.begin"
+        },
+        {
+          "value": "combat.end"
+        }
+      ],
+      "caveat": "Slash-compressed families expanded into individual dotted identifiers; full effect specificity requires qualifiers and event facets."
+    },
+    {
+      "domain": "hook.identifier.facets",
+      "purpose": "Qualified hook identifiers in core vocabulary: facets.",
+      "status": "ontology_defined",
+      "source": "DIO",
+      "source_location": "§4.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "permanent.dies"
+        },
+        {
+          "value": "creature.card_enters_graveyard"
+        },
+        {
+          "value": "token.enters_battlefield"
+        },
+        {
+          "value": "creature.enters_battlefield"
+        },
+        {
+          "value": "artifact.enters_battlefield"
+        },
+        {
+          "value": "land.enters_battlefield"
+        }
+      ],
+      "caveat": "Slash-compressed families expanded into individual dotted identifiers; full effect specificity requires qualifiers and event facets."
+    },
+    {
+      "domain": "rules.zone",
+      "purpose": "The seven normally used Magic zones.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "400.1",
+      "closed": true,
+      "values": [
+        {
+          "value": "library"
+        },
+        {
+          "value": "hand"
+        },
+        {
+          "value": "battlefield"
+        },
+        {
+          "value": "graveyard"
+        },
+        {
+          "value": "stack"
+        },
+        {
+          "value": "exile"
+        },
+        {
+          "value": "command"
+        }
+      ]
+    },
+    {
+      "domain": "rules.zone.legacy",
+      "purpose": "Legacy ante zone, not normally in use.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "400.1",
+      "closed": true,
+      "values": [
+        {
+          "value": "ante"
+        }
+      ]
+    },
+    {
+      "domain": "rules.turn.phase",
+      "purpose": "Default ordered phases of a turn.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "500.1",
+      "closed": true,
+      "values": [
+        {
+          "value": "beginning"
+        },
+        {
+          "value": "precombat_main"
+        },
+        {
+          "value": "combat"
+        },
+        {
+          "value": "postcombat_main"
+        },
+        {
+          "value": "ending"
+        }
+      ]
+    },
+    {
+      "domain": "rules.turn.step",
+      "purpose": "Named turn steps; extra/different steps can occur under effects or rules.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "501–514",
+      "closed": false,
+      "values": [
+        {
+          "value": "untap"
+        },
+        {
+          "value": "upkeep"
+        },
+        {
+          "value": "draw"
+        },
+        {
+          "value": "beginning_of_combat"
+        },
+        {
+          "value": "declare_attackers"
+        },
+        {
+          "value": "declare_blockers"
+        },
+        {
+          "value": "combat_damage"
+        },
+        {
+          "value": "end_of_combat"
+        },
+        {
+          "value": "end_step"
+        },
+        {
+          "value": "cleanup"
+        }
+      ]
+    },
+    {
+      "domain": "rules.ability.family",
+      "purpose": "Three basic ability categories.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "113, 602–604",
+      "closed": true,
+      "values": [
+        {
+          "value": "activated"
+        },
+        {
+          "value": "triggered"
+        },
+        {
+          "value": "static"
+        }
+      ]
+    },
+    {
+      "domain": "rules.effect.source",
+      "purpose": "Possible sources of effects or game actions; normalized labels.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "112–113, 601–605, 703–704",
+      "closed": false,
+      "values": [
+        {
+          "value": "spell"
+        },
+        {
+          "value": "activated_ability"
+        },
+        {
+          "value": "triggered_ability"
+        },
+        {
+          "value": "static_ability"
+        },
+        {
+          "value": "game_rule"
+        }
+      ]
+    },
+    {
+      "domain": "rules.action.family",
+      "purpose": "Actions distinguished by initiation and stack timing.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "116–117, 601–605, 703–704",
+      "closed": false,
+      "values": [
+        {
+          "value": "cast_spell"
+        },
+        {
+          "value": "activate_ability"
+        },
+        {
+          "value": "take_special_action"
+        },
+        {
+          "value": "take_turn_based_action"
+        },
+        {
+          "value": "perform_state_based_action"
+        },
+        {
+          "value": "perform_mana_ability"
+        }
+      ]
+    },
+    {
+      "domain": "rules.stack.entry",
+      "purpose": "Things that may be put on the stack.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "405.1–405.6, 706–707",
+      "closed": false,
+      "values": [
+        {
+          "value": "spell"
+        },
+        {
+          "value": "activated_ability"
+        },
+        {
+          "value": "triggered_ability"
+        },
+        {
+          "value": "copied_spell"
+        },
+        {
+          "value": "copied_ability"
+        }
+      ]
+    },
+    {
+      "domain": "rules.stack.bypass",
+      "purpose": "Categories that do not themselves use the stack.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "405.6",
+      "closed": false,
+      "values": [
+        {
+          "value": "mana_ability"
+        },
+        {
+          "value": "static_ability_effect"
+        },
+        {
+          "value": "special_action"
+        },
+        {
+          "value": "turn_based_action"
+        },
+        {
+          "value": "state_based_action"
+        },
+        {
+          "value": "effect_of_resolution"
+        }
+      ],
+      "caveat": "Check exceptions for specific mechanisms; triggered mana abilities also bypass stack."
+    },
+    {
+      "domain": "rules.priority.outcome",
+      "purpose": "Priority and all-player passing semantics.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "117.3–117.5",
+      "closed": false,
+      "values": [
+        {
+          "value": "pass"
+        },
+        {
+          "value": "act"
+        },
+        {
+          "value": "resolve_top_when_all_pass"
+        },
+        {
+          "value": "advance_step_when_empty_and_all_pass"
+        }
+      ]
+    },
+    {
+      "domain": "rules.spell_cast.stage",
+      "purpose": "Canonical ordered cast procedure. Labels are this registry’s normalization of the rule steps.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "601.2a–i",
+      "closed": true,
+      "values": [
+        {
+          "value": "propose_move_to_stack",
+          "rule": "601.2a"
+        },
+        {
+          "value": "announce_choices_modes_costs_x",
+          "rule": "601.2b"
+        },
+        {
+          "value": "choose_targets",
+          "rule": "601.2c"
+        },
+        {
+          "value": "divide_or_distribute",
+          "rule": "601.2d"
+        },
+        {
+          "value": "check_legality",
+          "rule": "601.2e"
+        },
+        {
+          "value": "determine_and_lock_total_cost",
+          "rule": "601.2f"
+        },
+        {
+          "value": "activate_mana_abilities_if_needed",
+          "rule": "601.2g"
+        },
+        {
+          "value": "pay_total_cost",
+          "rule": "601.2h"
+        },
+        {
+          "value": "becomes_cast_and_triggers",
+          "rule": "601.2i"
+        }
+      ]
+    },
+    {
+      "domain": "rules.trigger.word",
+      "purpose": "Leading trigger words.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "603.1",
+      "closed": true,
+      "values": [
+        {
+          "value": "when"
+        },
+        {
+          "value": "whenever"
+        },
+        {
+          "value": "at"
+        }
+      ]
+    },
+    {
+      "domain": "rules.replacement.marker",
+      "purpose": "Common replacement-effect constructions (not exhaustive).",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "614.1",
+      "closed": false,
+      "values": [
+        {
+          "value": "instead"
+        },
+        {
+          "value": "skip"
+        },
+        {
+          "value": "enters_with"
+        },
+        {
+          "value": "as_enters"
+        },
+        {
+          "value": "enters_as"
+        }
+      ]
+    },
+    {
+      "domain": "rules.color",
+      "purpose": "Colors that may be chosen as a color.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "105",
+      "closed": true,
+      "values": [
+        {
+          "value": "white"
+        },
+        {
+          "value": "blue"
+        },
+        {
+          "value": "black"
+        },
+        {
+          "value": "red"
+        },
+        {
+          "value": "green"
+        }
+      ]
+    },
+    {
+      "domain": "rules.color_profile",
+      "purpose": "Derived color classifications; colorless is not a color for choose-a-color.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "105",
+      "closed": true,
+      "values": [
+        {
+          "value": "colorless"
+        },
+        {
+          "value": "monocolored"
+        },
+        {
+          "value": "multicolored"
+        }
+      ]
+    },
+    {
+      "domain": "rules.player_relation",
+      "purpose": "Contextual player relations.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "102",
+      "closed": false,
+      "values": [
+        {
+          "value": "active_player"
+        },
+        {
+          "value": "nonactive_player"
+        },
+        {
+          "value": "opponent"
+        },
+        {
+          "value": "teammate"
+        }
+      ]
+    },
+    {
+      "domain": "rules.cost.family",
+      "purpose": "Common cost types. Open vocabulary: not a complete list of payable costs.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "118, 601.2f–h",
+      "closed": false,
+      "values": [
+        {
+          "value": "mana"
+        },
+        {
+          "value": "tap"
+        },
+        {
+          "value": "untap"
+        },
+        {
+          "value": "sacrifice"
+        },
+        {
+          "value": "discard"
+        },
+        {
+          "value": "pay_life"
+        },
+        {
+          "value": "exile"
+        },
+        {
+          "value": "reveal"
+        },
+        {
+          "value": "return_to_hand"
+        }
+      ]
+    },
+    {
+      "domain": "rules.type.card",
+      "purpose": "All card types in the September 2026 Comprehensive Rules.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "205.2a",
+      "closed": true,
+      "values": [
+        {
+          "value": "artifact"
+        },
+        {
+          "value": "battle"
+        },
+        {
+          "value": "conspiracy"
+        },
+        {
+          "value": "creature"
+        },
+        {
+          "value": "dungeon"
+        },
+        {
+          "value": "enchantment"
+        },
+        {
+          "value": "instant"
+        },
+        {
+          "value": "kindred"
+        },
+        {
+          "value": "land"
+        },
+        {
+          "value": "phenomenon"
+        },
+        {
+          "value": "plane"
+        },
+        {
+          "value": "planeswalker"
+        },
+        {
+          "value": "scheme"
+        },
+        {
+          "value": "sorcery"
+        },
+        {
+          "value": "vanguard"
+        }
+      ]
+    },
+    {
+      "domain": "rules.type.supertype",
+      "purpose": "All supertypes in September 2026 Comprehensive Rules.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "205.4a",
+      "closed": true,
+      "values": [
+        {
+          "value": "basic"
+        },
+        {
+          "value": "legendary"
+        },
+        {
+          "value": "ongoing"
+        },
+        {
+          "value": "snow"
+        },
+        {
+          "value": "world"
+        }
+      ]
+    },
+    {
+      "domain": "rules.type.land_subtype",
+      "purpose": "All land types in the September 2026 rules.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "205.3i",
+      "closed": true,
+      "values": [
+        {
+          "value": "Cave"
+        },
+        {
+          "value": "Desert"
+        },
+        {
+          "value": "Forest"
+        },
+        {
+          "value": "Gate"
+        },
+        {
+          "value": "Island"
+        },
+        {
+          "value": "Lair"
+        },
+        {
+          "value": "Locus"
+        },
+        {
+          "value": "Mine"
+        },
+        {
+          "value": "Mountain"
+        },
+        {
+          "value": "Plains"
+        },
+        {
+          "value": "Planet"
+        },
+        {
+          "value": "Power-Plant"
+        },
+        {
+          "value": "Sphere"
+        },
+        {
+          "value": "Swamp"
+        },
+        {
+          "value": "Tower"
+        },
+        {
+          "value": "Town"
+        },
+        {
+          "value": "Urza’s"
+        }
+      ]
+    },
+    {
+      "domain": "rules.type.enchantment_subtype",
+      "purpose": "All enchantment types in the September 2026 rules.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "205.3h",
+      "closed": true,
+      "values": [
+        {
+          "value": "Aura"
+        },
+        {
+          "value": "Background"
+        },
+        {
+          "value": "Cartouche"
+        },
+        {
+          "value": "Case"
+        },
+        {
+          "value": "Class"
+        },
+        {
+          "value": "Curse"
+        },
+        {
+          "value": "Plan"
+        },
+        {
+          "value": "Role"
+        },
+        {
+          "value": "Room"
+        },
+        {
+          "value": "Rune"
+        },
+        {
+          "value": "Saga"
+        },
+        {
+          "value": "Shard"
+        },
+        {
+          "value": "Shrine"
+        }
+      ]
+    },
+    {
+      "domain": "rules.type.spell_subtype",
+      "purpose": "All instant and sorcery subtypes in the September 2026 rules.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "205.3k",
+      "closed": true,
+      "values": [
+        {
+          "value": "Adventure"
+        },
+        {
+          "value": "Arcane"
+        },
+        {
+          "value": "Lesson"
+        },
+        {
+          "value": "Omen"
+        },
+        {
+          "value": "Trap"
+        }
+      ]
+    },
+    {
+      "domain": "rules.continuous_effect.layer",
+      "purpose": "Seven layers of continuous effects in order, normalized labels (layer 7 has sublayers).",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "613.1a–g",
+      "closed": true,
+      "values": [
+        {
+          "value": "copiable"
+        },
+        {
+          "value": "control"
+        },
+        {
+          "value": "text"
+        },
+        {
+          "value": "type"
+        },
+        {
+          "value": "color"
+        },
+        {
+          "value": "abilities"
+        },
+        {
+          "value": "power_toughness"
+        }
+      ]
+    },
+    {
+      "domain": "rules.targeting.mode",
+      "purpose": "Different methods of selecting or affecting objects; not all selections target.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "115, 608",
+      "closed": false,
+      "values": [
+        {
+          "value": "target"
+        },
+        {
+          "value": "choose"
+        },
+        {
+          "value": "attach"
+        },
+        {
+          "value": "affect_all"
+        },
+        {
+          "value": "affect_each"
+        }
+      ],
+      "caveat": "Labels normalized for analysis, not official enumerated rules terms."
+    },
+    {
+      "domain": "rules.checkpoint",
+      "purpose": "Rules checkpoints that may affect predicates, costs or event hooks; normalized labels.",
+      "status": "rules_verified",
+      "source": "CR",
+      "source_location": "601, 603, 704",
+      "closed": false,
+      "values": [
+        {
+          "value": "proposal"
+        },
+        {
+          "value": "cost_determination"
+        },
+        {
+          "value": "cost_payment"
+        },
+        {
+          "value": "cast_complete"
+        },
+        {
+          "value": "trigger_event"
+        },
+        {
+          "value": "put_trigger_on_stack"
+        },
+        {
+          "value": "resolution"
+        },
+        {
+          "value": "enters"
+        },
+        {
+          "value": "leaves"
+        },
+        {
+          "value": "state_based_check"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.priority_status",
+      "purpose": "More precise distinction between ability to act and phase timing.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 117",
+      "closed": false,
+      "values": [
+        {
+          "value": "have_priority"
+        },
+        {
+          "value": "do_not_have_priority"
+        },
+        {
+          "value": "mana_payment_window"
+        },
+        {
+          "value": "resolution_in_progress"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.stack_requirement",
+      "purpose": "Stack-state predicates useful for candidate interactions.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 405",
+      "closed": false,
+      "values": [
+        {
+          "value": "stack_empty"
+        },
+        {
+          "value": "stack_nonempty"
+        },
+        {
+          "value": "spell_on_stack"
+        },
+        {
+          "value": "ability_on_stack"
+        },
+        {
+          "value": "matching_object_on_stack"
+        },
+        {
+          "value": "no_stack_dependency"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.response_point",
+      "purpose": "Representative response windows, without simulating priority.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 117",
+      "closed": false,
+      "values": [
+        {
+          "value": "after_spell_cast"
+        },
+        {
+          "value": "after_ability_activated"
+        },
+        {
+          "value": "after_trigger_placed"
+        },
+        {
+          "value": "after_resolution"
+        },
+        {
+          "value": "before_step_ends"
+        },
+        {
+          "value": "during_mana_payment"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.initiation_authority",
+      "purpose": "Who is empowered or instructed to initiate an action.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 117",
+      "closed": false,
+      "values": [
+        {
+          "value": "active_player_only"
+        },
+        {
+          "value": "priority_holder"
+        },
+        {
+          "value": "resolving_effect_instruction"
+        },
+        {
+          "value": "automatic_game_rule"
+        },
+        {
+          "value": "controller_of_triggered_ability"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.permission_source",
+      "purpose": "Where the right to take an action originates.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 117, 601",
+      "closed": false,
+      "values": [
+        {
+          "value": "base_rules"
+        },
+        {
+          "value": "keyword_flash"
+        },
+        {
+          "value": "external_effect"
+        },
+        {
+          "value": "cast_from_alternate_zone"
+        },
+        {
+          "value": "ability_generated_permission"
+        },
+        {
+          "value": "special_action_rule"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.prohibition_kind",
+      "purpose": "Negative constraints that override generic access.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 101.2",
+      "closed": false,
+      "values": [
+        {
+          "value": "cannot_cast"
+        },
+        {
+          "value": "cannot_activate"
+        },
+        {
+          "value": "cannot_target"
+        },
+        {
+          "value": "cannot_attack"
+        },
+        {
+          "value": "cannot_block"
+        },
+        {
+          "value": "cannot_be_countered"
+        },
+        {
+          "value": "cannot_pay_cost"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.trigger_processing",
+      "purpose": "Stages for a trigger without treating triggering as resolving.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 603, 117.5",
+      "closed": true,
+      "values": [
+        {
+          "value": "event_occurs"
+        },
+        {
+          "value": "trigger_condition_checked"
+        },
+        {
+          "value": "waiting_to_stack"
+        },
+        {
+          "value": "stack_object_created"
+        },
+        {
+          "value": "intervening_if_recheck"
+        },
+        {
+          "value": "resolve_or_fail"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.resolution_state",
+      "purpose": "Descriptive terminal/intermediate statuses; fizzled is colloquial, not an official rules action.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 608",
+      "closed": false,
+      "values": [
+        {
+          "value": "pending"
+        },
+        {
+          "value": "resolving"
+        },
+        {
+          "value": "resolved"
+        },
+        {
+          "value": "countered"
+        },
+        {
+          "value": "fizzled_all_targets_illegal"
+        },
+        {
+          "value": "moved_from_stack"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.predicate.temporal_context",
+      "purpose": "More explicit predicate evaluation contexts.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; DIO §4.1, ADD §1",
+      "closed": false,
+      "values": [
+        {
+          "value": "current"
+        },
+        {
+          "value": "trigger_snapshot"
+        },
+        {
+          "value": "cast_proposal"
+        },
+        {
+          "value": "cost_lock"
+        },
+        {
+          "value": "payment"
+        },
+        {
+          "value": "resolution"
+        },
+        {
+          "value": "entry_snapshot"
+        },
+        {
+          "value": "last_known_information"
+        },
+        {
+          "value": "historical"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.reference.binding",
+      "purpose": "Reference binding categories; persistence evaluated separately.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; ADD §1",
+      "closed": false,
+      "values": [
+        {
+          "value": "this"
+        },
+        {
+          "value": "that_object"
+        },
+        {
+          "value": "target"
+        },
+        {
+          "value": "chosen"
+        },
+        {
+          "value": "attached_to"
+        },
+        {
+          "value": "linked_exile"
+        },
+        {
+          "value": "source_of_damage"
+        },
+        {
+          "value": "controller_of_source"
+        },
+        {
+          "value": "owner_of_card"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.quantifier.kind",
+      "purpose": "Representative logical/quantifier tokens; structurally open domain.",
+      "status": "proposed",
+      "source": "DIO",
+      "source_location": "Grammar layer; DIO §§4–5",
+      "closed": false,
+      "values": [
+        {
+          "value": "one"
+        },
+        {
+          "value": "each"
+        },
+        {
+          "value": "all"
+        },
+        {
+          "value": "any"
+        },
+        {
+          "value": "up_to"
+        },
+        {
+          "value": "exactly"
+        },
+        {
+          "value": "at_least"
+        },
+        {
+          "value": "at_most"
+        },
+        {
+          "value": "one_or_more"
+        },
+        {
+          "value": "for_each"
+        },
+        {
+          "value": "once"
+        },
+        {
+          "value": "first"
+        },
+        {
+          "value": "second"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.logical_operator",
+      "purpose": "Operators in conditions, branching, effects and requirements.",
+      "status": "proposed",
+      "source": "DIO",
+      "source_location": "Grammar layer; DIO §§4–5",
+      "closed": false,
+      "values": [
+        {
+          "value": "and"
+        },
+        {
+          "value": "or"
+        },
+        {
+          "value": "not"
+        },
+        {
+          "value": "if"
+        },
+        {
+          "value": "unless"
+        },
+        {
+          "value": "only_if"
+        },
+        {
+          "value": "rather_than"
+        },
+        {
+          "value": "instead"
+        },
+        {
+          "value": "otherwise"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.scope.dimension",
+      "purpose": "Scope over which quantification or binding applies.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; DIO §5.5, ADD §1",
+      "closed": false,
+      "values": [
+        {
+          "value": "player"
+        },
+        {
+          "value": "object"
+        },
+        {
+          "value": "target_set"
+        },
+        {
+          "value": "event"
+        },
+        {
+          "value": "trigger"
+        },
+        {
+          "value": "spell"
+        },
+        {
+          "value": "ability"
+        },
+        {
+          "value": "turn"
+        },
+        {
+          "value": "combat"
+        },
+        {
+          "value": "phase"
+        },
+        {
+          "value": "step"
+        },
+        {
+          "value": "game"
+        },
+        {
+          "value": "controller"
+        },
+        {
+          "value": "source_zone"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.cardinality.relation",
+      "purpose": "Distribution/aggregation of independent choices.",
+      "status": "proposed",
+      "source": "DIO",
+      "source_location": "Grammar layer; DIO §5.5",
+      "closed": false,
+      "values": [
+        {
+          "value": "shared"
+        },
+        {
+          "value": "per_instance"
+        },
+        {
+          "value": "per_event"
+        },
+        {
+          "value": "per_trigger"
+        },
+        {
+          "value": "per_object"
+        },
+        {
+          "value": "aggregated"
+        },
+        {
+          "value": "independently_chosen"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.comparison.operator",
+      "purpose": "Useful normal form for comparison operators.",
+      "status": "proposed",
+      "source": "DIO",
+      "source_location": "Grammar layer; DIO §5.6",
+      "closed": false,
+      "values": [
+        {
+          "value": "eq"
+        },
+        {
+          "value": "neq"
+        },
+        {
+          "value": "gt"
+        },
+        {
+          "value": "gte"
+        },
+        {
+          "value": "lt"
+        },
+        {
+          "value": "lte"
+        },
+        {
+          "value": "max"
+        },
+        {
+          "value": "min"
+        },
+        {
+          "value": "tied_max"
+        },
+        {
+          "value": "uniquely_max"
+        },
+        {
+          "value": "contains"
+        },
+        {
+          "value": "shares_property"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.result.modality",
+      "purpose": "Separates player choices from randomly selected branches.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; DIO §5.5, ADD §7",
+      "closed": false,
+      "values": [
+        {
+          "value": "must"
+        },
+        {
+          "value": "may"
+        },
+        {
+          "value": "optional_cost"
+        },
+        {
+          "value": "choose_one"
+        },
+        {
+          "value": "choose_any"
+        },
+        {
+          "value": "random_selection"
+        },
+        {
+          "value": "opponent_decides"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.replacement.lifecycle",
+      "purpose": "Iterative replacement pipeline; not a claim of a new primitive.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; ADD replacement section, CR 614/616",
+      "closed": true,
+      "values": [
+        {
+          "value": "proposed_event"
+        },
+        {
+          "value": "applicable_effects_found"
+        },
+        {
+          "value": "effect_chosen"
+        },
+        {
+          "value": "event_rewritten"
+        },
+        {
+          "value": "applicability_retested"
+        },
+        {
+          "value": "final_event"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.object.identity_relation",
+      "purpose": "Separate object continuity, card lineage, and traceability.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; DIO §6, ADD §3",
+      "closed": true,
+      "values": [
+        {
+          "value": "same_game_object"
+        },
+        {
+          "value": "successor_game_object"
+        },
+        {
+          "value": "same_substrate"
+        },
+        {
+          "value": "linked_successor"
+        },
+        {
+          "value": "copied_characteristics_only"
+        },
+        {
+          "value": "new_token_object"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.random.selector",
+      "purpose": "Random/choice branch model. Weighting depends on actual effect and population.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; ADD stochastic section",
+      "closed": false,
+      "values": [
+        {
+          "value": "uniform_random"
+        },
+        {
+          "value": "weighted_random"
+        },
+        {
+          "value": "ordered_random"
+        },
+        {
+          "value": "hidden_uniform_choice"
+        },
+        {
+          "value": "chosen_by_player"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.validation.evidence",
+      "purpose": "Separate rule, source, parser, and connection confidence.",
+      "status": "proposed",
+      "source": "DIO",
+      "source_location": "Registry governance",
+      "closed": true,
+      "values": [
+        {
+          "value": "ontology_defined"
+        },
+        {
+          "value": "rules_verified"
+        },
+        {
+          "value": "inventory_observed_candidate"
+        },
+        {
+          "value": "card_oracle_verified"
+        },
+        {
+          "value": "connection_verified"
+        },
+        {
+          "value": "proposed"
+        },
+        {
+          "value": "invalidated"
+        },
+        {
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.validation.coverage",
+      "purpose": "Conveys whether allowed values are closed or drawn from an external catalog.",
+      "status": "proposed",
+      "source": "DIO",
+      "source_location": "Registry governance",
+      "closed": true,
+      "values": [
+        {
+          "value": "exhaustive"
+        },
+        {
+          "value": "representative"
+        },
+        {
+          "value": "open_extensible"
+        },
+        {
+          "value": "parameterized"
+        },
+        {
+          "value": "external_registry"
+        }
+      ]
+    },
+    {
+      "domain": "grammar.predicate.snapshot_relation",
+      "purpose": "Event predicate semantics and snapshot handling.",
+      "status": "proposed",
+      "source": "ADD",
+      "source_location": "Grammar layer; DIO §4.3, ADD §1–2",
+      "closed": false,
+      "values": [
+        {
+          "value": "pre_event"
+        },
+        {
+          "value": "post_event"
+        },
+        {
+          "value": "as_enters"
+        },
+        {
+          "value": "immediately_before_leaving"
+        },
+        {
+          "value": "at_resolution"
+        },
+        {
+          "value": "last_known_information"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.combat.checkpoint",
+      "purpose": "Connection relevant combat windows; damage steps can vary.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 506–511",
+      "closed": false,
+      "values": [
+        {
+          "value": "begin_combat"
+        },
+        {
+          "value": "declare_attackers"
+        },
+        {
+          "value": "declare_blockers"
+        },
+        {
+          "value": "first_strike_damage"
+        },
+        {
+          "value": "regular_damage"
+        },
+        {
+          "value": "end_combat"
+        }
+      ]
+    },
+    {
+      "domain": "rules_gate.continuous_effect.layer",
+      "purpose": "High-level labels for layer relevance, not a substitute for layers/sub-layers or dependency/timestamps.",
+      "status": "proposed",
+      "source": "CR",
+      "source_location": "Rules layer proposal; CR 613",
+      "closed": false,
+      "values": [
+        {
+          "value": "copy_effects"
+        },
+        {
+          "value": "control_changes"
+        },
+        {
+          "value": "text_changes"
+        },
+        {
+          "value": "type_changes"
+        },
+        {
+          "value": "color_changes"
+        },
+        {
+          "value": "ability_changes"
+        },
+        {
+          "value": "power_toughness_changes"
+        }
+      ]
+    }
+  ],
+  "provenance_notes": [
+    {
+      "subject": "canonical_inventory",
+      "text": "The inventory reports 4,631 candidate operations from 3,358 owned legal card units, and 253 unconfident classifications in a review backlog; candidate annotations are not verified."
+    },
+    {
+      "subject": "living_catalogues",
+      "text": "Subtype, keyword, abilities, oracle wordings, and other external enumerations change as new sets release. Link to Scryfall catalogs and MTGJSON, do not freeze these domains here."
+    }
+  ]
+}

@@ -1,0 +1,1372 @@
+{
+"set": {
+"code": "tmc",
+"name": "Teenage Mutant Ninja Turtles Eternal",
+"set_type": "eternal",
+"released_at": "2026-03-06",
+"card_count": 132,
+"parent_set_code": "tmt"
+},
+"retrieved_utc": "2026-10-22T03:34:08Z",
+"members": [
+{
+"oracle_id": "46ea8d02-b087-44f7-8403-93ffc1d3a8ad",
+"name": "Leonardo, the Balance",
+"collector_number": "1",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Partner"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "1ba2f763-5895-4663-b38f-95591ebb2ef4",
+"name": "Donatello, the Brains",
+"collector_number": "2",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Partner"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "fdcb016e-36e7-46b3-9dff-20b9b9cc421d",
+"name": "Splinter, the Mentor",
+"collector_number": "3",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Rat",
+"keywords": [
+"Partner",
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "22008c3b-6e15-41cc-a15c-7871495191aa",
+"name": "Raphael, the Muscle",
+"collector_number": "4",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Partner",
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "f11e914c-16bc-4836-bc14-bc1b5de9cd87",
+"name": "Michelangelo, the Heart",
+"collector_number": "5",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Food",
+"Partner",
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "9f2f12cc-0adb-482d-bbce-05e4ce8850c4",
+"name": "Heroes in a Half Shell",
+"collector_number": "6",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Vigilance",
+"Haste",
+"Trample",
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "175c76c8-f36c-4948-aaa8-0208eac5f0d3",
+"name": "Continue?",
+"collector_number": "7",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "77ccafd9-6d76-4658-81ab-bde0454fcc15",
+"name": "Endless Foot Assault",
+"collector_number": "8",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Squad"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "4900c157-8d9f-4f92-aaca-5246b6e2832e",
+"name": "April O'Neil, Live on the Scene",
+"collector_number": "9",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Detective",
+"keywords": [
+"Investigate",
+"Partner"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "94551fbd-a72c-4a1f-be01-7ba1c7c03eed",
+"name": "Baxter, Fly in the Ointment",
+"collector_number": "10",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Insect Mutant Scientist",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "c4fb12cb-05e1-4df2-b62e-3391621a601b",
+"name": "Here Comes a New Hero!",
+"collector_number": "11",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "deda54da-4fcc-4da3-9337-7768a2db3283",
+"name": "Irma, Part-Time Mutant",
+"collector_number": "12",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Mutant Shapeshifter",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "466d5226-f4c7-4d69-9f56-4f893010127f",
+"name": "Krang, the All-Powerful",
+"collector_number": "13",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Utrom Robot",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "206913aa-4d73-4465-8311-8054a22c0743",
+"name": "Ray Fillet, Wave Warrior",
+"collector_number": "14",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Fish Mutant",
+"keywords": [
+"Flying",
+"Evolve"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "59a405d7-2f28-41b8-a5bb-011f45a5fdf2",
+"name": "Bebop, Skull & Crossbones",
+"collector_number": "15",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Boar Mutant",
+"keywords": [
+"Partner with",
+"Partner",
+"Deathtouch"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "29a9aff7-184c-459d-8002-e0287d978764",
+"name": "Dimension X Pizzasaur",
+"collector_number": "16",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Food Alien Mutant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "1eed017a-342a-47a8-9395-890ef0bd1eb2",
+"name": "Foot Chopper",
+"collector_number": "17",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "e326b5a1-f8ce-471b-8663-ec1ba649b24f",
+"name": "Game Over",
+"collector_number": "18",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "da359f85-7a11-4575-848d-642d1ae0ddbb",
+"name": "Rat King, Pale Piper",
+"collector_number": "19",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Rat Avatar",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ee82947d-1cf0-4c53-84d4-81f81c6201ee",
+"name": "Shredder, Shadow Master",
+"collector_number": "20",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Ninja",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7eaf3fd0-e141-42c2-874d-b471f4a94ad2",
+"name": "Swift Demise",
+"collector_number": "21",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ab9ff8e9-0ffa-4ccf-a4bf-8505079616f6",
+"name": "Casey Jones, Back Alley Brute",
+"collector_number": "22",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Berserker",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "a4374baa-a846-4b34-afbf-6bb7feb4648c",
+"name": "Electric Seaweed",
+"collector_number": "23",
+"rarity": "rare",
+"type_line": "Creature \u2014 Plant Wall",
+"keywords": [
+"Haste",
+"Defender"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "c92f78c4-c8ec-4bdb-85f4-3a206b709f0f",
+"name": "Fast Forward",
+"collector_number": "24",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Goad"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "f406630b-d9f1-4fc5-b3f3-5327384b2901",
+"name": "Shellshock",
+"collector_number": "25",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7564afbb-b29e-4234-a3b2-3354c6f5c90a",
+"name": "Special Move",
+"collector_number": "26",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [
+"Foot Toss",
+"Dash Attack",
+"Jump Kick"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "12401ad1-b5c9-43dc-9389-04aaf5db8b26",
+"name": "Tempestra, Dame of Games",
+"collector_number": "27",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Elemental Illusion",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "8d857d79-bdb2-4ca3-abd6-7db8f6b3bcfa",
+"name": "Tokka & Rahzar, Unsupervised",
+"collector_number": "28",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Turtle Wolf Mutant",
+"keywords": [
+"First strike",
+"Treasure"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "d81fc181-ecb0-43a5-88e8-c61aca3428d8",
+"name": "High Score",
+"collector_number": "29",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "1e9679e8-bef1-495c-8251-0d87d971e32a",
+"name": "Leatherhead, Iron Gator",
+"collector_number": "30",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Crocodile Mutant Rogue",
+"keywords": [
+"Haste",
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "88cd43ce-b168-45a4-8d29-6cac5ab42857",
+"name": "Level Up",
+"collector_number": "31",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "58c615f3-8c3b-47bf-8032-809fc4232ccb",
+"name": "Ninja Pizza",
+"collector_number": "32",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Food"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "506a972d-d226-44dc-95b7-a6e7a63d76cd",
+"name": "Rocksteady, Mutant Marauder",
+"collector_number": "33",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Rhino Mutant",
+"keywords": [
+"Partner with",
+"Partner",
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "68555673-2833-459a-b415-e2805f837778",
+"name": "Super Combo",
+"collector_number": "34",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Replicate"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "cb3072c7-393c-43d9-a2c9-f918bd0fd7be",
+"name": "Double Jump // Flying Kick",
+"collector_number": "35",
+"rarity": "rare",
+"type_line": "Instant // Instant",
+"keywords": [
+"Fuse"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "a8e55287-f0df-46f2-a41d-27bea90216cc",
+"name": "Arcade Cabinet",
+"collector_number": "36",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "94751968-e006-45d0-970b-0ed45d28e6cc",
+"name": "Big Mother Mouser",
+"collector_number": "37",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "d78518ee-df79-48d1-b9d5-4f968b441899",
+"name": "Coin of Mastery",
+"collector_number": "38",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Treasure"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "82800275-1edf-4aa0-af9e-59dea82d7c6a",
+"name": "Exploding Barrel",
+"collector_number": "39",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ba64d3a9-08b4-4b12-b011-e41b00815277",
+"name": "Mole Module",
+"collector_number": "40",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Vehicle",
+"keywords": [
+"Crew",
+"Menace",
+"Mill"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "cd8761ef-b57b-456b-aa12-374ac825087e",
+"name": "Roadkill Rodney",
+"collector_number": "41",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Squad",
+"Deathtouch"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "dd01ef1f-f6be-498f-82e0-dc04833e685f",
+"name": "Big Apple, 3 a.m.",
+"collector_number": "42",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "b639e1fe-d099-4cab-a0d0-a1b33c7f31dd",
+"name": "Hidden Hideout",
+"collector_number": "43",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "36b19ec0-d581-4213-bfae-1d7808a2f60d",
+"name": "Together Forever",
+"collector_number": "44",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Support"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "a332e80a-dc51-4dc6-bc85-e114a1c6fdb8",
+"name": "Vanquish the Horde",
+"collector_number": "45",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "06ef46c6-00ba-40e6-b866-d0095ab83749",
+"name": "Wave Goodbye",
+"collector_number": "46",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7a2484a9-04fd-41a0-8224-610c1c07ed10",
+"name": "Blasphemous Act",
+"collector_number": "47",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "21f45043-5419-4019-8b6c-e5294bd5f549",
+"name": "Acidic Slime",
+"collector_number": "48",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Ooze",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "d2d84ba5-0d20-4ce3-8f1f-93cd9ef94f5f",
+"name": "Biogenic Ooze",
+"collector_number": "49",
+"rarity": "rare",
+"type_line": "Creature \u2014 Ooze",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "8b755881-a72d-4e21-a369-d2924eb4585a",
+"name": "Cultivate",
+"collector_number": "50",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7eff84f1-f772-497a-b350-bbc93d0230f7",
+"name": "Harmonize",
+"collector_number": "51",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "e38e3723-05f5-4a51-8364-1cda19f9cc49",
+"name": "Steelbane Hydra",
+"collector_number": "52",
+"rarity": "rare",
+"type_line": "Creature \u2014 Turtle Hydra",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "70787d8b-0a40-43ea-837a-9617dc13e7e5",
+"name": "Vigor",
+"collector_number": "53",
+"rarity": "rare",
+"type_line": "Creature \u2014 Elemental Incarnation",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ff8f5a4b-112a-425e-b489-7ee26d1d9fb3",
+"name": "Voracious Hydra",
+"collector_number": "54",
+"rarity": "rare",
+"type_line": "Creature \u2014 Hydra",
+"keywords": [
+"Trample",
+"Fight",
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ac10d218-f9a6-4058-9cda-a15ca1b0b7b5",
+"name": "Assassin's Trophy",
+"collector_number": "55",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ca0cc02b-b106-4eca-9388-d4b48dd3be49",
+"name": "Corpsejack Menace",
+"collector_number": "56",
+"rarity": "rare",
+"type_line": "Creature \u2014 Fungus",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+"name": "Arcane Signet",
+"collector_number": "57",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "539f5396-d99a-417d-a84c-dff7930b5900",
+"name": "Chromatic Lantern",
+"collector_number": "58",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+"name": "Sol Ring",
+"collector_number": "59",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "58257464-278e-45fa-8e0b-bcd9a7500bc1",
+"name": "Ash Barrens",
+"collector_number": "60",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [
+"Landcycling",
+"Basic landcycling",
+"Typecycling",
+"Cycling"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "dfac0258-e148-4d7d-8ded-fc2466d9caa6",
+"name": "Cinder Glade",
+"collector_number": "61",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Forest",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "f25351e3-539b-4bbc-b92d-6480acf4d722",
+"name": "City of Brass",
+"collector_number": "62",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+"name": "Command Tower",
+"collector_number": "63",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "63398c02-6fb1-481d-9d9f-81063532fbc0",
+"name": "Dragonskull Summit",
+"collector_number": "64",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "a75445d3-1303-4bb5-89ad-26ea93fecd48",
+"name": "Evolving Wilds",
+"collector_number": "65",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "27b047e3-0d41-45e2-98e9-9391d7923a1e",
+"name": "Exotic Orchard",
+"collector_number": "66",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+"name": "Fabled Passage",
+"collector_number": "67",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "1cea9b82-d2e9-4758-8ec8-729fcf4bb7d7",
+"name": "Grand Coliseum",
+"collector_number": "68",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "fb5a3403-7f0b-406c-8c4f-d693be010ca6",
+"name": "Hinterland Harbor",
+"collector_number": "69",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "b473e293-59e3-4e04-acf2-622604aeb25f",
+"name": "Path of Ancestry",
+"collector_number": "70",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [
+"Scry"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "633a41f0-3889-49a0-b2fc-9baf59f4ddc2",
+"name": "Rain-Slicked Copse",
+"collector_number": "71",
+"rarity": "rare",
+"type_line": "Land \u2014 Forest Island",
+"keywords": [
+"Cycling"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "9516c4c1-d72d-434f-97e1-6a862434a169",
+"name": "Rootbound Crag",
+"collector_number": "72",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "390f1b56-264e-4336-83be-dc1fe79bfdcf",
+"name": "Smoldering Marsh",
+"collector_number": "73",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Mountain",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "0070db93-142b-4d04-afd3-836792dc134b",
+"name": "Sodden Verdure",
+"collector_number": "74",
+"rarity": "rare",
+"type_line": "Land \u2014 Forest Island",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "45fe016e-1a09-410c-bbe3-4663ba06c5b7",
+"name": "Spire Garden",
+"collector_number": "75",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "cd2c90ac-2b04-461c-92f3-939871b6b6a3",
+"name": "Sunken Hollow",
+"collector_number": "76",
+"rarity": "rare",
+"type_line": "Land \u2014 Island Swamp",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "a8052556-8962-4130-86a8-6fb7b6a324f7",
+"name": "Thriving Grove",
+"collector_number": "77",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "69fc70b8-b143-4662-ac95-e2743037239d",
+"name": "Thriving Isle",
+"collector_number": "78",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "bff416bb-d193-4c45-b2c1-7c297dbfad08",
+"name": "Thriving Moor",
+"collector_number": "79",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7c69f718-acc8-4851-8e5d-0cbaaa86192c",
+"name": "Undergrowth Stadium",
+"collector_number": "80",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "40544d12-0391-4a61-af95-9b8ec01ed8fc",
+"name": "Vernal Fen",
+"collector_number": "81",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Forest",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "6a7f3e1f-6798-4644-b64c-7765f81f0938",
+"name": "Vibrant Cityscape",
+"collector_number": "82",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "46ea8d02-b087-44f7-8403-93ffc1d3a8ad",
+"name": "Leonardo, the Balance",
+"collector_number": "83",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Partner"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "4900c157-8d9f-4f92-aaca-5246b6e2832e",
+"name": "April O'Neil, Live on the Scene",
+"collector_number": "84",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Detective",
+"keywords": [
+"Investigate",
+"Partner"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "1ba2f763-5895-4663-b38f-95591ebb2ef4",
+"name": "Donatello, the Brains",
+"collector_number": "85",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Partner"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "466d5226-f4c7-4d69-9f56-4f893010127f",
+"name": "Krang, the All-Powerful",
+"collector_number": "86",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Utrom Robot",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "59a405d7-2f28-41b8-a5bb-011f45a5fdf2",
+"name": "Bebop, Skull & Crossbones",
+"collector_number": "87",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Boar Mutant",
+"keywords": [
+"Partner with",
+"Partner",
+"Deathtouch"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ee82947d-1cf0-4c53-84d4-81f81c6201ee",
+"name": "Shredder, Shadow Master",
+"collector_number": "88",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Ninja",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "fdcb016e-36e7-46b3-9dff-20b9b9cc421d",
+"name": "Splinter, the Mentor",
+"collector_number": "89",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Rat",
+"keywords": [
+"Partner",
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "ab9ff8e9-0ffa-4ccf-a4bf-8505079616f6",
+"name": "Casey Jones, Back Alley Brute",
+"collector_number": "90",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Berserker",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "22008c3b-6e15-41cc-a15c-7871495191aa",
+"name": "Raphael, the Muscle",
+"collector_number": "91",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Partner",
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "f11e914c-16bc-4836-bc14-bc1b5de9cd87",
+"name": "Michelangelo, the Heart",
+"collector_number": "92",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Food",
+"Partner",
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "58c615f3-8c3b-47bf-8032-809fc4232ccb",
+"name": "Ninja Pizza",
+"collector_number": "93",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Food"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "506a972d-d226-44dc-95b7-a6e7a63d76cd",
+"name": "Rocksteady, Mutant Marauder",
+"collector_number": "94",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Rhino Mutant",
+"keywords": [
+"Partner with",
+"Partner",
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "68555673-2833-459a-b415-e2805f837778",
+"name": "Super Combo",
+"collector_number": "95",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Replicate"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "9f2f12cc-0adb-482d-bbce-05e4ce8850c4",
+"name": "Heroes in a Half Shell",
+"collector_number": "96",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Vigilance",
+"Haste",
+"Trample",
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "94751968-e006-45d0-970b-0ed45d28e6cc",
+"name": "Big Mother Mouser",
+"collector_number": "97",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "3d8dfd57-7d26-4a3b-a9c3-33077c85b3db",
+"name": "Definitely Not a Turtle",
+"collector_number": "98",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Mutant Ninja Turtle",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "0587fe46-1bed-4ef3-b087-04d4cc6a334d",
+"name": "Hamato Ninp\u014d",
+"collector_number": "100",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "94dcbcc0-6941-4e8c-8741-4b47ae231eba",
+"name": "Leonardo, Worldly Warrior",
+"collector_number": "101",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Affinity",
+"Double strike"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "f386bca6-a08e-462b-b1d9-c3b03929c68d",
+"name": "Leo's Guidance",
+"collector_number": "102",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "c01095ba-b9c9-44e0-97d1-35cc47c4ed04",
+"name": "Splinter & Leo, Father & Son",
+"collector_number": "103",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Rat Turtle",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "45a87131-ae8a-4e6d-9ac0-e52b4795691b",
+"name": "Splinter, Aging Champion",
+"collector_number": "104",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Rat",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "2650d2d5-576e-4b9a-95ac-0f5307f1580f",
+"name": "Triceraton Regenta",
+"collector_number": "105",
+"rarity": "common",
+"type_line": "Creature \u2014 Dinosaur Noble",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "d41eec6c-de14-4809-abae-b94355674a33",
+"name": "Wooden Cane",
+"collector_number": "106",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "020963ef-24c0-48cc-8776-bc257df684bc",
+"name": "April O'Neil, Human Element",
+"collector_number": "107",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Detective",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "d33c7ea2-4d17-4cdb-aa58-c25c57836297",
+"name": "Containment Protocol",
+"collector_number": "108",
+"rarity": "common",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "671209d5-8b56-4ce7-94a0-d770d698c0df",
+"name": "Donatello, Rad Scientist",
+"collector_number": "109",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "cd61a01c-dfe1-4c1e-8063-7f90fcd0c452",
+"name": "Donatello's Science Lesson",
+"collector_number": "110",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7b33368f-0668-4233-8bbf-725c66c771cb",
+"name": "Donnie & April, Adorkable Duo",
+"collector_number": "111",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Human Turtle",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "976e1fe6-ac32-4ea9-9828-acd3c4791e01",
+"name": "Utrom Monitor",
+"collector_number": "113",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Utrom Scientist",
+"keywords": [
+"Flying",
+"Affinity"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "f20a5297-31ba-4bbd-810e-be23175a116f",
+"name": "Casey & Raph, Hotheads",
+"collector_number": "114",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Human Turtle",
+"keywords": [
+"Treasure"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "1eaa37a3-8769-4213-bcd5-39bcf4771273",
+"name": "Casey Jones, Asphalt Hooligan",
+"collector_number": "115",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Berserker",
+"keywords": [
+"Double strike",
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "485e1d84-2867-4c66-a399-cdc2a22f6fc9",
+"name": "Monster Mashup",
+"collector_number": "117",
+"rarity": "common",
+"type_line": "Creature \u2014 Werewolf Fish Zombie Vampire",
+"keywords": [
+"Reach",
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "5a7f09d3-e4a8-4987-a731-a68fc748277d",
+"name": "Raphael, Tag Team Tough",
+"collector_number": "118",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "7991aff6-0b85-41a3-bc31-09811d6fa353",
+"name": "Raph's Bravado",
+"collector_number": "119",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "d5021db4-64d3-4a0f-9167-499ccbe16e1e",
+"name": "Storm of Steel",
+"collector_number": "120",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "91b89c21-5f35-4aa5-925b-c756ec6969b4",
+"name": "Ticked Off",
+"collector_number": "121",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "017cadd8-55ee-497a-84d4-6535173bc1eb",
+"name": "Foe-liage",
+"collector_number": "122",
+"rarity": "common",
+"type_line": "Creature \u2014 Plant Mutant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "e0e3feb8-2add-41c9-839c-587af6ca8f93",
+"name": "Michelangelo, On the Scene",
+"collector_number": "124",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "15e14a91-a596-465f-becc-cef2e7fbbd30",
+"name": "Mikey & Mona, Mutant Sitters",
+"collector_number": "125",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mutant Ninja Turtle Lizard",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "9fa38462-57b6-4f2f-a73c-f14a66f56946",
+"name": "Mona Lisa, Ever Adaptable",
+"collector_number": "126",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Lizard Mutant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "e00aa7d7-3c11-463d-a7f5-8d001ea5c021",
+"name": "Prehistoric Turtlesaurus",
+"collector_number": "127",
+"rarity": "common",
+"type_line": "Creature \u2014 Mutant Ninja Turtle Dinosaur",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "bfff503e-3d16-436c-afe5-ec6a03794725",
+"name": "Study the Classics",
+"collector_number": "128",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [
+"Double"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "4921dac2-4adf-4ac4-b1f4-d53385afd802",
+"name": "Turtle Tracks",
+"collector_number": "129",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "38f7ff90-4cdf-4403-ad10-1400e05c32e9",
+"name": "Manhole Cover",
+"collector_number": "130",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+"name": "Dark Ritual",
+"collector_number": "131",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "00fdcc19-88ed-46c3-91f0-095806228105",
+"name": "Waste Not",
+"collector_number": "132",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "5c8e5092-962e-49ef-ab82-8434e475e4e7",
+"name": "Food Chain",
+"collector_number": "133",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "0230de18-8d15-4cfa-9d42-7ccddd9f9570",
+"name": "Supreme Verdict",
+"collector_number": "134",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "cae166de-e681-40a0-83a8-3c17cf40e2fc",
+"name": "Commander's Plate",
+"collector_number": "135",
+"rarity": "mythic",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-03-06"
+},
+{
+"oracle_id": "913e6182-706a-4872-8c8a-e146b0ae0738",
+"name": "Sword of Hearth and Home",
+"collector_number": "136",
+"rarity": "mythic",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-03-06"
+}
+]
+}

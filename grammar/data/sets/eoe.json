@@ -1,0 +1,4096 @@
+{
+"set": {
+"code": "eoe",
+"name": "Edge of Eternities",
+"set_type": "expansion",
+"released_at": "2025-08-01",
+"card_count": 399,
+"parent_set_code": null
+},
+"retrieved_utc": "2026-10-22T03:34:05Z",
+"members": [
+{
+"oracle_id": "aceea999-90ab-472c-86a7-48af1542cbcf",
+"name": "Anticausal Vestige",
+"collector_number": "1",
+"rarity": "rare",
+"type_line": "Creature \u2014 Eldrazi",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0eb11b2d-a397-48da-a0f3-9f0f83f42282",
+"name": "Tezzeret, Cruel Captain",
+"collector_number": "2",
+"rarity": "mythic",
+"type_line": "Legendary Planeswalker \u2014 Tezzeret",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "da9ec010-8b42-4927-b602-4e96bced4e99",
+"name": "All-Fates Stalker",
+"collector_number": "3",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Drix Assassin",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bb956492-e3ed-483a-9169-5b795a8e619e",
+"name": "Astelli Reclaimer",
+"collector_number": "4",
+"rarity": "rare",
+"type_line": "Creature \u2014 Angel Warrior",
+"keywords": [
+"Flying",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ffa3b20b-d77b-43d5-86ac-6a591df1877f",
+"name": "Auxiliary Boosters",
+"collector_number": "5",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f28b21a6-f7ce-437a-8c5b-0423cb55cefb",
+"name": "Banishing Light",
+"collector_number": "6",
+"rarity": "common",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c96424e7-63c4-4f07-959f-6ad09f91279a",
+"name": "Beyond the Quiet",
+"collector_number": "7",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "31a0c9a2-c9bd-47f7-872b-a43fb64d873c",
+"name": "Brightspear Zealot",
+"collector_number": "8",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e2cd65f6-7cbc-497c-bdc9-698ff17da31e",
+"name": "Cosmogrand Zenith",
+"collector_number": "9",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69892dc7-4087-447c-a41c-99cf3d5c0c12",
+"name": "Dawnstrike Vanguard",
+"collector_number": "10",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Knight",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aa704b26-729a-4d0f-b92d-56aadb1e20b9",
+"name": "Dockworker Drone",
+"collector_number": "11",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "155e01a1-5809-4be9-ad38-c11553a4a723",
+"name": "Dual-Sun Adepts",
+"collector_number": "12",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Double strike"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "89ec0f03-47d0-4657-8987-95e680404f24",
+"name": "Dual-Sun Technique",
+"collector_number": "13",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "da363da1-aecf-4d49-8e77-8dc56981a741",
+"name": "Emergency Eject",
+"collector_number": "14",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "43febbcd-ecbe-4edb-ad90-7fc6dc381d05",
+"name": "Exalted Sunborn",
+"collector_number": "15",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Angel Wizard",
+"keywords": [
+"Flying",
+"Lifelink",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8b13ec4d-812a-48b0-8a64-6847a694a03a",
+"name": "Exosuit Savior",
+"collector_number": "16",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57927909-11a9-44ef-989d-1dcca1f6e23f",
+"name": "Flight-Deck Coordinator",
+"collector_number": "17",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6c4514be-fda7-45e8-83fe-04d49e2b932c",
+"name": "Focus Fire",
+"collector_number": "18",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9b0af3ad-1b4d-4480-af91-fe9baee5d1c5",
+"name": "Haliya, Guided by Light",
+"collector_number": "19",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Soldier",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8054092a-1940-4f4b-991d-81f4d384cdb1",
+"name": "Hardlight Containment",
+"collector_number": "20",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "48c0cd06-465d-4901-bf23-948a003afc0b",
+"name": "Honor",
+"collector_number": "21",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69741d3b-1259-43f5-897f-6f4c3ca0844b",
+"name": "Honored Knight-Captain",
+"collector_number": "22",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Advisor Knight",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "11809d9b-30f3-49d5-9119-e45b4de044c8",
+"name": "Knight Luminary",
+"collector_number": "23",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Knight",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57012049-06d7-4354-8125-9ea9e742f14d",
+"name": "Lightstall Inquisitor",
+"collector_number": "24",
+"rarity": "rare",
+"type_line": "Creature \u2014 Angel Wizard",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3aa0cda4-fb2d-4fd4-84f6-482089a85547",
+"name": "Lumen-Class Frigate",
+"collector_number": "25",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e0a508b5-0896-4620-a93e-60b958829703",
+"name": "Luxknight Breacher",
+"collector_number": "26",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Knight",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "10e0b563-4dfc-4530-a010-0ba40bdf02ac",
+"name": "Pinnacle Starcage",
+"collector_number": "27",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8019e879-cfea-40a2-ac0d-86b47ec02b48",
+"name": "Pulsar Squadron Ace",
+"collector_number": "28",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Pilot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "186efd85-83d4-40cc-b617-76f32dbe99ce",
+"name": "Radiant Strike",
+"collector_number": "29",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "792da586-a687-428c-a10e-75431249df5b",
+"name": "Rayblade Trooper",
+"collector_number": "30",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "26d2762b-4346-40d0-b93d-b0dbfeb6e2bc",
+"name": "Reroute Systems",
+"collector_number": "31",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "112aaaf0-3301-4f79-9640-d36c75a0fb30",
+"name": "Rescue Skiff",
+"collector_number": "32",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5a367c9c-9a7f-4587-aa05-c0fba46ed838",
+"name": "Scout for Survivors",
+"collector_number": "33",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dfd5939e-a71a-4e16-9b93-752162be4ccd",
+"name": "Seam Rip",
+"collector_number": "34",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a6bcec1f-f515-4e63-9e84-8eb04cc582ff",
+"name": "The Seriema",
+"collector_number": "35",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0ea2a099-7c81-4012-8148-4d377f2d64e1",
+"name": "Squire's Lightblade",
+"collector_number": "36",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip",
+"Flash"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "42fa99ab-d35f-4439-ab00-fe99bad626ac",
+"name": "Starfield Shepherd",
+"collector_number": "37",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Angel",
+"keywords": [
+"Flying",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "fd6afb5e-d99a-44a7-9af4-9f064da95d63",
+"name": "Starfighter Pilot",
+"collector_number": "38",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Pilot",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5454dddf-c6e5-4b0d-b96d-4904c13606dc",
+"name": "Starport Security",
+"collector_number": "39",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "de6b26e4-8700-490f-9df2-dac430463274",
+"name": "Sunstar Chaplain",
+"collector_number": "40",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Cleric",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "944a91ab-c217-4c1d-b920-2e5503c34546",
+"name": "Sunstar Expansionist",
+"collector_number": "41",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Knight",
+"keywords": [
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "132de6c2-4ca2-41da-9c78-caa59838b641",
+"name": "Sunstar Lightsmith",
+"collector_number": "42",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "03259ab0-caa8-4620-b070-127e2c712252",
+"name": "Wedgelight Rammer",
+"collector_number": "43",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4d8ee903-17b3-43c9-9637-ee596955a9f4",
+"name": "Weftblade Enhancer",
+"collector_number": "44",
+"rarity": "common",
+"type_line": "Creature \u2014 Drix Artificer",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0ff3afba-7a90-4f62-a1b0-b553ad81c32b",
+"name": "Zealous Display",
+"collector_number": "45",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d08e9784-75f7-4164-ac48-d06160f8c56b",
+"name": "Annul",
+"collector_number": "46",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "048c3b0b-48ef-42f5-a2af-90aa1d133296",
+"name": "Atomic Microsizer",
+"collector_number": "47",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f27889b9-40d9-4cc7-b8af-8716c53c44f5",
+"name": "Cerebral Download",
+"collector_number": "48",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7c5183be-cddf-48fb-a4b5-dc5f6faf26de",
+"name": "Cloudsculpt Technician",
+"collector_number": "49",
+"rarity": "common",
+"type_line": "Creature \u2014 Jellyfish Artificer",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ae791b61-5825-4987-a8c2-80813758d3f7",
+"name": "Codecracker Hound",
+"collector_number": "50",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Dog",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e921839f-9d91-41a9-bc89-016af3c757aa",
+"name": "Consult the Star Charts",
+"collector_number": "51",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [
+"Kicker"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "106e9c0d-67a2-4db7-97d9-03e1ea1b40b5",
+"name": "Cryogen Relic",
+"collector_number": "52",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "865715e9-6759-4e01-803d-702c959e386e",
+"name": "Cryoshatter",
+"collector_number": "53",
+"rarity": "common",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2d80ee9c-55d4-4115-8a58-63e8460f9795",
+"name": "Desculpting Blast",
+"collector_number": "54",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "76fdbc2c-d2b1-466f-9230-06e187bcc9e6",
+"name": "Divert Disaster",
+"collector_number": "55",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7d8b53f4-bdb5-4ba1-b6c0-f4846d8d3565",
+"name": "Emissary Escort",
+"collector_number": "56",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ef06e10c-553b-45b8-abf0-1d2e87c22128",
+"name": "Gigastorm Titan",
+"collector_number": "57",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Elemental",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d6273621-c36c-491b-85ca-37445ed30097",
+"name": "Illvoi Galeblade",
+"collector_number": "58",
+"rarity": "common",
+"type_line": "Creature \u2014 Jellyfish Warrior",
+"keywords": [
+"Flying",
+"Flash"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3084377f-73fb-4b00-9dd9-3844b1ecafc2",
+"name": "Illvoi Infiltrator",
+"collector_number": "59",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Jellyfish Rogue",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cbc0b136-544d-45a6-be3e-cd21a573bf19",
+"name": "Illvoi Light Jammer",
+"collector_number": "60",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip",
+"Flash"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2e0b225a-d4b4-4f53-8fea-8c6c37102920",
+"name": "Illvoi Operative",
+"collector_number": "61",
+"rarity": "common",
+"type_line": "Creature \u2014 Jellyfish Rogue",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cec95b9f-9d1e-4988-befe-d0c9e20e428d",
+"name": "Lost in Space",
+"collector_number": "62",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2c2ef1ed-2f93-48c5-bf86-e46318599aeb",
+"name": "Mechan Assembler",
+"collector_number": "63",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "fa72c607-7eb4-41b7-9af1-f3d6c69abf09",
+"name": "Mechan Navigator",
+"collector_number": "64",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Pilot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d0025d29-d652-4af8-b367-13142d5532df",
+"name": "Mechan Shieldmate",
+"collector_number": "65",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [
+"Defender"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1aeb43f7-4d8a-4648-9c13-fd101081b448",
+"name": "Mechanozoa",
+"collector_number": "66",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Jellyfish",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "448d9391-9d15-4aa1-87b3-a1d755666c03",
+"name": "Mental Modulation",
+"collector_number": "67",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "de58fa4b-eeeb-4dc8-aab9-6521b15678cc",
+"name": "Mm'menon, the Right Hand",
+"collector_number": "68",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Jellyfish Advisor",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "df702b0c-e011-497f-ae29-9876efac4a4c",
+"name": "Moonlit Meditation",
+"collector_number": "69",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "832fbb1f-0ff5-4d6c-b1ee-2231923a6f64",
+"name": "Mouth of the Storm",
+"collector_number": "70",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Elemental",
+"keywords": [
+"Flying",
+"Ward"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "07155470-c5ab-41ae-ade3-bdc06d357379",
+"name": "Nanoform Sentinel",
+"collector_number": "71",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "58582fac-4c42-4a1c-9ab1-4a892b500da4",
+"name": "Quantum Riddler",
+"collector_number": "72",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Sphinx",
+"keywords": [
+"Flying",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "da422b3e-1092-47ad-97d6-a7a3ef060a53",
+"name": "Scour for Scrap",
+"collector_number": "73",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4ba4cb4b-f421-4abd-8fcf-a01174447790",
+"name": "Selfcraft Mechan",
+"collector_number": "74",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "be3038ff-b39e-4d2e-97ee-85de074ccfd3",
+"name": "Sinister Cryologist",
+"collector_number": "75",
+"rarity": "common",
+"type_line": "Creature \u2014 Jellyfish Wizard",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "fb84b94c-dc8c-4182-9b96-abd092b20981",
+"name": "Specimen Freighter",
+"collector_number": "76",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station",
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "076865e9-ee10-4a87-9180-4274202d37c1",
+"name": "Starbreach Whale",
+"collector_number": "77",
+"rarity": "common",
+"type_line": "Creature \u2014 Whale",
+"keywords": [
+"Flying",
+"Surveil",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4add809e-9caa-45ae-bb0d-4760a360b8e2",
+"name": "Starfield Vocalist",
+"collector_number": "78",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Bard",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "face2dc0-37ba-4efe-b900-b5521567c943",
+"name": "Starwinder",
+"collector_number": "79",
+"rarity": "rare",
+"type_line": "Creature \u2014 Leviathan",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "770b2097-5178-42d2-be6c-393b4bfe3727",
+"name": "Steelswarm Operator",
+"collector_number": "80",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a37314cf-bbbd-4003-b94d-0e6e60edfc15",
+"name": "Synthesizer Labship",
+"collector_number": "81",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ed99a0b8-d82d-4c80-af97-cabd333620df",
+"name": "Tractor Beam",
+"collector_number": "82",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1525cbc1-0d95-4f58-99fb-136e54c4d486",
+"name": "Unravel",
+"collector_number": "83",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7f51aede-fb86-4b7e-9027-2ba8be62b567",
+"name": "Uthros Psionicist",
+"collector_number": "84",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Jellyfish Scientist",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7b4c37dc-8cb0-4870-929e-11c2a45952a2",
+"name": "Uthros Scanship",
+"collector_number": "85",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "08af6751-5848-47fb-95f5-57215e899460",
+"name": "Weftwalking",
+"collector_number": "86",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ed43f1f9-ef96-47bc-8a54-e59154319f9d",
+"name": "Alpharael, Stonechosen",
+"collector_number": "87",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Cleric",
+"keywords": [
+"Ward",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "edcb0248-e7c9-4df9-8dba-982048654fd2",
+"name": "Archenemy's Charm",
+"collector_number": "88",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bbe740f8-6e7c-4cfd-9134-9bf8d5f48cf5",
+"name": "Beamsaw Prospector",
+"collector_number": "89",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "33042d12-f08b-4b3e-b106-c424ef868c13",
+"name": "Blade of the Swarm",
+"collector_number": "90",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Assassin",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cd50bff0-c461-4023-b62a-6746eaaeab0e",
+"name": "Chorale of the Void",
+"collector_number": "91",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0c1b6305-8863-43e0-b50d-ae1c5e31be55",
+"name": "Comet Crawler",
+"collector_number": "92",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect Horror",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ded4009d-be23-4e36-a7a3-9e07230712ee",
+"name": "Dark Endurance",
+"collector_number": "93",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "42510758-6167-420b-bb70-65f914b7a259",
+"name": "Decode Transmissions",
+"collector_number": "94",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "abcb5321-c295-4abf-8622-7de79679d27a",
+"name": "Depressurize",
+"collector_number": "95",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "697b8045-0edb-4f7b-a933-4d41ec2b53d5",
+"name": "Dubious Delicacy",
+"collector_number": "96",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Food",
+"keywords": [
+"Flash"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f7d52eac-edc9-464b-a163-07c136aa6e4c",
+"name": "Elegy Acolyte",
+"collector_number": "97",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Cleric",
+"keywords": [
+"Lifelink",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0fad5713-c09c-43d3-9cc0-10c65aead488",
+"name": "Embrace Oblivion",
+"collector_number": "98",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "90c5ea2b-d004-4219-b60c-d51bc1a5ee6b",
+"name": "Entropic Battlecruiser",
+"collector_number": "99",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "df7500e8-76b4-49b3-a427-9a28ffa14637",
+"name": "Faller's Faithful",
+"collector_number": "100",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Wizard",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1a82be68-3b74-4dfc-9068-3abea61db709",
+"name": "Fell Gravship",
+"collector_number": "101",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station",
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "67821712-e58f-4fee-81af-021059ac72ea",
+"name": "Gravblade Heavy",
+"collector_number": "102",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "15c6837c-775b-4b4a-a2f7-9fd79215fa05",
+"name": "Gravkill",
+"collector_number": "103",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9c009b3f-6580-4ab8-84e8-d4cf7a456a02",
+"name": "Gravpack Monoist",
+"collector_number": "104",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Scout",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "931c2153-e5e5-4642-bff0-f9dadcc24c9a",
+"name": "Hullcarver",
+"collector_number": "105",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Assassin",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "64ca59b8-6e90-46c8-8047-6172b9c84226",
+"name": "Hylderblade",
+"collector_number": "106",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ab1379b7-0016-4d2a-a83b-952666e43b89",
+"name": "Hymn of the Faller",
+"collector_number": "107",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [
+"Surveil",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69a68dec-4b01-4528-81fc-a3c5f5097f72",
+"name": "Insatiable Skittermaw",
+"collector_number": "108",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect Horror",
+"keywords": [
+"Menace",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b162ccf8-e0c2-46ae-84e7-dff2b6fceec1",
+"name": "Lightless Evangel",
+"collector_number": "109",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Vampire Cleric",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "de70a6bb-32ed-4a89-a522-c2a71f08fb02",
+"name": "Monoist Circuit-Feeder",
+"collector_number": "110",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Nautilus",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0b4cb111-ecf7-4ff7-a9e3-c944054f3370",
+"name": "Monoist Sentry",
+"collector_number": "111",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Defender"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e0a35a44-e56d-434e-8043-43d5031b2e84",
+"name": "Perigee Beckoner",
+"collector_number": "112",
+"rarity": "common",
+"type_line": "Creature \u2014 Horror",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "13a8b19b-23bd-4e45-81ff-23371665e4fc",
+"name": "Requiem Monolith",
+"collector_number": "113",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "71982b17-1d9a-4f98-b8b5-d232e3a8cf1d",
+"name": "Scrounge for Eternity",
+"collector_number": "114",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "760ede92-a826-4144-9de8-84ba9b8743d1",
+"name": "Sothera, the Supervoid",
+"collector_number": "115",
+"rarity": "mythic",
+"type_line": "Legendary Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c3731735-2b78-4a15-bff4-4d8559401f68",
+"name": "Sunset Saboteur",
+"collector_number": "116",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Rogue",
+"keywords": [
+"Menace",
+"Ward"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f1d826d1-d2da-46ce-b1db-81393c88d865",
+"name": "Susurian Dirgecraft",
+"collector_number": "117",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4f754f11-3b6d-4a4e-86d7-7495e475ef74",
+"name": "Susurian Voidborn",
+"collector_number": "118",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Vampire Soldier",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a6c28bde-10d9-471b-acd0-32a1c6195805",
+"name": "Swarm Culler",
+"collector_number": "119",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect Warrior",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5e8a2416-e311-41ac-a3cd-be1c2441d542",
+"name": "Temporal Intervention",
+"collector_number": "120",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3c307122-bc18-41f1-87d5-ae6b3ca9b8b9",
+"name": "Timeline Culler",
+"collector_number": "121",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Drix Warlock",
+"keywords": [
+"Haste",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e5e19326-3e90-439c-a3b2-749d43a1af0c",
+"name": "Tragic Trajectory",
+"collector_number": "122",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "12db6263-75c2-442f-a1a5-7af7915f8f9f",
+"name": "Umbral Collar Zealot",
+"collector_number": "123",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Cleric",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e1e489f6-37e5-469e-bca3-0e9d3fc3fa95",
+"name": "Virus Beetle",
+"collector_number": "124",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Insect",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f7afe534-fbb0-4f8b-9e98-aa49d4005465",
+"name": "Voidforged Titan",
+"collector_number": "125",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Warrior",
+"keywords": [
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7efe9fe5-d93c-46a6-afbd-9655a902c6bc",
+"name": "Vote Out",
+"collector_number": "126",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [
+"Convoke"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "39e32fdf-93bf-4390-8275-0d7d10ad7360",
+"name": "Xu-Ifit, Osteoharmonist",
+"collector_number": "127",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Wizard",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "835abd35-27ea-45fe-b55d-25081c57bd4a",
+"name": "Zero Point Ballad",
+"collector_number": "128",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c0899c12-5462-4ff1-a9e5-d99cffa7c6cc",
+"name": "Bombard",
+"collector_number": "129",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cf3234f2-09d7-4d8b-b871-3bf0fcb75b6d",
+"name": "Cut Propulsion",
+"collector_number": "130",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "db0894e1-2644-48d4-8de4-8cc43e940bc1",
+"name": "Debris Field Crusher",
+"collector_number": "131",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
+"name": "Devastating Onslaught",
+"collector_number": "132",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0413e0e4-c8f8-44c3-a749-c799766bc8cd",
+"name": "Drill Too Deep",
+"collector_number": "133",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "610d006a-3ceb-4136-b92b-a500c74d06b0",
+"name": "Frontline War-Rager",
+"collector_number": "134",
+"rarity": "common",
+"type_line": "Creature \u2014 Kavu Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4b96d003-d3b4-4181-9f50-06a3e6eb1916",
+"name": "Full Bore",
+"collector_number": "135",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dfe8f77a-cc26-438b-92ae-2ca7a91f813b",
+"name": "Galvanizing Sawship",
+"collector_number": "136",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4c376349-1a50-4215-8a40-f702da81eb7b",
+"name": "Invasive Maneuvers",
+"collector_number": "137",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "528fe479-dab9-4cf8-bda0-1d226a644366",
+"name": "Kav Landseeker",
+"collector_number": "138",
+"rarity": "common",
+"type_line": "Creature \u2014 Kavu Soldier",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1972e0db-e595-4ec2-b97c-902561bb275b",
+"name": "Kavaron Harrier",
+"collector_number": "139",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c1f1ba17-b5e8-4bb3-a767-befd52e2db72",
+"name": "Kavaron Skywarden",
+"collector_number": "140",
+"rarity": "common",
+"type_line": "Creature \u2014 Kavu Soldier",
+"keywords": [
+"Reach",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3ebb8542-5d1d-4f0b-92a9-5a98425860fd",
+"name": "Kavaron Turbodrone",
+"collector_number": "141",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Scout",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "118c4be1-2204-4133-a80e-990ef96c7e35",
+"name": "Lithobraking",
+"collector_number": "142",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "86e0e718-82b5-4c99-9837-1b4d8729a27e",
+"name": "Melded Moxite",
+"collector_number": "143",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c71d3775-0c71-4e37-979d-35e319f357f0",
+"name": "Memorial Team Leader",
+"collector_number": "144",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Kavu Soldier",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "10dda10f-2549-47e5-9a8b-fb414cf38d3f",
+"name": "Memorial Vault",
+"collector_number": "145",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d0e58b8e-2c41-4602-a905-c2a6086ecf70",
+"name": "Molecular Modifier",
+"collector_number": "146",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Kavu Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "724b4a59-9c69-4f2b-a436-72183c62f1ff",
+"name": "Nebula Dragon",
+"collector_number": "147",
+"rarity": "common",
+"type_line": "Creature \u2014 Dragon",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9635d79e-62ec-4d80-ae37-2793489cc13b",
+"name": "Nova Hellkite",
+"collector_number": "148",
+"rarity": "rare",
+"type_line": "Creature \u2014 Dragon",
+"keywords": [
+"Flying",
+"Haste",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4f10b164-6d36-4935-92e7-53be73ac4c8a",
+"name": "Orbital Plunge",
+"collector_number": "149",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "72e8c978-f66d-42e1-ac5f-d1c307d7b93c",
+"name": "Oreplate Pangolin",
+"collector_number": "150",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Pangolin",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4eedf21c-0ad1-48da-a9fe-2ffdbf8371e9",
+"name": "Pain for All",
+"collector_number": "151",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ac5258c1-5b46-4892-a445-bfd56875f039",
+"name": "Plasma Bolt",
+"collector_number": "152",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ebbf84f7-d142-4de5-bfc1-ea86f082d733",
+"name": "Possibility Technician",
+"collector_number": "153",
+"rarity": "rare",
+"type_line": "Creature \u2014 Kavu Artificer",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "94c9aea7-564d-4fc8-ae14-7b22cba18b95",
+"name": "Red Tiger Mechan",
+"collector_number": "154",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Cat",
+"keywords": [
+"Haste",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69e8333a-bddf-49e2-9c39-3dc46fec81e0",
+"name": "Remnant Elemental",
+"collector_number": "155",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Elemental",
+"keywords": [
+"Reach",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "05bbd557-e2c0-4855-8fe6-00527fa39878",
+"name": "Rig for War",
+"collector_number": "156",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "78ac1e6c-2704-4844-9e87-642324c23997",
+"name": "Roving Actuator",
+"collector_number": "157",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5020628c-5e47-4a83-89c3-7bf5726e69ad",
+"name": "Ruinous Rampage",
+"collector_number": "158",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9ad956c8-71d3-436f-961e-e2dfc1d2ca70",
+"name": "Rust Harvester",
+"collector_number": "159",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7f1edf4c-46a1-426d-8ce9-757a4c27367d",
+"name": "Slagdrill Scrapper",
+"collector_number": "160",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Scout",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4c9d9d47-1eb6-4981-ba83-d5ec04906e71",
+"name": "Systems Override",
+"collector_number": "161",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b5ae8016-92ed-4ae8-83a8-65068defc616",
+"name": "Tannuk, Steadfast Second",
+"collector_number": "162",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Kavu Pilot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cdda2f04-d59e-4ef8-a26d-964d80750940",
+"name": "Terminal Velocity",
+"collector_number": "163",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c08e0958-8fa2-49c7-ab17-a70dfc1ef33a",
+"name": "Terrapact Intimidator",
+"collector_number": "164",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Kavu Scout",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "03f04c2c-1036-497e-8b13-06c61b0b0ba6",
+"name": "Territorial Bruntar",
+"collector_number": "165",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Beast",
+"keywords": [
+"Reach",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e15c78d4-6fb1-4bd3-8219-c66b83fcaba1",
+"name": "Vaultguard Trooper",
+"collector_number": "166",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Kavu Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c947171b-ed9e-4b83-af45-bd595a8d84ee",
+"name": "Warmaker Gunship",
+"collector_number": "167",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e48a8160-cffe-4e00-a3e9-a59d7fc7b3a2",
+"name": "Weapons Manufacturing",
+"collector_number": "168",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "926d52a5-4db1-46ce-9567-17c28bf56ae7",
+"name": "Weftstalker Ardent",
+"collector_number": "169",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Drix Artificer",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6d4d98a8-a5a3-4cc1-9277-c45dafe40ea0",
+"name": "Zookeeper Mechan",
+"collector_number": "170",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "52c6afc6-aff1-46a8-b1ea-b183facec1ae",
+"name": "Atmospheric Greenhouse",
+"collector_number": "171",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6fa78914-85b3-46fd-977a-0e5b4d29eca4",
+"name": "Bioengineered Future",
+"collector_number": "172",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3abd2342-f783-4871-ac78-1a54b35722c2",
+"name": "Biosynthic Burst",
+"collector_number": "173",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ab282bb1-900e-40b8-9821-8e2de88927bc",
+"name": "Blooming Stinger",
+"collector_number": "174",
+"rarity": "common",
+"type_line": "Creature \u2014 Plant Scorpion",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c90da077-de8c-4402-abfc-b63dd15853da",
+"name": "Broodguard Elite",
+"collector_number": "175",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Knight",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "032fdd08-2ea7-442e-8162-0a8e5a585253",
+"name": "Close Encounter",
+"collector_number": "176",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57b75be4-9229-4a48-a59e-a0f812f38637",
+"name": "Diplomatic Relations",
+"collector_number": "177",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "583102f8-7232-4fbb-a715-087448536bb2",
+"name": "Drix Fatemaker",
+"collector_number": "178",
+"rarity": "common",
+"type_line": "Creature \u2014 Drix Wizard",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b907d375-b715-446b-8966-79959feb9f58",
+"name": "Edge Rover",
+"collector_number": "179",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Scout",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "92226fd2-ad93-4722-89a0-ca88ea03e1b4",
+"name": "Eumidian Terrabotanist",
+"collector_number": "180",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Druid",
+"keywords": [
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2f3f5a1c-8b88-4080-bd80-14db4d6c8c50",
+"name": "Eusocial Engineering",
+"collector_number": "181",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [
+"Warp",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e7f53928-a4cc-41ed-877d-b72d786e77d9",
+"name": "Famished Worldsire",
+"collector_number": "182",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Leviathan",
+"keywords": [
+"Ward",
+"Devour"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6a4ef075-9254-4d36-9572-622833fae54e",
+"name": "Frenzied Baloth",
+"collector_number": "183",
+"rarity": "rare",
+"type_line": "Creature \u2014 Beast",
+"keywords": [
+"Haste",
+"Trample"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ce25dd89-dcc7-4576-b148-ef4c1cd5290c",
+"name": "Fungal Colossus",
+"collector_number": "184",
+"rarity": "common",
+"type_line": "Creature \u2014 Fungus Beast",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "86746a84-3e8a-44b4-8494-60cbee9816b5",
+"name": "Galactic Wayfarer",
+"collector_number": "185",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Scout",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0a356d04-2e86-435b-9766-27b93b468a61",
+"name": "Gene Pollinator",
+"collector_number": "186",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Robot Insect",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8735c62d-1508-4bdc-a5d0-f7c68d892a5e",
+"name": "Germinating Wurm",
+"collector_number": "187",
+"rarity": "common",
+"type_line": "Creature \u2014 Plant Wurm",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "300e48df-7f7f-47ff-b450-8ba7bd1b1c67",
+"name": "Glacier Godmaw",
+"collector_number": "188",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Leviathan",
+"keywords": [
+"Trample",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0ebec97e-3cb1-41e2-a693-0febb5623016",
+"name": "Harmonious Grovestrider",
+"collector_number": "189",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Beast",
+"keywords": [
+"Ward"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "103e0b63-fbde-4054-91f7-dd04b40b59ef",
+"name": "Hemosymbic Mite",
+"collector_number": "190",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Mite",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b9650a0e-5795-42ff-84c6-6040e5cf4c90",
+"name": "Icecave Crasher",
+"collector_number": "191",
+"rarity": "common",
+"type_line": "Creature \u2014 Beast",
+"keywords": [
+"Trample",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
+"name": "Icetill Explorer",
+"collector_number": "192",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [
+"Mill",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "94023b23-339a-426e-85cc-cc361ef68754",
+"name": "Intrepid Tenderfoot",
+"collector_number": "193",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect Citizen",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b3f3d55c-a3f6-441b-a380-60c0734dc514",
+"name": "Larval Scoutlander",
+"collector_number": "194",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "56035e66-e730-436d-8de2-4ded7fd1b51e",
+"name": "Lashwhip Predator",
+"collector_number": "195",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Plant Beast",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "16156274-8dc0-439c-94c4-e8c89bbb5687",
+"name": "Loading Zone",
+"collector_number": "196",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "046b60da-0a14-40b0-a36c-5328f6b8972b",
+"name": "Meltstrider Eulogist",
+"collector_number": "197",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1d6742a3-592b-4e67-8cc6-56e2962ad7c7",
+"name": "Meltstrider's Gear",
+"collector_number": "198",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6f9bc0c6-1792-4771-a839-95a22d9c699a",
+"name": "Meltstrider's Resolve",
+"collector_number": "199",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Fight",
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8e025cda-71c5-4d06-8436-decd408667af",
+"name": "Mightform Harmonizer",
+"collector_number": "200",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Druid",
+"keywords": [
+"Warp",
+"Double",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "50d6fd91-23d3-4d32-804f-6233e4386904",
+"name": "Ouroboroid",
+"collector_number": "201",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Plant Wurm",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "37bd9e54-c93e-4fec-9b21-6940da75ab7a",
+"name": "Pull Through the Weft",
+"collector_number": "202",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5f532b7f-cb76-4be7-b361-0106c561dcb2",
+"name": "Sami's Curiosity",
+"collector_number": "203",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "003d9c17-5d5c-469f-ad87-d78faf55e025",
+"name": "Seedship Agrarian",
+"collector_number": "204",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Scientist",
+"keywords": [
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c6d89c4a-351f-4d63-ba57-b978a695191e",
+"name": "Seedship Impact",
+"collector_number": "205",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "709b9f76-0ea5-456c-b1db-2cf517370fde",
+"name": "Shattered Wings",
+"collector_number": "206",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6bb7419b-e085-4616-8e5c-4ed08cb2b4c1",
+"name": "Skystinger",
+"collector_number": "207",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect Warrior",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bcd086ce-de5c-4b34-92a1-ece22055e479",
+"name": "Sledge-Class Seedship",
+"collector_number": "208",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "981138d0-bf61-406a-85be-68cc5e58796c",
+"name": "Tapestry Warden",
+"collector_number": "209",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4ac94586-3ac7-4ade-af31-ad0d0e3ffc4a",
+"name": "Terrasymbiosis",
+"collector_number": "210",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0863c4bc-1e3e-4ff9-8877-88d4021c85e5",
+"name": "Thawbringer",
+"collector_number": "211",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e4be4071-7910-460f-90f3-6c4d8cc9db65",
+"name": "Alpharael, Dreaming Acolyte",
+"collector_number": "212",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Cleric",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b395925b-2456-454e-9262-3b55c9f2799a",
+"name": "Biomechan Engineer",
+"collector_number": "213",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "78de77ef-c325-4342-869f-042921229577",
+"name": "Biotech Specialist",
+"collector_number": "214",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Scientist",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "99d8c5f9-ad8f-450e-9a7c-51a4c0ca5043",
+"name": "Cosmogoyf",
+"collector_number": "215",
+"rarity": "rare",
+"type_line": "Creature \u2014 Elemental Lhurgoyf",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "618a2272-62e0-4d0e-834d-7b81719eba12",
+"name": "Dyadrine, Synthesis Amalgam",
+"collector_number": "216",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Construct",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bf3a0585-3976-4078-8beb-6afa79f97027",
+"name": "Genemorph Imago",
+"collector_number": "217",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Druid",
+"keywords": [
+"Landfall",
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6846448b-d5a0-4ae0-bb11-ea7fa6ed2558",
+"name": "Haliya, Ascendant Cadet",
+"collector_number": "218",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cda39514-86c9-483e-8d95-fd08138ce33a",
+"name": "Infinite Guideline Station",
+"collector_number": "219",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ded2b1b7-8c12-4f6f-a3be-a8f7b62b0819",
+"name": "Interceptor Mechan",
+"collector_number": "220",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Flying",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6c05b882-51d9-43d8-93b8-c3317590f76a",
+"name": "Mm'menon, Uthros Exile",
+"collector_number": "221",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Jellyfish Advisor",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9fdd445a-c8e1-4309-9d74-374676fcac1d",
+"name": "Mutinous Massacre",
+"collector_number": "222",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "522e8db5-857e-492f-afed-d60cd2ce3dcd",
+"name": "Pinnacle Emissary",
+"collector_number": "223",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "76f5445a-5193-4794-8593-b44f961334b6",
+"name": "Ragost, Deft Gastronaut",
+"collector_number": "224",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Lobster Citizen",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "470c16c5-b078-47f5-89b0-42991e1f7157",
+"name": "Sami, Ship's Engineer",
+"collector_number": "225",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c4175a34-70bb-47e5-8406-efdc4d2cd079",
+"name": "Sami, Wildcat Captain",
+"collector_number": "226",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Artificer Rogue",
+"keywords": [
+"Vigilance",
+"Double strike"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "15c994b9-901a-46d6-804b-24560a14a481",
+"name": "Seedship Broodtender",
+"collector_number": "227",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Insect Citizen",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e1976b6c-7e43-4f4a-b082-f95495a1b260",
+"name": "Singularity Rupture",
+"collector_number": "228",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "241117a0-8305-48bb-9cb9-9b01e86e08f7",
+"name": "Space-Time Anomaly",
+"collector_number": "229",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "94e8791b-e72f-4aed-b761-826779337168",
+"name": "Station Monitor",
+"collector_number": "230",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Lizard Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9e597063-c077-4236-a9e4-b0721b24677f",
+"name": "Syr Vondam, Sunstar Exemplar",
+"collector_number": "231",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Knight",
+"keywords": [
+"Vigilance",
+"Menace"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "28225bae-2d96-4352-b256-0c2ff4ef65e9",
+"name": "Syr Vondam, the Lucent",
+"collector_number": "232",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Knight",
+"keywords": [
+"Lifelink",
+"Deathtouch"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "76cb1912-3791-44b8-b594-b92dab21bafc",
+"name": "Tannuk, Memorial Ensign",
+"collector_number": "233",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Kavu Pilot",
+"keywords": [
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cef5361a-a189-4e05-a8b8-fc764aed73b9",
+"name": "All-Fates Scroll",
+"collector_number": "234",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1bd584d5-4e11-428c-b51e-462e4292b07f",
+"name": "Bygone Colossus",
+"collector_number": "235",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Giant",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1ac6fabb-71db-442f-8c14-ba9e659f906c",
+"name": "Chrome Companion",
+"collector_number": "236",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Dog",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b75ca527-4494-4957-b2e3-8c590df42e95",
+"name": "Dauntless Scrapbot",
+"collector_number": "237",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "afc9436b-8cad-4916-929d-ff33a37b42d5",
+"name": "Dawnsire, Sunstar Dreadnought",
+"collector_number": "238",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c017f8ae-9103-4965-a07a-f259f44a157d",
+"name": "The Dominion Bracelet",
+"collector_number": "239",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57ee0730-3ac5-4f17-ac82-bd4a6673c2bb",
+"name": "The Endstone",
+"collector_number": "240",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "11323af4-b8b8-4ca9-932f-377c7fd77dea",
+"name": "The Eternity Elevator",
+"collector_number": "241",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cce3dcc3-57bb-4b95-8b70-337c67bb3c4e",
+"name": "Extinguisher Battleship",
+"collector_number": "242",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "04a0382f-7e4e-4450-ae70-18999379d875",
+"name": "Nutrient Block",
+"collector_number": "243",
+"rarity": "common",
+"type_line": "Artifact \u2014 Food",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ad556aee-3dbf-4c8b-9f3a-31947e26c6f5",
+"name": "Pinnacle Kill-Ship",
+"collector_number": "244",
+"rarity": "common",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "53745903-de8f-42cf-a949-842e5831de30",
+"name": "Survey Mechan",
+"collector_number": "245",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Flying",
+"Hexproof"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9f9ae015-dc59-4ecb-a2bb-668496b48a48",
+"name": "Thaumaton Torpedo",
+"collector_number": "246",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "04ea21b3-084b-4746-9b49-99b6ef4f0885",
+"name": "Thrumming Hivepool",
+"collector_number": "247",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Affinity"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7d70a2f4-92cb-40c3-9e5a-f6c57d4a64c2",
+"name": "Virulent Silencer",
+"collector_number": "248",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Assassin",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "320ed2ec-ef06-41fb-ac8a-72579f11544c",
+"name": "Wurmwall Sweeper",
+"collector_number": "249",
+"rarity": "common",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Surveil",
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "70d35dbd-1d91-4a2a-a643-6870d168f4f5",
+"name": "Adagia, Windswept Bastion",
+"collector_number": "250",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+"name": "Breeding Pool",
+"collector_number": "251",
+"rarity": "rare",
+"type_line": "Land \u2014 Forest Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "87c8e1ed-258a-4a89-bcc6-211405e49692",
+"name": "Command Bridge",
+"collector_number": "252",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "83161d59-2520-4741-9328-e2a4a8b5d5bc",
+"name": "Evendo, Waking Haven",
+"collector_number": "253",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "73864fcc-1bde-4bc0-831e-2b93e546e417",
+"name": "Godless Shrine",
+"collector_number": "254",
+"rarity": "rare",
+"type_line": "Land \u2014 Plains Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4fa826ca-d361-4391-ad0d-989ebcfa4a91",
+"name": "Kavaron, Memorial World",
+"collector_number": "255",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "45181cb8-2090-4471-ba90-e5a8f04d525f",
+"name": "Sacred Foundry",
+"collector_number": "256",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69f55a7c-6ddf-412e-b63b-b395731a1ff2",
+"name": "Secluded Starforge",
+"collector_number": "257",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "16052b52-ade1-406f-a06b-ce7ea607fb63",
+"name": "Stomping Ground",
+"collector_number": "258",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "50d6cadc-07e4-479e-90f4-e3a20f769bab",
+"name": "Susur Secundi, Void Altar",
+"collector_number": "259",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "df08ac72-010f-42f8-beb3-6d645c638e1e",
+"name": "Uthros, Titanic Godcore",
+"collector_number": "260",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "fc9ec820-4245-4a96-b009-5308a818ca58",
+"name": "Watery Grave",
+"collector_number": "261",
+"rarity": "rare",
+"type_line": "Land \u2014 Island Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "262",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "263",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "264",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "265",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "266",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "267",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "268",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "269",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "270",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "271",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "272",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "273",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "274",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "275",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "276",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "70d35dbd-1d91-4a2a-a643-6870d168f4f5",
+"name": "Adagia, Windswept Bastion",
+"collector_number": "277",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+"name": "Breeding Pool",
+"collector_number": "278",
+"rarity": "rare",
+"type_line": "Land \u2014 Forest Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "83161d59-2520-4741-9328-e2a4a8b5d5bc",
+"name": "Evendo, Waking Haven",
+"collector_number": "279",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "73864fcc-1bde-4bc0-831e-2b93e546e417",
+"name": "Godless Shrine",
+"collector_number": "280",
+"rarity": "rare",
+"type_line": "Land \u2014 Plains Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4fa826ca-d361-4391-ad0d-989ebcfa4a91",
+"name": "Kavaron, Memorial World",
+"collector_number": "281",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "45181cb8-2090-4471-ba90-e5a8f04d525f",
+"name": "Sacred Foundry",
+"collector_number": "282",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "16052b52-ade1-406f-a06b-ce7ea607fb63",
+"name": "Stomping Ground",
+"collector_number": "283",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "50d6cadc-07e4-479e-90f4-e3a20f769bab",
+"name": "Susur Secundi, Void Altar",
+"collector_number": "284",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "df08ac72-010f-42f8-beb3-6d645c638e1e",
+"name": "Uthros, Titanic Godcore",
+"collector_number": "285",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "fc9ec820-4245-4a96-b009-5308a818ca58",
+"name": "Watery Grave",
+"collector_number": "286",
+"rarity": "rare",
+"type_line": "Land \u2014 Island Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0eb11b2d-a397-48da-a0f3-9f0f83f42282",
+"name": "Tezzeret, Cruel Captain",
+"collector_number": "287",
+"rarity": "mythic",
+"type_line": "Legendary Planeswalker \u2014 Tezzeret",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bb956492-e3ed-483a-9169-5b795a8e619e",
+"name": "Astelli Reclaimer",
+"collector_number": "288",
+"rarity": "rare",
+"type_line": "Creature \u2014 Angel Warrior",
+"keywords": [
+"Flying",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9b0af3ad-1b4d-4480-af91-fe9baee5d1c5",
+"name": "Haliya, Guided by Light",
+"collector_number": "289",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Soldier",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "de58fa4b-eeeb-4dc8-aab9-6521b15678cc",
+"name": "Mm'menon, the Right Hand",
+"collector_number": "290",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Jellyfish Advisor",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "face2dc0-37ba-4efe-b900-b5521567c943",
+"name": "Starwinder",
+"collector_number": "291",
+"rarity": "rare",
+"type_line": "Creature \u2014 Leviathan",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ed43f1f9-ef96-47bc-8a54-e59154319f9d",
+"name": "Alpharael, Stonechosen",
+"collector_number": "292",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Cleric",
+"keywords": [
+"Ward",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f7d52eac-edc9-464b-a163-07c136aa6e4c",
+"name": "Elegy Acolyte",
+"collector_number": "293",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Cleric",
+"keywords": [
+"Lifelink",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "39e32fdf-93bf-4390-8275-0d7d10ad7360",
+"name": "Xu-Ifit, Osteoharmonist",
+"collector_number": "294",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Wizard",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ebbf84f7-d142-4de5-bfc1-ea86f082d733",
+"name": "Possibility Technician",
+"collector_number": "295",
+"rarity": "rare",
+"type_line": "Creature \u2014 Kavu Artificer",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b5ae8016-92ed-4ae8-83a8-65068defc616",
+"name": "Tannuk, Steadfast Second",
+"collector_number": "296",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Kavu Pilot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8e025cda-71c5-4d06-8436-decd408667af",
+"name": "Mightform Harmonizer",
+"collector_number": "297",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Druid",
+"keywords": [
+"Warp",
+"Double",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "618a2272-62e0-4d0e-834d-7b81719eba12",
+"name": "Dyadrine, Synthesis Amalgam",
+"collector_number": "298",
+"rarity": "rare",
+"type_line": "Legendary Artifact Creature \u2014 Construct",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bf3a0585-3976-4078-8beb-6afa79f97027",
+"name": "Genemorph Imago",
+"collector_number": "299",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Druid",
+"keywords": [
+"Landfall",
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "76f5445a-5193-4794-8593-b44f961334b6",
+"name": "Ragost, Deft Gastronaut",
+"collector_number": "300",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Lobster Citizen",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c4175a34-70bb-47e5-8406-efdc4d2cd079",
+"name": "Sami, Wildcat Captain",
+"collector_number": "301",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Artificer Rogue",
+"keywords": [
+"Vigilance",
+"Double strike"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9e597063-c077-4236-a9e4-b0721b24677f",
+"name": "Syr Vondam, Sunstar Exemplar",
+"collector_number": "302",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Knight",
+"keywords": [
+"Vigilance",
+"Menace"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c96424e7-63c4-4f07-959f-6ad09f91279a",
+"name": "Beyond the Quiet",
+"collector_number": "303",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e2cd65f6-7cbc-497c-bdc9-698ff17da31e",
+"name": "Cosmogrand Zenith",
+"collector_number": "304",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "58582fac-4c42-4a1c-9ab1-4a892b500da4",
+"name": "Quantum Riddler",
+"collector_number": "305",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Sphinx",
+"keywords": [
+"Flying",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "face2dc0-37ba-4efe-b900-b5521567c943",
+"name": "Starwinder",
+"collector_number": "306",
+"rarity": "rare",
+"type_line": "Creature \u2014 Leviathan",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "edcb0248-e7c9-4df9-8dba-982048654fd2",
+"name": "Archenemy's Charm",
+"collector_number": "307",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
+"name": "Devastating Onslaught",
+"collector_number": "308",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9635d79e-62ec-4d80-ae37-2793489cc13b",
+"name": "Nova Hellkite",
+"collector_number": "309",
+"rarity": "rare",
+"type_line": "Creature \u2014 Dragon",
+"keywords": [
+"Flying",
+"Haste",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9ad956c8-71d3-436f-961e-e2dfc1d2ca70",
+"name": "Rust Harvester",
+"collector_number": "310",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e48a8160-cffe-4e00-a3e9-a59d7fc7b3a2",
+"name": "Weapons Manufacturing",
+"collector_number": "311",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4ac94586-3ac7-4ade-af31-ad0d0e3ffc4a",
+"name": "Terrasymbiosis",
+"collector_number": "312",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "99d8c5f9-ad8f-450e-9a7c-51a4c0ca5043",
+"name": "Cosmogoyf",
+"collector_number": "313",
+"rarity": "rare",
+"type_line": "Creature \u2014 Elemental Lhurgoyf",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9fdd445a-c8e1-4309-9d74-374676fcac1d",
+"name": "Mutinous Massacre",
+"collector_number": "314",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "241117a0-8305-48bb-9cb9-9b01e86e08f7",
+"name": "Space-Time Anomaly",
+"collector_number": "315",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69f55a7c-6ddf-412e-b63b-b395731a1ff2",
+"name": "Secluded Starforge",
+"collector_number": "316",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aceea999-90ab-472c-86a7-48af1542cbcf",
+"name": "Anticausal Vestige",
+"collector_number": "317",
+"rarity": "rare",
+"type_line": "Creature \u2014 Eldrazi",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "43febbcd-ecbe-4edb-ad90-7fc6dc381d05",
+"name": "Exalted Sunborn",
+"collector_number": "318",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Angel Wizard",
+"keywords": [
+"Flying",
+"Lifelink",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8054092a-1940-4f4b-991d-81f4d384cdb1",
+"name": "Hardlight Containment",
+"collector_number": "319",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57012049-06d7-4354-8125-9ea9e742f14d",
+"name": "Lightstall Inquisitor",
+"collector_number": "320",
+"rarity": "rare",
+"type_line": "Creature \u2014 Angel Wizard",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3aa0cda4-fb2d-4fd4-84f6-482089a85547",
+"name": "Lumen-Class Frigate",
+"collector_number": "321",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "10e0b563-4dfc-4530-a010-0ba40bdf02ac",
+"name": "Pinnacle Starcage",
+"collector_number": "322",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a6bcec1f-f515-4e63-9e84-8eb04cc582ff",
+"name": "The Seriema",
+"collector_number": "323",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "de6b26e4-8700-490f-9df2-dac430463274",
+"name": "Sunstar Chaplain",
+"collector_number": "324",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Cleric",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e921839f-9d91-41a9-bc89-016af3c757aa",
+"name": "Consult the Star Charts",
+"collector_number": "325",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [
+"Kicker"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7d8b53f4-bdb5-4ba1-b6c0-f4846d8d3565",
+"name": "Emissary Escort",
+"collector_number": "326",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "df702b0c-e011-497f-ae29-9876efac4a4c",
+"name": "Moonlit Meditation",
+"collector_number": "327",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4add809e-9caa-45ae-bb0d-4760a360b8e2",
+"name": "Starfield Vocalist",
+"collector_number": "328",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Bard",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a37314cf-bbbd-4003-b94d-0e6e60edfc15",
+"name": "Synthesizer Labship",
+"collector_number": "329",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "08af6751-5848-47fb-95f5-57215e899460",
+"name": "Weftwalking",
+"collector_number": "330",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cd50bff0-c461-4023-b62a-6746eaaeab0e",
+"name": "Chorale of the Void",
+"collector_number": "331",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Void"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "90c5ea2b-d004-4219-b60c-d51bc1a5ee6b",
+"name": "Entropic Battlecruiser",
+"collector_number": "332",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "13a8b19b-23bd-4e45-81ff-23371665e4fc",
+"name": "Requiem Monolith",
+"collector_number": "333",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c3731735-2b78-4a15-bff4-4d8559401f68",
+"name": "Sunset Saboteur",
+"collector_number": "334",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Rogue",
+"keywords": [
+"Menace",
+"Ward"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "835abd35-27ea-45fe-b55d-25081c57bd4a",
+"name": "Zero Point Ballad",
+"collector_number": "335",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "10dda10f-2549-47e5-9a8b-fb414cf38d3f",
+"name": "Memorial Vault",
+"collector_number": "336",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4eedf21c-0ad1-48da-a9fe-2ffdbf8371e9",
+"name": "Pain for All",
+"collector_number": "337",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cdda2f04-d59e-4ef8-a26d-964d80750940",
+"name": "Terminal Velocity",
+"collector_number": "338",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c947171b-ed9e-4b83-af45-bd595a8d84ee",
+"name": "Warmaker Gunship",
+"collector_number": "339",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6fa78914-85b3-46fd-977a-0e5b4d29eca4",
+"name": "Bioengineered Future",
+"collector_number": "340",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e7f53928-a4cc-41ed-877d-b72d786e77d9",
+"name": "Famished Worldsire",
+"collector_number": "341",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Leviathan",
+"keywords": [
+"Ward",
+"Devour"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6a4ef075-9254-4d36-9572-622833fae54e",
+"name": "Frenzied Baloth",
+"collector_number": "342",
+"rarity": "rare",
+"type_line": "Creature \u2014 Beast",
+"keywords": [
+"Haste",
+"Trample"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
+"name": "Icetill Explorer",
+"collector_number": "343",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [
+"Mill",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "16156274-8dc0-439c-94c4-e8c89bbb5687",
+"name": "Loading Zone",
+"collector_number": "344",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "50d6fd91-23d3-4d32-804f-6233e4386904",
+"name": "Ouroboroid",
+"collector_number": "345",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Plant Wurm",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bcd086ce-de5c-4b34-92a1-ece22055e479",
+"name": "Sledge-Class Seedship",
+"collector_number": "346",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "78de77ef-c325-4342-869f-042921229577",
+"name": "Biotech Specialist",
+"collector_number": "347",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Scientist",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cda39514-86c9-483e-8d95-fd08138ce33a",
+"name": "Infinite Guideline Station",
+"collector_number": "348",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "522e8db5-857e-492f-afed-d60cd2ce3dcd",
+"name": "Pinnacle Emissary",
+"collector_number": "349",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e1976b6c-7e43-4f4a-b082-f95495a1b260",
+"name": "Singularity Rupture",
+"collector_number": "350",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "afc9436b-8cad-4916-929d-ff33a37b42d5",
+"name": "Dawnsire, Sunstar Dreadnought",
+"collector_number": "351",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c017f8ae-9103-4965-a07a-f259f44a157d",
+"name": "The Dominion Bracelet",
+"collector_number": "352",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57ee0730-3ac5-4f17-ac82-bd4a6673c2bb",
+"name": "The Endstone",
+"collector_number": "353",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "11323af4-b8b8-4ca9-932f-377c7fd77dea",
+"name": "The Eternity Elevator",
+"collector_number": "354",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cce3dcc3-57bb-4b95-8b70-337c67bb3c4e",
+"name": "Extinguisher Battleship",
+"collector_number": "355",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "04ea21b3-084b-4746-9b49-99b6ef4f0885",
+"name": "Thrumming Hivepool",
+"collector_number": "356",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Affinity"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aceea999-90ab-472c-86a7-48af1542cbcf",
+"name": "Anticausal Vestige",
+"collector_number": "357",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Eldrazi",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "43febbcd-ecbe-4edb-ad90-7fc6dc381d05",
+"name": "Exalted Sunborn",
+"collector_number": "358",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Angel Wizard",
+"keywords": [
+"Flying",
+"Lifelink",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4add809e-9caa-45ae-bb0d-4760a360b8e2",
+"name": "Starfield Vocalist",
+"collector_number": "359",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Bard",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "760ede92-a826-4144-9de8-84ba9b8743d1",
+"name": "Sothera, the Supervoid",
+"collector_number": "360",
+"rarity": "mythic",
+"type_line": "Legendary Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
+"name": "Devastating Onslaught",
+"collector_number": "361",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
+"name": "Icetill Explorer",
+"collector_number": "362",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [
+"Mill",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9fdd445a-c8e1-4309-9d74-374676fcac1d",
+"name": "Mutinous Massacre",
+"collector_number": "363",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c017f8ae-9103-4965-a07a-f259f44a157d",
+"name": "The Dominion Bracelet",
+"collector_number": "364",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57ee0730-3ac5-4f17-ac82-bd4a6673c2bb",
+"name": "The Endstone",
+"collector_number": "365",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69f55a7c-6ddf-412e-b63b-b395731a1ff2",
+"name": "Secluded Starforge",
+"collector_number": "366",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "367",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+"name": "Island",
+"collector_number": "368",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+"name": "Swamp",
+"collector_number": "369",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "370",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+"name": "Forest",
+"collector_number": "371",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "70d35dbd-1d91-4a2a-a643-6870d168f4f5",
+"name": "Adagia, Windswept Bastion",
+"collector_number": "372",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "20283c4a-f1f0-42f0-bc08-6da87474426b",
+"name": "Breeding Pool",
+"collector_number": "373",
+"rarity": "rare",
+"type_line": "Land \u2014 Forest Island",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "83161d59-2520-4741-9328-e2a4a8b5d5bc",
+"name": "Evendo, Waking Haven",
+"collector_number": "374",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "73864fcc-1bde-4bc0-831e-2b93e546e417",
+"name": "Godless Shrine",
+"collector_number": "375",
+"rarity": "rare",
+"type_line": "Land \u2014 Plains Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4fa826ca-d361-4391-ad0d-989ebcfa4a91",
+"name": "Kavaron, Memorial World",
+"collector_number": "376",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "45181cb8-2090-4471-ba90-e5a8f04d525f",
+"name": "Sacred Foundry",
+"collector_number": "377",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "16052b52-ade1-406f-a06b-ce7ea607fb63",
+"name": "Stomping Ground",
+"collector_number": "378",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "50d6cadc-07e4-479e-90f4-e3a20f769bab",
+"name": "Susur Secundi, Void Altar",
+"collector_number": "379",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "df08ac72-010f-42f8-beb3-6d645c638e1e",
+"name": "Uthros, Titanic Godcore",
+"collector_number": "380",
+"rarity": "mythic",
+"type_line": "Land \u2014 Planet",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "fc9ec820-4245-4a96-b009-5308a818ca58",
+"name": "Watery Grave",
+"collector_number": "381",
+"rarity": "rare",
+"type_line": "Land \u2014 Island Swamp",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "760ede92-a826-4144-9de8-84ba9b8743d1",
+"name": "Sothera, the Supervoid",
+"collector_number": "382",
+"rarity": "mythic",
+"type_line": "Legendary Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aceea999-90ab-472c-86a7-48af1542cbcf",
+"name": "Anticausal Vestige",
+"collector_number": "383",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Eldrazi",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "43febbcd-ecbe-4edb-ad90-7fc6dc381d05",
+"name": "Exalted Sunborn",
+"collector_number": "384",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Angel Wizard",
+"keywords": [
+"Flying",
+"Lifelink",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4add809e-9caa-45ae-bb0d-4760a360b8e2",
+"name": "Starfield Vocalist",
+"collector_number": "385",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Bard",
+"keywords": [
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "760ede92-a826-4144-9de8-84ba9b8743d1",
+"name": "Sothera, the Supervoid",
+"collector_number": "386",
+"rarity": "mythic",
+"type_line": "Legendary Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2e17cd4c-ebf0-40d0-b52d-b4d84bbcf7b3",
+"name": "Devastating Onslaught",
+"collector_number": "387",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "109cdefd-e8cc-4ac7-b6ba-2cfdef8d780f",
+"name": "Icetill Explorer",
+"collector_number": "388",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [
+"Mill",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9fdd445a-c8e1-4309-9d74-374676fcac1d",
+"name": "Mutinous Massacre",
+"collector_number": "389",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c017f8ae-9103-4965-a07a-f259f44a157d",
+"name": "The Dominion Bracelet",
+"collector_number": "390",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "57ee0730-3ac5-4f17-ac82-bd4a6673c2bb",
+"name": "The Endstone",
+"collector_number": "391",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "69f55a7c-6ddf-412e-b63b-b395731a1ff2",
+"name": "Secluded Starforge",
+"collector_number": "392",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "42fa99ab-d35f-4439-ab00-fe99bad626ac",
+"name": "Starfield Shepherd",
+"collector_number": "393",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Angel",
+"keywords": [
+"Flying",
+"Warp"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d08e9784-75f7-4164-ac48-d06160f8c56b",
+"name": "Annul",
+"collector_number": "394",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "12db6263-75c2-442f-a1a5-7af7915f8f9f",
+"name": "Umbral Collar Zealot",
+"collector_number": "395",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Cleric",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1972e0db-e595-4ec2-b97c-902561bb275b",
+"name": "Kavaron Harrier",
+"collector_number": "396",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "37bd9e54-c93e-4fec-9b21-6940da75ab7a",
+"name": "Pull Through the Weft",
+"collector_number": "397",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e1976b6c-7e43-4f4a-b082-f95495a1b260",
+"name": "Singularity Rupture",
+"collector_number": "398",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7d8b53f4-bdb5-4ba1-b6c0-f4846d8d3565",
+"name": "Emissary Escort",
+"collector_number": "399",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [],
+"released_at": "2025-08-01"
+}
+]
+}

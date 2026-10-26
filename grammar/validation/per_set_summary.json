@@ -1,0 +1,212 @@
+{
+ "eoe": {
+  "name": "Edge of Eternities",
+  "role": "training",
+  "cards": 266,
+  "owned": 153,
+  "claims_applied": 8,
+  "tests": {
+   "pass": 190
+  },
+  "frames_tested": 3,
+  "cards_tested": 28,
+  "owned_cards_tested": 13,
+  "ruling_status": {
+   "confirmed": 1,
+   "insufficient_representation": 1,
+   "unconverted": 294
+  },
+  "outdated": 0,
+  "introduced": [
+   "warp",
+   "station",
+   "void"
+  ]
+ },
+ "eoc": {
+  "name": "Edge of Eternities Commander",
+  "role": "training",
+  "cards": 171,
+  "owned": 54,
+  "claims_applied": 10,
+  "tests": {
+   "ambiguous": 1,
+   "not_representable": 1,
+   "pass": 29
+  },
+  "frames_tested": 1,
+  "cards_tested": 7,
+  "owned_cards_tested": 0,
+  "ruling_status": {
+   "ambiguous": 1,
+   "confirmed": 1,
+   "insufficient_representation": 1,
+   "unconverted": 325
+  },
+  "outdated": 8,
+  "introduced": [
+   "station"
+  ]
+ },
+ "tla": {
+  "name": "Avatar: The Last Airbender",
+  "role": "training",
+  "cards": 286,
+  "owned": 181,
+  "claims_applied": 17,
+  "tests": {
+   "ambiguous": 1,
+   "pass": 224
+  },
+  "frames_tested": 41,
+  "cards_tested": 35,
+  "owned_cards_tested": 19,
+  "ruling_status": {
+   "ambiguous": 1,
+   "confirmed": 7,
+   "unconverted": 821
+  },
+  "outdated": 0,
+  "introduced": [
+   "earthbend",
+   "firebending",
+   "airbend"
+  ]
+ },
+ "tle": {
+  "name": "Avatar: The Last Airbender Eternal",
+  "role": "training",
+  "cards": 242,
+  "owned": 23,
+  "claims_applied": 14,
+  "tests": {
+   "ambiguous": 3,
+   "pass": 75
+  },
+  "frames_tested": 20,
+  "cards_tested": 15,
+  "owned_cards_tested": 1,
+  "ruling_status": {
+   "ambiguous": 3,
+   "confirmed": 7,
+   "unconverted": 463
+  },
+  "outdated": 7,
+  "introduced": [
+   "earthbend",
+   "firebending",
+   "airbend"
+  ]
+ },
+ "tmt": {
+  "name": "Teenage Mutant Ninja Turtles",
+  "role": "training",
+  "cards": 195,
+  "owned": 135,
+  "claims_applied": 7,
+  "tests": {
+   "pass": 85
+  },
+  "frames_tested": 12,
+  "cards_tested": 31,
+  "owned_cards_tested": 18,
+  "ruling_status": {
+   "confirmed": 6,
+   "unconverted": 365
+  },
+  "outdated": 0,
+  "introduced": [
+   "sneak",
+   "disappear"
+  ]
+ },
+ "tmc": {
+  "name": "Teenage Mutant Ninja Turtles Eternal",
+  "role": "training",
+  "cards": 117,
+  "owned": 82,
+  "claims_applied": 1,
+  "tests": {
+   "pass": 1
+  },
+  "frames_tested": 4,
+  "cards_tested": 1,
+  "owned_cards_tested": 1,
+  "ruling_status": {
+   "unconverted": 242
+  },
+  "outdated": 4,
+  "introduced": []
+ },
+ "trk": {
+  "name": "Star Trek",
+  "role": "held_out",
+  "cards": 159,
+  "owned": 11,
+  "claims_applied": 7,
+  "tests": {
+   "pass": 56
+  },
+  "frames_tested": 1,
+  "cards_tested": 8,
+  "owned_cards_tested": 0,
+  "ruling_status": {
+   "unconverted": 31
+  },
+  "outdated": 1,
+  "introduced": [
+   "strange new worlds"
+  ]
+ },
+ "trc": {
+  "name": "Star Trek Commander",
+  "role": "held_out",
+  "cards": 53,
+  "owned": 1,
+  "claims_applied": 7,
+  "tests": {
+   "pass": 7
+  },
+  "frames_tested": 1,
+  "cards_tested": 1,
+  "owned_cards_tested": 0,
+  "ruling_status": {
+   "unconverted": 1
+  },
+  "outdated": 0,
+  "introduced": [
+   "strange new worlds",
+   "seek out"
+  ]
+ },
+ "_total": {
+  "frames": 163,
+  "claims": 41,
+  "cards": 184,
+  "owned": 56,
+  "abilities": 169,
+  "tests": {
+   "ambiguous": 5,
+   "not_representable": 3,
+   "pass": 725
+  },
+  "owned_mech": [
+   [
+    null,
+    6
+   ],
+   [
+    "earthbend",
+    15
+   ],
+   [
+    "sneak",
+    22
+   ],
+   [
+    "station",
+    13
+   ]
+  ]
+ }
+}

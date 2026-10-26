@@ -1,0 +1,66 @@
+card,type_line,oracle_recorded,oracle_sha12,candidate_ops,contracts_ready,contracts_blocked,contracts_with_action,projected_abilities,projection_status,unread_clauses,unread_text,verified_reviews,compiled_actions,runtime_eligibility,themes
+Arcane Signet,Artifact,True,ef99a3cd50fa,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Bespoke Bō,Artifact — Equipment,True,fe39e0740409,2,2,0,1,1,partial,1,equipped creature gets +2/+1 and has vigilance.,0,0,eligible after review,
+Bident of Thassa,Legendary Enchantment Artifact,True,f3ccd76f6ee4,2,1,1,2,2,partial,1,creatures your opponents control attack this turn if able,0,0,eligible after review,
+Blasphemous Act,Sorcery,True,6d7ffcca54c3,2,0,2,1,1,partial,1,this spell costs {1} less to cast for each creature on the battlefield.,0,0,blocked,
+Boosted Sloop,Artifact — Vehicle,True,60322ddd1128,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Boros Signet,Artifact,True,324a680fbbfa,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Carrot Cake,Artifact — Food,True,3a86ddd73296,2,1,1,2,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Cori-Steel Cutter,Artifact — Equipment,True,bf1664971137,2,2,0,1,1,partial,1,equipped creature gets +1/+1 and has trample and haste.,0,0,eligible after review,
+Coruscation Mage,Creature — Otter Wizard,True,eb141e6c631c,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Counterspell,Instant,True,6e7e3fa9bb23,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Craterclaw Colossus,Artifact Creature — Beast Construct,True,773cb1963e41,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Cryogen Relic,Artifact,True,a6128e43caa0,2,1,1,2,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Curiosity Crafter,Creature — Bird Wizard,True,5c6ca8683e7e,2,2,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Desculpting Blast,Instant,True,98d0be8115e3,1,0,1,1,1,partial,1,"if it was attacking and ""this token can block only creatures with flying """,0,0,blocked,
+Dreams of Laguna,Instant,True,4faf490a057a,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Drill Too Deep,Instant,True,7976799dd1d7,3,0,3,2,2,partial,1,choose one —,0,0,blocked,
+Elsewhere Flask,Artifact,True,0bd48c808c76,2,1,1,2,2,partial,1,choose a basic land type each land you control becomes that type until end of turn,0,0,eligible after review,sacrifice_conversion
+Emergency Eject,Instant,True,01e7bf486c54,1,0,1,1,1,partial,1,its controller creates a lander token,0,0,blocked,land_search
+Etherium Sculptor,Artifact Creature — Vedalken Artificer,True,4ec5b9e93964,0,0,0,0,0,machine_parsed,0,,0,0,no candidate operations,
+Flame Fusillade,Sorcery,True,1ca89aed81e9,1,0,1,1,1,partial,1,"until end of turn permanents you control gain ""{t}: """,0,0,blocked,
+Fountainport Bell,Artifact,True,2147ac49b811,2,1,1,2,2,partial,1,search your library for a basic land card reveal it then shuffle and put that card on top,0,0,eligible after review,"land_search, sacrifice_conversion"
+Galvanic Blast,Instant,True,ff7ab1f271a2,2,0,2,2,2,partial,1,metalcraft ~ deals 4 damage instead if you control three or more artifacts,0,0,blocked,
+Geist of Saint Thalia,Legendary Creature — Spirit Cleric,True,7da3e08c239f,0,0,0,0,0,machine_parsed,0,,0,0,no candidate operations,
+Geistwave,Instant,True,41ed3d2ed57f,1,0,1,1,1,partial,1,if you controlled that permanent,0,0,blocked,
+Generous Gift,Instant,True,b3b0d82bf123,1,0,1,1,1,partial,1,its controller creates a 3/3 green elephant creature token,0,0,blocked,
+Gossip's Talent,Enchantment — Class,True,3bb199cfe15e,3,2,1,1,1,partial,2,"{1}{u}: level 2 — whenever you attack, target attacking creature with power 3 or less can't be blocked this turn. | {3}{u}: level 3 — whenever a creature you control deals combat damage to a player, you may exile it, then return it to the battlefield under its owner's control.",0,0,eligible after review,repeatable_recursion
+Guidelight Matrix,Artifact,True,6cb79266031f,3,1,2,3,3,partial,2,target mount you control becomes saddled until end of turn | target vehicle you control becomes an artifact creature until end of turn,0,0,eligible after review,
+Improvised Club,Instant,True,6adf7d124651,2,1,1,2,2,machine_parsed,0,,0,0,eligible after review,
+Instant Ramen,Artifact — Food,True,3311ac8aec90,2,2,0,2,2,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Lumen-Class Frigate,Artifact — Spacecraft,True,7da76f53643f,0,0,0,0,0,machine_parsed,0,,0,0,no candidate operations,
+Melded Moxite,Artifact,True,3a71ee83d618,2,1,1,2,2,partial,1,discard a card if you do,0,0,eligible after review,sacrifice_conversion
+Mouser Attack!,Instant,True,944b64097808,3,0,3,2,2,partial,1,choose one —,0,0,blocked,
+Mouser Foundry,Artifact,True,fc6e31fa1dca,2,1,1,2,3,partial,1,it,0,0,eligible after review,sacrifice_conversion
+Omni-Cheese Pizza,Artifact — Food,True,64be2688c702,3,3,0,3,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Ooze Spill,Instant,True,b80ed889218e,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Pinnacle Emissary,Artifact Creature — Robot,True,19e747aa7193,1,0,1,1,1,partial,2,"""this token can block only creatures with flying "" | warp {u/r}",0,0,blocked,
+Plunder the Trollshaws,Instant,True,d6ef1e03c2f0,1,0,1,1,1,partial,1,if this spell was cast from a graveyard instead,0,0,blocked,
+Prismari Charm,Instant,True,0bc5a08f985b,4,0,4,3,3,partial,2,choose one — | • then,0,0,blocked,
+"Raff, Weatherlight Stalwart",Legendary Creature — Human Wizard,True,fdee1dac9bfd,2,1,1,2,2,machine_parsed,0,,0,0,eligible after review,
+Reality Shift,Instant,True,630e66467fcc,1,0,1,1,1,partial,1,its controller manifests the top card of their library,0,0,blocked,
+Reckless Fireweaver,Creature — Human Artificer,True,6fdfc482de8b,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Resculpt,Instant,True,2fdb04017160,1,0,1,1,1,partial,1,its controller creates a 4/4 blue and red elemental creature token,0,0,blocked,
+Retrofitter Foundry,Artifact,True,59db28523eb7,4,3,1,4,4,partial,1,untap,0,0,eligible after review,sacrifice_conversion
+Rush of Inspiration // Crackling Falls,Instant // Land,True,4ace5bf05998,2,0,2,2,5,partial,4,~ {1}{u/r}{u/r} | discard a card at random unless you pay {e}{e} | crackling falls | this land enters tapped,0,0,blocked,
+"Saheeli, Consul of Oversight",Legendary Creature — Human Advisor,True,00c7f6aa92bd,1,0,1,1,1,machine_parsed,0,,0,0,blocked,
+"Saheeli, Sublime Artificer",Legendary Planeswalker — Saheeli,True,4aa0d5fa8ab4,2,2,0,1,1,partial,1,"[−2]: target artifact you control becomes a copy of another target artifact or creature you control until end of turn, except it's an artifact in addition to its other types.",0,0,eligible after review,
+"Sai, Master Thopterist",Legendary Creature — Human Artificer,True,32de849cc26e,2,2,0,2,2,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+"Sami, Ship's Engineer",Legendary Creature — Human Artificer,True,9223cf2e877a,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Sewer-veillance Cam,Artifact,True,8b62b5de44da,2,2,0,2,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Shore Up,Instant,True,41afa83a7553,1,0,1,1,1,partial,1,untap it,0,0,blocked,
+"Sokka, Bold Boomeranger",Legendary Creature — Human Warrior Ally,True,a3afa01ff781,2,1,1,2,2,partial,1,discard up to two cards then draw that many cards,0,0,eligible after review,
+Sol Ring,Artifact,True,8310b06afdea,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Spicy Oatmeal Pizza,Artifact — Food,True,3b799f1639aa,2,1,1,2,2,partial,1,it and 3 damage to you,0,0,eligible after review,sacrifice_conversion
+Springleaf Drum,Artifact,True,37391aca4764,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Stridehangar Automaton,Artifact Creature — Construct,True,59ad59fe37f2,1,0,1,0,0,machine_parsed,0,,0,0,blocked,
+Strixhaven Skycoach,Artifact — Vehicle,True,cf2ada7a75f7,1,0,1,1,1,partial,1,search your library for a basic land card reveal it put it into your hand then shuffle,0,0,blocked,land_search
+Talisman of Progress,Artifact,True,61d8b1d0205b,2,1,1,2,2,partial,1,deals 1 damage to you,0,0,eligible after review,
+Thopter Spy Network,Enchantment,True,9f21ac0c9015,2,2,0,2,2,machine_parsed,0,,0,0,eligible after review,
+Thorin Oakenshield,Legendary Creature — Dwarf Noble,True,4b478cc10918,1,1,0,0,0,partial,1,"as long as you have an enduring story, artifacts and creatures you control have ward {1}.",0,0,"reviewable, no executable action",
+Uthros Scanship,Artifact — Spacecraft,True,90f5c08a3d44,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+"Vraska, Soul of Stone",Legendary Creature — Gorgon Wizard,True,eedbfdaa7d45,2,2,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Warmaker Gunship,Artifact — Spacecraft,True,55f976193ea4,1,0,1,1,1,partial,1,it deals damage equal to the number of artifacts you control to target creature an opponent controls,0,0,blocked,
+Whirler Rogue,Creature — Human Rogue Artificer,True,078fa66c6fb9,2,1,1,2,2,partial,1,target creature,0,0,eligible after review,
+White Auracite,Artifact,True,eb761262a6bd,2,2,0,2,2,machine_parsed,0,,0,0,eligible after review,
+Wurmwall Sweeper,Artifact — Spacecraft,True,c114fe8decbc,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,

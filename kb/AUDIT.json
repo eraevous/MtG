@@ -1,0 +1,41 @@
+{
+  "cards": 3403,
+  "owned_cards": 3395,
+  "known_copies": 5480,
+  "deck_names": 12,
+  "candidate_operations": 4631,
+  "projected_abilities": 3596,
+  "capability_claims": 25616,
+  "source_sheet_rows": 17841,
+  "source_sheet_count": 39,
+  "unverified_candidate_ops": 4631,
+  "fully_rules_verified_operations": 0,
+  "machine_projections_by_status": {
+    "machine_parsed": 504,
+    "no_projection": 35,
+    "partial": 2864
+  },
+  "qa_issues_by_severity": {
+    "low": 155
+  },
+  "deck_card_counts": {
+    "Ashling": 100,
+    "Blight Curse": 100,
+    "Brigid": 100,
+    "Counter Blitz": 100,
+    "Dina": 100,
+    "Limit Break": 100,
+    "Necrobloom": 100,
+    "Rootha": 100,
+    "Shanid": 100,
+    "Sharuum": 100,
+    "TMNT": 100,
+    "Vraska": 100
+  },
+  "review_backlog": 3403,
+  "ontology_domains": 78,
+  "embedded_project_documents": 5,
+  "source_sha256": "964f615f721fdb23600e8eb0fd96713c800f6c851727a3b9d2c7a9408ce920fe",
+  "parser_sha256": "mtg_eval_0.3.0:0d2cb97fc3acb9ea",
+  "caveat": "Precomputed does not mean validated. Candidate operations and machine projections MUST NOT auto-execute as rules truth."
+}

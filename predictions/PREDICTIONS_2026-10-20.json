@@ -1,0 +1,600 @@
+{
+ "decks": {
+  "Ashling": {
+   "confidence (engine coverage)": "medium",
+   "measurements": {
+    "attrition": 0.429,
+    "close": 2.0,
+    "commander": 0.0,
+    "contention": 0.0,
+    "coverage": "14/63",
+    "coverage_share": 0.22,
+    "mana": 0.592,
+    "quality": 2.5,
+    "recover": 1.143,
+    "tokens per turn T4-T8": 0.14,
+    "unopposed lethal by T10": 0.806
+   },
+   "predictions": [
+    {
+     "direction": "weakness",
+     "measure": "close",
+     "prediction": "struggles to close once opponents have blockers; games go long or stall",
+     "rank": 9,
+     "value": 2.0
+    },
+    {
+     "direction": "strength",
+     "measure": "recover",
+     "prediction": "rebuilds quickly after a board wipe",
+     "rank": 4,
+     "value": 1.143
+    },
+    {
+     "direction": "weakness",
+     "measure": "attrition",
+     "prediction": "a wipe followed by repeated commander removal leaves it without a board",
+     "rank": 9,
+     "value": 0.429
+    }
+   ]
+  },
+  "Blight Curse": {
+   "confidence (engine coverage)": "low",
+   "measurements": {
+    "attrition": 0.571,
+    "close": 0.0,
+    "commander": 0.0,
+    "contention": 0.0,
+    "coverage": "6/61",
+    "coverage_share": 0.1,
+    "mana": 0.801,
+    "quality": 3.25,
+    "recover": 1.286,
+    "tokens per turn T4-T8": 0.04,
+    "unopposed lethal by T10": 0.81
+   },
+   "predictions": [
+    {
+     "direction": "weakness",
+     "measure": "close",
+     "prediction": "struggles to close once opponents have blockers; games go long or stall",
+     "rank": 11,
+     "value": 0.0
+    },
+    {
+     "direction": "strength",
+     "measure": "recover",
+     "prediction": "rebuilds quickly after a board wipe",
+     "rank": 1,
+     "value": 1.286
+    },
+    {
+     "direction": "strength",
+     "measure": "quality",
+     "prediction": "its bodies outclass ordinary blockers",
+     "rank": 1,
+     "value": 3.25
+    },
+    {
+     "direction": "weakness",
+     "measure": "mana",
+     "prediction": "mana-limited in the midgame; spells stay in hand",
+     "rank": 12,
+     "value": 0.801
+    }
+   ]
+  },
+  "Brigid": {
+   "confidence (engine coverage)": "low",
+   "measurements": {
+    "attrition": 0.667,
+    "close": 7.0,
+    "commander": 0.0,
+    "contention": 0.021,
+    "coverage": "8/65",
+    "coverage_share": 0.12,
+    "mana": 0.587,
+    "quality": 2.4,
+    "recover": 0.778,
+    "tokens per turn T4-T8": 0.28,
+    "unopposed lethal by T10": 0.956
+   },
+   "predictions": [
+    {
+     "direction": "weakness",
+     "measure": "recover",
+     "prediction": "after a board wipe, does not rebuild a threatening board within about three turns",
+     "rank": 11,
+     "value": 0.778
+    },
+    {
+     "direction": "weakness",
+     "measure": "contention",
+     "prediction": "several cards compete for the same bodies; spends creatures on costs instead of attacks",
+     "rank": 9,
+     "value": 0.021
+    },
+    {
+     "direction": "strength",
+     "measure": "attrition",
+     "prediction": "keeps a board through a wipe and repeated commander removal",
+     "rank": 4,
+     "value": 0.667
+    }
+   ]
+  },
+  "Counter Blitz": {
+   "confidence (engine coverage)": "low",
+   "measurements": {
+    "attrition": 0.5,
+    "close": 2.0,
+    "commander": 0.0,
+    "contention": 0.0,
+    "coverage": "8/63",
+    "coverage_share": 0.13,
+    "mana": 0.514,
+    "quality": 2.33,
+    "recover": 0.875,
+    "tokens per turn T4-T8": 0.18,
+    "unopposed lethal by T10": 0.84
+   },
+   "predictions": [
+    {
+     "direction": "weakness",
+     "measure": "close",
+     "prediction": "struggles to close once opponents have blockers; games go long or stall",
+     "rank": 9,
+     "value": 2.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "recover",
+     "prediction": "after a board wipe, does not rebuild a threatening board within about three turns",
+     "rank": 9,
+     "value": 0.875
+    },
+    {
+     "direction": "weakness",
+     "measure": "quality",
+     "prediction": "its bodies are small; blockers and incidental removal outclass the board",
+     "rank": 9,
+     "value": 2.33
+    },
+    {
+     "direction": "strength",
+     "measure": "mana",
+     "prediction": "rarely short of mana in the midgame",
+     "rank": 2,
+     "value": 0.514
+    }
+   ]
+  },
+  "Dina": {
+   "confidence (engine coverage)": "medium",
+   "measurements": {
+    "attrition": 0.571,
+    "close": 5.0,
+    "commander": 0.0,
+    "contention": 0.0,
+    "coverage": "12/63",
+    "coverage_share": 0.19,
+    "mana": 0.626,
+    "quality": 1.83,
+    "recover": 0.857,
+    "tokens per turn T4-T8": 0.32,
+    "unopposed lethal by T10": 0.856
+   },
+   "predictions": [
+    {
+     "direction": "weakness",
+     "measure": "recover",
+     "prediction": "after a board wipe, does not rebuild a threatening board within about three turns",
+     "rank": 10,
+     "value": 0.857
+    },
+    {
+     "direction": "weakness",
+     "measure": "quality",
+     "prediction": "its bodies are small; blockers and incidental removal outclass the board",
+     "rank": 11,
+     "value": 1.83
+    }
+   ]
+  },
+  "Limit Break": {
+   "confidence (engine coverage)": "low",
+   "measurements": {
+    "attrition": 0.667,
+    "close": 3.0,
+    "commander": -1.0,
+    "contention": 0.0,
+    "coverage": "4/63",
+    "coverage_share": 0.06,
+    "mana": 0.514,
+    "quality": 3.0,
+    "recover": 1.0,
+    "tokens per turn T4-T8": 1.42,
+    "unopposed lethal by T10": 0.854
+   },
+   "predictions": [
+    {
+     "direction": "strength",
+     "measure": "quality",
+     "prediction": "its bodies outclass ordinary blockers",
+     "rank": 3,
+     "value": 3.0
+    },
+    {
+     "direction": "strength",
+     "measure": "attrition",
+     "prediction": "keeps a board through a wipe and repeated commander removal",
+     "rank": 4,
+     "value": 0.667
+    },
+    {
+     "direction": "strength",
+     "measure": "mana",
+     "prediction": "rarely short of mana in the midgame",
+     "rank": 2,
+     "value": 0.514
+    }
+   ]
+  },
+  "Necrobloom": {
+   "confidence (engine coverage)": "low",
+   "measurements": {
+    "attrition": 0.8,
+    "close": 0.0,
+    "commander": 0.0,
+    "contention": 0.011,
+    "coverage": "4/60",
+    "coverage_share": 0.07,
+    "mana": 0.628,
+    "quality": 1.67,
+    "recover": 1.2,
+    "tokens per turn T4-T8": 0.42,
+    "unopposed lethal by T10": 0.584
+   },
+   "predictions": [
+    {
+     "direction": "weakness",
+     "measure": "close",
+     "prediction": "struggles to close once opponents have blockers; games go long or stall",
+     "rank": 11,
+     "value": 0.0
+    },
+    {
+     "direction": "strength",
+     "measure": "recover",
+     "prediction": "rebuilds quickly after a board wipe",
+     "rank": 3,
+     "value": 1.2
+    },
+    {
+     "direction": "weakness",
+     "measure": "quality",
+     "prediction": "its bodies are small; blockers and incidental removal outclass the board",
+     "rank": 12,
+     "value": 1.67
+    },
+    {
+     "direction": "strength",
+     "measure": "attrition",
+     "prediction": "keeps a board through a wipe and repeated commander removal",
+     "rank": 2,
+     "value": 0.8
+    },
+    {
+     "direction": "weakness",
+     "measure": "mana",
+     "prediction": "mana-limited in the midgame; spells stay in hand",
+     "rank": 9,
+     "value": 0.628
+    }
+   ]
+  },
+  "Rootha": {
+   "confidence (engine coverage)": "medium",
+   "measurements": {
+    "attrition": 0.429,
+    "close": 3.0,
+    "commander": 0.0,
+    "contention": 0.0,
+    "coverage": "10/64",
+    "coverage_share": 0.16,
+    "mana": 0.7,
+    "quality": 2.67,
+    "recover": 1.0,
+    "tokens per turn T4-T8": 0.37,
+    "unopposed lethal by T10": 0.736
+   },
+   "predictions": [
+    {
+     "direction": "strength",
+     "measure": "quality",
+     "prediction": "its bodies outclass ordinary blockers",
+     "rank": 4,
+     "value": 2.67
+    },
+    {
+     "direction": "weakness",
+     "measure": "attrition",
+     "prediction": "a wipe followed by repeated commander removal leaves it without a board",
+     "rank": 9,
+     "value": 0.429
+    },
+    {
+     "direction": "weakness",
+     "measure": "mana",
+     "prediction": "mana-limited in the midgame; spells stay in hand",
+     "rank": 10,
+     "value": 0.7
+    }
+   ]
+  },
+  "Shanid": {
+   "confidence (engine coverage)": "low",
+   "measurements": {
+    "attrition": 0.714,
+    "close": 8.0,
+    "commander": -4.0,
+    "contention": 0.034,
+    "coverage": "8/64",
+    "coverage_share": 0.12,
+    "mana": 0.571,
+    "quality": 2.67,
+    "recover": 1.143,
+    "tokens per turn T4-T8": 0.06,
+    "unopposed lethal by T10": 0.844
+   },
+   "predictions": [
+    {
+     "direction": "strength",
+     "measure": "close",
+     "prediction": "pressures life totals through blockers",
+     "rank": 4,
+     "value": 8.0
+    },
+    {
+     "direction": "strength",
+     "measure": "recover",
+     "prediction": "rebuilds quickly after a board wipe",
+     "rank": 4,
+     "value": 1.143
+    },
+    {
+     "direction": "weakness",
+     "measure": "commander",
+     "prediction": "repeated commander removal hurts badly; the deck runs through its commander",
+     "rank": 9,
+     "value": -4.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "contention",
+     "prediction": "several cards compete for the same bodies; spends creatures on costs instead of attacks",
+     "rank": 10,
+     "value": 0.034
+    },
+    {
+     "direction": "strength",
+     "measure": "quality",
+     "prediction": "its bodies outclass ordinary blockers",
+     "rank": 4,
+     "value": 2.67
+    },
+    {
+     "direction": "strength",
+     "measure": "attrition",
+     "prediction": "keeps a board through a wipe and repeated commander removal",
+     "rank": 3,
+     "value": 0.714
+    }
+   ]
+  },
+  "Sharuum": {
+   "confidence (engine coverage)": "medium",
+   "measurements": {
+    "attrition": 0.857,
+    "close": 12.0,
+    "commander": -7.0,
+    "contention": 0.144,
+    "coverage": "20/63",
+    "coverage_share": 0.32,
+    "mana": 0.763,
+    "quality": 3.25,
+    "recover": 1.286,
+    "tokens per turn T4-T8": 0.18,
+    "unopposed lethal by T10": 0.736
+   },
+   "predictions": [
+    {
+     "direction": "strength",
+     "measure": "close",
+     "prediction": "pressures life totals through blockers",
+     "rank": 3,
+     "value": 12.0
+    },
+    {
+     "direction": "strength",
+     "measure": "recover",
+     "prediction": "rebuilds quickly after a board wipe",
+     "rank": 1,
+     "value": 1.286
+    },
+    {
+     "direction": "weakness",
+     "measure": "commander",
+     "prediction": "repeated commander removal hurts badly; the deck runs through its commander",
+     "rank": 10,
+     "value": -7.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "contention",
+     "prediction": "several cards compete for the same bodies; spends creatures on costs instead of attacks",
+     "rank": 11,
+     "value": 0.144
+    },
+    {
+     "direction": "strength",
+     "measure": "quality",
+     "prediction": "its bodies outclass ordinary blockers",
+     "rank": 1,
+     "value": 3.25
+    },
+    {
+     "direction": "strength",
+     "measure": "attrition",
+     "prediction": "keeps a board through a wipe and repeated commander removal",
+     "rank": 1,
+     "value": 0.857
+    },
+    {
+     "direction": "weakness",
+     "measure": "mana",
+     "prediction": "mana-limited in the midgame; spells stay in hand",
+     "rank": 11,
+     "value": 0.763
+    }
+   ]
+  },
+  "TMNT": {
+   "confidence (engine coverage)": "medium",
+   "measurements": {
+    "attrition": 0.273,
+    "close": 13.0,
+    "commander": -8.0,
+    "contention": 0.0,
+    "coverage": "12/61",
+    "coverage_share": 0.2,
+    "mana": 0.565,
+    "quality": 2.5,
+    "recover": 0.636,
+    "tokens per turn T4-T8": 0.28,
+    "unopposed lethal by T10": 0.956
+   },
+   "predictions": [
+    {
+     "direction": "strength",
+     "measure": "close",
+     "prediction": "pressures life totals through blockers",
+     "rank": 2,
+     "value": 13.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "recover",
+     "prediction": "after a board wipe, does not rebuild a threatening board within about three turns",
+     "rank": 12,
+     "value": 0.636
+    },
+    {
+     "direction": "weakness",
+     "measure": "commander",
+     "prediction": "repeated commander removal hurts badly; the deck runs through its commander",
+     "rank": 11,
+     "value": -8.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "attrition",
+     "prediction": "a wipe followed by repeated commander removal leaves it without a board",
+     "rank": 12,
+     "value": 0.273
+    },
+    {
+     "direction": "strength",
+     "measure": "mana",
+     "prediction": "rarely short of mana in the midgame",
+     "rank": 4,
+     "value": 0.565
+    }
+   ]
+  },
+  "Vraska": {
+   "confidence (engine coverage)": "higher",
+   "measurements": {
+    "attrition": 0.4,
+    "close": 27.0,
+    "commander": -17.0,
+    "contention": 0.176,
+    "coverage": "31/64",
+    "coverage_share": 0.48,
+    "mana": 0.359,
+    "quality": 1.89,
+    "recover": 0.9,
+    "tokens per turn T4-T8": 2.21,
+    "unopposed lethal by T10": 0.938
+   },
+   "predictions": [
+    {
+     "direction": "strength",
+     "measure": "close",
+     "prediction": "pressures life totals through blockers",
+     "rank": 1,
+     "value": 27.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "commander",
+     "prediction": "repeated commander removal hurts badly; the deck runs through its commander",
+     "rank": 12,
+     "value": -17.0
+    },
+    {
+     "direction": "weakness",
+     "measure": "contention",
+     "prediction": "several cards compete for the same bodies; spends creatures on costs instead of attacks",
+     "rank": 12,
+     "value": 0.176
+    },
+    {
+     "direction": "weakness",
+     "measure": "quality",
+     "prediction": "its bodies are small; blockers and incidental removal outclass the board",
+     "rank": 10,
+     "value": 1.89
+    },
+    {
+     "direction": "weakness",
+     "measure": "attrition",
+     "prediction": "a wipe followed by repeated commander removal leaves it without a board",
+     "rank": 11,
+     "value": 0.4
+    },
+    {
+     "direction": "strength",
+     "measure": "mana",
+     "prediction": "rarely short of mana in the midgame",
+     "rank": 1,
+     "value": 0.359
+    }
+   ]
+  }
+ },
+ "engine_games": 500,
+ "excluded_from_scoring": {
+  "Vraska": "its observed loss was used to design the checks"
+ },
+ "export_sha256": "828a8970b4598e28accd2ff52c94b6e7c5580044b2d7ba8d734eb436b7dd7e3c",
+ "frozen_utc": "2026-10-20T16:09:35Z",
+ "labels": {
+  "observed outcome": "what happened in a real game, supplied by Zach after this file was frozen",
+  "post-hoc hypothesis": "any explanation written after an outcome is known; never scored as a prediction",
+  "pre-game model inference": "every prediction in this file; made from the decklist and the engine before any outcome"
+ },
+ "measures": {
+  "attrition": "board power 3 turns after a T6 wipe followed by three more commander removals, as a share of power before",
+  "close": "median damage by T10 against light blockers",
+  "commander": "median paired change in damage by T10 without the commander (negative = depends on it)",
+  "contention": "share of turns T5-T8 where bodies were spent before combat or a station waited for bodies",
+  "mana": "share of turns T6-T8 with spells waiting for mana",
+  "quality": "median power per body at the end of T8 (added after hearing the Vraska account)",
+  "recover": "board power 3 turns after a T6 destroy wipe, as a share of power before"
+ },
+ "rule": "bottom third (ranks 9-12 of 12) predicts the weakness; top third (ranks 1-4) predicts the strength; ties share the better rank; a measure on which 4 or more decks share the same value makes no prediction for those decks (it does not separate them)",
+ "seed": 20261018,
+ "version": "0.3.0"
+}

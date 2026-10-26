@@ -1,0 +1,12 @@
+{
+  "release": "mtg-portable-db-v0.1",
+  "built_utc": "2026-10-20T20:16:13.672481+00:00",
+  "database_bytes": 33042432,
+  "database_sha256": "99d6c59fa5c71b760951e4c6220808bc38172e9bb8dc94d3a3e70663c18a0d0d",
+  "source_sha256": "d8dc04b5fe274714dc0f8f783238e303c5826840873a3f07d2adcd1281bc81f4",
+  "source_canonical_sheet_id": "1wv-uSSSlTIRAJp5qInwq0oppGUOX49_D2ni3vAnESxU",
+  "source_last_modified_utc_as_reported_by_drive": "2026-10-15T19:03:42.774Z",
+  "corpus_is_verified": false,
+  "candidate_operation_verified_count": 0,
+  "archive_policy": "archives are recovery only; source workbook not modified"
+}

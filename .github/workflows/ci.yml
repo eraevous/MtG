@@ -1,0 +1,30 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: AEC drift check
+        run: |
+          BASE=${{ github.event.pull_request.base.sha || github.event.before }}
+          if git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            python3 tools/drift_check.py --base "$BASE"
+          else
+            python3 tools/drift_check.py
+          fi
+      - name: Drift check tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Grammar layer unit tests
+        working-directory: grammar
+        run: python3 -m unittest tests.py -v
+      # KB suite needs the release databases (data/README.md, challenge C-006).

@@ -1,0 +1,1900 @@
+{
+"set": {
+"code": "eoc",
+"name": "Edge of Eternities Commander",
+"set_type": "commander",
+"released_at": "2025-08-01",
+"card_count": 191,
+"parent_set_code": "eoe"
+},
+"retrieved_utc": "2026-10-22T03:34:06Z",
+"members": [
+{
+"oracle_id": "8d6f82d9-5c5b-4c41-8857-c0936f2d894c",
+"name": "Hearthhull, the Worldseed",
+"collector_number": "1",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "554df866-3dbb-4811-8573-6033481591aa",
+"name": "Inspirit, Flagship Vessel",
+"collector_number": "2",
+"rarity": "mythic",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7a884166-de5a-43ba-8855-4999f39f2059",
+"name": "Kilo, Apogee Mind",
+"collector_number": "3",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Robot Artificer",
+"keywords": [
+"Haste",
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1f3c3365-7dc8-47e1-b304-2a09aa229292",
+"name": "Szarel, Genesis Shepherd",
+"collector_number": "4",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Insect Druid",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aa44171d-1c76-40a7-82fc-5ef2abbca647",
+"name": "Patrolling Peacemaker",
+"collector_number": "5",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "83409a22-10de-4d51-90a3-e0579ca8cbea",
+"name": "Insight Engine",
+"collector_number": "6",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e1c9783a-1d1b-40d7-872e-0ca11b229ce6",
+"name": "Uthros Research Craft",
+"collector_number": "7",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "72a570a2-0a22-4680-ac88-a1724faf17de",
+"name": "Eumidian Wastewaker",
+"collector_number": "8",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Cleric",
+"keywords": [
+"Encore"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "23bf0648-7097-41df-a539-1d36ac42cf9c",
+"name": "Depthshaker Titan",
+"collector_number": "9",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "795bc0b0-4b0a-49d6-ac8e-a52a10a93be8",
+"name": "Evendo Brushrazer",
+"collector_number": "10",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Warrior",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "358297cd-4a9f-48e2-aaa5-131b0849f8dc",
+"name": "Long-Range Sensor",
+"collector_number": "11",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Discover"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1d45f248-5b83-4377-a3ba-4eae48e63ca1",
+"name": "Planetary Annihilation",
+"collector_number": "12",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dba3dcc1-2177-4a8c-8cf3-7d4fb83c7a16",
+"name": "Baloth Prime",
+"collector_number": "13",
+"rarity": "rare",
+"type_line": "Creature \u2014 Beast",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8a83ecee-092b-456c-803f-a9aaa17c4da9",
+"name": "Exploration Broodship",
+"collector_number": "14",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e8d20361-d9b7-4f9c-8ec5-3ac7c460dcb2",
+"name": "Horizon Explorer",
+"collector_number": "15",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aa64f830-b9b6-4d5e-9a5d-f9e120089335",
+"name": "Scouring Swarm",
+"collector_number": "16",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3fe9367b-def1-4820-9e23-92ce3d7a4afc",
+"name": "Moxite Refinery",
+"collector_number": "17",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e8e2f273-5e74-4f16-8d49-2e86e9c9f2dc",
+"name": "Solar Array",
+"collector_number": "18",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dc11d9dc-7d18-45dc-955b-d0ba71fc0db8",
+"name": "Surge Conductor",
+"collector_number": "19",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5b6d933e-2830-4f5a-b244-a421aa9615dc",
+"name": "Eumidian Hatchery",
+"collector_number": "20",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bdb9b2ce-342c-4935-8943-d0c3971b1e38",
+"name": "Festering Thicket",
+"collector_number": "21",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Forest",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "23732d20-aba6-46cc-89d0-0542629bc6b5",
+"name": "Glittering Massif",
+"collector_number": "22",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5dd0cc44-4647-4857-ad3b-22494099d08a",
+"name": "Radiant Summit",
+"collector_number": "23",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "40544d12-0391-4a61-af95-9b8ec01ed8fc",
+"name": "Vernal Fen",
+"collector_number": "24",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aa44171d-1c76-40a7-82fc-5ef2abbca647",
+"name": "Patrolling Peacemaker",
+"collector_number": "25",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot Soldier",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "83409a22-10de-4d51-90a3-e0579ca8cbea",
+"name": "Insight Engine",
+"collector_number": "26",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e1c9783a-1d1b-40d7-872e-0ca11b229ce6",
+"name": "Uthros Research Craft",
+"collector_number": "27",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "72a570a2-0a22-4680-ac88-a1724faf17de",
+"name": "Eumidian Wastewaker",
+"collector_number": "28",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Cleric",
+"keywords": [
+"Encore"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "23bf0648-7097-41df-a539-1d36ac42cf9c",
+"name": "Depthshaker Titan",
+"collector_number": "29",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "795bc0b0-4b0a-49d6-ac8e-a52a10a93be8",
+"name": "Evendo Brushrazer",
+"collector_number": "30",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Warrior",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "358297cd-4a9f-48e2-aaa5-131b0849f8dc",
+"name": "Long-Range Sensor",
+"collector_number": "31",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Discover"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1d45f248-5b83-4377-a3ba-4eae48e63ca1",
+"name": "Planetary Annihilation",
+"collector_number": "32",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dba3dcc1-2177-4a8c-8cf3-7d4fb83c7a16",
+"name": "Baloth Prime",
+"collector_number": "33",
+"rarity": "rare",
+"type_line": "Creature \u2014 Beast",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8a83ecee-092b-456c-803f-a9aaa17c4da9",
+"name": "Exploration Broodship",
+"collector_number": "34",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Spacecraft",
+"keywords": [
+"Station"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e8d20361-d9b7-4f9c-8ec5-3ac7c460dcb2",
+"name": "Horizon Explorer",
+"collector_number": "35",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect Scout",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "aa64f830-b9b6-4d5e-9a5d-f9e120089335",
+"name": "Scouring Swarm",
+"collector_number": "36",
+"rarity": "rare",
+"type_line": "Creature \u2014 Insect",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3fe9367b-def1-4820-9e23-92ce3d7a4afc",
+"name": "Moxite Refinery",
+"collector_number": "37",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e8e2f273-5e74-4f16-8d49-2e86e9c9f2dc",
+"name": "Solar Array",
+"collector_number": "38",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dc11d9dc-7d18-45dc-955b-d0ba71fc0db8",
+"name": "Surge Conductor",
+"collector_number": "39",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Robot",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5b6d933e-2830-4f5a-b244-a421aa9615dc",
+"name": "Eumidian Hatchery",
+"collector_number": "40",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bdb9b2ce-342c-4935-8943-d0c3971b1e38",
+"name": "Festering Thicket",
+"collector_number": "41",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Forest",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "23732d20-aba6-46cc-89d0-0542629bc6b5",
+"name": "Glittering Massif",
+"collector_number": "42",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5dd0cc44-4647-4857-ad3b-22494099d08a",
+"name": "Radiant Summit",
+"collector_number": "43",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Plains",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "40544d12-0391-4a61-af95-9b8ec01ed8fc",
+"name": "Vernal Fen",
+"collector_number": "44",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+"name": "Swords to Plowshares",
+"collector_number": "45",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8ddfc283-c9b4-41a5-af88-cf0068e986cc",
+"name": "Swan Song",
+"collector_number": "46",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b33d2b77-f068-4fdc-a1a8-0353a35e3973",
+"name": "Tezzeret's Gambit",
+"collector_number": "47",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "939e6f71-185e-41f2-9d54-72cce06f1dce",
+"name": "Thirst for Knowledge",
+"collector_number": "48",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "07a0cba9-8768-4fd9-a3d5-b0f83b4bf8e8",
+"name": "Chaos Warp",
+"collector_number": "49",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "495e52e6-4c2b-4574-9474-eadbdcc8b4ac",
+"name": "Farseek",
+"collector_number": "50",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "788a4896-3414-40bf-b391-d2efea2fb5f9",
+"name": "Springbloom Druid",
+"collector_number": "51",
+"rarity": "common",
+"type_line": "Creature \u2014 Elf Druid",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4050e5b3-07c2-461c-9852-a2c081c0198d",
+"name": "Binding the Old Gods",
+"collector_number": "52",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+"name": "Arcane Signet",
+"collector_number": "53",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2a838818-d590-4374-9a63-d9e6381a0f0d",
+"name": "Cloud Key",
+"collector_number": "54",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "204a5616-9f19-4d4c-aeb0-d1ec486b9ace",
+"name": "Gavel of the Righteous",
+"collector_number": "55",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "72e8d67a-41e6-4074-bcbd-b54ead995237",
+"name": "Pentad Prism",
+"collector_number": "56",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [
+"Sunburst"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+"name": "Sol Ring",
+"collector_number": "57",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6b75b94e-83b7-457e-ac41-7ca90b5a59aa",
+"name": "Battlefield Forge",
+"collector_number": "58",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+"name": "Command Tower",
+"collector_number": "59",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+"name": "Fabled Passage",
+"collector_number": "60",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0b7393aa-d563-45bc-9946-8e7d1729d498",
+"name": "Mountain Valley",
+"collector_number": "61",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1bd3e453-aa21-4ee6-95c2-d6d920ee8e7a",
+"name": "Terramorphic Expanse",
+"collector_number": "62",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "14878a5f-7983-4133-a1a7-9d539531e092",
+"name": "Angel of the Ruins",
+"collector_number": "63",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Angel",
+"keywords": [
+"Flying",
+"Plainscycling",
+"Landcycling",
+"Typecycling",
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "133c99c0-3652-410f-8100-68015a47af9f",
+"name": "Dispatch",
+"collector_number": "64",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [
+"Metalcraft"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b17ea905-0696-4e58-b564-557e87236e27",
+"name": "Fumigate",
+"collector_number": "65",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d9e24d7c-0907-45c1-b5d3-9fb16a929868",
+"name": "Organic Extinction",
+"collector_number": "66",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Improvise"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "83e78565-e61f-4bbc-b834-f47941f7e3ec",
+"name": "Resourceful Defense",
+"collector_number": "67",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "837c5d0e-0a33-4f9d-ae25-68a687bdf640",
+"name": "Chrome Host Seedshark",
+"collector_number": "68",
+"rarity": "rare",
+"type_line": "Creature \u2014 Phyrexian Shark",
+"keywords": [
+"Flying",
+"Incubate",
+"Transform"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "126a5d0b-e7d6-458e-87af-47d845678014",
+"name": "Cyberdrive Awakener",
+"collector_number": "69",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "debce64a-18bd-42f5-9e85-158c2242e9e9",
+"name": "Deepglow Skate",
+"collector_number": "70",
+"rarity": "rare",
+"type_line": "Creature \u2014 Fish",
+"keywords": [
+"Double"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "da3e7d3d-2ca0-40c3-9602-fca37c92f507",
+"name": "Emry, Lurker of the Loch",
+"collector_number": "71",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Merfolk Wizard",
+"keywords": [
+"Affinity",
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "96b87445-6362-4a17-91b2-cbf203fd03fd",
+"name": "Etherium Sculptor",
+"collector_number": "72",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Vedalken Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2ee08dcd-5558-45be-b619-8a550f3865ad",
+"name": "Experimental Augury",
+"collector_number": "73",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7fffbe7f-ad78-4bb6-a611-c37e495c6ee0",
+"name": "Kappa Cannoneer",
+"collector_number": "74",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Turtle Warrior",
+"keywords": [
+"Improvise",
+"Ward"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "340bbe8b-e987-4c3e-ab4e-9dee63e57d4f",
+"name": "Phyrexian Metamorph",
+"collector_number": "75",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Phyrexian Shapeshifter",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b1a23235-3076-475c-a68a-db29cf2a9dba",
+"name": "Pull from Tomorrow",
+"collector_number": "76",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "45bcebd0-5e93-4433-b92f-b4c161d04bd6",
+"name": "Ripples of Potential",
+"collector_number": "77",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4716ab91-30e6-4c63-8389-a9db8f9414d8",
+"name": "Tekuthal, Inquiry Dominus",
+"collector_number": "78",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Phyrexian Horror",
+"keywords": [
+"Flying",
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9deded8b-cec4-4ede-a50b-131404d456d4",
+"name": "Thought Monitor",
+"collector_number": "79",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [
+"Flying",
+"Affinity"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "eac94269-4baa-4b8e-a0fd-d6b227d1cde3",
+"name": "Thrummingbird",
+"collector_number": "80",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Phyrexian Bird Horror",
+"keywords": [
+"Flying",
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c5a5c17d-d1e4-4d23-9d2b-1c2febdcb0e7",
+"name": "Universal Surveillance",
+"collector_number": "81",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Improvise"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e0445c80-fa53-4c3e-881e-940e9fce7f57",
+"name": "Braids, Arisen Nightmare",
+"collector_number": "82",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Nightmare",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "183891b0-b5ec-47f4-8d09-b9d3cfc4e7f1",
+"name": "God-Eternal Bontu",
+"collector_number": "83",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Zombie God",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "94f0a572-e91c-4b56-a5d1-6cbbeabd210d",
+"name": "Infernal Grasp",
+"collector_number": "84",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7ffae8f8-3006-4969-a339-6d30678f87ea",
+"name": "Night's Whisper",
+"collector_number": "85",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7a2484a9-04fd-41a0-8224-610c1c07ed10",
+"name": "Blasphemous Act",
+"collector_number": "86",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "086b2564-9114-4ba2-94fd-b490f98f38a7",
+"name": "Chain Reaction",
+"collector_number": "87",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "212d058b-69c6-4dc2-8c93-bdfe26dc2ffe",
+"name": "Hammer of Purphoros",
+"collector_number": "88",
+"rarity": "rare",
+"type_line": "Legendary Enchantment Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6288c0cb-cf32-4ae9-abf0-104ec71654fa",
+"name": "Moraug, Fury of Akoum",
+"collector_number": "89",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Minotaur Warrior",
+"keywords": [
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b0871e12-b156-4fa6-b01c-acaae222b3a5",
+"name": "Sprouting Goblin",
+"collector_number": "90",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Goblin Druid",
+"keywords": [
+"Kicker"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "374e54d8-8e73-4268-9dde-c28c77bbbf32",
+"name": "Aftermath Analyst",
+"collector_number": "91",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Elf Detective",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9e774188-caa1-4b62-b9cc-547f8e444b7f",
+"name": "Augur of Autumn",
+"collector_number": "92",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Druid",
+"keywords": [
+"Coven"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7735eeba-693b-47e2-bd51-414379cf1016",
+"name": "Beast Within",
+"collector_number": "93",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "90629e9c-83c0-4eca-b4ed-d0494ded6704",
+"name": "Centaur Vinecrasher",
+"collector_number": "94",
+"rarity": "rare",
+"type_line": "Creature \u2014 Plant Centaur",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8b755881-a72d-4e21-a369-d2924eb4585a",
+"name": "Cultivate",
+"collector_number": "95",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b978bdfe-a73e-4e99-90d7-4f99182c45ee",
+"name": "Formless Genesis",
+"collector_number": "96",
+"rarity": "rare",
+"type_line": "Kindred Sorcery \u2014 Shapeshifter",
+"keywords": [
+"Retrace",
+"Changeling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f2c19fba-9b06-461f-bb5e-e827ba41204d",
+"name": "Groundskeeper",
+"collector_number": "97",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Druid",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "705509e9-a034-4a5a-9c65-66f58748b8a2",
+"name": "Harrow",
+"collector_number": "98",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2fbfdbcc-5f89-47b2-bd8d-49c797e0624f",
+"name": "Loamcrafter Faun",
+"collector_number": "99",
+"rarity": "rare",
+"type_line": "Creature \u2014 Satyr Druid",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4b8bf64b-4800-45ff-81c6-2857f34999b5",
+"name": "Multani, Yavimaya's Avatar",
+"collector_number": "100",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Elemental Avatar",
+"keywords": [
+"Reach",
+"Trample"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "78826359-fe63-44ad-adc4-a17ffcd710e4",
+"name": "Nature's Lore",
+"collector_number": "101",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6c5b02eb-7829-436a-8555-fea200e4b67f",
+"name": "Oracle of Mul Daya",
+"collector_number": "102",
+"rarity": "rare",
+"type_line": "Creature \u2014 Elf Shaman",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1b704798-0c69-4c18-ac7e-42933ce90028",
+"name": "Pest Infestation",
+"collector_number": "103",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2d3e6549-6cc6-434f-a189-ba3b55e64c34",
+"name": "Rampaging Baloths",
+"collector_number": "104",
+"rarity": "rare",
+"type_line": "Creature \u2014 Beast",
+"keywords": [
+"Trample",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "65d63518-3261-40b5-87b8-19c152b29ee3",
+"name": "Roiling Regrowth",
+"collector_number": "105",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ead4c01a-e2ae-49c9-95d9-651d81005907",
+"name": "Satyr Wayfinder",
+"collector_number": "106",
+"rarity": "common",
+"type_line": "Creature \u2014 Satyr",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "376c9d3f-21d3-4251-bb6a-026fa9e1b0e1",
+"name": "Skyshroud Claim",
+"collector_number": "107",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "13fe5e46-77a6-45d8-ac0b-c3d740eccf86",
+"name": "Splendid Reclamation",
+"collector_number": "108",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "610af0f7-b5e3-43fb-9d02-7c59bd99034c",
+"name": "Tear Asunder",
+"collector_number": "109",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [
+"Kicker"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e6555cca-e608-4c87-b835-9cd47fd1f543",
+"name": "Tireless Tracker",
+"collector_number": "110",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Scout",
+"keywords": [
+"Investigate",
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d0ade00d-a496-441d-9b7e-7dc033d3292c",
+"name": "Titania, Protector of Argoth",
+"collector_number": "111",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Elemental",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "deeb7e22-b207-42de-b9d4-f790403d52a9",
+"name": "World Breaker",
+"collector_number": "112",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Eldrazi",
+"keywords": [
+"Reach",
+"Devoid"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e5e8e116-10fe-48b0-b3d8-6edb39bd5f90",
+"name": "Alibou, Ancient Witness",
+"collector_number": "113",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Golem",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c9722086-23e8-43dc-8a8c-541ff6962318",
+"name": "Enthusiastic Mechanaut",
+"collector_number": "114",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Goblin Artificer",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "45a8c126-5396-4736-a37e-460a50706a98",
+"name": "Escape to the Wilds",
+"collector_number": "115",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "103d9ad0-d655-4bd5-a899-e9f8869e333d",
+"name": "Gaze of Granite",
+"collector_number": "116",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a5e54d2b-aad8-4ddd-af4b-13668913762b",
+"name": "The Gitrog Monster",
+"collector_number": "117",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Frog Horror",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "c803b788-4213-4fab-b841-7e5bbf66088e",
+"name": "Jhoira, Weatherlight Captain",
+"collector_number": "118",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Artificer",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3364bad6-6d0a-4141-b410-86e3d9e1916e",
+"name": "Juri, Master of the Revue",
+"collector_number": "119",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Shaman",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9ae669dd-7e60-4649-b96e-35da28be641a",
+"name": "Korvold, Fae-Cursed King",
+"collector_number": "120",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Dragon Noble",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "4709f11c-aef8-45ac-b2bf-e640c568dfac",
+"name": "Mayhem Devil",
+"collector_number": "121",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Devil",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e0420f2c-d578-421e-ae75-e7dc5f70661a",
+"name": "Mazirek, Kraul Death Priest",
+"collector_number": "122",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Insect Shaman",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1816eede-c5bd-49df-958f-a3af64cb2932",
+"name": "Omnath, Locus of Rage",
+"collector_number": "123",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Elemental",
+"keywords": [
+"Landfall"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9b271430-f53d-42d6-a547-2f286dd9bcb6",
+"name": "Putrefy",
+"collector_number": "124",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5e62b51d-faec-4aa0-9504-cf2c282d08ea",
+"name": "Rakdos Charm",
+"collector_number": "125",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2d73a3bd-f052-4f48-9a72-12db03e27249",
+"name": "Soul of Windgrace",
+"collector_number": "126",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Cat Avatar",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0191a93a-f304-4c20-9af4-7cdea82c07cf",
+"name": "Uurg, Spawn of Turg",
+"collector_number": "127",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Frog Beast",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "34143cfa-aa48-481c-af42-1240af174b80",
+"name": "Wake the Past",
+"collector_number": "128",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "de1ca6ed-b275-4f62-ba05-f31b3659b352",
+"name": "Windgrace's Judgment",
+"collector_number": "129",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3b6ef144-bb98-4686-9718-204f1c3cf020",
+"name": "Worldsoul's Rage",
+"collector_number": "130",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1bc42024-52da-4d93-8b47-544f0a4a72a1",
+"name": "Astral Cornucopia",
+"collector_number": "131",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "66e37011-f3d2-41ed-8e09-7bba9464e8c3",
+"name": "Coretapper",
+"collector_number": "132",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Myr",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5ea3e672-ae14-49a4-badb-f713497dd126",
+"name": "Crystalline Crawler",
+"collector_number": "133",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [
+"Converge"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bc483bab-14fb-498d-9310-9c070766c7ae",
+"name": "Darksteel Reactor",
+"collector_number": "134",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6832f9e2-294a-44a2-8af9-eb16ccfdfc36",
+"name": "Empowered Autogenerator",
+"collector_number": "135",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "7ecfa47e-1165-46a6-884c-290b1c14d020",
+"name": "Etched Oracle",
+"collector_number": "136",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Wizard",
+"keywords": [
+"Sunburst"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0a79237e-0811-4a8a-bd4d-db3ca91bff22",
+"name": "Everflowing Chalice",
+"collector_number": "137",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [
+"Multikicker"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8e96c09f-c064-4dd8-85ee-0f48d86ab670",
+"name": "Golem Foundry",
+"collector_number": "138",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dde55256-5259-44e7-a267-fca45a7f0d04",
+"name": "Hangarback Walker",
+"collector_number": "139",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cbd76b22-d04e-48e7-bcab-c7f5466d67d8",
+"name": "Lux Artillery",
+"collector_number": "140",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "ebdf26a4-77ee-4635-8d52-926bdca623f7",
+"name": "Lux Cannon",
+"collector_number": "141",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "e7441107-57b1-4e88-a9d8-3eb7c338ef07",
+"name": "Mindless Automaton",
+"collector_number": "142",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "1b5e6560-ff2e-4475-96cb-63f64c8a86db",
+"name": "Soul-Guide Lantern",
+"collector_number": "143",
+"rarity": "uncommon",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "986ae327-f433-4c58-93dc-afc544b9bfcb",
+"name": "Steel Overseer",
+"collector_number": "144",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "b8020a8b-557b-465d-865d-b59fecd7abc1",
+"name": "Threefold Thunderhulk",
+"collector_number": "145",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Gnome",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3b02dfca-bcaa-4e22-b143-401ed250d016",
+"name": "Titan Forge",
+"collector_number": "146",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d5ad26cc-2bdb-46b7-b8bf-dd099d5fa09b",
+"name": "Adarkar Wastes",
+"collector_number": "147",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "02f16726-f2f6-4943-b71a-93f8e26251d3",
+"name": "Ancient Den",
+"collector_number": "148",
+"rarity": "common",
+"type_line": "Artifact Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "04b7362d-0490-4cb0-b5d7-2a7732f659ce",
+"name": "Bojuka Bog",
+"collector_number": "149",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "3644f316-f9a3-46c9-9b1e-747f86cf4ead",
+"name": "Buried Ruin",
+"collector_number": "150",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "65424bea-fd53-4f85-9757-0b91a6d40ba4",
+"name": "Cabaretti Courtyard",
+"collector_number": "151",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2031b17c-0536-446f-a9aa-b46fe79b7ea7",
+"name": "Canyon Slough",
+"collector_number": "152",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Mountain",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f1603384-4361-49c9-98aa-7785fc3504c4",
+"name": "Cascade Bluffs",
+"collector_number": "153",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "dfac0258-e148-4d7d-8ded-fc2466d9caa6",
+"name": "Cinder Glade",
+"collector_number": "154",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Forest",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "d7faa3c8-46cf-46b2-bfa4-89000307cf18",
+"name": "Clifftop Retreat",
+"collector_number": "155",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "cdc4048a-73ec-4ec1-a179-2b36c397bf1a",
+"name": "Dakmor Salvage",
+"collector_number": "156",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [
+"Dredge",
+"Mill"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0056fc91-4398-471c-b561-7ff99750ac8a",
+"name": "Escape Tunnel",
+"collector_number": "157",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a75445d3-1303-4bb5-89ad-26ea93fecd48",
+"name": "Evolving Wilds",
+"collector_number": "158",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "27b047e3-0d41-45e2-98e9-9391d7923a1e",
+"name": "Exotic Orchard",
+"collector_number": "159",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "027dd013-baa7-4111-b3c9-f4d1414e9c45",
+"name": "Glacial Fortress",
+"collector_number": "160",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f4819061-b0b5-48ab-af7b-6525c3d2eab7",
+"name": "Great Furnace",
+"collector_number": "161",
+"rarity": "common",
+"type_line": "Artifact Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "406eabe2-df62-49e2-bb39-c0227509d875",
+"name": "Irrigated Farmland",
+"collector_number": "162",
+"rarity": "rare",
+"type_line": "Land \u2014 Plains Island",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9fb8cd81-403a-4988-8f1c-b8eccf8abd9c",
+"name": "Karn's Bastion",
+"collector_number": "163",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [
+"Proliferate"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "bd912666-f37f-4767-af6f-9e6d0fcccacf",
+"name": "Karplusan Forest",
+"collector_number": "164",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "32116127-cf96-4a1b-8896-a1ebc087b597",
+"name": "Llanowar Wastes",
+"collector_number": "165",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "765863c8-1be0-4bb1-9e9c-db7701cffde3",
+"name": "Lonely Sandbar",
+"collector_number": "166",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "9464ddf2-4bcb-44f6-b945-89a132544de6",
+"name": "Maestros Theater",
+"collector_number": "167",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "03f5c566-825c-4c46-9c01-a2f9b1e70a13",
+"name": "The Mycosynth Gardens",
+"collector_number": "168",
+"rarity": "rare",
+"type_line": "Land \u2014 Sphere",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "2549bc57-9ffb-4053-9f10-f2a5f792b845",
+"name": "Myriad Landscape",
+"collector_number": "169",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "834b8f71-9a45-42ae-9e99-e749fa6fb45e",
+"name": "Mystic Monastery",
+"collector_number": "170",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6cb37ac1-dd11-4a8c-bca5-ef44d828059f",
+"name": "Razortide Bridge",
+"collector_number": "171",
+"rarity": "common",
+"type_line": "Artifact Land",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "5548ff43-e5f6-4a63-8562-a2b1de06d6f5",
+"name": "Riveteers Overlook",
+"collector_number": "172",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8709b5b1-ef9e-45b2-bf4f-ef4c4d613dcd",
+"name": "Rocky Tar Pit",
+"collector_number": "173",
+"rarity": "uncommon",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8e7641e1-e814-4d5a-9cb3-71ad2f4ceee8",
+"name": "Rugged Prairie",
+"collector_number": "174",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "a3faf70d-c034-4692-9e92-1922029e3852",
+"name": "Rustvale Bridge",
+"collector_number": "175",
+"rarity": "common",
+"type_line": "Artifact Land",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "39451b4d-cd7a-40da-b457-cb51b609173f",
+"name": "Seat of the Synod",
+"collector_number": "176",
+"rarity": "common",
+"type_line": "Artifact Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "8dec6fcf-1254-4b1b-ba23-7a3e492a7241",
+"name": "Secluded Steppe",
+"collector_number": "177",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "db8d8643-3d0b-4f20-bf53-f4cd26a0e8df",
+"name": "Sheltered Thicket",
+"collector_number": "178",
+"rarity": "rare",
+"type_line": "Land \u2014 Mountain Forest",
+"keywords": [
+"Cycling"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "0fe16212-66c3-4e45-a641-7391e9b2e304",
+"name": "Shivan Reef",
+"collector_number": "179",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "081bfd50-a436-463b-9d2c-5bc8a32b387c",
+"name": "Silverbluff Bridge",
+"collector_number": "180",
+"rarity": "common",
+"type_line": "Artifact Land",
+"keywords": [
+"Indestructible"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "76f335d0-7f71-4b1a-b60d-73de954cbe2c",
+"name": "Skycloud Expanse",
+"collector_number": "181",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "390f1b56-264e-4336-83be-dc1fe79bfdcf",
+"name": "Smoldering Marsh",
+"collector_number": "182",
+"rarity": "rare",
+"type_line": "Land \u2014 Swamp Mountain",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "55a519b4-61cb-448a-875b-4d6dbe00580f",
+"name": "Spire of Industry",
+"collector_number": "183",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6a6c5e17-6465-4a1f-9d63-8a3ce2edc522",
+"name": "Sulfur Falls",
+"collector_number": "184",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "f5c38c01-4a40-469f-91a0-7479daf4e8e7",
+"name": "Sulfurous Springs",
+"collector_number": "185",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "89f43e27-790b-4ca1-8ba7-0882b31e0783",
+"name": "Temple of Enlightenment",
+"collector_number": "186",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "79f94050-d850-41ca-b1db-5ae0cf743f0a",
+"name": "Temple of Epiphany",
+"collector_number": "187",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6f0d94d9-64bb-4175-83bc-301e8f79f54f",
+"name": "Temple of Triumph",
+"collector_number": "188",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "db623754-e078-4030-ba07-818803c348a8",
+"name": "Twilight Mire",
+"collector_number": "189",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "6bd6d259-1af7-4dff-a79c-48a616d2a36e",
+"name": "Viridescent Bog",
+"collector_number": "190",
+"rarity": "rare",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-08-01"
+},
+{
+"oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+"name": "Wastes",
+"collector_number": "191",
+"rarity": "common",
+"type_line": "Basic Land",
+"keywords": [],
+"released_at": "2025-08-01"
+}
+]
+}
