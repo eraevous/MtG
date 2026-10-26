@@ -4,7 +4,7 @@
 
 @ai-path: project
 @ai-role: project_contract
-@ai-version: 0.1.0
+@ai-version: 0.1.1
 @schema-version: 0.3
 @status: proposed. Pending Zach's review. Wording was reviewed by Kate in the coordination thread, 2026-10-26.
 @change-procedure: Edit only with Zach's explicit approval. Record the change as a decision event in `decisions/decision_events.jsonl`. Earlier wording is kept in Git history and is never rewritten in place.
@@ -57,6 +57,26 @@ Actual ownership and deck allocation, read from the canonical inventory Sheet, a
 
 - **Drift test (fixture F-P05, the positive control):** a recommendation presents an unowned card as available, or mistakes a card's current deck allocation for an ownership restriction.
 
+## P-06: Decision provenance is append-only
+
+Design decisions (card swaps, accepted or rejected theses, criteria changes, scope changes, purpose-contract changes) are recorded as append-only events: who proposed, challenged, corrected, accepted or rejected each one, with the reason and evidence. They are kept separate from KB contract reviews. Events are superseded, never edited.
+
+- **Status: an obligation, partly built.** The store (`decisions/decision_events.jsonl`) and the CI append-only check exist. Nothing yet requires every decision to be logged.
+
+## P-07: Validation modes stay separate
+
+Retrospective reconstruction, observed games and frozen prospective predictions are recorded and scored separately. A good explanation is not a successful prediction. A game scores a prediction only if it exercised the predicted condition, and the deck version and model coverage accompany every comparison.
+
+- **Status: partly built.** The 2026-10-20 predictions are pinned by hash. No scoring tool exists yet.
+
+## P-08: Criteria are versioned and revisable
+
+The system keeps revisions to the questions, objectives and criteria behind decisions, without rewriting earlier judgments. Each criteria version says why it changed and what observation motivated it. A prediction is scored only against the criteria version frozen with it. An approved purpose revision is recorded as a supersession, not flagged as drift.
+
+- **Status: an obligation, not yet built.** `decisions/criteria/` holds only a README so far.
+
+_P-06 to P-08 come from Kate's charter amendments 2 to 4, as formalized by build-project Claude in PR #2, and were reconciled here (C-008)._
+
 ---
 
 ## Authority by subject
@@ -79,10 +99,10 @@ Operational authority (which tool or agent runs or checks a task) belongs to `AG
 
 | Fixture | Contract | How it is checked | State |
 |---|---|---|---|
-| frozen-predictions hash | P-03 | `tools/drift_check.py` (mechanical) | automated |
+| frozen-predictions hash | P-03, P-07 | `tools/drift_check.py` (mechanical) | automated |
 | undeclared semantic authority | P-01 | `tools/drift_check.py` (heuristic: non-owner code reading `oracle_text` without a declared role) | automated (warning) |
 | purpose-file source and dependency sync | structural | `tools/drift_check.py` | automated |
-| append-only ledgers | P-03, decision provenance | `tools/drift_check.py --base <ref>` | automated in CI |
+| append-only ledgers | P-03, P-06 | `tools/drift_check.py --base <ref>` | automated in CI |
 | F-P01 to F-P05 behavioral fixtures | P-01 to P-05 | dissent review plus seeded diffs (see `codex_++/fixtures/README.md`) | specified, not yet automated |
 
 **A passing structural check is not evidence that the purpose survived.** P-04 in particular needs judgment-level review.

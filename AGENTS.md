@@ -4,7 +4,7 @@ These rules apply to Claude Code, Codex or any other coding agent. They implemen
 
 ## Read first, in order of precedence
 
-1. `codex_++/project.purpose.md`: **P-00 to P-05**. If a change would break one, stop and raise it (see Drift below).
+1. `codex_++/project.purpose.md`: **P-00 to P-08**. If a change would break one, stop and raise it (see Drift below).
 2. `CHARTER.md`: engineering rules and how each is enforced.
 3. `docs/charter/`: the proposed product charter, pending review.
 4. `VISION.md` and `docs/handoff/00_CURRENT_STATE.md`: context and current numbers.
@@ -26,7 +26,7 @@ If a spec, plan or task (from Spec Kit or anything else) conflicts with the proj
   - A spec or plan is revised.
   - Something downstream starts deriving what something upstream is supposed to own. (Observed in October 2026: the simulator developed its own card parsing, independent of the ontology and KB.)
   - A large share of tests, effort or code is going into machinery rather than a deck decision Zach will make.
-  - The work would cross a P-contract, or the budget or effort is clearly ballooning.
+  - The work would cross a P-contract (P-01 to P-08), or the budget or effort is clearly ballooning.
 
   Do **not** switch to Drift just because you moved to another module.
 

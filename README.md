@@ -6,7 +6,7 @@ Zach's Magic: The Gathering (Commander) project. It holds the tools that help hi
 
 ## Start here
 
-1. `codex_++/project.purpose.md`: what this project is for (P-00) and the five contracts (P-01 to P-05) that changes must not break.
+1. `codex_++/project.purpose.md`: what this project is for (P-00) and the contracts (P-01 to P-08) that changes must not break.
 2. `docs/handoff/START_HERE.md` and `docs/handoff/00_CURRENT_STATE.md`: what exists, with its numbers and open decisions.
 3. `docs/charter/`: the proposed Deck Behavioral Model charter v0.1, pending Zach's review.
 4. `AGENTS.md`: how AI agents (Claude Code, Codex) work in this repo.

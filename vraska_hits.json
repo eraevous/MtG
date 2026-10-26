@@ -1,0 +1,1512 @@
+{
+ "PROTECT": {
+  "Adept Watershaper": {
+   "where": "free",
+   "text": "Other tapped creatures you control have indestructible.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Merfolk Cleric"
+  },
+  "Aquitect's Defenses": {
+   "where": "free",
+   "text": "When this Aura enters, enchanted creature gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+   "mv": 2.0,
+   "type": "Enchantment \u2014 Aura"
+  },
+  "Bastion Protector": {
+   "where": "allocated:Limit Break",
+   "text": "Commander creatures you control get +2/+2 and have indestructible.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Blacksmith's Skill": {
+   "where": "allocated:Necrobloom",
+   "text": "Target permanent gains hexproof and indestructible until end of turn. If it's an artifact creature, it gets +2/+2 until end of turn.",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "Boromir, Warden of the Tower": {
+   "where": "allocated:Brigid",
+   "text": "Sacrifice Boromir: Creatures you control gain indestructible until end of turn. The Ring tempts you.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Human Soldier"
+  },
+  "Bronze Guardian": {
+   "where": "allocated:Limit Break",
+   "text": "Other artifacts you control have ward {2}.",
+   "mv": 5.0,
+   "type": "Artifact Creature \u2014 Golem"
+  },
+  "Burdened Stoneback": {
+   "where": "free",
+   "text": "{1}{W}, Remove a counter from this creature: Target creature gains indestructible until end of turn. Activate only as a sorcery. (Damage and effects that say \"d",
+   "mv": 2.0,
+   "type": "Creature \u2014 Giant Warrior"
+  },
+  "Chase Inspiration": {
+   "where": "free",
+   "text": "Target creature you control gets +0/+3 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "Clever Concealment": {
+   "where": "allocated:Limit Break",
+   "text": "Any number of target nonland permanents you control phase out. (Treat them and anything attached to them as though they don't exist until your next turn.)",
+   "mv": 4.0,
+   "type": "Instant"
+  },
+  "Cloud, Planet's Champion": {
+   "where": "allocated:Shanid",
+   "text": "During your turn, as long as Cloud is equipped, it has double strike and indestructible. (This creature deals both first-strike and regular combat damage. Damag",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Soldier Mercenary"
+  },
+  "Crumb and Get It": {
+   "where": "free",
+   "text": "Target creature you control gets +2/+2 until end of turn. If the gift was promised, that creature also gains indestructible until end of turn.",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "Curious Colossus": {
+   "where": "free",
+   "text": "When this creature enters, each creature target opponent controls loses all abilities, becomes a Coward in addition to its other types, and has base power and t",
+   "mv": 7.0,
+   "type": "Creature \u2014 Giant Warrior"
+  },
+  "Duty Beyond Death": {
+   "where": "free",
+   "text": "Creatures you control gain indestructible until end of turn. Put a +1/+1 counter on each creature you control. (Damage and effects that say \"destroy\" don't dest",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Earth Kingdom Protectors": {
+   "where": "free",
+   "text": "Sacrifice this creature: Another target Ally you control gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+   "mv": 1.0,
+   "type": "Creature \u2014 Human Soldier Ally"
+  },
+  "Ember Island Production": {
+   "where": "free",
+   "text": "\u2022 Create a token that's a copy of target creature an opponent controls, except it's not legendary and it's a 2/2 Coward in addition to its other types.",
+   "mv": 5.0,
+   "type": "Sorcery"
+  },
+  "Ezrim, Agency Chief": {
+   "where": "free",
+   "text": "{1}, Sacrifice an artifact: Ezrim gains your choice of vigilance, lifelink, or hexproof until end of turn.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Archon Detective"
+  },
+  "Fateshaper Aspirant": {
+   "where": "free",
+   "text": "\u2022 Put a +1/+1 counter on target creature. It gains vigilance and indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it.)",
+   "mv": 5.0,
+   "type": "Creature \u2014 Rhino Cleric"
+  },
+  "Glint": {
+   "where": "free",
+   "text": "Target creature you control gets +0/+3 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Guardian of New Benalia": {
+   "where": "free",
+   "text": "Discard a card: This creature gains indestructible until end of turn. Tap it.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Hardened Escort": {
+   "where": "free",
+   "text": "Whenever this creature attacks, another target creature you control gets +1/+0 and gains indestructible until end of turn. (Damage and effects that say \"destroy",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Illusion Spinners": {
+   "where": "free",
+   "text": "This creature has hexproof as long as it's untapped. (It can't be the target of spells or abilities your opponents control.)",
+   "mv": 5.0,
+   "type": "Creature \u2014 Faerie Wizard"
+  },
+  "Illvoi Light Jammer": {
+   "where": "free",
+   "text": "When this Equipment enters, attach it to target creature you control. That creature gains hexproof until end of turn. (It can't be the target of spells or abili",
+   "mv": 2.0,
+   "type": "Artifact \u2014 Equipment"
+  },
+  "Liliana the Faultless": {
+   "where": "free",
+   "text": "{1}, {T}, Discard a card: Another target creature or planeswalker you control gains hexproof until end of turn.",
+   "mv": 1.0,
+   "type": "Legendary Creature \u2014 Human Cleric"
+  },
+  "Long River Lurker": {
+   "where": "free",
+   "text": "Other Frogs you control have ward {1}.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Frog Scout"
+  },
+  "Magic Damper": {
+   "where": "free",
+   "text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it.",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "Mondo Gecko": {
+   "where": "free",
+   "text": "{1}, Discard a card: Until end of turn, Mondo Gecko becomes the color of your choice and gains hexproof from that color.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Lizard Mutant"
+  },
+  "Octopus Form": {
+   "where": "free",
+   "text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+   "mv": 1.0,
+   "type": "Instant \u2014 Lesson"
+  },
+  "Order of the Stars": {
+   "where": "free",
+   "text": "This creature has protection from the chosen color.",
+   "mv": 1.0,
+   "type": "Creature \u2014 Human Cleric"
+  },
+  "Paladin's Arms": {
+   "where": "free",
+   "text": "Equipped creature gets +2/+1, has ward {1}, and is a Knight in addition to its other types.",
+   "mv": 3.0,
+   "type": "Artifact \u2014 Equipment"
+  },
+  "Plumecreed Escort": {
+   "where": "free",
+   "text": "When Plumecreed Escort enters, target creature you control gains hexproof until end of turn.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Bird Scout"
+  },
+  "Rootborn Defenses": {
+   "where": "allocated:Necrobloom,Token Triumph",
+   "text": "Populate. Creatures you control gain indestructible until end of turn. (To populate, create a token that's a copy of a creature token you control.)",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Sephara, Sky's Blade": {
+   "where": "free",
+   "text": "Other creatures you control with flying have indestructible. (Damage and effects that say \"destroy\" don't destroy them.)",
+   "mv": 7.0,
+   "type": "Legendary Creature \u2014 Angel"
+  },
+  "Shore Up": {
+   "where": "IN VRASKA",
+   "text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. Untap it. (It can't be the target of spells or abilities your opponents control.)",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "Slippery Scoundrel": {
+   "where": "free",
+   "text": "As long as you have the city's blessing, this creature has hexproof and can't be blocked.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Pirate"
+  },
+  "Smite the Deathless": {
+   "where": "free",
+   "text": "Smite the Deathless deals 3 damage to target creature. That creature loses indestructible until end of turn. If that creature would die this turn, exile it inst",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Teyo, Lightshield Expert": {
+   "where": "free",
+   "text": "When Teyo enters, target permanent you control gains hexproof until end of turn. Put a +1/+1 counter on it if it's a creature. Put a loyalty counter on it if it",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Human Cleric"
+  },
+  "The Seriema": {
+   "where": "allocated:Necrobloom,Shanid",
+   "text": "Other tapped legendary creatures you control have indestructible.",
+   "mv": 3.0,
+   "type": "Legendary Artifact \u2014 Spacecraft"
+  },
+  "The Wandering Rescuer": {
+   "where": "allocated:Brigid",
+   "text": "Other tapped creatures you control have hexproof.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Samurai Noble"
+  },
+  "Thorin Oakenshield": {
+   "where": "IN VRASKA",
+   "text": "As long as you have an enduring story, artifacts and creatures you control have ward {1}.",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Dwarf Noble"
+  },
+  "Ultimate Magic: Holy": {
+   "where": "allocated:Limit Break",
+   "text": "Permanents you control gain indestructible until end of turn. If this spell was cast from exile, prevent all damage that would be dealt to you this turn.",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Zack Fair": {
+   "where": "allocated:Limit Break",
+   "text": "{1}, Sacrifice Zack Fair: Target creature you control gains indestructible until end of turn. Put Zack Fair's counters on that creature and attach an Equipment ",
+   "mv": 1.0,
+   "type": "Legendary Creature \u2014 Human Soldier"
+  },
+  "\u00c9owyn, Fearless Knight": {
+   "where": "allocated:Shanid",
+   "text": "When \u00c9owyn enters, exile target creature an opponent controls with greater power. Legendary creatures you control gain protection from each of that creature's c",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Knight"
+  }
+ },
+ "MAKES_ARTIFACT": {
+  "Air Nomad Legacy": {
+   "where": "free",
+   "text": "When this enchantment enters, create a Clue token. (It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 2.0,
+   "type": "Enchantment"
+  },
+  "An Offer You Can't Refuse": {
+   "where": "free",
+   "text": "Counter target noncreature spell. Its controller creates two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "April O'Neil, Live on the Scene": {
+   "where": "allocated:TMNT",
+   "text": "Whenever a Mutant, Ninja, or Turtle you control enters, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Human Detective"
+  },
+  "Ashling's Command": {
+   "where": "allocated:Ashling,Rootha",
+   "text": "\u2022 Target player creates two Treasure tokens.",
+   "mv": 5.0,
+   "type": "Kindred Instant \u2014 Elemental"
+  },
+  "Auxiliary Boosters": {
+   "where": "free",
+   "text": "When this Equipment enters, create a 2/2 colorless Robot artifact creature token and attach this Equipment to it.",
+   "mv": 5.0,
+   "type": "Artifact \u2014 Equipment"
+  },
+  "Baxter Stockman": {
+   "where": "free",
+   "text": "When Baxter Stockman enters, create a 1/1 colorless Robot artifact creature token.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Scientist"
+  },
+  "Big Score": {
+   "where": "allocated:Rootha",
+   "text": "Draw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 4.0,
+   "type": "Instant"
+  },
+  "Bilbo, Retired Burglar": {
+   "where": "free",
+   "text": "Whenever Bilbo deals combat damage to a player, create a Treasure token.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Halfling Rogue"
+  },
+  "Bill Ferny, Bree Swindler": {
+   "where": "free",
+   "text": "\u2022 Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Human Rogue"
+  },
+  "Bill the Pony": {
+   "where": "free",
+   "text": "When Bill the Pony enters, create two Food tokens. (They're artifacts with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Horse"
+  },
+  "Brudiclad, Telchor Engineer": {
+   "where": "free",
+   "text": "At the beginning of combat on your turn, create a 2/1 blue Phyrexian Myr artifact creature token. Then you may choose a token you control. If you do, each other",
+   "mv": 6.0,
+   "type": "Legendary Artifact Creature \u2014 Phyrexian Artificer"
+  },
+  "Cat Collector": {
+   "where": "free",
+   "text": "When this creature enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Citizen"
+  },
+  "Cunning Maneuver": {
+   "where": "free",
+   "text": "Create a Clue token. (It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Desculpting Blast": {
+   "where": "IN VRASKA",
+   "text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can b",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Dori, Bearer of Friends": {
+   "where": "allocated:Shanid",
+   "text": "When Dori enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Dwarf Warrior"
+  },
+  "Ezrim, Agency Chief": {
+   "where": "free",
+   "text": "When Ezrim enters, investigate twice. (To investigate, create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Archon Detective"
+  },
+  "Featherbrained Filcher": {
+   "where": "free",
+   "text": "When this creature leaves the battlefield, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+   "mv": 1.0,
+   "type": "Creature \u2014 Bird Mutant"
+  },
+  "Fire Nation Raider": {
+   "where": "free",
+   "text": "Raid \u2014 When this creature enters, if you attacked this turn, create a Clue token. (It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 4.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Flamekin Gildweaver": {
+   "where": "free",
+   "text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 4.0,
+   "type": "Creature \u2014 Elemental Sorcerer"
+  },
+  "Forecasting Fortune Teller": {
+   "where": "free",
+   "text": "When this creature enters, create a Clue token. (It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Advisor Ally"
+  },
+  "Galazeth Prismari": {
+   "where": "allocated:Rootha",
+   "text": "When Galazeth Prismari enters, create a Treasure token.",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Elder Dragon"
+  },
+  "Gilded Ghoda": {
+   "where": "free",
+   "text": "Whenever this creature attacks while saddled, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 2.0,
+   "type": "Creature \u2014 Horse Mount"
+  },
+  "Goblin Glasswright // Craft with Pride": {
+   "where": "free",
+   "text": "Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 2.0,
+   "type": "Creature \u2014 Goblin Sorcerer // Sorcery"
+  },
+  "Goldspan Dragon": {
+   "where": "allocated:Rootha",
+   "text": "Whenever this creature attacks or becomes the target of a spell, create a Treasure token.",
+   "mv": 5.0,
+   "type": "Creature \u2014 Dragon"
+  },
+  "Inspired Inventor": {
+   "where": "free",
+   "text": "\u2022 Create a 1/1 colorless Servo artifact creature token.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Artificer"
+  },
+  "Inspired Sphinx": {
+   "where": "free",
+   "text": "{3}{U}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+   "mv": 7.0,
+   "type": "Creature \u2014 Sphinx"
+  },
+  "Iron Hills Blacksmith": {
+   "where": "free",
+   "text": "When this creature enters, create a colorless Equipment artifact token named Axe with \"Equipped creature gets +1/+0\" and equip {2}.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Dwarf Artificer"
+  },
+  "Jet's Brainwashing": {
+   "where": "free",
+   "text": "Create a Clue token. (It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+   "mv": 1.0,
+   "type": "Sorcery"
+  },
+  "Kavaron Harrier": {
+   "where": "free",
+   "text": "Whenever this creature attacks, you may pay {2}. If you do, create a 2/2 colorless Robot artifact creature token that's tapped and attacking. Sacrifice that tok",
+   "mv": 1.0,
+   "type": "Artifact Creature \u2014 Robot Soldier"
+  },
+  "Kavaron, Memorial World": {
+   "where": "free",
+   "text": "12+ | {1}{R}, {T}, Sacrifice a land: Create a 2/2 colorless Robot artifact creature token, then creatures you control get +1/+0 and gain haste until end of turn",
+   "mv": 0.0,
+   "type": "Land \u2014 Planet"
+  },
+  "Late to Dinner": {
+   "where": "free",
+   "text": "Return target creature card from your graveyard to the battlefield. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life",
+   "mv": 4.0,
+   "type": "Sorcery"
+  },
+  "Lita, Little Orphan Amphibian": {
+   "where": "free",
+   "text": "\u2022 Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Mutant Ninja Turtle"
+  },
+  "Lord Jyscal Guado": {
+   "where": "allocated:Counter Blitz",
+   "text": "At the beginning of each end step, if you put a counter on a creature this turn, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this t",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Spirit Cleric"
+  },
+  "Lost Days": {
+   "where": "free",
+   "text": "The owner of target creature or enchantment puts it into their library second from the top or on the bottom. You create a Clue token. (It's an artifact with \"{2",
+   "mv": 5.0,
+   "type": "Instant \u2014 Lesson"
+  },
+  "Loyal Apprentice": {
+   "where": "free",
+   "text": "Lieutenant \u2014 At the beginning of combat on your turn, if you control your commander, create a 1/1 colorless Thopter artifact creature token with flying. That to",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Artificer"
+  },
+  "Magma Opus": {
+   "where": "allocated:Rootha",
+   "text": "{U/R}{U/R}, Discard this card: Create a Treasure token.",
+   "mv": 8.0,
+   "type": "Instant"
+  },
+  "Master Trinketeer": {
+   "where": "free",
+   "text": "{3}{W}: Create a 1/1 colorless Servo artifact creature token.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Dwarf Artificer"
+  },
+  "Mechan Assembler": {
+   "where": "free",
+   "text": "Whenever another artifact you control enters, create a 2/2 colorless Robot artifact creature token. This ability triggers only once each turn.",
+   "mv": 5.0,
+   "type": "Artifact Creature \u2014 Robot Artificer"
+  },
+  "Mechanized Ninja Cavalry": {
+   "where": "free",
+   "text": "When this creature enters, create a 1/1 colorless Robot artifact creature token.",
+   "mv": 2.0,
+   "type": "Artifact Creature \u2014 Robot Ninja"
+  },
+  "Melded Moxite": {
+   "where": "IN VRASKA",
+   "text": "{3}, Sacrifice this artifact: Create a tapped 2/2 colorless Robot artifact creature token.",
+   "mv": 2.0,
+   "type": "Artifact"
+  },
+  "Meticulous Artisan": {
+   "where": "free",
+   "text": "When this creature enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 4.0,
+   "type": "Creature \u2014 Djinn Artificer"
+  },
+  "Mines of Moria": {
+   "where": "free",
+   "text": "{3}{R}, {T}, Exile three cards from your graveyard: Create two Treasure tokens.",
+   "mv": 0.0,
+   "type": "Legendary Land"
+  },
+  "Mouser Attack!": {
+   "where": "IN VRASKA",
+   "text": "\u2022 Create a 1/1 colorless Robot artifact creature token.",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Mouser Foundry": {
+   "where": "IN VRASKA",
+   "text": "When this artifact enters or leaves the battlefield, create a 1/1 colorless Robot artifact creature token.",
+   "mv": 2.0,
+   "type": "Artifact"
+  },
+  "Nesting Bot": {
+   "where": "allocated:Sharuum",
+   "text": "When this creature dies, create a 1/1 colorless Servo artifact creature token.",
+   "mv": 1.0,
+   "type": "Artifact Creature \u2014 Robot"
+  },
+  "Nimble Thopterist": {
+   "where": "free",
+   "text": "When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Vedalken Artificer"
+  },
+  "Phyrexian Ironworks": {
+   "where": "free",
+   "text": "{T}, Pay {E}{E}{E}: Create a 3/3 colorless Phyrexian Golem artifact creature token. Activate only as a sorcery.",
+   "mv": 3.0,
+   "type": "Artifact"
+  },
+  "Pia and Kiran Nalaar": {
+   "where": "free",
+   "text": "When Pia and Kiran Nalaar enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Artificer"
+  },
+  "Pinnacle Emissary": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast an artifact spell, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+   "mv": 3.0,
+   "type": "Artifact Creature \u2014 Robot"
+  },
+  "Prismari Command": {
+   "where": "allocated:Rootha",
+   "text": "\u2022 Target player creates a Treasure token.",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Professional Face-Breaker": {
+   "where": "allocated:Limit Break",
+   "text": "Whenever one or more creatures you control deal combat damage to a player, create a Treasure token.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Warrior"
+  },
+  "Reckless Ransacking": {
+   "where": "free",
+   "text": "Target creature gets +3/+2 until end of turn. Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Relm's Sketching": {
+   "where": "free",
+   "text": "Create a token that's a copy of target artifact, creature, or land.",
+   "mv": 4.0,
+   "type": "Sorcery"
+  },
+  "Retrieve the Esper": {
+   "where": "free",
+   "text": "Create a 3/3 blue Robot Warrior artifact creature token. Then if this spell was cast from a graveyard, put two +1/+1 counters on that token.",
+   "mv": 4.0,
+   "type": "Sorcery"
+  },
+  "Rosie Cotton of South Lane": {
+   "where": "allocated:TMNT,Necrobloom,Shanid",
+   "text": "When Rosie Cotton enters, create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Halfling Peasant"
+  },
+  "Saheeli, Consul of Oversight": {
+   "where": "IN VRASKA",
+   "text": "Whenever you scry or surveil, create a 1/1 colorless Thopter artifact creature token with flying. This ability triggers only once each turn.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Advisor"
+  },
+  "Saheeli, Sublime Artificer": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast a noncreature spell, create a 1/1 colorless Servo artifact creature token.",
+   "mv": 3.0,
+   "type": "Legendary Planeswalker \u2014 Saheeli"
+  },
+  "Sai, Master Thopterist": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast an artifact spell, create a 1/1 colorless Thopter artifact creature token with flying.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Human Artificer"
+  },
+  "Sami, Ship's Engineer": {
+   "where": "IN VRASKA",
+   "text": "At the beginning of your end step, if you control two or more tapped creatures, create a tapped 2/2 colorless Robot artifact creature token.",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Artificer"
+  },
+  "Sanguine Statuette": {
+   "where": "free",
+   "text": "When this artifact enters, create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Draw a card.\")",
+   "mv": 2.0,
+   "type": "Artifact"
+  },
+  "Scuzzback Scrounger": {
+   "where": "free",
+   "text": "At the beginning of your first main phase, you may blight 1. If you do, create a Treasure token. (To blight 1, put a -1/-1 counter on a creature you control. A ",
+   "mv": 2.0,
+   "type": "Creature \u2014 Goblin Warrior"
+  },
+  "Second Breakfast": {
+   "where": "free",
+   "text": "Up to two target creatures each get +2/+1 until end of turn. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life.\")",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Seize the Spoils": {
+   "where": "free",
+   "text": "Draw two cards and create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 3.0,
+   "type": "Sorcery"
+  },
+  "Sharding Sphinx": {
+   "where": "free",
+   "text": "Whenever an artifact creature you control deals combat damage to a player, you may create a 1/1 blue Thopter artifact creature token with flying.",
+   "mv": 6.0,
+   "type": "Artifact Creature \u2014 Sphinx"
+  },
+  "Storm-Kiln Artist": {
+   "where": "allocated:Rootha",
+   "text": "Magecraft \u2014 Whenever you cast or copy an instant or sorcery spell, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of a",
+   "mv": 4.0,
+   "type": "Creature \u2014 Dwarf Shaman"
+  },
+  "Tavern Scoundrel": {
+   "where": "free",
+   "text": "Whenever you win a coin flip, create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Rogue"
+  },
+  "Thopter Spy Network": {
+   "where": "IN VRASKA",
+   "text": "At the beginning of your upkeep, if you control an artifact, create a 1/1 colorless Thopter artifact creature token with flying.",
+   "mv": 4.0,
+   "type": "Enchantment"
+  },
+  "Tokka & Rahzar, Unsupervised": {
+   "where": "allocated:TMNT",
+   "text": "Whenever another nontoken creature you control leaves the battlefield, put a +1/+1 counter on Tokka & Rahzar and create a Treasure token. This ability triggers ",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Turtle Wolf Mutant"
+  },
+  "Village Pillagers": {
+   "where": "allocated:Blight Curse",
+   "text": "Whenever a creature an opponent controls with a counter on it dies, you create a tapped Treasure token.",
+   "mv": 5.0,
+   "type": "Creature \u2014 Goblin Warrior"
+  },
+  "Voldaren Epicure": {
+   "where": "free",
+   "text": "When this creature enters, it deals 1 damage to each opponent. Create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Dra",
+   "mv": 1.0,
+   "type": "Creature \u2014 Vampire"
+  },
+  "Vraska, Soul of Stone": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any co",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Gorgon Wizard"
+  },
+  "Whirler Rogue": {
+   "where": "IN VRASKA",
+   "text": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Human Rogue Artificer"
+  },
+  "Whirler Virtuoso": {
+   "where": "free",
+   "text": "Pay {E}{E}{E}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Vedalken Artificer"
+  },
+  "Zidane, Tantalus Thief": {
+   "where": "free",
+   "text": "Whenever an opponent gains control of a permanent from you, you create a Treasure token.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Mutant Scout"
+  }
+ },
+ "ANTHEM": {
+  "Ajani's Anguish": {
+   "where": "free",
+   "text": "Creatures you control have trample.",
+   "mv": 1.0,
+   "type": "Enchantment"
+  },
+  "Angel of the Dawn": {
+   "where": "free",
+   "text": "When this creature enters, creatures you control get +1/+1 and gain vigilance until end of turn.",
+   "mv": 5.0,
+   "type": "Creature \u2014 Angel"
+  },
+  "Balmor, Battlemage Captain": {
+   "where": "free",
+   "text": "Whenever you cast an instant or sorcery spell, creatures you control get +1/+0 and gain trample until end of turn.",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Bird Wizard"
+  },
+  "Banners Raised": {
+   "where": "free",
+   "text": "Creatures you control get +1/+0 until end of turn.",
+   "mv": 1.0,
+   "type": "Instant"
+  },
+  "Bastion Protector": {
+   "where": "allocated:Limit Break",
+   "text": "Commander creatures you control get +2/+2 and have indestructible.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Charge the Sanctum": {
+   "where": "free",
+   "text": "\u2022 Creatures you control get +2/+0 until end of turn.",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Charismatic Vanguard": {
+   "where": "free",
+   "text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Dwarf Soldier"
+  },
+  "Commander's Insignia": {
+   "where": "allocated:Token Triumph",
+   "text": "Creatures you control get +1/+1 for each time you've cast your commander from the command zone this game.",
+   "mv": 4.0,
+   "type": "Enchantment"
+  },
+  "Craterclaw Colossus": {
+   "where": "IN VRASKA",
+   "text": "When this creature enters, creatures you control gain trample and get +X/+0 until end of turn, where X is the number of artifacts you control.",
+   "mv": 7.0,
+   "type": "Artifact Creature \u2014 Beast Construct"
+  },
+  "Dictate of Heliod": {
+   "where": "allocated:Token Triumph",
+   "text": "Creatures you control get +2/+2.",
+   "mv": 5.0,
+   "type": "Enchantment"
+  },
+  "Dual-Sun Adepts": {
+   "where": "free",
+   "text": "{5}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Dwarven Provisioner": {
+   "where": "free",
+   "text": "{3}{W}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Dwarf Citizen"
+  },
+  "Esquire of the King": {
+   "where": "free",
+   "text": "{4}{W}, {T}: Creatures you control get +1/+1 until end of turn. This ability costs {2} less to activate if you control a legendary creature.",
+   "mv": 1.0,
+   "type": "Creature \u2014 Human Soldier"
+  },
+  "Frostcliff Siege": {
+   "where": "allocated:Ashling",
+   "text": "\u2022 Temur \u2014 Creatures you control get +1/+0 and have trample and haste.",
+   "mv": 3.0,
+   "type": "Enchantment"
+  },
+  "Gallant Fowlknight": {
+   "where": "free",
+   "text": "When this creature enters, creatures you control get +1/+0 until end of turn. Kithkin creatures you control also gain first strike until end of turn.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Kithkin Knight"
+  },
+  "Gideon's Memorial": {
+   "where": "free",
+   "text": "Creature tokens you control get +1/+0 and have vigilance.",
+   "mv": 2.0,
+   "type": "Legendary Artifact"
+  },
+  "Heroic Charge": {
+   "where": "free",
+   "text": "Creatures you control get +2/+1 until end of turn. If this spell was kicked, those creatures also gain trample until end of turn.",
+   "mv": 4.0,
+   "type": "Instant"
+  },
+  "Kavaron, Memorial World": {
+   "where": "free",
+   "text": "12+ | {1}{R}, {T}, Sacrifice a land: Create a 2/2 colorless Robot artifact creature token, then creatures you control get +1/+0 and gain haste until end of turn",
+   "mv": 0.0,
+   "type": "Land \u2014 Planet"
+  },
+  "Leonardo, Leader in Blue": {
+   "where": "allocated:Shanid",
+   "text": "When Leonardo enters, if his sneak cost was paid, creatures you control get +2/+0 until end of turn.",
+   "mv": 1.0,
+   "type": "Legendary Creature \u2014 Mutant Ninja Turtle"
+  },
+  "Lionheart Glimmer": {
+   "where": "free",
+   "text": "Whenever you attack, creatures you control get +1/+1 until end of turn.",
+   "mv": 5.0,
+   "type": "Enchantment Creature \u2014 Cat Glimmer"
+  },
+  "Lumen-Class Frigate": {
+   "where": "IN VRASKA",
+   "text": "2+ | Other creatures you control get +1/+1.",
+   "mv": 2.0,
+   "type": "Artifact \u2014 Spacecraft"
+  },
+  "Outlaws' Fury": {
+   "where": "free",
+   "text": "Creatures you control get +2/+0 until end of turn. If you control an outlaw, exile the top card of your library. Until the end of your next turn, you may play t",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Painter's Studio // Defaced Gallery": {
+   "where": "free",
+   "text": "Whenever you attack, attacking creatures you control get +1/+0 until end of turn.",
+   "mv": 5.0,
+   "type": "Enchantment \u2014 Room // Enchantment \u2014 Room"
+  },
+  "Prudent Fateseer // Peer Review": {
+   "where": "free",
+   "text": "Whenever you scry or surveil, creatures you control get +1/+0 until end of turn. This ability triggers only once each turn.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Dwarf Wizard // Sorcery"
+  },
+  "Rabbit Response": {
+   "where": "free",
+   "text": "Creatures you control get +2/+1 until end of turn. If you control a Rabbit, scry 2. (Look at the top two cards of your library, then put any number of them on t",
+   "mv": 4.0,
+   "type": "Instant"
+  },
+  "Raff, Weatherlight Stalwart": {
+   "where": "IN VRASKA",
+   "text": "{3}{W}{W}: Creatures you control get +1/+1 and gain vigilance until end of turn.",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Human Wizard"
+  },
+  "Raphael, the Nightwatcher": {
+   "where": "allocated:Shanid",
+   "text": "Attacking creatures you control have double strike.",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Mutant Ninja Turtle"
+  },
+  "Shatterwing Pegasus": {
+   "where": "free",
+   "text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Pegasus"
+  },
+  "Summon: Choco/Mog": {
+   "where": "free",
+   "text": "I, II, III, IV \u2014 Stampede! \u2014 Other creatures you control get +1/+0 until end of turn.",
+   "mv": 3.0,
+   "type": "Enchantment Creature \u2014 Saga Bird Moogle"
+  },
+  "Thorin's Last Stand": {
+   "where": "free",
+   "text": "\u2022 Creatures you control get +2/+1 until end of turn.",
+   "mv": 4.0,
+   "type": "Instant"
+  },
+  "Timid Shieldbearer": {
+   "where": "free",
+   "text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Kithkin Soldier"
+  },
+  "Tori D'Avenant, Fury Rider": {
+   "where": "free",
+   "text": "Whenever Tori D'Avenant attacks, all other attacking creatures you control get +1/+1 until end of turn. Other red attacking creatures you control gain trample u",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Knight"
+  },
+  "True Conviction": {
+   "where": "free",
+   "text": "Creatures you control have double strike and lifelink.",
+   "mv": 6.0,
+   "type": "Enchantment"
+  },
+  "Valley Rally": {
+   "where": "free",
+   "text": "Creatures you control get +2/+0 until end of turn. If the gift was promised, target creature you control gains first strike until end of turn.",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Valor in Akros": {
+   "where": "allocated:Token Triumph",
+   "text": "Whenever a creature you control enters, creatures you control get +1/+1 until end of turn.",
+   "mv": 4.0,
+   "type": "Enchantment"
+  },
+  "Wandering Musicians": {
+   "where": "free",
+   "text": "Whenever this creature attacks, creatures you control get +1/+0 until end of turn.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Human Bard Ally"
+  },
+  "Warren Elder": {
+   "where": "free",
+   "text": "{3}{W}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Rabbit Cleric"
+  },
+  "Water Tribe Captain": {
+   "where": "free",
+   "text": "{5}: Creatures you control get +1/+1 until end of turn.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Soldier Ally"
+  },
+  "Winter, Team Player": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, creatures you control get +1/+0 until end of turn.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Warrior"
+  },
+  "Zealous Display": {
+   "where": "free",
+   "text": "Creatures you control get +2/+0 until end of turn. If it's not your turn, untap those creatures.",
+   "mv": 3.0,
+   "type": "Instant"
+  }
+ },
+ "PAYOFF_DAMAGE": {
+  "Ark of Hunger": {
+   "where": "free",
+   "text": "Whenever one or more cards leave your graveyard, this artifact deals 1 damage to each opponent and you gain 1 life.",
+   "mv": 4.0,
+   "type": "Artifact"
+  },
+  "Colossus of the Blood Age": {
+   "where": "free",
+   "text": "When this creature enters, it deals 3 damage to each opponent and you gain 3 life.",
+   "mv": 6.0,
+   "type": "Artifact Creature \u2014 Construct"
+  },
+  "Coruscation Mage": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast a noncreature spell, this creature deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Otter Wizard"
+  },
+  "Defiler of Instinct": {
+   "where": "free",
+   "text": "Whenever you cast a red permanent spell, this creature deals 1 damage to any target.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Phyrexian Kavu"
+  },
+  "Dynamite Diver": {
+   "where": "free",
+   "text": "When this creature dies, it deals 1 damage to any target.",
+   "mv": 1.0,
+   "type": "Creature \u2014 Goblin Pilot"
+  },
+  "Electric Seaweed": {
+   "where": "free",
+   "text": "{T}: This creature deals 1 damage to any target.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Plant Wall"
+  },
+  "Enraged Flamecaster": {
+   "where": "free",
+   "text": "Whenever you cast a spell with mana value 4 or greater, this creature deals 2 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Elemental Sorcerer"
+  },
+  "Erebor Flamesmith": {
+   "where": "free",
+   "text": "Whenever you cast an instant or sorcery spell, this creature deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Dwarf Artificer"
+  },
+  "Fanatical Firebrand": {
+   "where": "free",
+   "text": "{T}, Sacrifice this creature: It deals 1 damage to any target.",
+   "mv": 1.0,
+   "type": "Creature \u2014 Goblin Pirate"
+  },
+  "Fiery Inscription": {
+   "where": "free",
+   "text": "Whenever you cast an instant or sorcery spell, this enchantment deals 2 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Enchantment"
+  },
+  "Flame Fusillade": {
+   "where": "IN VRASKA",
+   "text": "Until end of turn, permanents you control gain \"{T}: This permanent deals 1 damage to any target.\"",
+   "mv": 4.0,
+   "type": "Sorcery"
+  },
+  "Hurler Cyclops": {
+   "where": "free",
+   "text": "{1}, Sacrifice another creature: This creature deals 1 damage to any target.",
+   "mv": 5.0,
+   "type": "Creature \u2014 Cyclops"
+  },
+  "Hypervolt Grasp": {
+   "where": "free",
+   "text": "Enchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+   "mv": 3.0,
+   "type": "Enchantment \u2014 Aura"
+  },
+  "Keldon Megaliths": {
+   "where": "free",
+   "text": "Hellbent \u2014 {1}{R}, {T}: This land deals 1 damage to any target. Activate only if you have no cards in hand.",
+   "mv": 0.0,
+   "type": "Land"
+  },
+  "Koth, the Geomancer": {
+   "where": "free",
+   "text": "Landfall \u2014 Whenever a land you control enters, Koth deals 1 damage to each opponent. If that land is a Mountain, add {R}.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Human Warrior"
+  },
+  "Lasting Tarfire": {
+   "where": "allocated:Blight Curse",
+   "text": "At the beginning of each end step, if you put a counter on a creature this turn, this enchantment deals 2 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Enchantment"
+  },
+  "Lindblum, Industrial Regency // Mage Siege": {
+   "where": "IN VRASKA",
+   "text": "Create a 0/1 black Wizard creature token with \"Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.\"",
+   "mv": 0.0,
+   "type": "Land \u2014 Town // Instant \u2014 Adventure"
+  },
+  "Lobber Crew": {
+   "where": "free",
+   "text": "{T}: This creature deals 1 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Goblin Warrior"
+  },
+  "Magmakin Artillerist": {
+   "where": "free",
+   "text": "When you cycle this card, it deals 1 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Elemental Pirate"
+  },
+  "Mysidian Elder": {
+   "where": "free",
+   "text": "When this creature enters, create a 0/1 black Wizard creature token with \"Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.\"",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Wizard"
+  },
+  "Outlaws' Merriment": {
+   "where": "free",
+   "text": "\u2022 1/2 Human Rogue with haste and \"When this token enters, it deals 1 damage to any target.\"",
+   "mv": 4.0,
+   "type": "Enchantment"
+  },
+  "Playful Shove": {
+   "where": "free",
+   "text": "Playful Shove deals 1 damage to any target.",
+   "mv": 2.0,
+   "type": "Sorcery"
+  },
+  "Prodigal Pyromancer": {
+   "where": "free",
+   "text": "{T}: This creature deals 1 damage to any target.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Wizard"
+  },
+  "Pyromatics": {
+   "where": "free",
+   "text": "Pyromatics deals 1 damage to any target.",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Queen Brahne": {
+   "where": "free",
+   "text": "Whenever Queen Brahne attacks, create a 0/1 black Wizard creature token with \"Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Human Noble"
+  },
+  "Ragost, Deft Gastronaut": {
+   "where": "allocated:TMNT",
+   "text": "{1}, {T}, Sacrifice a Food: Ragost deals 3 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Lobster Citizen"
+  },
+  "Reckless Fireweaver": {
+   "where": "IN VRASKA",
+   "text": "Whenever an artifact you control enters, this creature deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Artificer"
+  },
+  "Rubble Rouser": {
+   "where": "free",
+   "text": "When you do, this creature deals 1 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Dwarf Sorcerer"
+  },
+  "Ruinous Rampage": {
+   "where": "free",
+   "text": "\u2022 Ruinous Rampage deals 3 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Sorcery"
+  },
+  "Sabotender": {
+   "where": "free",
+   "text": "Landfall \u2014 Whenever a land you control enters, this creature deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Plant"
+  },
+  "Slash, Reptile Rampager": {
+   "where": "free",
+   "text": "Alliance \u2014 Whenever another creature you control enters, Slash deals 2 damage to each opponent.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Mutant Berserker Turtle"
+  },
+  "Sparkmage Apprentice": {
+   "where": "free",
+   "text": "When this creature enters, it deals 1 damage to any target.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Wizard"
+  },
+  "Unstable Amulet": {
+   "where": "free",
+   "text": "Whenever you cast a spell from anywhere other than your hand, this artifact deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Artifact"
+  },
+  "Voldaren Epicure": {
+   "where": "free",
+   "text": "When this creature enters, it deals 1 damage to each opponent. Create a Blood token. (It's an artifact with \"{1}, {T}, Discard a card, Sacrifice this token: Dra",
+   "mv": 1.0,
+   "type": "Creature \u2014 Vampire"
+  },
+  "Vulshok Sorcerer": {
+   "where": "free",
+   "text": "{T}: This creature deals 1 damage to any target.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Shaman Sorcerer"
+  },
+  "Wildfire Howl": {
+   "where": "free",
+   "text": "Wildfire Howl deals 2 damage to each creature. If the gift was promised, instead Wildfire Howl deals 1 damage to any target and 2 damage to each creature.",
+   "mv": 3.0,
+   "type": "Sorcery"
+  }
+ },
+ "ART_CAST_OBS": {
+  "Artist's Talent": {
+   "where": "allocated:Rootha",
+   "text": "Whenever you cast a noncreature spell, you may discard a card. If you do, draw a card.",
+   "mv": 2.0,
+   "type": "Enchantment \u2014 Class"
+  },
+  "Boar-q-pine": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, put a +1/+1 counter on this creature.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Boar Porcupine"
+  },
+  "Chandra's Emberling": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, put a +1/+1 counter on this creature.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Gremlin Elemental"
+  },
+  "Cori-Steel Cutter": {
+   "where": "IN VRASKA",
+   "text": "Flurry \u2014 Whenever you cast your second spell each turn, create a 1/1 white Monk creature token with prowess. You may attach this Equipment to it. (Whenever you ",
+   "mv": 2.0,
+   "type": "Artifact \u2014 Equipment"
+  },
+  "Coruscation Mage": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast a noncreature spell, this creature deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Otter Wizard"
+  },
+  "Cruel Witness": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+   "mv": 4.0,
+   "type": "Creature \u2014 Bird Horror"
+  },
+  "Elusive Spellfist": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, this creature gets +1/+0 until end of turn and can't be blocked this turn.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Monk"
+  },
+  "Kindlespark Duo": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, untap this creature.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Lizard Otter"
+  },
+  "Lindblum, Industrial Regency // Mage Siege": {
+   "where": "IN VRASKA",
+   "text": "Create a 0/1 black Wizard creature token with \"Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.\"",
+   "mv": 0.0,
+   "type": "Land \u2014 Town // Instant \u2014 Adventure"
+  },
+  "Manaform Hellkite": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, create an X/X red Dragon Illusion creature token with flying and haste, where X is the amount of mana spent to cast that ",
+   "mv": 4.0,
+   "type": "Creature \u2014 Dragon"
+  },
+  "Mysidian Elder": {
+   "where": "free",
+   "text": "When this creature enters, create a 0/1 black Wizard creature token with \"Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.\"",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human Wizard"
+  },
+  "Pinnacle Emissary": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast an artifact spell, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+   "mv": 3.0,
+   "type": "Artifact Creature \u2014 Robot"
+  },
+  "Queen Brahne": {
+   "where": "free",
+   "text": "Whenever Queen Brahne attacks, create a 0/1 black Wizard creature token with \"Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Human Noble"
+  },
+  "Riddleform": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, you may have this enchantment become a 3/3 Sphinx creature with flying in addition to its other types until end of turn.",
+   "mv": 2.0,
+   "type": "Enchantment"
+  },
+  "Sahagin": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, if at least four mana was spent to cast it, put a +1/+1 counter on this creature and it can't be blocked this turn.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Merfolk Warrior"
+  },
+  "Saheeli, Sublime Artificer": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast a noncreature spell, create a 1/1 colorless Servo artifact creature token.",
+   "mv": 3.0,
+   "type": "Legendary Planeswalker \u2014 Saheeli"
+  },
+  "Sai, Master Thopterist": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast an artifact spell, create a 1/1 colorless Thopter artifact creature token with flying.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Human Artificer"
+  },
+  "Tempest Angler": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, put a +1/+1 counter on this creature.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Otter Wizard"
+  },
+  "The Emperor of Palamecia // The Lord Master of Hell": {
+   "where": "allocated:Rootha",
+   "text": "Whenever you cast a noncreature spell, if at least four mana was spent to cast it, put a +1/+1 counter on The Emperor of Palamecia. Then if it has three or more",
+   "mv": 2.0,
+   "type": "Legendary Creature \u2014 Human Noble Wizard // Legendary Creature \u2014 Demon Noble Wizard"
+  },
+  "Triton Wavebreaker": {
+   "where": "free",
+   "text": "As long as this permanent is a creature, it has prowess. (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+   "mv": 1.0,
+   "type": "Enchantment Creature \u2014 Merfolk Wizard"
+  },
+  "Vraska, Soul of Stone": {
+   "where": "IN VRASKA",
+   "text": "Whenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any co",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Gorgon Wizard"
+  },
+  "Winter, Team Player": {
+   "where": "free",
+   "text": "Whenever you cast a noncreature spell, creatures you control get +1/+0 until end of turn.",
+   "mv": 5.0,
+   "type": "Legendary Creature \u2014 Human Warrior"
+  }
+ },
+ "UNTAP": {
+  "Cat-Owl": {
+   "where": "free",
+   "text": "Whenever this creature attacks, untap target artifact or creature.",
+   "mv": 4.0,
+   "type": "Creature \u2014 Cat Bird"
+  },
+  "Desert Were-Worm": {
+   "where": "free",
+   "text": "Whenever you attack with creatures with total power 12 or greater for the first time each turn, untap all attacking creatures. After this phase, there is an add",
+   "mv": 6.0,
+   "type": "Creature \u2014 Dragon Wurm"
+  },
+  "Divining Duelist": {
+   "where": "free",
+   "text": "\u2022 Untap target creature.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Merfolk Wizard"
+  },
+  "Elite Interceptor // Rejoinder": {
+   "where": "free",
+   "text": "You may tap or untap target creature.",
+   "mv": 1.0,
+   "type": "Creature \u2014 Human Wizard // Sorcery"
+  },
+  "Filigree Sages": {
+   "where": "free",
+   "text": "{2}{U}: Untap target artifact.",
+   "mv": 4.0,
+   "type": "Artifact Creature \u2014 Vedalken Wizard"
+  },
+  "Glamermite": {
+   "where": "free",
+   "text": "\u2022 Untap target creature.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Faerie Rogue"
+  },
+  "Hapatra, the Desert Frost": {
+   "where": "free",
+   "text": "{2}{U}: Untap target creature.",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Wizard"
+  },
+  "Join Forces": {
+   "where": "free",
+   "text": "Untap up to two target creatures. They each get +2/+2 until end of turn.",
+   "mv": 3.0,
+   "type": "Instant"
+  },
+  "Lightning Runner": {
+   "where": "free",
+   "text": "Whenever this creature attacks, you get {E}{E}, then you may pay eight {E}. If you pay, untap all creatures you control, and after this phase, there is an addit",
+   "mv": 5.0,
+   "type": "Creature \u2014 Human Warrior"
+  },
+  "Rally of Wings": {
+   "where": "free",
+   "text": "Untap all creatures you control. Creatures you control with flying get +2/+2 until end of turn.",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Sage's Nouliths": {
+   "where": "free",
+   "text": "Equipped creature gets +1/+0, has \"Whenever this creature attacks, untap target attacking creature,\" and is a Cleric in addition to its other types.",
+   "mv": 2.0,
+   "type": "Artifact \u2014 Equipment"
+  },
+  "Sewer-veillance Cam": {
+   "where": "IN VRASKA",
+   "text": "When this artifact enters or leaves the battlefield, you may tap or untap target creature.",
+   "mv": 1.0,
+   "type": "Artifact"
+  },
+  "Threaten": {
+   "where": "free",
+   "text": "Untap target creature and gain control of it until end of turn. That creature gains haste until end of turn. (It can attack and {T} this turn.)",
+   "mv": 3.0,
+   "type": "Sorcery"
+  },
+  "To Arms!": {
+   "where": "allocated:Brigid",
+   "text": "Untap all creatures you control.",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "Tori D'Avenant, Fury Rider": {
+   "where": "free",
+   "text": "Whenever Tori D'Avenant attacks, all other attacking creatures you control get +1/+1 until end of turn. Other red attacking creatures you control gain trample u",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Knight"
+  },
+  "Vow to Erebor": {
+   "where": "free",
+   "text": "Untap target creature you control. It gets +2/+2 until end of turn. If it's a Dwarf, you may attach an Equipment you control to it.",
+   "mv": 2.0,
+   "type": "Instant"
+  },
+  "\u00c9omer, Marshal of Rohan": {
+   "where": "allocated:Shanid",
+   "text": "Whenever one or more other attacking legendary creatures you control die, untap all creatures you control. After this phase, there is an additional combat phase",
+   "mv": 4.0,
+   "type": "Legendary Creature \u2014 Human Knight"
+  }
+ },
+ "RECUR_ART": {
+  "Disciple of the Sun": {
+   "where": "free",
+   "text": "When this creature enters, return target permanent card with mana value 3 or less from your graveyard to your hand.",
+   "mv": 5.0,
+   "type": "Creature \u2014 Human Cleric"
+  },
+  "Helping Hand": {
+   "where": "allocated:Brigid",
+   "text": "Return target creature card with mana value 3 or less from your graveyard to the battlefield tapped.",
+   "mv": 1.0,
+   "type": "Sorcery"
+  },
+  "Late to Dinner": {
+   "where": "free",
+   "text": "Return target creature card from your graveyard to the battlefield. Create a Food token. (It's an artifact with \"{2}, {T}, Sacrifice this token: You gain 3 life",
+   "mv": 4.0,
+   "type": "Sorcery"
+  },
+  "Meanders Guide": {
+   "where": "free",
+   "text": "When you do, return target creature card with mana value 3 or less from your graveyard to the battlefield.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Merfolk Scout"
+  },
+  "Protomatter Powder": {
+   "where": "free",
+   "text": "{4}{W}, {T}, Sacrifice this artifact: Return target artifact card from your graveyard to the battlefield.",
+   "mv": 3.0,
+   "type": "Artifact"
+  },
+  "Rescue Skiff": {
+   "where": "free",
+   "text": "When this Spacecraft enters, return target creature or enchantment card from your graveyard to the battlefield.",
+   "mv": 6.0,
+   "type": "Artifact \u2014 Spacecraft"
+  },
+  "Sanctum Gargoyle": {
+   "where": "allocated:Sharuum",
+   "text": "When this creature enters, you may return target artifact card from your graveyard to your hand.",
+   "mv": 4.0,
+   "type": "Artifact Creature \u2014 Gargoyle"
+  },
+  "Scour for Scrap": {
+   "where": "allocated:Sharuum",
+   "text": "\u2022 Return target artifact card from your graveyard to your hand.",
+   "mv": 4.0,
+   "type": "Instant"
+  },
+  "Shepherd of the Clouds": {
+   "where": "free",
+   "text": "When this creature enters, return target permanent card with mana value 3 or less from your graveyard to your hand. Return that card to the battlefield instead ",
+   "mv": 5.0,
+   "type": "Creature \u2014 Pegasus"
+  },
+  "Treasure Hunter": {
+   "where": "free",
+   "text": "When this creature enters, you may return target artifact card from your graveyard to your hand.",
+   "mv": 3.0,
+   "type": "Creature \u2014 Human"
+  },
+  "Unfinished Business": {
+   "where": "allocated:Limit Break",
+   "text": "Return target creature card from your graveyard to the battlefield, then return up to two target Aura and/or Equipment cards from your graveyard to the battlefi",
+   "mv": 5.0,
+   "type": "Sorcery"
+  }
+ },
+ "ART_ENTER_OBS": {
+  "Donatello, Way with Machines": {
+   "where": "free",
+   "text": "Whenever an artifact you control enters, put a +1/+1 counter on Donatello.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Mutant Ninja Turtle"
+  },
+  "Era of Innovation": {
+   "where": "free",
+   "text": "Whenever an artifact or Artificer you control enters, you may pay {1}. If you do, you get {E}{E}.",
+   "mv": 2.0,
+   "type": "Enchantment"
+  },
+  "Glassdust Hulk": {
+   "where": "free",
+   "text": "Whenever another artifact you control enters, this creature gets +1/+1 until end of turn and can't be blocked this turn.",
+   "mv": 5.0,
+   "type": "Artifact Creature \u2014 Golem"
+  },
+  "Mechan Assembler": {
+   "where": "free",
+   "text": "Whenever another artifact you control enters, create a 2/2 colorless Robot artifact creature token. This ability triggers only once each turn.",
+   "mv": 5.0,
+   "type": "Artifact Creature \u2014 Robot Artificer"
+  },
+  "Oreplate Pangolin": {
+   "where": "free",
+   "text": "Whenever another artifact you control enters, you may pay {1}. If you do, put a +1/+1 counter on this creature.",
+   "mv": 2.0,
+   "type": "Artifact Creature \u2014 Robot Pangolin"
+  },
+  "Reckless Fireweaver": {
+   "where": "IN VRASKA",
+   "text": "Whenever an artifact you control enters, this creature deals 1 damage to each opponent.",
+   "mv": 2.0,
+   "type": "Creature \u2014 Human Artificer"
+  },
+  "Rosie Cotton of South Lane": {
+   "where": "allocated:TMNT,Necrobloom,Shanid",
+   "text": "Whenever you create a token, put a +1/+1 counter on target creature you control other than Rosie Cotton.",
+   "mv": 3.0,
+   "type": "Legendary Creature \u2014 Halfling Peasant"
+  }
+ }
+}
