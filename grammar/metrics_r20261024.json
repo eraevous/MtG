@@ -1,0 +1,772 @@
+{
+ "manifest": {
+  "grammar_version": "grammar-0.2.0",
+  "concepts_version": "concepts-0.2.1",
+  "semantics_version": "semantics-0.1.1",
+  "n_ability_contracts": "6858",
+  "oracle_file": "oracle-cards-20261021210201.jsonl.gz",
+  "oracle_file_sha256": "16929bdb0b0b743e1d836b81a21e038d67d658572f64ab72ca0d71642a12631f",
+  "kb_file": "mtg_cards_v0.2.sqlite",
+  "collection_oracle_ids": "3399",
+  "cards_parsed": "31385",
+  "built_utc": "2026-10-22T03:53:41Z",
+  "build_seconds": "52.4",
+  "collection_update_20261024": "31 oracle_ids flagged in_collection after photo intake IMG_3874 (KB r20261024); frame collection counts recomputed; corpus, templates and contracts unchanged"
+ },
+ "corpus": {
+  "cards_parsed": 31385,
+  "collection_cards": 3399,
+  "abilities_by_kind": {
+   "keyword": 15816,
+   "triggered": 15278,
+   "activated": 9521,
+   "spell": 8264,
+   "static": 7780,
+   "replacement": 1861,
+   "mode": 1558,
+   "loyalty": 912,
+   "chapter": 599,
+   "reminder_only": 580,
+   "additional_cost": 310,
+   "structure": 102
+  },
+  "parts_by_role": {
+   "effect": 52043,
+   "trigger_event": 15877,
+   "keyword": 15816,
+   "cost": 15384,
+   "static": 10662,
+   "duration": 7362,
+   "condition": 5648,
+   "amplifier": 4343,
+   "link": 2254,
+   "restriction": 1728,
+   "mode_header": 649,
+   "replacement": 523,
+   "delayed_trigger": 414,
+   "replacement_marker": 350,
+   "cost_header": 310,
+   "timing": 170,
+   "structure": 102,
+   "residue": 4
+  }
+ },
+ "constructions": {
+  "distinct_frames": 12505,
+  "frames_by_role": {
+   "effect": 5837,
+   "static": 2116,
+   "condition": 1388,
+   "trigger_event": 1016,
+   "amplifier": 941,
+   "keyword": 441,
+   "replacement": 259,
+   "restriction": 247,
+   "cost": 164,
+   "duration": 30,
+   "delayed_trigger": 21,
+   "timing": 20,
+   "link": 11,
+   "mode_header": 10,
+   "cost_header": 1,
+   "replacement_marker": 1,
+   "structure": 1,
+   "residue": 1
+  },
+  "frames_on_2plus_cards": 4371,
+  "frames_on_5plus_cards": 2014,
+  "share_of_parts_in_frames_on_2plus_cards": 93.9,
+  "share_of_parts_in_frames_on_5plus_cards": 89.3,
+  "frames_needed_to_cover_share_of_parts": {
+   "50%": 66,
+   "80%": 667,
+   "90%": 2255,
+   "95%": 5824,
+   "99%": 11169
+  },
+  "frames_needed_by_role": {
+   "effect": {
+    "50%": 44,
+    "80%": 377,
+    "90%": 1327,
+    "95%": 3235,
+    "99%": 5317
+   },
+   "trigger_event": {
+    "50%": 7,
+    "80%": 46,
+    "90%": 134,
+    "95%": 319,
+    "99%": 858
+   },
+   "cost": {
+    "50%": 2,
+    "80%": 4,
+    "90%": 8,
+    "95%": 14,
+    "99%": 53
+   },
+   "static": {
+    "50%": 29,
+    "80%": 358,
+    "90%": 1050,
+    "95%": 1583,
+    "99%": 2010
+   },
+   "condition": {
+    "50%": 65,
+    "80%": 380,
+    "90%": 824,
+    "95%": 1106,
+    "99%": 1332
+   },
+   "keyword": {
+    "50%": 8,
+    "80%": 42,
+    "90%": 98,
+    "95%": 149,
+    "99%": 283
+   }
+  },
+  "parts_by_completeness": {
+   "complete": 115513,
+   "partial": 10304,
+   "none": 7822
+  }
+ },
+ "registry": {
+  "concepts_defined": 444,
+  "concepts_used": 413,
+  "concepts_used_by_type": {
+   "keyword_macro": 251,
+   "operation": 60,
+   "event": 39,
+   "modifier": 23,
+   "cost": 17,
+   "state_predicate": 16,
+   "process": 6,
+   "structure": 1
+  },
+  "edges": 9365,
+  "frames_with_edges": 8808,
+  "frames_with_2plus_concepts": 544,
+  "concepts_by_dio_status": {
+   "addendum_pending": 261,
+   "language_layer": 11,
+   "ontology_defined": 141
+  },
+  "edge_status": {
+   "proposed": 9365
+  },
+  "distinct_concept_signatures": 12114,
+  "signatures_needed_to_cover_share_of_abilities": {
+   "50%": 145,
+   "80%": 1813,
+   "90%": 5925,
+   "95%": 9020,
+   "99%": 11496
+  },
+  "top_signatures": [
+   [
+    "keyword|keyword:kw.flying",
+    3117
+   ],
+   [
+    "activated|cost:cost.tap_self ; effect:op.mana.add",
+    1438
+   ],
+   [
+    "keyword|keyword:kw.enchant",
+    1200
+   ],
+   [
+    "static|static:op.ability.grant",
+    1150
+   ],
+   [
+    "keyword|keyword:kw.trample",
+    985
+   ],
+   [
+    "static|static:op.pt.modify",
+    898
+   ],
+   [
+    "keyword|keyword:kw.vigilance",
+    730
+   ],
+   [
+    "static|static:?",
+    641
+   ],
+   [
+    "keyword|keyword:kw.haste",
+    634
+   ],
+   [
+    "keyword|keyword:kw.equip",
+    633
+   ],
+   [
+    "keyword|keyword:kw.flash",
+    615
+   ],
+   [
+    "replacement|static:op.entry.tapped",
+    587
+   ],
+   [
+    "spell|mode_header:choice.modal",
+    427
+   ],
+   [
+    "triggered|trigger_event:ev.battlefield.enter ; effect:op.token.create",
+    427
+   ],
+   [
+    "keyword|keyword:kw.reach",
+    424
+   ],
+   [
+    "static|static:op.restrict",
+    407
+   ],
+   [
+    "keyword|keyword:kw.menace",
+    390
+   ],
+   [
+    "spell|effect:op.damage.deal",
+    389
+   ],
+   [
+    "keyword|keyword:kw.lifelink",
+    370
+   ],
+   [
+    "activated|cost:cost.mana ; effect:op.pt.modify ; duration:time.until_eot",
+    362
+   ],
+   [
+    "keyword|keyword:kw.first_strike",
+    359
+   ],
+   [
+    "spell|effect:op.card.draw",
+    351
+   ],
+   [
+    "spell|effect:op.permanent.destroy",
+    346
+   ],
+   [
+    "static|static:op.pt.modify ; static:op.ability.grant",
+    335
+   ],
+   [
+    "keyword|keyword:kw.deathtouch",
+    329
+   ]
+  ]
+ },
+ "collection": {
+  "abilities": 6932,
+  "parsed_complete": 5681,
+  "parsed_complete_pct": 82.0,
+  "reviewed_complete": 0,
+  "reviewed_complete_pct": 0.0,
+  "approved_frames": 0,
+  "by_kind": {
+   "triggered": {
+    "abilities": 1772,
+    "complete_pct": 75.7
+   },
+   "keyword": {
+    "abilities": 1715,
+    "complete_pct": 100.0
+   },
+   "activated": {
+    "abilities": 1116,
+    "complete_pct": 85.4
+   },
+   "spell": {
+    "abilities": 937,
+    "complete_pct": 72.0
+   },
+   "static": {
+    "abilities": 737,
+    "complete_pct": 65.1
+   },
+   "mode": {
+    "abilities": 267,
+    "complete_pct": 88.8
+   },
+   "replacement": {
+    "abilities": 256,
+    "complete_pct": 78.1
+   },
+   "chapter": {
+    "abilities": 53,
+    "complete_pct": 60.4
+   },
+   "additional_cost": {
+    "abilities": 49,
+    "complete_pct": 67.3
+   },
+   "loyalty": {
+    "abilities": 30,
+    "complete_pct": 50.0
+   }
+  },
+  "cards_with_every_ability_complete": 2272,
+  "cards": 3368,
+  "cards_all_complete_pct": 67.5,
+  "parts": 14786,
+  "parts_complete_pct": 90.0,
+  "distinct_frames_used": 2286,
+  "frames_also_on_unowned_cards_pct": 71.4,
+  "frames_only_on_unowned_cards": 10219,
+  "review_leverage_pct_of_abilities": {
+   "top_25_frames": 20.3,
+   "top_50_frames": 33.2,
+   "top_100_frames": 44.6,
+   "top_200_frames": 57.1,
+   "top_300_frames": 64.5,
+   "top_500_frames": 72.3,
+   "top_1000_frames": 80.3,
+   "top_2000_frames": 82.0,
+   "frames_for_all_complete_abilities": 1170
+  }
+ },
+ "contract_comparison": {
+  "matched": 4539,
+  "contract_trigger_hooks": 1631,
+  "trigger_hook_agree": 1560,
+  "contract_feeds": 2967,
+  "feed_agree_any": 2815,
+  "no_matching_contract": 629,
+  "as_enters_contract_trigger_vs_our_replacement": 36,
+  "trigger_hook_agree_pct": 95.6,
+  "feed_agree_pct": 94.9,
+  "sample_disagreements": [
+   [
+    "result",
+    "Freewind Equenaut",
+    "As long as this creature is enchanted, it has \"{T}: This creature deals 2 damage to target attacking or blocking creatur",
+    [
+     "damage.deal"
+    ],
+    [
+     "characteristics.change"
+    ]
+   ],
+   [
+    "trigger",
+    "Pest Rescuer",
+    "When this token dies, you gain 1 life.",
+    [
+     "turn.step.begin"
+    ],
+    [
+     "permanent.dies"
+    ]
+   ],
+   [
+    "trigger",
+    "Blood Cultist",
+    "Whenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+    [
+     "permanent.dies"
+    ],
+    []
+   ],
+   [
+    "trigger",
+    "Karok Wrangler",
+    "Whenever you cast or copy an instant or sorcery spell, put a +1/+1 counter on target creature you control.",
+    [
+     "spell.cast"
+    ],
+    []
+   ],
+   [
+    "trigger",
+    "Sharuum the Hegemon",
+    "When Sharuum enters, you may return target artifact card from your graveyard to the battlefield.",
+    [
+     "battlefield.enter"
+    ],
+    []
+   ],
+   [
+    "trigger",
+    "Queen Brahne",
+    "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.",
+    [
+     "attacker.declared"
+    ],
+    [
+     "spell.cast"
+    ]
+   ],
+   [
+    "result",
+    "Dewdrop Cure",
+    "Return up to two target creature cards each with mana value 2 or less from your graveyard to the battlefield. If the gif",
+    [
+     "card.return_to_hand"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Staggering Insight",
+    "Enchanted creature gets +1/+1 and has lifelink and \"Whenever this creature deals combat damage to a player, draw a card.",
+    [
+     "card.draw",
+     "damage.deal"
+    ],
+    [
+     "characteristics.change"
+    ]
+   ],
+   [
+    "trigger",
+    "Junkblade Bruiser",
+    "Whenever you expend 4, this creature gets +2/+1 until end of turn.",
+    [
+     "mana.spend"
+    ],
+    [
+     "requirement_group[class=trigger].alternatives: keyword action performed (scry/surveil/explore/... via macro, A7)"
+    ]
+   ],
+   [
+    "trigger",
+    "Warped Tusker",
+    "Sacrifice this token: Add {C}.",
+    [
+     "spell.cast"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Warped Tusker",
+    "Sacrifice this token: Add {C}.",
+    [
+     "token.create"
+    ],
+    [
+     "mana.add",
+     "permanent.sacrifice"
+    ]
+   ],
+   [
+    "result",
+    "Rufus Shinra",
+    "Whenever ~ attacks, if you don't control a creature named Darkstar, create Darkstar, a legendary 2/2 white and black Dog",
+    [
+     "token.create"
+    ],
+    []
+   ],
+   [
+    "trigger",
+    "Roughshod Duo",
+    "Whenever you expend 4, target creature you control gets +1/+1 and gains trample until end of turn.",
+    [
+     "mana.spend"
+    ],
+    [
+     "requirement_group[class=trigger].alternatives: keyword action performed (scry/surveil/explore/... via macro, A7)"
+    ]
+   ],
+   [
+    "trigger",
+    "Samwise the Stouthearted",
+    "When Samwise enters, choose up to one target permanent card in your graveyard that was put there from the battlefield th",
+    [
+     "battlefield.enter"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Brine Elemental",
+    "When this creature is turned face up, each opponent skips their next untap step.",
+    [
+     "permanent.untap"
+    ],
+    []
+   ],
+   [
+    "trigger",
+    "Mysidian Elder",
+    "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent.",
+    [
+     "battlefield.enter"
+    ],
+    [
+     "spell.cast"
+    ]
+   ],
+   [
+    "trigger",
+    "Rosie Cotton of South Lane",
+    "When Rosie Cotton enters, create a Food token.",
+    [
+     "battlefield.enter"
+    ],
+    []
+   ],
+   [
+    "trigger",
+    "Grub, Storied Matriarch // Grub, Notorious Auntie",
+    "At the beginning of the end step, sacrifice this token.",
+    [
+     "attacker.declared"
+    ],
+    [
+     "turn.step.begin"
+    ]
+   ],
+   [
+    "result",
+    "Grub, Storied Matriarch // Grub, Notorious Auntie",
+    "At the beginning of the end step, sacrifice this token.",
+    [
+     "token.create"
+    ],
+    [
+     "permanent.sacrifice"
+    ]
+   ],
+   [
+    "result",
+    "Sugar Coat",
+    "Enchanted permanent is a colorless Food artifact with \"{2}, {T}, Sacrifice this artifact: You gain 3 life\" and loses all",
+    [
+     "life.gain"
+    ],
+    [
+     "characteristics.change"
+    ]
+   ],
+   [
+    "trigger",
+    "Ray Fillet, Wave Warrior",
+    "Whenever a creature you control with a counter on it deals combat damage to a player, draw a card.",
+    [
+     "combat.damage"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Llanowar Greenwidow",
+    "If this permanent would leave the battlefield, exile it instead of putting it anywhere else.",
+    [
+     "card.return_to_hand"
+    ],
+    [
+     "exile.enter"
+    ]
+   ],
+   [
+    "result",
+    "Desecrator Hag",
+    "When this creature enters, return to your hand the creature card in your graveyard with the greatest power. If two or mo",
+    [
+     "card.return_to_hand"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Hypervolt Grasp",
+    "Enchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+    [
+     "damage.deal"
+    ],
+    [
+     "characteristics.change"
+    ]
+   ],
+   [
+    "result",
+    "Prismatic Undercurrents",
+    "You may play an additional land on each of your turns.",
+    [
+     "land.play",
+     "land_to_battlefield"
+    ],
+    [
+     "permission.play"
+    ]
+   ],
+   [
+    "result",
+    "Beorn, Reluctant Host // Till and Tend",
+    "You may play an additional land this turn.",
+    [
+     "land.play",
+     "land_to_battlefield"
+    ],
+    [
+     "permission.play"
+    ]
+   ],
+   [
+    "trigger",
+    "Pestbrood Sloth",
+    "Whenever this token attacks, you gain 1 life.",
+    [
+     "permanent.dies"
+    ],
+    [
+     "attacker.declared"
+    ]
+   ],
+   [
+    "result",
+    "Najal, the Storm Runner",
+    "You may cast sorcery spells as though they had flash.",
+    [
+     "permission.cast"
+    ],
+    [
+     "result.permits: PERMITS timing exception (as though it had flash)"
+    ]
+   ],
+   [
+    "trigger",
+    "Painter's Studio // Defaced Gallery",
+    "When you unlock this door, exile the top two cards of your library. You may play them until the end of your next turn.",
+    [
+     "room.unlock"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Badgermole Cub",
+    "When this creature enters, earthbend 1.",
+    [
+     "counter.put"
+    ],
+    [
+     "keyword action -> versioned rules expansion (A7); e.g. scry = card.look + library order"
+    ]
+   ],
+   [
+    "result",
+    "Mimeoplasm, Revered One",
+    "{2}: ~ becomes a copy of target creature card exiled with it, except it's 0/0 and has this ability.",
+    [
+     "object.becomes_copy"
+    ],
+    [
+     "characteristics.change",
+     "mana.spend"
+    ]
+   ],
+   [
+    "result",
+    "Thranduil's Company",
+    "As long as you control another Elf, you may play an additional land on each of your turns.",
+    [
+     "land.play",
+     "land_to_battlefield"
+    ],
+    [
+     "permission.play"
+    ]
+   ],
+   [
+    "result",
+    "Squirrel Nest",
+    "Enchanted land has \"{T}: Create a 1/1 green Squirrel creature token.\"",
+    [
+     "token.create"
+    ],
+    [
+     "characteristics.change"
+    ]
+   ],
+   [
+    "result",
+    "Desculpting Blast",
+    "This token can block only creatures with flying.",
+    [
+     "card.return_to_hand",
+     "token.create"
+    ],
+    [
+     "result.prevents: PREVENTS blocker.declared for the subject (can't be blocked [except by])"
+    ]
+   ],
+   [
+    "trigger",
+    "Embalmed Ascendant",
+    "Max speed \u2014 Whenever a creature you control dies, each opponent loses 1 life and you gain 1 life.",
+    [
+     "permanent.dies"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Pia Nalaar, Chief Mechanic",
+    "At the beginning of your end step, you may pay one or more {E}. If you do, create an X/X colorless Vehicle artifact toke",
+    [
+     "token.create"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Ringing Strike Mastery",
+    "Enchanted creature doesn't untap during its controller's untap step.",
+    [
+     "permanent.untap"
+    ],
+    [
+     "result.prevents: PREVENTS permanent.untap in untap step"
+    ]
+   ],
+   [
+    "result",
+    "Ringing Strike Mastery",
+    "Enchanted creature has \"{5}: Untap this creature.\"",
+    [
+     "permanent.untap"
+    ],
+    [
+     "characteristics.change"
+    ]
+   ],
+   [
+    "trigger",
+    "Spawn-Gang Commander",
+    "Sacrifice this token: Add {C}.",
+    [
+     "spell.cast"
+    ],
+    []
+   ],
+   [
+    "result",
+    "Spawn-Gang Commander",
+    "Sacrifice this token: Add {C}.",
+    [
+     "token.create"
+    ],
+    [
+     "mana.add",
+     "permanent.sacrifice"
+    ]
+   ]
+  ]
+ }
+}

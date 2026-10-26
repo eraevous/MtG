@@ -1,0 +1,64 @@
+card,type_line,oracle_recorded,oracle_sha12,candidate_ops,contracts_ready,contracts_blocked,contracts_with_action,projected_abilities,projection_status,unread_clauses,unread_text,verified_reviews,compiled_actions,runtime_eligibility,themes
+Al Bhed Salvagers,Creature — Human Artificer Warrior,True,9ab55a98c1a9,1,1,0,0,0,partial,1,"whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life.",0,0,"reviewable, no executable action",
+Anchovy & Banana Pizza,Artifact — Food,True,dca7a22078b0,2,2,0,2,2,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Astelli Reclaimer,Creature — Angel Warrior,True,e48e964178c4,1,0,1,1,1,partial,2,return target noncreature nonland permanent card with mana value x or less from your graveyard to the battlefield where x is the amount of mana spent to cast | warp {2}{w},0,0,blocked,repeatable_recursion
+Azorius Signet,Artifact,True,162e9c2434f6,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Bender's Waterskin,Artifact,True,cabb8744577e,2,2,0,1,1,partial,1,untap this artifact during each other player's untap step.,0,0,eligible after review,
+Bespoke Bō,Artifact — Equipment,True,fe39e0740409,2,2,0,1,1,partial,1,equipped creature gets +2/+1 and has vigilance.,0,0,eligible after review,
+Blitzball,Artifact,True,75e436b92e4d,2,1,1,2,2,partial,1,activate only if an opponent was dealt combat damage by a legendary creature this turn,0,0,eligible after review,
+Buzz Bots,Artifact Creature — Robot Insect,True,5f3101a586d8,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Cavern Harpy,Creature — Harpy Beast,True,0154f7a6e4ab,2,1,1,1,1,partial,2,return a blue or black creature you control to its owner's hand | pay 1 life: return this creature to its owner's hand.,0,0,"reviewable, no executable action",
+Chromatic Lantern,Artifact,True,e0fa0accecc4,2,1,1,2,1,partial,1,"lands you control have ""{t}: add one mana of any color.""",0,0,eligible after review,
+Chromatic Star,Artifact,True,7655399fcd1c,2,1,1,1,1,partial,1,"when this artifact is put into a graveyard from the battlefield, draw a card.",0,0,eligible after review,sacrifice_conversion
+Coin of Mastery,Artifact,True,7c4a8fa1d218,2,1,1,1,1,partial,1,each creature you control enters with an additional +1/+1 counter on it for each mana from an artifact source spent to cast it.,0,0,eligible after review,
+Coldsteel Heart,Snow Artifact,True,4309236ca199,2,1,1,1,1,partial,3,"this artifact enters tapped. | as this artifact enters, choose a color. | add one mana of the chosen color",0,0,"reviewable, no executable action",
+Conjurer's Bauble,Artifact,True,6984f4315dae,1,0,1,1,1,partial,1,put up to one target card from your graveyard on the bottom of your library,0,0,blocked,"repeatable_recursion, sacrifice_conversion"
+Cryogen Relic,Artifact,True,a6128e43caa0,2,1,1,2,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Disruptor of Currents,Creature — Merfolk Wizard,True,8ca5bf9088b1,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Divert Disaster,Instant,True,05f896eb5735,1,0,1,1,1,partial,1,if they do you,0,0,blocked,land_search
+Does Machines,Enchantment — Class,True,2442bc757203,5,1,4,1,1,partial,5,"when this class enters, mill two cards, draw two cards, then discard two cards. | {1}{u}: level 2 | when this class becomes level 2, return up to two target artifact cards from your graveyard to your hand. | {4}{u}: level 3 | if it isn't a creature it becomes a 0/0 robot creature in addition to its other types",0,0,"reviewable, no executable action","repeatable_recursion, self_mill"
+"Don & Leo, Problem Solvers",Legendary Creature — Mutant Ninja Turtle,True,a981c5c04069,1,0,1,1,1,partial,1,return them to the battlefield under their owners' control,0,0,blocked,repeatable_recursion
+Esperzoa,Artifact Creature — Jellyfish,True,13d6561d9eb4,1,0,1,1,1,partial,1,return an artifact you control to its owner's hand,0,0,blocked,
+Etherium Astrolabe,Artifact,True,e093880e8923,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Etherium Sculptor,Artifact Creature — Vedalken Artificer,True,4ec5b9e93964,0,0,0,0,0,machine_parsed,0,,0,0,no candidate operations,
+Executioner's Capsule,Artifact,True,e82eea2e475f,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Firdoch Core,Kindred Artifact — Shapeshifter,True,dfe814b4cca2,2,1,1,2,2,partial,1,becomes a 4/4 artifact creature until end of turn,0,0,eligible after review,
+Fix What's Broken,Sorcery,True,d101f4770e00,1,0,1,1,2,partial,1,return each artifact and creature card with mana value x from your graveyard to the battlefield,0,0,blocked,
+Gandalf the White,Legendary Creature — Avatar Wizard,True,68528ca30da3,1,1,0,0,0,partial,2,"you may cast legendary spells and artifact spells as though they had flash. | if a legendary permanent or an artifact entering or leaving the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.",0,0,"reviewable, no executable action",
+Gold Pan,Artifact — Equipment,True,29200f0e46e0,2,2,0,1,1,partial,1,equipped creature gets +1/+1.,0,0,eligible after review,
+Grim Bauble,Artifact,True,0b752abb3cce,2,1,1,2,2,partial,1,target creature an opponent controls gets 2/ 2 until end of turn,0,0,eligible after review,sacrifice_conversion
+Guidelight Pathmaker,Artifact — Vehicle,True,d1cdce662729,1,0,1,1,1,partial,1,search your library for an artifact card and reveal it put it onto the battlefield if its mana value is 2 or less otherwise put it into your hand if you search your library this way shuffle,0,0,blocked,
+Hulldrifter,Artifact — Vehicle,True,a0182b60074f,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Hymn of the Faller,Sorcery,True,4bafca1a194a,1,0,1,1,2,partial,2,you and lose 1 life | void if a nonland permanent left the battlefield this turn or a spell was warped this turn draw another card,0,0,blocked,
+Illvoi Light Jammer,Artifact — Equipment,True,a9ddad56d7e3,2,1,1,1,1,partial,2,attach it to target creature you control that creature gains hexproof until end of turn | equipped creature gets +1/+2.,0,0,"reviewable, no executable action",
+Junk Diver,Artifact Creature — Bird,True,439a7dbebe5c,1,0,1,1,1,partial,1,return another target artifact card from your graveyard to your hand,0,0,blocked,repeatable_recursion
+"Krang, Master Mind",Legendary Artifact Creature — Utrom Warrior,True,8e544e6064f6,1,0,1,1,1,partial,3,affinity for artifacts | if you have fewer than four cards in hand draw cards equal to the difference | ~ gets +1/+0 for each other artifact you control.,0,0,blocked,
+Magister Sphinx,Artifact Creature — Sphinx,True,a9d72404a16a,1,0,1,1,1,partial,1,target player's life total becomes 10,0,0,blocked,
+Mechan Assembler,Artifact Creature — Robot Artificer,True,4e20d6c42842,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Mirkwood Bats,Creature — Bat,True,732a8a030447,1,0,1,1,1,machine_parsed,0,,0,0,blocked,
+Nesting Bot,Artifact Creature — Robot,True,599bdce69bfa,1,1,0,1,1,partial,2,start your engines! | max speed — this creature gets +1/+0.,0,0,eligible after review,
+Nutrient Block,Artifact — Food,True,f62dc513e17b,2,1,1,1,1,partial,1,"when this artifact is put into a graveyard from the battlefield, draw a card.",0,0,eligible after review,sacrifice_conversion
+Omni-Cheese Pizza,Artifact — Food,True,64be2688c702,3,3,0,3,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Orzhov Signet,Artifact,True,c43c2e7bde1a,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Pactdoll Terror,Artifact Creature — Toy,True,f172ea7645a8,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,
+Path to Exile,Instant,True,6b1199153087,1,0,1,1,1,partial,1,its controller may search their library for a basic land card put that card onto the battlefield tapped then shuffle,0,0,blocked,
+Prismatic Lens,Artifact,True,ba3523af9777,2,2,0,2,2,machine_parsed,0,,0,0,eligible after review,
+Puppet Conjurer,Artifact Creature — Human Wizard,True,ef68ccc8d170,2,1,1,2,2,partial,1,sacrifice a homunculus,0,0,eligible after review,
+Refurbished Familiar,Artifact Creature — Zombie Rat,True,adc5c6e5988a,1,0,1,1,1,partial,2,affinity for artifacts | each opponent discards a card for each opponent who can't you,0,0,blocked,
+Repurposing Bay,Artifact,True,edee0de8b354,1,0,1,1,1,partial,1,search your library for an artifact card with mana value equal to 1 plus the sacrificed artifact's mana value put that card onto the battlefield then shuffle,0,0,blocked,sacrifice_conversion
+Rescue Skiff,Artifact — Spacecraft,True,bbbe343e496a,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,repeatable_recursion
+Sanctum Gargoyle,Artifact Creature — Gargoyle,True,a875f6a4fed1,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,repeatable_recursion
+Scour for Scrap,Instant,True,5c902a5ea1e9,3,0,3,2,2,partial,2,choose one or both — | • search your library for an artifact card reveal it put it into your hand then shuffle,0,0,blocked,
+Selfcraft Mechan,Artifact Creature — Robot Artificer,True,9ddac1596461,2,0,2,2,1,partial,1,sacrifice an artifact when you do,0,0,blocked,
+Sewer-veillance Cam,Artifact,True,8b62b5de44da,2,2,0,2,3,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Sharuum the Hegemon,Legendary Artifact Creature — Sphinx,True,0eb65e978ca4,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,repeatable_recursion
+Shatter the Sky,Sorcery,True,ee2beb54d9bd,1,0,1,1,1,partial,1,each player who controls a creature with power 4 or greater then,0,0,blocked,
+Skycoach Conductor // All Aboard,Creature — Bird Pilot // Instant,True,5fc96028caa2,1,0,1,0,0,partial,4,"~ {2}{u} | this creature enters prepared. | all aboard {u} | exile target non-pilot creature you control, then return that card to the battlefield under its owner's control.",0,0,blocked,
+Solemn Simulacrum,Artifact Creature — Golem,True,7852a9aca10c,2,1,1,2,2,partial,1,search your library for a basic land card put that card onto the battlefield tapped then shuffle,0,0,eligible after review,land_search
+Susurian Dirgecraft,Artifact — Spacecraft,True,afa96240e3f2,1,0,1,1,1,partial,1,each opponent sacrifices a nontoken creature of their choice,0,0,blocked,
+Susurian Voidborn,Creature — Vampire Soldier,True,4926168a212e,1,1,0,0,0,partial,2,"whenever this creature or another creature or artifact you control dies, target opponent loses 1 life and you gain 1 life. | warp {b}",0,0,"reviewable, no executable action",
+Thopter Foundry,Artifact,True,87d06514c8e0,1,1,0,1,1,machine_parsed,0,,0,0,eligible after review,sacrifice_conversion
+Twinning Glass,Artifact,True,48851482533e,1,0,1,1,1,partial,1,cast a spell from your hand without paying its mana cost if it has the same name as a spell that was cast this turn,0,0,blocked,
+Unbender Tine,Artifact,True,c1a798ea0ca1,1,0,1,1,1,partial,1,untap another target permanent,0,0,blocked,
+Vanquish the Horde,Sorcery,True,02b22e9de17e,2,1,1,1,1,partial,1,this spell costs {1} less to cast for each creature on the battlefield.,0,0,eligible after review,
+"Zoraline, Cosmos Caller",Legendary Creature — Bat Cleric,True,348aa020ff41,2,1,1,1,1,partial,2,"whenever a bat you control attacks, you gain 1 life. | or attacks you may pay {w}{b} and 2 life when you do return target nonland permanent card with mana value 3 or less from your graveyard to the battlefield with a finality counter on it",0,0,"reviewable, no executable action",repeatable_recursion

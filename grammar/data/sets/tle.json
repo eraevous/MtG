@@ -1,0 +1,3131 @@
+{
+"set": {
+"code": "tle",
+"name": "Avatar: The Last Airbender Eternal",
+"set_type": "eternal",
+"released_at": "2025-11-21",
+"card_count": 317,
+"parent_set_code": "tla"
+},
+"retrieved_utc": "2026-10-22T03:34:03Z",
+"members": [
+{
+"oracle_id": "f6ed46e2-08f9-4e89-aae3-e5dd7f30f007",
+"name": "Brought Back",
+"collector_number": "1",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "aadd10d0-6dd0-4bdc-8d93-ff08e29a5863",
+"name": "Drannith Magistrate",
+"collector_number": "2",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Wizard",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b0391ea4-e37d-48c9-91df-79aefe376bcc",
+"name": "Empty City Ruse",
+"collector_number": "3",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "715cb547-726f-4bc8-ad46-297d4dccb881",
+"name": "Lita, Mechanical Engineer",
+"collector_number": "4",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Artificer",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "3ae456e4-cb35-47be-b654-051e288622fe",
+"name": "Release to Memory",
+"collector_number": "5",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f65cba6a-3ef4-4841-b2c1-578b2a2c3300",
+"name": "Scout's Warning",
+"collector_number": "6",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0d4ecdb1-ec90-497f-a7a4-1c68092b8757",
+"name": "Teferi's Protection",
+"collector_number": "7",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b3f9da94-c822-49b8-a1fc-be82189206af",
+"name": "Three Dreams",
+"collector_number": "8",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4cd82c7a-86df-4d29-b578-c009208c0d4b",
+"name": "Agent of Treachery",
+"collector_number": "9",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Rogue",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6d194882-ca37-49bb-ac9f-a751c53850a8",
+"name": "Bribery",
+"collector_number": "10",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "42226b87-0746-4ebf-9fd0-108d508462af",
+"name": "Clone",
+"collector_number": "11",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Shapeshifter",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "690bd111-5b32-4156-b650-9afad3d6ef3d",
+"name": "Clone Legion",
+"collector_number": "12",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ac2173f9-f223-440a-9231-fd98762bdc6f",
+"name": "Force of Negation",
+"collector_number": "13",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "339a7418-9a29-4eae-a3c2-ea590d175936",
+"name": "Imprisoned in the Moon",
+"collector_number": "14",
+"rarity": "mythic",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1e943e04-e213-4781-b1a7-935aad8790e1",
+"name": "Intruder Alarm",
+"collector_number": "15",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8a52f3c0-2552-4425-b2e3-5496eb2232a7",
+"name": "Mystic Remora",
+"collector_number": "16",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [
+"Cumulative upkeep"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c586312d-d04a-4bfb-bbb2-b41186ca178e",
+"name": "Prosperity",
+"collector_number": "17",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8ecdaf4b-4442-42da-9714-4257a83faf50",
+"name": "Sakashima of a Thousand Faces",
+"collector_number": "18",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Rogue",
+"keywords": [
+"Partner"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "fea4cb32-0329-4199-9abe-bff0cc45882a",
+"name": "Standstill",
+"collector_number": "19",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8de3eabe-9a8f-4865-beef-a4888c081d39",
+"name": "Training Grounds",
+"collector_number": "20",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c68964df-51ae-43b0-abea-74735016c13f",
+"name": "Visions of Beyond",
+"collector_number": "21",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "038c0165-32b6-4e81-8180-604b49905207",
+"name": "Black Sun's Zenith",
+"collector_number": "22",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d5ea905b-4bb6-48d0-9082-c472703db550",
+"name": "Bloodchief Ascension",
+"collector_number": "23",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d9353eb6-c7e7-4d85-a0c2-32b1d091881a",
+"name": "Cruel Tutor",
+"collector_number": "24",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a77b5be2-f361-4135-ba25-670a74d268ac",
+"name": "Noxious Gearhulk",
+"collector_number": "25",
+"rarity": "mythic",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7a2484a9-04fd-41a0-8224-610c1c07ed10",
+"name": "Blasphemous Act",
+"collector_number": "26",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bf20bc37-3205-45af-a3be-05d6835c0d87",
+"name": "Diaochan, Artful Beauty",
+"collector_number": "27",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Advisor",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "697bcfe1-ecbf-42a1-bfc7-0766d48ca56b",
+"name": "Dockside Extortionist",
+"collector_number": "28",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Goblin Pirate",
+"keywords": [
+"Treasure"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+"name": "Fervor",
+"collector_number": "29",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1582e16d-4825-4cc5-b12c-449c45e4e449",
+"name": "Humble Defector",
+"collector_number": "30",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Human Rogue",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7f7c204f-be1a-47e4-91c6-ba6f906d9012",
+"name": "Insurrection",
+"collector_number": "31",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+"name": "Lightning Bolt",
+"collector_number": "32",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9ea14a03-c6a2-49ec-953d-4249a2c27e1d",
+"name": "Mirrorwing Dragon",
+"collector_number": "33",
+"rarity": "mythic",
+"type_line": "Creature \u2014 Dragon",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0324941f-484c-4656-8d1c-66e919c2bc7c",
+"name": "Rending Volley",
+"collector_number": "34",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "902b82fd-bb18-4833-b427-af8c9751f870",
+"name": "Searing Blood",
+"collector_number": "35",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "fe725b27-49ef-41bc-91f9-9cd9871ad863",
+"name": "Shattering Spree",
+"collector_number": "36",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [
+"Replicate"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ec2968fb-163d-4907-862b-b84a1f167833",
+"name": "Volcanic Torrent",
+"collector_number": "37",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [
+"Cascade"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "42fb1a1c-ab3d-4cdc-a6ff-a591f7481583",
+"name": "Warstorm Surge",
+"collector_number": "38",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "11b5308d-5bc0-4782-875f-a28be36e665d",
+"name": "Beastmaster Ascension",
+"collector_number": "39",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d9a7e5a6-3e41-4fc6-987a-18fe1b9d67dd",
+"name": "Elemental Bond",
+"collector_number": "40",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "78427103-9543-41fb-b6d4-72963fe87275",
+"name": "The Great Henge",
+"collector_number": "41",
+"rarity": "mythic",
+"type_line": "Legendary Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f15911a5-f597-452e-a015-b115339f28fc",
+"name": "Heartbeat of Spring",
+"collector_number": "42",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "24882fa2-3fe9-4c1b-aa3d-0e6488b9db27",
+"name": "Heroic Intervention",
+"collector_number": "43",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2b76f9e9-cd28-4eaf-8674-215c34263f96",
+"name": "Return of the Wildspeaker",
+"collector_number": "44",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7080fb43-5d93-41f5-87d3-bc1801805ea0",
+"name": "Rites of Flourishing",
+"collector_number": "45",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "50c52320-9f84-4655-a91a-e09b71f9025c",
+"name": "Taunting Challenge",
+"collector_number": "46",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2e7a9ea9-f76c-4c12-950f-c613fa16cfa8",
+"name": "Captain Sisay",
+"collector_number": "47",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4acb6612-54e8-428d-acb6-c7259a5ad6a8",
+"name": "Eladamri's Call",
+"collector_number": "48",
+"rarity": "mythic",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "70763549-4b4e-4cb8-8c02-0639ba18bb1a",
+"name": "Fevered Visions",
+"collector_number": "49",
+"rarity": "mythic",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d8fc015c-7e6d-441d-bbeb-98ca74b21314",
+"name": "Join the Dance",
+"collector_number": "50",
+"rarity": "mythic",
+"type_line": "Sorcery",
+"keywords": [
+"Flashback"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6ba0656f-e0d2-4735-9c66-3a00afa9fc23",
+"name": "Koma, Cosmos Serpent",
+"collector_number": "51",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Serpent",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f7252190-ad24-4ba3-a644-2790dd1d680d",
+"name": "Rhys the Redeemed",
+"collector_number": "52",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Elf Warrior",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d4d65797-2b92-4265-9169-133120c86c7f",
+"name": "Cityscape Leveler",
+"collector_number": "53",
+"rarity": "mythic",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [
+"Unearth",
+"Trample"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0c3c3bcc-d485-4a01-92fe-8bf29c0fc926",
+"name": "Meteorite",
+"collector_number": "54",
+"rarity": "mythic",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "79d46e09-2548-440f-9c02-3c3dc39a0cd1",
+"name": "Sundial of the Infinite",
+"collector_number": "55",
+"rarity": "mythic",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c9b82110-7dfd-4617-9399-9510be449043",
+"name": "Dark Depths",
+"collector_number": "56",
+"rarity": "mythic",
+"type_line": "Legendary Snow Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+"name": "Fabled Passage",
+"collector_number": "57",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f97fd068-b83a-4621-bf8c-cc96e880ce90",
+"name": "Sunbaked Canyon",
+"collector_number": "58",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "66ae2562-68e9-4c77-ba0a-57f8ff37f656",
+"name": "Tarnished Citadel",
+"collector_number": "59",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b53f216d-1592-4eee-b204-502a805fbc8c",
+"name": "Treetop Village",
+"collector_number": "60",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1bc44216-4e06-4f66-89b7-5c327004604e",
+"name": "Valakut, the Molten Pinnacle",
+"collector_number": "61",
+"rarity": "mythic",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "72994a7a-7c0d-4f28-8cc0-28161d098d7f",
+"name": "Appa, the Vigilant",
+"collector_number": "62",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Bison Ally",
+"keywords": [
+"Flying",
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "83ccbcb1-7cf0-41a0-8abd-18f4bc647b5f",
+"name": "Katara's Reversal",
+"collector_number": "63",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2ce2a091-95b6-45e5-9097-77fea411162e",
+"name": "Fire Nation Turret",
+"collector_number": "64",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "feb00c6d-ff43-49bc-84d5-57e2d4651258",
+"name": "Swampbenders",
+"collector_number": "65",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Druid Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "dcc29e59-341c-4175-aa54-f535e2c3e355",
+"name": "Sokka's Charge",
+"collector_number": "66",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "300f17a2-1594-40cb-9187-952898a83622",
+"name": "Earthshape",
+"collector_number": "67",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b86ba0aa-89f3-4924-b3c4-f7ca44468e9b",
+"name": "Mai and Zuko",
+"collector_number": "68",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "481c3e14-b670-4fab-aa9f-6ce5b514096d",
+"name": "Aang and Katara",
+"collector_number": "69",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Avatar Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "3741206f-8ef5-4b8f-ae4c-df3ab0a17683",
+"name": "Toph, Greatest Earthbender",
+"collector_number": "70",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e84becc0-6e15-4a74-aec0-9746b86ab5cc",
+"name": "Sokka and Suki",
+"collector_number": "71",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b8f05217-1f61-4d6d-be17-7fb15f1d1e32",
+"name": "Momo's Heist",
+"collector_number": "72",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6de489bf-6922-4f97-8001-efa8cb5a27cb",
+"name": "Uncle's Musings",
+"collector_number": "73",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Converge"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f3176779-74f7-4136-a701-438feeead7a0",
+"name": "Aang, Airbending Master",
+"collector_number": "74",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Avatar Ally",
+"keywords": [
+"Airbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a468f6ab-c0a8-4295-8b01-7147d3f889b4",
+"name": "Air Nomad Student",
+"collector_number": "75",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Monk",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1c55047d-badc-49bb-b791-e9759577e4eb",
+"name": "The Duke, Rebel Sentry",
+"collector_number": "76",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "5863c67b-a47c-4466-8bd1-210ab26e0d3f",
+"name": "Inspired Insurgent",
+"collector_number": "77",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Peasant Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b9ca8ead-c267-4170-a6c8-04498330c82b",
+"name": "Jet, Rebel Leader",
+"collector_number": "78",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "3faab84f-7055-4554-b948-181928d8d4e2",
+"name": "Kindly Customer",
+"collector_number": "79",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Citizen",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2e0226eb-20a3-488c-8f2b-f99a5b4d0cf4",
+"name": "Koala-Sheep",
+"collector_number": "80",
+"rarity": "common",
+"type_line": "Creature \u2014 Bear Sheep",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ff92fa60-f0fe-496e-8155-d9d6f5af651b",
+"name": "Monk Gyatso",
+"collector_number": "81",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Monk",
+"keywords": [
+"Airbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "08a5445b-e9e6-44c3-9bc4-aff1b91c18a7",
+"name": "Pipsqueak, Rebel Strongarm",
+"collector_number": "82",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "90b4d288-e950-4182-af62-516549a8712c",
+"name": "Sokka, Swordmaster",
+"collector_number": "83",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "19963c90-e7b2-4935-adcd-d41f0faf401a",
+"name": "Sokka's Sword Training",
+"collector_number": "84",
+"rarity": "common",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "558513bb-a76d-434a-98fc-3707a5d8886a",
+"name": "Suki, Kyoshi Captain",
+"collector_number": "85",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "728157a3-fcd4-4295-85ff-1162dbb64f8a",
+"name": "Tale of Momo",
+"collector_number": "86",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "fc3ee37a-f676-44af-80d0-774ff271ce11",
+"name": "That's Rough Buddy",
+"collector_number": "87",
+"rarity": "uncommon",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "39d283e0-9d9b-4c04-aa6a-66a9883af9a2",
+"name": "Toucan-Puffin",
+"collector_number": "88",
+"rarity": "common",
+"type_line": "Creature \u2014 Bird",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "eb036e02-f43e-46a2-90f1-931579467c9b",
+"name": "Baboon Spirit",
+"collector_number": "89",
+"rarity": "rare",
+"type_line": "Creature \u2014 Monkey Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "497e9c7c-a16d-43e5-a7ec-04153aa2566a",
+"name": "The Blue Spirit",
+"collector_number": "90",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Rogue Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "12c57ebe-35a7-4cb3-936b-99c148a3cfed",
+"name": "Chakra Meditation",
+"collector_number": "91",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b58a70e2-3609-441a-993a-dccb9a2cf242",
+"name": "Dutiful Knowledge Seeker",
+"collector_number": "92",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Fox Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2e3af413-6706-4023-871a-e5e49da5beab",
+"name": "Katara, Waterbending Master",
+"collector_number": "93",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0403bfb0-2174-4360-994d-68d8ca96fc55",
+"name": "Nightmares and Daydreams",
+"collector_number": "94",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "08c59e5e-d01c-49b7-a812-8ea75e9e945d",
+"name": "Princess Yue",
+"collector_number": "95",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "781c9391-0322-40ad-8050-07151e2e6fc7",
+"name": "Tui and La, Moon and Ocean",
+"collector_number": "96",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Fish Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "74b8976a-15cb-4604-a65d-ca9735cd6000",
+"name": "Unagi's Spray",
+"collector_number": "97",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6927bd2e-cb05-487a-af86-89ede6e8dabd",
+"name": "Wan Shi Tong, All-Knowing",
+"collector_number": "98",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Bird Spirit",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "285046f6-b3c4-4eb7-8712-9dffebabc762",
+"name": "Waterbender's Restoration",
+"collector_number": "99",
+"rarity": "rare",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [
+"Waterbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a4477852-66eb-4a54-b4c1-760cbf624f82",
+"name": "Whirlwind Technique",
+"collector_number": "100",
+"rarity": "uncommon",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [
+"Airbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7139ead5-86f0-46ae-8a6d-ad66d0408f73",
+"name": "Azula, Ruthless Firebender",
+"collector_number": "101",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f13a8621-4d88-4c1f-8b6e-80f8ef383cd2",
+"name": "Dai Li Censor",
+"collector_number": "102",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier Advisor",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc1ea0ba-46bf-49b6-af95-51eaf1ab915e",
+"name": "Desperate Plea",
+"collector_number": "103",
+"rarity": "rare",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "5945306d-e792-4eae-999b-dfb44b10f062",
+"name": "Fire Lord Ozai",
+"collector_number": "104",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2a99c0d6-3200-44ff-8d4c-f7a38cecb05f",
+"name": "Fire Nation Occupation",
+"collector_number": "105",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9e76d56a-67b6-4bd9-8f2d-3328d18a2880",
+"name": "Fire Nation Salvagers",
+"collector_number": "106",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "439ae30b-348d-480c-8d3d-fe105167bdc4",
+"name": "Giant Fly",
+"collector_number": "107",
+"rarity": "common",
+"type_line": "Creature \u2014 Insect",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b5018037-cf4e-46d2-86c3-fb8eec6e44d1",
+"name": "Lo and Li, Royal Advisors",
+"collector_number": "108",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Advisor",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "3492cee8-b854-449a-ada4-a4e8a4333d87",
+"name": "Nyla, Shirshu Sleuth",
+"collector_number": "109",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mole Beast",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "100771fd-07db-47be-ada3-935dc918fa33",
+"name": "Ruthless Waterbender",
+"collector_number": "110",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Soldier Ally",
+"keywords": [
+"Waterbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "63957ec0-89e6-4be2-8740-846ca56ee48c",
+"name": "Scarring Memories",
+"collector_number": "111",
+"rarity": "uncommon",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9eb9e4c1-fabf-45ff-a584-fbe4b94fb41c",
+"name": "Avatar Roku, Firebender",
+"collector_number": "112",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Avatar",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "faffc9fb-32b3-4015-8c3f-e6b45002c050",
+"name": "Chong and Lily, Nomads",
+"collector_number": "113",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Bard Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "76c7a339-015b-4074-8e10-14d52b784f9b",
+"name": "Deer-Dog",
+"collector_number": "114",
+"rarity": "common",
+"type_line": "Creature \u2014 Elk Dog",
+"keywords": [
+"First strike"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6665bfe2-942c-4b3d-a976-776fe00c99f4",
+"name": "Fang, Roku's Companion",
+"collector_number": "115",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Dragon",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ea58fb10-3d70-4c25-b317-615dfb20a48d",
+"name": "Founding of Omashu",
+"collector_number": "116",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Saga",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a866cc05-69b0-45f2-8829-b6ef08193ed1",
+"name": "Frantic Confrontation",
+"collector_number": "117",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "33e66662-aea6-480c-b69b-1907d987b69e",
+"name": "Freedom Fighter Recruit",
+"collector_number": "118",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Rebel Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "98f9b97b-4c15-4d24-895a-a9bebb68e79b",
+"name": "Iroh, Dragon of the West",
+"collector_number": "119",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"Mentor",
+"Haste"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f93c3468-5b1d-4fa7-a281-1009ea0f2062",
+"name": "Longshot, Rebel Bowman",
+"collector_number": "120",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "69ac3757-66f8-47d4-af7b-dda66c96c254",
+"name": "Lost in Memories",
+"collector_number": "121",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Flash"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d6e1b1ff-e4e5-4814-9a20-2d527014463f",
+"name": "Moku, Meandering Drummer",
+"collector_number": "122",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Bard Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "20d94561-7526-4305-8d2d-7daf62729ff4",
+"name": "Overwhelming Victory",
+"collector_number": "123",
+"rarity": "rare",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "75137acb-dc8e-439b-8d84-c5cf682ff6bc",
+"name": "Reckless Blaze",
+"collector_number": "124",
+"rarity": "rare",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "127bc05b-2945-434c-bc6a-283a267cc72a",
+"name": "Smellerbee, Rebel Fighter",
+"collector_number": "125",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [
+"First strike"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6f8ca795-d6fd-4e3e-911c-c621a942acbb",
+"name": "Storm of Memories",
+"collector_number": "126",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Storm"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "33db6dc8-2c88-4a7f-8d4d-3bc9fb6544b2",
+"name": "Zuko, Firebending Master",
+"collector_number": "127",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"First strike",
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "787e6cc6-d97a-4229-97d1-ec2377d138d3",
+"name": "Animal Attendant",
+"collector_number": "128",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Citizen",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9ed4e48f-91bd-45f9-9f31-a2705b330713",
+"name": "The Art of Tea",
+"collector_number": "129",
+"rarity": "common",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [
+"Food"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "fd751ed4-4002-4cae-9d1d-1fe0f1fd4965",
+"name": "Avatar Kyoshi, Earthbender",
+"collector_number": "130",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Avatar",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "47e77918-13ec-47ce-9256-5a3b5bf8d315",
+"name": "Bison Whistle",
+"collector_number": "131",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a213c650-06cc-4ea8-86f8-78ccfe103b38",
+"name": "Bosco, Just a Bear",
+"collector_number": "132",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Bear",
+"keywords": [
+"Food"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "41f53bb5-8a62-4e6b-b9c3-5aa530a036bc",
+"name": "Bumi's Feast Lecture",
+"collector_number": "133",
+"rarity": "uncommon",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [
+"Food",
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e31808bb-fb6e-487b-a973-db44961c84ee",
+"name": "The Cabbage Merchant",
+"collector_number": "134",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Citizen",
+"keywords": [
+"Food"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d5314006-afe0-4cdc-88f0-ff1f7d85fba9",
+"name": "Cracked Earth Technique",
+"collector_number": "135",
+"rarity": "uncommon",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c23f2546-bf9e-4390-b6f7-c616920e04ca",
+"name": "Creeping Crystal Coating",
+"collector_number": "136",
+"rarity": "uncommon",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Food",
+"Enchant",
+"Flash"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "93d2638b-0c19-4fba-a0ad-84b6a9784eb3",
+"name": "Crystalline Armor",
+"collector_number": "137",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8695c7e2-464e-464c-9d3f-a7cf025f3eb2",
+"name": "Elephant-Mandrill",
+"collector_number": "138",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Elephant Monkey",
+"keywords": [
+"Reach",
+"Food"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "11e70692-2057-49c8-90e6-953362f4817f",
+"name": "Hei Bai, Forest Guardian",
+"collector_number": "139",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Bear Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4bb0596f-df1d-4977-bb8b-4d2e6648dcb3",
+"name": "Kyoshi Warrior Exemplars",
+"collector_number": "140",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "66de5b97-0de0-422c-a351-bfe55ad4503a",
+"name": "Master's Guidance",
+"collector_number": "141",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8609ed1a-f202-483e-9299-408ef6e84ad6",
+"name": "Solid Ground",
+"collector_number": "142",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7c376ea9-d50a-4cc3-ae40-7bac3a926f20",
+"name": "Tale of Katara and Toph",
+"collector_number": "143",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b71c3c1e-f927-4192-ac3a-cf6a442ffd00",
+"name": "Tectonic Split",
+"collector_number": "144",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Hexproof"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ad5d3e7e-bf8c-4fa3-a81e-1523aec2585f",
+"name": "Toph, Earthbending Master",
+"collector_number": "145",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Earthbend",
+"Landfall"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "854278bc-2bcf-45dd-abd5-6aca7a1e5fc9",
+"name": "Aang, A Lot to Learn",
+"collector_number": "146",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Avatar Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "610e5fda-ff6c-408d-9d58-ba2b02c5101f",
+"name": "Hook Swords",
+"collector_number": "147",
+"rarity": "uncommon",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "124cc815-0877-40f2-98c8-e7c4f8cd6598",
+"name": "Katara, Seeking Revenge",
+"collector_number": "148",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Waterbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "5a05ee6e-1812-4792-ad00-6df8fa4fd85f",
+"name": "Stand United",
+"collector_number": "149",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6e737c52-cbe0-493f-ae46-7bf068e04882",
+"name": "Zuko, Seeking Honor",
+"collector_number": "150",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1347224f-421e-4270-8e50-cf25c875909c",
+"name": "Acrobatic Leap",
+"collector_number": "151",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+"name": "Cloudshift",
+"collector_number": "152",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "5cdc4654-b8c5-4599-a1d2-9e9d5f6509cb",
+"name": "Duelist's Heritage",
+"collector_number": "153",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1f938353-9081-4dc1-b8e7-d18ece038bd4",
+"name": "Valorous Stance",
+"collector_number": "154",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "36cd2364-d113-47d1-b2c4-b088d9eb88dd",
+"name": "Brainstorm",
+"collector_number": "155",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8a05ec32-7b0c-4f23-a4f7-413301c2a70a",
+"name": "Coastal Piracy",
+"collector_number": "156",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4c9bcba6-87b5-4fb3-97ee-6fe5b739337d",
+"name": "Consider",
+"collector_number": "157",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "da46904c-8fb8-44c2-b2ab-775a1cc12ec3",
+"name": "Dramatic Reversal",
+"collector_number": "158",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+"name": "Frantic Search",
+"collector_number": "159",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c7f33cea-2ec8-4081-9208-a5b1d86721b3",
+"name": "Bastion of Remembrance",
+"collector_number": "160",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c527eb80-ccac-40b8-8377-c31121613128",
+"name": "Dark Deal",
+"collector_number": "161",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a7b12df9-fddd-4cd4-8c09-d54a47867ab6",
+"name": "Diresight",
+"collector_number": "162",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c20a96f7-aa5a-4c15-b8b1-806685c99b27",
+"name": "Bolt Bend",
+"collector_number": "163",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0f3c3e5f-6af3-4af2-8703-4ccc8ed8f675",
+"name": "Cathartic Reunion",
+"collector_number": "164",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "3c22e031-4804-4c31-bd3c-c3f29d456b34",
+"name": "Fiery Confluence",
+"collector_number": "165",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e05abb6b-e9f4-4d9e-ad1e-7805ebc09914",
+"name": "Fists of Flame",
+"collector_number": "166",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ba13cbdb-8043-4c1b-8a85-084c86886ac8",
+"name": "Descendants' Path",
+"collector_number": "167",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9b9a10ff-5a5d-4df8-88aa-18d84ff9117c",
+"name": "Inspiring Call",
+"collector_number": "168",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "92ea750e-62b7-4422-a527-ddf435759d08",
+"name": "Many Partings",
+"collector_number": "169",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [
+"Food"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ca611c90-7753-43dd-af91-81694d004eeb",
+"name": "Suspicious Bookcase",
+"collector_number": "170",
+"rarity": "uncommon",
+"type_line": "Artifact Creature \u2014 Wall",
+"keywords": [
+"Defender"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f3176779-74f7-4136-a701-438feeead7a0",
+"name": "Aang, Airbending Master",
+"collector_number": "171",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Avatar Ally",
+"keywords": [
+"Airbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b9ca8ead-c267-4170-a6c8-04498330c82b",
+"name": "Jet, Rebel Leader",
+"collector_number": "172",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ff92fa60-f0fe-496e-8155-d9d6f5af651b",
+"name": "Monk Gyatso",
+"collector_number": "173",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Monk",
+"keywords": [
+"Airbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "90b4d288-e950-4182-af62-516549a8712c",
+"name": "Sokka, Swordmaster",
+"collector_number": "174",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "558513bb-a76d-434a-98fc-3707a5d8886a",
+"name": "Suki, Kyoshi Captain",
+"collector_number": "175",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "728157a3-fcd4-4295-85ff-1162dbb64f8a",
+"name": "Tale of Momo",
+"collector_number": "176",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "eb036e02-f43e-46a2-90f1-931579467c9b",
+"name": "Baboon Spirit",
+"collector_number": "177",
+"rarity": "rare",
+"type_line": "Creature \u2014 Monkey Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "497e9c7c-a16d-43e5-a7ec-04153aa2566a",
+"name": "The Blue Spirit",
+"collector_number": "178",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Rogue Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "12c57ebe-35a7-4cb3-936b-99c148a3cfed",
+"name": "Chakra Meditation",
+"collector_number": "179",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2e3af413-6706-4023-871a-e5e49da5beab",
+"name": "Katara, Waterbending Master",
+"collector_number": "180",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "781c9391-0322-40ad-8050-07151e2e6fc7",
+"name": "Tui and La, Moon and Ocean",
+"collector_number": "181",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Fish Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6927bd2e-cb05-487a-af86-89ede6e8dabd",
+"name": "Wan Shi Tong, All-Knowing",
+"collector_number": "182",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Bird Spirit",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "285046f6-b3c4-4eb7-8712-9dffebabc762",
+"name": "Waterbender's Restoration",
+"collector_number": "183",
+"rarity": "rare",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [
+"Waterbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7139ead5-86f0-46ae-8a6d-ad66d0408f73",
+"name": "Azula, Ruthless Firebender",
+"collector_number": "184",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc1ea0ba-46bf-49b6-af95-51eaf1ab915e",
+"name": "Desperate Plea",
+"collector_number": "185",
+"rarity": "rare",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "5945306d-e792-4eae-999b-dfb44b10f062",
+"name": "Fire Lord Ozai",
+"collector_number": "186",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2a99c0d6-3200-44ff-8d4c-f7a38cecb05f",
+"name": "Fire Nation Occupation",
+"collector_number": "187",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9e76d56a-67b6-4bd9-8f2d-3328d18a2880",
+"name": "Fire Nation Salvagers",
+"collector_number": "188",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b5018037-cf4e-46d2-86c3-fb8eec6e44d1",
+"name": "Lo and Li, Royal Advisors",
+"collector_number": "189",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Advisor",
+"keywords": [
+"Mill"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "3492cee8-b854-449a-ada4-a4e8a4333d87",
+"name": "Nyla, Shirshu Sleuth",
+"collector_number": "190",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Mole Beast",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9eb9e4c1-fabf-45ff-a584-fbe4b94fb41c",
+"name": "Avatar Roku, Firebender",
+"collector_number": "191",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Avatar",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "faffc9fb-32b3-4015-8c3f-e6b45002c050",
+"name": "Chong and Lily, Nomads",
+"collector_number": "192",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Bard Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6665bfe2-942c-4b3d-a976-776fe00c99f4",
+"name": "Fang, Roku's Companion",
+"collector_number": "193",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Dragon",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "98f9b97b-4c15-4d24-895a-a9bebb68e79b",
+"name": "Iroh, Dragon of the West",
+"collector_number": "194",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"Mentor",
+"Haste"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "69ac3757-66f8-47d4-af7b-dda66c96c254",
+"name": "Lost in Memories",
+"collector_number": "195",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Flash"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "20d94561-7526-4305-8d2d-7daf62729ff4",
+"name": "Overwhelming Victory",
+"collector_number": "196",
+"rarity": "rare",
+"type_line": "Instant \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "75137acb-dc8e-439b-8d84-c5cf682ff6bc",
+"name": "Reckless Blaze",
+"collector_number": "197",
+"rarity": "rare",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "127bc05b-2945-434c-bc6a-283a267cc72a",
+"name": "Smellerbee, Rebel Fighter",
+"collector_number": "198",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Rebel Ally",
+"keywords": [
+"First strike"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6f8ca795-d6fd-4e3e-911c-c621a942acbb",
+"name": "Storm of Memories",
+"collector_number": "199",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [
+"Storm"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "33db6dc8-2c88-4a7f-8d4d-3bc9fb6544b2",
+"name": "Zuko, Firebending Master",
+"collector_number": "200",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"First strike",
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "fd751ed4-4002-4cae-9d1d-1fe0f1fd4965",
+"name": "Avatar Kyoshi, Earthbender",
+"collector_number": "201",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Avatar",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "47e77918-13ec-47ce-9256-5a3b5bf8d315",
+"name": "Bison Whistle",
+"collector_number": "202",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e31808bb-fb6e-487b-a973-db44961c84ee",
+"name": "The Cabbage Merchant",
+"collector_number": "203",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Citizen",
+"keywords": [
+"Food"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "93d2638b-0c19-4fba-a0ad-84b6a9784eb3",
+"name": "Crystalline Armor",
+"collector_number": "204",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "11e70692-2057-49c8-90e6-953362f4817f",
+"name": "Hei Bai, Forest Guardian",
+"collector_number": "205",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Bear Spirit",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "66de5b97-0de0-422c-a351-bfe55ad4503a",
+"name": "Master's Guidance",
+"collector_number": "206",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7c376ea9-d50a-4cc3-ae40-7bac3a926f20",
+"name": "Tale of Katara and Toph",
+"collector_number": "207",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b71c3c1e-f927-4192-ac3a-cf6a442ffd00",
+"name": "Tectonic Split",
+"collector_number": "208",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [
+"Hexproof"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ad5d3e7e-bf8c-4fa3-a81e-1523aec2585f",
+"name": "Toph, Earthbending Master",
+"collector_number": "209",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Earthbend",
+"Landfall"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e46b2ac6-97d6-48f2-aba3-cd92f8e092c6",
+"name": "Aang, Air Nomad",
+"collector_number": "210",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Avatar Ally",
+"keywords": [
+"Flying",
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "92b617f9-6e6b-42a0-9c45-6ff5f6193051",
+"name": "Aang's Defense",
+"collector_number": "211",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1c385880-3eea-45c8-8e89-330ad8ad92b1",
+"name": "Aardvark Sloth",
+"collector_number": "212",
+"rarity": "common",
+"type_line": "Creature \u2014 Sloth Beast",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ceddea59-de47-4ddd-b424-6e1dcb13ab79",
+"name": "Allied Teamwork",
+"collector_number": "213",
+"rarity": "rare",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "215215b8-6ddc-4e94-8640-6d324ff65f9c",
+"name": "Appa, Aang's Companion",
+"collector_number": "214",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Bison Ally",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "703032eb-98b3-4ecf-8b92-4f4f1551c5d7",
+"name": "Katara, Heroic Healer",
+"collector_number": "215",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "18fe834f-4417-4df8-a49c-98e9bf2f87d2",
+"name": "Kyoshi Warrior Guard",
+"collector_number": "216",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Warrior Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8854222e-590f-4fc0-b5d7-bf3d986b8507",
+"name": "Momo, Rambunctious Rascal",
+"collector_number": "217",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Lemur Bat Ally",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1b115051-a3c8-4c5f-9ad2-82b5a6897c51",
+"name": "Sledding Otter-Penguin",
+"collector_number": "218",
+"rarity": "common",
+"type_line": "Creature \u2014 Otter Bird",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7dd518f9-1ddd-4950-add3-fc21f675f4dc",
+"name": "Sokka, Wolf Cove's Protector",
+"collector_number": "219",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "68df4c46-513a-4d75-9d4b-ac95d45be255",
+"name": "Tundra Wall",
+"collector_number": "220",
+"rarity": "common",
+"type_line": "Creature \u2014 Wall",
+"keywords": [
+"Defender"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "549a3f53-f90e-4af0-bbc5-2c4b9df30008",
+"name": "Wolf Cove Villager",
+"collector_number": "221",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Peasant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a7dad8fe-b0b8-4c6d-ad11-76b402952799",
+"name": "Deny Entry",
+"collector_number": "222",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "59fa8323-bba9-4c51-833d-2ab966599b62",
+"name": "Flying Dolphin-Fish",
+"collector_number": "223",
+"rarity": "common",
+"type_line": "Creature \u2014 Whale Fish",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a37adc18-ea11-4972-8d04-936cf3fe2613",
+"name": "Lost in the Spirit World",
+"collector_number": "224",
+"rarity": "uncommon",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "771bf51d-cb32-4240-936c-f9d1e0c90cf0",
+"name": "The Terror of Serpent's Pass",
+"collector_number": "225",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Serpent",
+"keywords": [
+"Hexproof"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e0172cad-8b93-4d1a-b442-5eced3212b17",
+"name": "Turtle-Seals",
+"collector_number": "226",
+"rarity": "common",
+"type_line": "Creature \u2014 Turtle Seal",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2015f455-988e-444c-93df-23fab179ef87",
+"name": "Water Whip",
+"collector_number": "227",
+"rarity": "rare",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [
+"Waterbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "84557d9d-ee22-46c9-8f4a-62a440fb302f",
+"name": "Elephant-Rat",
+"collector_number": "228",
+"rarity": "common",
+"type_line": "Creature \u2014 Elephant Rat",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8ed27504-f86b-4ce5-9395-7029825176ab",
+"name": "Fire Nation Ambushers",
+"collector_number": "229",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Flash"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4ba60296-5612-41ed-bf53-a061783ed3b9",
+"name": "Fire Nation Sentinels",
+"collector_number": "230",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1551cd95-1e68-404f-be1d-cc9c7f447210",
+"name": "Gilacorn",
+"collector_number": "231",
+"rarity": "common",
+"type_line": "Creature \u2014 Lizard",
+"keywords": [
+"Deathtouch"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "169d24f3-a308-4a2e-ae25-85dae448994e",
+"name": "Lion Vulture",
+"collector_number": "232",
+"rarity": "rare",
+"type_line": "Creature \u2014 Cat Bird",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "37d2e83d-f5fd-48d2-b091-3c9167522530",
+"name": "Purple Pentapus",
+"collector_number": "233",
+"rarity": "common",
+"type_line": "Creature \u2014 Octopus Starfish",
+"keywords": [
+"Surveil"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "aff20717-265d-4214-a8f5-f520bb243cb5",
+"name": "Capital Guard",
+"collector_number": "234",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4a678c6f-5a93-4a3b-80fd-4c0d0f9040c9",
+"name": "Dragon Moose",
+"collector_number": "235",
+"rarity": "common",
+"type_line": "Creature \u2014 Dragon Elk",
+"keywords": [
+"Haste"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a6081d17-599b-4fd2-bd68-55eca939213a",
+"name": "Explosive Shot",
+"collector_number": "236",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "2e735849-1930-4f43-86b4-da660ade15bc",
+"name": "Fire Nation Archers",
+"collector_number": "237",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Archer",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6a15fad7-8171-4bce-bb39-fe3a8175f8fa",
+"name": "Fire Nation Soldier",
+"collector_number": "238",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Haste"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8893af49-2f90-4aed-bcaf-905bb9e8ed8f",
+"name": "Fire Nation's Conquest",
+"collector_number": "239",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8e03797d-dd61-439f-b4ce-996cd71bdcf5",
+"name": "Iroh, Firebending Instructor",
+"collector_number": "240",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7fe5cad0-8db8-4cb3-9d61-bda84477654d",
+"name": "Komodo Rhino",
+"collector_number": "241",
+"rarity": "common",
+"type_line": "Creature \u2014 Lizard Rhino",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0c052420-2d8b-4bbf-8197-b8a36e7208c9",
+"name": "Loyal Fire Sage",
+"collector_number": "242",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Cleric Ally",
+"keywords": [
+"Firebending"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e5659c45-e064-4690-b90a-24ffe3793d4d",
+"name": "Roku's Mastery",
+"collector_number": "243",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [
+"Scry"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f07e6ba7-42e8-4b4d-9831-00a856059060",
+"name": "Warship Scout",
+"collector_number": "244",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Scout",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "92ce3e30-dde3-43bb-a3d6-ccd91ff18bc3",
+"name": "Zhao, the Seething Flame",
+"collector_number": "245",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d445a584-98e7-4501-bb20-e76c9cafa757",
+"name": "Zuko, Avatar Hunter",
+"collector_number": "246",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "90a2ec9c-2f1c-4ed4-820d-dfdb6b58c0db",
+"name": "Zuko's Offense",
+"collector_number": "247",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "301af2b2-e2f7-4220-a3f5-7702fb62664a",
+"name": "Bumi, Eclectic Earthbender",
+"collector_number": "248",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8f8fd2ba-df0e-49bd-a916-cc4f50b9fa24",
+"name": "Earthbending Student",
+"collector_number": "249",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Earthbend"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "25432a3a-bcfd-4c43-b662-07676e9b3fdd",
+"name": "Eel-Hounds",
+"collector_number": "250",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Fish Dog",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b8563788-debc-4f97-adf4-b186bf3960e2",
+"name": "Frog-Squirrels",
+"collector_number": "251",
+"rarity": "common",
+"type_line": "Creature \u2014 Frog Squirrel",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f66fca2b-6c44-4079-b29e-4d18ef030a0c",
+"name": "Hippo-Cows",
+"collector_number": "252",
+"rarity": "common",
+"type_line": "Creature \u2014 Hippo Ox",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "797d8776-9dcf-45b1-8c5e-1d025f916773",
+"name": "Match the Odds",
+"collector_number": "253",
+"rarity": "uncommon",
+"type_line": "Sorcery \u2014 Lesson",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7ece47b1-0b4b-40ac-a90f-4573a8e3b8bd",
+"name": "Seismic Tutelage",
+"collector_number": "254",
+"rarity": "rare",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant",
+"Double"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "9e5df175-5f91-47f7-957c-63bac31f0858",
+"name": "Hog-Monkey Rampage",
+"collector_number": "255",
+"rarity": "uncommon",
+"type_line": "Instant",
+"keywords": [
+"Fight"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d53d1805-c4ec-4b42-a226-3cd78cd2be84",
+"name": "Mechanical Glider",
+"collector_number": "256",
+"rarity": "common",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "5825997b-10d7-4a36-972c-a80ddd90b8ed",
+"name": "Feed the Swarm",
+"collector_number": "257",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d463de75-8d3c-4077-a2cc-c304a63acc69",
+"name": "Run Amok",
+"collector_number": "258",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "b8f566ea-8283-4afa-9ac8-737e26419283",
+"name": "Explore",
+"collector_number": "259",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "91fceb34-0f2d-4392-be27-00dcd765637f",
+"name": "Thriving Bluff",
+"collector_number": "260",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a8052556-8962-4130-86a8-6fb7b6a324f7",
+"name": "Thriving Grove",
+"collector_number": "261",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d1946630-e224-40db-8f0d-388b09622288",
+"name": "Thriving Heath",
+"collector_number": "262",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "69fc70b8-b143-4662-ac95-e2743037239d",
+"name": "Thriving Isle",
+"collector_number": "263",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bff416bb-d193-4c45-b2c1-7c297dbfad08",
+"name": "Thriving Moor",
+"collector_number": "264",
+"rarity": "common",
+"type_line": "Land",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e46b2ac6-97d6-48f2-aba3-cd92f8e092c6",
+"name": "Aang, Air Nomad",
+"collector_number": "265",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Avatar Ally",
+"keywords": [
+"Flying",
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "92b617f9-6e6b-42a0-9c45-6ff5f6193051",
+"name": "Aang's Defense",
+"collector_number": "266",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1c385880-3eea-45c8-8e89-330ad8ad92b1",
+"name": "Aardvark Sloth",
+"collector_number": "267",
+"rarity": "common",
+"type_line": "Creature \u2014 Sloth Beast",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "215215b8-6ddc-4e94-8640-6d324ff65f9c",
+"name": "Appa, Aang's Companion",
+"collector_number": "268",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Bison Ally",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "703032eb-98b3-4ecf-8b92-4f4f1551c5d7",
+"name": "Katara, Heroic Healer",
+"collector_number": "269",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8854222e-590f-4fc0-b5d7-bf3d986b8507",
+"name": "Momo, Rambunctious Rascal",
+"collector_number": "270",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Lemur Bat Ally",
+"keywords": [
+"Flying"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ac94860b-70b8-4624-9758-4bb024a56f60",
+"name": "Path to Redemption",
+"collector_number": "271",
+"rarity": "common",
+"type_line": "Enchantment \u2014 Aura",
+"keywords": [
+"Enchant"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "eb5afbd7-4d21-4449-9204-eeb4ebf6a72a",
+"name": "Razor Rings",
+"collector_number": "272",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "1b115051-a3c8-4c5f-9ad2-82b5a6897c51",
+"name": "Sledding Otter-Penguin",
+"collector_number": "273",
+"rarity": "common",
+"type_line": "Creature \u2014 Otter Bird",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7dd518f9-1ddd-4950-add3-fc21f675f4dc",
+"name": "Sokka, Wolf Cove's Protector",
+"collector_number": "274",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Warrior Ally",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "68df4c46-513a-4d75-9d4b-ac95d45be255",
+"name": "Tundra Wall",
+"collector_number": "275",
+"rarity": "common",
+"type_line": "Creature \u2014 Wall",
+"keywords": [
+"Defender"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "549a3f53-f90e-4af0-bbc5-2c4b9df30008",
+"name": "Wolf Cove Villager",
+"collector_number": "276",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Peasant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "aff20717-265d-4214-a8f5-f520bb243cb5",
+"name": "Capital Guard",
+"collector_number": "277",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4a678c6f-5a93-4a3b-80fd-4c0d0f9040c9",
+"name": "Dragon Moose",
+"collector_number": "278",
+"rarity": "common",
+"type_line": "Creature \u2014 Dragon Elk",
+"keywords": [
+"Haste"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a6081d17-599b-4fd2-bd68-55eca939213a",
+"name": "Explosive Shot",
+"collector_number": "279",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6a15fad7-8171-4bce-bb39-fe3a8175f8fa",
+"name": "Fire Nation Soldier",
+"collector_number": "280",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Soldier",
+"keywords": [
+"Haste"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8893af49-2f90-4aed-bcaf-905bb9e8ed8f",
+"name": "Fire Nation's Conquest",
+"collector_number": "281",
+"rarity": "uncommon",
+"type_line": "Enchantment",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "8e03797d-dd61-439f-b4ce-996cd71bdcf5",
+"name": "Iroh, Firebending Instructor",
+"collector_number": "282",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Noble Ally",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "7fe5cad0-8db8-4cb3-9d61-bda84477654d",
+"name": "Komodo Rhino",
+"collector_number": "283",
+"rarity": "common",
+"type_line": "Creature \u2014 Lizard Rhino",
+"keywords": [
+"Trample"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d463de75-8d3c-4077-a2cc-c304a63acc69",
+"name": "Run Amok",
+"collector_number": "284",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "f07e6ba7-42e8-4b4d-9831-00a856059060",
+"name": "Warship Scout",
+"collector_number": "285",
+"rarity": "common",
+"type_line": "Creature \u2014 Human Scout",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "92ce3e30-dde3-43bb-a3d6-ccd91ff18bc3",
+"name": "Zhao, the Seething Flame",
+"collector_number": "286",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Soldier",
+"keywords": [
+"Menace"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d445a584-98e7-4501-bb20-e76c9cafa757",
+"name": "Zuko, Avatar Hunter",
+"collector_number": "287",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Noble",
+"keywords": [
+"Reach"
+],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "90a2ec9c-2f1c-4ed4-820d-dfdb6b58c0db",
+"name": "Zuko's Offense",
+"collector_number": "288",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "289",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "290",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "291",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "292",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "293",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "294",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "295",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+"name": "Mountain",
+"collector_number": "296",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Mountain",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "297",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "298",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "299",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "300",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "301",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "302",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "303",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+"name": "Plains",
+"collector_number": "304",
+"rarity": "common",
+"type_line": "Basic Land \u2014 Plains",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c5229c17-b7be-4b05-b683-f2277edc4849",
+"name": "Enlightened Tutor",
+"collector_number": "305",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "4e183439-17d2-47ff-9d99-5e22821d91e3",
+"name": "Flawless Maneuver",
+"collector_number": "306",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d09c9cba-fdd2-479b-ad5d-d05181c3e3f9",
+"name": "Fierce Guardianship",
+"collector_number": "307",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+"name": "Mystical Tutor",
+"collector_number": "308",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0456ec64-2c81-4763-a352-8ff64a4c3d6b",
+"name": "Deadly Rollick",
+"collector_number": "309",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "299fc083-0834-4064-8344-f895aff68867",
+"name": "Entomb",
+"collector_number": "310",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "ae120613-97d6-4393-b39d-c3e6c076f5d6",
+"name": "Deflecting Swat",
+"collector_number": "311",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "a54f0869-94c8-42af-9080-166efb9486a4",
+"name": "Gamble",
+"collector_number": "312",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "d0a31db0-69db-405c-99a3-945617900c54",
+"name": "Obscuring Haze",
+"collector_number": "313",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+"name": "Worldly Tutor",
+"collector_number": "314",
+"rarity": "rare",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+"name": "Arcane Signet",
+"collector_number": "315",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+"name": "Sol Ring",
+"collector_number": "316",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2025-11-21"
+},
+{
+"oracle_id": "c8b143ad-43ec-4e0d-a440-e348daa31391",
+"name": "Swiftfoot Boots",
+"collector_number": "317",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2025-11-21"
+}
+]
+}

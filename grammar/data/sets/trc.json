@@ -1,0 +1,700 @@
+{
+"set": {
+"code": "trc",
+"name": "Star Trek Commander",
+"set_type": "commander",
+"released_at": "2026-11-13",
+"card_count": 67,
+"parent_set_code": "trk"
+},
+"retrieved_utc": "2026-10-22T03:34:10Z",
+"members": [
+{
+"oracle_id": "b03d6bc2-d9f1-4d03-b1b3-77993bec6547",
+"name": "The Borg Queen",
+"collector_number": "1",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Borg Noble",
+"keywords": [
+""
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "60644afe-9645-45a1-9eac-70f327daa6a7",
+"name": "Commander Spock",
+"collector_number": "2",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Vulcan Human Scientist",
+"keywords": [
+"Strange new worlds"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b95a6001-2773-43c1-a5ad-a37ef7c9f054",
+"name": "Jean-Luc Picard, Luminary",
+"collector_number": "3",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [
+"Seek",
+"Seek out"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "a7fcdbab-491f-40d9-be40-409af0d6c3f5",
+"name": "Worf, Defiant Commander",
+"collector_number": "4",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Klingon Warrior Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b03d6bc2-d9f1-4d03-b1b3-77993bec6547",
+"name": "The Borg Queen",
+"collector_number": "5",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Borg Noble",
+"keywords": [
+""
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "60644afe-9645-45a1-9eac-70f327daa6a7",
+"name": "Commander Spock",
+"collector_number": "6",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Vulcan Human Scientist",
+"keywords": [
+"Strange new worlds"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b95a6001-2773-43c1-a5ad-a37ef7c9f054",
+"name": "Jean-Luc Picard, Luminary",
+"collector_number": "7",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [
+"Seek",
+"Seek out"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "a7fcdbab-491f-40d9-be40-409af0d6c3f5",
+"name": "Worf, Defiant Commander",
+"collector_number": "8",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Klingon Warrior Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b93915ac-744b-4b59-8f16-ae68d6d898c6",
+"name": "Guinan, Ancient Advisor",
+"collector_number": "17",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 El-Aurian Advisor",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b1a6d794-0e48-4bbe-b3a3-d9957ed1bfbf",
+"name": "Join the Collective",
+"collector_number": "20",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "25fe4df1-abf7-4f17-9e0d-57e414697400",
+"name": "Spot, Felis catus",
+"collector_number": "29",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Cat",
+"keywords": [
+"Food"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "01b7ced9-5dcb-45ce-bcda-ffdc1afefb2a",
+"name": "Koloth, Tribble Hunter",
+"collector_number": "72",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Klingon Warrior Officer",
+"keywords": [
+"Goad"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "330e8a18-d224-4416-b59d-02b749c3a674",
+"name": "Christine Chapel, Combat Medic",
+"collector_number": "78",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Doctor",
+"keywords": [
+"Strange new worlds"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "5228fffe-6347-4177-bccb-b15621c7159c",
+"name": "Captain Kirk, Boldly Going",
+"collector_number": "85",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "d0cff43a-2a22-4e05-9f71-983cb297989f",
+"name": "Locutus of Borg",
+"collector_number": "97",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Borg",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "7132b0ad-7bab-4379-ad82-a9af289f835e",
+"name": "Command Chair",
+"collector_number": "111",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "d5560aaa-7459-498f-b3c5-e096d8c75b51",
+"name": "Starfleet Communicator",
+"collector_number": "121",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Communicator Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "9b627fa4-af4c-482b-b1cf-2ad15938602c",
+"name": "Starship Enterprise",
+"collector_number": "122",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station",
+"Landfall"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "3e301803-49ab-4fce-82ae-945a39c458b5",
+"name": "The Sword of Kahless",
+"collector_number": "123",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "3b2f1364-56e7-461a-b03f-0e14d83b0f5e",
+"name": "Evasive Maneuvers",
+"collector_number": "132",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "fb42bade-4bbc-4119-b6cc-71695fe43dd9",
+"name": "Head of Security",
+"collector_number": "133",
+"rarity": "common",
+"type_line": "Creature \u2014 Andorian Soldier",
+"keywords": [
+"First strike"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "25855177-a416-4083-a6e4-8c9e00361d41",
+"name": "Shuttle Crew",
+"collector_number": "137",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Human Officer",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "94688e62-f39f-41fd-9309-f16b715ef724",
+"name": "Sickbay Orderly",
+"collector_number": "138",
+"rarity": "common",
+"type_line": "Creature \u2014 Caitian Doctor",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "83b31215-ea9b-4ad9-a39e-3fe6cdb9b7de",
+"name": "Starfleet Crew",
+"collector_number": "139",
+"rarity": "common",
+"type_line": "Creature \u2014 Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "a479b8b6-79de-4810-9165-992a6a10dc1d",
+"name": "Will Riker, Assuming Command",
+"collector_number": "140",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "26e86be4-52e1-47cb-b548-c434482bd3ad",
+"name": "Worf, Chief Tactical Officer",
+"collector_number": "141",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Klingon Warrior Officer",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "846ba66c-a4eb-4d00-a0f1-d9f9524b9695",
+"name": "Cryogenic Stasis",
+"collector_number": "142",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "fb208157-67e5-45e2-bf08-7671f65cf520",
+"name": "Exocomp",
+"collector_number": "145",
+"rarity": "common",
+"type_line": "Artifact Creature \u2014 Construct",
+"keywords": [
+"Flying"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b03c6720-b899-4eba-b28d-54ded03e086d",
+"name": "Kolinahr Priest",
+"collector_number": "146",
+"rarity": "common",
+"type_line": "Creature \u2014 Vulcan Monk",
+"keywords": [
+"Flash"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "338619f2-bb33-4988-bafe-7460f86acef8",
+"name": "La Forge, Perceptive Engineer",
+"collector_number": "147",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Human Artificer",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "4c0be0d0-766b-4c50-b1ca-cce527196666",
+"name": "Pelia, Immortal Innovator",
+"collector_number": "148",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Lanthanite Artificer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "e8a548e8-057e-4023-ac20-bac973dbce09",
+"name": "T'Pol, Vulcan Representative",
+"collector_number": "151",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Vulcan Scientist",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "227fb13b-0a07-4937-9048-7cf02efbc8e3",
+"name": "Badgey, Malicious Glitch",
+"collector_number": "152",
+"rarity": "uncommon",
+"type_line": "Legendary Artifact Creature \u2014 Illusion Horror",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b1914241-6b2b-4b3e-8626-aeb0b8cbc12d",
+"name": "Ceti Eel",
+"collector_number": "153",
+"rarity": "common",
+"type_line": "Creature \u2014 Worm",
+"keywords": [
+"Mill"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "8f1a39bf-7597-4655-b7af-4b1332edf529",
+"name": "Defense Force Aggressor",
+"collector_number": "161",
+"rarity": "common",
+"type_line": "Creature \u2014 Klingon Warrior",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "f6b0adcb-4676-4d9f-83ae-a2ff3cdfd84b",
+"name": "Direct Hit",
+"collector_number": "162",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "286213a8-ae53-4f97-9f81-e13bed462d0a",
+"name": "Gin'tak Charge",
+"collector_number": "163",
+"rarity": "common",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "61cef71a-d38b-4b6f-8401-aa4fc861bf52",
+"name": "Kruge, Genesis Seeker",
+"collector_number": "165",
+"rarity": "uncommon",
+"type_line": "Legendary Creature \u2014 Klingon Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "7063eb2b-81a4-4599-b1db-edf861e39bfb",
+"name": "Mek'leth Berserker",
+"collector_number": "166",
+"rarity": "common",
+"type_line": "Creature \u2014 Klingon Berserker",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "d55977f8-1655-4d97-adbf-ef6cb979ea55",
+"name": "Warship Flight Crew",
+"collector_number": "168",
+"rarity": "common",
+"type_line": "Creature \u2014 Klingon Pilot",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "60ff591d-170d-410a-9710-510e811f9827",
+"name": "Gorn Captain",
+"collector_number": "172",
+"rarity": "common",
+"type_line": "Creature \u2014 Gorn Soldier",
+"keywords": [
+"Trample"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "67114cbb-cbf4-4250-a5e9-e1c4bc5841f6",
+"name": "Gumato",
+"collector_number": "173",
+"rarity": "uncommon",
+"type_line": "Creature \u2014 Ape Beast",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "369f086f-3497-496a-94a8-0faccd1d5931",
+"name": "Talarian Hook Spider",
+"collector_number": "175",
+"rarity": "common",
+"type_line": "Creature \u2014 Spider",
+"keywords": [
+"Reach"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "bb8c2c0f-fc63-40c6-98c6-691e42b3b8c9",
+"name": "Disruptor Pistol",
+"collector_number": "177",
+"rarity": "common",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "c8ed45e6-ae4f-4c44-9f73-45793f30acd6",
+"name": "Operations Officer",
+"collector_number": "192",
+"rarity": "rare",
+"type_line": "Creature \u2014 Human Officer",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "cda786aa-1259-45e8-a834-21c7ad0259a6",
+"name": "Picard, Steadfast Captain",
+"collector_number": "193",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "a877820f-8999-4dfe-a50d-09f63c885ce3",
+"name": "Spock, Logical Choice",
+"collector_number": "194",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Vulcan Human Scientist",
+"keywords": [
+"Vigilance"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "3c516327-00a3-4d03-87a3-73b4a90719d3",
+"name": "Trelane, Squire of Gothos",
+"collector_number": "195",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Q",
+"keywords": [
+"Vigilance",
+"Ward"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "1ca22ca0-eca3-4578-9746-47d443d5fb73",
+"name": "Bio-Asset Allocator",
+"collector_number": "196",
+"rarity": "rare",
+"type_line": "Artifact Creature \u2014 Borg",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "f9b46a1a-474f-4fac-8d71-131c1720e4c0",
+"name": "Borg Queen, Perfection Manifest",
+"collector_number": "197",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Borg Noble",
+"keywords": [
+"Assimilate"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "6a70e571-6932-45d8-9f14-ede4a561cc49",
+"name": "Kirk, Enterprising Captain",
+"collector_number": "198",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [
+"Menace"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "847efb61-5933-43c1-93ff-e8375f9469a9",
+"name": "Klingon Strike Force",
+"collector_number": "199",
+"rarity": "rare",
+"type_line": "Creature \u2014 Klingon Warrior",
+"keywords": [
+"Haste",
+"Trample"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "f1416577-97d0-4d6c-afd2-455798556d4c",
+"name": "Benjamin Sisko, Besieged",
+"collector_number": "200",
+"rarity": "mythic",
+"type_line": "Legendary Creature \u2014 Human Officer",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "48c2dc82-7bed-4730-8b8b-1970b743414f",
+"name": "Tenacious Tosk",
+"collector_number": "201",
+"rarity": "rare",
+"type_line": "Creature \u2014 Tosk Rogue",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "d0cff43a-2a22-4e05-9f71-983cb297989f",
+"name": "Locutus of Borg",
+"collector_number": "209",
+"rarity": "mythic",
+"type_line": "Legendary Artifact Creature \u2014 Borg",
+"keywords": [
+"Lifelink"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "9b627fa4-af4c-482b-b1cf-2ad15938602c",
+"name": "Starship Enterprise",
+"collector_number": "211",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Spacecraft",
+"keywords": [
+"Station",
+"Landfall"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b93915ac-744b-4b59-8f16-ae68d6d898c6",
+"name": "Guinan, Ancient Advisor",
+"collector_number": "223",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 El-Aurian Advisor",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "b1a6d794-0e48-4bbe-b3a3-d9957ed1bfbf",
+"name": "Join the Collective",
+"collector_number": "226",
+"rarity": "rare",
+"type_line": "Sorcery",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "25fe4df1-abf7-4f17-9e0d-57e414697400",
+"name": "Spot, Felis catus",
+"collector_number": "237",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Cat",
+"keywords": [
+"Food"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "01b7ced9-5dcb-45ce-bcda-ffdc1afefb2a",
+"name": "Koloth, Tribble Hunter",
+"collector_number": "289",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Klingon Warrior Officer",
+"keywords": [
+"Goad"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "330e8a18-d224-4416-b59d-02b749c3a674",
+"name": "Christine Chapel, Combat Medic",
+"collector_number": "300",
+"rarity": "rare",
+"type_line": "Legendary Creature \u2014 Human Doctor",
+"keywords": [
+"Strange new worlds"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "7132b0ad-7bab-4379-ad82-a9af289f835e",
+"name": "Command Chair",
+"collector_number": "340",
+"rarity": "rare",
+"type_line": "Artifact",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "d5560aaa-7459-498f-b3c5-e096d8c75b51",
+"name": "Starfleet Communicator",
+"collector_number": "356",
+"rarity": "rare",
+"type_line": "Artifact \u2014 Communicator Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "3e301803-49ab-4fce-82ae-945a39c458b5",
+"name": "The Sword of Kahless",
+"collector_number": "357",
+"rarity": "rare",
+"type_line": "Legendary Artifact \u2014 Equipment",
+"keywords": [
+"Equip"
+],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "eb1dfa29-7371-4cb6-bfa2-16f7820b69be",
+"name": "Refute",
+"collector_number": "579",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "a82c3860-4dd6-4ffd-aa8f-ab8df687db6c",
+"name": "Last Gasp",
+"collector_number": "580",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-11-13"
+},
+{
+"oracle_id": "d463de75-8d3c-4077-a2cc-c304a63acc69",
+"name": "Run Amok",
+"collector_number": "582",
+"rarity": "common",
+"type_line": "Instant",
+"keywords": [],
+"released_at": "2026-11-13"
+}
+]
+}

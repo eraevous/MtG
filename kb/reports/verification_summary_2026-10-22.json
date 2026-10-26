@@ -1,0 +1,106 @@
+{
+ "queue_states": {
+  "blocked": 3020,
+  "quarantined": 4,
+  "ready_for_review": 1607
+ },
+ "verification": {
+  "oracle_identity_confirmed": 4631,
+  "rules_text_current": 4623,
+  "semantic_contract_reviewed": 0,
+  "runtime_compilation_complete": 418,
+  "runtime_scenario_tested": 1,
+  "mechanically_supported": 0,
+  "quarantined": 4,
+  "contracts": 4631
+ },
+ "ready_and_lossless": 394,
+ "ready_with_action": 1059,
+ "loss_codes_by_contract": {
+  "unread_text": 2058,
+  "partial_projection": 2058,
+  "no_action": 1279,
+  "target_lost": 1095,
+  "zone_transition_lost": 817,
+  "branch_unbound": 700,
+  "output_not_executed": 652,
+  "mana_type_lost": 414,
+  "modes_lost": 260,
+  "amplifier_lost": 260,
+  "granted_ability": 134,
+  "optional_lost": 117,
+  "cost_lost": 96,
+  "cost_mana_type_lost": 51,
+  "distribution_lost": 39,
+  "observer_relation_lost": 10,
+  "capacity_lost": 4,
+  "batching_lost": 4
+ },
+ "mana_contracts": 414,
+ "rules_text": {
+  "excluded (non_game)": 2,
+  "excluded (token_not_card)": 1,
+  "oracle_refresh": 3369
+ },
+ "runtime_certificates": [
+  [
+   "card.Cremate.op002",
+   "cremate.draw",
+   1
+  ]
+ ],
+ "quarantined_contracts": [
+  [
+   "card.Medic's%20Kitesail.op001",
+   "Medic's Kitesail"
+  ],
+  [
+   "card.Polliwallop.op001",
+   "Polliwallop"
+  ],
+  [
+   "card.Polliwallop.op002",
+   "Polliwallop"
+  ],
+  [
+   "card.Whiplash%20Wordsmith.op002",
+   "Whiplash Wordsmith"
+  ]
+ ],
+ "rules_text_not_current": [
+  [
+   "card.Argivian%20Cavalier.op002",
+   "When you do, add its power to this creature's power until end of turn.)"
+  ],
+  [
+   "card.Prudent%20Fateseer%20%2F%2F%20Peer%20Review.op003",
+   "Peer Review — Create a 2/2 colorless Wizard Soldier creature token named Cadet. Surveil 1."
+  ],
+  [
+   "card.Tangle%20Tumbler.op003",
+   "Tap two untapped tokens you control: Tangle Tumbler becomes an artifact creature until end of turn."
+  ],
+  [
+   "card.Yuriko%2C%20Hope%20from%20the%20Shadows.op002",
+   "When Yuriko enters, choose one —"
+  ]
+ ],
+ "check_results": {
+  "C03_operation_kind:fail": 162,
+  "C04_hook:fail": 137,
+  "C04_hook:warn": 6,
+  "C05_face:fail": 178,
+  "C06_source_annotation:fail": 253,
+  "C07_costs:fail": 61,
+  "C08_effects:fail": 810,
+  "C08_effects:warn": 1,
+  "C09_bound_semantics:fail": 1024,
+  "C10_zone_transitions:fail": 7,
+  "C11_executable_shape:fail": 2080,
+  "C11_executable_shape:warn": 1279,
+  "C12_granted_ability:warn": 216,
+  "C13_not_reminder_text:fail": 47,
+  "C14_mana_typed:fail": 2,
+  "C15_engine_mana_colour:warn": 384
+ }
+}

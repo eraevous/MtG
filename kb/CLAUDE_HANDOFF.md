@@ -1,0 +1,15 @@
+# For Claude — rebuild priorities after persistent database v0.1
+
+The card database now EXISTS; this is not a request to design one. Open `mtg_cards.sqlite` and `schema.sql`. Verify 3,372 Collection rows, 4,631 Mechanics candidate operations, 3,562 cached typed ability projections, 25,363 capability claims and 12 current 100-card decks. The **source workbook was read only**.
+
+**Change the default architecture from `workbook → Oracle regex → runtime record on demand` to `workbook → versioned offline import → SQLite evidence/operation store → verified compiler → evaluator`.**
+
+1. Inspect SQLite and the `SQLiteEvaluator` bridge. The bridge already supplies card/deck/role records and prefilled 0.3.0 ability projections to the runtime. Extend integration to eliminate remaining repeated regex parsing in the query/evaluation path. Do not maintain two competing authoritatives; the working Sheet is source, DB is deterministic derived knowledge.
+2. Bring `Mechanics · Operations` candidates **through a validation queue** into stable DIO operation contracts, then compile trusted contracts to simulation actions. Initial population has ZERO formally rules-verified legacy operations. Do not silently promote them. Preserve exact text, requirement groups (AND/OR), hook timing, resource/zone transitions and source evidence.
+3. Ground in inventory discovery FIRST: queries for individual cards, overlapping roles, unverified tags, compound packages, available copies, legal deck destinations, and coherent candidate engine modules should work from SQLite **even when the game simulator has low card coverage**.
+4. Confirm semantic claims against external Oracle text as an explicit, versioned refresh/review operation (not inside every user query). Discrepancies belong in the QA queue, and updates must not erase manual corrections. Provide `oracle_id`/faces for robust card identity in the next migration.
+5. Run a quantitative Necrobloom audit: list every nonland card with recorded text, candidate operations, cached typed projections, unread clauses, verified status and runtime compiler eligibility. Start with landfall, dredge, repeatable recursion, searching lands, land tokens/scaling, and sacrifice-resource conversions.
+6. Support review approvals as an **append-only versioned overlay** with reviewer, source, timestamp, Oracle text SHA and tests. A parser update must not silently overwrite human review or reverify changed text.
+7. Maintain archive policy: no edits to Sheet during querying, never use an archive as source of current custody, and freeze/verify before major workbook structural change.
+
+Important: v0.1's cached projections reflect the **current v0.3.0 parser's limitations**. They are not a full semantically verified 3,372-card encyclopedia. Close that gap systematically, persist each verified result, and make every query consume the persisted result. The ontology is the vocabulary; the indexed card contracts are the executable data; the simulator is a consumer.

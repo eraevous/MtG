@@ -1,0 +1,66 @@
+card,ramp,fixing,draw,spot_removal,wipe,counterspell,protection,token_standalone,counter_source,recursion,closer,note
+"Leonardo, the Balance",0,0,0,0,0,0,0,0,1,0,1,pulse on token entry; WUBRG team menace/trample/lifelink
+"Splinter, the Mentor",0,0,0,0,0,0,0,1,0,0,0,nontoken LTB -> Mutagen
+Abundant Growth,0,1,1,0,0,0,0,0,0,0,0,cantrip fixer
+Ambitious Augmenter,0,0,0,0,0,0,0,0,1,0,0,death with counters -> Fractal
+"April O'Neil, Live on the Scene",0,0,1,0,0,0,0,0,0,0,0,needs MNT entries; clue = draw
+Arcane Signet,1,1,0,0,0,0,0,0,0,0,0,
+Assassin's Trophy,0,0,0,1,0,0,0,0,0,0,0,
+"Baxter, Fly in the Ointment",0,0,0,0,0,0,0,0,1,0,1,observes draws; team flying for countered creatures
+"Bebop, Skull & Crossbones",0,0,1,0,0,0,0,0,0,0,0,draw X on combat damage; tutors Rocksteady
+"Berta, Wise Extrapolator",1,1,0,0,0,0,0,1,1,0,0,X Fractal; mana on counters
+Big Mother Mouser,0,0,0,0,0,0,0,1,1,0,0,
+Biosynthic Burst,0,0,0,0,0,0,1,0,1,0,0,single target
+"Casey Jones, Back Alley Brute",0,0,0,0,0,0,0,0,1,0,1,counters -> damage per creature
+Corpsejack Menace,0,0,0,0,0,0,0,0,1,0,0,doubler
+Crustacean Commando,0,0,0,0,0,0,0,1,1,0,0,
+Devoted Druid,1,0,0,0,0,0,0,0,0,0,0,
+Dimension X Pizzasaur,0,0,0,1,0,0,0,0,1,0,1,ETB counters + conditional destroy; sac drain 3
+"Donatello, the Brains",0,0,0,0,0,0,0,0,0,0,0,token replacement (+Mutagen)
+"Eirdu, Carrier of Dawn // Isilu, Carrier of Twilight",0,0,0,0,0,0,1,0,0,1,1,persist for others (wipe resilience)
+Endurance,0,0,0,0,0,0,0,0,0,0,0,graveyard hate; flash blocker
+Flock Impostor,0,0,0,0,0,0,1,0,0,0,0,flash bounce own creature
+Genghis Frog,0,0,0,0,0,0,0,1,1,0,0,
+Gilded Goose,1,1,0,0,0,0,0,1,0,0,0,
+Glen Elendra Guardian,0,0,0,0,0,1,0,0,0,0,0,
+"Gyome, Master Chef",0,0,0,0,0,0,1,1,0,0,0,food -> indestructible
+"Haliya, Guided by Light",0,0,1,0,0,0,0,0,0,0,0,
+Heaped Harvest,1,1,0,0,0,0,0,0,0,0,0,
+Heroes in a Half Shell,0,0,1,0,0,0,0,0,1,0,1,
+High Score,0,0,1,0,0,0,0,0,1,0,0,+1 replacement; conditional draw
+Improvised Club,0,0,0,1,0,0,0,0,0,0,0,
+"Irma, Part-Time Mutant",0,0,0,0,0,0,0,0,1,0,0,
+"Lita, Little Orphan Amphibian",0,0,0,0,0,0,0,0,1,0,0,needs other creature entries
+"Michelangelo, Weirdness to 11",0,0,0,0,0,0,0,1,1,0,0,+1 replacement
+Mighty Mutanimals,0,0,0,0,0,0,0,1,1,0,0,
+Mirkwood Bats,0,0,0,0,0,0,0,0,0,0,1,drain on token create/sac
+"Mona Lisa, Science Geek",1,1,0,0,0,0,0,0,0,0,0,
+Murderous Redcap,0,0,0,1,0,0,0,0,0,0,0,
+Mutant Chain Reaction,0,0,0,1,0,0,0,1,0,0,0,
+Ninja Pizza,1,1,0,0,0,0,0,1,0,0,0,
+Noggle Robber,1,1,0,0,0,0,0,1,0,0,0,
+Peregrin Took,0,0,1,0,0,0,0,0,0,0,0,token replacement (+Food)
+Personify,0,0,0,0,0,0,1,1,0,0,0,
+"Ragost, Deft Gastronaut",0,0,0,0,0,0,0,0,0,0,1,food -> 3 dmg each opponent
+"Ray Fillet, Wave Warrior",0,0,1,0,0,0,0,0,1,0,0,
+Reaping Willow,0,0,0,0,0,0,0,0,0,1,0,
+Return of the Wildspeaker,0,0,1,0,0,0,0,0,0,0,1,
+"Rocksteady, Mutant Marauder",0,0,0,0,0,0,0,0,1,0,0,
+Rosie Cotton of South Lane,0,0,0,0,0,0,0,1,1,0,0,
+Scout for Survivors,0,0,0,0,0,0,0,0,1,1,0,
+"Selvala, Heart of the Wilds",1,1,1,0,0,0,0,0,0,0,0,
+Shimmerwilds Growth,1,1,0,0,0,0,0,0,0,0,0,
+Shredder's Technique,0,0,0,1,0,0,0,0,0,0,0,
+Sol Ring,1,0,0,0,0,0,0,0,0,0,0,
+Tainted Treats,0,0,0,1,0,0,0,1,0,0,0,
+"Tam, Mindful First-Year",0,0,0,0,0,0,1,0,0,0,0,partial (hexproof from own colors)
+"Tempestra, Dame of Games",0,0,0,0,0,0,0,1,0,0,0,needs artifact
+Terrasymbiosis,0,0,1,0,0,0,0,0,0,0,0,
+The Last Ronin's Technique,0,0,0,0,0,0,0,1,0,0,0,
+"Tokka & Rahzar, Unsupervised",1,0,0,0,0,0,0,0,1,0,0,treasure on nontoken LTB
+Wave Goodbye,0,0,0,0,1,0,0,0,0,0,0,asymmetric bounce
+"Zoraline, Cosmos Caller",0,0,0,0,0,0,0,0,0,1,0,
+Sink into Stupor // Soporific Springs,0,0,0,1,0,0,0,0,0,0,0,land slot; MDFC
+Slithering Cryptid,0,0,0,0,0,0,0,1,1,0,0,CANDIDATE A
+Duty Beyond Death,0,0,0,0,0,0,1,0,1,0,1,CANDIDATE B; team indestructible + counter each
+Knockout Maneuver,0,0,0,1,0,0,0,0,1,0,0,runner-up B

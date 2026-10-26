@@ -1,13 +1,9 @@
+# Imported code (kb/, grammar/, review_packet/) is kept as released, so no formatters run over the repo.
 repos:
-  - repo: https://github.com/psf/black
-    rev: 24.3.0
+  - repo: local
     hooks:
-      - id: black
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.5.0
-    hooks:
-      - id: ruff
-  - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
-    hooks:
-      - id: isort
+      - id: aec-drift-check
+        name: AEC drift check
+        entry: python3 tools/drift_check.py
+        language: system
+        pass_filenames: false

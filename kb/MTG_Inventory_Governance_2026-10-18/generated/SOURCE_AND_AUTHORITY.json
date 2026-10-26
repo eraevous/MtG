@@ -1,0 +1,12 @@
+{
+  "live_canonical_id": "1wv-uSSSlTIRAJp5qInwq0oppGUOX49_D2ni3vAnESxU",
+  "live_canonical_url": "https://docs.google.com/spreadsheets/d/1wv-uSSSlTIRAJp5qInwq0oppGUOX49_D2ni3vAnESxU/edit",
+  "input_file_name": "MTG Master Inventory — Canonical",
+  "input_sha256": "865675079b334a2a1af11b36377f422b6d32e714a5493bba21312861708cd13a",
+  "snapshot_mode": "read-only local OOXML extract; refresh after live inventory changes",
+  "verified_live_sentinels": [
+    "Arcane Signet Collection assigned=9; Mechanics Unit assigned=7",
+    "38 tabs; current deck count 12"
+  ],
+  "project_reference_status": "external project configured file ID must be updated separately"
+}

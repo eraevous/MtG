@@ -1,0 +1,91 @@
+{
+ "release": "mtg-kb-v0.2.1-r20261024d",
+ "schema_version": "0.2.1",
+ "built_utc": "2026-10-25T00:05:00+00:00",
+ "authorities": {
+  "inventory": "working Google Sheet (cards.* via the v0.1 import; never edited)",
+  "rules_text": "Scryfall Oracle, refresh run ed02ffb54a5b1a9d (rules_text table)",
+  "semantic_review": "overrides/review_overlay.jsonl (append-only, hash-chained)",
+  "runtime_certification": "issued by the build from scenarios/*.json (runtime_certifications table)"
+ },
+ "inventory_source": {
+  "canonical_sheet_id": "1N1xBUkL_aYKpPcR8WJJVpeicgE8A06dqeUBM-hUa3Xo",
+  "drive_modified_utc": "2026-10-24T23:57:02.816Z",
+  "input_name": "canonical_20261024d.xlsx",
+  "input_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+  "v01_database_sha256": "9c4bc90a0906511f24d6f0e2e0f8e3a9b735d3e3082c2b9bb5a7d43bd1876efc",
+  "note": "read-only export; no Sheet edit during this release"
+ },
+ "oracle_refresh": {
+  "run_id": "ed02ffb54a5b1a9d",
+  "source_kind": "scryfall_bulk",
+  "source_name": "oracle-cards-20261024090157.json",
+  "source_json_array_sha256": "af70747be1f0af7177fd00c88ea2c5719e6f2d08626233edfd3d8db226bfd7cf",
+  "source_updated_at": "2026-10-24T09:01:57.545+00:00",
+  "downloaded_file": "oracle-cards-20261024090157.jsonl.gz (Scryfall bulk download, converted to a JSON array)",
+  "tool_version": "oracle_refresh-0.2.1",
+  "snapshot": "oracle_refresh_2026-10-24_ed02ffb54a5b1a9d.jsonl",
+  "snapshot_sha256": "9db9ee5b63852da565090866496159c2fae712688e34c27bbd09adde9aa47f61",
+  "cards_matched": 3519,
+  "cards_unmatched": 1,
+  "discrepancies": 208
+ },
+ "overrides": {
+  "review_overlay": {
+   "lines": 0,
+   "head": null,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "oracle_reconciliation": {
+   "lines": 12,
+   "head": "3eb4ebb337c2d727d9abecd0e4e8c234d85577e1f4f634d1d417cc61485fc499",
+   "sha256": "7a7b1f54d6d3bac74475e517a071e0342fb85367274b157ca793e74bc60e37d4"
+  }
+ },
+ "scenarios": {
+  "count": 13,
+  "registry_sha256": "46ef36059a4c3d909ceeab1e7e34cef1c87ae7c3e707307e3d164d2324acc1bd",
+  "version": "scenarios-0.1.0"
+ },
+ "addendum": {
+  "version": "DIO-3.1.1-kb-addendum-0.1",
+  "registry_delta_sha256": "c963fcdea69eb4f7355ed8cb8bf1911cb2b87967c905256d8ce99ff3b8ea732c"
+ },
+ "versions": {
+  "derivation_version": "kbfacts-0.2.1/mtg_eval_0.3.0+kb2",
+  "drafter_version": "contract-drafter-0.4.0",
+  "compiler_version": "contract-compiler-0.3.0",
+  "mtg_eval_vendored": "0.3.0+kb2",
+  "migrate": "migrate_v02-0.2.1"
+ },
+ "database": {
+  "file": "mtg_cards_v0.2.sqlite",
+  "sha256": "e5f4a0c689a7445be2b3ffcb0b853ac5a84a33de03436a5e02651ad49cecfcc7",
+  "bytes": 106266624,
+  "counts": {
+   "cards": 3520,
+   "candidate_operations": 4961,
+   "contracts": 4961,
+   "derived_facts": 38726,
+   "oracle_ids": 3519,
+   "queue": {
+    "blocked": 3226,
+    "quarantined": 7,
+    "ready_for_review": 1728
+   },
+   "verification": {
+    "oracle_identity_confirmed": 4958,
+    "rules_text_current": 4950,
+    "semantic_contract_reviewed": 0,
+    "runtime_compilation_complete": 446,
+    "runtime_scenario_tested": 1,
+    "mechanically_supported": 0,
+    "quarantined": 7
+   },
+   "runtime_certifications": 1,
+   "compiled_actions": 0
+  }
+ },
+ "rebuild": "python migrate_v02.py --v01 mtg_cards.sqlite --out mtg_cards_v0.2.sqlite --overlay overrides/review_overlay.jsonl --refresh-dir refresh --source-modified 2026-10-24T23:57:02.816Z --built-utc 2026-10-25T00:05:00+00:00",
+ "tests": "python -m unittest test_v02.py test_mtg_db.py test_acceptance.py"
+}

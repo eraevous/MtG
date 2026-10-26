@@ -1,83 +1,79 @@
-# 🛠️ Refactor Charter: Principles to Build (and Review) By
+# Charter: engineering rules
 
-Below: each principle has (Rule → Why → Enforce). Keep this list short, stable, and testable.
+Rules for any change, whether made by a human or an AI. Each rule is written as Rule → Why → Enforced by. "Enforced by" names the actual mechanism. **(review)** means no automated check exists yet, so the rule is checked by human or dissent review.
 
-1) Single Source of Truth for Configuration
+This replaces the charter inherited from the AEC template, whose rules about S3, FAISS and LLM clients came from an unrelated project. The rules below come from the MTG project's own documented policies (`docs/handoff/00_CURRENT_STATE.md`, `kb/overrides/REVIEW_POLICY.md`, `kb/freeze_check.py`). They are pending build-project Claude's review and Zach's approval.
 
-- Rule: All paths, credentials, schema locations, and flags come from PathConfig/RemoteConfig (via a cached getter). No ad-hoc os.getenv or Path(__file__).parent in feature code.
-- Why: Prevents “local hacks” that fork behavior.
-Enforce: grep check + unit test that scans modules for banned imports/patterns; pre-commit hook.
+1. **The inventory Sheet is the authority on ownership and allocation.**
+   Why: plans are not moves, and recommendations must reflect real cards (P-05).
+   Rules:
+   - Never edit the Sheet while querying.
+   - Before a structural edit: copy the Sheet, rename the original with a timestamp and `_ARCHIVE`, and edit only the clone.
+   - Resolve the current Sheet id; never embed it permanently.
+   - Never use an archive as a build input.
 
-2) Thin CLIs, Fat Workflows
+   Enforced by: `kb/freeze_check.py guard-input` (refuses archives as inputs), plus **(review)** for the rest.
 
-- Rule: Typer commands only parse args, resolve config, and call a pure function in core.workflows.*. No logic in CLI.
-- Why: Prevents drift between automation and manual runs; keeps surfaces consistent.
-Enforce: test that CLI modules contain no non-trivial branches (>N LOC / cyclomatic threshold).
+2. **The KB is derived.**
+   Why: one rebuildable source of derived truth, no hand-made forks.
+   Rule: rebuild the KB from the Sheet export, the overrides and the Oracle refresh snapshots. Never hand-edit SQLite.
+   Enforced by: the KB rebuild tests (`kb/test_acceptance.py`); see C-001.
 
-3) One Ingestion Path, Layered Stages
+3. **Candidates stay candidates.**
+   Why: parse success is not semantic validity (P-01, P-03).
+   Rules:
+   - Nothing is auto-promoted to verified, and nothing is mass-approved. Contracts are reviewed by mechanical class and recorded one contract at a time.
+   - Semantic review and runtime readiness are separate states.
+   - A human `verified` must cite passing test scenarios.
 
-- Rule: Upload → Parse → (Summarize/Classify) → Embed → Cluster → Export is the only pipeline. Every stage reads/writes the shared JSON schema (+ .stub.json provenance).
-- Why: Eliminates bespoke “side doors.”
-Enforce: schema validator in tests; fixture that round-trips a sample through all stages.
+   Enforced by: KB verification states and the append-only review overlay (`kb/test_v02.py` checks that the overlay can't be updated or deleted), plus `drift_check` append-only checks on `kb/overrides/*.jsonl`.
 
-4) Deterministic IDs + Budgeted LLM Calls
+4. **One semantic authority per question.**
+   Why: the October 2026 drift happened when the simulator became the authority on card meaning (P-01).
+   Rule: code outside `grammar/` and `kb/` may read Oracle text to *verify* a claim, but must not derive and use its own card semantics without declaring `@ai-semantic-role:`.
+   Enforced by: `tools/drift_check.py` semantic check (a heuristic that only warns).
 
-- Rule: All chunks, embeddings, and artifacts use content-hash IDs. All LLM/embedding calls go through a single budgeted client (w/ token counting + hard caps).
-- Why: Reproducibility and cost control.
-Enforce: unit test that rejects non-hash IDs; budget test that fails if calls bypass the tracker.
+5. **Oracle refresh is an explicit, versioned operation.**
+   Why: reproducibility; manual corrections must survive refreshes.
+   Rule: refreshes write append-only snapshots to `kb/refresh/` and never run inside a user query.
+   Enforced by: **(review)**; the refresh replay tests in `kb/test_v02.py`.
 
-5) Optional Deps Must Degrade Gracefully
+6. **Frozen means frozen.**
+   Why: predictions only count if they were made before the outcome (P-03).
+   Rules:
+   - Never edit `predictions/PREDICTIONS_2026-10-20.*`. New predictions go in new, dated files.
+   - Score a prediction only against the criteria version frozen with it.
 
-- Rule: UMAP/HDBSCAN/FAISS/tiktoken are optional; guarded imports with explicit fallbacks (semantic→paragraph chunking, etc.).
-- Why: Keeps the pipeline usable across environments.
-Enforce: test matrix with deps absent; assert informative errors/fallback logs.
+   Enforced by: `tools/drift_check.py` frozen-hash check (an error that fails CI).
 
-6) Retrieval Is an Interface, Not an Implementation
+7. **Discovery doesn't judge.**
+   Why: P-04.
+   Rule: discovery code must not filter interactions by power, efficiency or competitiveness. Any such filter belongs to evaluation and must be labeled there.
+   Enforced by: **(review)**, using fixture F-P04 (`codex_++/fixtures/`).
 
-- Rule: All search uses the Retriever interface. FAISS is a plugin behind it; no module reaches into FAISS directly.
-- Why: Swap/extend vector stores without churn.
-Enforce: static import check that forbids faiss outside store modules.
+8. **Hypotheticals are labeled.**
+   Why: P-05.
+   Rule: anything recommending a card Zach doesn't own, or a transfer between decks, says so.
+   Enforced by: **(review)**, using fixture F-P05.
 
-7) Observability via a Single Logger
+9. **Standard library only** for project code. Optional heavy dependencies must be guarded.
+   Why: the tools have to run anywhere Zach and the agents work.
+   Enforced by: **(review)**; there is one known exception (C-004).
 
-- Rule: Use core.logger.get_logger(__name__) everywhere; no ad-hoc print/logging config.
-- Why: Consistent diagnostics and filterability.
-Enforce: linter rule (deny print in src); unit test to scan modules for logging.getLogger.
+10. **Decisions and challenges are append-only.**
+    Why: provenance; earlier judgments are superseded, never rewritten (charter amendments 2 and 4).
+    Enforced by: `tools/drift_check.py --base origin/main` in CI.
 
-8) Docs-as-Contracts (QAT)
+11. **Purpose files stay in sync with their code.**
+    Why: a stale contract is worse than none.
+    Rule: every purpose file names a real source file, and its `@ai-dependencies` matches that file's local imports.
+    Enforced by: `tools/drift_check.py` purpose check (errors for a missing source, warnings for a dependency mismatch).
 
-- Rule: Every module has a minimal @ai-* docblock + .purpose.md entry listing inputs/outputs/deps/risks. AST tests must match declared imports.
-- Why: Prevents architectural drift; boosts readability for AI tooling.
-Enforce: AST vs purpose-file test; CI fails on mismatches.
+## Definition of done (per PR)
 
-9) Tests Prefer Isolation Over Integration
-
-- Rule: Stub cloud/LLM/FAISS/tiktoken in tests; assert flow and schema conformance, not vendor behavior.
-- Why: Fast, deterministic feedback; avoids flaky CI.
-Enforce: fixtures that auto-patch heavy deps; coverage requirement on orchestration paths.
-
-10) Storage Semantics Are Centralized
-
-- Rule: All local/S3 I/O goes through storage helpers that validate schema before write; S3 prefixes come from config only.
-- Why: Stops silent divergence and “just this once” paths.
-Enforce: forbid direct boto3/filesystem calls outside storage modules (static import check).
-
-❌ Anti-Patterns to Ban (AI-Coding Drift Hotspots)
-
-Inline openai.ChatCompletion.create(...) / direct vendor calls (must use shared clients).
-
-“Convenience” environment reads and ad-hoc Path(...) in feature code.
-
-New JSON shapes written from a module without a schema contract update.
-
-Direct FAISS access outside the store; print() for debugging; one-off CSV writers.
-
-✅ Definition of Done (per PR)
-
-- Uses config getters; no direct env/paths.
-- If CLI: zero business logic (parse → delegate).
-- Reads/writes only schema-validated artifacts.
-- LLM/embedding calls go through budgeted client.
-- Logger via core.logger; no print.
-- Purpose/intent updated; AST-import test passes.
-- Tests stub heavy deps; cover control flow.
+- `python3 tools/drift_check.py --base origin/main` reports no errors. New warnings are fixed or logged in `challenges/`.
+- `python3 -m unittest discover -s tests` and the grammar tests pass. If the PR touches `kb/`, the KB suite passes locally against the data artifacts.
+- Behavior changes: the module's purpose file is updated.
+- Design changes: a `decisions/` event is appended.
+- Mechanics claims carry their verification state.
+- The PR description says whether the change touches P-01 to P-05. If it does, which contract, and how the change preserves it.

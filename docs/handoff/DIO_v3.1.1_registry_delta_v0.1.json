@@ -1,0 +1,47 @@
+{
+ "addendum": "DIO-3.1.1-kb-addendum-0.1",
+ "base": "DIO v3.1.1 + Grammar Registry v0.1",
+ "decided_by": "Kate and Zach, 2026-10-22 (review of KB v0.2, 2026-10-21)",
+ "status": "accepted",
+ "hook_identifiers": [
+  {"value": "permanent.tapped_for_mana", "decision": "A1", "kind": "derived_facet",
+   "true_when": "a mana ability of that permanent whose cost includes {T} resolves and produces mana (CR 106.12, 106.12a-b, 605)",
+   "not_true_when": ["the permanent is tapped to pay crew or station", "the permanent is tapped by an effect", "the permanent is tapped to pay a non-mana cost"],
+   "implies": ["permanent.tap [that permanent]", "mana.add [source: that permanent]"]},
+  {"value": "turn.step.begin", "decision": "A6", "qualifiers": ["step", "whose_turn"], "step_domain": "rules.turn.step"},
+  {"value": "turn.phase.begin", "decision": "A6", "qualifiers": ["phase", "whose_turn"], "phase_domain": "rules.turn.phase"}
+ ],
+ "aliases": [
+  {"legacy": "timing.step_begin", "maps_to": ["turn.step.begin", "turn.phase.begin"], "decision": "A6",
+   "rule": "read the step or phase named after 'at the beginning of'; phase words map to turn.phase.begin"}
+ ],
+ "domains": [
+  {"domain": "hook.qualifier.actor", "decision": "A2", "values": ["you", "opponent", "any_player"],
+   "note": "who performs the act. Kept distinct from controller (Kate overruled collapsing it)."},
+  {"domain": "hook.qualifier.player_relation", "decision": "A2",
+   "fields": ["actor", "permanent_controller_at_event", "source_controller", "owner", "relation_to_observer"],
+   "values": ["observer_controller", "opponent_of_observer", "not_observer_controller", "any", "same_as_actor"]},
+  {"domain": "hook.qualifier.cardinality", "decision": "A3", "values": ["each_object", "one_or_more", "per_player", "per_batch"],
+   "note": "one_or_more fires once per simultaneous event; each_object once per object"},
+  {"domain": "hook.qualifier.simultaneity_group", "decision": "A3", "values": ["per_event_batch"]},
+  {"domain": "mana.unit.type", "decision": "A4", "values": ["W", "U", "B", "R", "G", "C"],
+   "note": "snow is a property of the source (unit.snow), not a colour or type"},
+  {"domain": "mana.symbol.type", "decision": "A4", "values": ["generic", "colored", "colorless", "hybrid", "mono_hybrid", "phyrexian", "X", "snow"]},
+  {"domain": "mana.production.mode", "decision": "A4",
+   "values": ["fixed", "alternatives", "any_color", "any_one_color", "chosen_color", "any_combination", "combination_of", "any_type", "colorless", "commander_identity", "unread"],
+   "rules": ["any_color never produces colorless", "any_type may produce colorless", "{C} can be paid only with colorless mana"]},
+  {"domain": "mana.provenance", "decision": "A4", "fields": ["source", "snow", "restriction"]},
+  {"domain": "rules.cost.family", "decision": "A5", "extends": "rules.cost.family",
+   "primitives": ["mana", "tap", "untap", "sacrifice", "discard", "pay_life", "exile", "reveal", "return_to_hand", "remove_counters", "pay_energy"],
+   "macros": {"loyalty": "remove_counters or put counters [loyalty]", "blight": "macro.blight@1", "collect_evidence": "exile cards with total mana value N from your graveyard"}},
+  {"domain": "act.time", "decision": "A5", "values": ["paid_as_cost", "on_resolution"],
+   "note": "the same act (sacrifice, tap, discard) is either paid as a cost or done on resolution; events of a paid cost are observable before resolution"}
+ ],
+ "keyword_macros": [
+  {"id": "macro.earthbend@1", "keyword": "earthbend", "decision": "A7"},
+  {"id": "macro.offspring@1", "keyword": "offspring", "decision": "A7", "expands_to": "additional cost {N}; if paid, ETB trigger creates a 1/1 token copy"},
+  {"id": "macro.dredge@1", "keyword": "dredge", "decision": "A7", "expands_to": "replacement of a draw: return this card from graveyard to hand and mill N"},
+  {"id": "macro.crew@1", "keyword": "crew", "decision": "A7", "expands_to": "tap any number of untapped creatures with total power N: becomes an artifact creature (does not make permanent.tapped_for_mana true)"},
+  {"id": "macro.station@1", "keyword": "station", "decision": "A7", "expands_to": "tap another untapped creature: put charge counters equal to its power; sorcery speed"}
+ ]
+}

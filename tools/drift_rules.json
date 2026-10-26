@@ -1,0 +1,17 @@
+{
+  "_doc": "Rules for tools/drift_check.py. Changing 'frozen' or 'semantic_owners' is a design decision: record it in decisions/decision_events.jsonl.",
+  "frozen": {
+    "predictions/PREDICTIONS_2026-10-20.json": "18657701bdba2bdc5beb60b4bd66632396b0e55c99fd8bed9bed80fa9bce589c",
+    "predictions/PREDICTIONS_2026-10-20.md": "1f04a558a6279685fe0a850cd8e04cb487092c94a93de955e48efcb1d2088f68"
+  },
+  "purpose_dir": "codex_++/purpose_files",
+  "semantic_owners": ["grammar/", "kb/"],
+  "scan_exclude": [".git/", "tests/", "tools/"],
+  "append_only": [
+    "decisions/decision_events.jsonl",
+    "challenges/ledger.jsonl",
+    "kb/overrides/review_overlay.jsonl",
+    "kb/overrides/verified_reviews.jsonl",
+    "kb/overrides/oracle_reconciliation.jsonl"
+  ]
+}

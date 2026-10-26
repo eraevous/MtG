@@ -1,0 +1,19 @@
+{
+ "abilities": 6858,
+ "flow_edges": 117302,
+ "flow_edges_by_certainty": {
+  "guaranteed": 16664,
+  "optional": 3827,
+  "conditional": 13792,
+  "possible": 83019
+ },
+ "loops": 2125,
+ "loops_by_certainty": {
+  "guaranteed": 11,
+  "optional": 46,
+  "conditional": 153,
+  "possible": 1915
+ },
+ "loop_card_pairs": 1980,
+ "loops_both_fully_parsed": 1320
+}
