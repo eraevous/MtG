@@ -18,7 +18,9 @@ Discovery comes before judgment. The Deck Interaction Ontology makes relationshi
 
 ## What went wrong before, and what this repo guards against
 
-In October 2026 a run of locally reasonable steps turned a semantic-representation project into a simulator. The simulator became the authority on what cards meant, while the ontology sat disconnected. No test failed. The AEC layer here (`codex_++/`, `decisions/`, `challenges/`, `tools/drift_check.py`) exists to make that kind of drift visible early.
+**Observed (October 2026):** through a run of locally reasonable steps, the simulator and evaluator developed independently of the governing semantic representation. They repeatedly parsed card text, while the ontology and existing semantic data stayed largely disconnected. No test failed.
+
+**Diagnosis (Kate's and Claude's interpretation, not established history):** this allowed competing interpretations of card meaning, and it moved effort away from deck-building decisions toward simulation machinery. The AEC layer here (`codex_++/`, `decisions/`, `challenges/`, `tools/drift_check.py`) exists to make that kind of drift visible early.
 
 It must not repeat the mistake one level up: **the repository is infrastructure for the Magic project, not the other way round.** Governance features have to justify their cost.
 

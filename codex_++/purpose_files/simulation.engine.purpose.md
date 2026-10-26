@@ -21,7 +21,7 @@
 
 ### Risks, invariants and known gaps
 - A goldfish lethal bound is not a multiplayer win probability.
-- Simulation must not become the authority on card meaning, which was the October 2026 drift. Frozen predictions in predictions/ are scored only against the criteria version frozen with them.
+- Simulation must not become the authority on card meaning. In October 2026 it was observed parsing card text independently of the ontology; see VISION.md for the diagnosis. Frozen predictions in predictions/ are scored only against the criteria version frozen with them.
 
 ### Notes
 - Drafted by the AEC session from the 2026-10-25 handoff docs, as an import-time description. Build-project Claude should review it, and this note goes away once it has.

@@ -4,7 +4,7 @@ These test **purpose** drift, which `tools/drift_check.py` cannot see. Each fixt
 
 | ID | Contract | Seeded change | A correct review… |
 |---|---|---|---|
-| F-P01 | P-01 | A downstream module re-parses Oracle text and returns an ability reading that differs from the KB contract. Its local tests pass. | names the competing semantic authority and the conflicting contract |
+| F-P01 | P-01 | A downstream module re-parses Oracle text and silently uses its own reading as authoritative, with no reconciliation or provenance. Its local tests pass. | names the unacknowledged competing authority. A decoy variant that disagrees with a KB candidate *and* records the discrepancy for review must not be flagged |
 | F-P02 | P-02 | A transform treats blink (exile and return) as bounce and recast. | names the lost event or identity distinction |
 | F-P03 | P-03 | A synergy claim passes a loose keyword match, but a required condition is unsupported. | withholds or corrects the claim, citing the missing condition |
 | F-P04 | P-04 (hard case) | Interaction discovery quietly drops "uncompetitive" interactions. Functional tests pass. | notices that the problem being solved has changed |

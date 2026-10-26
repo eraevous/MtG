@@ -24,7 +24,7 @@ If a spec, plan or task (from Spec Kit or anything else) conflicts with the proj
 - **Drift**: stop and check whether the plan still serves the purpose. **Switch to Drift when any of these happen:**
   - You are about to add a new subsystem, or change a module's responsibility.
   - A spec or plan is revised.
-  - Something downstream starts deriving what something upstream is supposed to own (the October 2026 failure: the simulator re-deriving card semantics).
+  - Something downstream starts deriving what something upstream is supposed to own. (Observed in October 2026: the simulator developed its own card parsing, independent of the ontology and KB.)
   - A large share of tests, effort or code is going into machinery rather than a deck decision Zach will make.
   - The work would cross a P-contract, or the budget or effort is clearly ballooning.
 
@@ -43,7 +43,7 @@ Prefer a reviewer with fresh context (for example a subagent that has not seen t
 
 - Never edit `predictions/PREDICTIONS_2026-10-20.*` (CI enforces this).
 - Never rewrite lines in `decisions/`, `challenges/` or `kb/overrides/*.jsonl`. Append instead (CI enforces this).
-- Never promote a contract to verified. Never mass-approve.
+- Never automatically promote contracts to verified, and never mass-approve them. Semantic verification requires authorized (Zach's) review, explicit evidence and passing scenarios, recorded in the append-only review overlay.
 - Never hand-edit SQLite. Rebuild it.
 - Never write to the inventory Sheet unless Zach asks, and then follow archive-then-clone (CHARTER 1).
 - Label every mechanics claim with its verification state. Label hypothetical or unowned cards.

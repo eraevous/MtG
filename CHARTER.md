@@ -29,7 +29,7 @@ This replaces the charter inherited from the AEC template, whose rules about S3,
    Enforced by: KB verification states and the append-only review overlay (`kb/test_v02.py` checks that the overlay can't be updated or deleted), plus `drift_check` append-only checks on `kb/overrides/*.jsonl`.
 
 4. **One semantic authority per question.**
-   Why: the October 2026 drift happened when the simulator became the authority on card meaning (P-01).
+   Why: P-01. In October 2026 the simulator was observed developing its own card parsing, independent of the ontology. The diagnosis is that this allowed competing interpretations (see VISION.md).
    Rule: code outside `grammar/` and `kb/` may read Oracle text to *verify* a claim, but must not derive and use its own card semantics without declaring `@ai-semantic-role:`.
    Enforced by: `tools/drift_check.py` semantic check (a heuristic that only warns).
 

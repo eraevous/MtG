@@ -29,7 +29,7 @@ Current Oracle text and the applicable rules govern mechanical truth. The DIO go
 
 - **Allowed:** an evaluator, reviewer or test reading Oracle text to check a candidate independently.
 - **Not allowed:** a component that derives its own card semantics and uses them as truth without declaring that it does so.
-- **Drift test (fixture F-P01):** a downstream module re-parses Oracle text and returns an ability reading that differs from the KB contract. This must be flagged even though the module's own tests pass.
+- **Drift test (fixture F-P01):** a downstream module re-parses Oracle text and silently treats its own reading as authoritative, with no reconciliation against the KB contract and no provenance. This must be flagged even though the module's own tests pass. Disagreeing with an unverified KB candidate is **not** drift: it may be a needed correction. Unacknowledged competing authority is drift.
 
 ## P-02: Rules-relevant distinctions survive every representation
 
