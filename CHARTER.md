@@ -18,7 +18,7 @@ Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/proj
 2) Rules Distinctions Survive (P-02)
 - Rule: Representations keep distinctions the rules make: blink ≠ bounce, sacrifice ≠ destroy, actor ≠ controller (A2), tapped-for-mana (A1), typed mana (A4), copy vs. token, and so on. Information loss must never yield certainty.
 - Why: Most past analysis errors were invented or merged rules interactions.
-- Enforce: exists: KB lossy-compile gate (only lossless compiles get runtime certificates; `kb/test_v02.py`, `kb/test_acceptance.py`). `invariants_v021d.py` is named by the build project but is not in the imported release, so it is to be imported. planned: a fixture pair per distinction that must produce different outputs.
+- Enforce: exists: KB lossy-compile gate (only lossless compiles get runtime certificates; `kb/test_v02.py`, `kb/test_acceptance.py`). exists: `tests/test_kernel_invariants.py` runs the v0.2.1d property/metamorphic invariants (information loss never yields certainty, unrelated events never change counts) against the legacy semantic kernel in `kernel/`, failing on any violation not already known (C-009). planned: a fixture pair per distinction that must produce different outputs.
 
 3) Claims Carry Evidence and a Verification State (P-03)
 - Rule: Every mechanics or deck claim names its evidence and its state: candidate, ready_for_review, semantic_reviewed, runtime-ready, quarantined, rejected or review_stale. Semantic review and runtime readiness are separate. A contract never gains authority because the evaluator consumes it successfully. Nothing is auto-promoted or mass-approved. A human `verified` review must cite passing scenarios.
