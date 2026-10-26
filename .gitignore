@@ -212,3 +212,4 @@ __marimo__/
 *.xlsx
 data/*
 !data/README.md
+vraska_hits.json
