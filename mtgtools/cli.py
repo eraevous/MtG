@@ -5,7 +5,7 @@
   python3 -m mtgtools explore ["Terra, Magical Adept" | landfall] [--ci RG] [--deck D] [--free] [--mode focused|divergent]
   python3 -m mtgtools hypothesis "Card A" "Card B" [--effect token.create] [--ci RG]
   python3 -m mtgtools compare TMNT "Crustacean Commando=Knockout Maneuver" [--workbook export.xlsx]
-  python3 -m mtgtools check claims.json        (a JSON list of {text, kind, cards[], deck?})
+  python3 -m mtgtools check claims.json        (a JSON list of {text, kind, cards[], deck?, assert?})
 
 --db picks the collection: any SQLite built by kb/migrate_v02.py (default kb/mtg_cards_v0.2.sqlite).
 """
@@ -31,7 +31,10 @@ def envelope(verb, query, db, data=None, claims=None, error=None):
            'summary': {'claims': len(claims), 'by_grade': grades},
            'read_me_first': 'Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, '
                             'mechanics) says nothing about the others. performance is never decision_grade in v0, and '
-                            'preference belongs to the person (deck charter), not to these tools.'}
+                            'preference belongs to the person (deck charter), not to these tools. A good source is not a true '
+                            'claim: check reports evidence_grade (the source) apart from verdict (whether a structured '
+                            'assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not '
+                            'record what would decide it; rejected links and contested loops rule out one route, not the card.'}
     if error:
         out['error'] = error
     else:

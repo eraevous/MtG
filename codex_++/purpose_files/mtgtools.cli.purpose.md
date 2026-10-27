@@ -5,7 +5,7 @@
 @ai-source-file: mtgtools/cli.py
 @ai-role: interface
 @ai-intent: "Give LLMs a small, testable tool surface over the KB, the loop discovery and the evaluator, without embedding an LLM in the engine."
-@ai-version: 0.1.0
+@ai-version: 0.2.0
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false

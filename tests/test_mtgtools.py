@@ -34,6 +34,51 @@ class Grading(unittest.TestCase):
             claim('x', 'vibes', 'oracle')
 
 
+class Qualifiers(unittest.TestCase):
+    """Qualifier matching on hand-built contracts, so it runs in CI without the KB database."""
+    VOCAB = {'legendary', 'creature', 'enchantment', 'saga', 'artifact', 'artificer', 'human', 'wizard', 'land', 'aura'}
+
+    def k(self, card, faces, feeds=(), hooks=(), subject='others', filt=None, self_phrase=False, targets=()):
+        return {'contract_id': card + '.op', 'card': card, 'faces': list(faces), 'feeds': list(feeds), 'hooks': list(hooks),
+                'hook_subject': subject, 'targets': list(targets), 'state': 'blocked',
+                'triggers': {h: {'filter': filt, 'self': self_phrase, 'parsed': True} for h in hooks}}
+
+    def setUp(self):
+        from mtgtools import verbs
+        self.v = verbs
+        self.terra_return = self.k('Terra', ['legendary creature — human wizard', 'legendary enchantment creature — saga wizard'],
+                                   feeds=['card.return_to_battlefield'])
+        self.terra_copy = self.k('Terra', self.terra_return['faces'], feeds=['token.create'],
+                                 targets=['target nonlegendary enchantment you control'])
+
+    def q(self, p, eff, o, hook='battlefield.enter'):
+        return self.v._qualify(p, eff, o, hook, self.VOCAB)
+
+    def test_object_type_filter(self):
+        era = self.k('Era', ['enchantment'], hooks=['battlefield.enter'], filt='artifact or artificer')
+        module = self.k('Module', ['artifact'], hooks=['battlefield.enter'], filt='creature')
+        self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', era)[0], 'incompatible')
+        self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', module)[0], 'compatible')
+
+    def test_counter_type_is_never_assumed(self):
+        chapter = self.k('Terra', [], hooks=['counter.put'], subject=None)
+        energy = self.k('Nissa', ['legendary creature'], feeds=['counter.put'])
+        self.assertEqual(self.q(energy, 'counter.put', chapter, 'counter.put')[0], 'unresolved')
+
+    def test_self_enter_needs_a_copy_or_return_of_that_card(self):
+        light = self.k('Light', ['enchantment'], hooks=['battlefield.enter'], subject='self')
+        talent = self.k('Talent', ['enchantment — class'], hooks=['battlefield.enter'], self_phrase=True)
+        golem = self.k('Golem', ['artifact creature'], hooks=['battlefield.enter'], subject='self')
+        self.assertEqual(self.q(self.terra_copy, 'token.create', light)[1], 'reentry_of_target')
+        self.assertEqual(self.q(self.terra_copy, 'token.create', talent)[1], 'reentry_of_target')
+        self.assertEqual(self.q(self.terra_copy, 'token.create', golem)[0], 'incompatible')   # not an enchantment
+        self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', light)[0], 'incompatible')
+
+    def test_same_card_reentry_on_a_two_faced_card_stays_unresolved(self):
+        etb = self.k('Terra', self.terra_return['faces'], hooks=['battlefield.enter'], subject='self')
+        self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', etb)[:2], ('unresolved', 'same_card'))
+
+
 @unittest.skipUnless(DB.exists(), 'KB database not present (data/README.md)')
 class Verbs(unittest.TestCase):
     def run_cli(self, *args):
@@ -84,16 +129,76 @@ class Verbs(unittest.TestCase):
         self.assertTrue(out['data']['unverified_contracts'])
         self.assertTrue(out['data']['would_settle_it'])
 
-    def test_check_grades_each_claim_by_kind(self):
+    def run_check(self, items):
         import tempfile
-        items = [{'text': 'owned', 'kind': 'inventory', 'cards': ['Cauldron of Essence']},
-                 {'text': 'faster', 'kind': 'performance'},
-                 {'text': 'likes it', 'kind': 'preference', 'deck': 'NoSuchDeck'}]
         with tempfile.NamedTemporaryFile('w', suffix='.json', delete=False) as f:
             json.dump(items, f)
         code, out = self.run_cli('check', f.name)
         self.assertEqual(code, 0)
-        self.assertEqual([c['grade'] for c in out['claims']], ['decision_grade', 'exploratory', 'not_system_gradable'])
+        return out['claims']
+
+    def test_check_grades_each_claim_by_kind(self):
+        claims = self.run_check([{'text': 'owned', 'kind': 'inventory', 'cards': ['Cauldron of Essence']},
+                                 {'text': 'faster', 'kind': 'performance'},
+                                 {'text': 'likes it', 'kind': 'preference', 'deck': 'NoSuchDeck'}])
+        self.assertEqual([c['evidence_grade'] for c in claims], ['decision_grade', 'exploratory', 'not_system_gradable'])
+        # no assertion given: the source is good, but the claim itself is not checked, so it is not decision grade
+        self.assertEqual([c['verdict'] for c in claims], ['NOT_CHECKED'] * 3)
+        self.assertEqual(claims[0]['grade'], 'exploratory')
+
+    # --- regressions from the Terra runs (Kate, 2026-10-27): the questions are no longer held out ---
+
+    def test_check_never_turns_a_good_source_into_a_true_claim(self):
+        claims = self.run_check([
+            {'text': 'Leaves from the Vine is available for Steph', 'kind': 'inventory', 'cards': ['Leaves from the Vine']},
+            {'text': 'a free copy exists', 'kind': 'inventory', 'cards': ['Leaves from the Vine'], 'assert': {'free_min': 1}},
+            {'text': 'nonlegendary only', 'kind': 'rules_text', 'cards': ['Terra, Magical Adept'],
+             'assert': {'text_contains': 'nonlegendary enchantment'}}])
+        self.assertEqual(claims[0]['evidence_grade'], 'decision_grade')
+        self.assertEqual((claims[0]['verdict'], claims[0]['grade']), ('NOT_CHECKED', 'exploratory'))
+        self.assertEqual(claims[1]['verdict'], 'CONTRADICTED')          # owned 1, free 0
+        self.assertEqual(claims[2]['verdict'], 'SUPPORTED')
+
+    def hyp(self, a, b):
+        code, out = self.run_cli('hypothesis', a, b)
+        self.assertEqual(code, 0)
+        return out['data']
+
+    def test_copy_of_a_self_enter_enchantment_is_a_lead_not_a_blank(self):
+        d = self.hyp('Terra, Magical Adept', 'Banishing Light')
+        reentry = [l for l in d['links'] if l['observer'] == 'Banishing Light' and l['basis'] == 'reentry_of_target']
+        self.assertTrue(reentry)
+        self.assertEqual(reentry[0]['qualifiers'], 'unresolved')       # the contracts don't record that the token is a copy
+        self.assertTrue(any(x['actor'].startswith('Terra') and x['acts_on'] == 'Banishing Light' for x in d['acts_on']))
+
+    def test_terra_cycle_is_a_same_card_link(self):
+        d = self.hyp('Terra, Magical Adept', 'Banishing Light')
+        same = [l for l in d['same_card_links'] if l['produces'] == 'card.return_to_battlefield']
+        self.assertTrue(same and all(l['observer'].startswith('Terra') for l in same))
+
+    def test_type_qualifier_rejects_era_of_innovation(self):
+        d = self.hyp('Terra, Magical Adept', 'Era of Innovation')
+        self.assertFalse([l for l in d['links'] if l['produces'] == 'card.return_to_battlefield'])
+        self.assertTrue(any('artifact or artificer' in l['qualifier_note'] for l in d['rejected_links']))
+
+    def test_energy_loops_are_contested_and_do_not_hide_the_card(self):
+        d = self.hyp('Terra, Magical Adept', 'Decoction Module')
+        self.assertFalse(d['loops'])                                   # energy is not a lore counter
+        self.assertTrue(d['loops_contested'])
+        bounce = [x for x in d['acts_on'] if x['actor'] == 'Decoction Module']
+        self.assertTrue(bounce and 'card.return_to_hand' in bounce[0]['produces'])
+
+    def test_unsupported_theme_names_the_supported_ones(self):
+        code, out = self.run_cli('explore', 'saga')
+        self.assertEqual(code, 2)
+        self.assertIn('self_mill', out['error'])
+
+    def test_card_reports_availability_under_the_policy(self):
+        code, out = self.run_cli('card', 'Leaves from the Vine')
+        self.assertEqual(code, 0)
+        av = out['data']['availability']
+        self.assertEqual(av['usable_without_asking'], 0)
+        self.assertIn('Necrobloom', av['in_other_built_decks'])
 
 
 if __name__ == '__main__':
