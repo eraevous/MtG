@@ -16,7 +16,7 @@
 ### Inputs and outputs
 | Direction | What |
 |---|---|
-| In | Inventory export, KB through sqlite_bridge |
+| In | Inventory export (.xlsx) or a collection database (collection/schema.sql, read by collection_db.py), KB through sqlite_bridge |
 | Out | Deck reports (Markdown or JSON) |
 
 ### Risks, invariants and known gaps

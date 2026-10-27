@@ -4,6 +4,10 @@ Zach's Magic: The Gathering (Commander) project. It holds the tools that help hi
 
 > **Status (2026-10-26):** the 2026-10-25 handoff has been imported as-is. Nothing in the mechanics data is human-verified. Every operation and contract is a *candidate*. The evaluator's numbers are descriptive profiles, not rankings. See `docs/handoff/00_CURRENT_STATE.md`.
 
+## Use it with your own cards
+
+The repo is public; the inventory Sheet it was built around is not. To run the evaluator and the knowledgebase on **your** collection, import it into a SQLite collection database (from a Moxfield/Archidekt/ManaBox CSV, your own Google Sheet, or text decklists) and pass that file wherever a command takes `--workbook`. Setup guide: [`docs/BRING_YOUR_OWN_COLLECTION.md`](docs/BRING_YOUR_OWN_COLLECTION.md).
+
 ## Start here
 
 1. `codex_++/project.purpose.md`: what this project is for (P-00) and the contracts (P-01 to P-08) that changes must not break.
@@ -23,11 +27,12 @@ Zach's Magic: The Gathering (Commander) project. It holds the tools that help hi
 | `decisions/` | Append-only design decisions and versioned criteria | provenance of design intent |
 | `challenges/` | Append-only unresolved objections and known defects | n/a |
 | `codex_++/` | Project purpose, module purpose files, drift fixtures | design intent |
+| `collection/` | Bring-your-own collection database: schema, importers (CSV, Sheet .xlsx, decklists), Scryfall enrichment | the user's ownership and allocation (for Zach, a snapshot of the Sheet) |
 | `tools/` | `drift_check.py` (AEC checks), `ast_dependency_extractor.py` | n/a |
 | `docs/` | Handoff docs and the charter | n/a |
 | `data/` | Where the gitignored databases and inventory export go (see `data/README.md`) | n/a |
 
-The inventory authority is the Google Sheet "MTG Master Inventory — Canonical", not anything in this repo (see `kb/inventory_adapter.py`).
+Zach's inventory authority is the Google Sheet "MTG Master Inventory — Canonical", not anything in this repo (see `kb/inventory_adapter.py`). Anyone else's is their own collection database (`collection/`).
 
 ## Run
 
@@ -45,6 +50,8 @@ cd grammar && python3 -m unittest tests.py && cd ..
 cd kb && python3 -m unittest test_v02.py test_mtg_db.py test_acceptance.py
 python3 kbq.py card "Emmara, Soul of the Accord"
 PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/<export>.xlsx deck "Token Triumph"
+# ...or a collection database (docs/BRING_YOUR_OWN_COLLECTION.md)
+PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/my_collection.sqlite deck "My Deck"
 ```
 
 Known baseline: 60 of 61 KB tests pass. The reproducibility test fails, and it also fails on the untouched release (challenge C-001).
