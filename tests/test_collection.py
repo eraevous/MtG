@@ -74,6 +74,42 @@ class CollectionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             mc.parse_decklist('Sol Ring without a count\n')
 
+    def test_archidekt_board_tags_are_skipped(self):
+        cards, skipped = mc.parse_decklist('1x Kenrith, the Returned King (eld) 303 [Commander{top}]\n'
+                                           '1x Sol Ring (c21) 263 [Ramp]\n1x Craw Wurm (m19) 1 [Maybeboard{noDeck}{noPrice}]\n')
+        self.assertEqual([c[0] for c in cards], ['Kenrith, the Returned King', 'Sol Ring'])
+        self.assertEqual(cards[0][2], 'Commander')
+        self.assertEqual(skipped, ['Craw Wurm'])
+
+    def test_own_missing_uses_the_collection_spelling(self):
+        # regression: a front-face deck line must not add a second copy of a card the CSV already holds
+        p = Path(self.tmp.name) / 'split.csv'
+        p.write_text('Name,Count\n"Brigid, Clachan\'s Heart // Brigid, Doun\'s Mind",1\nSol Ring,1\n', encoding='utf-8')
+        mc.import_csv(self.con, p, 'csv')
+        d = Path(self.tmp.name) / 'd.txt'
+        d.write_text("1 Brigid, Clachan's Heart\n1 Sol Ring\n", encoding='utf-8')
+        r = mc.import_deck(self.con, d, 'D', own_missing=True)
+        self.assertEqual(r['holdings_added'], 0)
+        mc.enrich(self.con, scryfall=SCRYFALL)
+        owned = dict(self.con.execute('select card_name, owned from owned'))
+        self.assertEqual(owned["Brigid, Clachan's Heart // Brigid, Doun's Mind"], 1)
+
+    def test_overlapping_sources_warn(self):
+        mc.import_csv(self.con, self.csv, 'export')
+        p = Path(self.tmp.name) / 'export_nov.csv'
+        p.write_text(MOXFIELD, encoding='utf-8')
+        r = mc.import_csv(self.con, p)
+        self.assertIn('export', r['warning'])
+
+    def test_sheet_import_keeps_decks_from_import_deck(self):
+        mc.import_csv(self.con, self.csv, 'moxfield')
+        mc.import_deck(self.con, self.deck, 'Mine', own_missing=True)
+        sheet = [{'Card Name': 'Sol Ring', 'Deck': 'Sheet deck', 'Status': 'Current deck', 'Quantity': '1', 'Section': ''}]
+        mc.replace_allocations(self.con, sheet)
+        mc.replace_allocations(self.con, sheet)   # a second Sheet import replaces only the Sheet's decks
+        decks = dict(self.con.execute('select deck, count(*) from deck_cards group by deck'))
+        self.assertEqual(decks, {'Mine': 6, 'Sheet deck': 1})
+
     def test_csv_aliases_and_reimport_replaces_source(self):
         r = mc.import_csv(self.con, self.csv, 'moxfield')
         self.assertEqual((r['rows'], r['copies']), (5, 6))
@@ -166,6 +202,7 @@ class CollectionTests(unittest.TestCase):
         self.assertEqual(audit['cards'], 9)
         meta = dict(sqlite3.connect(out).execute('select key,value from meta'))
         self.assertEqual(meta['canonical_sheet_id'], 'collection:Sam example')
+        self.assertNotIn('collection_imported_from_sheet', meta)
         self.assertEqual(meta['source_type'], 'read-only collection database')
 
     def test_reader_refuses_other_sqlite_files(self):

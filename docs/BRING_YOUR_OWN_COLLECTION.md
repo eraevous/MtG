@@ -44,6 +44,10 @@ python3 collection/mtgcollection.py init data/my_collection.sqlite --name "Sam's
 
 You can run several imports. Each one is a **source**, which by default is the file name; set your own with `--source`. If you import the same source again, it replaces that source's earlier rows, and other sources are left alone. So you can keep, say, a Moxfield export and a "binder 2" spreadsheet side by side, and refresh either one on its own. Your owned count for a card is the sum across all sources.
 
+> **Refreshing an export? Reuse its source label.** `export.csv` and a newer `export_nov.csv` are two different sources by default, so their counts would add up. Use the same `--source` for every version of the same export (for example `--source moxfield`). If most of the cards in a new import also appear in another source, the importer prints a warning.
+
+Import your collection **before** your decks. A deck line like `1 Fire` then attaches to the `Fire // Ice` your collection already holds, instead of becoming a second card.
+
 ### From a collection app (CSV)
 
 ```bash
@@ -87,7 +91,8 @@ python3 collection/mtgcollection.py import-deck data/my_collection.sqlite atraxa
 
 - The usual formats work: `1 Sol Ring`, `1x Sol Ring`, `1 Sol Ring (C21) 263 *F*`.
 - A `Commander` header marks the commander, and so does an inline `*CMDR*` or `[Commander]`. If your export does neither, add `--commander "Atraxa, Praetors' Voice"`.
-- Lines under `Sideboard`, `Maybeboard` and `Tokens` are skipped. A `Companion` section is kept outside the 100.
+- Lines under `Sideboard`, `Maybeboard` and `Tokens` are skipped, and so are lines tagged `[Maybeboard]`, `[Sideboard]` or `[Considering]` (Archidekt categories). A `Companion` section is kept outside the 100.
+- Names are matched to the spelling your collection already uses: front faces and missing accents both count.
 - Importing the same `--deck` again replaces that deck.
 
 **Status.** By default a deck is a `Current deck`, meaning its cards are physically in that deck. Those copies stop counting as free for other decks. For a list you are only considering, use `--status "Candidate"` (or any label you like). A candidate list never moves cards; it is a plan.
@@ -168,7 +173,7 @@ The canonical Sheet ("MTG Master Inventory — Canonical") imports as a whole:
 python3 collection/mtgcollection.py import-xlsx data/zach.sqlite data/MTG_Master_Inventory_Canonical_export_<date>.xlsx --sheet-id <current sheet id>
 ```
 
-When the workbook has `Collection` and `Deck Allocations` tabs (header on row 4) and no `--tab` is given, three things are imported: the holdings, every deck allocation row (whatever its status), and the two `Mechanics` tabs, passed through as candidate annotations. The evaluator then gives the same results from the database as from the export. Other tabs (Overview, intake logs and so on) are not carried over. The KB release pipeline still builds from the `.xlsx` export, so its manifests keep naming the Sheet id. The Sheet stays the inventory authority, and a database made from it is a snapshot, like the export.
+When the workbook has `Collection` and `Deck Allocations` tabs (header on row 4) and no `--tab` is given, three things are imported (an import replaces the decks the previous Sheet import brought in, and keeps decks added with `import-deck`): the holdings, every deck allocation row (whatever its status), and the two `Mechanics` tabs, passed through as candidate annotations. The evaluator then gives the same results from the database as from the export. Other tabs (Overview, intake logs and so on) are not carried over. The KB release pipeline still builds from the `.xlsx` export, so its manifests keep naming the Sheet id. A KB built from the database names the collection as its source (`collection:<name>`) and records the Sheet id only as `collection_imported_from_sheet`, because the database may have been edited since the import. The Sheet stays the inventory authority, and a database made from it is a snapshot, like the export.
 
 ## Reference
 

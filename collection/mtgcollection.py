@@ -214,7 +214,22 @@ def import_rows(con, rows, source, kind, file_name=None, digest=None):
         copies += q
     log_import(con, kind, source, file_name, digest, n)
     con.commit()
-    return {'source': source, 'rows': n, 'copies': copies}
+    result = {'source': source, 'rows': n, 'copies': copies}
+    overlaps = overlapping_sources(con, source)
+    if overlaps:
+        result['warning'] = (f'most cards in {source!r} are also in {overlaps}; owned counts add up across sources. '
+                             'If this file replaces an earlier export, re-import it with that source label (--source) instead.')
+    return result
+
+
+def overlapping_sources(con, source, threshold=0.8):
+    mine = {n for (n,) in con.execute('select card_name from holdings where source=?', (source,))}
+    out = []
+    for (other,) in con.execute("select distinct source from holdings where source<>? and source not like 'deck:%'", (source,)):
+        theirs = {n for (n,) in con.execute('select card_name from holdings where source=?', (other,))}
+        if mine and theirs and len(mine & theirs) >= threshold * min(len(mine), len(theirs)):
+            out.append(other)
+    return out
 
 
 def import_csv(con, path, source=None):
@@ -287,7 +302,12 @@ def import_xlsx(con, path, source=None, tab=None, header_row=None, sheet_id=None
 
 
 def replace_allocations(con, rows):
-    con.execute('delete from deck_cards')
+    """Replace the decks a previous Sheet import brought in, plus any deck the Sheet names.
+    Decks added with import-deck and absent from the Sheet are kept."""
+    previous = json.loads((con.execute("select value from meta where key='sheet_decks'").fetchone() or ['[]'])[0])
+    incoming = {str(r.get('Deck', '')).strip() for r in rows} - {''}
+    con.executemany('delete from deck_cards where deck=?', [(d,) for d in set(previous) | incoming])
+    set_meta(con, sheet_decks=json.dumps(sorted(incoming), ensure_ascii=False))
     decks = set()
     for r in rows:
         name, deck = str(r.get('Card Name', '')).strip(), str(r.get('Deck', '')).strip()
@@ -335,11 +355,25 @@ def parse_decklist(text, commanders=()):
             skipped.append(m.group('name'))
             continue
         name, tail = m.group('name').strip(), m.group('tail') or ''
+        if re.search(r'\[[^\]]*\b(?:maybeboard|sideboard|considering)\b', tail, re.I):   # Archidekt category tags
+            skipped.append(name)
+            continue
         sec = section
         if name.casefold() in cmd or '*CMDR*' in tail.upper() or re.search(r'\[[^\]]*commander', tail, re.I):
             sec = 'Commander'
         out.append((name, int(m.group('qty')), sec))
     return out, skipped
+
+
+def existing_name(con, name):
+    """The collection's spelling of `name`: exact, else the same card by front face or without diacritics
+    ('Fire' -> 'Fire // Ice', 'Lim-Dul's Vault' -> 'Lim-Dûl's Vault'), else `name` itself."""
+    if con.execute('select 1 from cards where card_name=?', (name,)).fetchone():
+        return name
+    want = {fold(name), fold(name.split(' // ')[0])}
+    hits = [n for (n,) in con.execute('select card_name from cards')
+            if fold(n) in want or fold(n.split(' // ')[0]) in want]
+    return hits[0] if len(hits) == 1 else name
 
 
 def import_deck(con, path, deck, status='Current deck', commanders=(), own_missing=False):
@@ -350,6 +384,7 @@ def import_deck(con, path, deck, status='Current deck', commanders=(), own_missi
     con.execute('delete from deck_cards where deck=?', (deck,))
     con.execute('delete from holdings where source=?', (f'deck:{deck}',))
     total = {}
+    cards = [(existing_name(con, n), q, sec) for n, q, sec in cards]
     for name, q, sec in cards:
         ensure_card(con, name)
         st = 'Companion' if sec == 'Companion' and status == 'Current deck' else status

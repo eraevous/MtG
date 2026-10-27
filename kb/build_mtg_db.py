@@ -80,13 +80,15 @@ def build(workbook,db_path,jsonl_out=None):
     now=datetime.datetime.now(datetime.timezone.utc).isoformat()
     if is_db:
         ident=collection_db.identity(workbook)
-        sheet_id,source_url,source_type=ident['source_sheet_id'] or 'collection:'+ident['label'],'','read-only collection database'
+        # a collection DB is never the canonical Sheet, even when it was imported from it (it may have been edited since)
+        sheet_id,source_url,source_type='collection:'+ident['label'],'','read-only collection database'
     else:
         sheet_id,source_url,source_type=ia.CANONICAL_ID,ia.CANONICAL_URL,'read-only mounted canonical workbook snapshot'
     source_meta={'canonical_sheet_id':sheet_id,'canonical_url':source_url,'input_sha256':before,
                  'input_name':workbook.name,'source_type':source_type,
                  'parser':pv,'import_utc':now,'candidate_policy':'none of the machine findings is automatically rules-verified',
                  'rebuild_policy':'regenerate after new live export; archives are rollback-only'}
+    if is_db and ident['source_sheet_id']:source_meta['collection_imported_from_sheet']=ident['source_sheet_id']
     c.executemany('INSERT INTO meta VALUES(?,?)',[(k,str(v)) for k,v in source_meta.items()])
     c.execute('INSERT INTO source_snapshots(source_name,source_url,sha256,source_kind,imported_utc,notes) VALUES(?,?,?,?,?,?)',
         (workbook.name,source_url,before,'collection_db' if is_db else 'local_snapshot',now,'Source is never written to.'))
