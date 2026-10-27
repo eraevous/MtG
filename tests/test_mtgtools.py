@@ -74,6 +74,19 @@ class Qualifiers(unittest.TestCase):
         self.assertEqual(self.q(self.terra_copy, 'token.create', golem)[0], 'incompatible')   # not an enchantment
         self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', light)[0], 'incompatible')
 
+    def test_a_target_disjunction_is_not_read_as_a_conjunction(self):
+        copier = self.k('Copier', ['enchantment'], feeds=['token.create'], targets=['target artifact or enchantment you control'])
+        artifact = self.k('Relic', ['artifact'], hooks=['battlefield.enter'], subject='self')
+        land = self.k('Field', ['land'], hooks=['battlefield.enter'], subject='self')
+        self.assertEqual(self.q(copier, 'token.create', artifact)[0], 'unresolved')     # was rejected as "artifact enchantment"
+        self.assertEqual(self.q(copier, 'token.create', land)[0], 'unresolved')         # a miss on a disjunction is not a rejection
+
+    def test_a_card_can_feed_its_own_watcher_of_other_objects(self):
+        maker = self.k('Maker', ['creature'], feeds=['token.create'])
+        watcher = dict(self.k('Maker', ['creature'], hooks=['battlefield.enter'], filt='creature'), contract_id='Maker.op2')
+        links = self.v._links([maker, watcher])
+        self.assertTrue(any(l['same_card'] and l['observer_contract'] == 'Maker.op2' for l in links))
+
     def test_same_card_reentry_on_a_two_faced_card_stays_unresolved(self):
         etb = self.k('Terra', self.terra_return['faces'], hooks=['battlefield.enter'], subject='self')
         self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', etb)[:2], ('unresolved', 'same_card'))
@@ -159,6 +172,11 @@ class Verbs(unittest.TestCase):
         self.assertEqual(claims[1]['verdict'], 'CONTRADICTED')          # owned 1, free 0
         self.assertEqual(claims[2]['verdict'], 'SUPPORTED')
 
+    def test_a_true_assertion_does_not_verify_a_false_sentence(self):
+        c = self.run_check([{'text': 'Leaves from the Vine has a free copy for Steph', 'kind': 'inventory',
+                             'cards': ['Leaves from the Vine'], 'assert': {'owned_min': 1}}])[0]
+        self.assertEqual((c['verdict'], c['verdict_on'], c['text_judged']), ('SUPPORTED', 'assertion', False))
+
     def hyp(self, a, b):
         code, out = self.run_cli('hypothesis', a, b)
         self.assertEqual(code, 0)
@@ -183,7 +201,8 @@ class Verbs(unittest.TestCase):
 
     def test_energy_loops_are_contested_and_do_not_hide_the_card(self):
         d = self.hyp('Terra, Magical Adept', 'Decoction Module')
-        self.assertFalse(d['loops'])                                   # energy is not a lore counter
+        self.assertFalse(d['loops'])                                   # no contract records Decoction Module putting counters
+        self.assertEqual({l['kb_check'] for l in d['loops_contested']}, {'unsupported_by_contracts'})
         self.assertTrue(d['loops_contested'])
         bounce = [x for x in d['acts_on'] if x['actor'] == 'Decoction Module']
         self.assertTrue(bounce and 'card.return_to_hand' in bounce[0]['produces'])

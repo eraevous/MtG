@@ -119,8 +119,15 @@ def _face_matches(filt, face, vocab, is_token=False):
 
 def _target_types(texts, vocab):
     """Type words a contract's target eligibility names, e.g. "target nonlegendary enchantment you control" -> nonlegendary enchantment."""
-    return [' '.join(w for w in t.lower().split() if w not in _FILLER and (w in vocab or (w.startswith('non') and w[3:] in vocab)))
-            for t in texts]
+    out = []
+    for t in texts:
+        alts = []
+        for alt in t.lower().replace(',', ' or ').split(' or '):
+            words = [w for w in alt.split() if w not in _FILLER and (w in vocab or (w.startswith('non') and w[3:] in vocab))]
+            if words:
+                alts.append(' '.join(words))
+        out.append(' or '.join(alts))
+    return out
 
 
 def _fits_target(p, o, vocab):
@@ -135,8 +142,8 @@ def _fits_target(p, o, vocab):
         r = [_face_matches(tt, f, vocab) for f in o['faces']]
         if any(x is True for x in r):
             return True
-        if any(x is None for x in r):
-            best = None
+        if any(x is None for x in r) or ' or ' in tt:
+            best = None          # disjunctions are not represented in the contracts yet, so a miss stays unresolved (Kate)
     return best
 
 
@@ -196,8 +203,6 @@ def _links(contracts, only=None, c=None):
                     self_obs = _self_obs(o, hook)
                     if o['contract_id'] == p['contract_id']:
                         continue
-                    if o['card'] == p['card'] and not self_obs:
-                        continue
                     if self_obs and not ((eff in REENTRY_EFFECTS and p['targets']) or (eff in ENTER_EFFECTS and o['card'] == p['card'])):
                         continue                        # a self trigger sees only its own card entering; not a candidate at all
                     if only is not None and p['card'] not in only and o['card'] not in only:
@@ -254,7 +259,7 @@ def _acts_on(ks, a, b, vocab):
 
 def _loops(pool, only=None, ks=None):
     """Loop candidates from the grammar layer's collection discovery, restricted to a card pool. With contracts `ks`, each
-    loop is checked against the KB: a step whose effect no KB contract of that card produces is marked kb_disagrees."""
+    loop is checked against the KB: a step whose effect no KB contract of that card produces is marked unsupported_by_contracts (absence in incomplete contracts is not proof the step can't happen)."""
     if not LOOPS_CSV.exists():
         return []
     feeds = {}
@@ -277,11 +282,11 @@ def _loops(pool, only=None, ks=None):
                   'enables_a_via': r['enables_A_via'], 'both_fully_parsed': r['both_fully_parsed'] == '1',
                   'capacity_limited': r['capacity_limited'] == '1', 'kb_check': 'not_checked'}
             if ks is not None:
-                bad = [f"{n}: no KB contract produces {e}" for n, e in ((a, r['A_produces']), (b, r['B_output'])) if e not in feeds.get(n, set())]
-                lp['kb_check'] = 'kb_disagrees' if bad else 'kb_consistent'
+                bad = [f"{n}: no recorded KB contract produces {e}" for n, e in ((a, r['A_produces']), (b, r['B_output'])) if e not in feeds.get(n, set())]
+                lp['kb_check'] = 'unsupported_by_contracts' if bad else 'kb_consistent'
                 lp['kb_note'] = '; '.join(bad)
             out.append(lp)
-    out.sort(key=lambda x: (x['kb_check'] == 'kb_disagrees', CERTAINTY_ORDER.get(x['certainty'], 9), not x['both_fully_parsed'], x['cards']))
+    out.sort(key=lambda x: (x['kb_check'] == 'unsupported_by_contracts', CERTAINTY_ORDER.get(x['certainty'], 9), not x['both_fully_parsed'], x['cards']))
     return out
 
 
@@ -525,12 +530,13 @@ def _link_claim(l, disc=None):
 
 def _put_loops(data, loops, limit):
     """Loops the KB contradicts are listed apart, so a contested loop never hides as a lead (and never hides the cards)."""
-    ok = [l for l in loops if l['kb_check'] != 'kb_disagrees']
-    bad = [l for l in loops if l['kb_check'] == 'kb_disagrees']
+    ok = [l for l in loops if l['kb_check'] != 'unsupported_by_contracts']
+    bad = [l for l in loops if l['kb_check'] == 'unsupported_by_contracts']
     data['loops_total'] = len(ok)
     data['loops'] = ok[:limit]
-    data['loops_contested'] = {'total': len(bad), 'note': 'the grammar layer proposed these, but a KB contract on one side '
-                               'does not produce the step; the cards may still interact in other ways (see hypothesis)',
+    data['loops_contested'] = {'total': len(bad), 'note': 'the grammar layer proposed these, but no KB contract on one side '
+                               'records the step. That is lack of support in incomplete contracts, not proof the loop is invalid, '
+                               'and the cards may still interact in other ways (see hypothesis)',
                                'examples': [{'cards': l['cards'], 'certainty': l['certainty'], 'kb_note': l['kb_note']} for l in bad[:limit]]}
 
 
@@ -598,8 +604,8 @@ def hypothesis(c, a, b, effect=None, ci=None):
     if effect:
         acts_on = [x for x in acts_on if effect in x['produces']]
     all_loops = [l for l in _loops({a, b}, ks=ks) if set(l['cards']) == {a, b}]
-    loops = [l for l in all_loops if l['kb_check'] != 'kb_disagrees']
-    contested = [l for l in all_loops if l['kb_check'] == 'kb_disagrees']
+    loops = [l for l in all_loops if l['kb_check'] != 'unsupported_by_contracts']
+    contested = [l for l in all_loops if l['kb_check'] == 'unsupported_by_contracts']
     disconfirming = [f"rejected link {l['producer']} ({l['produces']}) -> {l['observer']} via {l['hook']}: {l['qualifier_note']}"
                      for l in rejected]
     disconfirming += [f"contested loop ({l['certainty']}): {l['kb_note']}" for l in contested]
@@ -713,7 +719,9 @@ def check(c, items):
     """Per-claim support: what each claim in a draft answer rests on, what is still missing, and, for a structured
     assertion, whether the evidence supports or contradicts it. Evidence authority is never claim truth: `evidence_grade`
     says how good the source is, `verdict` whether the assertion holds, and `grade` is decision_grade only when a
-    decision-grade source settles the assertion."""
+    decision-grade source settles the assertion. The verdict's object is the assertion (`verdict_on`), never the sentence:
+    a true assertion next to a false sentence is SUPPORTED, and `text_judged` stays false. A CONTRADICTED verdict with
+    decision_grade means the contradiction is established, not the sentence."""
     out = []
     for it in items:
         kind, names = it.get('kind'), it.get('cards') or []
@@ -756,7 +764,7 @@ def check(c, items):
             raise ValueError(f'claim kind must be one of inventory, rules_text, mechanics, performance, preference; got {kind!r}')
         verdict, why = _verdict(c, kind, rows, missing, it.get('assert'))
         cl = claim(it.get('text', ''), kind, support, evidence=evidence, missing=missing, verdict=verdict, verdict_basis=why,
-                   assertion=it.get('assert'))
+                   verdict_on='assertion', assertion=it.get('assert'), text_judged=False)
         cl['evidence_grade'] = cl['grade']
         if verdict not in ('SUPPORTED', 'CONTRADICTED') and cl['grade'] == 'decision_grade':
             cl['grade'] = 'exploratory'          # a good source alone does not settle an unchecked claim

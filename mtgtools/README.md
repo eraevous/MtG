@@ -46,7 +46,7 @@ Each claim has a **kind**, and its **grade** is set per kind:
 - `verdict`: whether the claim's structured `assert` holds. The values are `SUPPORTED`, `CONTRADICTED`, `UNKNOWN` (cards missing, or no policy recorded), and `NOT_CHECKED` (no assertion, or a kind with no mechanical check).
 - `grade`: `decision_grade` only when a decision-grade source settles the assertion.
 
-The text of a claim is never judged. Assertion keys:
+The verdict's object is the assertion (`verdict_on: assertion`), never the sentence: a true assertion next to a false sentence is still `SUPPORTED`, and `text_judged` stays false. A `CONTRADICTED` verdict at `decision_grade` means the contradiction is established, not that the sentence was checked. Assertion keys:
 - `inventory`: `owned_min`, `free_min`, `usable_without_asking_min`, `usable_by_agreement_min`, `in_deck`.
 - `rules_text`: `text_contains`.
 
@@ -60,7 +60,7 @@ Every link has `qualifiers` and a `basis`:
 - `unresolved`: the record can't decide, for example on counter type, a token's characteristics, which face, or controller. An unresolved link is a lead, not a match.
 - `incompatible`: the link is rejected, and counted with reasons in `rejected_links`.
 
-Same-card links show a card feeding itself, such as Terra's chapter IV returning her front face. Self-enter links cover a copy or return of a targeted permanent. Grammar-layer loops that a KB contract contradicts are listed under `loops_contested`. Rejecting one route never removes a card: `hypothesis` also lists `acts_on`, the targeted abilities whose target type fits the other card. Absence of a link still proves nothing.
+Same-card links show a card feeding itself, such as Terra's chapter IV returning her front face. Self-enter links cover a copy or return of a targeted permanent. Grammar-layer loops whose step no recorded KB contract produces are listed under `loops_contested` (`unsupported_by_contracts`): not supported by the contracts as they stand, which is not proof the loop is invalid. A target phrase with "or" that misses stays unresolved until the KB represents disjunctions. Rejecting one route never removes a card: `hypothesis` also lists `acts_on`, the targeted abilities whose target type fits the other card. Absence of a link still proves nothing.
 
 **Collection policy.** `decks/collection_policy.json` records who may use the collection and which decks are protected. `context` reports it. `card` gives availability in tiers:
 - free copies;
