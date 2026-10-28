@@ -59,3 +59,10 @@ Known baseline: 60 of 61 KB tests pass. The reproducibility test fails, and it a
 ## Development model
 
 Spec-driven workflows (for example GitHub Spec Kit) may own feature specs, plans and tasks. **AEC owns purpose**: the project contract, decision history and open challenges. A new spec never quietly overrides `codex_++/project.purpose.md`. Conflicts go to Zach with the evidence. See `AGENTS.md` and `CHARTER.md`.
+
+## License
+
+Licensed under the [MIT License](LICENSE). Contributions are welcome under the
+[Contributor License Agreement](CLA.md), which keeps them open under the same license
+while letting the maintainer also offer commercial versions. See
+[CONTRIBUTING.md](CONTRIBUTING.md).
