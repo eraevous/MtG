@@ -373,7 +373,7 @@ def context(c, deck=None):
     claims.append(claim(f"{deck}'s role counts are detected candidates: {sum(ov['reviewed_role_counts'].values())} of "
                         f"{sum(ov['role_counts'].values())} card-role assignments are reviewed. A sole detected candidate "
                         f'({named}) is not a verified sole provider; read the card before protecting it or cutting around it.',
-                        'mechanics', 'semantic_reviewed' if sole and all(v['evidence'] == 'reviewed_verified' for v in sole.values()) else 'candidate'))
+                        'mechanics', 'semantic_reviewed' if ov['role_counts'] and ov['reviewed_role_counts'] == ov['role_counts'] else 'candidate'))
     return {'deck': deck, 'color_identity': kb.deck_ci(c, deck), 'cards': cards, 'charter': ch,
             'roles': {k: ov[k] for k in ('evidence', 'role_counts', 'reviewed_role_counts', 'sole_detected_candidates')}}, claims
 

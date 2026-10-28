@@ -1,0 +1,154 @@
+{
+ "version": "0.1",
+ "specified_by": "Kate (ChatGPT coordination thread), 2026-10-28",
+ "verification": "expected answers specified by Kate from card text and rulings; not yet checked against the KB Oracle snapshot; no fixture is a reviewed DIO contract",
+ "grading": {
+  "mechanical_truth": [
+   "correct event or ability",
+   "correct object or recipient",
+   "required conditions and timing",
+   "actual resource gained",
+   "resource spent or opportunity lost",
+   "whether it repeats, and what limits repetition"
+  ],
+  "tool_behavior": [
+   "finds the relationship as a candidate",
+   "identifies available structured qualifiers",
+   "labels missing information unresolved",
+   "invents no unsupported prerequisites or effects",
+   "does not declare a valid interaction impossible because contracts are incomplete"
+  ],
+  "failure_classes": {
+   "missing_link": "retrieval or representation failure",
+   "mechanically_incorrect_link": "precision failure",
+   "unresolved_naming_the_gap": "may be a successful calibrated result"
+  }
+ },
+ "fixtures": [
+  {
+   "id": "TT-01",
+   "tier": "core",
+   "cards": [
+    "Emmara, Soul of the Accord",
+    "Citanul Hierophants"
+   ],
+   "expected": "Hierophants grants Emmara a mana ability requiring tapping. Activating it taps Emmara, triggering her Soldier creation without combat."
+  },
+  {
+   "id": "TT-02",
+   "tier": "core",
+   "cards": [
+    "Emmara, Soul of the Accord",
+    "Curse of Bounty"
+   ],
+   "expected": "Attacking the enchanted player can tap Emmara and produce a Soldier. Curse then untaps Emmara, allowing another tapping event that turn if another legal means to tap her exists.",
+   "qualification": "Curse of Bounty untaps Emmara; it does not automatically tap her again."
+  },
+  {
+   "id": "TT-03",
+   "tier": "core",
+   "cards": [
+    "Citanul Hierophants",
+    "Harvest Season"
+   ],
+   "expected": "Hierophants allows eligible creatures to tap for mana. Those tapped creatures count toward Harvest Season's basic-land retrieval when the spell resolves."
+  },
+  {
+   "id": "TT-04",
+   "tier": "core",
+   "cards": [
+    "Emmara, Soul of the Accord",
+    "Hour of Reckoning"
+   ],
+   "expected": "Tapping Emmara to help convoke Hour triggers Soldier creation. The Soldier token survives Hour's destruction of nontoken creatures, although Emmara herself ordinarily does not."
+  },
+  {
+   "id": "BR-01",
+   "tier": "core",
+   "cards": [
+    "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+    "Mirrormind Crown"
+   ],
+   "expected": "Brigid's token-creation trigger can be replaced by Crown, producing a copy of Crown's equipped creature instead of the Kithkin token.",
+   "qualification": "Mirrormind Crown replaces the first applicable token-creation event each turn, not every token Brigid creates that turn."
+  },
+  {
+   "id": "BR-02",
+   "tier": "core",
+   "cards": [
+    "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+    "Salvation Swan"
+   ],
+   "expected": "Swan's entry trigger can temporarily exile Brigid if Brigid lacks flying. Brigid returns front-face-up, triggering token creation.",
+   "qualification": "Swan returns Brigid with a flying counter; once Brigid has flying, Swan ordinarily cannot target her again without some intervening change."
+  },
+  {
+   "id": "CH-01",
+   "tier": "core",
+   "cards": [
+    "Wick, the Whorled Mind",
+    "Barkform Harvester"
+   ],
+   "expected": "Harvester's changeling makes it both a Rat and a Snail. Its entry triggers Wick, and it can receive Wick's +1/+1 counter or be sacrificed to Wick's activated ability."
+  },
+  {
+   "id": "FO-01",
+   "tier": "core",
+   "cards": [
+    "Osteomancer Adept",
+    "Bonecache Overseer"
+   ],
+   "expected": "Paying forage by exiling three graveyard cards satisfies Overseer's activation condition. Foraging by sacrificing Food satisfies its alternative condition.",
+   "qualification": "Bonecache Overseer has an activated draw ability, not a triggered one. Foraging makes it available; it does not automatically draw a card."
+  },
+  {
+   "id": "FO-02",
+   "tier": "optional",
+   "cards": [
+    "Thornvault Forager",
+    "Bonecache Overseer"
+   ],
+   "expected": "Forager's forage cost satisfies one of Overseer's activation conditions while producing two mana. The relationship is cost payment enabling a separate activated ability, not an automatic trigger or resource-positive infinite loop."
+  },
+  {
+   "id": "CH-02",
+   "tier": "optional",
+   "cards": [
+    "Wick, the Whorled Mind",
+    "Barkform Harvester",
+    "Splash Portal"
+   ],
+   "expected": "Splash Portal can exile and return Harvester. Harvester is a Rat, so Portal's Rat-related draw condition applies; Harvester returns as a new object, triggers Wick again, and loses its previously accumulated counters."
+  },
+  {
+   "id": "TT-02x",
+   "tier": "sequence",
+   "cards": [
+    "Emmara, Soul of the Accord",
+    "Citanul Hierophants",
+    "Curse of Bounty"
+   ],
+   "expected": "1. Emmara attacks the enchanted player and becomes tapped. 2. Emmara creates a Soldier. 3. Curse of Bounty untaps Emmara. 4. Hierophants' granted mana ability allows Emmara to tap again. 5. Emmara creates another Soldier."
+  },
+  {
+   "id": "BR-x",
+   "tier": "sequence",
+   "cards": [
+    "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+    "Mirrormind Crown",
+    "Salvation Swan"
+   ],
+   "expected": "Crown, equipped to Salvation Swan, can turn Brigid's Kithkin creation into a Swan token. That Swan's entry trigger can then exile Brigid, provided Brigid lacks flying, causing another front-face entry when she returns. The second token event that turn is not automatically replaced by Crown."
+  }
+ ],
+ "must_not_assert": [
+  "Emmara needs to attack to create tokens.",
+  "Curse of Bounty automatically provides a second tapping event.",
+  "Mirrormind Crown replaces unlimited token events each turn.",
+  "Brigid's Swan interaction works repeatedly without considering the flying counter.",
+  "Barkform Harvester isn't a Snail because its printed type line says Shapeshifter.",
+  "Foraging automatically triggers Bonecache's draw.",
+  "Osteomancer Adept's finality-counter recursion is indefinitely repeatable.",
+  "Any of these finite interactions establishes an infinite combo."
+ ]
+}

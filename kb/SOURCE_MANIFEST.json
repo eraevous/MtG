@@ -13,7 +13,7 @@
   "drive_modified_utc": "2026-10-24T23:57:02.816Z",
   "input_name": "MTG_Master_Inventory_Canonical_export_20261024d.xlsx",
   "input_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
-  "v01_database_sha256": "ef65abfe550bdfc132f8ba1250626f6f22e314fdf99e08ca0bfb09c94a819996",
+  "v01_database_sha256": "a0ad419a09e9eddec77817a42ce93cadf2de721dee9570c6ef870c7acd5e4167",
   "note": "read-only export; no Sheet edit during this release"
  },
  "oracle_refresh": {
@@ -52,7 +52,7 @@
   "registry_delta_sha256": "c963fcdea69eb4f7355ed8cb8bf1911cb2b87967c905256d8ce99ff3b8ea732c"
  },
  "versions": {
-  "derivation_version": "kbfacts-0.2.1/mtg_eval_0.3.0+kb2",
+  "derivation_version": "kbfacts-0.2.1/mtg_eval_0.3.0+kb3",
   "drafter_version": "contract-drafter-0.4.0",
   "compiler_version": "contract-compiler-0.3.0",
   "mtg_eval_vendored": "0.3.0+kb3",
@@ -60,8 +60,8 @@
  },
  "database": {
   "file": "mtg_cards_v0.2.sqlite",
-  "sha256": "741e4fd0107a6d9a004093f3f6dc4662ec1b884ceaa35af667c2357634567223",
-  "bytes": 106262528,
+  "sha256": "c7f01455464a9f4bfe5bfc2d6345a10971de8ea6fc90989af6d7a65c5b4ba26f",
+  "bytes": 106266624,
   "counts": {
    "cards": 3520,
    "candidate_operations": 4961,

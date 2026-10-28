@@ -6,7 +6,7 @@ A classifier-only rebuild after the 2026-10-28 paired evaluation, where both arm
 
 ## What changed
 
-- `vendor/mtg_eval` is now 0.3.0+kb3. **kb patch 3** is in `semantics.py`, in `oracle_functions` and `wipe_scope_ok`. A mass-removal phrase no longer counts as `wipe` in three cases:
+- `vendor/mtg_eval` is now 0.3.0+kb3, and `derivation_version` is `kbfacts-0.2.1/mtg_eval_0.3.0+kb3` to match. **kb patch 3** is in `semantics.py`, in `oracle_functions` and `wipe_scope_ok`. A mass-removal phrase no longer counts as `wipe` in three cases:
   - Its object is narrowed to the source's helpers or blockers ("that crewed it", "blocking it"), or to the controller's own side ("you control").
   - The same or the next sentence returns the objects to the battlefield (flicker).
   - It is `overload` on a spell with no spot removal.
