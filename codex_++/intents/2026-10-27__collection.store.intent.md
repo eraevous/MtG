@@ -1,0 +1,10 @@
+# Intent: bring-your-own collection database (2026-10-27)
+
+@ai-cadence: drift
+- Zach asked for a way for other people to use their own collection, preferably SQLite, with an optional Sheet/CSV import and setup docs, falling back to Zach-only if that got onerous. It didn't. Every consumer already reads inventory through one seam: the adapter's raw tab rows (`read_xlsx_selected` returns `{tab: [rows with Sheet headers]}`). The collection reader returns the same shape, so the evaluator and KB build needed a few lines each.
+- Trade-off: the reader lives in `kb/vendor/mtg_eval/collection_db.py`, not in `collection/`, because the vendored evaluator must not import from outside its package. `collection/mtgcollection.py` (the writer) imports from the vendor package, not the other way round.
+- Trade-off: copies in decks and free copies are views, never stored. This differs from the Sheet, which stores them and has the adapter cross-check them. A database has no stored value to disagree with.
+- Trade-off: `kb/inventory_adapter.py` (the governance export) and its vendored twin `_adapter.py` are unchanged and stay Sheet-only. Two pinned files did change (C-010).
+- `mtgcollection.py` derives `ETB Tapped` and `Can Be Commander` with regexes over Oracle text. That's declared `@ai-semantic-role: candidate-source`. They are index hints with the same meaning as the Sheet's own columns. Nothing downstream treats them as mechanics.
+- Checked: 3,520 cards of the canonical export imported, then re-enriched from Scryfall bulk. Card data agrees with the Sheet except for known Sheet conventions (reminder text, Produces order, blank vs N/A ETB Tapped) and one Sheet error: Talisman of Curiosity's color identity is `C`, while Scryfall says `UG`.
+- Not generalized: KB mechanics contracts (drafted from the canonical Sheet's Mechanics tabs), the review overlay and the Oracle reconciliation records. Other users get an empty contract set. `collection/no_overrides.jsonl` lets them build v0.2 without replaying Zach's records.
