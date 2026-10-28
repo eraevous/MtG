@@ -1,37 +1,34 @@
-# Reviewer guide: role audit v0.2 (blind)
+# Reviewer guide: card roles (blind)
 
-You are judging, from Oracle text alone, whether a card fills a strategic deck role. You are **not** told what any detector, inventory tag or earlier reviewer said, and you must not look it up. Judge each item without consulting the other reviewer.
+You will judge, from Oracle text alone, whether a card fills a strategic deck role. Judge each item on its own. Don't look up other sources about these cards' classifications, and don't consult anyone else.
 
 ## Answer format
 
-For each item, return one JSON line:
+Return one JSON line per item:
 
-`{"item": "U001", "answer": "YES|NO|DEPENDS|UNRESOLVED", "evidence": "<the Oracle words you rely on>", "qualifiers": ["..."], "note": "<optional>"}`
+`{"item": "R001", "answer": "YES|NO|DEPENDS|UNRESOLVED", "evidence": "<the Oracle words you rely on>", "qualifiers": ["..."], "note": "<optional>"}`
 
-- **YES**: the card fills the role under the definition below.
-- **NO**: it does not.
-- **DEPENDS**: it fills the role only under conditions or setups. Name them in `qualifiers`.
-- **UNRESOLVED**: the definition doesn't settle it, or the rules are unclear. Say why in `note`.
+- **YES**: the card has an actual ability that fills the role. Ordinary costs and normal game-state requirements count (paying mana, having a target, attacking, a creature dying). List any relevant conditions in `qualifiers`. A conditional ability is not automatically DEPENDS.
+- **DEPENDS**: filling the role needs a nontrivial outside enabler or an unusually restrictive setup, or it hinges on a disputed reading of the definition. Name what it depends on.
+- **NO**: there is no qualifying ability under the definition below.
+- **UNRESOLVED**: you can't read the text or rules confidently enough to decide. Say why.
+
+Every YES or DEPENDS needs `evidence`.
 
 ## Role definitions
 
-The definitions marked **(accepted)** are Zach's decisions (D-0008, 2026-10-28). The rest are proposals still under review (D-0009); apply them as written.
+Definitions marked **(accepted)** are the project owner's decisions. The rest are provisional working definitions. Apply them as written.
 
-| Role | Fills the role | Record as a qualifier only |
+| Role | Fills the role | Record as a qualifier |
 |---|---|---|
-| spot_removal | Removes or neutralises one opposing permanent: destroy, exile, bounce, edict, lethal damage or -X/-X, fight | Conditional or partial weakening, narrow targets, random modes |
-| protection | Protects *other* permanents you control: hexproof, indestructible, ward, shield, phasing, protection, equipment that grants these | Self-only protection; saving by bounce or blink |
-| recursion | Returns or recasts *other* cards from your graveyard | **(accepted)** Flashback and other self-reuse are `self_reuse`, not recursion. Temporary reanimation is a qualifier |
-| ramp | Repeatable mana beyond your normal land drop | Rituals, restricted or conditional mana, cost reduction |
-| fixing | **(accepted)** Report `land_colour_access` (lands) and `nonland_fixing` separately: say which in `qualifiers` | Restricted colours, inefficient conversion |
-| draw | Draws cards for net card advantage | Loot or rummage, cycling, wheels, symmetric draw |
-| sac_outlet | Repeatable, at-will sacrifice of another permanent | **(accepted)** One-shot sacrifices (ETB, spell) are qualifiers and sacrifice-trigger generators, not outlets. Self-sacrifice only does not count |
-| token_maker | Creates tokens itself. **(accepted)** Cards that create Treasure, Food or Clue tokens are token makers | **(accepted)** Token multipliers (adding tokens only when another effect creates them) are `token_multiplier`, not token makers |
-| closer | A credible route to ending the game: repeatable drain or damage to opponents, scaling team pump or evasion, alternate win | **(accepted)** A one-time drain of 2 is not a closer. Single-creature evasion is a qualifier |
+| spot_removal | Removes or neutralises one opposing permanent: destroy, exile, bounce, edict, lethal damage or -X/-X, fight | partial or conditional weakening, narrow targets, random modes |
+| protection | Protects *other* permanents you control: hexproof, indestructible, ward, shield counters, phasing, protection, or equipment and auras that grant these | self-only protection; saving a permanent by bouncing or blinking it |
+| recursion | Returns *other* cards from your graveyard to hand or battlefield, or lets you cast them from there | **(accepted)** Flashback and other ways a card reuses only itself are `self_reuse`, not recursion: answer NO and add the qualifier `self_reuse`. Temporary reanimation is a qualifier |
+| ramp | Increases your mana production or speeds up your mana development beyond normal land drops. One-shot land ramp (e.g. a spell that puts a land onto the battlefield) counts | qualifiers: `persistent`, `repeatable`, `ritual` (one turn only), `restricted` (mana only for some spells), `conditional` |
+| fixing | **(accepted)** Two separate things; say which in `qualifiers`. `land_colour_access` (a land and the colours it makes) and `nonland_fixing` (rocks, dorks, land search, any-colour effects). Answer YES only if the card improves colour *flexibility*, meaning it makes or finds more than one colour. For a land, list the colours it can produce, e.g. `colours:WU` | restricted colours, inefficient conversion |
+| draw | Draws cards for net card advantage. Name the resource spent, if any | `replacement` (cycling, a draw that replaces itself: answer NO), `loot` (draw then discard: answer NO), `wheel`, `symmetric` |
+| sac_outlet | Repeatable, at-will sacrifice of *another* permanent | **(accepted)** A one-shot sacrifice (ETB or spell) is not an outlet: answer NO and add the qualifier `one_shot_sacrifice` (a sacrifice-trigger generator). Self-sacrifice only: NO |
+| token_maker | Creates tokens itself. **(accepted)** Cards that create Treasure, Food or Clue tokens are token makers | **(accepted)** Token multipliers, which add tokens only when another effect creates them: answer NO and add the qualifier `token_multiplier` |
+| closer | A credible way to end the game: repeatable drain or damage to opponents, scaling team pump or evasion, alternate win | **(accepted)** A one-time drain of 2 is not a closer. Single-creature evasion is a qualifier |
 
-Use Oracle text only. Reminder text in parentheses explains a keyword; judge the keyword's real effect on the card.
-
-## Packets
-
-- `blind_packet.jsonl`: 360 items (U001–U360). Cards with no claim of the given role from any source, 20 per role per stratum, in shuffled order. Most answers will be NO; that is expected.
-- `challenge_packet.jsonl`: 54 items (C001–C054), chosen for mechanisms that are known to be hard. Judge only the `role` field. Ignore `mechanism`; it is there for the analysis.
+Use Oracle text. Reminder text in parentheses explains a keyword; judge what the keyword actually does on this card.
