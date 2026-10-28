@@ -1,0 +1,303 @@
+[
+ {
+  "object": "card",
+  "name": "Emmara, Soul of the Accord",
+  "layout": "normal",
+  "oracle_id": "c65ba242-3369-48a9-864f-1b1f85238f67",
+  "mana_cost": "{G}{W}",
+  "cmc": 2.0,
+  "type_line": "Legendary Creature — Elf Cleric",
+  "oracle_text": "Whenever Emmara becomes tapped, create a 1/1 white Soldier creature token with lifelink.",
+  "power": "2",
+  "toughness": "2",
+  "colors": [
+   "G",
+   "W"
+  ],
+  "color_identity": [
+   "G",
+   "W"
+  ],
+  "keywords": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "rare",
+  "set": "grn",
+  "set_type": "expansion",
+  "collector_number": "168",
+  "scryfall_uri": "https://scryfall.com/card/grn/168/emmara-soul-of-the-accord?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+  "layout": "transform",
+  "oracle_id": "60fc89a1-cc6f-4a32-84c3-09abf7a4a1df",
+  "cmc": 3.0,
+  "type_line": "Legendary Creature — Kithkin Warrior // Legendary Creature — Kithkin Soldier",
+  "color_identity": [
+   "G",
+   "W"
+  ],
+  "keywords": [
+   "Transform"
+  ],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "rare",
+  "set": "ecl",
+  "set_type": "expansion",
+  "collector_number": "7",
+  "scryfall_uri": "https://scryfall.com/card/ecl/7/brigid-clachans-heart-brigid-douns-mind?utm_source=api",
+  "card_faces": [
+   {
+    "name": "Brigid, Clachan's Heart",
+    "mana_cost": "{2}{W}",
+    "type_line": "Legendary Creature — Kithkin Warrior",
+    "oracle_text": "Whenever this creature enters or transforms into Brigid, Clachan's Heart, create a 1/1 green and white Kithkin creature token.\nAt the beginning of your first main phase, you may pay {G}. If you do, transform Brigid.",
+    "power": "3",
+    "toughness": "2"
+   },
+   {
+    "name": "Brigid, Doun's Mind",
+    "mana_cost": "",
+    "type_line": "Legendary Creature — Kithkin Soldier",
+    "oracle_text": "{T}: Add X {G} or X {W}, where X is the number of other creatures you control.\nAt the beginning of your first main phase, you may pay {W}. If you do, transform Brigid.",
+    "power": "3",
+    "toughness": "2"
+   }
+  ]
+ },
+ {
+  "object": "card",
+  "name": "Lim-Dûl's Vault",
+  "layout": "normal",
+  "oracle_id": "3f8e7a45-4c6e-4ee6-93d0-b7de9715ec97",
+  "mana_cost": "{U}{B}",
+  "cmc": 2.0,
+  "type_line": "Instant",
+  "oracle_text": "Look at the top five cards of your library. As many times as you choose, you may pay 1 life, put those cards on the bottom of your library in any order, then look at the top five cards of your library. Then shuffle and put the last cards you looked at this way on top in any order.",
+  "colors": [
+   "B",
+   "U"
+  ],
+  "color_identity": [
+   "B",
+   "U"
+  ],
+  "keywords": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "uncommon",
+  "set": "c13",
+  "set_type": "commander",
+  "collector_number": "197",
+  "scryfall_uri": "https://scryfall.com/card/c13/197/lim-d%C3%BBls-vault?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Temple Garden",
+  "layout": "normal",
+  "oracle_id": "f413a83d-a40d-434c-b20a-4c707c0527fa",
+  "mana_cost": "",
+  "cmc": 0.0,
+  "type_line": "Land — Forest Plains",
+  "oracle_text": "({T}: Add {G} or {W}.)\nAs this land enters, you may pay 2 life. If you don't, it enters tapped.",
+  "colors": [],
+  "color_identity": [
+   "G",
+   "W"
+  ],
+  "keywords": [],
+  "produced_mana": [
+   "G",
+   "W"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "rare",
+  "set": "trk",
+  "set_type": "expansion",
+  "collector_number": "301",
+  "scryfall_uri": "https://scryfall.com/card/trk/301/temple-garden?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Evolving Wilds",
+  "layout": "normal",
+  "oracle_id": "a75445d3-1303-4bb5-89ad-26ea93fecd48",
+  "mana_cost": "",
+  "cmc": 0.0,
+  "type_line": "Land",
+  "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+  "colors": [],
+  "color_identity": [],
+  "keywords": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "common",
+  "set": "trc",
+  "set_type": "commander",
+  "collector_number": "527",
+  "scryfall_uri": "https://scryfall.com/card/trc/527/evolving-wilds?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Sol Ring",
+  "layout": "normal",
+  "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+  "mana_cost": "{1}",
+  "cmc": 1.0,
+  "type_line": "Artifact",
+  "oracle_text": "{T}: Add {C}{C}.",
+  "colors": [],
+  "color_identity": [],
+  "keywords": [],
+  "produced_mana": [
+   "C"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "uncommon",
+  "set": "trc",
+  "set_type": "commander",
+  "collector_number": "499",
+  "scryfall_uri": "https://scryfall.com/card/trc/499/sol-ring?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Craw Wurm",
+  "layout": "normal",
+  "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+  "mana_cost": "{4}{G}{G}",
+  "cmc": 6.0,
+  "type_line": "Creature — Wurm",
+  "oracle_text": "",
+  "power": "6",
+  "toughness": "4",
+  "colors": [
+   "G"
+  ],
+  "color_identity": [
+   "G"
+  ],
+  "keywords": [],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "common",
+  "set": "m10",
+  "set_type": "core",
+  "collector_number": "173",
+  "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Forest",
+  "layout": "normal",
+  "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+  "mana_cost": "",
+  "cmc": 0.0,
+  "type_line": "Basic Land — Forest",
+  "oracle_text": "({T}: Add {G}.)",
+  "colors": [],
+  "color_identity": [
+   "G"
+  ],
+  "keywords": [],
+  "produced_mana": [
+   "G"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "common",
+  "set": "mdd",
+  "set_type": "expansion",
+  "collector_number": "301",
+  "scryfall_uri": "https://scryfall.com/card/mdd/301/forest?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Plains",
+  "layout": "normal",
+  "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+  "mana_cost": "",
+  "cmc": 0.0,
+  "type_line": "Basic Land — Plains",
+  "oracle_text": "({T}: Add {W}.)",
+  "colors": [],
+  "color_identity": [
+   "W"
+  ],
+  "keywords": [],
+  "produced_mana": [
+   "W"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "common",
+  "set": "mdd",
+  "set_type": "expansion",
+  "collector_number": "292",
+  "scryfall_uri": "https://scryfall.com/card/mdd/292/plains?utm_source=api"
+ },
+ {
+  "object": "card",
+  "name": "Beluna Grandsquall // Seek Thrills",
+  "layout": "adventure",
+  "oracle_id": "06374e6d-62fa-4833-81cd-b4d0a35e7365",
+  "mana_cost": "{G}{U}{R} // {2}{G}{U}{R}",
+  "cmc": 3.0,
+  "type_line": "Legendary Creature — Giant Noble // Instant — Adventure",
+  "power": "4",
+  "toughness": "4",
+  "colors": [
+   "G",
+   "R",
+   "U"
+  ],
+  "color_identity": [
+   "G",
+   "R",
+   "U"
+  ],
+  "keywords": [
+   "Trample",
+   "Mill"
+  ],
+  "legalities": {
+   "commander": "legal"
+  },
+  "rarity": "mythic",
+  "set": "woe",
+  "set_type": "expansion",
+  "collector_number": "220",
+  "scryfall_uri": "https://scryfall.com/card/woe/220/beluna-grandsquall-seek-thrills?utm_source=api",
+  "card_faces": [
+   {
+    "name": "Beluna Grandsquall",
+    "mana_cost": "{G}{U}{R}",
+    "type_line": "Legendary Creature — Giant Noble",
+    "oracle_text": "Trample\nPermanent spells you cast that have an Adventure cost {1} less to cast.",
+    "power": "4",
+    "toughness": "4"
+   },
+   {
+    "name": "Seek Thrills",
+    "mana_cost": "{2}{G}{U}{R}",
+    "type_line": "Instant — Adventure",
+    "oracle_text": "Mill seven cards. Then put all cards that have an Adventure from among the milled cards into your hand."
+   }
+  ]
+ }
+]

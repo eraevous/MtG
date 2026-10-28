@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Rebuild a portable, read-only derived MTG semantic SQLite index from a canonical XLSX export.
+"""Rebuild a portable, read-only derived MTG semantic SQLite index from a canonical XLSX export,
+or from a bring-your-own collection database (collection/schema.sql; see docs/BRING_YOUR_OWN_COLLECTION.md).
 Stdlib-only runtime, vendored v0.3.0 parser; never writes to the source workbook.
 Manual review is *not* inferred from machine recognition. Verified rows must be provided separately.
 """
@@ -11,6 +12,7 @@ HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE/'vendor'))
 from mtg_eval.abilities import card_abilities
 from mtg_eval.semantics import capability_record,oracle_functions,wipe_kind,protection_profile,clean,load_labels
+from mtg_eval import collection_db
 import inventory_adapter as ia
 
 def jsonable(o):
@@ -64,7 +66,8 @@ def parse_runtime(name,oracle,typ,keywords):
 def build(workbook,db_path,jsonl_out=None):
     workbook=Path(workbook);db_path=Path(db_path)
     before=hashlib.sha256(workbook.read_bytes()).hexdigest()
-    raw=ia.read_xlsx_selected(workbook)
+    is_db=collection_db.is_collection_db(workbook)
+    raw=collection_db.read(workbook) if is_db else ia.read_xlsx_selected(workbook)
     data=ia.normalize(raw)
     if data['health']['critical_problems'] or data['health']['high_problems']:
         raise ValueError('Critical or high inventory reconciliation error, refusing misleading rebuild')
@@ -75,13 +78,20 @@ def build(workbook,db_path,jsonl_out=None):
     parsersrc=(HERE/'vendor/mtg_eval/abilities.py').read_bytes()+(HERE/'vendor/mtg_eval/semantics.py').read_bytes()
     pv='mtg_eval_0.3.0:'+hashlib.sha256(parsersrc).hexdigest()[:16]
     now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-    source_meta={'canonical_sheet_id':ia.CANONICAL_ID,'canonical_url':ia.CANONICAL_URL,'input_sha256':before,
-                 'input_name':workbook.name,'source_type':'read-only mounted canonical workbook snapshot',
+    if is_db:
+        ident=collection_db.identity(workbook)
+        # a collection DB is never the canonical Sheet, even when it was imported from it (it may have been edited since)
+        sheet_id,source_url,source_type='collection:'+ident['label'],'','read-only collection database'
+    else:
+        sheet_id,source_url,source_type=ia.CANONICAL_ID,ia.CANONICAL_URL,'read-only mounted canonical workbook snapshot'
+    source_meta={'canonical_sheet_id':sheet_id,'canonical_url':source_url,'input_sha256':before,
+                 'input_name':workbook.name,'source_type':source_type,
                  'parser':pv,'import_utc':now,'candidate_policy':'none of the machine findings is automatically rules-verified',
                  'rebuild_policy':'regenerate after new live export; archives are rollback-only'}
+    if is_db and ident['source_sheet_id']:source_meta['collection_imported_from_sheet']=ident['source_sheet_id']
     c.executemany('INSERT INTO meta VALUES(?,?)',[(k,str(v)) for k,v in source_meta.items()])
     c.execute('INSERT INTO source_snapshots(source_name,source_url,sha256,source_kind,imported_utc,notes) VALUES(?,?,?,?,?,?)',
-        (workbook.name,ia.CANONICAL_URL,before,'local_snapshot',now,'Source is never written to.'))
+        (workbook.name,source_url,before,'collection_db' if is_db else 'local_snapshot',now,'Source is never written to.'))
     collection_by={r['Card Name']:r for r in raw['Collection']}
     deck_allocs=raw['Deck Allocations']
     facts=data['facts']
@@ -190,7 +200,8 @@ def build(workbook,db_path,jsonl_out=None):
                (card,rev.get('operation_id'),rev['review_scope'],rev['status'],rev['reviewer'],rev['reviewed_utc'],rev['source'],rev.get('notes','')))
     for row in data['issues']:
         c.execute('INSERT INTO qa_issues VALUES(?,?,?,?)',(row['kind'],row.get('card'),row['severity'],dumps(row)))
-    c.executemany('INSERT INTO source_sheet_rows VALUES(?,?,?)',all_sheet_rows(workbook))
+    c.executemany('INSERT INTO source_sheet_rows VALUES(?,?,?)',
+        ((tab,r['_row'],dumps(r)) for tab,rows in raw.items() for r in rows) if is_db else all_sheet_rows(workbook))
     c.execute("INSERT INTO card_fts(card_fts) VALUES('rebuild')")
     c.commit()
     audit={

@@ -1,14 +1,16 @@
-"""Read-only inventory: Collection + current-deck allocations from one export of the canonical sheet.
+"""Read-only inventory: Collection + current-deck allocations from one export of the canonical sheet,
+or from a bring-your-own collection database (collection/schema.sql).
 
 Reads the workbook through the vendored inventory adapter (_adapter.read_xlsx_selected,
-Kate's stdlib OOXML reader). Nothing is ever written back. Rows behave like the earlier
+Kate's stdlib OOXML reader), or the database through collection_db.read, which returns the
+same rows. Nothing is ever written back. Rows behave like the earlier
 pandas rows: an empty cell reads as NaN, numeric columns read as numbers.
 """
 import hashlib
 import math
 from pathlib import Path
 
-from . import _adapter
+from . import _adapter, collection_db
 
 CANONICAL_ID = _adapter.CANONICAL_ID
 BASICS = {'Forest', 'Island', 'Swamp', 'Mountain', 'Plains', 'Wastes'}
@@ -45,7 +47,9 @@ class Inventory:
     def __init__(self, xlsx, labels=None):
         self.path = Path(xlsx)
         self.sha256 = hashlib.sha256(self.path.read_bytes()).hexdigest()
-        raw = _adapter.read_xlsx_selected(str(self.path), {'Collection', 'Deck Allocations'})
+        self.is_db = collection_db.is_collection_db(self.path)
+        reader = collection_db.read if self.is_db else _adapter.read_xlsx_selected
+        raw = reader(str(self.path), {'Collection', 'Deck Allocations'})
         self.cards = {}
         for r in raw['Collection']:
             n = str(r.get('Card Name', '')).strip()
@@ -63,6 +67,11 @@ class Inventory:
 
     # ------------------------------------------------------------ provenance
     def source(self):
+        if self.is_db:
+            ident = collection_db.identity(self.path)
+            return {'sheet_id': f"collection {ident['label']!r}" + (f" (imported from sheet {ident['source_sheet_id']})" if ident['source_sheet_id'] else ''),
+                    'export': self.path.name, 'sha256': self.sha256,
+                    'note': 'read-only collection database; re-import after collection changes'}
         return {'sheet_id': CANONICAL_ID, 'export': self.path.name, 'sha256': self.sha256,
                 'note': 'read-only export of the live canonical sheet; regenerate after sheet edits'}
 
