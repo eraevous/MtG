@@ -24,16 +24,32 @@ A bounded, risk-ordered audit of the KB role detectors (`kb/vendor/mtg_eval/sema
 | 1 | protection | 36 | 32 | 0 | 4 | 20 | 8 | 4 | 8 |
 | 1 | recursion | 39 | 38 | 0 | 1 | 20 | 4 | 13 | 3 |
 | 2 | ramp | 29 | 25 | 0 | 4 | 15 | 5 | 7 | 3 |
-| 2 | fixing | 29 | 26 | 1 | 2 | 15 | 0 | 1 | 14 |
+| 2 | fixing | 29 | 26 | 0 | 3 | 15 | 0 | 1 | 14 |
 | 2 | draw | 28 | 25 | 0 | 3 | 14 | 2 | 4 | 8 |
 | 3 | closer | 29 | 24 | 0 | 5 | 15 | 4 | 5 | 6 |
 | 3 | sac_outlet | 28 | 27 | 0 | 1 | 15 | 5 | 8 | 2 |
 | 3 | token_maker | 28 | 18 | 0 | 10 | 15 | 7 | 3 | 5 |
-| | **total** | **281** | **246** | **1** | **34** | **149** | **45** | **53** | **51** |
+| | **total** | **281** | **246** | **0** | **35** | **149** | **45** | **53** | **51** |
+
+## Corrections after Kate's spot-check (2026-10-28)
+
+Kate checked all 45 misses, all 85 ambiguous records, the reported false positive and a sample of true positives. Her review led to these changes:
+
+- **Vraska, Betrayal's Sting is not a false positive.** Its −2 can target a creature you control, and you keep the Treasure. It is now `ambiguous` (conditional, inefficient fixing), so the audit has **0 established false positives** among the 281 detections.
+- **Overall conclusion revised.** The audited detections contain few established false positives, while detector omissions are common among Sheet-tagged negatives. Population precision and recall are **not** established: the samples are not uniform, and every judgment is a model's. Unresolved role definitions change both measures.
+- **Several "misses" depend on the role definition:**
+  - Queen Allenal and Stridehangar Automaton are token multipliers or replacements, not independent token sources.
+  - Buzzard-Wasp Colony allows a one-shot sacrifice.
+  - Rockalanche's flashback is self-reuse, not recovery of other cards.
+- **Provenance.** Each record now carries `claim_provenance` (`oracle_pattern` / `hand_label` / `inventory_tag`). Two closer "detections" (Eirdu, Heroes in a Half Shell) are `hand_label` and should not count toward detector precision.
+- **Reproducibility.** `sample.py` now uses the tier-1 sizes (25 + 10 detections, 15 + 5 tag-only). It reproduces all nine recorded samples exactly, checked against KB r20261028.
+- The "about a third wrong Sheet tags" figure applies only to the sampled tag-only records, not to all Sheet tags.
+
+The original findings below are kept as written, apart from the Vraska counts.
 
 ## Findings
 
-1. **Precision is high. A Golden Argosy-type error looks rare.**
+1. **(Superseded; see Corrections.) Precision is high. A Golden Argosy-type error looks rare.**
    - Only 1 clear false positive turned up in 281 sampled detections: Vraska, Betrayal's Sting's −2 counted as fixing, but the Treasure stays with the opponent.
    - With roughly 30 detections per role, a role with 0 false positives could still have up to about 10% (95% upper bound). So "rare" is an estimate, not a guarantee.
 

@@ -5,7 +5,9 @@ c=sqlite3.connect('kb/mtg_cards_v0.2.sqlite'); c.row_factory=sqlite3.Row
 decks=[r[0] for r in c.execute('select distinct deck from active_deck_cards')]
 deckcards={n for d in decks for n in kbq.deck_cards(c,d)}
 OUT=__import__('os').path.dirname(__import__('os').path.abspath(__file__))+'/'  # writes <role>.json next to this script; run from the repo root
+TIER1={'spot_removal','protection','recursion'}  # tier 1 used larger samples (Kate's priority 1)
 for role in sys.argv[1:]:
+    n_in,n_out,t_in,t_out=(25,10,15,5) if role in TIER1 else (20,8,12,3)
     sole={}
     for d in decks:
         s=kbq.overlap(c,d)['sole_detected_candidates'].get(role)
@@ -14,9 +16,9 @@ for role in sys.argv[1:]:
     tag=[r[0] for r in c.execute("select card_name from capability_claims where capability=? and source='mtg_eval.semantic_patterns' and claim_status='unverified_tag_only' order by card_name",(role,))]
     rng=random.Random(f'audit-2026-10-28-{role}')
     indeck=[p for p in pos if p in deckcards and p not in sole]; rest=[p for p in pos if p not in deckcards]
-    sp=sorted(sole)+rng.sample(indeck,min(20,len(indeck)))+rng.sample(rest,min(8,len(rest)))
+    sp=sorted(sole)+rng.sample(indeck,min(n_in,len(indeck)))+rng.sample(rest,min(n_out,len(rest)))
     ti=[t for t in tag if t in deckcards]; to=[t for t in tag if t not in deckcards]
-    tg=rng.sample(ti,min(12,len(ti)))+rng.sample(to,min(3,len(to)))
+    tg=rng.sample(ti,min(t_in,len(ti)))+rng.sample(to,min(t_out,len(to)))
     rows=[]
     for kind,names in (('positive',sp),('tag_only',tg)):
         for n in names:
