@@ -23,6 +23,7 @@
 - Verification states: ready_for_review, blocked, quarantined, semantic_reviewed, rejected, review_stale. Nothing is auto-promoted, and nothing is mass-approved.
 - Semantic review and runtime readiness are separate states. A human 'verified' must cite passing scenarios.
 - Test test_rebuild_is_byte_identical_under_another_hash_seed fails here (challenge C-001).
+- Capability (role) claims come from Oracle-text regexes in vendor/mtg_eval/semantics.py. `machine_supported` means only that a pattern matched; nobody reviewed it. The role summary (kbq.overlap) reports them as detected candidates (`sole_detected_candidates`, `reviewed_role_counts`). kb patch 3 (r20261028) excludes flicker, own-side and helper/blocker-only scopes from `wipe`.
 
 ### Notes
 - Drafted by the AEC session from the 2026-10-25 handoff docs, as an import-time description. Build-project Claude should review it, and this note goes away once it has.

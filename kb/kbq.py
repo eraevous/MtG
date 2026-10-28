@@ -143,14 +143,18 @@ def deck_cards(c, deck):
 
 
 def overlap(c, deck, min_roles=2):
-    roles, per = {}, {}
+    roles, per, level = {}, {}, {}
     for n in deck_cards(c, deck):
         ev = {k: v for k, v in evidence(c, n).items() if v in ('machine_supported', 'reviewed_verified')}
         per[n] = sorted(ev)
-        for k in ev: roles.setdefault(k, []).append(n)
-    return {'deck': deck, 'evidence': 'machine_supported or reviewed only (tags excluded)',
+        for k, v in ev.items(): roles.setdefault(k, []).append(n); level[k, n] = v
+    # roles are detected candidates, not verified functions: machine_supported means an Oracle pattern hit nobody
+    # has reviewed, and a role can be filled by cards the patterns miss (Kate, 2026-10-28, Golden Argosy audit)
+    return {'deck': deck, 'evidence': 'detected role candidates: unreviewed Oracle-pattern hits (machine_supported) plus reviewed claims; '
+                                      'tags excluded; cards the patterns miss are not counted',
             'role_counts': {k: len(v) for k, v in sorted(roles.items(), key=lambda x: -len(x[1]))},
-            'single_source_roles': {k: v[0] for k, v in roles.items() if len(v) == 1},
+            'reviewed_role_counts': {k: sum(level[k, n] == 'reviewed_verified' for n in v) for k, v in roles.items()},
+            'sole_detected_candidates': {k: {'card': v[0], 'evidence': level[k, v[0]]} for k, v in roles.items() if len(v) == 1},
             'multi_role_cards': {n: r for n, r in sorted(per.items(), key=lambda x: -len(x[1])) if len(r) >= min_roles}}
 
 

@@ -56,7 +56,7 @@ def ready_with_action(c):
 class V01Preserved(unittest.TestCase):
     def test_counts(self):
         c = ro()
-        for t, n in [('cards', 3520), ('candidate_operations', 4961), ('projected_abilities', 3709), ('capability_claims', 26499)]:
+        for t, n in [('cards', 3520), ('candidate_operations', 4961), ('projected_abilities', 3709), ('capability_claims', 26494)]:
             self.assertEqual(c.execute(f'select count(*) from {t}').fetchone()[0], n, t)
         self.assertEqual(c.execute('select count(*) from deck_card_counts where total_cards=100').fetchone()[0], 13)
         self.assertEqual(c.execute('pragma integrity_check').fetchone()[0], 'ok')

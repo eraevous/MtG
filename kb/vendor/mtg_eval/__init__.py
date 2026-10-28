@@ -1,2 +1,2 @@
 """MTG evaluation release."""
-__version__ = "0.3.0+kb2"
+__version__ = "0.3.0+kb3"

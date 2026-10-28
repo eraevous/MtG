@@ -109,14 +109,27 @@ def clean(oracle, name):
         if n: t = t.replace(n, '~')
     return t.lower().replace('~', '~')
 
+# kb patch 3 (2026-10-28): a mass-removal phrase is not a wipe when its scope is the source's own helpers or
+# blockers, the controller's own side, or the objects come straight back (flicker). Golden Argosy was the case.
+WIPE_NARROW = re.compile(r"\s*(?:you control\b|that crewed|blocking (?:it|~)|blocked by (?:it|~)|that blocked|that attacked)")
+WIPE_RETURN = re.compile(r"return (?:it|them|that card|those cards|the exiled cards?)[^.]*to the battlefield")
+
+
+def wipe_scope_ok(t, m):
+    after = '.'.join(t[m.end():].split('.', 2)[:2])  # rest of this sentence and the next
+    return not WIPE_NARROW.match(t, m.end()) and not WIPE_RETURN.search(after)
+
+
 def oracle_functions(name, oracle, type_line):
     t = clean(oracle, name); spans = {}
     t = re.sub(r"whenever (?:you|a player|an opponent) draws? (?:a|your \w+) cards?", "", t)
     t = re.sub(r"search your library for [^.]*?put (?:it|that card|them) into your hand", "search your library (tutor)", t)  # a tutor is not draw
     for f, pats in RULES.items():
         for p in pats:
-            m = re.search(p, t)
+            m = next((m for m in re.finditer(p, t) if f != 'wipe' or wipe_scope_ok(t, m)), None)
             if m: spans[f] = m.group(0)[:80]; break
+    if 'wipe' in spans and spans['wipe'].startswith('overload') and 'spot_removal' not in spans:
+        del spans['wipe']  # overload only turns removal into a wipe, not a pump
     if 'land' not in str(type_line).lower():
         for p in FIXING:
             m = re.search(p, t)

@@ -104,7 +104,7 @@ class Verbs(unittest.TestCase):
     def test_envelope_names_its_collection(self):
         code, out = self.run_cli('context')
         self.assertEqual(code, 0)
-        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261024d')
+        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261028')
         self.assertTrue(all({'kind', 'support', 'grade'} <= set(c) for c in out['claims']))
 
     def test_card_separates_oracle_text_from_contract_readings(self):
@@ -113,7 +113,7 @@ class Verbs(unittest.TestCase):
         kinds = {c['kind']: c for c in out['claims']}
         self.assertEqual(kinds['rules_text']['grade'], 'decision_grade')
         mech = [c for c in out['claims'] if c['kind'] == 'mechanics']
-        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261024d
+        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261028
 
     def test_explore_works_without_a_seed_and_marks_discovery(self):
         code, out = self.run_cli('explore', '--ci', 'RG', '--limit', '5')
@@ -218,6 +218,17 @@ class Verbs(unittest.TestCase):
         av = out['data']['availability']
         self.assertEqual(av['usable_without_asking'], 0)
         self.assertIn('Necrobloom', av['in_other_built_decks'])
+
+    def test_role_summary_reports_detected_candidates_not_verified_roles(self):
+        # Golden Argosy was the sole "wipe" in both arms of the 2026-10-28 paired run (Kate's audit)
+        code, out = self.run_cli('context', '--deck', 'Brigid')
+        self.assertEqual(code, 0)
+        roles = out['data']['roles']
+        self.assertNotIn('single_source_roles', roles)
+        self.assertNotIn('Golden Argosy', [v['card'] for v in roles['sole_detected_candidates'].values()])
+        caveat = [c for c in out['claims'] if 'sole detected candidate' in c['text']]
+        self.assertEqual(len(caveat), 1)
+        self.assertEqual(caveat[0]['grade'], 'exploratory')
 
 
 if __name__ == '__main__':

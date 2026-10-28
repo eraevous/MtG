@@ -19,7 +19,7 @@ The repo is public; the inventory Sheet it was built around is not. To run the e
 
 | Path | What | Authority over |
 |---|---|---|
-| `kb/` | SQLite knowledgebase v0.2.1 (r20261024d) as released: build, migrate, query (`kbq.py`), audit, review overlay, Oracle refresh snapshots, doctrine (`reference_sources/`), DIO addendum, vendored evaluator `kb/vendor/mtg_eval` (0.3.0+kb2) | derived candidate contracts, never hand-edited |
+| `kb/` | SQLite knowledgebase v0.2.1 (r20261028) as released: build, migrate, query (`kbq.py`), audit, review overlay, Oracle refresh snapshots, doctrine (`reference_sources/`), DIO addendum, vendored evaluator `kb/vendor/mtg_eval` (0.3.0+kb3) | derived candidate contracts, never hand-edited |
 | `grammar/` | Oracle grammar layer v0.2: Oracle phrases → templates → DIO concepts → candidate contracts; loop discovery; validation | candidate interpretations |
 | `review_packet/` | 330 candidate operations in 88 mechanical classes, waiting for Zach's class-level verdicts | none (a review queue) |
 | `evaluations/` | Deck reports from 2026-10-25 for all 13 decks | descriptive only |

@@ -4,7 +4,7 @@ These are needed to run the KB tests, the evaluator and the grammar rebuild. The
 
 | File | Put it at | Source |
 |---|---|---|
-| `mtg_cards.sqlite` (35 MB, v0.1 import) | `kb/` | `mtg_kb_v0.2.1-r20261024d.zip` inside `MTG_handoff_2026-10-25.zip` |
+| `mtg_cards.sqlite` (35 MB, v0.1 import) | `kb/` | `mtg_kb_v0.2.1-r20261028.zip` (project files, mechanics-kernel/sqlite-kb/); r20261024d is in `MTG_handoff_2026-10-25.zip` |
 | `mtg_cards_v0.2.sqlite` (102 MB, current KB) | `kb/` | same zip, or rebuild: `python3 kb/migrate_v02.py --v01 kb/mtg_cards.sqlite ...` (see C-001) |
 | `MTG_Master_Inventory_Canonical_export_20261024d.xlsx` | `data/` | `01_inventory/` in the handoff zip, or a fresh export of the live Sheet |
 | `grammar_layer.sqlite` (135 MB) | `grammar/` | `MTG_grammar_layer_db_2026-10-24.zip`. Optional: only needed to query or rebuild the grammar layer |
