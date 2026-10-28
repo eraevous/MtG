@@ -1,0 +1,169 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "check",
+  "query": {
+    "claims": "h01claims.json"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 7,
+    "by_grade": {
+      "decision_grade": 7
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Conjurer's Closet has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Conjurer's Closet: owned 1, free 1"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Conjurer's Closet: free 1 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Kinsbaile Aspirant has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Kinsbaile Aspirant: owned 3, free 3"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Kinsbaile Aspirant: free 3 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Conjurer's Closet is not in the Brigid deck",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Conjurer's Closet: owned 1, free 1"
+      ],
+      "missing": [],
+      "verdict": "CONTRADICTED",
+      "verdict_basis": [
+        "Conjurer's Closet: physically in no deck"
+      ],
+      "assertion": {
+        "in_deck": false
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Kinsbaile Aspirant is not in the Brigid deck",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Kinsbaile Aspirant: owned 3, free 3"
+      ],
+      "missing": [],
+      "verdict": "CONTRADICTED",
+      "verdict_basis": [
+        "Kinsbaile Aspirant: physically in no deck"
+      ],
+      "assertion": {
+        "in_deck": false
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Brigid creates a Kithkin creature token when it enters or transforms into its front face",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind: rules text contains \"or transforms into Brigid, Clachan's Heart, create a 1/1 green and white Kithkin creature token\""
+      ],
+      "assertion": {
+        "text_contains": "or transforms into Brigid, Clachan's Heart, create a 1/1 green and white Kithkin creature token"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Kinsbaile Aspirant's additional cost can be paid by beholding a Kithkin",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Kinsbaile Aspirant: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Kinsbaile Aspirant: rules text contains 'behold a Kithkin or pay {2}'"
+      ],
+      "assertion": {
+        "text_contains": "behold a Kithkin or pay {2}"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Conjurer's Closet exiles and returns a creature you control at your end step",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Conjurer's Closet: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Conjurer's Closet: rules text contains 'exile target creature you control, then return that card to the battlefield'"
+      ],
+      "assertion": {
+        "text_contains": "exile target creature you control, then return that card to the battlefield"
+      },
+      "evidence_grade": "decision_grade"
+    }
+  ],
+  "data": {
+    "checked": 7,
+    "by_verdict": {
+      "SUPPORTED": 5,
+      "CONTRADICTED": 2
+    },
+    "assert_keys": {
+      "inventory": [
+        "owned_min",
+        "free_min",
+        "usable_without_asking_min",
+        "usable_by_agreement_min",
+        "in_deck"
+      ],
+      "rules_text": [
+        "text_contains"
+      ]
+    }
+  }
+}

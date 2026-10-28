@@ -1,0 +1,1253 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Necroskitter",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 40,
+    "by_grade": {
+      "exploratory": 40
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Bebop & Rocksteady [op001] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bebop%20%26%20Rocksteady.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Abrade [op003] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Abrade.op003",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Arni, Renowned Champion [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Arni%2C%20Renowned%20Champion.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Beetle-Headed Merchants [op001] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Beetle-Headed%20Merchants.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Acidic Slime [op002] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Acidic%20Slime.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Beast-Kin Ranger [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Beast-Kin%20Ranger.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Blitzball [op002] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Blitzball.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Airship Crash [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Airship%20Crash.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Bristlebane Battler [op003] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Bristlebane%20Battler.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Bloodcrazed Socialite [op003] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bloodcrazed%20Socialite.op003",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Anchovy & Banana Pizza [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Anchovy%20%26%20Banana%20Pizza.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Collective Inferno [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Collective%20Inferno.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Bone Splinters [op001] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bone%20Splinters.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Anthropede [op003] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Anthropede.op003",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Crossroads Watcher [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Crossroads%20Watcher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Braids's Frightful Return [op002] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Braids's%20Frightful%20Return.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Archive Arbiter [op003] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Archive%20Arbiter.op003",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Dawn-Blessed Pennant [op001] via battlefield.enter (qualifiers compatible: Necroskitter matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Dawn-Blessed%20Pennant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Comet Crawler [op002] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Comet%20Crawler.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bane of Progress [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bane%20of%20Progress.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Decoction Module [op001] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Decoction%20Module.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Command Bridge [op002] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Command%20Bridge.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Big Game Hunter [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Big%20Game%20Hunter.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Flamekin Village [op001] via battlefield.enter (qualifiers compatible: Necroskitter matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Flamekin%20Village.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Deadly Precision [op001] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Deadly%20Precision.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bilbo's Deadly Slice [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bilbo's%20Deadly%20Slice.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Freestrider Commando [op001] via battlefield.enter (qualifiers compatible: Necroskitter matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Freestrider%20Commando.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Desecration Demon [op002] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desecration%20Demon.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bitter Downfall [op002] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bitter%20Downfall.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Frilled Sparkshooter [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Frilled%20Sparkshooter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Desecration Elemental [op002] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desecration%20Elemental.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bone Splinters [op002] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bone%20Splinters.op002",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Gathering Stone [op001] via battlefield.enter (qualifiers compatible: Necroskitter matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Gathering%20Stone.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Disturbing Mirth [op001] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Disturbing%20Mirth.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brainspoil [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brainspoil.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Gideon the Oathless [op002] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Gideon%20the%20Oathless.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Drekavac [op001] (permanent.sacrifice) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Drekavac.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Break Asunder [op001] (permanent.destroy) can feed Necroskitter [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Break%20Asunder.op001",
+        "card.Necroskitter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Necroskitter [op002] (card.return_to_battlefield) can feed Greenhouse Propagator [op001] via battlefield.enter (qualifiers compatible: Necroskitter matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Necroskitter.op002",
+        "card.Greenhouse%20Propagator.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1554,
+      "contracts": 2133
+    },
+    "seed": "Necroskitter",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 689,
+      "blocked": 1438,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 182,
+    "links_by_qualifiers": {
+      "unresolved": 146,
+      "compatible": 36
+    },
+    "links_by_basis": {
+      "object_unknown": 146,
+      "object_type": 36
+    },
+    "links_by_pathway": {
+      "permanent.destroy -> permanent.dies": 98,
+      "permanent.sacrifice -> permanent.dies": 48,
+      "card.return_to_battlefield -> battlefield.enter": 36
+    },
+    "rejected_links": {
+      "total": 8,
+      "by_reason": {
+        "Necroskitter is not artifact": 2,
+        "Necroskitter is not enchantment": 1,
+        "Necroskitter is not artifacts": 1,
+        "Necroskitter is not squirrel or food": 1,
+        "Necroskitter is not land": 1,
+        "Necroskitter is not shrine": 1,
+        "Necroskitter is not elf": 1
+      },
+      "examples": [
+        {
+          "producer": "Necroskitter",
+          "produces": "card.return_to_battlefield",
+          "observer": "Dashing Bloodsucker",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Necroskitter is not enchantment"
+        },
+        {
+          "producer": "Necroskitter",
+          "produces": "card.return_to_battlefield",
+          "observer": "Elvish Archivist",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Necroskitter is not artifacts"
+        },
+        {
+          "producer": "Necroskitter",
+          "produces": "card.return_to_battlefield",
+          "observer": "Glaze Fiend",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Necroskitter is not artifact"
+        },
+        {
+          "producer": "Necroskitter",
+          "produces": "card.return_to_battlefield",
+          "observer": "Honored Dreyleader",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Necroskitter is not squirrel or food"
+        },
+        {
+          "producer": "Necroskitter",
+          "produces": "card.return_to_battlefield",
+          "observer": "Invader Parasite",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Necroskitter is not land"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bebop & Rocksteady",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bebop%20%26%20Rocksteady.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Abrade",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Abrade.op003",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Arni, Renowned Champion",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Arni%2C%20Renowned%20Champion.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Beetle-Headed Merchants",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Beetle-Headed%20Merchants.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Acidic Slime",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Acidic%20Slime.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Beast-Kin Ranger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Beast-Kin%20Ranger.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Blitzball",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Blitzball.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Airship Crash",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Airship%20Crash.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Bristlebane Battler",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Bristlebane%20Battler.op003",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bloodcrazed Socialite",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bloodcrazed%20Socialite.op003",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Anchovy & Banana Pizza",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Anchovy%20%26%20Banana%20Pizza.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Collective Inferno",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Collective%20Inferno.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bone Splinters",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bone%20Splinters.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Anthropede",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Anthropede.op003",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Crossroads Watcher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Crossroads%20Watcher.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Braids's Frightful Return",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Braids's%20Frightful%20Return.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Braids's%20Frightful%20Return.op004",
+            "card.Necroskitter.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Archive Arbiter",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Archive%20Arbiter.op003",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Dawn-Blessed Pennant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Dawn-Blessed%20Pennant.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches the trigger",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Necroskitter.op002",
+            "card.Dawn-Blessed%20Pennant.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Comet Crawler",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Comet%20Crawler.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bane of Progress",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bane%20of%20Progress.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Decoction Module",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Decoction%20Module.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Command Bridge",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Command%20Bridge.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Big Game Hunter",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Big%20Game%20Hunter.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Flamekin Village",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Flamekin%20Village.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Deadly Precision",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Deadly%20Precision.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bilbo's Deadly Slice",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bilbo's%20Deadly%20Slice.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Freestrider Commando",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Freestrider%20Commando.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desecration Demon",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Desecration%20Demon.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bitter Downfall",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bitter%20Downfall.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Frilled Sparkshooter",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Frilled%20Sparkshooter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desecration Elemental",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Desecration%20Elemental.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bone Splinters",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bone%20Splinters.op002",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Gathering Stone",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Gathering%20Stone.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Disturbing Mirth",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Disturbing%20Mirth.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brainspoil",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Brainspoil.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Gideon the Oathless",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Gideon%20the%20Oathless.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Drekavac",
+        "produces": "permanent.sacrifice",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Drekavac.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Break Asunder",
+        "produces": "permanent.destroy",
+        "observer": "Necroskitter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Break%20Asunder.op001",
+        "observer_contract": "card.Necroskitter.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Necroskitter",
+        "produces": "card.return_to_battlefield",
+        "observer": "Greenhouse Propagator",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Necroskitter.op002",
+        "observer_contract": "card.Greenhouse%20Propagator.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Necroskitter matches creature",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "permanent.dies": 146,
+      "battlefield.enter": 36
+    }
+  }
+}

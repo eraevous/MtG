@@ -1,0 +1,2359 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "sacrifice_conversion",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 69,
+    "by_grade": {
+      "exploratory": 69
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Gluttonous Guest [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Gluttonous%20Guest.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Blood Cultist [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Blood%20Cultist.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Blood Cultist [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Blood%20Cultist.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Scarblade's Malice [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Scarblade's%20Malice.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Merchant of Venom [op003] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Merchant%20of%20Venom.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Scarblade's Malice [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Scarblade's%20Malice.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Boggart Mischief [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Boggart%20Mischief.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Boggart Mischief [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Boggart%20Mischief.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Time to Feed [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Time%20to%20Feed.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Pirate Peddlers [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Pirate%20Peddlers.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Time to Feed [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Time%20to%20Feed.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Crusher Zendikon [op003] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Crusher%20Zendikon.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Crusher Zendikon [op003] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Crusher%20Zendikon.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Loot, the Anomaly [op002] (permanent.sacrifice) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Loot%2C%20the%20Anomaly.op002",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Sanguine Statuette [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Sanguine%20Statuette.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bumbleflower's Sharepot [op002] (permanent.destroy) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bumbleflower's%20Sharepot.op002",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Deathgreeter [op001] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Deathgreeter.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Deathgreeter [op001] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Deathgreeter.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Loot, the Anomaly [op002] (permanent.sacrifice) can feed Scarblade's Malice [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Loot%2C%20the%20Anomaly.op002",
+        "card.Scarblade's%20Malice.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Unlucky Cabbage Merchant [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Unlucky%20Cabbage%20Merchant.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bumbleflower's Sharepot [op002] (permanent.destroy) can feed Scarblade's Malice [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bumbleflower's%20Sharepot.op002",
+        "card.Scarblade's%20Malice.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Desperate Farmer // Depraved Harvester [op003] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Desperate%20Farmer%20%2F%2F%20Depraved%20Harvester.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Desperate Farmer // Depraved Harvester [op003] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Desperate%20Farmer%20%2F%2F%20Depraved%20Harvester.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Loot, the Anomaly [op002] (permanent.sacrifice) can feed Time to Feed [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Loot%2C%20the%20Anomaly.op002",
+        "card.Time%20to%20Feed.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Zhao, Ruthless Admiral [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Zhao%2C%20Ruthless%20Admiral.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bumbleflower's Sharepot [op002] (permanent.destroy) can feed Time to Feed [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bumbleflower's%20Sharepot.op002",
+        "card.Time%20to%20Feed.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Ferocity of the Hunt [op004] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Ferocity%20of%20the%20Hunt.op004"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Ferocity of the Hunt [op004] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Ferocity%20of%20the%20Hunt.op004"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Zodiark, Umbral God [op003] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Zodiark%2C%20Umbral%20God.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mount Doom [op003] (permanent.destroy) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mount%20Doom.op003",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Garna, Bloodfist of Keld [op001] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Garna%2C%20Bloodfist%20of%20Keld.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Garna, Bloodfist of Keld [op001] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Garna%2C%20Bloodfist%20of%20Keld.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Loot, the Anomaly [op002] (permanent.sacrifice) can feed Gluttonous Guest [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Loot%2C%20the%20Anomaly.op002",
+        "card.Gluttonous%20Guest.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mount Doom [op003] (permanent.destroy) can feed Scarblade's Malice [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mount%20Doom.op003",
+        "card.Scarblade's%20Malice.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Kavaron, Memorial World [op004] (permanent.sacrifice) can feed Gimli, Counter of Kills [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kavaron%2C%20Memorial%20World.op004",
+        "card.Gimli%2C%20Counter%20of%20Kills.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Budding Insurgent [op002] (permanent.destroy) can feed Gimli, Counter of Kills [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Budding%20Insurgent.op002",
+        "card.Gimli%2C%20Counter%20of%20Kills.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Loot, the Anomaly [op002] (permanent.sacrifice) can feed Merchant of Venom [op003] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Loot%2C%20the%20Anomaly.op002",
+        "card.Merchant%20of%20Venom.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mount Doom [op003] (permanent.destroy) can feed Time to Feed [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mount%20Doom.op003",
+        "card.Time%20to%20Feed.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Grim Backwoods and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Ice Cream Kitty and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Lord Dregg, Insect Invader and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Phyrexian Vault and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Bloodghast may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Chocobo Racetrack may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Omnath, Locus of Rage may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Beamsaw Prospector may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Callous Inspector may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Edge Rover may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Eldrazi Repurposer may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Feign Death may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Ferocity of the Hunt may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Gravpack Monoist may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Jewel-Eyed Cobra may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Mogg War Marshal may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Molten Firebird may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Nezumi Linkbreaker may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Noggle Robber may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Pain 101 may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Penumbra Bobcat may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Perigee Beckoner may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Pestbrood Sloth may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Retched Wretch may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Triplicate Titan may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Undercity Dire Rat may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Vinereap Mentor may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Loot, the Anomaly and Wurmcoil Larva may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1553,
+      "contracts": 2132
+    },
+    "seed": "sacrifice_conversion",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 688,
+      "blocked": 1438,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 906,
+    "links_by_qualifiers": {
+      "unresolved": 739,
+      "compatible": 167
+    },
+    "links_by_basis": {
+      "no_filter": 88,
+      "object_unknown": 230,
+      "token_unknown": 176,
+      "object_type": 167,
+      "counter_type_unknown": 14,
+      "reentry_of_target": 231
+    },
+    "theme_pathways": {
+      "pathways": [
+        "creature.card_enters_graveyard",
+        "permanent.dies",
+        "permanent.sacrifice"
+      ],
+      "links_on_them": 182
+    },
+    "links_by_pathway": {
+      "card.return_to_battlefield -> battlefield.enter": 326,
+      "token.create -> battlefield.enter": 176,
+      "permanent.destroy -> permanent.dies": 126,
+      "land_to_battlefield -> land.enters_battlefield": 63,
+      "land_to_battlefield -> battlefield.enter": 51,
+      "life.gain -> life.gain": 48,
+      "card.draw -> card.draw": 42,
+      "permanent.sacrifice -> permanent.dies": 42,
+      "counter.put -> counter.put": 14,
+      "permanent.sacrifice -> permanent.sacrifice": 14,
+      "card.discard -> card.discard": 4
+    },
+    "rejected_links": {
+      "total": 206,
+      "by_reason": {
+        "Escape Tunnel is not creature": 19,
+        "Evolving Wilds is not creature": 19,
+        "Northampton Farm is not creature": 19,
+        "Terramorphic Expanse is not creature": 19,
+        "Escape Tunnel is not artifact": 2,
+        "Evolving Wilds is not artifact": 2,
+        "Necrosavant is not artifact": 2,
+        "Northampton Farm is not artifact": 2,
+        "Terramorphic Expanse is not artifact": 2,
+        "Escape Tunnel is not enchantment": 1
+      },
+      "examples": [
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Aquastrand Spider",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not creature"
+        },
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Arni, Renowned Champion",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not creature"
+        },
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Beast-Kin Ranger",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not creature"
+        },
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Bristlebane Battler",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not creature"
+        },
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Crossroads Watcher",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not creature"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Gluttonous Guest",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Gluttonous%20Guest.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Blood Cultist",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Blood%20Cultist.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Blood Cultist",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Blood%20Cultist.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Scarblade's Malice",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Scarblade's%20Malice.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Merchant of Venom",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Merchant%20of%20Venom.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Scarblade's Malice",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Scarblade's%20Malice.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Boggart Mischief",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Boggart%20Mischief.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Boggart Mischief",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Boggart%20Mischief.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Time to Feed",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Time%20to%20Feed.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Pirate Peddlers",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Pirate%20Peddlers.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Time to Feed",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Time%20to%20Feed.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Crusher Zendikon",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Crusher%20Zendikon.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Crusher Zendikon",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Crusher%20Zendikon.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Loot, the Anomaly",
+        "produces": "permanent.sacrifice",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Loot%2C%20the%20Anomaly.op002",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Sanguine Statuette",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Sanguine%20Statuette.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Bumbleflower's Sharepot",
+        "produces": "permanent.destroy",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bumbleflower's%20Sharepot.op002",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Deathgreeter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Deathgreeter.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Deathgreeter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Deathgreeter.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Loot, the Anomaly",
+        "produces": "permanent.sacrifice",
+        "observer": "Scarblade's Malice",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Loot%2C%20the%20Anomaly.op002",
+        "observer_contract": "card.Scarblade's%20Malice.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Unlucky Cabbage Merchant",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Unlucky%20Cabbage%20Merchant.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Bumbleflower's Sharepot",
+        "produces": "permanent.destroy",
+        "observer": "Scarblade's Malice",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bumbleflower's%20Sharepot.op002",
+        "observer_contract": "card.Scarblade's%20Malice.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Desperate Farmer // Depraved Harvester",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Desperate%20Farmer%20%2F%2F%20Depraved%20Harvester.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Desperate Farmer // Depraved Harvester",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Desperate%20Farmer%20%2F%2F%20Depraved%20Harvester.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Loot, the Anomaly",
+        "produces": "permanent.sacrifice",
+        "observer": "Time to Feed",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Loot%2C%20the%20Anomaly.op002",
+        "observer_contract": "card.Time%20to%20Feed.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Zhao, Ruthless Admiral",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Zhao%2C%20Ruthless%20Admiral.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Bumbleflower's Sharepot",
+        "produces": "permanent.destroy",
+        "observer": "Time to Feed",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bumbleflower's%20Sharepot.op002",
+        "observer_contract": "card.Time%20to%20Feed.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Ferocity of the Hunt",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Ferocity%20of%20the%20Hunt.op004",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Ferocity of the Hunt",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Ferocity%20of%20the%20Hunt.op004",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Zodiark, Umbral God",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Zodiark%2C%20Umbral%20God.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Mount Doom",
+        "produces": "permanent.destroy",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Mount%20Doom.op003",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Garna, Bloodfist of Keld",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Garna%2C%20Bloodfist%20of%20Keld.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Garna, Bloodfist of Keld",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Garna%2C%20Bloodfist%20of%20Keld.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Loot, the Anomaly",
+        "produces": "permanent.sacrifice",
+        "observer": "Gluttonous Guest",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Loot%2C%20the%20Anomaly.op002",
+        "observer_contract": "card.Gluttonous%20Guest.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Mount Doom",
+        "produces": "permanent.destroy",
+        "observer": "Scarblade's Malice",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Mount%20Doom.op003",
+        "observer_contract": "card.Scarblade's%20Malice.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Kavaron, Memorial World",
+        "produces": "permanent.sacrifice",
+        "observer": "Gimli, Counter of Kills",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Kavaron%2C%20Memorial%20World.op004",
+        "observer_contract": "card.Gimli%2C%20Counter%20of%20Kills.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Budding Insurgent",
+        "produces": "permanent.destroy",
+        "observer": "Gimli, Counter of Kills",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Budding%20Insurgent.op002",
+        "observer_contract": "card.Gimli%2C%20Counter%20of%20Kills.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Loot, the Anomaly",
+        "produces": "permanent.sacrifice",
+        "observer": "Merchant of Venom",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Loot%2C%20the%20Anomaly.op002",
+        "observer_contract": "card.Merchant%20of%20Venom.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Mount Doom",
+        "produces": "permanent.destroy",
+        "observer": "Time to Feed",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Mount%20Doom.op003",
+        "observer_contract": "card.Time%20to%20Feed.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      }
+    ],
+    "loops_total": 29,
+    "loops": [
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Grim Backwoods",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Ice Cream Kitty",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Lord Dregg, Insect Invader",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Phyrexian Vault",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Bloodghast"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Chocobo Racetrack"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Omnath, Locus of Rage"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Beamsaw Prospector"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Callous Inspector"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Edge Rover"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Eldrazi Repurposer"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Feign Death"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Ferocity of the Hunt"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Gravpack Monoist"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Jewel-Eyed Cobra"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Mogg War Marshal"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Molten Firebird"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Nezumi Linkbreaker"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Noggle Robber"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Pain 101"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Penumbra Bobcat"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Perigee Beckoner"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Pestbrood Sloth"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Retched Wretch"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Triplicate Titan"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Undercity Dire Rat"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Vinereap Mentor"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Loot, the Anomaly",
+          "Wurmcoil Larva"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": false,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      }
+    ],
+    "loops_contested": {
+      "total": 390,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": [
+        {
+          "cards": [
+            "Bog Naughty",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bog Naughty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bog Naughty",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bog Naughty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bog Naughty",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bog Naughty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Mogg War Marshal"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Beamsaw Prospector"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Callous Inspector"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Edge Rover"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Eldrazi Repurposer"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Gravpack Monoist"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Jewel-Eyed Cobra"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Mogg War Marshal"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Nezumi Linkbreaker"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Noggle Robber"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Penumbra Bobcat"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Perigee Beckoner"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Pestbrood Sloth"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Symbiotic Beast"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies; Symbiotic Beast: no KB contract produces battlefield.enter"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Undercity Dire Rat"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Vinereap Mentor"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Zoo Escapees"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces battlefield.leave"
+        },
+        {
+          "cards": [
+            "Eldrazi Ravager",
+            "Eldrazi Repurposer"
+          ],
+          "certainty": "possible",
+          "kb_note": "Eldrazi Ravager: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Eldrazi Ravager",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Eldrazi Ravager: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Eldrazi Ravager",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Eldrazi Ravager: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Eldrazi Ravager",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Eldrazi Ravager: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gatherer of Graces",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gatherer of Graces: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gatherer of Graces",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gatherer of Graces: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gatherer of Graces",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gatherer of Graces: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Glimmer Bairn",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Glimmer Bairn: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Beamsaw Prospector"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Callous Inspector"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Edge Rover"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Eldrazi Repurposer"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        }
+      ]
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 553,
+      "permanent.dies": 168,
+      "land.enters_battlefield": 63,
+      "life.gain": 48,
+      "card.draw": 42,
+      "counter.put": 14,
+      "permanent.sacrifice": 14,
+      "card.discard": 4
+    }
+  }
+}

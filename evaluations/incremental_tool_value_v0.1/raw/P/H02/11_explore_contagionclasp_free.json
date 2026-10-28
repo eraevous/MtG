@@ -1,0 +1,517 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Contagion Clasp",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 13,
+    "by_grade": {
+      "exploratory": 13
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Crack Open [op001] (token.create) can feed Contagion Clasp [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Contagion Clasp itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Crack%20Open.op001",
+        "card.Contagion%20Clasp.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed Braids's Frightful Return [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.Braids's%20Frightful%20Return.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mutant Chain Reaction [op001] (token.create) can feed Contagion Clasp [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Contagion Clasp itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mutant%20Chain%20Reaction.op001",
+        "card.Contagion%20Clasp.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed Burn, Burn, Tree and Fern [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Oath of the Grey Host [op002] (token.create) can feed Contagion Clasp [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Contagion Clasp itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Oath%20of%20the%20Grey%20Host.op002",
+        "card.Contagion%20Clasp.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed Oath of the Grey Host [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.Oath%20of%20the%20Grey%20Host.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Seedship Impact [op001] (token.create) can feed Contagion Clasp [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Contagion Clasp itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Seedship%20Impact.op001",
+        "card.Contagion%20Clasp.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed Summon: Esper Ramuh [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.Summon%3A%20Esper%20Ramuh.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Tainted Treats [op001] (token.create) can feed Contagion Clasp [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Contagion Clasp itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Tainted%20Treats.op001",
+        "card.Contagion%20Clasp.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed Summon: Fenrir [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.Summon%3A%20Fenrir.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Zuko's Exile [op001] (token.create) can feed Contagion Clasp [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Contagion Clasp itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Zuko's%20Exile.op001",
+        "card.Contagion%20Clasp.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed Summon: G.F. Ifrit [op003] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.Summon%3A%20G.F.%20Ifrit.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Contagion Clasp [op001] (counter.put) can feed The Legend of Roku // Avatar Roku [op003] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Contagion%20Clasp.op001",
+        "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1554,
+      "contracts": 2134
+    },
+    "seed": "Contagion Clasp",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 689,
+      "blocked": 1439,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 13,
+    "links_by_qualifiers": {
+      "unresolved": 13
+    },
+    "links_by_basis": {
+      "counter_type_unknown": 7,
+      "reentry_of_target": 6
+    },
+    "links_by_pathway": {
+      "counter.put -> counter.put": 7,
+      "token.create -> battlefield.enter": 6
+    },
+    "rejected_links": {
+      "total": 26,
+      "by_reason": {
+        "Contagion Clasp is not a legal target for: target creature": 15,
+        "Contagion Clasp is not a legal target for: target creature you control": 6,
+        "Contagion Clasp is not a legal target for: target land": 2,
+        "Contagion Clasp is not a legal target for: target card": 1,
+        "Contagion Clasp is not a legal target for: up to one target creature; target creature you control": 1,
+        "Contagion Clasp is not a legal target for: target creature you control; target creature you don't control": 1
+      },
+      "examples": [
+        {
+          "producer": "Balduvian Atrocity",
+          "produces": "card.return_to_battlefield",
+          "observer": "Contagion Clasp",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Contagion Clasp is not a legal target for: target creature"
+        },
+        {
+          "producer": "Bortuk Bonerattle",
+          "produces": "card.return_to_battlefield",
+          "observer": "Contagion Clasp",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Contagion Clasp is not a legal target for: target creature"
+        },
+        {
+          "producer": "Conjurer's Closet",
+          "produces": "card.return_to_battlefield",
+          "observer": "Contagion Clasp",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Contagion Clasp is not a legal target for: target creature you control"
+        },
+        {
+          "producer": "Dose of Dawnglow",
+          "produces": "card.return_to_battlefield",
+          "observer": "Contagion Clasp",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Contagion Clasp is not a legal target for: target creature"
+        },
+        {
+          "producer": "Evil Reawakened",
+          "produces": "card.return_to_battlefield",
+          "observer": "Contagion Clasp",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Contagion Clasp is not a legal target for: target creature"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Crack Open",
+        "produces": "token.create",
+        "observer": "Contagion Clasp",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Crack%20Open.op001",
+        "observer_contract": "card.Contagion%20Clasp.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Contagion Clasp itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "Braids's Frightful Return",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.Braids's%20Frightful%20Return.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.Braids's%20Frightful%20Return.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Mutant Chain Reaction",
+        "produces": "token.create",
+        "observer": "Contagion Clasp",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Mutant%20Chain%20Reaction.op001",
+        "observer_contract": "card.Contagion%20Clasp.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Contagion Clasp itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "Burn, Burn, Tree and Fern",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op003"
+          ],
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op004"
+          ]
+        ]
+      },
+      {
+        "producer": "Oath of the Grey Host",
+        "produces": "token.create",
+        "observer": "Contagion Clasp",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Oath%20of%20the%20Grey%20Host.op002",
+        "observer_contract": "card.Contagion%20Clasp.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Contagion Clasp itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "Oath of the Grey Host",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.Oath%20of%20the%20Grey%20Host.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.Oath%20of%20the%20Grey%20Host.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Seedship Impact",
+        "produces": "token.create",
+        "observer": "Contagion Clasp",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Seedship%20Impact.op001",
+        "observer_contract": "card.Contagion%20Clasp.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Contagion Clasp itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "Summon: Esper Ramuh",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.Summon%3A%20Esper%20Ramuh.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Tainted Treats",
+        "produces": "token.create",
+        "observer": "Contagion Clasp",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Tainted%20Treats.op001",
+        "observer_contract": "card.Contagion%20Clasp.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Contagion Clasp itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "Summon: Fenrir",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.Summon%3A%20Fenrir.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.Summon%3A%20Fenrir.op004"
+          ]
+        ]
+      },
+      {
+        "producer": "Zuko's Exile",
+        "produces": "token.create",
+        "observer": "Contagion Clasp",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Zuko's%20Exile.op001",
+        "observer_contract": "card.Contagion%20Clasp.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Contagion Clasp itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "Summon: G.F. Ifrit",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.Summon%3A%20G.F.%20Ifrit.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Contagion Clasp",
+        "produces": "counter.put",
+        "observer": "The Legend of Roku // Avatar Roku",
+        "hook": "counter.put",
+        "producer_contract": "card.Contagion%20Clasp.op001",
+        "observer_contract": "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op004"
+          ],
+          [
+            "card.Contagion%20Clasp.op001",
+            "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op005"
+          ]
+        ]
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "counter.put": 7,
+      "battlefield.enter": 6
+    }
+  }
+}

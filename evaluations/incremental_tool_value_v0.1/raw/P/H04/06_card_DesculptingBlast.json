@@ -1,0 +1,120 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Desculpting Blast"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 4,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 0, assigned 1.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 0 usable without asking; 1 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "C09_bound_semantics: conditional \"if\" inside the effect not bound",
+        "C11_executable_shape: projected ability drops text: if it was attacking and \"this token can block only creatures with flying \""
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Desculpting Blast",
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "color_identity": "U",
+      "oracle_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+      "oracle_text_sha256": "98d0be8115e349317c7d3d2c1e9c362104f03658b1676d4a85a13ab294c4890d",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 1,
+      "free": 0,
+      "locations": [
+        {
+          "deck": "Vraska",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Vraska": 1
+    },
+    "availability": {
+      "free": 0,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Vraska": 1
+      },
+      "planned_only": {},
+      "usable_without_asking": 0,
+      "usable_by_agreement": 1
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Counter Blitz",
+      "Rootha",
+      "Sharuum",
+      "TMNT",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Desculpting%20Blast.op001",
+        "operation_kind": "cast",
+        "queue_state": "blocked",
+        "exact_text": "Return target nonland permanent to its owner's hand. If it was attacking, create a 1/1 colorless Drone artifact creature token with flying and \"This token can block only creatures with flying.\"",
+        "failed_checks": [
+          "C09_bound_semantics: conditional \"if\" inside the effect not bound",
+          "C11_executable_shape: projected ability drops text: if it was attacking and \"this token can block only creatures with flying \""
+        ]
+      }
+    ],
+    "reconciliation": null
+  }
+}

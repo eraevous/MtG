@@ -1,0 +1,2625 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "ci": "WUBRG",
+    "free": true,
+    "mode": "divergent",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 80,
+    "by_grade": {
+      "exploratory": 80
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op005] (land_to_battlefield) can feed Sidequest: Raise a Chocobo // Black Chocobo [op002] via battlefield.enter (same card: qualifiers unresolved: same card re-enters; which face it enters on is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Terra, Magical Adept // Esper Terra [op003] (card.return_to_battlefield) can feed Terra, Magical Adept // Esper Terra [op002] via battlefield.enter (same card: qualifiers unresolved: same card re-enters; which face it enters on is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+        "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Gastal Thrillroller [op004] (card.return_to_battlefield) can feed Gastal Thrillroller [op002] via battlefield.enter (same card: qualifiers compatible: the card re-enters and sees itself enter).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Gastal%20Thrillroller.op004",
+        "card.Gastal%20Thrillroller.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Kav Landseeker [op003] (land_to_battlefield) can feed Kav Landseeker [op002] via battlefield.enter (same card: qualifiers compatible: the card re-enters and sees itself enter).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kav%20Landseeker.op003",
+        "card.Kav%20Landseeker.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Airbender Ascension [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Airbender%20Ascension.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Terra, Magical Adept // Esper Terra [op003] (card.return_to_battlefield) can feed Dashing Bloodsucker [op001] via battlefield.enter (qualifiers unresolved: only one face of Terra, Magical Adept // Esper Terra matches enchantment).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+        "card.Dashing%20Bloodsucker.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Architect of the Untamed [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Architect%20of%20the%20Untamed.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Divert Disaster [op001] (land_to_battlefield) can feed Architect of the Untamed [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Divert%20Disaster.op001",
+        "card.Architect%20of%20the%20Untamed.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Divert Disaster [op001] (land_to_battlefield) can feed Arsenal Thresher [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Divert%20Disaster.op001",
+        "card.Arsenal%20Thresher.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Absorb [op001] (life.gain) can feed Cat Collector [op002] via life.gain (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Absorb.op001",
+        "card.Cat%20Collector.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bebop & Rocksteady [op001] (permanent.sacrifice) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bebop%20%26%20Rocksteady.op001",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Divert Disaster [op001] (land_to_battlefield) can feed Airbender Ascension [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Divert%20Disaster.op001",
+        "card.Airbender%20Ascension.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bebop & Rocksteady [op001] (permanent.sacrifice) can feed Gluttonous Guest [op002] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bebop%20%26%20Rocksteady.op001",
+        "card.Gluttonous%20Guest.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Abandon Attachments [op001] (card.discard) can feed Captain Howler, Sea Scourge [op002] via card.discard (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Abandon%20Attachments.op001",
+        "card.Captain%20Howler%2C%20Sea%20Scourge.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Abrade [op003] (permanent.destroy) can feed Fatal Fissure [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Abrade.op003",
+        "card.Fatal%20Fissure.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Airbender Ascension [op003] (card.return_to_battlefield) can feed Arsenal Thresher [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Airbender%20Ascension.op003",
+        "card.Arsenal%20Thresher.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bebop & Rocksteady [op001] (permanent.sacrifice) can feed Blood Cultist [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bebop%20%26%20Rocksteady.op001",
+        "card.Blood%20Cultist.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Beamsaw Prospector [op001] (land_to_battlefield) can feed Airbender Ascension [op002] via battlefield.enter (qualifiers compatible: Beamsaw Prospector matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Beamsaw%20Prospector.op001",
+        "card.Airbender%20Ascension.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Airbender Ascension [op003] (card.return_to_battlefield) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Airbender%20Ascension.op003",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Balustrade Wurm [op003] (card.return_to_battlefield) can feed Airbender Ascension [op002] via battlefield.enter (qualifiers compatible: Balustrade Wurm matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Balustrade%20Wurm.op003",
+        "card.Airbender%20Ascension.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Aang, Swift Savior // Aang and La, Ocean's Fury [op008] (counter.put) can feed Braids's Frightful Return [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Aang%2C%20Swift%20Savior%20%2F%2F%20Aang%20and%20La%2C%20Ocean's%20Fury.op008",
+        "card.Braids's%20Frightful%20Return.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Absorb [op001] (life.gain) can feed Ajani Resolute [op001] via life.gain (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Absorb.op001",
+        "card.Ajani%20Resolute.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Abrade [op003] (permanent.destroy) can feed Blood Cultist [op002] via permanent.dies (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Abrade.op003",
+        "card.Blood%20Cultist.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Abandon Attachments [op001] (card.draw) can feed Bard the Bowman [op002] via card.draw (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Abandon%20Attachments.op001",
+        "card.Bard%20the%20Bowman.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Airbender Ascension [op003] (card.return_to_battlefield) can feed Aang, Swift Savior // Aang and La, Ocean's Fury [op004] via battlefield.enter (qualifiers unresolved: only if the producer returns Aang, Swift Savior // Aang and La, Ocean's Fury itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Airbender%20Ascension.op003",
+        "card.Aang%2C%20Swift%20Savior%20%2F%2F%20Aang%20and%20La%2C%20Ocean's%20Fury.op004"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Crack Open [op001] (token.create) can feed Anchovy & Banana Pizza [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Anchovy & Banana Pizza itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Crack%20Open.op001",
+        "card.Anchovy%20%26%20Banana%20Pizza.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Additive Evolution [op001] (token.create) can feed Airbender Ascension [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Additive%20Evolution.op001",
+        "card.Airbender%20Ascension.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Terra, Magical Adept // Esper Terra [op007] (card.return_to_battlefield) can feed Terra, Magical Adept // Esper Terra [op002] via battlefield.enter (same card: qualifiers unresolved: same card re-enters; which face it enters on is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op007",
+        "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Long River Lurker [op004] (card.return_to_battlefield) can feed Long River Lurker [op003] via battlefield.enter (same card: qualifiers compatible: the card re-enters and sees itself enter).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Long%20River%20Lurker.op004",
+        "card.Long%20River%20Lurker.op003"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Kyoshi Island Plaza [op002] (land_to_battlefield) can feed Kyoshi Island Plaza [op001] via battlefield.enter (same card: qualifiers compatible: the card re-enters and sees itself enter).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Kyoshi%20Island%20Plaza.op002",
+        "card.Kyoshi%20Island%20Plaza.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Terra, Magical Adept // Esper Terra [op003] (card.return_to_battlefield) can feed Elvish Archivist [op002] via battlefield.enter (qualifiers unresolved: only one face of Terra, Magical Adept // Esper Terra matches enchantments).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+        "card.Elvish%20Archivist.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Attercop [op002] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Attercop.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Divert Disaster [op001] (land_to_battlefield) can feed Attercop [op002] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Divert%20Disaster.op001",
+        "card.Attercop.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Divert Disaster [op001] (land_to_battlefield) can feed Authority of the Consuls [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Divert%20Disaster.op001",
+        "card.Authority%20of%20the%20Consuls.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Adventurer's Inn [op001] (life.gain) can feed Cat Collector [op002] via life.gain (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Adventurer's%20Inn.op001",
+        "card.Cat%20Collector.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bebop & Rocksteady [op001] (permanent.sacrifice) can feed Jet, Freedom Fighter [op002] via permanent.dies (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bebop%20%26%20Rocksteady.op001",
+        "card.Jet%2C%20Freedom%20Fighter.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Divert Disaster [op001] (land_to_battlefield) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Divert%20Disaster.op001",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bebop & Rocksteady [op001] (permanent.sacrifice) can feed Merchant of Venom [op003] via permanent.sacrifice (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bebop%20%26%20Rocksteady.op001",
+        "card.Merchant%20of%20Venom.op003"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Abandon Attachments [op001] (card.discard) can feed Cryptcaller Chariot [op002] via card.discard (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Abandon%20Attachments.op001",
+        "card.Cryptcaller%20Chariot.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bard the Bowman and Cloaked Cadet may form a loop (guaranteed).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Knights of Dol Amroth and Cloaked Cadet may form a loop (guaranteed).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Lakeshore Apothecary and Cloaked Cadet may form a loop (guaranteed).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Necrosavant and Wingmantle Chaplain may form a loop (guaranteed).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Emrakul's Messenger may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cloaked Cadet and Bard the Bowman may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cloaked Cadet and Knights of Dol Amroth may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cloaked Cadet and Lakeshore Apothecary may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Drowned Rusalka and Emrakul's Messenger may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Drowned Rusalka and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Grim Backwoods and Emrakul's Messenger may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Grim Backwoods and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Ice Cream Kitty and Emrakul's Messenger may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Ice Cream Kitty and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and G'raha Tia may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Lord Dregg, Insect Invader and Emrakul's Messenger may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Lord Dregg, Insect Invader and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Phyrexian Vault and Emrakul's Messenger may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Phyrexian Vault and Wolfbat may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Balduvian Atrocity and Zoraline, Cosmos Caller may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Bard the Bowman and Fetid Gargantua may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Bumbleflower's Sharepot and Esper Sojourners may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Bloodghast may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Chocobo Racetrack may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Emeria Angel may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Mechan Assembler may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Omnath, Locus of Rage may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Wingmantle Chaplain may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Aven Fisher may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Esper Sojourners may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Garna, Bloodfist of Keld may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Ithilien Kingfisher may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Morbid Opportunist may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Solemn Simulacrum may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Summit Sentinel may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Jaya Ballard, Task Mage and Surveilling Sprite may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Primary Research and Rescue Skiff may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Primary Research and Zoraline, Cosmos Caller may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Reaping Willow and Earth Kingdom Soldier may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "unrequested",
+      "kb_check": "kb_consistent"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "WUBRG",
+      "cards": 2783,
+      "contracts": 3828
+    },
+    "seed": null,
+    "mode": "divergent",
+    "pool_contract_states": {
+      "blocked": 2528,
+      "ready_for_review": 1293,
+      "quarantined": 7
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 76633,
+    "links_by_qualifiers": {
+      "unresolved": 72630,
+      "compatible": 4003
+    },
+    "links_by_basis": {
+      "object_unknown": 13224,
+      "counter_type_unknown": 2596,
+      "no_filter": 4829,
+      "token_unknown": 25149,
+      "reentry_of_target": 26729,
+      "object_type": 3996,
+      "same_card": 10,
+      "face": 100
+    },
+    "links_by_pathway": {
+      "token.create -> battlefield.enter": 38525,
+      "card.return_to_battlefield -> battlefield.enter": 18317,
+      "card.draw -> card.draw": 4492,
+      "permanent.destroy -> permanent.dies": 4278,
+      "life.gain -> life.gain": 2892,
+      "counter.put -> counter.put": 2596,
+      "land_to_battlefield -> battlefield.enter": 2547,
+      "permanent.sacrifice -> permanent.dies": 1674,
+      "card.discard -> card.discard": 619,
+      "permanent.sacrifice -> permanent.sacrifice": 432,
+      "land_to_battlefield -> land.enters_battlefield": 261
+    },
+    "rejected_links": {
+      "total": 17318,
+      "by_reason": {
+        "Bitter Work is not creature": 36,
+        "Call the Mountain Chocobo is not creature": 36,
+        "Cauldron's Gift is not creature": 36,
+        "Chocobo Racetrack is not creature": 36,
+        "Cultivate is not creature": 36,
+        "Dai Li Indoctrination is not creature": 36,
+        "Earth Rumble is not creature": 36,
+        "Earthbending Lesson is not creature": 36,
+        "Embrace the Paradox is not creature": 36,
+        "Escape Tunnel is not creature": 36
+      },
+      "examples": [
+        {
+          "producer": "Airbender Ascension",
+          "produces": "card.return_to_battlefield",
+          "observer": "Additive Evolution",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Additive Evolution is not a legal target for: up to one target creature you control"
+        },
+        {
+          "producer": "Airbender Ascension",
+          "produces": "card.return_to_battlefield",
+          "observer": "Adventurer's Inn",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Adventurer's Inn is not a legal target for: up to one target creature you control"
+        },
+        {
+          "producer": "Airbender Ascension",
+          "produces": "card.return_to_battlefield",
+          "observer": "Aether Hub",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Aether Hub is not a legal target for: up to one target creature you control"
+        },
+        {
+          "producer": "Airbender Ascension",
+          "produces": "card.return_to_battlefield",
+          "observer": "Air Nomad Legacy",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Air Nomad Legacy is not a legal target for: up to one target creature you control"
+        },
+        {
+          "producer": "Airbender Ascension",
+          "produces": "card.return_to_battlefield",
+          "observer": "Airbender Ascension",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Airbender Ascension is not a legal target for: up to one target creature you control"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+        "observer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "same_card",
+        "qualifier_note": "same card re-enters; which face it enters on is not recorded",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Terra, Magical Adept // Esper Terra",
+        "produces": "card.return_to_battlefield",
+        "observer": "Terra, Magical Adept // Esper Terra",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+        "observer_contract": "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "same_card",
+        "qualifier_note": "same card re-enters; which face it enters on is not recorded",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Gastal Thrillroller",
+        "produces": "card.return_to_battlefield",
+        "observer": "Gastal Thrillroller",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Gastal%20Thrillroller.op004",
+        "observer_contract": "card.Gastal%20Thrillroller.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "same_card",
+        "qualifier_note": "the card re-enters and sees itself enter",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Kav Landseeker",
+        "produces": "land_to_battlefield",
+        "observer": "Kav Landseeker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Kav%20Landseeker.op003",
+        "observer_contract": "card.Kav%20Landseeker.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "same_card",
+        "qualifier_note": "the card re-enters and sees itself enter",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Airbender Ascension",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Airbender%20Ascension.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Airbender%20Ascension.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Terra, Magical Adept // Esper Terra",
+        "produces": "card.return_to_battlefield",
+        "observer": "Dashing Bloodsucker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+        "observer_contract": "card.Dashing%20Bloodsucker.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Terra, Magical Adept // Esper Terra matches enchantment",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op007",
+            "card.Dashing%20Bloodsucker.op001"
+          ]
+        ]
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Architect of the Untamed",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Architect%20of%20the%20Untamed.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Divert Disaster",
+        "produces": "land_to_battlefield",
+        "observer": "Architect of the Untamed",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Divert%20Disaster.op001",
+        "observer_contract": "card.Architect%20of%20the%20Untamed.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Divert Disaster",
+        "produces": "land_to_battlefield",
+        "observer": "Arsenal Thresher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Divert%20Disaster.op001",
+        "observer_contract": "card.Arsenal%20Thresher.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Absorb",
+        "produces": "life.gain",
+        "observer": "Cat Collector",
+        "hook": "life.gain",
+        "producer_contract": "card.Absorb.op001",
+        "observer_contract": "card.Cat%20Collector.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bebop & Rocksteady",
+        "produces": "permanent.sacrifice",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bebop%20%26%20Rocksteady.op001",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Divert Disaster",
+        "produces": "land_to_battlefield",
+        "observer": "Airbender Ascension",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Divert%20Disaster.op001",
+        "observer_contract": "card.Airbender%20Ascension.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bebop & Rocksteady",
+        "produces": "permanent.sacrifice",
+        "observer": "Gluttonous Guest",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Bebop%20%26%20Rocksteady.op001",
+        "observer_contract": "card.Gluttonous%20Guest.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Abandon Attachments",
+        "produces": "card.discard",
+        "observer": "Captain Howler, Sea Scourge",
+        "hook": "card.discard",
+        "producer_contract": "card.Abandon%20Attachments.op001",
+        "observer_contract": "card.Captain%20Howler%2C%20Sea%20Scourge.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Abrade",
+        "produces": "permanent.destroy",
+        "observer": "Fatal Fissure",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Abrade.op003",
+        "observer_contract": "card.Fatal%20Fissure.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Airbender Ascension",
+        "produces": "card.return_to_battlefield",
+        "observer": "Arsenal Thresher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Airbender%20Ascension.op003",
+        "observer_contract": "card.Arsenal%20Thresher.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bebop & Rocksteady",
+        "produces": "permanent.sacrifice",
+        "observer": "Blood Cultist",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bebop%20%26%20Rocksteady.op001",
+        "observer_contract": "card.Blood%20Cultist.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Beamsaw Prospector",
+        "produces": "land_to_battlefield",
+        "observer": "Airbender Ascension",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Beamsaw%20Prospector.op001",
+        "observer_contract": "card.Airbender%20Ascension.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Beamsaw Prospector matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Airbender Ascension",
+        "produces": "card.return_to_battlefield",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Airbender%20Ascension.op003",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Balustrade Wurm",
+        "produces": "card.return_to_battlefield",
+        "observer": "Airbender Ascension",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Balustrade%20Wurm.op003",
+        "observer_contract": "card.Airbender%20Ascension.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Balustrade Wurm matches creature",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "produces": "counter.put",
+        "observer": "Braids's Frightful Return",
+        "hook": "counter.put",
+        "producer_contract": "card.Aang%2C%20Swift%20Savior%20%2F%2F%20Aang%20and%20La%2C%20Ocean's%20Fury.op008",
+        "observer_contract": "card.Braids's%20Frightful%20Return.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Aang%2C%20Swift%20Savior%20%2F%2F%20Aang%20and%20La%2C%20Ocean's%20Fury.op008",
+            "card.Braids's%20Frightful%20Return.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Absorb",
+        "produces": "life.gain",
+        "observer": "Ajani Resolute",
+        "hook": "life.gain",
+        "producer_contract": "card.Absorb.op001",
+        "observer_contract": "card.Ajani%20Resolute.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Abrade",
+        "produces": "permanent.destroy",
+        "observer": "Blood Cultist",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Abrade.op003",
+        "observer_contract": "card.Blood%20Cultist.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Abandon Attachments",
+        "produces": "card.draw",
+        "observer": "Bard the Bowman",
+        "hook": "card.draw",
+        "producer_contract": "card.Abandon%20Attachments.op001",
+        "observer_contract": "card.Bard%20the%20Bowman.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Airbender Ascension",
+        "produces": "card.return_to_battlefield",
+        "observer": "Aang, Swift Savior // Aang and La, Ocean's Fury",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Airbender%20Ascension.op003",
+        "observer_contract": "card.Aang%2C%20Swift%20Savior%20%2F%2F%20Aang%20and%20La%2C%20Ocean's%20Fury.op004",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Aang, Swift Savior // Aang and La, Ocean's Fury itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Crack Open",
+        "produces": "token.create",
+        "observer": "Anchovy & Banana Pizza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Crack%20Open.op001",
+        "observer_contract": "card.Anchovy%20%26%20Banana%20Pizza.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Anchovy & Banana Pizza itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Additive Evolution",
+        "produces": "token.create",
+        "observer": "Airbender Ascension",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Additive%20Evolution.op001",
+        "observer_contract": "card.Airbender%20Ascension.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Terra, Magical Adept // Esper Terra",
+        "produces": "card.return_to_battlefield",
+        "observer": "Terra, Magical Adept // Esper Terra",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op007",
+        "observer_contract": "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "same_card",
+        "qualifier_note": "same card re-enters; which face it enters on is not recorded",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Long River Lurker",
+        "produces": "card.return_to_battlefield",
+        "observer": "Long River Lurker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Long%20River%20Lurker.op004",
+        "observer_contract": "card.Long%20River%20Lurker.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "same_card",
+        "qualifier_note": "the card re-enters and sees itself enter",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Kyoshi Island Plaza",
+        "produces": "land_to_battlefield",
+        "observer": "Kyoshi Island Plaza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Kyoshi%20Island%20Plaza.op002",
+        "observer_contract": "card.Kyoshi%20Island%20Plaza.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "same_card",
+        "qualifier_note": "the card re-enters and sees itself enter",
+        "same_card": true,
+        "also_via": []
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Aquastrand%20Spider.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Terra, Magical Adept // Esper Terra",
+        "produces": "card.return_to_battlefield",
+        "observer": "Elvish Archivist",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+        "observer_contract": "card.Elvish%20Archivist.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Terra, Magical Adept // Esper Terra matches enchantments",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op003",
+            "card.Elvish%20Archivist.op001"
+          ],
+          [
+            "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op007",
+            "card.Elvish%20Archivist.op001"
+          ],
+          [
+            "card.Terra%2C%20Magical%20Adept%20%2F%2F%20Esper%20Terra.op007",
+            "card.Elvish%20Archivist.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Attercop",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Attercop.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Divert Disaster",
+        "produces": "land_to_battlefield",
+        "observer": "Attercop",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Divert%20Disaster.op001",
+        "observer_contract": "card.Attercop.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Divert Disaster",
+        "produces": "land_to_battlefield",
+        "observer": "Authority of the Consuls",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Divert%20Disaster.op001",
+        "observer_contract": "card.Authority%20of%20the%20Consuls.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Divert%20Disaster.op001",
+            "card.Authority%20of%20the%20Consuls.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Adventurer's Inn",
+        "produces": "life.gain",
+        "observer": "Cat Collector",
+        "hook": "life.gain",
+        "producer_contract": "card.Adventurer's%20Inn.op001",
+        "observer_contract": "card.Cat%20Collector.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bebop & Rocksteady",
+        "produces": "permanent.sacrifice",
+        "observer": "Jet, Freedom Fighter",
+        "hook": "permanent.dies",
+        "producer_contract": "card.Bebop%20%26%20Rocksteady.op001",
+        "observer_contract": "card.Jet%2C%20Freedom%20Fighter.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Divert Disaster",
+        "produces": "land_to_battlefield",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Divert%20Disaster.op001",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Bebop & Rocksteady",
+        "produces": "permanent.sacrifice",
+        "observer": "Merchant of Venom",
+        "hook": "permanent.sacrifice",
+        "producer_contract": "card.Bebop%20%26%20Rocksteady.op001",
+        "observer_contract": "card.Merchant%20of%20Venom.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Abandon Attachments",
+        "produces": "card.discard",
+        "observer": "Cryptcaller Chariot",
+        "hook": "card.discard",
+        "producer_contract": "card.Abandon%20Attachments.op001",
+        "observer_contract": "card.Cryptcaller%20Chariot.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 97,
+    "loops": [
+      {
+        "cards": [
+          "Bard the Bowman",
+          "Cloaked Cadet"
+        ],
+        "certainty": "guaranteed",
+        "a_produces": "counter.put",
+        "b_output": "card.draw",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Knights of Dol Amroth",
+          "Cloaked Cadet"
+        ],
+        "certainty": "guaranteed",
+        "a_produces": "counter.put",
+        "b_output": "card.draw",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Lakeshore Apothecary",
+          "Cloaked Cadet"
+        ],
+        "certainty": "guaranteed",
+        "a_produces": "counter.put",
+        "b_output": "card.draw",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Necrosavant",
+          "Wingmantle Chaplain"
+        ],
+        "certainty": "guaranteed",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Emrakul's Messenger"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cloaked Cadet",
+          "Bard the Bowman"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "counter.put",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cloaked Cadet",
+          "Knights of Dol Amroth"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "counter.put",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cloaked Cadet",
+          "Lakeshore Apothecary"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "counter.put",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Drowned Rusalka",
+          "Emrakul's Messenger"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Drowned Rusalka",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Grim Backwoods",
+          "Emrakul's Messenger"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Grim Backwoods",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Ice Cream Kitty",
+          "Emrakul's Messenger"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Ice Cream Kitty",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "G'raha Tia"
+        ],
+        "certainty": "conditional",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Lord Dregg, Insect Invader",
+          "Emrakul's Messenger"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Lord Dregg, Insect Invader",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Phyrexian Vault",
+          "Emrakul's Messenger"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Phyrexian Vault",
+          "Wolfbat"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Balduvian Atrocity",
+          "Zoraline, Cosmos Caller"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Bard the Bowman",
+          "Fetid Gargantua"
+        ],
+        "certainty": "possible",
+        "a_produces": "counter.put",
+        "b_output": "card.draw",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Bumbleflower's Sharepot",
+          "Esper Sojourners"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "permanent.untap",
+        "enables_a_via": "cost:cost.tap_self",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Bloodghast"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Chocobo Racetrack"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Emeria Angel"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Mechan Assembler"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Omnath, Locus of Rage"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Wingmantle Chaplain"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Aven Fisher"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Esper Sojourners"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "permanent.untap",
+        "enables_a_via": "cost:cost.tap_self",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Garna, Bloodfist of Keld"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Ithilien Kingfisher"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Morbid Opportunist"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Solemn Simulacrum"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Summit Sentinel"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Jaya Ballard, Task Mage",
+          "Surveilling Sprite"
+        ],
+        "certainty": "possible",
+        "a_produces": "permanent.dies",
+        "b_output": "card.draw",
+        "enables_a_via": "cost:cost.discard",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Primary Research",
+          "Rescue Skiff"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Primary Research",
+          "Zoraline, Cosmos Caller"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Reaping Willow",
+          "Earth Kingdom Soldier"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "counter.put",
+        "enables_a_via": "cost:cost.counter_remove",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      }
+    ],
+    "loops_contested": {
+      "total": 733,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": [
+        {
+          "cards": [
+            "Drowned Rusalka",
+            "Cryptcaller Chariot"
+          ],
+          "certainty": "guaranteed",
+          "kb_note": "Cryptcaller Chariot: no KB contract produces battlefield.enter"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cracked Skull",
+            "Massacre Girl, Most Wanted"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Cracked Skull: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cracked Skull",
+            "Omnath, Locus of Rage"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Cracked Skull: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cryoshatter",
+            "Massacre Girl, Most Wanted"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Cryoshatter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cryoshatter",
+            "Omnath, Locus of Rage"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Cryoshatter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Drowned Rusalka",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Drowned Rusalka: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Gollum, Patient Plotter",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Gollum, Patient Plotter: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Grim Backwoods",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Grim Backwoods: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Hurler Cyclops",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Hurler Cyclops: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Ice Cream Kitty",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Ice Cream Kitty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Martyred Rusalka",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Martyred Rusalka: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Necrosavant",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Necrosavant: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Phantom Train",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Phantom Train: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Phyrexian Ghoul",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Phyrexian Ghoul: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Phyrexian Vault",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Phyrexian Vault: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Umbral Collar Zealot",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Umbral Collar Zealot: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Vampire Aristocrat",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Vampire Aristocrat: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Viscera Seer",
+            "Griffin Guide"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Viscera Seer: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Architect of the Untamed",
+            "Oath of the Grey Host"
+          ],
+          "certainty": "possible",
+          "kb_note": "Architect of the Untamed: no KB contract produces counter.put"
+        },
+        {
+          "cards": [
+            "Architect of the Untamed",
+            "The Legend of Roku // Avatar Roku"
+          ],
+          "certainty": "possible",
+          "kb_note": "Architect of the Untamed: no KB contract produces counter.put"
+        },
+        {
+          "cards": [
+            "Bog Naughty",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bog Naughty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bog Naughty",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bog Naughty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bog Naughty",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bog Naughty: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Mogg War Marshal"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Bolg's Company",
+            "Pain 101"
+          ],
+          "certainty": "possible",
+          "kb_note": "Bolg's Company: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Bant Sojourners"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Beamsaw Prospector"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Callous Inspector"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Dwarven Castle Guard"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Edge Rover"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Eldrazi Repurposer"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Esper Sojourners"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Featherbrained Filcher"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces battlefield.leave"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Feign Death"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Ferocity of the Hunt"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Gravpack Monoist"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Cirith Ungol Patrol",
+            "Jewel-Eyed Cobra"
+          ],
+          "certainty": "possible",
+          "kb_note": "Cirith Ungol Patrol: no KB contract produces permanent.dies"
+        }
+      ]
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 59389,
+      "permanent.dies": 5952,
+      "card.draw": 4492,
+      "life.gain": 2892,
+      "counter.put": 2596,
+      "card.discard": 619,
+      "permanent.sacrifice": 432,
+      "land.enters_battlefield": 261
+    }
+  }
+}

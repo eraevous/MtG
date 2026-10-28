@@ -1,0 +1,128 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Vraska, Soul of Stone"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 5,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 2
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: Artifact creatures you control have vigilance.\nWhenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any color.\"",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 0, assigned 1.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 0 usable without asking; 1 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: Artifact creatures you control have vigilance.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Vraska%2C%20Soul%20of%20Stone.op001"
+      ]
+    },
+    {
+      "text": "Contract reading of: Whenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any color.\"",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Vraska%2C%20Soul%20of%20Stone.op002"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Vraska, Soul of Stone",
+      "type_line": "Legendary Creature — Gorgon Wizard",
+      "mana_cost": "{U}{R}{W}",
+      "color_identity": "WUR",
+      "oracle_text": "Artifact creatures you control have vigilance.\nWhenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any color.\"",
+      "oracle_text_sha256": "eedbfdaa7d45adf240d41ce4fcf0da548f14b10d355259f234072b57ae1ae83b",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 1,
+      "free": 0,
+      "locations": [
+        {
+          "deck": "Vraska",
+          "quantity": 1,
+          "section": "Commander",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Vraska": 1
+    },
+    "availability": {
+      "free": 0,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Vraska": 1
+      },
+      "planned_only": {},
+      "usable_without_asking": 0,
+      "usable_by_agreement": 1
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "TMNT",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Vraska%2C%20Soul%20of%20Stone.op001",
+        "operation_kind": "continuous",
+        "queue_state": "ready_for_review",
+        "exact_text": "Artifact creatures you control have vigilance.",
+        "failed_checks": []
+      },
+      {
+        "contract_id": "card.Vraska%2C%20Soul%20of%20Stone.op002",
+        "operation_kind": "trigger",
+        "queue_state": "ready_for_review",
+        "exact_text": "Whenever you cast a noncreature spell, create a 1/1 colorless Sculpture Treasure artifact creature token with \"{T}, Sacrifice this token: Add one mana of any color.\"",
+        "failed_checks": []
+      }
+    ],
+    "reconciliation": null
+  }
+}

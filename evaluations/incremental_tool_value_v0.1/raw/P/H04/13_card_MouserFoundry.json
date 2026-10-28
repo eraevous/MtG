@@ -1,0 +1,135 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Mouser Foundry"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 5,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 2
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: When this artifact enters or leaves the battlefield, create a 1/1 colorless Robot artifact creature token.\n{4}{R}, Sacrifice this artifact: It deals 3 damage to target creature.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 7, free 6, assigned 1.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 6 usable without asking; 7 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: When this artifact enters or leaves the battlefield, create a 1/1 colorless Robot artifact creature token.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mouser%20Foundry.op001"
+      ]
+    },
+    {
+      "text": "Contract reading of: {4}{R}, Sacrifice this artifact: It deals 3 damage to target creature.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mouser%20Foundry.op002",
+        "C11_executable_shape: projected ability drops text: it"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Mouser Foundry",
+      "type_line": "Artifact",
+      "mana_cost": "{1}{R}",
+      "color_identity": "R",
+      "oracle_text": "When this artifact enters or leaves the battlefield, create a 1/1 colorless Robot artifact creature token.\n{4}{R}, Sacrifice this artifact: It deals 3 damage to target creature.",
+      "oracle_text_sha256": "fc6e31fa1dca0cd501012758b7b6341683cdee10a512d5ef6ed9d7ed75815ea5",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 7,
+      "assigned": 1,
+      "free": 6,
+      "locations": [
+        {
+          "deck": "Vraska",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Vraska": 1
+    },
+    "availability": {
+      "free": 6,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Vraska": 1
+      },
+      "planned_only": {},
+      "usable_without_asking": 6,
+      "usable_by_agreement": 7
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Blight Curse",
+      "Limit Break",
+      "Rootha",
+      "Shanid",
+      "TMNT",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Mouser%20Foundry.op001",
+        "operation_kind": "trigger",
+        "queue_state": "ready_for_review",
+        "exact_text": "When this artifact enters or leaves the battlefield, create a 1/1 colorless Robot artifact creature token.",
+        "failed_checks": []
+      },
+      {
+        "contract_id": "card.Mouser%20Foundry.op002",
+        "operation_kind": "activate",
+        "queue_state": "blocked",
+        "exact_text": "{4}{R}, Sacrifice this artifact: It deals 3 damage to target creature.",
+        "failed_checks": [
+          "C11_executable_shape: projected ability drops text: it"
+        ]
+      }
+    ],
+    "reconciliation": null
+  }
+}

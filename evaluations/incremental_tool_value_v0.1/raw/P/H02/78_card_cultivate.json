@@ -1,0 +1,132 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Cultivate"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 4,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 4, free 2, assigned 2.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 2 usable without asking; 4 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Cultivate.op001",
+        "C11_executable_shape: projected ability drops text: search your library for up to two basic land cards reveal those cards put one onto the battlefield tapped and the other "
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Cultivate",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{G}",
+      "color_identity": "G",
+      "oracle_text": "Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+      "oracle_text_sha256": "f8952bf1d76fc6e53e288385c7844b5bfbe2ee3919b661ecb284ec286849729c",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 4,
+      "assigned": 2,
+      "free": 2,
+      "locations": [
+        {
+          "deck": "Limit Break",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        },
+        {
+          "deck": "Necrobloom",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Limit Break": 1,
+      "Necrobloom": 1
+    },
+    "availability": {
+      "free": 2,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Limit Break": 1,
+        "Necrobloom": 1
+      },
+      "planned_only": {
+        "Oops! All Edge Cases!": "Candidate list v0.1 (free copies)",
+        "TMNT": "Broad bench"
+      },
+      "usable_without_asking": 2,
+      "usable_by_agreement": 4
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Blight Curse",
+      "Brigid",
+      "Counter Blitz",
+      "Dina",
+      "Limit Break",
+      "Necrobloom",
+      "TMNT",
+      "Token Triumph"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Cultivate.op001",
+        "operation_kind": "cast",
+        "queue_state": "blocked",
+        "exact_text": "Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",
+        "failed_checks": [
+          "C11_executable_shape: projected ability drops text: search your library for up to two basic land cards reveal those cards put one onto the battlefield tapped and the other "
+        ]
+      }
+    ],
+    "reconciliation": null
+  }
+}

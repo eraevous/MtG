@@ -1,0 +1,68 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "check",
+  "query": {
+    "claims": "-"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 1,
+    "by_grade": {
+      "decision_grade": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Five route cards are in the Vraska deck",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Thopter Spy Network: owned 1, free 0",
+        "Retrofitter Foundry: owned 1, free 0",
+        "Reckless Fireweaver: owned 1, free 0",
+        "Saheeli, Sublime Artificer: owned 1, free 0",
+        "Stridehangar Automaton: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Thopter Spy Network: physically in ['Vraska']",
+        "Retrofitter Foundry: physically in ['Vraska']",
+        "Reckless Fireweaver: physically in ['Vraska']",
+        "Saheeli, Sublime Artificer: physically in ['Vraska']",
+        "Stridehangar Automaton: physically in ['Vraska']"
+      ],
+      "assertion": {
+        "in_deck": "Vraska"
+      },
+      "evidence_grade": "decision_grade"
+    }
+  ],
+  "data": {
+    "checked": 1,
+    "by_verdict": {
+      "SUPPORTED": 1
+    },
+    "assert_keys": {
+      "inventory": [
+        "owned_min",
+        "free_min",
+        "usable_without_asking_min",
+        "usable_by_agreement_min",
+        "in_deck"
+      ],
+      "rules_text": [
+        "text_contains"
+      ]
+    }
+  }
+}

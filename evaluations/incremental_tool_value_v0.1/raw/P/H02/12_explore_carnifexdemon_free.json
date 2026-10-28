@@ -1,0 +1,303 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Carnifex Demon",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 7,
+    "by_grade": {
+      "exploratory": 7
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed Braids's Frightful Return [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.Braids's%20Frightful%20Return.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed Burn, Burn, Tree and Fern [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed Oath of the Grey Host [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.Oath%20of%20the%20Grey%20Host.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed Summon: Esper Ramuh [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.Summon%3A%20Esper%20Ramuh.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed Summon: Fenrir [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.Summon%3A%20Fenrir.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed Summon: G.F. Ifrit [op003] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.Summon%3A%20G.F.%20Ifrit.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carnifex Demon [op003] (counter.put) can feed The Legend of Roku // Avatar Roku [op003] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carnifex%20Demon.op003",
+        "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1554,
+      "contracts": 2133
+    },
+    "seed": "Carnifex Demon",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 688,
+      "blocked": 1439,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 7,
+    "links_by_qualifiers": {
+      "unresolved": 7
+    },
+    "links_by_basis": {
+      "counter_type_unknown": 7
+    },
+    "links_by_pathway": {
+      "counter.put -> counter.put": 7
+    },
+    "rejected_links": {
+      "total": 0,
+      "by_reason": {},
+      "examples": []
+    },
+    "links": [
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "Braids's Frightful Return",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.Braids's%20Frightful%20Return.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.Braids's%20Frightful%20Return.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "Burn, Burn, Tree and Fern",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op003"
+          ],
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op004"
+          ]
+        ]
+      },
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "Oath of the Grey Host",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.Oath%20of%20the%20Grey%20Host.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.Oath%20of%20the%20Grey%20Host.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "Summon: Esper Ramuh",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.Summon%3A%20Esper%20Ramuh.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "Summon: Fenrir",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.Summon%3A%20Fenrir.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.Summon%3A%20Fenrir.op004"
+          ]
+        ]
+      },
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "Summon: G.F. Ifrit",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.Summon%3A%20G.F.%20Ifrit.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Carnifex Demon",
+        "produces": "counter.put",
+        "observer": "The Legend of Roku // Avatar Roku",
+        "hook": "counter.put",
+        "producer_contract": "card.Carnifex%20Demon.op003",
+        "observer_contract": "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op004"
+          ],
+          [
+            "card.Carnifex%20Demon.op003",
+            "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op005"
+          ]
+        ]
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "counter.put": 7
+    }
+  }
+}

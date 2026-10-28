@@ -1,0 +1,363 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Brigid, Clachan's Heart",
+    "ci": "WG",
+    "free": true,
+    "mode": "divergent",
+    "limit": 200
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 5,
+    "by_grade": {
+      "exploratory": 5
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind (token.create) -> Case of the Uneaten Feast via battlefield.enter, then Case of the Uneaten Feast (permanent.sacrifice) -> Unlucky Cabbage Merchant via permanent.sacrifice (qualifiers unresolved).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Case%20of%20the%20Uneaten%20Feast.op001",
+        "card.Case%20of%20the%20Uneaten%20Feast.op003",
+        "card.Unlucky%20Cabbage%20Merchant.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind (token.create) -> Case of the Uneaten Feast via battlefield.enter, then Case of the Uneaten Feast (permanent.sacrifice) -> G'raha Tia via permanent.dies (qualifiers unresolved).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Case%20of%20the%20Uneaten%20Feast.op001",
+        "card.Case%20of%20the%20Uneaten%20Feast.op003",
+        "card.G'raha%20Tia.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind (token.create) -> Kyoshi Island Plaza via battlefield.enter, then Kyoshi Island Plaza (land_to_battlefield) -> Authority of the Consuls via battlefield.enter (qualifiers unresolved).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Kyoshi%20Island%20Plaza.op002",
+        "card.Kyoshi%20Island%20Plaza.op002",
+        "card.Authority%20of%20the%20Consuls.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind (token.create) -> Airbender Ascension via battlefield.enter, then Airbender Ascension (counter.put) -> Summon: Choco/Mog via counter.put (qualifiers unresolved).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Airbender%20Ascension.op002",
+        "card.Airbender%20Ascension.op002",
+        "card.Summon%3A%20Choco/Mog.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind (token.create) -> Authority of the Consuls via battlefield.enter, then Authority of the Consuls (life.gain) -> Ajani Resolute via life.gain (qualifiers unresolved).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Authority%20of%20the%20Consuls.op001",
+        "card.Authority%20of%20the%20Consuls.op002",
+        "card.Ajani%20Resolute.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "WG",
+      "cards": 995,
+      "contracts": 1339
+    },
+    "seed": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+    "mode": "divergent",
+    "pool_contract_states": {
+      "blocked": 820,
+      "ready_for_review": 515,
+      "quarantined": 4
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "first_order_links": 60,
+    "rejected_links": {
+      "total": 4,
+      "by_reason": {
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact": 3,
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target card": 1
+      },
+      "examples": [
+        {
+          "producer": "Crack Open",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact"
+        },
+        {
+          "producer": "Feral Appetite",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target card"
+        },
+        {
+          "producer": "Seedship Impact",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact"
+        },
+        {
+          "producer": "Zuko's Exile",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact"
+        }
+      ]
+    },
+    "chains_total": 129,
+    "chains_by_qualifiers": {
+      "unresolved": 129
+    },
+    "chains": [
+      {
+        "score": 0.02,
+        "qualifiers": "unresolved",
+        "first": {
+          "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "produces": "token.create",
+          "observer": "Case of the Uneaten Feast",
+          "hook": "battlefield.enter",
+          "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+          "observer_contract": "card.Case%20of%20the%20Uneaten%20Feast.op001",
+          "producer_state": "blocked",
+          "observer_state": "ready_for_review",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "token_unknown",
+          "qualifier_note": "the token's characteristics are not recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "second": {
+          "producer": "Case of the Uneaten Feast",
+          "produces": "permanent.sacrifice",
+          "observer": "Unlucky Cabbage Merchant",
+          "hook": "permanent.sacrifice",
+          "producer_contract": "card.Case%20of%20the%20Uneaten%20Feast.op003",
+          "observer_contract": "card.Unlucky%20Cabbage%20Merchant.op002",
+          "producer_state": "blocked",
+          "observer_state": "blocked",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "object_unknown",
+          "qualifier_note": "the produced object is not recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "link_state": "candidate"
+      },
+      {
+        "score": 0.003333,
+        "qualifiers": "unresolved",
+        "first": {
+          "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "produces": "token.create",
+          "observer": "Case of the Uneaten Feast",
+          "hook": "battlefield.enter",
+          "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+          "observer_contract": "card.Case%20of%20the%20Uneaten%20Feast.op001",
+          "producer_state": "blocked",
+          "observer_state": "ready_for_review",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "token_unknown",
+          "qualifier_note": "the token's characteristics are not recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "second": {
+          "producer": "Case of the Uneaten Feast",
+          "produces": "permanent.sacrifice",
+          "observer": "G'raha Tia",
+          "hook": "permanent.dies",
+          "producer_contract": "card.Case%20of%20the%20Uneaten%20Feast.op003",
+          "observer_contract": "card.G'raha%20Tia.op002",
+          "producer_state": "blocked",
+          "observer_state": "ready_for_review",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "object_unknown",
+          "qualifier_note": "the produced object is not recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "link_state": "candidate"
+      },
+      {
+        "score": 0.001333,
+        "qualifiers": "unresolved",
+        "first": {
+          "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "produces": "token.create",
+          "observer": "Kyoshi Island Plaza",
+          "hook": "battlefield.enter",
+          "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+          "observer_contract": "card.Kyoshi%20Island%20Plaza.op002",
+          "producer_state": "blocked",
+          "observer_state": "blocked",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "token_unknown",
+          "qualifier_note": "the token's characteristics are not recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "second": {
+          "producer": "Kyoshi Island Plaza",
+          "produces": "land_to_battlefield",
+          "observer": "Authority of the Consuls",
+          "hook": "battlefield.enter",
+          "producer_contract": "card.Kyoshi%20Island%20Plaza.op002",
+          "observer_contract": "card.Authority%20of%20the%20Consuls.op001",
+          "producer_state": "blocked",
+          "observer_state": "ready_for_review",
+          "link_state": "candidate",
+          "qualifiers": "compatible",
+          "basis": "object_type",
+          "qualifier_note": "Kyoshi Island Plaza matches the trigger",
+          "same_card": false,
+          "also_via": [
+            [
+              "card.Kyoshi%20Island%20Plaza.op002",
+              "card.Authority%20of%20the%20Consuls.op002"
+            ]
+          ]
+        },
+        "link_state": "candidate"
+      },
+      {
+        "score": 0.000741,
+        "qualifiers": "unresolved",
+        "first": {
+          "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "produces": "token.create",
+          "observer": "Airbender Ascension",
+          "hook": "battlefield.enter",
+          "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+          "observer_contract": "card.Airbender%20Ascension.op002",
+          "producer_state": "blocked",
+          "observer_state": "blocked",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "token_unknown",
+          "qualifier_note": "the token's characteristics are not recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "second": {
+          "producer": "Airbender Ascension",
+          "produces": "counter.put",
+          "observer": "Summon: Choco/Mog",
+          "hook": "counter.put",
+          "producer_contract": "card.Airbender%20Ascension.op002",
+          "observer_contract": "card.Summon%3A%20Choco/Mog.op002",
+          "producer_state": "blocked",
+          "observer_state": "blocked",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "counter_type_unknown",
+          "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+          "same_card": false,
+          "also_via": []
+        },
+        "link_state": "candidate"
+      },
+      {
+        "score": 0.00025,
+        "qualifiers": "unresolved",
+        "first": {
+          "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "produces": "token.create",
+          "observer": "Authority of the Consuls",
+          "hook": "battlefield.enter",
+          "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+          "observer_contract": "card.Authority%20of%20the%20Consuls.op001",
+          "producer_state": "blocked",
+          "observer_state": "ready_for_review",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "token_unknown",
+          "qualifier_note": "the token's characteristics are not recorded",
+          "same_card": false,
+          "also_via": [
+            [
+              "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+              "card.Authority%20of%20the%20Consuls.op002"
+            ]
+          ]
+        },
+        "second": {
+          "producer": "Authority of the Consuls",
+          "produces": "life.gain",
+          "observer": "Ajani Resolute",
+          "hook": "life.gain",
+          "producer_contract": "card.Authority%20of%20the%20Consuls.op002",
+          "observer_contract": "card.Ajani%20Resolute.op001",
+          "producer_state": "ready_for_review",
+          "observer_state": "blocked",
+          "link_state": "candidate",
+          "qualifiers": "unresolved",
+          "basis": "no_filter",
+          "qualifier_note": "no object filter recorded",
+          "same_card": false,
+          "also_via": []
+        },
+        "link_state": "candidate"
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    }
+  }
+}

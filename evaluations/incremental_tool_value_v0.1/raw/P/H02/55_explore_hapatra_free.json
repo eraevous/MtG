@@ -1,0 +1,1557 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Hapatra, Vizier of Poisons",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 200
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 51,
+    "by_grade": {
+      "exploratory": 51
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed Braids's Frightful Return [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.Braids's%20Frightful%20Return.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed Burn, Burn, Tree and Fern [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Arni, Renowned Champion [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Arni%2C%20Renowned%20Champion.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed Oath of the Grey Host [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.Oath%20of%20the%20Grey%20Host.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Beast-Kin Ranger [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Beast-Kin%20Ranger.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed Summon: Esper Ramuh [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.Summon%3A%20Esper%20Ramuh.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Bristlebane Battler [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Bristlebane%20Battler.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed Summon: Fenrir [op002] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.Summon%3A%20Fenrir.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Collective Inferno [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Collective%20Inferno.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed Summon: G.F. Ifrit [op003] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.Summon%3A%20G.F.%20Ifrit.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Crossroads Watcher [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Crossroads%20Watcher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op001] (counter.put) can feed The Legend of Roku // Avatar Roku [op003] via counter.put (qualifiers unresolved: counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Dashing Bloodsucker [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Dashing%20Bloodsucker.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Dawn-Blessed Pennant [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Dawn-Blessed%20Pennant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Decoction Module [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Decoction%20Module.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Elvish Archivist [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Elvish%20Archivist.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Flamekin Village [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Flamekin%20Village.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Freestrider Commando [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Freestrider%20Commando.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Frilled Sparkshooter [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Frilled%20Sparkshooter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Gathering Stone [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Gathering%20Stone.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Gideon the Oathless [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Gideon%20the%20Oathless.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Glaze Fiend [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Glaze%20Fiend.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Greenhouse Propagator [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Greenhouse%20Propagator.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Honored Dreyleader [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Honored%20Dreyleader.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Hotheaded Giant [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Hotheaded%20Giant.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Invader Parasite [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Invader%20Parasite.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Kavu Primarch [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Kavu%20Primarch.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Kyoshi Island Plaza [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Kyoshi%20Island%20Plaza.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Liliana the Repentant [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Liliana%20the%20Repentant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Loporrit Scout [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Loporrit%20Scout.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Mines of Moria [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Mines%20of%20Moria.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Mutant Town Musicians [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Mutant%20Town%20Musicians.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Oreplate Pangolin [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Oreplate%20Pangolin.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Paradise Plume [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Paradise%20Plume.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Poisonbelly Ogre [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Poisonbelly%20Ogre.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Putrid Pals [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Putrid%20Pals.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Rancorous Archaic [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Rancorous%20Archaic.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Raphael, Most Attitude [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Raphael%2C%20Most%20Attitude.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Raphael, Tough Turtle [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Raphael%2C%20Tough%20Turtle.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Shimmerwilds Growth [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Shimmerwilds%20Growth.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Simic Initiate [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Simic%20Initiate.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Slash, Reptile Rampager [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Slash%2C%20Reptile%20Rampager.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Soultether Golem [op004] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Soultether%20Golem.op004"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Stingerquill Annex [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Stingerquill%20Annex.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Vicious Clown [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Vicious%20Clown.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Virulent Emissary [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Virulent%20Emissary.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Voidpouncer [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Voidpouncer.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Wingnut, Bat on the Belfry [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Wingnut%2C%20Bat%20on%20the%20Belfry.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Woodland Weavemaster [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Woodland%20Weavemaster.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Hapatra, Vizier of Poisons [op002] (token.create) can feed Zog, Triceraton Castaway [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "card.Zog%2C%20Triceraton%20Castaway.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1554,
+      "contracts": 2134
+    },
+    "seed": "Hapatra, Vizier of Poisons",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 688,
+      "blocked": 1440,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 51,
+    "links_by_qualifiers": {
+      "unresolved": 51
+    },
+    "links_by_basis": {
+      "counter_type_unknown": 7,
+      "token_unknown": 44
+    },
+    "links_by_pathway": {
+      "token.create -> battlefield.enter": 44,
+      "counter.put -> counter.put": 7
+    },
+    "rejected_links": {
+      "total": 0,
+      "by_reason": {},
+      "examples": []
+    },
+    "links": [
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "Braids's Frightful Return",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.Braids's%20Frightful%20Return.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.Braids's%20Frightful%20Return.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "Burn, Burn, Tree and Fern",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op003"
+          ],
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.Burn%2C%20Burn%2C%20Tree%20and%20Fern.op004"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Arni, Renowned Champion",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Arni%2C%20Renowned%20Champion.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "Oath of the Grey Host",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.Oath%20of%20the%20Grey%20Host.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.Oath%20of%20the%20Grey%20Host.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Beast-Kin Ranger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Beast-Kin%20Ranger.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "Summon: Esper Ramuh",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.Summon%3A%20Esper%20Ramuh.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Bristlebane Battler",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Bristlebane%20Battler.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "Summon: Fenrir",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.Summon%3A%20Fenrir.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.Summon%3A%20Fenrir.op004"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Collective Inferno",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Collective%20Inferno.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "Summon: G.F. Ifrit",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.Summon%3A%20G.F.%20Ifrit.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Crossroads Watcher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Crossroads%20Watcher.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "counter.put",
+        "observer": "The Legend of Roku // Avatar Roku",
+        "hook": "counter.put",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+        "observer_contract": "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "counter_type_unknown",
+        "qualifier_note": "counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op004"
+          ],
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op001",
+            "card.The%20Legend%20of%20Roku%20%2F%2F%20Avatar%20Roku.op005"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Dashing Bloodsucker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Dashing%20Bloodsucker.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Dawn-Blessed Pennant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Dawn-Blessed%20Pennant.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+            "card.Dawn-Blessed%20Pennant.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Decoction Module",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Decoction%20Module.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Elvish Archivist",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Elvish%20Archivist.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+            "card.Elvish%20Archivist.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Flamekin Village",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Flamekin%20Village.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Freestrider Commando",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Freestrider%20Commando.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Frilled Sparkshooter",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Frilled%20Sparkshooter.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Gathering Stone",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Gathering%20Stone.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Gideon the Oathless",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Gideon%20the%20Oathless.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Glaze Fiend",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Glaze%20Fiend.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Greenhouse Propagator",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Greenhouse%20Propagator.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Honored Dreyleader",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Honored%20Dreyleader.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Hotheaded Giant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Hotheaded%20Giant.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Invader Parasite",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Invader%20Parasite.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Kavu Primarch",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Kavu%20Primarch.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Kyoshi Island Plaza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Kyoshi%20Island%20Plaza.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Liliana the Repentant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Liliana%20the%20Repentant.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Loporrit Scout",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Loporrit%20Scout.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Mines of Moria",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Mines%20of%20Moria.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Mutant Town Musicians",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Mutant%20Town%20Musicians.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Oreplate Pangolin",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Oreplate%20Pangolin.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Paradise Plume",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Paradise%20Plume.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Poisonbelly Ogre",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Poisonbelly%20Ogre.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Putrid Pals",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Putrid%20Pals.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Rancorous Archaic",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Rancorous%20Archaic.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Raphael, Most Attitude",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Raphael%2C%20Most%20Attitude.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Raphael, Tough Turtle",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Raphael%2C%20Tough%20Turtle.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Shimmerwilds Growth",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Shimmerwilds%20Growth.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Simic Initiate",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Simic%20Initiate.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Slash, Reptile Rampager",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Slash%2C%20Reptile%20Rampager.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Soultether Golem",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Soultether%20Golem.op004",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Stingerquill Annex",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Stingerquill%20Annex.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Vicious Clown",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Vicious%20Clown.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Virulent Emissary",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Virulent%20Emissary.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Voidpouncer",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Voidpouncer.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Wingnut, Bat on the Belfry",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Wingnut%2C%20Bat%20on%20the%20Belfry.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Woodland Weavemaster",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Woodland%20Weavemaster.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Hapatra, Vizier of Poisons",
+        "produces": "token.create",
+        "observer": "Zog, Triceraton Castaway",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Hapatra%2C%20Vizier%20of%20Poisons.op002",
+        "observer_contract": "card.Zog%2C%20Triceraton%20Castaway.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 1,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": [
+        {
+          "cards": [
+            "Decoction Module",
+            "Hapatra, Vizier of Poisons"
+          ],
+          "certainty": "possible",
+          "kb_note": "Decoction Module: no KB contract produces counter.put"
+        }
+      ]
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 44,
+      "counter.put": 7
+    }
+  }
+}

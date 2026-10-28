@@ -1,0 +1,116 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Blood Artist"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 4,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 0, assigned 1.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 0 usable without asking; 0 with agreement from other built decks; protected decks hold 1 (Dina).",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Blood%20Artist.op001"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Blood Artist",
+      "type_line": "Creature — Vampire",
+      "mana_cost": "{1}{B}",
+      "color_identity": "B",
+      "oracle_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+      "oracle_text_sha256": "1af647a916420dc2a89b2ed3ef88593597ee9de21baafaabaf0b7a6f823035f3",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 1,
+      "free": 0,
+      "locations": [
+        {
+          "deck": "Dina",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Dina": 1
+    },
+    "availability": {
+      "free": 0,
+      "in_protected_decks": {
+        "Dina": 1
+      },
+      "in_other_built_decks": {},
+      "planned_only": {},
+      "usable_without_asking": 0,
+      "usable_by_agreement": 0
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Blight Curse",
+      "Dina",
+      "Necrobloom",
+      "Shanid",
+      "Sharuum",
+      "TMNT"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Blood%20Artist.op001",
+        "operation_kind": "trigger",
+        "queue_state": "ready_for_review",
+        "exact_text": "Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.",
+        "failed_checks": []
+      }
+    ],
+    "reconciliation": null
+  }
+}

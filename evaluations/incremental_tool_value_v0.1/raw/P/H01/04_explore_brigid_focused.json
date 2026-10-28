@@ -1,0 +1,282 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Brigid, Clachan's Heart",
+    "ci": "WG",
+    "deck": "Brigid",
+    "free": true,
+    "mode": "focused",
+    "limit": 25
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 7,
+    "by_grade": {
+      "exploratory": 7
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Helping Hand [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Helping%20Hand.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Case of the Uneaten Feast [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Case%20of%20the%20Uneaten%20Feast.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Salvation Swan [op003] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Salvation%20Swan.op003",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Lita, Little Orphan Amphibian [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Lita%2C%20Little%20Orphan%20Amphibian.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Mighty Mutanimals [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Mighty%20Mutanimals.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Quintessential Katana [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Quintessential%20Katana.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Spiritcall Enthusiast // Scrollboost [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Spiritcall%20Enthusiast%20%2F%2F%20Scrollboost.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "deck Brigid",
+      "color_identity": "WG",
+      "cards": 79,
+      "contracts": 118
+    },
+    "seed": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+    "mode": "focused",
+    "pool_contract_states": {
+      "blocked": 77,
+      "ready_for_review": 41
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 7,
+    "links_by_qualifiers": {
+      "unresolved": 7
+    },
+    "links_by_basis": {
+      "token_unknown": 5,
+      "reentry_of_target": 2
+    },
+    "links_by_pathway": {
+      "token.create -> battlefield.enter": 5,
+      "card.return_to_battlefield -> battlefield.enter": 2
+    },
+    "rejected_links": {
+      "total": 1,
+      "by_reason": {
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: up to one target artifact": 1
+      },
+      "examples": [
+        {
+          "producer": "Teleportation Circle",
+          "produces": "card.return_to_battlefield",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: up to one target artifact"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Helping Hand",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Helping%20Hand.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Case of the Uneaten Feast",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Case%20of%20the%20Uneaten%20Feast.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Salvation Swan",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Salvation%20Swan.op003",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Lita, Little Orphan Amphibian",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Lita%2C%20Little%20Orphan%20Amphibian.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Mighty Mutanimals",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Mighty%20Mutanimals.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Quintessential Katana",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Quintessential%20Katana.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Spiritcall Enthusiast // Scrollboost",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Spiritcall%20Enthusiast%20%2F%2F%20Scrollboost.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 7
+    }
+  }
+}
