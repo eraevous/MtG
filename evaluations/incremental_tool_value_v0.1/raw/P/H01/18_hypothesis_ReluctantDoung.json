@@ -1,0 +1,100 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "hypothesis",
+  "query": {
+    "a": "Reluctant Dounguard",
+    "b": "Brigid, Clachan's Heart",
+    "ci": "WG"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 1,
+    "by_grade": {
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Reluctant Dounguard [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Reluctant%20Dounguard.op002"
+      ],
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "cards": [
+      "Reluctant Dounguard",
+      "Brigid, Clachan's Heart // Brigid, Doun's Mind"
+    ],
+    "effect": null,
+    "links": [
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Reluctant Dounguard",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Reluctant%20Dounguard.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "acts_on": [],
+    "same_card_links": [],
+    "loops": [],
+    "loops_contested": [],
+    "rejected_links": [],
+    "conditions": [
+      {
+        "contract_id": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "text": "Whenever this creature enters or transforms into Brigid, Clachan's Heart, create a 1/1 green and white Kithkin creature token.",
+        "state": "blocked"
+      },
+      {
+        "contract_id": "card.Reluctant%20Dounguard.op002",
+        "card": "Reluctant Dounguard",
+        "text": "Whenever another creature you control enters while this creature has a -1/-1 counter on it, remove a -1/-1 counter from this creature.",
+        "state": "blocked"
+      }
+    ],
+    "unverified_contracts": [
+      "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+      "card.Reluctant%20Dounguard.op002"
+    ],
+    "disconfirming_evidence": [
+      "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002: failed check C05_face: multi-face card: clause not located on exactly one face",
+      "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002: failed check C11_executable_shape: projected ability drops text: or transforms into ~",
+      "card.Reluctant%20Dounguard.op002: failed check C08_effects: no effect recorded",
+      "card.Reluctant%20Dounguard.op002: failed check C11_executable_shape: projected ability drops text: while has a 1/ 1 counter on it remove a 1/ 1 counter from"
+    ],
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "reading_note": "A rejected link or contested loop rules out that one route only. Check acts_on and the other links before deciding the cards do not interact.",
+    "would_settle_it": [
+      "semantic review of each unverified contract (kb/review.py, citing passing scenarios)",
+      "a rules check of the trigger and replacement wording against the Comprehensive Rules"
+    ]
+  }
+}

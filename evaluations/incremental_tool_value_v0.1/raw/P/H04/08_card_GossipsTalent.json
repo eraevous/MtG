@@ -1,0 +1,150 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Gossip's Talent"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 6,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 3
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: (Gain the next level as a sorcery to add its ability.)\nWhenever a creature you control enters, surveil 1.\n{1}{U}: Level 2 — Whenever you attack, target attacking creature with power 3 or less can't be blocked this turn.\n{3}{U}: Level 3 — Whenever a creature you control deals combat damage to a player, you may exile it, then return it to the battlefield under its owner's control.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 0, assigned 1.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 0 usable without asking; 1 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: Whenever a creature you control enters, surveil 1.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Gossip's%20Talent.op002"
+      ]
+    },
+    {
+      "text": "Contract reading of: {1}{U}: Level 2 — Whenever you attack, target attacking creature with power 3 or less can't be blocked this turn.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Gossip's%20Talent.op003",
+        "C08_effects: no effect recorded"
+      ]
+    },
+    {
+      "text": "Contract reading of: {3}{U}: Level 3 — Whenever a creature you control deals combat damage to a player, you may exile it, then return it to the battlefield under its owner's control.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Gossip's%20Talent.op004"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Gossip's Talent",
+      "type_line": "Enchantment — Class",
+      "mana_cost": "{1}{U}",
+      "color_identity": "U",
+      "oracle_text": "(Gain the next level as a sorcery to add its ability.)\nWhenever a creature you control enters, surveil 1.\n{1}{U}: Level 2 — Whenever you attack, target attacking creature with power 3 or less can't be blocked this turn.\n{3}{U}: Level 3 — Whenever a creature you control deals combat damage to a player, you may exile it, then return it to the battlefield under its owner's control.",
+      "oracle_text_sha256": "3bb199cfe15e6f6f4b542ee2b86949d06d21e6ff7c0587ab71ea7b0b7a5f9159",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 1,
+      "free": 0,
+      "locations": [
+        {
+          "deck": "Vraska",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Vraska": 1
+    },
+    "availability": {
+      "free": 0,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Vraska": 1
+      },
+      "planned_only": {},
+      "usable_without_asking": 0,
+      "usable_by_agreement": 1
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Counter Blitz",
+      "Rootha",
+      "Sharuum",
+      "TMNT",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Gossip's%20Talent.op002",
+        "operation_kind": "trigger",
+        "queue_state": "ready_for_review",
+        "exact_text": "Whenever a creature you control enters, surveil 1.",
+        "failed_checks": []
+      },
+      {
+        "contract_id": "card.Gossip's%20Talent.op003",
+        "operation_kind": "activate",
+        "queue_state": "blocked",
+        "exact_text": "{1}{U}: Level 2 — Whenever you attack, target attacking creature with power 3 or less can't be blocked this turn.",
+        "failed_checks": [
+          "C08_effects: no effect recorded"
+        ]
+      },
+      {
+        "contract_id": "card.Gossip's%20Talent.op004",
+        "operation_kind": "trigger",
+        "queue_state": "ready_for_review",
+        "exact_text": "{3}{U}: Level 3 — Whenever a creature you control deals combat damage to a player, you may exile it, then return it to the battlefield under its owner's control.",
+        "failed_checks": []
+      }
+    ],
+    "reconciliation": null
+  }
+}

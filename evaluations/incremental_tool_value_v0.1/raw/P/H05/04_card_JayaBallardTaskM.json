@@ -1,0 +1,140 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Jaya Ballard, Task Mage"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 6,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 3
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: {R}, {T}, Discard a card: Destroy target blue permanent.\n{1}{R}, {T}, Discard a card: Jaya Ballard deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.\n{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 1, assigned 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 1 usable without asking; 1 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: {R}, {T}, Discard a card: Destroy target blue permanent.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Jaya%20Ballard%2C%20Task%20Mage.op001"
+      ]
+    },
+    {
+      "text": "Contract reading of: {1}{R}, {T}, Discard a card: Jaya Ballard deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Jaya%20Ballard%2C%20Task%20Mage.op002",
+        "C11_executable_shape: projected ability drops text: ~ a creature dealt damage this way can't be regenerated this turn"
+      ]
+    },
+    {
+      "text": "Contract reading of: {5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Jaya%20Ballard%2C%20Task%20Mage.op003"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Jaya Ballard, Task Mage",
+      "type_line": "Legendary Creature — Human Spellshaper",
+      "mana_cost": "{1}{R}{R}",
+      "color_identity": "R",
+      "oracle_text": "{R}, {T}, Discard a card: Destroy target blue permanent.\n{1}{R}, {T}, Discard a card: Jaya Ballard deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.\n{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
+      "oracle_text_sha256": "73c61e4dfe4ed2ff9b3c5f4598092117c74b1a03a1662bcb69d1ff8679560880",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 0,
+      "free": 1,
+      "locations": []
+    },
+    "held_by": {},
+    "availability": {
+      "free": 1,
+      "in_protected_decks": {},
+      "in_other_built_decks": {},
+      "planned_only": {},
+      "usable_without_asking": 1,
+      "usable_by_agreement": 1
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Blight Curse",
+      "Limit Break",
+      "Rootha",
+      "Shanid",
+      "TMNT",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Jaya%20Ballard%2C%20Task%20Mage.op001",
+        "operation_kind": "activate",
+        "queue_state": "ready_for_review",
+        "exact_text": "{R}, {T}, Discard a card: Destroy target blue permanent.",
+        "failed_checks": []
+      },
+      {
+        "contract_id": "card.Jaya%20Ballard%2C%20Task%20Mage.op002",
+        "operation_kind": "activate",
+        "queue_state": "blocked",
+        "exact_text": "{1}{R}, {T}, Discard a card: Jaya Ballard deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn.",
+        "failed_checks": [
+          "C11_executable_shape: projected ability drops text: ~ a creature dealt damage this way can't be regenerated this turn"
+        ]
+      },
+      {
+        "contract_id": "card.Jaya%20Ballard%2C%20Task%20Mage.op003",
+        "operation_kind": "activate",
+        "queue_state": "ready_for_review",
+        "exact_text": "{5}{R}{R}, {T}, Discard a card: Jaya Ballard deals 6 damage to each creature and each player.",
+        "failed_checks": []
+      }
+    ],
+    "reconciliation": null
+  }
+}

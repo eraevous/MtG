@@ -1,0 +1,291 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Evolution Sage",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 6,
+    "by_grade": {
+      "exploratory": 6
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Evolution Sage [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Evolution%20Sage.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Evolution Sage [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Evolution%20Sage.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Evolving Wilds [op001] (land_to_battlefield) can feed Evolution Sage [op001] via land.enters_battlefield (qualifiers compatible: Evolving Wilds matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Evolving%20Wilds.op001",
+        "card.Evolution%20Sage.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Seedship Impact [op001] (land_to_battlefield) can feed Evolution Sage [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Seedship%20Impact.op001",
+        "card.Evolution%20Sage.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Terramorphic Expanse [op001] (land_to_battlefield) can feed Evolution Sage [op001] via land.enters_battlefield (qualifiers compatible: Terramorphic Expanse matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Terramorphic%20Expanse.op001",
+        "card.Evolution%20Sage.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Terrapact Intimidator [op001] (land_to_battlefield) can feed Evolution Sage [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Terrapact%20Intimidator.op001",
+        "card.Evolution%20Sage.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1554,
+      "contracts": 2133
+    },
+    "seed": "Evolution Sage",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 689,
+      "blocked": 1438,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 6,
+    "links_by_qualifiers": {
+      "compatible": 3,
+      "unresolved": 3
+    },
+    "links_by_basis": {
+      "object_type": 3,
+      "object_unknown": 3
+    },
+    "links_by_pathway": {
+      "land_to_battlefield -> land.enters_battlefield": 6
+    },
+    "rejected_links": {
+      "total": 31,
+      "by_reason": {
+        "Beamsaw Prospector is not land": 1,
+        "Call the Mountain Chocobo is not land": 1,
+        "Cavalier of Thorns is not land": 1,
+        "Chocobo Racetrack is not land": 1,
+        "Cultivate is not land": 1,
+        "Edge Rover is not land": 1,
+        "Explosive Vegetation is not land": 1,
+        "Galactic Wayfarer is not land": 1,
+        "Gladiolus Amicitia is not land": 1,
+        "Gysahl Greens is not land": 1
+      },
+      "examples": [
+        {
+          "producer": "Beamsaw Prospector",
+          "produces": "land_to_battlefield",
+          "observer": "Evolution Sage",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Beamsaw Prospector is not land"
+        },
+        {
+          "producer": "Call the Mountain Chocobo",
+          "produces": "land_to_battlefield",
+          "observer": "Evolution Sage",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Call the Mountain Chocobo is not land"
+        },
+        {
+          "producer": "Cavalier of Thorns",
+          "produces": "land_to_battlefield",
+          "observer": "Evolution Sage",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Cavalier of Thorns is not land"
+        },
+        {
+          "producer": "Chocobo Racetrack",
+          "produces": "land_to_battlefield",
+          "observer": "Evolution Sage",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Chocobo Racetrack is not land"
+        },
+        {
+          "producer": "Cultivate",
+          "produces": "land_to_battlefield",
+          "observer": "Evolution Sage",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Cultivate is not land"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Evolution Sage",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Evolution%20Sage.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Evolution Sage",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Evolution%20Sage.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Evolving Wilds",
+        "produces": "land_to_battlefield",
+        "observer": "Evolution Sage",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Evolving%20Wilds.op001",
+        "observer_contract": "card.Evolution%20Sage.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Evolving Wilds matches land",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Seedship Impact",
+        "produces": "land_to_battlefield",
+        "observer": "Evolution Sage",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Seedship%20Impact.op001",
+        "observer_contract": "card.Evolution%20Sage.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Terramorphic Expanse",
+        "produces": "land_to_battlefield",
+        "observer": "Evolution Sage",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Terramorphic%20Expanse.op001",
+        "observer_contract": "card.Evolution%20Sage.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Terramorphic Expanse matches land",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Terrapact Intimidator",
+        "produces": "land_to_battlefield",
+        "observer": "Evolution Sage",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Terrapact%20Intimidator.op001",
+        "observer_contract": "card.Evolution%20Sage.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "land.enters_battlefield": 6
+    }
+  }
+}

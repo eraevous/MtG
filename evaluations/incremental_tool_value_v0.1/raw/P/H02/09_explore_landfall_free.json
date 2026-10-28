@@ -1,0 +1,1500 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "landfall",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 43,
+    "by_grade": {
+      "exploratory": 43
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op005] (land_to_battlefield) can feed Sidequest: Raise a Chocobo // Black Chocobo [op002] via battlefield.enter (same card: qualifiers unresolved: same card re-enters; which face it enters on is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Architect of the Untamed [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Architect%20of%20the%20Untamed.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Architect of the Untamed [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Architect%20of%20the%20Untamed.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Collective Inferno [op002] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Collective%20Inferno.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Arni, Renowned Champion [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Arni%2C%20Renowned%20Champion.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Attercop [op002] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Attercop.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Attercop [op002] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Attercop.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Dawn-Blessed Pennant [op001] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Dawn-Blessed%20Pennant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Beast-Kin Ranger [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Beast-Kin%20Ranger.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Beorn's Hospitality [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Beorn's%20Hospitality.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Beorn's Hospitality [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Beorn's%20Hospitality.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Flamekin Village [op001] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Flamekin%20Village.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Bristlebane Battler [op003] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Bristlebane%20Battler.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Bloodghast [op003] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Bloodghast.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Bloodghast [op003] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Bloodghast.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Freestrider Commando [op001] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Freestrider%20Commando.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Crossroads Watcher [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Crossroads%20Watcher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Boughside Wanderers [op002] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Boughside%20Wanderers.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Boughside Wanderers [op002] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Boughside%20Wanderers.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Frilled Sparkshooter [op002] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Frilled%20Sparkshooter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Dashing Bloodsucker [op001] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches enchantment).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Dashing%20Bloodsucker.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Chocobo Racetrack [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Chocobo%20Racetrack.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Chocobo Racetrack [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Chocobo%20Racetrack.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Gathering Stone [op001] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Gathering%20Stone.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Decoction Module [op001] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Decoction%20Module.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Eumidian Terrabotanist [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Eumidian%20Terrabotanist.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Eumidian Terrabotanist [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Eumidian%20Terrabotanist.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Hotheaded Giant [op002] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Hotheaded%20Giant.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Elvish Archivist [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches enchantments).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Elvish%20Archivist.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Gladiolus Amicitia [op002] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Gladiolus%20Amicitia.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Gladiolus Amicitia [op002] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Gladiolus%20Amicitia.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Kavu Primarch [op003] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Kavu%20Primarch.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Gideon the Oathless [op002] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Gideon%20the%20Oathless.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Hedron Scrabbler [op001] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Hedron%20Scrabbler.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Hedron Scrabbler [op001] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Hedron%20Scrabbler.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Call the Mountain Chocobo [op001] (land_to_battlefield) can feed Mines of Moria [op001] via battlefield.enter (qualifiers compatible: Call the Mountain Chocobo matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Call%20the%20Mountain%20Chocobo.op001",
+        "card.Mines%20of%20Moria.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Sidequest: Raise a Chocobo // Black Chocobo [op002] (land_to_battlefield) can feed Greenhouse Propagator [op001] via battlefield.enter (qualifiers unresolved: only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "card.Greenhouse%20Propagator.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Icecave Crasher [op002] via land.enters_battlefield (qualifiers compatible: Escape Tunnel matches land).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Icecave%20Crasher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Primal Witchstalker [op002] (land_to_battlefield) can feed Icecave Crasher [op002] via land.enters_battlefield (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primal%20Witchstalker.op002",
+        "card.Icecave%20Crasher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Bloodghast may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Chocobo Racetrack may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Cirith Ungol Patrol and Omnath, Locus of Rage may form a loop (possible).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "discovery": "requested",
+      "kb_check": "kb_consistent"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1553,
+      "contracts": 2132
+    },
+    "seed": "landfall",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 688,
+      "blocked": 1438,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 524,
+    "links_by_qualifiers": {
+      "unresolved": 358,
+      "compatible": 166
+    },
+    "links_by_basis": {
+      "reentry_of_target": 25,
+      "counter_type_unknown": 21,
+      "object_type": 166,
+      "token_unknown": 220,
+      "no_filter": 6,
+      "object_unknown": 63,
+      "face": 22,
+      "same_card": 1
+    },
+    "theme_pathways": {
+      "pathways": [
+        "land.enters_battlefield",
+        "land_to_battlefield"
+      ],
+      "links_on_them": 216
+    },
+    "links_by_pathway": {
+      "token.create -> battlefield.enter": 233,
+      "land_to_battlefield -> land.enters_battlefield": 126,
+      "land_to_battlefield -> battlefield.enter": 90,
+      "card.return_to_battlefield -> battlefield.enter": 48,
+      "counter.put -> counter.put": 21,
+      "life.gain -> life.gain": 6
+    },
+    "rejected_links": {
+      "total": 749,
+      "by_reason": {
+        "Call the Mountain Chocobo is not land": 22,
+        "Gysahl Greens is not land": 22,
+        "Beamsaw Prospector is not land": 21,
+        "Cavalier of Thorns is not land": 21,
+        "Chocobo Racetrack is not land": 21,
+        "Cultivate is not land": 21,
+        "Edge Rover is not land": 21,
+        "Explosive Vegetation is not land": 21,
+        "Galactic Wayfarer is not land": 21,
+        "Heaped Harvest is not land": 21
+      },
+      "examples": [
+        {
+          "producer": "Beamsaw Prospector",
+          "produces": "land_to_battlefield",
+          "observer": "Architect of the Untamed",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Beamsaw Prospector is not land"
+        },
+        {
+          "producer": "Beamsaw Prospector",
+          "produces": "land_to_battlefield",
+          "observer": "Attercop",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Beamsaw Prospector is not land"
+        },
+        {
+          "producer": "Beamsaw Prospector",
+          "produces": "land_to_battlefield",
+          "observer": "Beorn's Hospitality",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Beamsaw Prospector is not land"
+        },
+        {
+          "producer": "Beamsaw Prospector",
+          "produces": "land_to_battlefield",
+          "observer": "Bloodghast",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Beamsaw Prospector is not land"
+        },
+        {
+          "producer": "Beamsaw Prospector",
+          "produces": "land_to_battlefield",
+          "observer": "Boughside Wanderers",
+          "hook": "land.enters_battlefield",
+          "qualifier_note": "Beamsaw Prospector is not land"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+        "observer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "same_card",
+        "qualifier_note": "same card re-enters; which face it enters on is not recorded",
+        "same_card": true,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Aquastrand%20Spider.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Architect of the Untamed",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Architect%20of%20the%20Untamed.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Architect of the Untamed",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Architect%20of%20the%20Untamed.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Collective Inferno",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Collective%20Inferno.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Arni, Renowned Champion",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Arni%2C%20Renowned%20Champion.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Arni%2C%20Renowned%20Champion.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Attercop",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Attercop.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Attercop",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Attercop.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Dawn-Blessed Pennant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Dawn-Blessed%20Pennant.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Call%20the%20Mountain%20Chocobo.op001",
+            "card.Dawn-Blessed%20Pennant.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Beast-Kin Ranger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Beast-Kin%20Ranger.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Beast-Kin%20Ranger.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Beorn's Hospitality",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Beorn's%20Hospitality.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Beorn's Hospitality",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Beorn's%20Hospitality.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Flamekin Village",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Flamekin%20Village.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Bristlebane Battler",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Bristlebane%20Battler.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Bristlebane%20Battler.op003"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Bloodghast",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Bloodghast.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Bloodghast",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Bloodghast.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Freestrider Commando",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Freestrider%20Commando.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Crossroads Watcher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Crossroads%20Watcher.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Crossroads%20Watcher.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Boughside Wanderers",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Boughside%20Wanderers.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Boughside Wanderers",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Boughside%20Wanderers.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Frilled Sparkshooter",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Frilled%20Sparkshooter.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Dashing Bloodsucker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Dashing%20Bloodsucker.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches enchantment",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Dashing%20Bloodsucker.op001"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Chocobo Racetrack",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Chocobo%20Racetrack.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Chocobo Racetrack",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Chocobo%20Racetrack.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Gathering Stone",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Gathering%20Stone.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Decoction Module",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Decoction%20Module.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Decoction%20Module.op001"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Eumidian Terrabotanist",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Eumidian%20Terrabotanist.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Eumidian Terrabotanist",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Eumidian%20Terrabotanist.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Hotheaded Giant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Hotheaded%20Giant.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Elvish Archivist",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Elvish%20Archivist.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches enchantments",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+            "card.Elvish%20Archivist.op001"
+          ],
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Elvish%20Archivist.op001"
+          ],
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Elvish%20Archivist.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Gladiolus Amicitia",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Gladiolus%20Amicitia.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Gladiolus Amicitia",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Gladiolus%20Amicitia.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Kavu Primarch",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Kavu%20Primarch.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Gideon the Oathless",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Gideon%20the%20Oathless.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Gideon%20the%20Oathless.op002"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Hedron Scrabbler",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Hedron%20Scrabbler.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Hedron Scrabbler",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Hedron%20Scrabbler.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Call the Mountain Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Mines of Moria",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Call%20the%20Mountain%20Chocobo.op001",
+        "observer_contract": "card.Mines%20of%20Moria.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Call the Mountain Chocobo matches the trigger",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Sidequest: Raise a Chocobo // Black Chocobo",
+        "produces": "land_to_battlefield",
+        "observer": "Greenhouse Propagator",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op002",
+        "observer_contract": "card.Greenhouse%20Propagator.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "face",
+        "qualifier_note": "only one face of Sidequest: Raise a Chocobo // Black Chocobo matches creature",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Sidequest%3A%20Raise%20a%20Chocobo%20%2F%2F%20Black%20Chocobo.op005",
+            "card.Greenhouse%20Propagator.op001"
+          ]
+        ],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Icecave Crasher",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Icecave%20Crasher.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches land",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      },
+      {
+        "producer": "Primal Witchstalker",
+        "produces": "land_to_battlefield",
+        "observer": "Icecave Crasher",
+        "hook": "land.enters_battlefield",
+        "producer_contract": "card.Primal%20Witchstalker.op002",
+        "observer_contract": "card.Icecave%20Crasher.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [],
+        "theme_pathway": true
+      }
+    ],
+    "loops_total": 3,
+    "loops": [
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Bloodghast"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Chocobo Racetrack"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cirith Ungol Patrol",
+          "Omnath, Locus of Rage"
+        ],
+        "certainty": "possible",
+        "a_produces": "battlefield.enter",
+        "b_output": "battlefield.enter",
+        "enables_a_via": "cost:cost.sacrifice_other",
+        "both_fully_parsed": true,
+        "capacity_limited": false,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      }
+    ],
+    "loops_contested": {
+      "total": 7,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": [
+        {
+          "cards": [
+            "Cracked Skull",
+            "Omnath, Locus of Rage"
+          ],
+          "certainty": "conditional",
+          "kb_note": "Cracked Skull: no KB contract produces permanent.dies"
+        },
+        {
+          "cards": [
+            "Architect of the Untamed",
+            "Oath of the Grey Host"
+          ],
+          "certainty": "possible",
+          "kb_note": "Architect of the Untamed: no KB contract produces counter.put"
+        },
+        {
+          "cards": [
+            "Architect of the Untamed",
+            "The Legend of Roku // Avatar Roku"
+          ],
+          "certainty": "possible",
+          "kb_note": "Architect of the Untamed: no KB contract produces counter.put"
+        },
+        {
+          "cards": [
+            "Gene Pollinator",
+            "Seedship Agrarian"
+          ],
+          "certainty": "possible",
+          "kb_note": "Gene Pollinator: no KB contract produces permanent.tap"
+        },
+        {
+          "cards": [
+            "Nissa, Worldsoul Speaker",
+            "Oath of the Grey Host"
+          ],
+          "certainty": "possible",
+          "kb_note": "Nissa, Worldsoul Speaker: no KB contract produces counter.put"
+        },
+        {
+          "cards": [
+            "Nissa, Worldsoul Speaker",
+            "The Legend of Roku // Avatar Roku"
+          ],
+          "certainty": "possible",
+          "kb_note": "Nissa, Worldsoul Speaker: no KB contract produces counter.put"
+        },
+        {
+          "cards": [
+            "Revelsong Horn",
+            "Seedship Agrarian"
+          ],
+          "certainty": "possible",
+          "kb_note": "Revelsong Horn: no KB contract produces permanent.tap"
+        }
+      ]
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 371,
+      "land.enters_battlefield": 126,
+      "counter.put": 21,
+      "life.gain": 6
+    }
+  }
+}

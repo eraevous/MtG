@@ -1,0 +1,201 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "context",
+  "query": {},
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 2,
+    "by_grade": {
+      "decision_grade": 1,
+      "not_system_gradable": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "The collection snapshot holds 5802 copies of 3512 owned card names; 2786 names have a free copy.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Collection policy (recorded 2026-10-27 by Zach): Zach's collection is shared with Steph; protected decks: TMNT, Ashling, Rootha, Dina. Other built decks are negotiable; planned allocations are not physical moves.",
+      "kind": "preference",
+      "support": "collection_policy",
+      "grade": "not_system_gradable",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    }
+  ],
+  "data": {
+    "collection": {
+      "owned_names": 3512,
+      "copies": 5802,
+      "names_with_free_copy": 2786
+    },
+    "policy": {
+      "recorded": "2026-10-27",
+      "decided_by": "Zach",
+      "source": "Zach's decision relayed in the Kate coordination thread, 2026-10-27; accepted by Kate the same day",
+      "owner": "Zach",
+      "shared_with": [
+        "Steph"
+      ],
+      "protected_decks": [
+        "TMNT",
+        "Ashling",
+        "Rootha",
+        "Dina"
+      ],
+      "rules": [
+        "Steph builds from Zach's collection.",
+        "Copies in a protected deck stay there unless Zach and Steph agree otherwise.",
+        "Copies in other physically built decks can move only by agreement (negotiable).",
+        "Planned or proposed allocations (candidate lists, benches) are plans, not physical moves, and do not reduce availability.",
+        "The tools never move cards; a recommendation is never a transfer."
+      ]
+    },
+    "decks": [
+      {
+        "deck": "Ashling",
+        "commanders": [
+          "Ashling, the Limitless"
+        ],
+        "color_identity": "WUBRG",
+        "distinct_names": 96,
+        "charter": false,
+        "protected": true
+      },
+      {
+        "deck": "Blight Curse",
+        "commanders": [
+          "Auntie Ool, Cursewretch"
+        ],
+        "color_identity": "BRG",
+        "distinct_names": 85,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Brigid",
+        "commanders": [
+          "Brigid, Clachan's Heart // Brigid, Doun's Mind"
+        ],
+        "color_identity": "WG",
+        "distinct_names": 79,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Counter Blitz",
+        "commanders": [
+          "Tidus, Yuna's Guardian"
+        ],
+        "color_identity": "WUG",
+        "distinct_names": 94,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Dina",
+        "commanders": [
+          "Dina, Essence Brewer"
+        ],
+        "color_identity": "BG",
+        "distinct_names": 82,
+        "charter": false,
+        "protected": true
+      },
+      {
+        "deck": "Limit Break",
+        "commanders": [
+          "Cloud, Ex-SOLDIER"
+        ],
+        "color_identity": "WRG",
+        "distinct_names": 94,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Necrobloom",
+        "commanders": [
+          "The Necrobloom"
+        ],
+        "color_identity": "WBG",
+        "distinct_names": 86,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Rootha",
+        "commanders": [
+          "Rootha, Mastering the Moment"
+        ],
+        "color_identity": "UR",
+        "distinct_names": 79,
+        "charter": false,
+        "protected": true
+      },
+      {
+        "deck": "Shanid",
+        "commanders": [
+          "Shanid, Sleepers' Scourge"
+        ],
+        "color_identity": "WBR",
+        "distinct_names": 80,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Sharuum",
+        "commanders": [
+          "Sharuum the Hegemon"
+        ],
+        "color_identity": "WUB",
+        "distinct_names": 82,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "TMNT",
+        "commanders": [
+          "Leonardo, the Balance",
+          "Splinter, the Mentor"
+        ],
+        "color_identity": "WUBRG",
+        "distinct_names": 92,
+        "charter": false,
+        "protected": true
+      },
+      {
+        "deck": "Token Triumph",
+        "commanders": [
+          "Emmara, Soul of the Accord"
+        ],
+        "color_identity": "WG",
+        "distinct_names": 73,
+        "charter": false,
+        "protected": false
+      },
+      {
+        "deck": "Vraska",
+        "commanders": [
+          "Vraska, Soul of Stone"
+        ],
+        "color_identity": "WUR",
+        "distinct_names": 82,
+        "charter": false,
+        "protected": false
+      }
+    ]
+  }
+}

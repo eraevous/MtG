@@ -1,0 +1,1241 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "deck": "Vraska",
+    "mode": "divergent",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 40,
+    "by_grade": {
+      "exploratory": 40
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Escape Tunnel [op001] (land_to_battlefield) can feed Prairie Stream [op002] via battlefield.enter (qualifiers compatible: Escape Tunnel matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Gossip's Talent [op004] (card.return_to_battlefield) can feed Prairie Stream [op002] via battlefield.enter (qualifiers compatible: Gossip's Talent matches the trigger).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Gossip's%20Talent.op004",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Emergency Eject [op001] (land_to_battlefield) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Emergency%20Eject.op001",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Emergency Eject [op001] (land_to_battlefield) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Emergency%20Eject.op001",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Bespoke Bō [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Bespoke Bō itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Bespoke%20B%C5%8D.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carrot Cake [op001] (token.create) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carrot%20Cake.op001",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Emergency Eject [op001] (land_to_battlefield) can feed Reckless Fireweaver [op001] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Emergency%20Eject.op001",
+        "card.Reckless%20Fireweaver.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Craterclaw Colossus [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Craterclaw Colossus itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Craterclaw%20Colossus.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carrot Cake [op001] (token.create) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carrot%20Cake.op001",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Cryogen Relic [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Cryogen Relic itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Cryogen%20Relic.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Carrot Cake [op001] (token.create) can feed Reckless Fireweaver [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Carrot%20Cake.op001",
+        "card.Reckless%20Fireweaver.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Elsewhere Flask [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Elsewhere Flask itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Elsewhere%20Flask.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Cori-Steel Cutter [op002] (token.create) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Cori-Steel%20Cutter.op002",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Fountainport Bell [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Fountainport Bell itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Fountainport%20Bell.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Cori-Steel Cutter [op002] (token.create) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Cori-Steel%20Cutter.op002",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Guidelight Matrix [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Guidelight Matrix itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Guidelight%20Matrix.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Cori-Steel Cutter [op002] (token.create) can feed Reckless Fireweaver [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Cori-Steel%20Cutter.op002",
+        "card.Reckless%20Fireweaver.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Instant Ramen [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Instant Ramen itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Instant%20Ramen.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded (it acts on: target nonland permanent)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Melded Moxite [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Melded Moxite itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Melded%20Moxite.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded (it acts on: target nonland permanent)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Mouser Foundry [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Mouser Foundry itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Mouser%20Foundry.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Reckless Fireweaver [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded (it acts on: target nonland permanent)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Reckless%20Fireweaver.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Omni-Cheese Pizza [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Omni-Cheese Pizza itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Omni-Cheese%20Pizza.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Lindblum, Industrial Regency // Mage Siege [op005] (token.create) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Lindblum%2C%20Industrial%20Regency%20%2F%2F%20Mage%20Siege.op005",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Sewer-veillance Cam [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Sewer-veillance Cam itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Sewer-veillance%20Cam.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Lindblum, Industrial Regency // Mage Siege [op005] (token.create) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Lindblum%2C%20Industrial%20Regency%20%2F%2F%20Mage%20Siege.op005",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Sokka, Bold Boomeranger [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Sokka, Bold Boomeranger itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Sokka%2C%20Bold%20Boomeranger.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Lindblum, Industrial Regency // Mage Siege [op005] (token.create) can feed Reckless Fireweaver [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Lindblum%2C%20Industrial%20Regency%20%2F%2F%20Mage%20Siege.op005",
+        "card.Reckless%20Fireweaver.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Spicy Oatmeal Pizza [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Spicy Oatmeal Pizza itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Spicy%20Oatmeal%20Pizza.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Melded Moxite [op002] (token.create) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Melded%20Moxite.op002",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Strixhaven Skycoach [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Strixhaven Skycoach itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Strixhaven%20Skycoach.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Melded Moxite [op002] (token.create) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Melded%20Moxite.op002",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Uthros Scanship [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Uthros Scanship itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Uthros%20Scanship.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Melded Moxite [op002] (token.create) can feed Reckless Fireweaver [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Melded%20Moxite.op002",
+        "card.Reckless%20Fireweaver.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Warmaker Gunship [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Warmaker Gunship itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Warmaker%20Gunship.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mouser Attack! [op002] (token.create) can feed Gossip's Talent [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mouser%20Attack!.op002",
+        "card.Gossip's%20Talent.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed Whirler Rogue [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies Whirler Rogue itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.Whirler%20Rogue.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mouser Attack! [op002] (token.create) can feed Prairie Stream [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mouser%20Attack!.op002",
+        "card.Prairie%20Stream.op002"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Desculpting Blast [op001] (token.create) can feed White Auracite [op001] via battlefield.enter (qualifiers unresolved: only if the producer copies White Auracite itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Desculpting%20Blast.op001",
+        "card.White%20Auracite.op001"
+      ],
+      "discovery": "unrequested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "deck Vraska",
+      "color_identity": null,
+      "cards": 82,
+      "contracts": 128
+    },
+    "seed": null,
+    "mode": "divergent",
+    "pool_contract_states": {
+      "ready_for_review": 69,
+      "blocked": 59
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 91,
+    "links_by_qualifiers": {
+      "unresolved": 89,
+      "compatible": 2
+    },
+    "links_by_basis": {
+      "token_unknown": 48,
+      "reentry_of_target": 38,
+      "object_unknown": 2,
+      "no_filter": 1,
+      "object_type": 2
+    },
+    "links_by_pathway": {
+      "token.create -> battlefield.enter": 86,
+      "land_to_battlefield -> battlefield.enter": 4,
+      "card.return_to_battlefield -> battlefield.enter": 1
+    },
+    "rejected_links": {
+      "total": 4,
+      "by_reason": {
+        "Escape Tunnel is not creature": 1,
+        "Escape Tunnel is not artifact": 1,
+        "Gossip's Talent is not artifact": 1,
+        "the observer triggers only when it enters itself": 1
+      },
+      "examples": [
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Gossip's Talent",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not creature"
+        },
+        {
+          "producer": "Escape Tunnel",
+          "produces": "land_to_battlefield",
+          "observer": "Reckless Fireweaver",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Escape Tunnel is not artifact"
+        },
+        {
+          "producer": "Gossip's Talent",
+          "produces": "card.return_to_battlefield",
+          "observer": "Reckless Fireweaver",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Gossip's Talent is not artifact"
+        },
+        {
+          "producer": "Melded Moxite",
+          "produces": "token.create",
+          "observer": "Melded Moxite",
+          "hook": "battlefield.enter",
+          "qualifier_note": "the observer triggers only when it enters itself"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Escape Tunnel",
+        "produces": "land_to_battlefield",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Escape%20Tunnel.op001",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Escape Tunnel matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Gossip's Talent",
+        "produces": "card.return_to_battlefield",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Gossip's%20Talent.op004",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "compatible",
+        "basis": "object_type",
+        "qualifier_note": "Gossip's Talent matches the trigger",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Emergency Eject",
+        "produces": "land_to_battlefield",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Emergency%20Eject.op001",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Emergency Eject",
+        "produces": "land_to_battlefield",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Emergency%20Eject.op001",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Bespoke Bō",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Bespoke%20B%C5%8D.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Bespoke Bō itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Carrot Cake",
+        "produces": "token.create",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Carrot%20Cake.op001",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Emergency Eject",
+        "produces": "land_to_battlefield",
+        "observer": "Reckless Fireweaver",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Emergency%20Eject.op001",
+        "observer_contract": "card.Reckless%20Fireweaver.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Craterclaw Colossus",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Craterclaw%20Colossus.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Craterclaw Colossus itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Carrot Cake",
+        "produces": "token.create",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Carrot%20Cake.op001",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Cryogen Relic",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Cryogen%20Relic.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Cryogen Relic itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Carrot Cake",
+        "produces": "token.create",
+        "observer": "Reckless Fireweaver",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Carrot%20Cake.op001",
+        "observer_contract": "card.Reckless%20Fireweaver.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Elsewhere Flask",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Elsewhere%20Flask.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Elsewhere Flask itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Cori-Steel Cutter",
+        "produces": "token.create",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Cori-Steel%20Cutter.op002",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Fountainport Bell",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Fountainport%20Bell.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Fountainport Bell itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Cori-Steel Cutter",
+        "produces": "token.create",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Cori-Steel%20Cutter.op002",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Guidelight Matrix",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Guidelight%20Matrix.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Guidelight Matrix itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Cori-Steel Cutter",
+        "produces": "token.create",
+        "observer": "Reckless Fireweaver",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Cori-Steel%20Cutter.op002",
+        "observer_contract": "card.Reckless%20Fireweaver.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Instant Ramen",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Instant%20Ramen.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Instant Ramen itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded (it acts on: target nonland permanent)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Melded Moxite",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Melded%20Moxite.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Melded Moxite itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded (it acts on: target nonland permanent)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Mouser Foundry",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Mouser%20Foundry.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Mouser Foundry itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Reckless Fireweaver",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Reckless%20Fireweaver.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded (it acts on: target nonland permanent)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Omni-Cheese Pizza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Omni-Cheese%20Pizza.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Omni-Cheese Pizza itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Lindblum, Industrial Regency // Mage Siege",
+        "produces": "token.create",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Lindblum%2C%20Industrial%20Regency%20%2F%2F%20Mage%20Siege.op005",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Sewer-veillance Cam",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Sewer-veillance%20Cam.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Sewer-veillance Cam itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Lindblum, Industrial Regency // Mage Siege",
+        "produces": "token.create",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Lindblum%2C%20Industrial%20Regency%20%2F%2F%20Mage%20Siege.op005",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Sokka, Bold Boomeranger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Sokka%2C%20Bold%20Boomeranger.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Sokka, Bold Boomeranger itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Lindblum, Industrial Regency // Mage Siege",
+        "produces": "token.create",
+        "observer": "Reckless Fireweaver",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Lindblum%2C%20Industrial%20Regency%20%2F%2F%20Mage%20Siege.op005",
+        "observer_contract": "card.Reckless%20Fireweaver.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Spicy Oatmeal Pizza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Spicy%20Oatmeal%20Pizza.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Spicy Oatmeal Pizza itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Melded Moxite",
+        "produces": "token.create",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Melded%20Moxite.op002",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Strixhaven Skycoach",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Strixhaven%20Skycoach.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Strixhaven Skycoach itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Melded Moxite",
+        "produces": "token.create",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Melded%20Moxite.op002",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Uthros Scanship",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Uthros%20Scanship.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Uthros Scanship itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Melded Moxite",
+        "produces": "token.create",
+        "observer": "Reckless Fireweaver",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Melded%20Moxite.op002",
+        "observer_contract": "card.Reckless%20Fireweaver.op001",
+        "producer_state": "ready_for_review",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Warmaker Gunship",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Warmaker%20Gunship.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Warmaker Gunship itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Mouser Attack!",
+        "produces": "token.create",
+        "observer": "Gossip's Talent",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Mouser%20Attack!.op002",
+        "observer_contract": "card.Gossip's%20Talent.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "Whirler Rogue",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.Whirler%20Rogue.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Whirler Rogue itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Mouser Attack!",
+        "produces": "token.create",
+        "observer": "Prairie Stream",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Mouser%20Attack!.op002",
+        "observer_contract": "card.Prairie%20Stream.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Desculpting Blast",
+        "produces": "token.create",
+        "observer": "White Auracite",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Desculpting%20Blast.op001",
+        "observer_contract": "card.White%20Auracite.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies White Auracite itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 1,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": [
+        {
+          "cards": [
+            "Sai, Master Thopterist",
+            "Mouser Foundry"
+          ],
+          "certainty": "possible",
+          "kb_note": "Sai, Master Thopterist: no KB contract produces battlefield.leave"
+        }
+      ]
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 91
+    }
+  }
+}

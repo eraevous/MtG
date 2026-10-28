@@ -1,0 +1,10 @@
+[{"text":"Bard the Bowman has a free copy","kind":"inventory","cards":["Bard the Bowman"],"assert":{"free_min":1}},
+{"text":"Cloaked Cadet has a free copy","kind":"inventory","cards":["Cloaked Cadet"],"assert":{"free_min":1}},
+{"text":"Lakeshore Apothecary has a free copy","kind":"inventory","cards":["Lakeshore Apothecary"],"assert":{"free_min":1}},
+{"text":"Jaya Ballard, Task Mage has a free copy","kind":"inventory","cards":["Jaya Ballard, Task Mage"],"assert":{"free_min":1}},
+{"text":"Esper Sojourners has a free copy","kind":"inventory","cards":["Esper Sojourners"],"assert":{"free_min":1}},
+{"text":"G'raha Tia has a free copy","kind":"inventory","cards":["G'raha Tia"],"assert":{"free_min":1}},
+{"text":"Cloaked Cadet's draw trigger is once per turn","kind":"rules_text","cards":["Cloaked Cadet"],"assert":{"text_contains":"This ability triggers only once each turn"}},
+{"text":"Esper Sojourners untaps a permanent when it dies","kind":"rules_text","cards":["Esper Sojourners"],"assert":{"text_contains":"when this creature dies, you may tap or untap target permanent"}},
+{"text":"Jaya can destroy a blue permanent for R","kind":"rules_text","cards":["Jaya Ballard, Task Mage"],"assert":{"text_contains":"{R}, {T}, Discard a card: Destroy target blue permanent."}},
+{"text":"Bard and Cadet form an infinite loop","kind":"mechanics","cards":["Bard the Bowman","Cloaked Cadet"]}]

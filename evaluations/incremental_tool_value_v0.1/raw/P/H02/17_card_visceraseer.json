@@ -1,0 +1,107 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Viscera Seer"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 4,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 1, assigned 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 1 usable without asking; 1 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Viscera%20Seer.op001"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Viscera Seer",
+      "type_line": "Creature — Vampire Wizard",
+      "mana_cost": "{B}",
+      "color_identity": "B",
+      "oracle_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "oracle_text_sha256": "060cf6b94836ab88f096a45bf552c14d0ea26fa83a5d3f1d42047895a954cc35",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 0,
+      "free": 1,
+      "locations": []
+    },
+    "held_by": {},
+    "availability": {
+      "free": 1,
+      "in_protected_decks": {},
+      "in_other_built_decks": {},
+      "planned_only": {
+        "Oops! All Edge Cases!": "Candidate list v0.1 (free copies)"
+      },
+      "usable_without_asking": 1,
+      "usable_by_agreement": 1
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Blight Curse",
+      "Dina",
+      "Necrobloom",
+      "Shanid",
+      "Sharuum",
+      "TMNT"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Viscera%20Seer.op001",
+        "operation_kind": "activate",
+        "queue_state": "ready_for_review",
+        "exact_text": "Sacrifice a creature: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "failed_checks": []
+      }
+    ],
+    "reconciliation": null
+  }
+}

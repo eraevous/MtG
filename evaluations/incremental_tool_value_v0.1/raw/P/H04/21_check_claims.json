@@ -1,0 +1,161 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "check",
+  "query": {
+    "claims": "../out/P/H04/claims.json"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 6,
+    "by_grade": {
+      "decision_grade": 4,
+      "exploratory": 2
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Thopter Spy Network, Retrofitter Foundry, Reckless Fireweaver, Saheeli Sublime Artificer and Stridehangar Automaton are in the Vraska deck",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Thopter Spy Network: owned 1, free 0",
+        "Retrofitter Foundry: owned 1, free 0",
+        "Reckless Fireweaver: owned 1, free 0",
+        "Saheeli, Sublime Artificer: owned 1, free 0",
+        "Stridehangar Automaton: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "CONTRADICTED",
+      "verdict_basis": [
+        "Thopter Spy Network: physically in ['Vraska']",
+        "Retrofitter Foundry: physically in ['Vraska']",
+        "Reckless Fireweaver: physically in ['Vraska']",
+        "Saheeli, Sublime Artificer: physically in ['Vraska']",
+        "Stridehangar Automaton: physically in ['Vraska']"
+      ],
+      "assertion": {
+        "in_deck": true
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Thopter Spy Network's upkeep trigger only needs any artifact",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Thopter Spy Network: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Thopter Spy Network: rules text contains 'if you control an artifact'"
+      ],
+      "assertion": {
+        "text_contains": "if you control an artifact"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Reckless Fireweaver pings each opponent per artifact entering",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Reckless Fireweaver: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Reckless Fireweaver: rules text contains 'Whenever an artifact you control enters'"
+      ],
+      "assertion": {
+        "text_contains": "Whenever an artifact you control enters"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Blasphemous Act damages only creatures",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Blasphemous Act: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Blasphemous Act: rules text contains 'damage to each creature'"
+      ],
+      "assertion": {
+        "text_contains": "damage to each creature"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Reckless Fireweaver turns Vraska's Sculpture tokens into damage to each opponent",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Reckless%20Fireweaver.op001: ready_for_review",
+        "card.Vraska%2C%20Soul%20of%20Stone.op001: ready_for_review",
+        "card.Vraska%2C%20Soul%20of%20Stone.op002: ready_for_review"
+      ],
+      "missing": [
+        "3 contract(s) not semantically reviewed"
+      ],
+      "verdict": "NOT_CHECKED",
+      "verdict_basis": [
+        "no structured assertion given (\"assert\"); the text itself is not judged"
+      ],
+      "assertion": null,
+      "evidence_grade": "exploratory"
+    },
+    {
+      "text": "A Fireweaver-drain route would close games in this deck",
+      "kind": "performance",
+      "support": "evaluator_model",
+      "grade": "exploratory",
+      "evidence": [],
+      "missing": [
+        "observed games or a frozen prediction scored against later games"
+      ],
+      "verdict": "NOT_CHECKED",
+      "verdict_basis": [
+        "no structured assertion given (\"assert\"); the text itself is not judged"
+      ],
+      "assertion": null,
+      "evidence_grade": "exploratory"
+    }
+  ],
+  "data": {
+    "checked": 6,
+    "by_verdict": {
+      "CONTRADICTED": 1,
+      "SUPPORTED": 3,
+      "NOT_CHECKED": 2
+    },
+    "assert_keys": {
+      "inventory": [
+        "owned_min",
+        "free_min",
+        "usable_without_asking_min",
+        "usable_by_agreement_min",
+        "in_deck"
+      ],
+      "rules_text": [
+        "text_contains"
+      ]
+    }
+  }
+}

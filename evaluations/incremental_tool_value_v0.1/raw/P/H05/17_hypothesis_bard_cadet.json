@@ -1,0 +1,172 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "hypothesis",
+  "query": {
+    "a": "Bard the Bowman",
+    "b": "Cloaked Cadet"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 4,
+    "by_grade": {
+      "exploratory": 4
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Cloaked Cadet [op002] (card.draw) can feed Bard the Bowman [op002] via card.draw (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Cloaked%20Cadet.op002",
+        "card.Bard%20the%20Bowman.op002"
+      ],
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Bard the Bowman's ability can act on Cloaked Cadet (target creature; produces counter.put): Whenever you draw your second card each turn, put a +1/+1 counter on target creature. It gains lifelink until end of turn.",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Bard%20the%20Bowman.op002"
+      ],
+      "qualifiers": "compatible"
+    },
+    {
+      "text": "Bard the Bowman and Cloaked Cadet may form a loop (guaranteed).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "kb_check": "kb_consistent"
+    },
+    {
+      "text": "Bard the Bowman and Cloaked Cadet may form a loop (conditional).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "grammar/discovery/collection_loops.csv"
+      ],
+      "kb_check": "kb_consistent"
+    }
+  ],
+  "data": {
+    "cards": [
+      "Bard the Bowman",
+      "Cloaked Cadet"
+    ],
+    "effect": null,
+    "links": [
+      {
+        "producer": "Cloaked Cadet",
+        "produces": "card.draw",
+        "observer": "Bard the Bowman",
+        "hook": "card.draw",
+        "producer_contract": "card.Cloaked%20Cadet.op002",
+        "observer_contract": "card.Bard%20the%20Bowman.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "acts_on": [
+      {
+        "actor": "Bard the Bowman",
+        "contract": "card.Bard%20the%20Bowman.op002",
+        "text": "Whenever you draw your second card each turn, put a +1/+1 counter on target creature. It gains lifelink until end of turn.",
+        "produces": [
+          "counter.put"
+        ],
+        "acts_on": "Cloaked Cadet",
+        "targets": [
+          "target creature"
+        ],
+        "state": "blocked",
+        "qualifiers": "compatible",
+        "qualifier_note": "Cloaked Cadet fits the target type"
+      }
+    ],
+    "same_card_links": [],
+    "loops": [
+      {
+        "cards": [
+          "Bard the Bowman",
+          "Cloaked Cadet"
+        ],
+        "certainty": "guaranteed",
+        "a_produces": "counter.put",
+        "b_output": "card.draw",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      },
+      {
+        "cards": [
+          "Cloaked Cadet",
+          "Bard the Bowman"
+        ],
+        "certainty": "conditional",
+        "a_produces": "card.draw",
+        "b_output": "counter.put",
+        "enables_a_via": "trigger",
+        "both_fully_parsed": true,
+        "capacity_limited": true,
+        "kb_check": "kb_consistent",
+        "kb_note": ""
+      }
+    ],
+    "loops_contested": [],
+    "rejected_links": [],
+    "conditions": [
+      {
+        "contract_id": "card.Bard%20the%20Bowman.op002",
+        "card": "Bard the Bowman",
+        "text": "Whenever you draw your second card each turn, put a +1/+1 counter on target creature. It gains lifelink until end of turn.",
+        "state": "blocked"
+      },
+      {
+        "contract_id": "card.Cloaked%20Cadet.op002",
+        "card": "Cloaked Cadet",
+        "text": "Whenever one or more +1/+1 counters are put on one or more Humans you control, draw a card. This ability triggers only once each turn.",
+        "state": "blocked"
+      }
+    ],
+    "unverified_contracts": [
+      "card.Bard%20the%20Bowman.op002",
+      "card.Cloaked%20Cadet.op002"
+    ],
+    "disconfirming_evidence": [
+      "card.Bard%20the%20Bowman.op002: failed check C11_executable_shape: projected ability drops text: each turn it gains lifelink until end of turn",
+      "card.Cloaked%20Cadet.op002: failed check C04_hook: trigger without an observed hook"
+    ],
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "reading_note": "A rejected link or contested loop rules out that one route only. Check acts_on and the other links before deciding the cards do not interact.",
+    "would_settle_it": [
+      "semantic review of each unverified contract (kb/review.py, citing passing scenarios)",
+      "a rules check of the trigger and replacement wording against the Comprehensive Rules"
+    ]
+  }
+}

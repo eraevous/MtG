@@ -1,0 +1,136 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Whirler Rogue"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 5,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 2
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.\nTap two untapped artifacts you control: Target creature can't be blocked this turn.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 1, free 0, assigned 1.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 0 usable without asking; 1 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+      "kind": "mechanics",
+      "support": "ready_for_review",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Whirler%20Rogue.op001"
+      ]
+    },
+    {
+      "text": "Contract reading of: Tap two untapped artifacts you control: Target creature can't be blocked this turn.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Whirler%20Rogue.op002",
+        "C11_executable_shape: projected ability drops text: target creature"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Whirler Rogue",
+      "type_line": "Creature — Human Rogue Artificer",
+      "mana_cost": "{2}{U}{U}",
+      "color_identity": "U",
+      "oracle_text": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.\nTap two untapped artifacts you control: Target creature can't be blocked this turn.",
+      "oracle_text_sha256": "078fa66c6fb9cdb33f4e1cc9b457def76d5ce9b8c2717f403904e4d85e39ccf9",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 1,
+      "assigned": 1,
+      "free": 0,
+      "locations": [
+        {
+          "deck": "Vraska",
+          "quantity": 1,
+          "section": "Nonland",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Vraska": 1
+    },
+    "availability": {
+      "free": 0,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Vraska": 1
+      },
+      "planned_only": {
+        "Living Energy": "Unallocated"
+      },
+      "usable_without_asking": 0,
+      "usable_by_agreement": 1
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Counter Blitz",
+      "Rootha",
+      "Sharuum",
+      "TMNT",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Whirler%20Rogue.op001",
+        "operation_kind": "trigger",
+        "queue_state": "ready_for_review",
+        "exact_text": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+        "failed_checks": []
+      },
+      {
+        "contract_id": "card.Whirler%20Rogue.op002",
+        "operation_kind": "activate",
+        "queue_state": "blocked",
+        "exact_text": "Tap two untapped artifacts you control: Target creature can't be blocked this turn.",
+        "failed_checks": [
+          "C11_executable_shape: projected ability drops text: target creature"
+        ]
+      }
+    ],
+    "reconciliation": null
+  }
+}

@@ -1,0 +1,1803 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Brigid, Clachan's Heart",
+    "ci": "WG",
+    "free": true,
+    "mode": "focused",
+    "limit": 200
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 60,
+    "by_grade": {
+      "exploratory": 60
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Late to Dinner [op001] (token.create) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Late%20to%20Dinner.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Airbender Ascension [op003] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Airbender%20Ascension.op003",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Airbender Ascension [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Airbender%20Ascension.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Michelangelo, the Heart [op002] (token.create) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Michelangelo%2C%20the%20Heart.op002",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Conjurer's Closet [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Conjurer's%20Closet.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Mutant Chain Reaction [op001] (token.create) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Mutant%20Chain%20Reaction.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Dewdrop Cure [op002] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Dewdrop%20Cure.op002",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Authority of the Consuls [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Authority%20of%20the%20Consuls.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Second Breakfast [op001] (token.create) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Second%20Breakfast.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Flickering Hound [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Flickering%20Hound.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Avatar Enthusiasts [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Avatar%20Enthusiasts.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Stew the Coneys [op001] (token.create) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Stew%20the%20Coneys.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Late to Dinner [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Late%20to%20Dinner.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Beast-Kin Ranger [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Beast-Kin%20Ranger.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Meanders Guide [op002] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Meanders%20Guide.op002",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Bristlebane Battler [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Bristlebane%20Battler.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Parting Gust [op002] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Parting%20Gust.op002",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Case of the Uneaten Feast [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Case%20of%20the%20Uneaten%20Feast.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Primary Research [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Primary%20Research.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Country Roads [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Country%20Roads.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Rescue Skiff [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Rescue%20Skiff.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Crossroads Watcher [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Crossroads%20Watcher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Shepherd of the Clouds [op002] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Shepherd%20of%20the%20Clouds.op002",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Dawn-Blessed Pennant [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Dawn-Blessed%20Pennant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Decoction Module [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Decoction%20Module.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed East Wind Avatar [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.East%20Wind%20Avatar.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Elvish Archivist [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Elvish%20Archivist.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Freestrider Commando [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Freestrider%20Commando.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Gathering Stone [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Gathering%20Stone.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Greenhouse Propagator [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Greenhouse%20Propagator.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Griffin Protector [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Griffin%20Protector.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Hinterland Sanctifier [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Hinterland%20Sanctifier.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Honored Dreyleader [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Honored%20Dreyleader.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Kavu Primarch [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Kavu%20Primarch.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Kinsbaile Aspirant [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Kinsbaile%20Aspirant.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Kyoshi Island Plaza [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Kyoshi%20Island%20Plaza.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Lifecreed Duo [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Lifecreed%20Duo.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Liliana the Faultless [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Liliana%20the%20Faultless.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Lita, Little Orphan Amphibian [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Lita%2C%20Little%20Orphan%20Amphibian.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Loporrit Scout [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Loporrit%20Scout.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Luxknight Breacher [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Luxknight%20Breacher.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Metastatic Evangel [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Metastatic%20Evangel.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Mighty Mutanimals [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Mighty%20Mutanimals.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Momo, Friendly Flier [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Momo%2C%20Friendly%20Flier.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Optimistic Scavenger [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Optimistic%20Scavenger.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Order of the Stars [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Order%20of%20the%20Stars.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Paradise Plume [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Paradise%20Plume.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Quintessential Katana [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Quintessential%20Katana.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Rancorous Archaic [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Rancorous%20Archaic.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Reluctant Dounguard [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Reluctant%20Dounguard.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Shimmerwilds Growth [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Shimmerwilds%20Growth.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Simic Initiate [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Simic%20Initiate.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Skyknight Squire [op001] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Skyknight%20Squire.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Soultether Golem [op004] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Soultether%20Golem.op004"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Southern Air Temple [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Southern%20Air%20Temple.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Spiritcall Enthusiast // Scrollboost [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Spiritcall%20Enthusiast%20%2F%2F%20Scrollboost.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Virulent Emissary [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Virulent%20Emissary.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Wingmantle Chaplain [op003] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Wingmantle%20Chaplain.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] (token.create) can feed Woodland Weavemaster [op002] via battlefield.enter (qualifiers unresolved: the token's characteristics are not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card.Woodland%20Weavemaster.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "WG",
+      "cards": 995,
+      "contracts": 1339
+    },
+    "seed": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+    "mode": "focused",
+    "pool_contract_states": {
+      "blocked": 820,
+      "ready_for_review": 515,
+      "quarantined": 4
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 60,
+    "links_by_qualifiers": {
+      "unresolved": 60
+    },
+    "links_by_basis": {
+      "reentry_of_target": 15,
+      "token_unknown": 45
+    },
+    "links_by_pathway": {
+      "token.create -> battlefield.enter": 50,
+      "card.return_to_battlefield -> battlefield.enter": 10
+    },
+    "rejected_links": {
+      "total": 4,
+      "by_reason": {
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact": 3,
+        "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target card": 1
+      },
+      "examples": [
+        {
+          "producer": "Crack Open",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact"
+        },
+        {
+          "producer": "Feral Appetite",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target card"
+        },
+        {
+          "producer": "Seedship Impact",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact"
+        },
+        {
+          "producer": "Zuko's Exile",
+          "produces": "token.create",
+          "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind is not a legal target for: target artifact"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Late to Dinner",
+        "produces": "token.create",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Late%20to%20Dinner.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Airbender Ascension",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Airbender%20Ascension.op003",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Airbender Ascension",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Airbender%20Ascension.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Michelangelo, the Heart",
+        "produces": "token.create",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Michelangelo%2C%20the%20Heart.op002",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Conjurer's Closet",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Conjurer's%20Closet.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Mutant Chain Reaction",
+        "produces": "token.create",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Mutant%20Chain%20Reaction.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Dewdrop Cure",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Dewdrop%20Cure.op002",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Authority of the Consuls",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Authority%20of%20the%20Consuls.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+            "card.Authority%20of%20the%20Consuls.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Second Breakfast",
+        "produces": "token.create",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Second%20Breakfast.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Flickering Hound",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Flickering%20Hound.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Avatar Enthusiasts",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Avatar%20Enthusiasts.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Stew the Coneys",
+        "produces": "token.create",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Stew%20the%20Coneys.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer copies Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Late to Dinner",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Late%20to%20Dinner.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Beast-Kin Ranger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Beast-Kin%20Ranger.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Meanders Guide",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Meanders%20Guide.op002",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Bristlebane Battler",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Bristlebane%20Battler.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Parting Gust",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Parting%20Gust.op002",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Case of the Uneaten Feast",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Case%20of%20the%20Uneaten%20Feast.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Primary Research",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Primary%20Research.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Country Roads",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Country%20Roads.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Rescue Skiff",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Rescue%20Skiff.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Crossroads Watcher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Crossroads%20Watcher.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Shepherd of the Clouds",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Shepherd%20of%20the%20Clouds.op002",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Dawn-Blessed Pennant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Dawn-Blessed%20Pennant.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+            "card.Dawn-Blessed%20Pennant.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Decoction Module",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Decoction%20Module.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "East Wind Avatar",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.East%20Wind%20Avatar.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Elvish Archivist",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Elvish%20Archivist.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+            "card.Elvish%20Archivist.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Freestrider Commando",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Freestrider%20Commando.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Gathering Stone",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Gathering%20Stone.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Greenhouse Propagator",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Greenhouse%20Propagator.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Griffin Protector",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Griffin%20Protector.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Hinterland Sanctifier",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Hinterland%20Sanctifier.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Honored Dreyleader",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Honored%20Dreyleader.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Kavu Primarch",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Kavu%20Primarch.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Kinsbaile Aspirant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Kinsbaile%20Aspirant.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Kyoshi Island Plaza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Kyoshi%20Island%20Plaza.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Lifecreed Duo",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Lifecreed%20Duo.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Liliana the Faultless",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Liliana%20the%20Faultless.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Lita, Little Orphan Amphibian",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Lita%2C%20Little%20Orphan%20Amphibian.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Loporrit Scout",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Loporrit%20Scout.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Luxknight Breacher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Luxknight%20Breacher.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Metastatic Evangel",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Metastatic%20Evangel.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Mighty Mutanimals",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Mighty%20Mutanimals.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Momo, Friendly Flier",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Momo%2C%20Friendly%20Flier.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Optimistic Scavenger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Optimistic%20Scavenger.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Order of the Stars",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Order%20of%20the%20Stars.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Paradise Plume",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Paradise%20Plume.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Quintessential Katana",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Quintessential%20Katana.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Rancorous Archaic",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Rancorous%20Archaic.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Reluctant Dounguard",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Reluctant%20Dounguard.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Shimmerwilds Growth",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Shimmerwilds%20Growth.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Simic Initiate",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Simic%20Initiate.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Skyknight Squire",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Skyknight%20Squire.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Soultether Golem",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Soultether%20Golem.op004",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Southern Air Temple",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Southern%20Air%20Temple.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Spiritcall Enthusiast // Scrollboost",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Spiritcall%20Enthusiast%20%2F%2F%20Scrollboost.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Virulent Emissary",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Virulent%20Emissary.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Wingmantle Chaplain",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Wingmantle%20Chaplain.op003",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "produces": "token.create",
+        "observer": "Woodland Weavemaster",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "observer_contract": "card.Woodland%20Weavemaster.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "token_unknown",
+        "qualifier_note": "the token's characteristics are not recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 60
+    }
+  }
+}

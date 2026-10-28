@@ -1,0 +1,125 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "hypothesis",
+  "query": {
+    "a": "Conjurer's Closet",
+    "b": "Brigid, Clachan's Heart",
+    "ci": "WG"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 2,
+    "by_grade": {
+      "exploratory": 2
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Conjurer's Closet [op001] (card.return_to_battlefield) can feed Brigid, Clachan's Heart // Brigid, Doun's Mind [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Conjurer's%20Closet.op001",
+        "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002"
+      ],
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Conjurer's Closet's ability can act on Brigid, Clachan's Heart // Brigid, Doun's Mind (target creature you control; produces card.return_to_battlefield, exile.enter): At the beginning of your end step, you may exile target creature you control, then return that card to the battlefield under your control.",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Conjurer's%20Closet.op001"
+      ],
+      "qualifiers": "compatible"
+    }
+  ],
+  "data": {
+    "cards": [
+      "Conjurer's Closet",
+      "Brigid, Clachan's Heart // Brigid, Doun's Mind"
+    ],
+    "effect": null,
+    "links": [
+      {
+        "producer": "Conjurer's Closet",
+        "produces": "card.return_to_battlefield",
+        "observer": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Conjurer's%20Closet.op001",
+        "observer_contract": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "producer_state": "ready_for_review",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Brigid, Clachan's Heart // Brigid, Doun's Mind itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "acts_on": [
+      {
+        "actor": "Conjurer's Closet",
+        "contract": "card.Conjurer's%20Closet.op001",
+        "text": "At the beginning of your end step, you may exile target creature you control, then return that card to the battlefield under your control.",
+        "produces": [
+          "card.return_to_battlefield",
+          "exile.enter"
+        ],
+        "acts_on": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "targets": [
+          "target creature you control"
+        ],
+        "state": "ready_for_review",
+        "qualifiers": "compatible",
+        "qualifier_note": "Brigid, Clachan's Heart // Brigid, Doun's Mind fits the target type"
+      }
+    ],
+    "same_card_links": [],
+    "loops": [],
+    "loops_contested": [],
+    "rejected_links": [],
+    "conditions": [
+      {
+        "contract_id": "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+        "card": "Brigid, Clachan's Heart // Brigid, Doun's Mind",
+        "text": "Whenever this creature enters or transforms into Brigid, Clachan's Heart, create a 1/1 green and white Kithkin creature token.",
+        "state": "blocked"
+      },
+      {
+        "contract_id": "card.Conjurer's%20Closet.op001",
+        "card": "Conjurer's Closet",
+        "text": "At the beginning of your end step, you may exile target creature you control, then return that card to the battlefield under your control.",
+        "state": "ready_for_review"
+      }
+    ],
+    "unverified_contracts": [
+      "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002",
+      "card.Conjurer's%20Closet.op001"
+    ],
+    "disconfirming_evidence": [
+      "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002: failed check C05_face: multi-face card: clause not located on exactly one face",
+      "card.Brigid%2C%20Clachan's%20Heart%20%2F%2F%20Brigid%2C%20Doun's%20Mind.op002: failed check C11_executable_shape: projected ability drops text: or transforms into ~"
+    ],
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "reading_note": "A rejected link or contested loop rules out that one route only. Check acts_on and the other links before deciding the cards do not interact.",
+    "would_settle_it": [
+      "semantic review of each unverified contract (kb/review.py, citing passing scenarios)",
+      "a rules check of the trigger and replacement wording against the Comprehensive Rules"
+    ]
+  }
+}

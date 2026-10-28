@@ -1,0 +1,162 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "card",
+  "query": {
+    "name": "Escape Tunnel"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 5,
+    "by_grade": {
+      "decision_grade": 3,
+      "exploratory": 2
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Rules text: {T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\n{T}, Sacrifice this land: Target creature with power 2 or less can't be blocked this turn.",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "rules_text.authority=oracle_refresh",
+        "oracle_run_id=ed02ffb54a5b1a9d"
+      ]
+    },
+    {
+      "text": "Owned 4, free 1, assigned 3.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": []
+    },
+    {
+      "text": "Under the collection policy: 1 usable without asking; 4 with agreement from other built decks; protected decks hold 0.",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "decks/collection_policy.json"
+      ]
+    },
+    {
+      "text": "Contract reading of: {T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op001",
+        "C11_executable_shape: projected ability drops text: search your library for a basic land card put it onto the battlefield tapped then shuffle"
+      ]
+    },
+    {
+      "text": "Contract reading of: {T}, Sacrifice this land: Target creature with power 2 or less can't be blocked this turn.",
+      "kind": "mechanics",
+      "support": "blocked",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Escape%20Tunnel.op002",
+        "C11_executable_shape: projected ability drops text: target creature with power 2 or less"
+      ]
+    }
+  ],
+  "data": {
+    "card": {
+      "card_name": "Escape Tunnel",
+      "type_line": "Land",
+      "mana_cost": "",
+      "color_identity": "C",
+      "oracle_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\n{T}, Sacrifice this land: Target creature with power 2 or less can't be blocked this turn.",
+      "oracle_text_sha256": "00380761a217c9db2063198b1ddd823227489f97d024e5024ebc628accaca9ca",
+      "commander_legal_stored": "Legal"
+    },
+    "custody": {
+      "owned": 4,
+      "assigned": 3,
+      "free": 1,
+      "locations": [
+        {
+          "deck": "Brigid",
+          "quantity": 1,
+          "section": "Land",
+          "status_raw": "Current deck"
+        },
+        {
+          "deck": "Necrobloom",
+          "quantity": 1,
+          "section": "Land",
+          "status_raw": "Current deck"
+        },
+        {
+          "deck": "Vraska",
+          "quantity": 1,
+          "section": "Land",
+          "status_raw": "Current deck"
+        }
+      ]
+    },
+    "held_by": {
+      "Brigid": 1,
+      "Necrobloom": 1,
+      "Vraska": 1
+    },
+    "availability": {
+      "free": 1,
+      "in_protected_decks": {},
+      "in_other_built_decks": {
+        "Brigid": 1,
+        "Necrobloom": 1,
+        "Vraska": 1
+      },
+      "planned_only": {
+        "Oops! All Edge Cases!": "Candidate list v0.1 (free copies)"
+      },
+      "usable_without_asking": 1,
+      "usable_by_agreement": 4
+    },
+    "legal_in_decks": [
+      "Ashling",
+      "Blight Curse",
+      "Brigid",
+      "Counter Blitz",
+      "Dina",
+      "Limit Break",
+      "Necrobloom",
+      "Rootha",
+      "Shanid",
+      "Sharuum",
+      "TMNT",
+      "Token Triumph",
+      "Vraska"
+    ],
+    "contracts": [
+      {
+        "contract_id": "card.Escape%20Tunnel.op001",
+        "operation_kind": "activate",
+        "queue_state": "blocked",
+        "exact_text": "{T}, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+        "failed_checks": [
+          "C11_executable_shape: projected ability drops text: search your library for a basic land card put it onto the battlefield tapped then shuffle"
+        ]
+      },
+      {
+        "contract_id": "card.Escape%20Tunnel.op002",
+        "operation_kind": "activate",
+        "queue_state": "blocked",
+        "exact_text": "{T}, Sacrifice this land: Target creature with power 2 or less can't be blocked this turn.",
+        "failed_checks": [
+          "C11_executable_shape: projected ability drops text: target creature with power 2 or less"
+        ]
+      }
+    ],
+    "reconciliation": null
+  }
+}

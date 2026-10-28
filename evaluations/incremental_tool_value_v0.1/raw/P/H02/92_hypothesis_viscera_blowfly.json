@@ -1,0 +1,87 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "hypothesis",
+  "query": {
+    "a": "Viscera Seer",
+    "b": "Blowfly Infestation"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 1,
+    "by_grade": {
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Blowfly Infestation's ability can act on Viscera Seer (target creature; produces counter.put): Whenever a creature dies, if it had a -1/-1 counter on it, put a -1/-1 counter on target creature.",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Blowfly%20Infestation.op001"
+      ],
+      "qualifiers": "compatible"
+    }
+  ],
+  "data": {
+    "cards": [
+      "Viscera Seer",
+      "Blowfly Infestation"
+    ],
+    "effect": null,
+    "links": [],
+    "acts_on": [
+      {
+        "actor": "Blowfly Infestation",
+        "contract": "card.Blowfly%20Infestation.op001",
+        "text": "Whenever a creature dies, if it had a -1/-1 counter on it, put a -1/-1 counter on target creature.",
+        "produces": [
+          "counter.put"
+        ],
+        "acts_on": "Viscera Seer",
+        "targets": [
+          "target creature"
+        ],
+        "state": "blocked",
+        "qualifiers": "compatible",
+        "qualifier_note": "Viscera Seer fits the target type"
+      }
+    ],
+    "same_card_links": [],
+    "loops": [],
+    "loops_contested": [],
+    "rejected_links": [],
+    "conditions": [
+      {
+        "contract_id": "card.Blowfly%20Infestation.op001",
+        "card": "Blowfly Infestation",
+        "text": "Whenever a creature dies, if it had a -1/-1 counter on it, put a -1/-1 counter on target creature.",
+        "state": "blocked"
+      }
+    ],
+    "unverified_contracts": [
+      "card.Blowfly%20Infestation.op001"
+    ],
+    "disconfirming_evidence": [
+      "card.Blowfly%20Infestation.op001: failed check C11_executable_shape: projected ability drops text: if it had a 1/ 1 counter on it put a 1/ 1 counter on target creature"
+    ],
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "reading_note": "A rejected link or contested loop rules out that one route only. Check acts_on and the other links before deciding the cards do not interact.",
+    "would_settle_it": [
+      "semantic review of each unverified contract (kb/review.py, citing passing scenarios)",
+      "a rules check of the trigger and replacement wording against the Comprehensive Rules"
+    ]
+  }
+}

@@ -1,0 +1,1263 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "explore",
+  "query": {
+    "seed": "Persist",
+    "ci": "BRG",
+    "free": true,
+    "mode": "focused",
+    "limit": 40
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 40,
+    "by_grade": {
+      "exploratory": 40
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Collective Inferno [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Collective%20Inferno.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Aquastrand Spider [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Aquastrand%20Spider.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Acidic Slime [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Acidic Slime itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Acidic%20Slime.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Dawn-Blessed Pennant [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Dawn-Blessed%20Pennant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Arni, Renowned Champion [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Arni%2C%20Renowned%20Champion.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Aetherwind Basker [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Aetherwind Basker itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Aetherwind%20Basker.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Flamekin Village [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Flamekin%20Village.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Beast-Kin Ranger [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Beast-Kin%20Ranger.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Ainok Wayfarer [op001] via battlefield.enter (qualifiers unresolved: only if the producer returns Ainok Wayfarer itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Ainok%20Wayfarer.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Freestrider Commando [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Freestrider%20Commando.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Bristlebane Battler [op003] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Bristlebane%20Battler.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Alania's Pathmaker [op001] via battlefield.enter (qualifiers unresolved: only if the producer returns Alania's Pathmaker itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Alania's%20Pathmaker.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Frilled Sparkshooter [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Frilled%20Sparkshooter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Crossroads Watcher [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Crossroads%20Watcher.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Ambush Wolf [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Ambush Wolf itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Ambush%20Wolf.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Gathering Stone [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Gathering%20Stone.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Dashing Bloodsucker [op001] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Dashing%20Bloodsucker.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Anthropede [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Anthropede itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Anthropede.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Hotheaded Giant [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Hotheaded%20Giant.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Decoction Module [op001] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Decoction%20Module.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Apex Witchstalker [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Apex Witchstalker itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Apex%20Witchstalker.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Kavu Primarch [op003] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Kavu%20Primarch.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Elvish Archivist [op001] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Elvish%20Archivist.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Arcane Amphisbaena [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Arcane Amphisbaena itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Arcane%20Amphisbaena.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Mines of Moria [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Mines%20of%20Moria.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Gideon the Oathless [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Gideon%20the%20Oathless.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Archive Arbiter [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Archive Arbiter itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Archive%20Arbiter.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Paradise Plume [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Paradise%20Plume.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Glaze Fiend [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Glaze%20Fiend.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Aurora Awakener [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Aurora Awakener itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Aurora%20Awakener.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Putrid Pals [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Putrid%20Pals.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Greenhouse Propagator [op001] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Greenhouse%20Propagator.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Avarax [op002] via battlefield.enter (qualifiers unresolved: only if the producer returns Avarax itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Avarax.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Rancorous Archaic [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Rancorous%20Archaic.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Kyoshi Island Plaza [op002] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Kyoshi%20Island%20Plaza.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Balduvian Atrocity [op003] via battlefield.enter (qualifiers unresolved: only if the producer returns Balduvian Atrocity itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Balduvian%20Atrocity.op003"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Shimmerwilds Growth [op002] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Shimmerwilds%20Growth.op002"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Liliana the Repentant [op001] via battlefield.enter (qualifiers unresolved: the produced object is not recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Liliana%20the%20Repentant.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Bane of Progress [op001] via battlefield.enter (qualifiers unresolved: only if the producer returns Bane of Progress itself (the observer sees only itself enter)).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Bane%20of%20Progress.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    },
+    {
+      "text": "Persist [op001] (card.return_to_battlefield) can feed Stingerquill Annex [op001] via battlefield.enter (qualifiers unresolved: no object filter recorded).",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Persist.op001",
+        "card.Stingerquill%20Annex.op001"
+      ],
+      "discovery": "requested",
+      "qualifiers": "unresolved"
+    }
+  ],
+  "data": {
+    "pool": {
+      "source": "free copies",
+      "color_identity": "BRG",
+      "cards": 1554,
+      "contracts": 2133
+    },
+    "seed": "Persist",
+    "mode": "focused",
+    "pool_contract_states": {
+      "ready_for_review": 688,
+      "blocked": 1439,
+      "quarantined": 6
+    },
+    "limitations": [
+      "Links match an effect to a trigger hook, then test the qualifiers the contracts record (object type filters, \"this enters\" subjects, target types). A link that contradicts a recorded qualifier is rejected; one whose qualifier is not recorded (counter type, controller, token characteristics, which face) stays unresolved, never matched.",
+      "Contracts cover parsed abilities only; keyword-only and unparsed abilities produce no links, so absence proves nothing."
+    ],
+    "links_total": 249,
+    "links_by_qualifiers": {
+      "unresolved": 249
+    },
+    "links_by_basis": {
+      "reentry_of_target": 207,
+      "object_unknown": 26,
+      "no_filter": 16
+    },
+    "links_by_pathway": {
+      "card.return_to_battlefield -> battlefield.enter": 249
+    },
+    "rejected_links": {
+      "total": 113,
+      "by_reason": {
+        "Additive Evolution is not a legal target for: target nonlegendary creature": 1,
+        "Adventurer's Inn is not a legal target for: target nonlegendary creature": 1,
+        "Aether Hub is not a legal target for: target nonlegendary creature": 1,
+        "Ajani's Anguish is not a legal target for: target nonlegendary creature": 1,
+        "Anchovy & Banana Pizza is not a legal target for: target nonlegendary creature": 1,
+        "Arcade Cabinet is not a legal target for: target nonlegendary creature": 1,
+        "Atmospheric Greenhouse is not a legal target for: target nonlegendary creature": 1,
+        "Balin, Loremaster is not a legal target for: target nonlegendary creature": 1,
+        "Bandit's Talent is not a legal target for: target nonlegendary creature": 1,
+        "Barbed Bloodletter is not a legal target for: target nonlegendary creature": 1
+      },
+      "examples": [
+        {
+          "producer": "Persist",
+          "produces": "card.return_to_battlefield",
+          "observer": "Additive Evolution",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Additive Evolution is not a legal target for: target nonlegendary creature"
+        },
+        {
+          "producer": "Persist",
+          "produces": "card.return_to_battlefield",
+          "observer": "Adventurer's Inn",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Adventurer's Inn is not a legal target for: target nonlegendary creature"
+        },
+        {
+          "producer": "Persist",
+          "produces": "card.return_to_battlefield",
+          "observer": "Aether Hub",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Aether Hub is not a legal target for: target nonlegendary creature"
+        },
+        {
+          "producer": "Persist",
+          "produces": "card.return_to_battlefield",
+          "observer": "Ajani's Anguish",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Ajani's Anguish is not a legal target for: target nonlegendary creature"
+        },
+        {
+          "producer": "Persist",
+          "produces": "card.return_to_battlefield",
+          "observer": "Anchovy & Banana Pizza",
+          "hook": "battlefield.enter",
+          "qualifier_note": "Anchovy & Banana Pizza is not a legal target for: target nonlegendary creature"
+        }
+      ]
+    },
+    "links": [
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Collective Inferno",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Collective%20Inferno.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Aquastrand Spider",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Aquastrand%20Spider.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Acidic Slime",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Acidic%20Slime.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Acidic Slime itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Dawn-Blessed Pennant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Dawn-Blessed%20Pennant.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Persist.op001",
+            "card.Dawn-Blessed%20Pennant.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Arni, Renowned Champion",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Arni%2C%20Renowned%20Champion.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Aetherwind Basker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Aetherwind%20Basker.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Aetherwind Basker itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Flamekin Village",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Flamekin%20Village.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Beast-Kin Ranger",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Beast-Kin%20Ranger.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Ainok Wayfarer",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Ainok%20Wayfarer.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Ainok Wayfarer itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Freestrider Commando",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Freestrider%20Commando.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Bristlebane Battler",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Bristlebane%20Battler.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Alania's Pathmaker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Alania's%20Pathmaker.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Alania's Pathmaker itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Frilled Sparkshooter",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Frilled%20Sparkshooter.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Crossroads Watcher",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Crossroads%20Watcher.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Ambush Wolf",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Ambush%20Wolf.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Ambush Wolf itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Gathering Stone",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Gathering%20Stone.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Persist.op001",
+            "card.Gathering%20Stone.op003"
+          ]
+        ]
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Dashing Bloodsucker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Dashing%20Bloodsucker.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Anthropede",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Anthropede.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Anthropede itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Hotheaded Giant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Hotheaded%20Giant.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Decoction Module",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Decoction%20Module.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Apex Witchstalker",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Apex%20Witchstalker.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Apex Witchstalker itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Kavu Primarch",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Kavu%20Primarch.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Elvish Archivist",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Elvish%20Archivist.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Persist.op001",
+            "card.Elvish%20Archivist.op002"
+          ]
+        ]
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Arcane Amphisbaena",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Arcane%20Amphisbaena.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Arcane Amphisbaena itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Mines of Moria",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Mines%20of%20Moria.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Gideon the Oathless",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Gideon%20the%20Oathless.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Archive Arbiter",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Archive%20Arbiter.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Archive Arbiter itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Paradise Plume",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Paradise%20Plume.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Glaze Fiend",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Glaze%20Fiend.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Aurora Awakener",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Aurora%20Awakener.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Aurora Awakener itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Putrid Pals",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Putrid%20Pals.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Greenhouse Propagator",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Greenhouse%20Propagator.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Avarax",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Avarax.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Avarax itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Rancorous Archaic",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Rancorous%20Archaic.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Kyoshi Island Plaza",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Kyoshi%20Island%20Plaza.op002",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": [
+          [
+            "card.Persist.op001",
+            "card.Kyoshi%20Island%20Plaza.op001"
+          ]
+        ]
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Balduvian Atrocity",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Balduvian%20Atrocity.op003",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Balduvian Atrocity itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Shimmerwilds Growth",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Shimmerwilds%20Growth.op002",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Liliana the Repentant",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Liliana%20the%20Repentant.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "object_unknown",
+        "qualifier_note": "the produced object is not recorded",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Bane of Progress",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Bane%20of%20Progress.op001",
+        "producer_state": "blocked",
+        "observer_state": "ready_for_review",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "reentry_of_target",
+        "qualifier_note": "only if the producer returns Bane of Progress itself (the observer sees only itself enter)",
+        "same_card": false,
+        "also_via": []
+      },
+      {
+        "producer": "Persist",
+        "produces": "card.return_to_battlefield",
+        "observer": "Stingerquill Annex",
+        "hook": "battlefield.enter",
+        "producer_contract": "card.Persist.op001",
+        "observer_contract": "card.Stingerquill%20Annex.op001",
+        "producer_state": "blocked",
+        "observer_state": "blocked",
+        "link_state": "candidate",
+        "qualifiers": "unresolved",
+        "basis": "no_filter",
+        "qualifier_note": "no object filter recorded",
+        "same_card": false,
+        "also_via": []
+      }
+    ],
+    "loops_total": 0,
+    "loops": [],
+    "loops_contested": {
+      "total": 0,
+      "note": "the grammar layer proposed these, but a KB contract on one side does not produce the step; the cards may still interact in other ways (see hypothesis)",
+      "examples": []
+    },
+    "hooks_by_link_count": {
+      "battlefield.enter": 249
+    }
+  }
+}

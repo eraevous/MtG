@@ -1,0 +1,316 @@
+{
+  "tool": "mtg",
+  "version": "0.2.0",
+  "verb": "check",
+  "query": {
+    "claims": "../../P_H02_claims.json"
+  },
+  "collection": {
+    "db": "P/kb/mtg_cards_v0.2.sqlite",
+    "release": "mtg-kb-v0.2.1-r20261024d",
+    "built_utc": "2026-10-25T00:05:00+00:00",
+    "inventory_snapshot_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
+    "inventory_snapshot_modified_utc": "2026-10-24T23:57:02.816Z"
+  },
+  "summary": {
+    "claims": 15,
+    "by_grade": {
+      "decision_grade": 14,
+      "exploratory": 1
+    }
+  },
+  "read_me_first": "Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, mechanics) says nothing about the others. performance is never decision_grade in v0, and preference belongs to the person (deck charter), not to these tools. A good source is not a true claim: check reports evidence_grade (the source) apart from verdict (whether a structured assertion holds). Links carry qualifiers: compatible, or unresolved when the contracts do not record what would decide it; rejected links and contested loops rule out one route, not the card.",
+  "claims": [
+    {
+      "text": "Viscera Seer has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Viscera Seer: owned 1, free 1"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Viscera Seer: free 1 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Cirith Ungol Patrol has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Cirith Ungol Patrol: owned 2, free 2"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Cirith Ungol Patrol: free 2 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Phyrexian Vault has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Phyrexian Vault: owned 1, free 1"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Phyrexian Vault: free 1 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Grim Backwoods has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Grim Backwoods: owned 1, free 1"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Grim Backwoods: free 1 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Primal Witchstalker has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Primal Witchstalker: owned 1, free 1"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Primal Witchstalker: free 1 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Cultivate has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Cultivate: owned 4, free 2"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Cultivate: free 2 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Escape Tunnel has a free copy",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Escape Tunnel: owned 4, free 1"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Escape Tunnel: free 1 (needs >= 1)"
+      ],
+      "assertion": {
+        "free_min": 1
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Blowfly Infestation is in Blight Curse",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Blowfly Infestation: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Blowfly Infestation: physically in ['Blight Curse']"
+      ],
+      "assertion": {
+        "in_deck": "Blight Curse"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Dread Tiller is in Blight Curse",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Dread Tiller: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Dread Tiller: physically in ['Blight Curse']"
+      ],
+      "assertion": {
+        "in_deck": "Blight Curse"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Oft-Nabbed Goat is in Blight Curse",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Oft-Nabbed Goat: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Oft-Nabbed Goat: physically in ['Blight Curse']"
+      ],
+      "assertion": {
+        "in_deck": "Blight Curse"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Puppeteer Clique is in Blight Curse",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Puppeteer Clique: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Puppeteer Clique: physically in ['Blight Curse']"
+      ],
+      "assertion": {
+        "in_deck": "Blight Curse"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Evolution Sage is in Blight Curse",
+      "kind": "inventory",
+      "support": "collection_snapshot",
+      "grade": "decision_grade",
+      "evidence": [
+        "Evolution Sage: owned 1, free 0"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Evolution Sage: physically in ['Blight Curse']"
+      ],
+      "assertion": {
+        "in_deck": "Blight Curse"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Blowfly Infestation puts a -1/-1 counter when a countered creature dies",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Blowfly Infestation: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Blowfly Infestation: rules text contains 'if it had a -1/-1 counter on it'"
+      ],
+      "assertion": {
+        "text_contains": "if it had a -1/-1 counter on it"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Dread Tiller puts a land onto the battlefield when a countered creature dies",
+      "kind": "rules_text",
+      "support": "oracle",
+      "grade": "decision_grade",
+      "evidence": [
+        "Dread Tiller: rules text authority oracle_refresh"
+      ],
+      "missing": [],
+      "verdict": "SUPPORTED",
+      "verdict_basis": [
+        "Dread Tiller: rules text contains 'put a land card from your hand or graveyard onto the battlefield'"
+      ],
+      "assertion": {
+        "text_contains": "put a land card from your hand or graveyard onto the battlefield"
+      },
+      "evidence_grade": "decision_grade"
+    },
+    {
+      "text": "Persist returns with a -1/-1 counter, and Auntie Ool draws when -1/-1 counters are put on your creature",
+      "kind": "mechanics",
+      "support": "candidate",
+      "grade": "exploratory",
+      "evidence": [
+        "card.Auntie%20Ool%2C%20Cursewretch.op002: blocked",
+        "card.Puppeteer%20Clique.op002: blocked",
+        "card.Puppeteer%20Clique.op003: blocked"
+      ],
+      "missing": [
+        "3 contract(s) not semantically reviewed"
+      ],
+      "verdict": "NOT_CHECKED",
+      "verdict_basis": [
+        "no structured assertion given (\"assert\"); the text itself is not judged"
+      ],
+      "assertion": null,
+      "evidence_grade": "exploratory"
+    }
+  ],
+  "data": {
+    "checked": 15,
+    "by_verdict": {
+      "SUPPORTED": 14,
+      "NOT_CHECKED": 1
+    },
+    "assert_keys": {
+      "inventory": [
+        "owned_min",
+        "free_min",
+        "usable_without_asking_min",
+        "usable_by_agreement_min",
+        "in_deck"
+      ],
+      "rules_text": [
+        "text_contains"
+      ]
+    }
+  }
+}
