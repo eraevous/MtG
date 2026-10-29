@@ -1,4 +1,4 @@
-"""Regressions for the KB's wipe role detector (kb/vendor/mtg_eval/semantics.py, kb patch 2). Runs without the KB database."""
+"""Regressions for the KB's role detector (kb/vendor/mtg_eval/semantics.py): wipe scope (kb patch 3) and roles that live in reminder text (kb patch 4). Runs without the KB database."""
 import sys
 import unittest
 from pathlib import Path
@@ -33,6 +33,41 @@ class WipeDetector(unittest.TestCase):
     def test_flicker_and_narrow_scopes_are_not_wipes(self):
         for name, text in NOT_WIPES.items():
             self.assertNotIn('wipe', oracle_functions(name, text, 'Artifact'), name)
+
+
+# kb patch 4: predefined tokens and token-making keywords, read by name because reminder text is stripped.
+TOKEN_ROLES = [
+    ('Gold Pan', 'When this Equipment enters, create a Treasure token. (It\'s an artifact with "{T}, Sacrifice this token: '
+                 'Add one mana of any color.")', 'Artifact — Equipment', {'ramp', 'fixing'}),
+    ('Galactic Wayfarer', 'When this creature enters, create a Lander token. (It\'s an artifact with "{2}, {T}, Sacrifice this '
+                          'token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.")',
+     'Creature — Human Scout', {'ramp', 'fixing', 'land_drop'}),
+    ("Jet's Brainwashing", 'If this spell was kicked, create a Clue token.', 'Sorcery', {'draw'}),
+    ('Mines of Moria', '{T}: Add {R}.\n{3}{R}, {T}, Exile three cards from your graveyard: Create two Treasure tokens.', 'Land', {'ramp', 'fixing'}),
+    ('Indebted Spirit', 'Afterlife 1 (When this permanent is put into a graveyard from the battlefield, create a 1/1 white and '
+                        'black Spirit creature token with flying.)', 'Enchantment Creature — Spirit', {'token_maker'}),
+    ('Kaldra Compleat', 'Living weapon\nIndestructible', 'Legendary Artifact — Equipment', {'token_maker'}),
+]
+NO_TOKEN_ROLES = [  # sacrificing or caring about a token is not creating one; Junk is impulse, which is not draw (D-0011)
+    ('Treasure payoff', 'Whenever you sacrifice a Treasure, create a 1/1 colorless Thopter artifact creature token with flying.',
+     'Creature', {'ramp', 'fixing'}),
+    ('Junk maker', 'When this creature enters, create a Junk token.', 'Creature', {'draw'}),
+    ('Afterlife lord', 'Creatures you control with afterlife get +1/+1.', 'Creature', {'token_maker'}),
+    # the token goes to someone else (Kate, 2026-10-29): no self-ramp, self-fixing or self-draw
+    ("Zuko's Exile", 'Exile target artifact, creature, or enchantment. Its controller creates a Clue token.', 'Instant', {'draw'}),
+    ('Opponent Treasure', 'Destroy target creature. Its controller creates a Treasure token.', 'Instant', {'ramp', 'fixing'}),
+    ('Gift Treasure', 'Target player creates a Treasure token.', 'Sorcery', {'ramp', 'fixing'}),
+]
+
+
+class ReminderTextRoles(unittest.TestCase):
+    def test_token_and_keyword_roles_are_detected(self):
+        for name, text, type_line, roles in TOKEN_ROLES:
+            self.assertLessEqual(roles, set(oracle_functions(name, text, type_line)), name)
+
+    def test_no_role_without_creating_the_token(self):
+        for name, text, type_line, roles in NO_TOKEN_ROLES:
+            self.assertFalse(roles & set(oracle_functions(name, text, type_line)), name)
 
 
 if __name__ == '__main__':

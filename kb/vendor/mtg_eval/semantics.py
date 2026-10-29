@@ -88,6 +88,22 @@ RULES = {
                      r"whenever you cast or copy"],
     'copy': [r"\bcopy of\b", r"\bcopy target\b", r"\bcopy it\b"],
 }
+# kb patch 4 (2026-10-29): roles that live only in reminder text, which clean() strips. Predefined tokens carry their
+# abilities in reminder text, and some keywords create tokens. Mapped here by name, never by un-stripping reminder text.
+# Role audit v0.2 found Gold Pan (Treasure: fixing) and Galactic Wayfarer (Lander: ramp) this way. Impulse tokens (Junk)
+# are not draw (D-0011); Blood loots (not draw, D-0010); Map explores. Those carry no role here.
+PREDEFINED_TOKENS = {
+    'treasure': ('ramp', 'fixing'), 'gold': ('ramp', 'fixing'), 'lander': ('ramp', 'fixing', 'land_drop'),
+    'powerstone': ('ramp',), 'clue': ('draw',), 'food': ('lifegain_source',),
+}
+TOKEN_CREATE = re.compile(r"\bcreate\b(?:(?!\bsacrifice\b)[^.])*?\b(" + '|'.join(PREDEFINED_TOKENS) + r")s?\b(?: artifact)? tokens?")
+TOKEN_KEYWORDS = {  # keyword (as it reads once reminder text is gone) -> roles
+    r"\bincubate (?:\d+|x)": ('token_maker', 'artifact_token'), r"\bafterlife \d": ('token_maker',),
+    r"\bliving weapon\b": ('token_maker',), r"\bfor mirrodin!": ('token_maker',), r"\bmobilize (?:\d+|x)": ('token_maker',),
+    r"\boffspring \{": ('token_maker',), r"\bfabricate \d": ('token_maker',), r"\bsquad \{": ('token_maker',),
+    r"\b(?:embalm|eternalize) \{": ('token_maker',), r"\bmyriad\b": ('token_maker',), r"\bextort\b": ('closer',),
+}
+
 TYPE_ROLES = {'instant_sorcery': r"\b(?:Instant|Sorcery)\b", 'creature': r"\bCreature\b", 'land': r"\bLand\b"}
 COVERAGE = ['ramp', 'fixing', 'draw', 'spot_removal', 'wipe', 'counterspell', 'protection', 'recursion', 'closer']
 FIXING = [r"mana of any (?:one )?color", r"any combination of colors", r"search your library for [^.]*basic land", r"any color", r"mana of the chosen color", r"\{t\}: add \{[wubrg]\} or \{[wubrg]\}"]
@@ -136,6 +152,13 @@ def oracle_functions(name, oracle, type_line):
             if m: spans['fixing'] = m.group(0)[:80]; break
     else:
         spans.pop('ramp', None)  # a land's own mana is mana base, not ramp
+    for m in TOKEN_CREATE.finditer(t):
+        for f in PREDEFINED_TOKENS[m.group(1)]:
+            spans.setdefault(f, m.group(0)[:80])
+    for p, roles in TOKEN_KEYWORDS.items():
+        m = re.search(p, t)
+        for f in roles if m else ():
+            spans.setdefault(f, m.group(0))
     for f, p in TYPE_ROLES.items():
         if re.search(p, str(type_line)): spans[f] = 'type line'
     # a mana creature/rock 'add {' without restriction counts as ramp; restricted fixers stay fixing
