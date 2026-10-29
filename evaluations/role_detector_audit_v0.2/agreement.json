@@ -56,10 +56,10 @@
     "B_yes": 0,
     "both_yes": 0,
     "either_yes_or_depends": 219,
-    "adjudicated_yes": 108,
-    "adjudicated_yes_upper95": 571,
-    "adjudicated_yes_or_depends": 108,
-    "adjudicated_yes_or_depends_upper95": 571
+    "adjudicated_yes": 0,
+    "adjudicated_yes_upper95": 404,
+    "adjudicated_yes_or_depends": 0,
+    "adjudicated_yes_or_depends_upper95": 404
    },
    "untagged_population": 2904
   },
