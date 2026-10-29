@@ -5,6 +5,7 @@
     "n": 40,
     "agreement": 0.875,
     "kappa": 0.0,
+    "positive_agreement": 0.0,
     "A": {
      "NO": 40
     },
@@ -20,9 +21,11 @@
     "both_yes": 0,
     "either_yes_or_depends": 265,
     "adjudicated_yes": 0,
-    "adjudicated_yes_upper95": 402,
+    "adjudicated_yes_upper95_bonferroni": 486,
+    "adjudicated_yes_upper95_sum_v1": 402,
     "adjudicated_yes_or_depends": 40,
-    "adjudicated_yes_or_depends_upper95": 464
+    "adjudicated_yes_or_depends_upper95_bonferroni": 551,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 464
    },
    "untagged_population": 2888
   },
@@ -31,6 +34,7 @@
     "n": 40,
     "agreement": 0.9,
     "kappa": -0.019,
+    "positive_agreement": 0.0,
     "A": {
      "NO": 39,
      "YES": 1
@@ -44,6 +48,7 @@
     "n": 5,
     "agreement": 1.0,
     "kappa": null,
+    "positive_agreement": null,
     "A": {
      "NO": 5
     },
@@ -57,9 +62,11 @@
     "both_yes": 0,
     "either_yes_or_depends": 219,
     "adjudicated_yes": 0,
-    "adjudicated_yes_upper95": 404,
+    "adjudicated_yes_upper95_bonferroni": 489,
+    "adjudicated_yes_upper95_sum_v1": 404,
     "adjudicated_yes_or_depends": 0,
-    "adjudicated_yes_or_depends_upper95": 404
+    "adjudicated_yes_or_depends_upper95_bonferroni": 489,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 404
    },
    "untagged_population": 2904
   },
@@ -68,6 +75,7 @@
     "n": 40,
     "agreement": 0.925,
     "kappa": 0.381,
+    "positive_agreement": 0.4,
     "A": {
      "NO": 39,
      "YES": 1
@@ -84,9 +92,11 @@
     "both_yes": 34,
     "either_yes_or_depends": 225,
     "adjudicated_yes": 34,
-    "adjudicated_yes_upper95": 486,
+    "adjudicated_yes_upper95_bonferroni": 580,
+    "adjudicated_yes_upper95_sum_v1": 486,
     "adjudicated_yes_or_depends": 34,
-    "adjudicated_yes_or_depends_upper95": 486
+    "adjudicated_yes_or_depends_upper95_bonferroni": 580,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 486
    },
    "untagged_population": 3113
   },
@@ -95,6 +105,7 @@
     "n": 40,
     "agreement": 1.0,
     "kappa": null,
+    "positive_agreement": null,
     "A": {
      "NO": 40
     },
@@ -106,6 +117,7 @@
     "n": 7,
     "agreement": 0.857,
     "kappa": 0.0,
+    "positive_agreement": 1.0,
     "A": {
      "YES": 6,
      "DEPENDS": 1
@@ -120,9 +132,11 @@
     "both_yes": 0,
     "either_yes_or_depends": 0,
     "adjudicated_yes": 0,
-    "adjudicated_yes_upper95": 467,
+    "adjudicated_yes_upper95_bonferroni": 565,
+    "adjudicated_yes_upper95_sum_v1": 467,
     "adjudicated_yes_or_depends": 0,
-    "adjudicated_yes_or_depends_upper95": 467
+    "adjudicated_yes_or_depends_upper95_bonferroni": 565,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 467
    },
    "untagged_population": 3354
   },
@@ -131,6 +145,7 @@
     "n": 40,
     "agreement": 0.875,
     "kappa": 0.267,
+    "positive_agreement": 0.286,
     "A": {
      "NO": 39,
      "YES": 1
@@ -145,6 +160,7 @@
     "n": 5,
     "agreement": 1.0,
     "kappa": 1.0,
+    "positive_agreement": 1.0,
     "A": {
      "YES": 3,
      "NO": 2
@@ -160,9 +176,11 @@
     "both_yes": 121,
     "either_yes_or_depends": 482,
     "adjudicated_yes": 121,
-    "adjudicated_yes_upper95": 634,
+    "adjudicated_yes_upper95_bonferroni": 736,
+    "adjudicated_yes_upper95_sum_v1": 634,
     "adjudicated_yes_or_depends": 121,
-    "adjudicated_yes_or_depends_upper95": 634
+    "adjudicated_yes_or_depends_upper95_bonferroni": 736,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 634
    },
    "untagged_population": 3213
   },
@@ -171,6 +189,7 @@
     "n": 40,
     "agreement": 1.0,
     "kappa": null,
+    "positive_agreement": null,
     "A": {
      "NO": 40
     },
@@ -182,6 +201,7 @@
     "n": 11,
     "agreement": 1.0,
     "kappa": 1.0,
+    "positive_agreement": 1.0,
     "A": {
      "YES": 4,
      "NO": 7
@@ -197,9 +217,11 @@
     "both_yes": 0,
     "either_yes_or_depends": 0,
     "adjudicated_yes": 0,
-    "adjudicated_yes_upper95": 454,
+    "adjudicated_yes_upper95_bonferroni": 550,
+    "adjudicated_yes_upper95_sum_v1": 454,
     "adjudicated_yes_or_depends": 0,
-    "adjudicated_yes_or_depends_upper95": 454
+    "adjudicated_yes_or_depends_upper95_bonferroni": 550,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 454
    },
    "untagged_population": 3265
   },
@@ -208,6 +230,7 @@
     "n": 40,
     "agreement": 1.0,
     "kappa": null,
+    "positive_agreement": null,
     "A": {
      "NO": 40
     },
@@ -219,6 +242,7 @@
     "n": 5,
     "agreement": 1.0,
     "kappa": null,
+    "positive_agreement": null,
     "A": {
      "NO": 5
     },
@@ -232,9 +256,11 @@
     "both_yes": 0,
     "either_yes_or_depends": 0,
     "adjudicated_yes": 0,
-    "adjudicated_yes_upper95": 470,
+    "adjudicated_yes_upper95_bonferroni": 569,
+    "adjudicated_yes_upper95_sum_v1": 470,
     "adjudicated_yes_or_depends": 0,
-    "adjudicated_yes_or_depends_upper95": 470
+    "adjudicated_yes_or_depends_upper95_bonferroni": 569,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 470
    },
    "untagged_population": 3376
   },
@@ -243,6 +269,7 @@
     "n": 40,
     "agreement": 0.9,
     "kappa": 0.313,
+    "positive_agreement": 0.333,
     "A": {
      "NO": 39,
      "YES": 1
@@ -259,9 +286,11 @@
     "both_yes": 39,
     "either_yes_or_depends": 332,
     "adjudicated_yes": 39,
-    "adjudicated_yes_upper95": 467,
+    "adjudicated_yes_upper95_bonferroni": 555,
+    "adjudicated_yes_upper95_sum_v1": 467,
     "adjudicated_yes_or_depends": 39,
-    "adjudicated_yes_or_depends_upper95": 467
+    "adjudicated_yes_or_depends_upper95_bonferroni": 555,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 467
    },
    "untagged_population": 2924
   },
@@ -270,6 +299,7 @@
     "n": 40,
     "agreement": 0.975,
     "kappa": 0.0,
+    "positive_agreement": 0.0,
     "A": {
      "NO": 40
     },
@@ -282,6 +312,7 @@
     "n": 21,
     "agreement": 0.952,
     "kappa": 0.909,
+    "positive_agreement": 1.0,
     "A": {
      "YES": 13,
      "DEPENDS": 4,
@@ -299,9 +330,11 @@
     "both_yes": 0,
     "either_yes_or_depends": 37,
     "adjudicated_yes": 0,
-    "adjudicated_yes_upper95": 416,
+    "adjudicated_yes_upper95_bonferroni": 504,
+    "adjudicated_yes_upper95_sum_v1": 416,
     "adjudicated_yes_or_depends": 0,
-    "adjudicated_yes_or_depends_upper95": 416
+    "adjudicated_yes_or_depends_upper95_bonferroni": 504,
+    "adjudicated_yes_or_depends_upper95_sum_v1": 416
    },
    "untagged_population": 2993
   }
@@ -310,12 +343,16 @@
   "untagged": {
    "n": 360,
    "agreement": 0.939,
-   "kappa": 0.204
+   "kappa": 0.204,
+   "positive_agreement": 0.214,
+   "positive_agreement_yes_only": 0.462
   },
   "challenge": {
    "n": 54,
    "agreement": 0.963,
-   "kappa": 0.934
+   "kappa": 0.934,
+   "positive_agreement": 1.0,
+   "positive_agreement_yes_only": 0.963
   }
  }
 }
