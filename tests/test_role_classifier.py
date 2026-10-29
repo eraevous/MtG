@@ -53,6 +53,10 @@ NO_TOKEN_ROLES = [  # sacrificing or caring about a token is not creating one; J
      'Creature', {'ramp', 'fixing'}),
     ('Junk maker', 'When this creature enters, create a Junk token.', 'Creature', {'draw'}),
     ('Afterlife lord', 'Creatures you control with afterlife get +1/+1.', 'Creature', {'token_maker'}),
+    # the token goes to someone else (Kate, 2026-10-29): no self-ramp, self-fixing or self-draw
+    ("Zuko's Exile", 'Exile target artifact, creature, or enchantment. Its controller creates a Clue token.', 'Instant', {'draw'}),
+    ('Opponent Treasure', 'Destroy target creature. Its controller creates a Treasure token.', 'Instant', {'ramp', 'fixing'}),
+    ('Gift Treasure', 'Target player creates a Treasure token.', 'Sorcery', {'ramp', 'fixing'}),
 ]
 
 
