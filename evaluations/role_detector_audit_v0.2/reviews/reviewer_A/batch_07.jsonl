@@ -1,0 +1,46 @@
+{"item": "R277", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Puts a basic land into hand, not onto the battlefield; no extra mana."}
+{"item": "R278", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Surveil; no game-ending effect."}
+{"item": "R279", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pump; no mana or colour."}
+{"item": "R280", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Impulse draw from library; no graveyard return."}
+{"item": "R281", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Edict and counters; no mana."}
+{"item": "R282", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Bounce removal; no mana."}
+{"item": "R283", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Copies spells; creates no tokens."}
+{"item": "R284", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Library tutor; no graveyard return."}
+{"item": "R285", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Symmetric creature cheat and fight; no protection."}
+{"item": "R286", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment and an Army; removes nothing."}
+{"item": "R287", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Static P/T modifier; no tokens."}
+{"item": "R288", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Copy or redirect; removes nothing by itself."}
+{"item": "R289", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Sweeper; no mana."}
+{"item": "R290", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters and lifelink on your own creature; removes nothing."}
+{"item": "R291", "answer": "NO", "evidence": "Flashback {2}{U}", "qualifiers": ["self_reuse"], "note": "Only reuses itself."}
+{"item": "R292", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pacifism-style removal of an opposing creature; protects nothing of yours."}
+{"item": "R293", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No tokens."}
+{"item": "R294", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tribal cost reducer and card selection; no colour."}
+{"item": "R295", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No tokens."}
+{"item": "R296", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counter doubler; no mana or colour."}
+{"item": "R297", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R298", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Graveyard-to-hand recursion on death; grants no protection."}
+{"item": "R299", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment; no draw."}
+{"item": "R300", "answer": "NO", "evidence": "Exploit (When this creature enters, you may sacrifice a creature.)", "qualifiers": ["one_shot_sacrifice"], "note": "ETB-only sacrifice."}
+{"item": "R301", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tap/stun and untap; no sacrifice."}
+{"item": "R302", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Expend payoff; no mana."}
+{"item": "R303", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Protection trick plus one populate; not a closer."}
+{"item": "R304", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Slow token generation; no drain, team pump or evasion."}
+{"item": "R305", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pump and Food; removes nothing."}
+{"item": "R306", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No protection."}
+{"item": "R307", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Bounces your creature; no mana."}
+{"item": "R308", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No draw."}
+{"item": "R309", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no mana or colour."}
+{"item": "R310", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Sweeper; no mana or colour."}
+{"item": "R311", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Transforms; creates no tokens."}
+{"item": "R312", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Lifegain and cycling; removes nothing."}
+{"item": "R313", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card draw; no protection."}
+{"item": "R314", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no sacrifice."}
+{"item": "R315", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Scry land; no graveyard return."}
+{"item": "R316", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Cost reducer and draw spell; not a closer."}
+{"item": "R317", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Reanimation that sacrifices your own creature; removes no opposing permanent."}
+{"item": "R318", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal aura; no draw."}
+{"item": "R319", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R320", "answer": "NO", "evidence": "If one or more artifact tokens would be created under your control, those tokens plus an additional 1/1 colorless Thopter artifact creature token with flying are created instead.", "qualifiers": ["token_multiplier"], "note": "Adds a Thopter only when another effect creates artifact tokens."}
+{"item": "R321", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self-sacrifice only."}
+{"item": "R322", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Anthem and tokens; no sacrifice."}

@@ -1,0 +1,46 @@
+{"item": "R369", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no draw."}
+{"item": "R370", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Graveyard recursion; not a closer."}
+{"item": "R371", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card selection; no mana."}
+{"item": "R372", "answer": "NO", "evidence": "Flashback {3}{R}", "qualifiers": ["self_reuse"], "note": "Only reuses itself."}
+{"item": "R373", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pinger; grants no protection."}
+{"item": "R374", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tri-land; not a closer."}
+{"item": "R375", "answer": "DEPENDS", "evidence": "another target Elemental you control gains myriad until end of turn. (Whenever it attacks, for each opponent other than defending player, you may create a token copy", "qualifiers": ["needs another Elemental", "multiplayer only (myriad)", "temporary tokens exiled at end of combat", "requires attacking"], "note": "Token creation depends on running other Elementals."}
+{"item": "R376", "answer": "NO", "evidence": "", "qualifiers": ["land_colour_access", "colours:U"], "note": "Produces one colour only."}
+{"item": "R377", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pump/evasion; no mana or colour."}
+{"item": "R378", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw engine; no mana or colour."}
+{"item": "R379", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self-pump; no draw."}
+{"item": "R380", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Returns an Island as an alternative cost; no sacrifice."}
+{"item": "R381", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Ping on tap; no sacrifice."}
+{"item": "R382", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Flash enabler and trigger doubler; no draw."}
+{"item": "R383", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Damage; no mana or colour."}
+{"item": "R384", "answer": "YES", "evidence": "Offspring {2}{B} ... create a 1/1 token copy of it.", "qualifiers": ["optional additional cost", "one-shot, one token"]}
+{"item": "R385", "answer": "YES", "evidence": "Equipped creature gets +5/+5 and has first strike, trample, indestructible, haste", "qualifiers": ["single equipped creature", "equip {7}", "living weapon germ is the first beneficiary"]}
+{"item": "R386", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Aristocrats drain; no mana or colour."}
+{"item": "R387", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Basic land; removes nothing."}
+{"item": "R388", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Flyer with self-bounce; not a closer."}
+{"item": "R389", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Spell recursion; grants no protection."}
+{"item": "R390", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Cost reducer; no tokens."}
+{"item": "R391", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tutor-to-graveyard and draw; no sacrifice."}
+{"item": "R392", "answer": "YES", "evidence": "Whenever this creature transforms into Ashling, Rimebound and at the beginning of your first main phase, add two mana of any one color. Spend this mana only to cast spells with mana value 4 or greater.", "qualifiers": ["restricted (mana value 4 or greater)", "conditional (must transform by paying {U})", "repeatable while on Rimebound face", "main-phase timing"]}
+{"item": "R393", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counter doubler and draw; no mana or colour."}
+{"item": "R394", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Small token spell; not a closer."}
+{"item": "R395", "answer": "DEPENDS", "evidence": "Populate. (Create a token that's a copy of a creature token you control.)", "qualifiers": ["needs an existing creature token to copy", "one-shot"], "note": "Creates a token only if another source already gave you a creature token."}
+{"item": "R396", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Spawn tokens and a sacrifice-to-ping ability; grants no protection."}
+{"item": "R397", "answer": "YES", "evidence": "Equipped creature has hexproof and can't be blocked.", "qualifiers": ["single equipped creature", "equip costs {2} and 2 life"]}
+{"item": "R398", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vanilla creature."}
+{"item": "R399", "answer": "NO", "evidence": "", "qualifiers": [], "note": "One-time pump and +1/+1 counters; not a repeatable or scaling closer."}
+{"item": "R400", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Attack-trigger removal; no mana."}
+{"item": "R401", "answer": "NO", "evidence": "Cycling {2}", "qualifiers": ["replacement"], "note": "Only draw is cycling."}
+{"item": "R402", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Discard outlet; no draw."}
+{"item": "R403", "answer": "YES", "evidence": "When Lumra enters, mill four cards. Then return all land cards from your graveyard to the battlefield tapped.", "qualifiers": ["land cards only", "one-shot on ETB"]}
+{"item": "R404", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Combat trick; no mana."}
+{"item": "R405", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw and pump; removes nothing."}
+{"item": "R406", "answer": "NO", "evidence": "You may sacrifice a Food.", "qualifiers": ["one_shot_sacrifice"], "note": "Spell-based one-time sacrifice."}
+{"item": "R407", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Lifegain; no mana or colour."}
+{"item": "R408", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mill; no graveyard return."}
+{"item": "R409", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment; no mana or colour."}
+{"item": "R410", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Artifact removal; no tokens."}
+{"item": "R411", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Trigger doubler; no draw."}
+{"item": "R412", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card draw; removes nothing."}
+{"item": "R413", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Body with counters; no graveyard return."}
+{"item": "R414", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Cost reducer and counter doubler; no draw."}

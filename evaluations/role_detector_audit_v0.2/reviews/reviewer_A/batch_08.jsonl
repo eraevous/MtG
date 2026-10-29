@@ -1,0 +1,46 @@
+{"item": "R323", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw and stun; no mana or colour."}
+{"item": "R324", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Burn spell; no graveyard return."}
+{"item": "R325", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self counters; removes nothing."}
+{"item": "R326", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana rock; removes nothing."}
+{"item": "R327", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Sweeper; no tokens."}
+{"item": "R328", "answer": "YES", "evidence": "Create a 3/3 green Centaur creature token, then populate.", "qualifiers": ["one-shot", "at least two tokens (populate can copy the Centaur)"]}
+{"item": "R329", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Protection trick; not a closer."}
+{"item": "R330", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; removes nothing."}
+{"item": "R331", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counterspell; no graveyard return."}
+{"item": "R332", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana and tapper; no tokens."}
+{"item": "R333", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Cost reducer; no tokens."}
+{"item": "R334", "answer": "DEPENDS", "evidence": "Other Frogs you control have ward {1}.", "qualifiers": ["Frogs only", "weak ward {1}", "ETB blink-on-damage is saving by blinking"], "note": "Protects others only in a deck with other Frogs."}
+{"item": "R335", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Token spell; no sacrifice."}
+{"item": "R336", "answer": "NO", "evidence": "At the beginning of your upkeep, sacrifice a creature.", "qualifiers": ["forced upkeep sacrifice, not at will"], "note": "Mandatory once-per-upkeep sacrifice, not an at-will outlet; it is a sacrifice-trigger generator."}
+{"item": "R337", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal and damage; no tokens."}
+{"item": "R338", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Recursion to hand; no mana."}
+{"item": "R339", "answer": "YES", "evidence": "Land cards in your graveyard have dredge 2. (You may return a land card from your graveyard to your hand ...)", "qualifiers": ["land cards only", "replaces a draw and mills two", "repeatable"]}
+{"item": "R340", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no graveyard return."}
+{"item": "R341", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Lifegain and graveyard casting; removes nothing."}
+{"item": "R342", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Lifegain; no tokens."}
+{"item": "R343", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no graveyard return."}
+{"item": "R344", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Food and counters; no draw."}
+{"item": "R345", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Sacrifices only itself."}
+{"item": "R346", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mill; no tokens."}
+{"item": "R347", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tapper; no draw."}
+{"item": "R348", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw and pump; no protection."}
+{"item": "R349", "answer": "YES", "evidence": "Offspring {2} ... create a 1/1 token copy of it.", "qualifiers": ["optional additional cost", "one-shot, one token"]}
+{"item": "R350", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Sacrifices only itself."}
+{"item": "R351", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment; no draw."}
+{"item": "R352", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; not a closer."}
+{"item": "R353", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; removes nothing."}
+{"item": "R354", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana or colour."}
+{"item": "R355", "answer": "NO", "evidence": "Cycling {2}", "qualifiers": ["replacement"], "note": "Only draw is cycling."}
+{"item": "R356", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment and amass; no draw."}
+{"item": "R357", "answer": "NO", "evidence": "", "qualifiers": [], "note": "-1/-1 counter and land drops; no protection."}
+{"item": "R358", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Loot on damage; no graveyard return."}
+{"item": "R359", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters, removal or drain; none of the listed protections."}
+{"item": "R360", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Filter land; no protection."}
+{"item": "R361", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Body with a drawback; removes nothing."}
+{"item": "R362", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Loot and lifegain; no tokens."}
+{"item": "R363", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Steals an artifact; no sacrifice."}
+{"item": "R364", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Surveil; no mana."}
+{"item": "R365", "answer": "NO", "evidence": "When this enchantment enters, you may sacrifice another enchantment or creature.", "qualifiers": ["one_shot_sacrifice"], "note": "ETB-only sacrifice."}
+{"item": "R366", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Token copies; no mana."}
+{"item": "R367", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R368", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana."}
