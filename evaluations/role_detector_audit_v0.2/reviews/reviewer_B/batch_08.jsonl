@@ -1,0 +1,46 @@
+{"item":"R323","answer":"NO","evidence":"","qualifiers":["card_draw_and_stun_counters_not_colour_fixing"]}
+{"item":"R324","answer":"NO","evidence":"","qualifiers":["damage_and_life_gain_not_recursion"]}
+{"item":"R325","answer":"NO","evidence":"","qualifiers":["plus_one_plus_one_counters_not_removal"]}
+{"item":"R326","answer":"NO","evidence":"","qualifiers":["mana_production_not_removal"]}
+{"item":"R327","answer":"NO","evidence":"","qualifiers":["damage_and_permanent_destruction_not_token_creation"]}
+{"item":"R328","answer":"YES","evidence":"Create a 3/3 green Centaur creature token, then populate. (Create a token that's a copy of a creature token you control.)","qualifiers":["creature_tokens","populate","creates_own_token_to_populate"]}
+{"item":"R329","answer":"NO","evidence":"","qualifiers":["single_creature_pump","hexproof_and_untap_not_closer"]}
+{"item":"R330","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R331","answer":"NO","evidence":"","qualifiers":["counterspell_not_graveyard_recursion"]}
+{"item":"R332","answer":"NO","evidence":"","qualifiers":["mana_production_and_tapping_not_token_creation"]}
+{"item":"R333","answer":"NO","evidence":"","qualifiers":["artifact_cost_reduction_not_token_creation"]}
+{"item":"R334","answer":"YES","evidence":"Other Frogs you control have ward {1}. When this creature enters, target creature you control can't be blocked this turn. Whenever that creature deals combat damage this turn, you may exile it. If you do, return it to the battlefield under its owner's control.","qualifiers":["ward_1","other_frogs_only","self_only_ward","blink_to_save_permanent","blink_requires_combat_damage"]}
+{"item":"R335","answer":"NO","evidence":"","qualifiers":["flashback","token_creation_not_sacrifice"]}
+{"item":"R336","answer":"NO","evidence":"","qualifiers":["repeatable_upkeep_sacrifice","mandatory_timing","not_at_will","sacrifice_trigger_draw"]}
+{"item":"R337","answer":"NO","evidence":"","qualifiers":["damage_effects_not_token_creation","self_sacrifice_only"]}
+{"item":"R338","answer":"NO","evidence":"","qualifiers":["graveyard_to_hand_recursion_not_mana_ramp"]}
+{"item":"R339","answer":"YES","evidence":"Land cards in your graveyard have dredge 2. (You may return a land card from your graveyard to your hand and mill two cards instead of drawing a card.)","qualifiers":["land_cards_only","graveyard_to_hand","dredge_2","replaces_card_draw","repeatable","requires_land_card_in_graveyard"]}
+{"item":"R340","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R341","answer":"NO","evidence":"","qualifiers":["graveyard_casting_not_removal"]}
+{"item":"R342","answer":"NO","evidence":"","qualifiers":["life_gain_not_token_creation"]}
+{"item":"R343","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R344","answer":"NO","evidence":"","qualifiers":["food_token_creation_not_card_draw","counters_and_life_gain"]}
+{"item":"R345","answer":"NO","evidence":"","qualifiers":["self_sacrifice_only","one_shot_sacrifice"]}
+{"item":"R346","answer":"NO","evidence":"","qualifiers":["opponent_mill_not_token_creation","sneak_bounces_attacker"]}
+{"item":"R347","answer":"NO","evidence":"","qualifiers":["tapping_creatures_not_card_draw"]}
+{"item":"R348","answer":"NO","evidence":"","qualifiers":["card_draw_and_self_pump_not_protection"]}
+{"item":"R349","answer":"YES","evidence":"Offspring {2} (You may pay an additional {2} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)","qualifiers":["offspring","additional_cost_2","enters_battlefield_trigger"]}
+{"item":"R350","answer":"NO","evidence":"","qualifiers":["self_sacrifice_only","discard_not_sacrifice"]}
+{"item":"R351","answer":"NO","evidence":"","qualifiers":["equipment_pump_not_card_draw","opponents_cannot_cast_spells_during_your_turn"]}
+{"item":"R352","answer":"NO","evidence":"","qualifiers":["mana_production_and_card_draw_not_closer"]}
+{"item":"R353","answer":"NO","evidence":"","qualifiers":["surveil_not_removal"]}
+{"item":"R354","answer":"NO","evidence":"","qualifiers":["sneak_and_team_pump_not_colour_fixing"]}
+{"item":"R355","answer":"NO","evidence":"Cycling {2} ({2}, Discard this card: Draw a card.)","qualifiers":["replacement","cycling"]}
+{"item":"R356","answer":"NO","evidence":"","qualifiers":["amass_and_equipment_attachment_not_card_draw"]}
+{"item":"R357","answer":"NO","evidence":"","qualifiers":["minus_one_minus_one_counter_not_protection","land_recursion_not_protection"]}
+{"item":"R358","answer":"NO","evidence":"","qualifiers":["card_draw_and_discard_not_graveyard_recursion"]}
+{"item":"R359","answer":"NO","evidence":"","qualifiers":["creature_pump_and_removal_not_protection"]}
+{"item":"R360","answer":"NO","evidence":"","qualifiers":["mana_production_not_protection"]}
+{"item":"R361","answer":"NO","evidence":"","qualifiers":["self_sacrifice_only","no_opposing_permanent_removal"]}
+{"item":"R362","answer":"NO","evidence":"","qualifiers":["self_reuse","flashback","card_draw_not_token_creation"]}
+{"item":"R363","answer":"NO","evidence":"","qualifiers":["ninjutsu_bounces_attacker_not_sacrifice","artifact_control_change_not_sacrifice"]}
+{"item":"R364","answer":"NO","evidence":"","qualifiers":["surveil_not_mana_ramp"]}
+{"item":"R365","answer":"NO","evidence":"","qualifiers":["one_shot_sacrifice","enters_battlefield_trigger","not_repeatable_at_will","sacrifice_trigger_manifest_dread"]}
+{"item":"R366","answer":"DEPENDS","evidence":"Create a token that's a copy of target creature. If this spell was kicked, create five of those tokens instead.","qualifiers":["requires_external_mana_producing_creature","creature_copy","kicker_5_for_five_copies","conditional","summoning_sickness_may_delay_mana_production"],"note":"Can increase mana production by copying a mana-producing creature, but requires a suitable creature to copy."}
+{"item":"R367","answer":"NO","evidence":"","qualifiers":["amass_creates_or_grows_army_not_sacrifice"]}
+{"item":"R368","answer":"NO","evidence":"","qualifiers":["power_and_toughness_scaling_not_mana_ramp"]}

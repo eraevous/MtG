@@ -1,0 +1,46 @@
+{"item": "R185", "answer": "NO", "evidence": "I — You may sacrifice a creature.", "qualifiers": ["one_shot_sacrifice"], "note": "Single chapter sacrifice, not repeatable at will."}
+{"item": "R186", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no protection."}
+{"item": "R187", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Proliferate; creates no tokens."}
+{"item": "R188", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw engine; no mana."}
+{"item": "R189", "answer": "YES", "evidence": "When this creature enters, create three 1/1 colorless Shapeshifter creature tokens with changeling. ... Encore {6}{W}{W} ... create a token copy", "qualifiers": ["one-shot on ETB", "encore tokens temporary"]}
+{"item": "R190", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Death-recursion payoff; no sacrifice ability."}
+{"item": "R191", "answer": "NO", "evidence": "return this card from your graveyard to the battlefield", "qualifiers": ["self_reuse"], "note": "Returns only itself."}
+{"item": "R192", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card draw; no mana."}
+{"item": "R193", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Artifact/enchantment removal; not a closer."}
+{"item": "R194", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana rock; no sacrifice."}
+{"item": "R195", "answer": "YES", "evidence": "If you sacrificed a creature this way, you may return another permanent card from your graveyard to the battlefield.", "qualifiers": ["requires you to have sacrificed a creature to its edict", "one-shot", "any permanent card"]}
+{"item": "R196", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Combat anthem; no graveyard return."}
+{"item": "R197", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Single growing creature with trample/lifelink; not a team-wide or repeatable closer."}
+{"item": "R198", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pinger; no sacrifice."}
+{"item": "R199", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pump and untap; no draw."}
+{"item": "R200", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana land; no draw."}
+{"item": "R201", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw/discard; no graveyard return."}
+{"item": "R202", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Earthbend animates an existing land; it creates no tokens."}
+{"item": "R203", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Graveyard hate; affects no permanent."}
+{"item": "R204", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Reanimation; no mana or colour."}
+{"item": "R205", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Threat and cost reducer; removes nothing."}
+{"item": "R206", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vanilla body."}
+{"item": "R207", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card draw; no protection."}
+{"item": "R208", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no ramp beyond the land drop."}
+{"item": "R209", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No removal."}
+{"item": "R210", "answer": "NO", "evidence": "{B}{G}: Return this card from your graveyard to the battlefield tapped.", "qualifiers": ["self_reuse"], "note": "Returns only itself."}
+{"item": "R211", "answer": "NO", "evidence": "", "qualifiers": [], "note": "A land tapping for one mana; no extra mana beyond the land drop."}
+{"item": "R212", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal and counters; no graveyard return."}
+{"item": "R213", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Storage land; no sacrifice."}
+{"item": "R214", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No card draw."}
+{"item": "R215", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R216", "answer": "YES", "evidence": "Frogs you control have '{T}: Add {G} or {U}. Spend this mana only to cast a creature spell.'", "qualifiers": ["persistent", "repeatable", "restricted (creature spells only)", "Clement is itself a Frog", "scales with Frogs"]}
+{"item": "R217", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R218", "answer": "NO", "evidence": "", "qualifiers": ["temporary tap/stun"], "note": "Taps and stuns two creatures for a turn; does not remove or lastingly neutralise a permanent."}
+{"item": "R219", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Lifegain; no graveyard return."}
+{"item": "R220", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no graveyard return."}
+{"item": "R221", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Discard; no game-ending effect."}
+{"item": "R222", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card advantage engine; no drain, pump or alternate win."}
+{"item": "R223", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana."}
+{"item": "R224", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana rock; not a closer."}
+{"item": "R225", "answer": "YES", "evidence": "Encore {7}{U}{U} ... For each opponent, create a token copy that attacks that opponent this turn", "qualifiers": ["from graveyard via encore", "expensive", "temporary tokens", "scales with opponent count"]}
+{"item": "R226", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Spot removal; not a closer."}
+{"item": "R227", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Graveyard hate and a counter; no draw."}
+{"item": "R228", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R229", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No tokens."}
+{"item": "R230", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Damage engine; no mana."}
