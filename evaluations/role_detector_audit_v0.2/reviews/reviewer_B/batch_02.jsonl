@@ -1,0 +1,46 @@
+{"item":"R047","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R048","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R049","answer":"NO","evidence":"","qualifiers":["bounce_from_battlefield_not_graveyard"]}
+{"item":"R050","answer":"YES","evidence":"Easy Pickings deals 1 damage to each creature your opponents control.","qualifiers":["adventure","1_damage","lethal_to_creatures_with_1_or_less_toughness","non_targeted_mass_damage"]}
+{"item":"R051","answer":"NO","evidence":"","qualifiers":["single_creature_pump","requires_max_speed"]}
+{"item":"R052","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R053","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R054","answer":"DEPENDS","evidence":"Tap three untapped Elves you control: Proliferate. Activate only as a sorcery. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)","qualifiers":["requires_external_poison_counter_source","requires_opponents_with_poison_counters","requires_three_untapped_elves","repeatable_proliferate","sorcery_speed"],"note":"Can advance opponents toward a poison-counter loss, but cannot establish poison counters itself."}
+{"item":"R055","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R056","answer":"NO","evidence":"","qualifiers":["tapping_not_sacrificing"]}
+{"item":"R057","answer":"NO","evidence":"","qualifiers":["self_sacrifice_only","one_shot_sacrifice","evoke"]}
+{"item":"R058","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R059","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R060","answer":"NO","evidence":"","qualifiers":["self_reuse","flashback"]}
+{"item":"R061","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R062","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R063","answer":"NO","evidence":"","qualifiers":["untapping_and_life_gain_not_protection"]}
+{"item":"R064","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R065","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R066","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R067","answer":"YES","evidence":"Search your library for a card, put that card into your hand, then shuffle.","qualifiers":["nonland_fixing","unrestricted_tutor_can_find_lands_of_multiple_colours","land_to_hand","sneak_alternative_cost"]}
+{"item":"R068","answer":"NO","evidence":"","qualifiers":["reanimation_not_protection"]}
+{"item":"R069","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R070","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R071","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R072","answer":"NO","evidence":"","qualifiers":["self_reanimation_not_protection"]}
+{"item":"R073","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R074","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R075","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R076","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R077","answer":"NO","evidence":"Cycling {2}{W} ({2}{W}, Discard this card: Draw a card.)","qualifiers":["replacement","cycling"]}
+{"item":"R078","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R079","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R080","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R081","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R082","answer":"NO","evidence":"","qualifiers":["land_to_hand_only","no_additional_land_drop"]}
+{"item":"R083","answer":"YES","evidence":"For each opponent, choose up to one target creature that player controls. Shellshock deals X damage to each of those creatures.","qualifiers":["X_damage","requires_sufficient_X_for_lethal_damage","up_to_one_creature_per_opponent","multiple_targets_possible"]}
+{"item":"R084","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R085","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R086","answer":"YES","evidence":"Offspring {1} (You may pay an additional {1} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)","qualifiers":["offspring","additional_cost_1","enters_battlefield_trigger"]}
+{"item":"R087","answer":"DEPENDS","evidence":"Whenever this creature attacks, you may tap another untapped Merfolk you control. When you do, return target creature card with mana value 3 or less from your graveyard to the battlefield.","qualifiers":["requires_mana_producing_creature_in_graveyard","mana_value_3_or_less","requires_another_untapped_merfolk","attack_trigger","conditional"],"note":"Can accelerate mana production by reanimating a mana-producing creature, but requires an external mana source in the graveyard."}
+{"item":"R088","answer":"NO","evidence":"","qualifiers":["counterspell_not_listed_protection_mechanism"]}
+{"item":"R089","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R090","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R091","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R092","answer":"NO","evidence":"","qualifiers":[]}

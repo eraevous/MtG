@@ -1,0 +1,46 @@
+{"item": "R093", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Clue on death; no mana."}
+{"item": "R094", "answer": "YES", "evidence": "Other artifacts you control have ward {2}.", "qualifiers": ["artifacts only"]}
+{"item": "R095", "answer": "YES", "evidence": "{T}: Add one mana of any color.", "qualifiers": ["persistent", "repeatable", "second mode restricted to Lesson spells", "summoning sick creature"]}
+{"item": "R096", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draws on death; returns nothing from graveyard."}
+{"item": "R097", "answer": "NO", "evidence": "Flashback {4}{W}{W}", "qualifiers": ["self_reuse"], "note": "Only reuses itself."}
+{"item": "R098", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self-returning creature; no mana or colour."}
+{"item": "R099", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes tokens; no sacrifice."}
+{"item": "R100", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Protection trick; no game-ending effect."}
+{"item": "R101", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No graveyard interaction."}
+{"item": "R102", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Clues and counters; no mana or colour."}
+{"item": "R103", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Scry on death; no tokens."}
+{"item": "R104", "answer": "DEPENDS", "evidence": "At the beginning of combat on your turn, populate. The token created this way gains haste. Sacrifice it at the beginning of the next end step.", "qualifiers": ["needs an existing creature token to copy", "temporary token", "repeatable each turn"], "note": "Creates tokens itself, but only if another source already gave you a creature token; close to token_multiplier."}
+{"item": "R105", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana."}
+{"item": "R106", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Stat boost and reach; no protective keyword."}
+{"item": "R107", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Untap effect; no draw."}
+{"item": "R108", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no tokens."}
+{"item": "R109", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Landfall counters; no mana."}
+{"item": "R110", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana dork and draw; no sacrifice."}
+{"item": "R111", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vanilla flash/reach body."}
+{"item": "R112", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land destruction and a token; no protection."}
+{"item": "R113", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana engine and symmetric draw; no drain, team pump or alternate win of its own."}
+{"item": "R114", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no draw."}
+{"item": "R115", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes Thopters; no draw."}
+{"item": "R116", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Grants unblockability; removes nothing."}
+{"item": "R117", "answer": "NO", "evidence": "", "qualifiers": [], "note": "A land that taps for one mana; normal land drop, no extra mana. (It is restricted fixing.)"}
+{"item": "R118", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No tokens."}
+{"item": "R119", "answer": "YES", "evidence": "Create a 1/1 white Bird creature token with flying, then populate.", "qualifiers": ["one-shot", "at least two tokens (populate can copy the Bird)"]}
+{"item": "R120", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Library tutor; no graveyard return."}
+{"item": "R121", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Fear is evasion, not one of the listed protections."}
+{"item": "R122", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counterspell; no mana or colour."}
+{"item": "R123", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice ability."}
+{"item": "R124", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters only; no tokens."}
+{"item": "R125", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Small -2/-2 effect; no game-ending effect."}
+{"item": "R126", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no tokens."}
+{"item": "R127", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal aura; no mana."}
+{"item": "R128", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Damage spell; no tokens."}
+{"item": "R129", "answer": "YES", "evidence": "When this Equipment enters, create a Treasure token. (... Add one mana of any color.)", "qualifiers": ["nonland_fixing", "one-shot"]}
+{"item": "R130", "answer": "YES", "evidence": "create a Lander token. (... {2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped", "qualifiers": ["one-shot land ramp", "costs {2} to crack", "enters tapped"]}
+{"item": "R131", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Cost reducer; no tokens."}
+{"item": "R132", "answer": "NO", "evidence": "Whenever this creature enters or attacks, you may sacrifice a token or a land.", "qualifiers": ["one_shot_sacrifice"], "note": "Sacrifice only on ETB/attack triggers, not at will."}
+{"item": "R133", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes a token; no protection."}
+{"item": "R134", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Dual land; no ramp beyond the land drop."}
+{"item": "R135", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Small self-growing creature; not a closer."}
+{"item": "R136", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; removes nothing."}
+{"item": "R137", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment and a Hero token; no mana or colour."}
+{"item": "R138", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana land; no card draw."}

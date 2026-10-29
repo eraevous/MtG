@@ -1,0 +1,46 @@
+{"item":"R231","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R232","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R233","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R234","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R235","answer":"NO","evidence":"","qualifiers":["plus_one_plus_one_counters_not_protection"]}
+{"item":"R236","answer":"YES","evidence":"Encore {7}{G}{G} ({7}{G}{G}, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)","qualifiers":["encore","requires_card_in_graveyard","mana_cost_7GG","temporary_tokens","sorcery_speed"]}
+{"item":"R237","answer":"NO","evidence":"","qualifiers":["token_multiplier","requires_external_token_creation"]}
+{"item":"R238","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R239","answer":"NO","evidence":"","qualifiers":["combat_damage_not_targeted_removal","menace","double_strike_at_max_speed"]}
+{"item":"R240","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R241","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R242","answer":"NO","evidence":"","qualifiers":["card_draw_not_closer","repeatable_only_while_winning_clashes"]}
+{"item":"R243","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R244","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R245","answer":"NO","evidence":"","qualifiers":["tap_and_stun_opposing_permanent_not_protection"]}
+{"item":"R246","answer":"NO","evidence":"","qualifiers":["creature_pump_not_protection"]}
+{"item":"R247","answer":"NO","evidence":"","qualifiers":["haste_and_shroud_not_mana_production"]}
+{"item":"R248","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R249","answer":"NO","evidence":"","qualifiers":["land_ramp_and_card_draw_not_closer"]}
+{"item":"R250","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R251","answer":"NO","evidence":"","qualifiers":["minus_one_minus_one_counter_not_sacrifice","untap_ability"]}
+{"item":"R252","answer":"NO","evidence":"","qualifiers":["token_multiplier","requires_external_token_creation","additional_food_tokens"]}
+{"item":"R253","answer":"NO","evidence":"","qualifiers":["opponent_creature_sacrifice","single_creature_evasion","flying_requires_station_7"]}
+{"item":"R254","answer":"YES","evidence":"Indestructible\nEquipped creature has indestructible.\nEquip {2}","qualifiers":["equipment","grants_indestructible","equipped_creature_only","equip_2","self_indestructible"]}
+{"item":"R255","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R256","answer":"NO","evidence":"","qualifiers":["token_multiplier","requires_external_token_creation","additional_mutagen_tokens"]}
+{"item":"R257","answer":"NO","evidence":"","qualifiers":["combat_pump_not_protection"]}
+{"item":"R258","answer":"NO","evidence":"","qualifiers":["animates_existing_land","regeneration_not_token_creation"]}
+{"item":"R259","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R260","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R261","answer":"NO","evidence":"","qualifiers":["grants_indestructible_not_mana_production"]}
+{"item":"R262","answer":"DEPENDS","evidence":"All nonland permanents are legendary.","qualifiers":["requires_opponent_controlling_multiple_nonland_permanents_with_same_name","legend_rule","indirect_removal","unusually_restrictive_setup"],"note":"Making all nonland permanents legendary can cause an opponent to put duplicate same-named permanents into the graveyard under the legend rule. Does not directly destroy or exile a target."}
+{"item":"R263","answer":"NO","evidence":"Cycling {1}{R} ({1}{R}, Discard this card: Draw a card.)","qualifiers":["replacement","cycling"]}
+{"item":"R264","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R265","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R266","answer":"NO","evidence":"","qualifiers":["impulse_card_advantage","exile_and_play_not_draw","attack_trigger","random_d20"]}
+{"item":"R267","answer":"NO","evidence":"","qualifiers":["single_creature_pump","three_plus_one_plus_one_counters","no_team_pump_or_evasion"]}
+{"item":"R268","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R269","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R270","answer":"DEPENDS","evidence":"Whenever you cast a noncreature spell, create a 1/1 colorless Servo artifact creature token. [−2]: Target artifact you control becomes a copy of another target artifact or creature you control until end of turn, except it's an artifact in addition to its other types.","qualifiers":["requires_external_mana_producing_artifact_or_creature","requires_artifact_to_copy_onto","loyalty_ability","temporary_copy","conditional"],"note":"Can turn an artifact into an additional mana-producing permanent by copying a mana source, subject to applicable tapping restrictions."}
+{"item":"R271","answer":"NO","evidence":"","qualifiers":["food_sacrifice_enables_land_search_not_closer"]}
+{"item":"R272","answer":"NO","evidence":"","qualifiers":["bounce_from_battlefield_not_graveyard","can_save_own_permanent"]}
+{"item":"R273","answer":"NO","evidence":"","qualifiers":["mass_damage_not_sacrifice"]}
+{"item":"R274","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R275","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R276","answer":"NO","evidence":"","qualifiers":["player_damage_not_permanent_removal"]}

@@ -1,0 +1,46 @@
+{"item":"R139","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R140","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R141","answer":"YES","evidence":"Offspring {2} (You may pay an additional {2} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)","qualifiers":["offspring","additional_cost_2","enters_battlefield_trigger"]}
+{"item":"R142","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R143","answer":"NO","evidence":"","qualifiers":["self_cost_reduction_only"]}
+{"item":"R144","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R145","answer":"YES","evidence":"Equipped creature gets +2/+1, has ward {1}, and is a Knight in addition to its other types.","qualifiers":["equipment","ward_1","equipped_creature_only","job_select","equip_4"]}
+{"item":"R146","answer":"NO","evidence":"","qualifiers":["counterspell_not_listed_protection_mechanism","can_move_own_permanent_to_library"]}
+{"item":"R147","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R148","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R149","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R150","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R151","answer":"DEPENDS","evidence":"Whenever you cast an instant or sorcery spell, Muddle becomes a copy of up to one target nonlegendary creature you control until end of turn, except it has myriad.","qualifiers":["requires_external_creature_with_card_draw_ability","requires_instant_or_sorcery","copy_effect","conditional"],"note":"Can copy a creature with a qualifying card-draw ability, but provides no card draw independently."}
+{"item":"R152","answer":"NO","evidence":"","qualifiers":["conditional_attacking","no_evasion_or_scaling"]}
+{"item":"R153","answer":"NO","evidence":"","qualifiers":["creates_self_sacrificing_tokens","self_sacrifice_only","no_at_will_sacrifice_of_another_permanent"]}
+{"item":"R154","answer":"NO","evidence":"","qualifiers":["counters_not_tokens"]}
+{"item":"R155","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R156","answer":"NO","evidence":"","qualifiers":["investigate_creates_clues_not_direct_win_condition"]}
+{"item":"R157","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R158","answer":"NO","evidence":"","qualifiers":["counterspell_not_listed_protection_mechanism"]}
+{"item":"R159","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R160","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R161","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R162","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R163","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R164","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R165","answer":"DEPENDS","evidence":"Destroy target artifact or enchantment, then populate. (Create a token that's a copy of a creature token you control.)","qualifiers":["populate","requires_existing_creature_token","requires_target_artifact_or_enchantment"],"note":"Populate creates a token directly but requires an existing creature token to copy."}
+{"item":"R166","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R167","answer":"NO","evidence":"","qualifiers":["self_reuse","flashback"]}
+{"item":"R168","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R169","answer":"YES","evidence":"Flying\nWhenever a source an opponent controls deals damage to you, you may put that many +1/+1 counters on this creature.","qualifiers":["single_creature_evasion","flying","scaling_power","requires_damage_from_opponent_controlled_source","conditional"]}
+{"item":"R170","answer":"NO","evidence":"","qualifiers":["deathtouch","life_gain_not_closer"]}
+{"item":"R171","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R172","answer":"NO","evidence":"","qualifiers":["reanimates_artifact_as_creature_not_token"]}
+{"item":"R173","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R174","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R175","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R176","answer":"NO","evidence":"","qualifiers":["untapping_permanents_not_direct_closer"]}
+{"item":"R177","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R178","answer":"NO","evidence":"","qualifiers":["surveil_not_draw"]}
+{"item":"R179","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R180","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R181","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R182","answer":"NO","evidence":"","qualifiers":["single_creature_pump","landfall","first_strike_not_evasion"]}
+{"item":"R183","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R184","answer":"DEPENDS","evidence":"Copy any number of target instant and/or sorcery spells. You may choose new targets for the copies.","qualifiers":["nonland_fixing","requires_external_instant_or_sorcery_with_colour_fixing_or_land_search","requires_qualifying_spell_on_stack","conditional"],"note":"Can copy a land-search or colour-fixing spell, but does not independently provide colour flexibility."}

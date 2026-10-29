@@ -1,0 +1,46 @@
+{"item": "R231", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Combat pump; no graveyard return."}
+{"item": "R232", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Proliferate; no mana or colour."}
+{"item": "R233", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vehicle; no mana."}
+{"item": "R234", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Soft counter and cycling; no tokens."}
+{"item": "R235", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters and draw; grants no protection."}
+{"item": "R236", "answer": "YES", "evidence": "Encore {7}{G}{G} ... For each opponent, create a token copy that attacks that opponent this turn", "qualifiers": ["from graveyard via encore", "expensive", "temporary tokens", "scales with opponent count"]}
+{"item": "R237", "answer": "NO", "evidence": "If one or more creature tokens would be created under your control, those tokens plus a 1/1 white Soldier creature token are created instead.", "qualifiers": ["token_multiplier"], "note": "Adds a token only when another effect creates creature tokens."}
+{"item": "R238", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counterspell; no sacrifice."}
+{"item": "R239", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Aggressive creature; removes nothing."}
+{"item": "R240", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; convoke taps, does not sacrifice."}
+{"item": "R241", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Library ordering; no sacrifice."}
+{"item": "R242", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card draw that costs you life; no damage to opponents or alternate win."}
+{"item": "R243", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no sacrifice."}
+{"item": "R244", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw; no protection."}
+{"item": "R245", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Taps an opposing permanent; no protection for yours."}
+{"item": "R246", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pump; no protective keyword."}
+{"item": "R247", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Haste and shroud; no mana."}
+{"item": "R248", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no mana or colour."}
+{"item": "R249", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Ramp and draw; not a closer."}
+{"item": "R250", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana or colour."}
+{"item": "R251", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Puts counters on itself; no sacrifice."}
+{"item": "R252", "answer": "NO", "evidence": "If one or more tokens would be created under your control, those tokens plus an additional Food token are created instead.", "qualifiers": ["token_multiplier"], "note": "Adds a Food only when another effect creates tokens."}
+{"item": "R253", "answer": "NO", "evidence": "", "qualifiers": [], "note": "One-time edict and a flyer once stationed; not a game-ending effect."}
+{"item": "R254", "answer": "YES", "evidence": "Equipped creature has indestructible.", "qualifiers": ["single equipped creature", "equip {2}"]}
+{"item": "R255", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R256", "answer": "NO", "evidence": "If one or more tokens would be created under your control, those tokens plus a Mutagen token are created instead.", "qualifiers": ["token_multiplier"], "note": "Adds a Mutagen only when another effect creates tokens."}
+{"item": "R257", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Token and pump; no protection."}
+{"item": "R258", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Manland animates itself; creates no tokens."}
+{"item": "R259", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tapped tri-land; no extra mana beyond the land drop."}
+{"item": "R260", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no tokens."}
+{"item": "R261", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Combat trick; no mana."}
+{"item": "R262", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Legend-rule enabler; removes nothing by itself."}
+{"item": "R263", "answer": "NO", "evidence": "Cycling {1}{R} ... Draw a card", "qualifiers": ["replacement"], "note": "Only draw is cycling."}
+{"item": "R264", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vanilla trample."}
+{"item": "R265", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana or colour."}
+{"item": "R266", "answer": "YES", "evidence": "Whenever this creature attacks, roll a d20. ... Exile the top card of your library. You may play it this turn.", "qualifiers": ["impulse draw (play this turn only)", "requires attacking", "random amount 1-3", "repeatable"]}
+{"item": "R267", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land ramp and a manifested body; not a closer."}
+{"item": "R268", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw and equip cost; no mana or colour."}
+{"item": "R269", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Modal removal; no mana."}
+{"item": "R270", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Servo tokens and copying; no mana."}
+{"item": "R271", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Food and land search; not a closer."}
+{"item": "R272", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Bounces your own permanent from battlefield; no graveyard return."}
+{"item": "R273", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Board wipe; no sacrifice."}
+{"item": "R274", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Graveyard hate and cantrip; no mana or colour."}
+{"item": "R275", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no protection."}
+{"item": "R276", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Ping to opponents and a Blood token; removes nothing."}

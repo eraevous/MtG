@@ -1,0 +1,46 @@
+{"item": "R001", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes a token and a counter; no mana or colour effect."}
+{"item": "R002", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Ordinary dual land played as a land drop; enters tapped. Fixing, not ramp."}
+{"item": "R003", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Exiles copies of itself from graveyard as a cost and tutors from library; returns nothing from graveyard."}
+{"item": "R004", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Returns an artifact to hand; no sacrifice."}
+{"item": "R005", "answer": "YES", "evidence": "Muddle becomes a copy of up to one target nonlegendary creature you control until end of turn, except it has myriad ... create a token copy that's tapped and attacking", "qualifiers": ["needs instant or sorcery cast before combat", "needs another nonlegendary creature", "multiplayer only (myriad)", "temporary tokens exiled at end of combat"]}
+{"item": "R006", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal of tapped creatures; no card draw."}
+{"item": "R007", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Token payoff, does not create tokens."}
+{"item": "R008", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana and Fractal tokens; nothing removes an opposing permanent."}
+{"item": "R009", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Recursion of a permanent card; no mana or colour."}
+{"item": "R010", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Untaps a permanent; no tokens."}
+{"item": "R011", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice ability."}
+{"item": "R012", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw engine; grants no protection."}
+{"item": "R013", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Artifact/enchantment removal; no mana."}
+{"item": "R014", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes a Treasure; no protection."}
+{"item": "R015", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Drain on death; no card draw."}
+{"item": "R016", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counter modifier; no graveyard interaction."}
+{"item": "R017", "answer": "YES", "evidence": "As long as you have an enduring story, artifacts and creatures you control have ward {1}.", "qualifiers": ["conditional: storied (three or more artifacts, legendaries and/or Sagas)", "weak ward {1}"]}
+{"item": "R018", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Card selection/draw; no protection."}
+{"item": "R019", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes tokens; removes nothing."}
+{"item": "R020", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no tokens."}
+{"item": "R021", "answer": "NO", "evidence": "Cycling {2}", "qualifiers": ["replacement"], "note": "Only draw is cycling, which replaces itself."}
+{"item": "R022", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Token replacement effect; no mana."}
+{"item": "R023", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Sacrifice-for-draw; no protection."}
+{"item": "R024", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Single creature grows from sacrifices; not a credible game-ending effect on its own."}
+{"item": "R025", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No graveyard interaction."}
+{"item": "R026", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes a token; no draw."}
+{"item": "R027", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Exiles from graveyard and cantrips; returns nothing."}
+{"item": "R028", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Removal; no draw."}
+{"item": "R029", "answer": "YES", "evidence": "Return each artifact and creature card with mana value X from your graveyard to the battlefield.", "qualifiers": ["pay X life", "only cards with mana value exactly X", "artifacts and creatures only", "one-shot mass reanimation"]}
+{"item": "R030", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters; no mana or colour."}
+{"item": "R031", "answer": "YES", "evidence": "Encore {5}{W} ... For each opponent, create a token copy that attacks that opponent this turn", "qualifiers": ["from graveyard via encore", "temporary tokens sacrificed at end step", "scales with opponent count", "one-shot"]}
+{"item": "R032", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment; creates no tokens."}
+{"item": "R033", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Ring tempts you; removes nothing."}
+{"item": "R034", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes tokens; no card draw."}
+{"item": "R035", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Copy and pump; no mana."}
+{"item": "R036", "answer": "YES", "evidence": "Offspring {2} ... create a 1/1 token copy of it.", "qualifiers": ["optional additional cost", "one-shot, one token"]}
+{"item": "R037", "answer": "YES", "evidence": "Encore {7}{R}{R} ... For each opponent, create a token copy that attacks that opponent this turn", "qualifiers": ["from graveyard via encore", "expensive", "temporary tokens sacrificed at end step", "scales with opponent count"]}
+{"item": "R038", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Death trigger makes tokens; removes nothing."}
+{"item": "R039", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self-shrinking body; no game-ending effect."}
+{"item": "R040", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Spot removal; does not end the game."}
+{"item": "R041", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vanilla creature."}
+{"item": "R042", "answer": "NO", "evidence": "", "qualifiers": ["single-creature haste"], "note": "+1/+0 and haste for one creature is not a closer."}
+{"item": "R043", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self-pump; removes nothing."}
+{"item": "R044", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Returns nothing from graveyard."}
+{"item": "R045", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No sacrifice."}
+{"item": "R046", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes tokens; no mana or colour."}

@@ -1,0 +1,46 @@
+{"item":"R093","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R094","answer":"YES","evidence":"Other artifacts you control have ward {2}.","qualifiers":["ward_2","other_artifacts_only"]}
+{"item":"R095","answer":"YES","evidence":"{T}: Add one mana of any color. {T}: Add two mana in any combination of colors. Spend this mana only to cast Lesson spells.","qualifiers":["persistent","repeatable","restricted","two_mana_only_for_Lesson_spells","tap_ability"]}
+{"item":"R096","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R097","answer":"NO","evidence":"","qualifiers":["self_reuse","flashback"]}
+{"item":"R098","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R099","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R100","answer":"NO","evidence":"","qualifiers":["single_creature_pump","hexproof_not_closer"]}
+{"item":"R101","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R102","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R103","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R104","answer":"DEPENDS","evidence":"At the beginning of combat on your turn, populate. The token created this way gains haste. Sacrifice it at the beginning of the next end step. (To populate, create a token that's a copy of a creature token you control.)","qualifiers":["requires_existing_creature_token","repeatable","combat_trigger","temporary_tokens"],"note":"Populate creates tokens directly but requires a creature token from another source."}
+{"item":"R105","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R106","answer":"NO","evidence":"","qualifiers":["untap_and_toughness_boost_not_listed_protection_mechanisms"]}
+{"item":"R107","answer":"NO","evidence":"","qualifiers":["untap_only","no_direct_card_draw"]}
+{"item":"R108","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R109","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R110","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R111","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R112","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R113","answer":"NO","evidence":"","qualifiers":["mana_generation_and_conditional_draw_not_closer"]}
+{"item":"R114","answer":"NO","evidence":"","qualifiers":["opponent_may_search_for_land","no_card_draw"]}
+{"item":"R115","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R116","answer":"NO","evidence":"","qualifiers":["evasion_not_removal"]}
+{"item":"R117","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production","restricted_coloured_mana"]}
+{"item":"R118","answer":"NO","evidence":"","qualifiers":["ability_counters_not_tokens"]}
+{"item":"R119","answer":"YES","evidence":"Create a 1/1 white Bird creature token with flying, then populate. (Create a token that's a copy of a creature token you control.)","qualifiers":["creature_tokens","populate","creates_own_token_to_populate"]}
+{"item":"R120","answer":"NO","evidence":"","qualifiers":["library_tutor_not_graveyard_recursion"]}
+{"item":"R121","answer":"NO","evidence":"","qualifiers":["fear_grants_evasion_not_protection"]}
+{"item":"R122","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R123","answer":"NO","evidence":"","qualifiers":["warp_exiles_not_sacrifices"]}
+{"item":"R124","answer":"NO","evidence":"","qualifiers":["counters_not_tokens"]}
+{"item":"R125","answer":"NO","evidence":"","qualifiers":["limited_counter_based_creature_weakening","no_repeatable_opponent_damage"]}
+{"item":"R126","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R127","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R128","answer":"NO","evidence":"","qualifiers":["sacrifices_permanent_but_creates_no_tokens"]}
+{"item":"R129","answer":"YES","evidence":"When this Equipment enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")","qualifiers":["nonland_fixing","treasure","any_colour","one_shot"]}
+{"item":"R130","answer":"YES","evidence":"When this creature enters, create a Lander token. (It's an artifact with \"{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\")","qualifiers":["one_shot_land_ramp","requires_2_mana_to_activate_Lander","land_enters_tapped","basic_land_search","conditional"]}
+{"item":"R131","answer":"YES","evidence":"Instant and sorcery spells you cast cost {1} less to cast.","qualifiers":["persistent","restricted","cost_reduction","instant_and_sorcery_spells_only"]}
+{"item":"R132","answer":"NO","evidence":"","qualifiers":["triggered_sacrifice","enters_or_attacks","not_at_will","limited_to_tokens_or_lands"]}
+{"item":"R133","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R134","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R135","answer":"NO","evidence":"","qualifiers":["single_creature_growth","combat_damage_required","no_evasion"]}
+{"item":"R136","answer":"NO","evidence":"","qualifiers":["player_life_loss_not_permanent_removal"]}
+{"item":"R137","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R138","answer":"NO","evidence":"","qualifiers":[]}
