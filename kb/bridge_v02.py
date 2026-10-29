@@ -23,7 +23,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import kbfacts as F
 
-DERIVATION_VERSION = 'kbfacts-0.2.1/mtg_eval_0.3.0+kb3'
+DERIVATION_VERSION = 'kbfacts-0.2.1/mtg_eval_0.3.0+kb4'
 
 
 class FactStore:

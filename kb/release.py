@@ -62,7 +62,7 @@ def manifest(out):
                                                 'sha256': sha(out / 'overrides' / 'oracle_reconciliation.jsonl')}},
         'scenarios': {'count': len(SC.load(out / 'scenarios')), 'registry_sha256': SC.registry_sha(out / 'scenarios'), 'version': meta['scenario_version']},
         'addendum': {'version': meta['addendum_version'], 'registry_delta_sha256': sha(out / 'addendum' / 'registry_delta_v0.1.json')},
-        'versions': {k: meta[k] for k in ('derivation_version', 'drafter_version', 'compiler_version')} | {'mtg_eval_vendored': '0.3.0+kb3', 'migrate': imp[3]},
+        'versions': {k: meta[k] for k in ('derivation_version', 'drafter_version', 'compiler_version')} | {'mtg_eval_vendored': '0.3.0+kb4', 'migrate': imp[3]},
         'database': {'file': 'mtg_cards_v0.2.sqlite', 'sha256': sha(out / 'mtg_cards_v0.2.sqlite'), 'bytes': (out / 'mtg_cards_v0.2.sqlite').stat().st_size,
                      'counts': {'cards': q('select count(*) from cards'), 'candidate_operations': q('select count(*) from candidate_operations'),
                                 'contracts': q('select count(*) from operation_contracts'), 'derived_facts': q('select count(*) from derived_facts'),
