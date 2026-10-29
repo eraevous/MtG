@@ -1,5 +1,6 @@
 """Mechanism challenge set for the role-detector audit v0.2. Tests known failure mechanisms; it is NOT
-used for population recall (Kate, 2026-10-28). Up to 5 owned cards per mechanism, fixed seed. Run from the repo root."""
+used for population recall (Kate, 2026-10-28). Up to 5 owned cards per mechanism, fixed seed. Run from the repo root.
+@ai-semantic-role: candidate-source (picks audit items only; its patterns never become claims)"""
 import json, random, re, sqlite3
 from pathlib import Path
 

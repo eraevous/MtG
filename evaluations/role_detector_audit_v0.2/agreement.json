@@ -1,0 +1,321 @@
+{
+ "roles": {
+  "closer": {
+   "untagged": {
+    "n": 40,
+    "agreement": 0.875,
+    "kappa": 0.0,
+    "A": {
+     "NO": 40
+    },
+    "B": {
+     "NO": 35,
+     "YES": 3,
+     "DEPENDS": 2
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 0,
+    "B_yes": 185,
+    "both_yes": 0,
+    "either_yes_or_depends": 265,
+    "adjudicated_yes": 0,
+    "adjudicated_yes_upper95": 402,
+    "adjudicated_yes_or_depends": 40,
+    "adjudicated_yes_or_depends_upper95": 464
+   },
+   "untagged_population": 2888
+  },
+  "draw": {
+   "untagged": {
+    "n": 40,
+    "agreement": 0.9,
+    "kappa": -0.019,
+    "A": {
+     "NO": 39,
+     "YES": 1
+    },
+    "B": {
+     "NO": 37,
+     "DEPENDS": 3
+    }
+   },
+   "challenge": {
+    "n": 5,
+    "agreement": 1.0,
+    "kappa": null,
+    "A": {
+     "NO": 5
+    },
+    "B": {
+     "NO": 5
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 108,
+    "B_yes": 0,
+    "both_yes": 0,
+    "either_yes_or_depends": 219,
+    "adjudicated_yes": 108,
+    "adjudicated_yes_upper95": 571,
+    "adjudicated_yes_or_depends": 108,
+    "adjudicated_yes_or_depends_upper95": 571
+   },
+   "untagged_population": 2904
+  },
+  "fixing": {
+   "untagged": {
+    "n": 40,
+    "agreement": 0.925,
+    "kappa": 0.381,
+    "A": {
+     "NO": 39,
+     "YES": 1
+    },
+    "B": {
+     "NO": 36,
+     "YES": 2,
+     "DEPENDS": 2
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 34,
+    "B_yes": 69,
+    "both_yes": 34,
+    "either_yes_or_depends": 225,
+    "adjudicated_yes": 34,
+    "adjudicated_yes_upper95": 486,
+    "adjudicated_yes_or_depends": 34,
+    "adjudicated_yes_or_depends_upper95": 486
+   },
+   "untagged_population": 3113
+  },
+  "protection": {
+   "untagged": {
+    "n": 40,
+    "agreement": 1.0,
+    "kappa": null,
+    "A": {
+     "NO": 40
+    },
+    "B": {
+     "NO": 40
+    }
+   },
+   "challenge": {
+    "n": 7,
+    "agreement": 0.857,
+    "kappa": 0.0,
+    "A": {
+     "YES": 6,
+     "DEPENDS": 1
+    },
+    "B": {
+     "YES": 7
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 0,
+    "B_yes": 0,
+    "both_yes": 0,
+    "either_yes_or_depends": 0,
+    "adjudicated_yes": 0,
+    "adjudicated_yes_upper95": 467,
+    "adjudicated_yes_or_depends": 0,
+    "adjudicated_yes_or_depends_upper95": 467
+   },
+   "untagged_population": 3354
+  },
+  "ramp": {
+   "untagged": {
+    "n": 40,
+    "agreement": 0.875,
+    "kappa": 0.267,
+    "A": {
+     "NO": 39,
+     "YES": 1
+    },
+    "B": {
+     "NO": 34,
+     "DEPENDS": 5,
+     "YES": 1
+    }
+   },
+   "challenge": {
+    "n": 5,
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "A": {
+     "YES": 3,
+     "NO": 2
+    },
+    "B": {
+     "YES": 3,
+     "NO": 2
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 121,
+    "B_yes": 121,
+    "both_yes": 121,
+    "either_yes_or_depends": 482,
+    "adjudicated_yes": 121,
+    "adjudicated_yes_upper95": 634,
+    "adjudicated_yes_or_depends": 121,
+    "adjudicated_yes_or_depends_upper95": 634
+   },
+   "untagged_population": 3213
+  },
+  "recursion": {
+   "untagged": {
+    "n": 40,
+    "agreement": 1.0,
+    "kappa": null,
+    "A": {
+     "NO": 40
+    },
+    "B": {
+     "NO": 40
+    }
+   },
+   "challenge": {
+    "n": 11,
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "A": {
+     "YES": 4,
+     "NO": 7
+    },
+    "B": {
+     "YES": 4,
+     "NO": 7
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 0,
+    "B_yes": 0,
+    "both_yes": 0,
+    "either_yes_or_depends": 0,
+    "adjudicated_yes": 0,
+    "adjudicated_yes_upper95": 454,
+    "adjudicated_yes_or_depends": 0,
+    "adjudicated_yes_or_depends_upper95": 454
+   },
+   "untagged_population": 3265
+  },
+  "sac_outlet": {
+   "untagged": {
+    "n": 40,
+    "agreement": 1.0,
+    "kappa": null,
+    "A": {
+     "NO": 40
+    },
+    "B": {
+     "NO": 40
+    }
+   },
+   "challenge": {
+    "n": 5,
+    "agreement": 1.0,
+    "kappa": null,
+    "A": {
+     "NO": 5
+    },
+    "B": {
+     "NO": 5
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 0,
+    "B_yes": 0,
+    "both_yes": 0,
+    "either_yes_or_depends": 0,
+    "adjudicated_yes": 0,
+    "adjudicated_yes_upper95": 470,
+    "adjudicated_yes_or_depends": 0,
+    "adjudicated_yes_or_depends_upper95": 470
+   },
+   "untagged_population": 3376
+  },
+  "spot_removal": {
+   "untagged": {
+    "n": 40,
+    "agreement": 0.9,
+    "kappa": 0.313,
+    "A": {
+     "NO": 39,
+     "YES": 1
+    },
+    "B": {
+     "NO": 35,
+     "YES": 2,
+     "DEPENDS": 3
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 39,
+    "B_yes": 78,
+    "both_yes": 39,
+    "either_yes_or_depends": 332,
+    "adjudicated_yes": 39,
+    "adjudicated_yes_upper95": 467,
+    "adjudicated_yes_or_depends": 39,
+    "adjudicated_yes_or_depends_upper95": 467
+   },
+   "untagged_population": 2924
+  },
+  "token_maker": {
+   "untagged": {
+    "n": 40,
+    "agreement": 0.975,
+    "kappa": 0.0,
+    "A": {
+     "NO": 40
+    },
+    "B": {
+     "NO": 39,
+     "YES": 1
+    }
+   },
+   "challenge": {
+    "n": 21,
+    "agreement": 0.952,
+    "kappa": 0.909,
+    "A": {
+     "YES": 13,
+     "DEPENDS": 4,
+     "NO": 4
+    },
+    "B": {
+     "YES": 14,
+     "DEPENDS": 3,
+     "NO": 4
+    }
+   },
+   "estimated_missed_cards": {
+    "A_yes": 0,
+    "B_yes": 37,
+    "both_yes": 0,
+    "either_yes_or_depends": 37,
+    "adjudicated_yes": 0,
+    "adjudicated_yes_upper95": 416,
+    "adjudicated_yes_or_depends": 0,
+    "adjudicated_yes_or_depends_upper95": 416
+   },
+   "untagged_population": 2993
+  }
+ },
+ "overall": {
+  "untagged": {
+   "n": 360,
+   "agreement": 0.939,
+   "kappa": 0.204
+  },
+  "challenge": {
+   "n": 54,
+   "agreement": 0.963,
+   "kappa": 0.934
+  }
+ }
+}

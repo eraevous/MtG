@@ -12,3 +12,4 @@
   - The KB stays frozen at r20261028 until results exist.
 - **Definitions:** D-0008 (accepted by Zach). D-0009 (proposed) includes Kate's operational clarifications for ramp, fixing and draw.
 - **Not measured here:** overall recall. The v0.1 detected-positive audit, the v0.1 tag-only audit and this untagged audit stay separate measures until they are combined with sampling weights.
+- **Results (2026-10-29):** both reviewers are frozen in `reviews/`. `compare.py` writes `agreement.json` and `reconciliation.jsonl`, which keeps both answers and the proposed adjudication from `adjudication_claude.jsonl`. The write-up is in `REPORT.md`.

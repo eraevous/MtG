@@ -1,0 +1,46 @@
+{"item":"R001","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R002","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R003","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R004","answer":"NO","evidence":"","qualifiers":["bounce_not_sacrifice"]}
+{"item":"R005","answer":"YES","evidence":"Whenever you cast an instant or sorcery spell, Muddle becomes a copy of up to one target nonlegendary creature you control until end of turn, except it has myriad. (Whenever it attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)","qualifiers":["requires_instant_or_sorcery","requires_nonlegendary_creature_to_copy","attack_trigger","multiplayer","temporary_tokens"]}
+{"item":"R006","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R007","answer":"NO","evidence":"","qualifiers":["token_death_payoff_not_token_creation"]}
+{"item":"R008","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R009","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R010","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R011","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R012","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R013","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R014","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R015","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R016","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R017","answer":"YES","evidence":"Storied (If you control three or more artifacts, legendaries, and/or Sagas, you have an enduring story for the rest of the game.) As long as you have an enduring story, artifacts and creatures you control have ward {1}.","qualifiers":["requires_enduring_story","three_or_more_artifacts_legendaries_and_or_sagas","ward_1"]}
+{"item":"R018","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R019","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R020","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R021","answer":"NO","evidence":"Cycling {2} ({2}, Discard this card: Draw a card.)","qualifiers":["replacement","cycling"]}
+{"item":"R022","answer":"DEPENDS","evidence":"As long as this Equipment is attached to a creature, the first time you would create one or more tokens each turn, you may instead create that many tokens that are copies of equipped creature.","qualifiers":["requires_equipped_mana_producing_creature","requires_external_token_creation","conditional"]}
+{"item":"R023","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R024","answer":"NO","evidence":"","qualifiers":["single_creature_growth","requires_sacrificing_other_permanents","no_evasion"]}
+{"item":"R025","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R026","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R027","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R028","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R029","answer":"YES","evidence":"As an additional cost to cast this spell, pay X life. Return each artifact and creature card with mana value X from your graveyard to the battlefield.","qualifiers":["pay_X_life","mana_value_must_equal_X","artifact_and_creature_cards","graveyard_to_battlefield"]}
+{"item":"R030","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R031","answer":"YES","evidence":"Encore {5}{W} ({5}{W}, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)","qualifiers":["encore","requires_card_in_graveyard","mana_cost_5W","temporary_tokens","sorcery_speed"]}
+{"item":"R032","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R033","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R034","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R035","answer":"DEPENDS","evidence":"At the beginning of combat on your turn, you may have Gogo become a copy of another target creature you control until end of turn, except its name is Gogo, Mysterious Mime. If you do, Gogo and that creature each get +2/+0 and gain haste until end of turn and attack this turn if able.","qualifiers":["requires_another_mana_producing_creature","copy_effect","temporary","conditional"]}
+{"item":"R036","answer":"YES","evidence":"Offspring {2} (You may pay an additional {2} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)","qualifiers":["offspring","additional_cost_2","enters_battlefield_trigger"]}
+{"item":"R037","answer":"YES","evidence":"Encore {7}{R}{R} ({7}{R}{R}, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)","qualifiers":["encore","requires_card_in_graveyard","mana_cost_7RR","temporary_tokens","sorcery_speed"]}
+{"item":"R038","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R039","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R040","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R041","answer":"NO","evidence":"","qualifiers":["no_oracle_abilities"]}
+{"item":"R042","answer":"NO","evidence":"","qualifiers":["single_creature_pump","haste_not_evasion"]}
+{"item":"R043","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R044","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R045","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R046","answer":"NO","evidence":"","qualifiers":[]}

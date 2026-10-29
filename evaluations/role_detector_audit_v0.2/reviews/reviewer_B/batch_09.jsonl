@@ -1,0 +1,46 @@
+{"item":"R369","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R370","answer":"NO","evidence":"","qualifiers":["graveyard_to_hand_recursion_not_closer"]}
+{"item":"R371","answer":"NO","evidence":"","qualifiers":["card_selection_not_mana_ramp","lands_to_hand_only","no_additional_land_drop"]}
+{"item":"R372","answer":"NO","evidence":"","qualifiers":["self_reuse","flashback"]}
+{"item":"R373","answer":"NO","evidence":"","qualifiers":["damage_to_attacking_or_blocking_creature_not_protection"]}
+{"item":"R374","answer":"NO","evidence":"","qualifiers":["mana_production_not_closer"]}
+{"item":"R375","answer":"YES","evidence":"At the beginning of combat on your turn, another target Elemental you control gains myriad until end of turn. (Whenever it attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)","qualifiers":["requires_another_elemental","attack_trigger","multiplayer","temporary_tokens","myriad"]}
+{"item":"R376","answer":"NO","evidence":"","qualifiers":["land_colour_access","colours:U","single_colour_only"]}
+{"item":"R377","answer":"NO","evidence":"","qualifiers":["hybrid_mana_cost_not_colour_fixing","grants_flying_not_mana"]}
+{"item":"R378","answer":"NO","evidence":"","qualifiers":["card_draw_and_scry_not_colour_fixing"]}
+{"item":"R379","answer":"NO","evidence":"","qualifiers":["landfall_creature_pump_not_card_draw"]}
+{"item":"R380","answer":"NO","evidence":"","qualifiers":["bounce_own_land_not_sacrifice"]}
+{"item":"R381","answer":"NO","evidence":"","qualifiers":["tap_trigger_deals_damage_not_sacrifice"]}
+{"item":"R382","answer":"DEPENDS","evidence":"If a legendary permanent or an artifact entering or leaving the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.","qualifiers":["requires_external_card_draw_trigger","requires_legendary_permanent_or_artifact_entering_or_leaving","trigger_doubling","conditional"],"note":"Can generate additional card draws by doubling qualifying triggered abilities, but does not independently draw cards."}
+{"item":"R383","answer":"NO","evidence":"","qualifiers":["discard_and_damage_not_colour_fixing"]}
+{"item":"R384","answer":"YES","evidence":"Offspring {2}{B} (You may pay an additional {2}{B} as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)","qualifiers":["offspring","additional_cost_2B","enters_battlefield_trigger"]}
+{"item":"R385","answer":"YES","evidence":"Equipped creature gets +5/+5 and has first strike, trample, indestructible, haste, and \"Whenever this creature deals combat damage to a creature, exile that creature.\" Equip {7}","qualifiers":["equipment","grants_indestructible","equipped_creature_only","equip_7","self_indestructible"]}
+{"item":"R386","answer":"NO","evidence":"","qualifiers":["damage_and_life_gain_not_colour_fixing"]}
+{"item":"R387","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production"]}
+{"item":"R388","answer":"NO","evidence":"","qualifiers":["single_creature_evasion","flying","no_scaling_or_team_evasion"]}
+{"item":"R389","answer":"NO","evidence":"","qualifiers":["graveyard_recursion_not_protection"]}
+{"item":"R390","answer":"NO","evidence":"","qualifiers":["cost_reduction_not_token_creation"]}
+{"item":"R391","answer":"NO","evidence":"","qualifiers":["graveyard_tutor_and_card_draw_not_sacrifice"]}
+{"item":"R392","answer":"YES","evidence":"Whenever this creature transforms into Ashling, Rimebound and at the beginning of your first main phase, add two mana of any one color. Spend this mana only to cast spells with mana value 4 or greater.","qualifiers":["persistent","repeatable","restricted","conditional","requires_transforming_into_rimebound","mana_value_4_or_greater_spells_only","first_main_phase"]}
+{"item":"R393","answer":"NO","evidence":"","qualifiers":["counter_multiplier_and_card_draw_not_colour_fixing"]}
+{"item":"R394","answer":"NO","evidence":"","qualifiers":["single_creature_prowess","self_reuse","flashback","no_evasion_or_team_pump"]}
+{"item":"R395","answer":"DEPENDS","evidence":"Populate. (Create a token that's a copy of a creature token you control.)","qualifiers":["populate","requires_existing_creature_token","conditional"],"note":"Populate creates a token directly but requires an existing creature token to copy."}
+{"item":"R396","answer":"NO","evidence":"","qualifiers":["token_creation_and_damage_not_protection"]}
+{"item":"R397","answer":"YES","evidence":"Equipped creature has hexproof and can't be blocked. Equip—{2}, Pay 2 life.","qualifiers":["equipment","grants_hexproof","equipped_creature_only","equip_cost_2_and_2_life"]}
+{"item":"R398","answer":"NO","evidence":"","qualifiers":["no_oracle_abilities"]}
+{"item":"R399","answer":"YES","evidence":"Target creature you control gets +2/+2 until end of turn. If this spell was kicked, put a +1/+1 counter on each creature you control.","qualifiers":["team_wide_permanent_pump","kicker_2W","scales_with_creature_count","requires_creatures","conditional"]}
+{"item":"R400","answer":"NO","evidence":"","qualifiers":["creature_exile_and_self_growth_not_mana_ramp"]}
+{"item":"R401","answer":"NO","evidence":"Cycling {2} ({2}, Discard this card: Draw a card.)","qualifiers":["replacement","cycling"]}
+{"item":"R402","answer":"NO","evidence":"","qualifiers":["discard_not_draw","madness"]}
+{"item":"R403","answer":"YES","evidence":"When Lumra enters, mill four cards. Then return all land cards from your graveyard to the battlefield tapped.","qualifiers":["land_cards_only","graveyard_to_battlefield","lands_enter_tapped","enters_battlefield_trigger","self_mill"]}
+{"item":"R404","answer":"NO","evidence":"","qualifiers":["creature_pump_and_weakening_not_mana_ramp"]}
+{"item":"R405","answer":"NO","evidence":"","qualifiers":["card_draw_and_self_pump_not_removal"]}
+{"item":"R406","answer":"NO","evidence":"","qualifiers":["one_shot_sacrifice","food_only","optional_sacrifice","not_repeatable_at_will"]}
+{"item":"R407","answer":"NO","evidence":"","qualifiers":["life_gain_not_colour_fixing"]}
+{"item":"R408","answer":"NO","evidence":"","qualifiers":["mill_not_graveyard_recursion"]}
+{"item":"R409","answer":"NO","evidence":"","qualifiers":["equipment_toughness_boost_not_colour_fixing"]}
+{"item":"R410","answer":"NO","evidence":"","qualifiers":["artifact_destruction_not_token_creation","overload"]}
+{"item":"R411","answer":"DEPENDS","evidence":"If a triggered ability of another Elemental you control triggers, it triggers an additional time.","qualifiers":["requires_another_elemental_with_card_draw_trigger","trigger_doubling","conditional"],"note":"Can generate additional card draws by doubling another Elemental's qualifying triggered ability, but provides no independent card draw."}
+{"item":"R412","answer":"NO","evidence":"","qualifiers":["card_selection_not_removal","delve"]}
+{"item":"R413","answer":"NO","evidence":"","qualifiers":["plus_one_plus_one_counters_not_recursion"]}
+{"item":"R414","answer":"NO","evidence":"","qualifiers":["cost_reduction_and_counter_doubling_not_card_draw"]}
