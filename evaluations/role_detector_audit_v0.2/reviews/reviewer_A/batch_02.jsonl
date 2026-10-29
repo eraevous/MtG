@@ -1,0 +1,46 @@
+{"item": "R047", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Evasion and counters; no graveyard interaction."}
+{"item": "R048", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Anthem of keywords; removes nothing."}
+{"item": "R049", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Returns an artifact from the battlefield, not the graveyard."}
+{"item": "R050", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Easy Pickings is 1 damage to each opposing creature: a weak sweeper, not single-target removal."}
+{"item": "R051", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Small body with a death token; no game-ending effect."}
+{"item": "R052", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana ritual; no graveyard interaction."}
+{"item": "R053", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tuck removal and cycling; no tokens."}
+{"item": "R054", "answer": "NO", "evidence": "", "qualifiers": [], "note": "-1/-1 counters on opposing creatures and proliferate; no drain, team pump, evasion or alternate win."}
+{"item": "R055", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No card draw."}
+{"item": "R056", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Taps a creature as a cost; no sacrifice of other permanents."}
+{"item": "R057", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Evoke sacrifices only itself; no outlet."}
+{"item": "R058", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Token replacement; no card draw."}
+{"item": "R059", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No graveyard interaction."}
+{"item": "R060", "answer": "NO", "evidence": "Flashback {5}{R}", "qualifiers": ["self_reuse"], "note": "Only reuses itself."}
+{"item": "R061", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Energy and Vehicle tokens; no sacrifice."}
+{"item": "R062", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Pings opponents; creates no tokens."}
+{"item": "R063", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Equipment grants pump and lifegain, no protective keyword."}
+{"item": "R064", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Discard; no mana."}
+{"item": "R065", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Loot and a Robot token; no mana production."}
+{"item": "R066", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Library search, not graveyard return."}
+{"item": "R067", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Generic tutor to hand; does not itself make or find more than one colour."}
+{"item": "R068", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Reanimation, not protection of permanents on the battlefield."}
+{"item": "R069", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Protection effect; no card draw."}
+{"item": "R070", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no protection."}
+{"item": "R071", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Life drain/gain; no protection."}
+{"item": "R072", "answer": "NO", "evidence": "", "qualifiers": ["self_reuse"], "note": "Returns only itself from graveyard; protects nothing."}
+{"item": "R073", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana."}
+{"item": "R074", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land making Treasure; no protection."}
+{"item": "R075", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Dual land; no protection."}
+{"item": "R076", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draws cards; no tokens."}
+{"item": "R077", "answer": "NO", "evidence": "Cycling {2}{W} ... Draw a card", "qualifiers": ["replacement"], "note": "Only draw is from cycling, which replaces itself."}
+{"item": "R078", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Grants combat keywords; no tokens."}
+{"item": "R079", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Protection trick; no draw."}
+{"item": "R080", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana aura; no card draw."}
+{"item": "R081", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters; no mana or colour."}
+{"item": "R082", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Puts a land into hand, not onto the battlefield; no extra mana."}
+{"item": "R083", "answer": "YES", "evidence": "For each opponent, choose up to one target creature that player controls. Shellshock deals X damage to each of those creatures.", "qualifiers": ["X damage: lethal only if X is high enough", "creatures only"]}
+{"item": "R084", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Damage and lifegain; no mana or colour."}
+{"item": "R085", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No graveyard interaction."}
+{"item": "R086", "answer": "YES", "evidence": "Offspring {1} ... create a 1/1 token copy of it.", "qualifiers": ["optional additional cost", "one-shot, one token"]}
+{"item": "R087", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Reanimation on attack; no mana."}
+{"item": "R088", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counterspell can stop removal, but grants none of the listed protection effects."}
+{"item": "R089", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Makes tokens; no sacrifice."}
+{"item": "R090", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Exile removal; no graveyard return."}
+{"item": "R091", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana aura; removes nothing."}
+{"item": "R092", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Fetch land; no game-ending effect."}

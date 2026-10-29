@@ -1,0 +1,43 @@
+{
+ "kb_release": "mtg-kb-v0.2.1-r20261028",
+ "seed_prefix": "audit-v0.2-untagged-",
+ "per_stratum": 20,
+ "strata": {
+  "spot_removal": {
+   "in_active_deck": 783,
+   "outside_active_decks": 2141
+  },
+  "protection": {
+   "in_active_deck": 875,
+   "outside_active_decks": 2479
+  },
+  "recursion": {
+   "in_active_deck": 823,
+   "outside_active_decks": 2442
+  },
+  "ramp": {
+   "in_active_deck": 788,
+   "outside_active_decks": 2425
+  },
+  "fixing": {
+   "in_active_deck": 689,
+   "outside_active_decks": 2424
+  },
+  "draw": {
+   "in_active_deck": 740,
+   "outside_active_decks": 2164
+  },
+  "closer": {
+   "in_active_deck": 803,
+   "outside_active_decks": 2085
+  },
+  "sac_outlet": {
+   "in_active_deck": 873,
+   "outside_active_decks": 2503
+  },
+  "token_maker": {
+   "in_active_deck": 747,
+   "outside_active_decks": 2246
+  }
+ }
+}

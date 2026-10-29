@@ -1,0 +1,46 @@
+{"item": "R139", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Draw and a token copy; removes nothing."}
+{"item": "R140", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Blink and a token; no card draw."}
+{"item": "R141", "answer": "YES", "evidence": "Offspring {2} ... create a 1/1 token copy of it.", "qualifiers": ["optional additional cost", "one-shot, one token"]}
+{"item": "R142", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mana land; removes nothing."}
+{"item": "R143", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Reduces only its own cost; produces no mana."}
+{"item": "R144", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Self-pump; no draw."}
+{"item": "R145", "answer": "YES", "evidence": "Equipped creature gets +2/+1, has ward {1}", "qualifiers": ["single equipped creature", "weak ward {1}", "equip {4}"]}
+{"item": "R146", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tuck removal or counter for noncreature spells; grants no listed protection."}
+{"item": "R147", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Landcycling; no graveyard return."}
+{"item": "R148", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Grants double strike; removes nothing."}
+{"item": "R149", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters; no tokens."}
+{"item": "R150", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Spot removal; not a closer."}
+{"item": "R151", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Copy effect; no card draw."}
+{"item": "R152", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Vanilla-ish attacker; no game-ending effect."}
+{"item": "R153", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Spawn tokens sacrifice only themselves; the card offers no outlet for other permanents."}
+{"item": "R154", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counters; no tokens."}
+{"item": "R155", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Exalted; no draw."}
+{"item": "R156", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Clue generation; no drain, team pump or alternate win."}
+{"item": "R157", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Graveyard-copy attacker; grants no protection."}
+{"item": "R158", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Counterspell; grants none of the listed protections."}
+{"item": "R159", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no graveyard return."}
+{"item": "R160", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Mutagen token is not mana."}
+{"item": "R161", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Free cast effect; no tokens."}
+{"item": "R162", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Tokens and mana; grants no protection."}
+{"item": "R163", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Fight removal; no graveyard return."}
+{"item": "R164", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Anthem; no graveyard return."}
+{"item": "R165", "answer": "DEPENDS", "evidence": "then populate. (Create a token that's a copy of a creature token you control.)", "qualifiers": ["needs an existing creature token to copy", "one-shot", "rider on artifact/enchantment removal"], "note": "Creates a token only if another source already gave you a creature token."}
+{"item": "R166", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no graveyard return."}
+{"item": "R167", "answer": "NO", "evidence": "Flashback {4}{B}", "qualifiers": ["self_reuse"], "note": "Only reuses itself."}
+{"item": "R168", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Cost reduction and pings; no protection."}
+{"item": "R169", "answer": "NO", "evidence": "", "qualifiers": ["single-creature evasion"], "note": "One flyer that grows reactively; not a credible closer by itself."}
+{"item": "R170", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Lifegain and deathtouch; no game-ending effect."}
+{"item": "R171", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Dragon and a loot; removes nothing."}
+{"item": "R172", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Damage and artifact reanimation; creates no tokens."}
+{"item": "R173", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land search to hand and Food; no graveyard return."}
+{"item": "R174", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No draw."}
+{"item": "R175", "answer": "NO", "evidence": "", "qualifiers": [], "note": "No mana."}
+{"item": "R176", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Untap effect; no drain, pump or alternate win of its own."}
+{"item": "R177", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Landers or counters; removes nothing."}
+{"item": "R178", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Surveil only; no draw."}
+{"item": "R179", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Bite removal; no mana or colour."}
+{"item": "R180", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Land; no tokens."}
+{"item": "R181", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Filter land; no graveyard return."}
+{"item": "R182", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Small single-target pump; not a closer."}
+{"item": "R183", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Loot, artifact recursion and counters; removes nothing."}
+{"item": "R184", "answer": "NO", "evidence": "", "qualifiers": [], "note": "Copies spells; no mana or colour."}

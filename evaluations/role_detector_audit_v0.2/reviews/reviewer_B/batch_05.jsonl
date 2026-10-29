@@ -1,0 +1,46 @@
+{"item":"R185","answer":"NO","evidence":"","qualifiers":["one_shot_sacrifice","chapter_I_only","not_repeatable_at_will"]}
+{"item":"R186","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R187","answer":"NO","evidence":"","qualifiers":["proliferate_counters_not_tokens"]}
+{"item":"R188","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R189","answer":"YES","evidence":"When this creature enters, create three 1/1 colorless Shapeshifter creature tokens with changeling. Encore {6}{W}{W} (Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able.)","qualifiers":["enters_battlefield_trigger","three_shapeshifter_tokens","encore","additional_temporary_token_copies","encore_requires_graveyard"]}
+{"item":"R190","answer":"NO","evidence":"","qualifiers":["death_trigger_not_sacrifice"]}
+{"item":"R191","answer":"NO","evidence":"","qualifiers":["self_reuse","self_reanimation_only"]}
+{"item":"R192","answer":"NO","evidence":"","qualifiers":["self_cost_reduction_only","card_draw_not_ramp"]}
+{"item":"R193","answer":"NO","evidence":"","qualifiers":["self_sacrifice_only","artifact_or_enchantment_removal"]}
+{"item":"R194","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R195","answer":"YES","evidence":"Each player sacrifices a creature of their choice. If you sacrificed a creature this way, you may return another permanent card from your graveyard to the battlefield.","qualifiers":["requires_sacrificing_a_creature","returns_another_permanent","graveyard_to_battlefield","conditional"]}
+{"item":"R196","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R197","answer":"YES","evidence":"Whenever a creature an opponent controls dies, put a number of +1/+1 counters on Vincent Valentine equal to that creature's power. Whenever Vincent Valentine attacks, you may transform it. Galian Beast — Trample, lifelink.","qualifiers":["scaling_single_creature_threat","requires_opposing_creatures_dying","single_creature_evasion","trample_on_transformed_face","attack_to_transform","conditional"]}
+{"item":"R198","answer":"NO","evidence":"","qualifiers":["damage_to_player_not_sacrifice"]}
+{"item":"R199","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R200","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R201","answer":"NO","evidence":"","qualifiers":["card_draw_and_discard_not_recursion"]}
+{"item":"R202","answer":"NO","evidence":"","qualifiers":["earthbend_animates_existing_land","counters_not_tokens"]}
+{"item":"R203","answer":"NO","evidence":"","qualifiers":["graveyard_exile_only","does_not_remove_battlefield_permanent"]}
+{"item":"R204","answer":"DEPENDS","evidence":"When this Spacecraft enters, return target creature or enchantment card from your graveyard to the battlefield.","qualifiers":["nonland_fixing","requires_external_multicolour_mana_producing_creature_or_enchantment_in_graveyard","conditional"],"note":"Can restore a colour-fixing creature or enchantment, but provides no independent colour-fixing ability."}
+{"item":"R205","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R206","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R207","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R208","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production","restricted_white_mana","creature_card_selection_not_land_ramp"]}
+{"item":"R209","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R210","answer":"NO","evidence":"","qualifiers":["self_reuse","self_reanimation_only"]}
+{"item":"R211","answer":"NO","evidence":"","qualifiers":["normal_land_mana_production","restricted_to_creature_spells"]}
+{"item":"R212","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R213","answer":"NO","evidence":"","qualifiers":["storage_counters_not_sacrifice"]}
+{"item":"R214","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R215","answer":"NO","evidence":"","qualifiers":["damage_trigger_not_sacrifice"]}
+{"item":"R216","answer":"YES","evidence":"Frogs you control have '{T}: Add {G} or {U}. Spend this mana only to cast a creature spell.'","qualifiers":["persistent","repeatable","restricted","mana_only_for_creature_spells","grants_mana_abilities_to_frogs","conditional"]}
+{"item":"R217","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R218","answer":"DEPENDS","evidence":"Tap up to two target creatures. Put a stun counter on each of them. (If a permanent with a stun counter would become untapped, remove one from it instead.)","qualifiers":["temporary_neutralization","up_to_two_creatures","tap_and_stun_counter","disputed_spot_removal_scope"],"note":"Depends on whether temporarily disabling creatures through tapping and stun counters qualifies as neutralization rather than merely a tempo effect."}
+{"item":"R219","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R220","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R221","answer":"NO","evidence":"","qualifiers":["discard_and_surveil_not_closer"]}
+{"item":"R222","answer":"NO","evidence":"","qualifiers":["repeatable_discover","no_direct_damage_drain_team_pump_evasion_or_alternate_win"]}
+{"item":"R223","answer":"NO","evidence":"","qualifiers":["prepared_spell_grants_combat_pump_not_mana"]}
+{"item":"R224","answer":"NO","evidence":"","qualifiers":["mana_production_not_closer"]}
+{"item":"R225","answer":"YES","evidence":"Encore {7}{U}{U} (Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)","qualifiers":["encore","requires_card_in_graveyard","mana_cost_7UU","temporary_tokens","sorcery_speed"]}
+{"item":"R226","answer":"NO","evidence":"","qualifiers":["single_permanent_exile_not_closer"]}
+{"item":"R227","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R228","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R229","answer":"NO","evidence":"","qualifiers":[]}
+{"item":"R230","answer":"NO","evidence":"","qualifiers":["opponent_damage_not_mana_ramp"]}
