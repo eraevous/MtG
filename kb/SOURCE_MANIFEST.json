@@ -1,7 +1,7 @@
 {
- "release": "mtg-kb-v0.2.1-r20261024d",
+ "release": "mtg-kb-v0.2.1-r20261028",
  "schema_version": "0.2.1",
- "built_utc": "2026-10-25T00:05:00+00:00",
+ "built_utc": "2026-10-28T22:00:00+00:00",
  "authorities": {
   "inventory": "working Google Sheet (cards.* via the v0.1 import; never edited)",
   "rules_text": "Scryfall Oracle, refresh run ed02ffb54a5b1a9d (rules_text table)",
@@ -11,9 +11,9 @@
  "inventory_source": {
   "canonical_sheet_id": "1N1xBUkL_aYKpPcR8WJJVpeicgE8A06dqeUBM-hUa3Xo",
   "drive_modified_utc": "2026-10-24T23:57:02.816Z",
-  "input_name": "canonical_20261024d.xlsx",
+  "input_name": "MTG_Master_Inventory_Canonical_export_20261024d.xlsx",
   "input_sha256": "d7a2d1912717e197adbbf858e65b6ad6d9dc8a7200ea885cbc6b2a39adf4bab4",
-  "v01_database_sha256": "9c4bc90a0906511f24d6f0e2e0f8e3a9b735d3e3082c2b9bb5a7d43bd1876efc",
+  "v01_database_sha256": "a0ad419a09e9eddec77817a42ce93cadf2de721dee9570c6ef870c7acd5e4167",
   "note": "read-only export; no Sheet edit during this release"
  },
  "oracle_refresh": {
@@ -52,15 +52,15 @@
   "registry_delta_sha256": "c963fcdea69eb4f7355ed8cb8bf1911cb2b87967c905256d8ce99ff3b8ea732c"
  },
  "versions": {
-  "derivation_version": "kbfacts-0.2.1/mtg_eval_0.3.0+kb2",
+  "derivation_version": "kbfacts-0.2.1/mtg_eval_0.3.0+kb3",
   "drafter_version": "contract-drafter-0.4.0",
   "compiler_version": "contract-compiler-0.3.0",
-  "mtg_eval_vendored": "0.3.0+kb2",
+  "mtg_eval_vendored": "0.3.0+kb3",
   "migrate": "migrate_v02-0.2.1"
  },
  "database": {
   "file": "mtg_cards_v0.2.sqlite",
-  "sha256": "e5f4a0c689a7445be2b3ffcb0b853ac5a84a33de03436a5e02651ad49cecfcc7",
+  "sha256": "c7f01455464a9f4bfe5bfc2d6345a10971de8ea6fc90989af6d7a65c5b4ba26f",
   "bytes": 106266624,
   "counts": {
    "cards": 3520,
@@ -86,6 +86,6 @@
    "compiled_actions": 0
   }
  },
- "rebuild": "python migrate_v02.py --v01 mtg_cards.sqlite --out mtg_cards_v0.2.sqlite --overlay overrides/review_overlay.jsonl --refresh-dir refresh --source-modified 2026-10-24T23:57:02.816Z --built-utc 2026-10-25T00:05:00+00:00",
+ "rebuild": "python migrate_v02.py --v01 mtg_cards.sqlite --out mtg_cards_v0.2.sqlite --overlay overrides/review_overlay.jsonl --refresh-dir refresh --source-modified 2026-10-24T23:57:02.816Z --built-utc 2026-10-28T22:00:00+00:00",
  "tests": "python -m unittest test_v02.py test_mtg_db.py test_acceptance.py"
 }

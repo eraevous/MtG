@@ -368,8 +368,14 @@ def context(c, deck=None):
     claims.append(claim(f'{deck} has a deck charter recording preferences and constraints.' if ch else
                         f'{deck} has no deck charter yet, so preferences and constraints are unknown to the tools.',
                         'preference', 'deck_charter' if ch else 'none'))
+    sole = ov['sole_detected_candidates']
+    named = '; '.join(k + ': ' + v['card'] for k, v in sorted(sole.items())) or 'none here'
+    claims.append(claim(f"{deck}'s role counts are detected candidates: {sum(ov['reviewed_role_counts'].values())} of "
+                        f"{sum(ov['role_counts'].values())} card-role assignments are reviewed. A sole detected candidate "
+                        f'({named}) is not a verified sole provider; read the card before protecting it or cutting around it.',
+                        'mechanics', 'semantic_reviewed' if ov['role_counts'] and ov['reviewed_role_counts'] == ov['role_counts'] else 'candidate'))
     return {'deck': deck, 'color_identity': kb.deck_ci(c, deck), 'cards': cards, 'charter': ch,
-            'roles': {'evidence': ov['evidence'], 'role_counts': ov['role_counts'], 'single_source_roles': ov['single_source_roles']}}, claims
+            'roles': {k: ov[k] for k in ('evidence', 'role_counts', 'reviewed_role_counts', 'sole_detected_candidates')}}, claims
 
 
 def card(c, name):
