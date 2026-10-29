@@ -28,8 +28,8 @@ def kappa(pairs):
     pe = sum(ca[c] * cb[c] for c in CATS) / n / n
     return None if pe == 1 else round((po - pe) / (1 - pe), 3)
 
-def upper95(x, n):
-    # One-sided 95% Clopper-Pearson upper bound by bisection (no scipy).
+def upper95(x, n, alpha=0.05):
+    # One-sided Clopper-Pearson upper bound at level 1-alpha, by bisection (no scipy).
     if x == n:
         return 1.0
     def tail(p):  # P(X <= x | n, p)
@@ -38,8 +38,14 @@ def upper95(x, n):
     lo, hi = x / n, 1.0
     for _ in range(60):
         mid = (lo + hi) / 2
-        lo, hi = (mid, hi) if tail(mid) > 0.05 else (lo, mid)
+        lo, hi = (mid, hi) if tail(mid) > alpha else (lo, mid)
     return hi
+
+def positive_agreement(pairs, pos=('YES', 'DEPENDS')):
+    # Positive specific agreement 2a/(2a+b+c): of the cards either reviewer called positive, how often both did.
+    both = sum(a in pos and b in pos for a, b in pairs)
+    one = sum((a in pos) != (b in pos) for a, b in pairs)
+    return round(2 * both / (2 * both + one), 3) if both + one else None
 
 def main():
     items, key = load('reviewer/batch_*.jsonl'), load('private_key.jsonl')
@@ -63,14 +69,15 @@ def main():
     for part in ('untagged', 'challenge'):
         pairs = [p for (pt, _, _), ps in groups.items() if pt == part for p in ps]
         out['overall'][part] = {'n': len(pairs), 'agreement': round(sum(a == b for a, b in pairs) / len(pairs), 3),
-                                'kappa': kappa(pairs)}
+                                'kappa': kappa(pairs), 'positive_agreement': positive_agreement(pairs),
+                                'positive_agreement_yes_only': positive_agreement(pairs, ('YES',))}
     for role in sorted({r for _, r, _ in groups}):
         row = {}
         for part in ('untagged', 'challenge'):
             pairs = [p for (pt, r, _), ps in groups.items() if pt == part and r == role for p in ps]
             if pairs:
                 row[part] = {'n': len(pairs), 'agreement': round(sum(a == b for a, b in pairs) / len(pairs), 3),
-                             'kappa': kappa(pairs), 'A': dict(Counter(a for a, _ in pairs)),
+                             'kappa': kappa(pairs), 'positive_agreement': positive_agreement(pairs), 'A': dict(Counter(a for a, _ in pairs)),
                              'B': dict(Counter(b for _, b in pairs))}
         # Weighted estimate of owned cards with no claim of this role that should have one. Two bounds per reviewer:
         # YES only, and YES or DEPENDS. Both reviewers YES gives a conservative floor.
@@ -84,14 +91,18 @@ def main():
                 total += size * sum(hit(a, b) for a, b in ps) / len(ps)
             est[label] = round(total)
         for label, ok in (('adjudicated_yes', ('YES',)), ('adjudicated_yes_or_depends', ('YES', 'DEPENDS'))):
-            total, hi = 0.0, 0.0
+            total, hi, hi_bonf = 0.0, 0.0, 0.0
             for stratum, size in pop[role].items():
                 fs = finals[('untagged', role, stratum)]
                 x = sum(f in ok for f in fs)
                 total += size * x / len(fs)
                 hi += size * upper95(x, len(fs))
+                hi_bonf += size * upper95(x, len(fs), 0.05 / len(pop[role]))
             est[label] = round(total)
-            est[label + '_upper95'] = round(hi)  # sum of per-stratum one-sided 95% bounds: conservative
+            # Kate (2026-10-29): summing per-stratum 95% bounds does not guarantee 95% coverage of the total. Bonferroni
+            # (97.5% per stratum for two strata) does, per role. The old sum is kept as the earlier calculation.
+            est[label + '_upper95_bonferroni'] = round(hi_bonf)
+            est[label + '_upper95_sum_v1'] = round(hi)
         row['estimated_missed_cards'] = est
         row['untagged_population'] = sum(pop[role].values())
         out['roles'][role] = row
