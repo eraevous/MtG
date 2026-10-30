@@ -1,12 +1,12 @@
 # mtg: tools a conversational AI can think with
 
-Six read-only verbs over Zach's MTG knowledgebase, with JSON output. A chat model (Claude, ChatGPT, …) calls them to answer exploratory questions such as "what could Terra do beyond the obvious enchantment plan?" The tools return the evidence and how far it is established. The model does the conversation, and the person decides.
+Seven read-only verbs over Zach's MTG knowledgebase, with JSON output. A chat model (Claude, ChatGPT, …) calls them to answer exploratory questions such as "what could Terra do beyond the obvious enchantment plan?" The tools return the evidence and how far it is established. The model does the conversation, and the person decides.
 
 Standard library only. Python 3.10+.
 
 ## Setup
 
-The verbs read the KB database, which is not in Git. Put `mtg_cards_v0.2.sqlite` (and `SOURCE_MANIFEST.json`, already in `kb/`) where `data/README.md` says. `compare` also needs an inventory export (`--workbook`, `MTG_WORKBOOK`, or the newest `data/*.xlsx`).
+The verbs read the KB database, which is not in Git. `python3 tools/kb_bootstrap.py install` puts `mtg_cards_v0.2.sqlite` in `kb/` (details in `data/README.md`). `dio` needs no database. `compare` also needs an inventory export (`--workbook`, `MTG_WORKBOOK`, or the newest `data/*.xlsx`).
 
 A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_v02.py` from your own export. A plain "bring your own collection" path is planned separately.
 
@@ -19,6 +19,7 @@ A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_
 | `explore [SEED] [--ci C] [--deck D] [--free] [--mode focused\|divergent]` | What could connect here? Seed is optional: a card, a commander or a theme (`landfall`, `self_mill`, …) | `python3 -m mtgtools explore "Terra, Magical Adept" --mode divergent` |
 | `hypothesis A B [--effect E] [--ci C]` | What would have to hold for A and B to interact, which links are unverified, and what argues against it? | `python3 -m mtgtools hypothesis "Cauldron of Essence" Knightfisher` |
 | `compare DECK OUT=IN …` | What does the evaluator's descriptive profile do under these swaps? | `python3 -m mtgtools compare TMNT "Crustacean Commando=Knockout Maneuver"` |
+| `dio TERM` | What does the ontology say? Quotes the DIO v3.1.1, addendum and A1–A7 sections that match, with file and line, plus a reading map. No database needed | `python3 -m mtgtools dio persistence`, `python3 -m mtgtools dio 7` |
 | `check FILE\|-` | For each claim in a draft answer, what does it rest on, what is missing, and does a structured assertion hold? | `echo '[{"text":"…","kind":"inventory","cards":["…"],"assert":{"free_min":1}}]' \| python3 -m mtgtools check -` |
 
 `explore` modes:
@@ -27,7 +28,9 @@ A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_
 
 ## Reading the output
 
-Every response is one envelope: `tool`, `version`, `verb`, `query`, `collection` (KB release and inventory snapshot hash), `summary`, `claims`, `data`, or `error`.
+Every response is one envelope: `tool`, `version`, `verb`, `query`, `collection` (KB release and inventory snapshot hash), `grounding`, `summary`, `claims`, `data`, or `error`.
+
+`grounding.level` says what the answer rests on: `kb_grounded` (the pinned KB release), `kb_unpinned` (another KB build), `doctrine_only` (no KB: nothing rests on DIO contracts) or `doctrine` (a `dio` lookup). Agents carry it into their answer (`docs/AGENT_GUIDE.md`).
 
 Each claim has a **kind**, and its **grade** is set per kind:
 
@@ -70,7 +73,7 @@ Same-card links show a card feeding itself, such as Terra's chapter IV returning
 
 The tools never move cards.
 
-**State of the evidence (r20261028).** 0 of 4,961 contracts are semantically reviewed, so today every mechanics claim is exploratory.
+**State of the evidence (r20261030).** 0 of 4,961 contracts are semantically reviewed, so today every mechanics claim is exploratory.
 
 ## Tests
 

@@ -1,4 +1,4 @@
-"""The six read-only verbs. Each returns a dict that the CLI wraps in the common envelope.
+"""The read-only verbs over the KB (the seventh, dio, lives in dio.py). Each returns a dict that the CLI wraps in the common envelope.
 
 Card meaning comes only from the KB (contracts, Oracle rules text) and the grammar layer's loop discovery (P-01).
 Nothing here parses card text. Interaction links are candidates unless both contracts are semantically reviewed (P-03),
@@ -32,7 +32,12 @@ def _card_row(c, name):
                                     (name.lower() + '%',))]
     if len(hits) == 1:
         return c.execute('select * from cards where card_name=?', (hits[0],)).fetchone()
-    raise LookupError(f'card not found: {name!r}' + (f'; did you mean one of {hits}' if hits else ''))
+    if hits:
+        raise LookupError(f'card not found: {name!r}; did you mean one of {hits}')
+    raise LookupError(f'card not found: {name!r}. The KB holds only cards in the inventory snapshot it was built from, so a '
+                      'card acquired since has no contract until the next KB release. Meanwhile annotate it by hand '
+                      '(python3 -m mtgtools dio 11), label that reading as agent-drafted, and explore the owned side with '
+                      'explore THEME or explore OWNED_CARD.')
 
 
 def _contracts(c, names=None):

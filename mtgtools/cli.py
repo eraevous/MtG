@@ -1,4 +1,4 @@
-"""Command line: one program, six read-only verbs, JSON out.
+"""Command line: one program, seven read-only verbs, JSON out.
 
   python3 -m mtgtools context [--deck Vraska]
   python3 -m mtgtools card "Terra, Magical Adept"
@@ -6,6 +6,7 @@
   python3 -m mtgtools hypothesis "Card A" "Card B" [--effect token.create] [--ci RG]
   python3 -m mtgtools compare TMNT "Crustacean Commando=Knockout Maneuver" [--workbook export.xlsx]
   python3 -m mtgtools check claims.json        (a JSON list of {text, kind, cards[], deck?, assert?})
+  python3 -m mtgtools dio "persistence"        (quote DIO sections; needs no database)
 
 --db picks the collection: any SQLite built by kb/migrate_v02.py (default kb/mtg_cards_v0.2.sqlite).
 """
@@ -16,9 +17,23 @@ import os
 import sys
 from pathlib import Path
 
-from . import __version__, kb, verbs
+from . import __version__, dio, kb, verbs
 
 ROOT = Path(__file__).resolve().parent.parent
+PIN = ROOT / 'tools' / 'kb_release.json'
+
+
+def grounding(db, verb):
+    """What this answer's card meaning rests on, so a reader can tell KB-grounded output from text-only fallback."""
+    if verb == 'dio':
+        return {'level': 'doctrine', 'note': 'DIO text only; no claim about a card.'}
+    if not Path(db).exists():
+        return {'level': 'doctrine_only', 'note': 'No KB database: nothing here rests on DIO contracts. Run '
+                'python3 tools/kb_bootstrap.py install. Until then label interaction claims as your own reading of Oracle text.'}
+    pinned = json.loads(PIN.read_text(encoding='utf-8'))['release'] if PIN.exists() else None
+    rel = kb.release(db).get('release')
+    return {'level': 'kb_grounded' if rel and rel == pinned else 'kb_unpinned', 'release': rel, 'pinned_release': pinned,
+            'note': 'Mechanics come from DIO candidate contracts in the KB (0 semantically reviewed unless a claim says so).'}
 
 
 def envelope(verb, query, db, data=None, claims=None, error=None):
@@ -28,6 +43,7 @@ def envelope(verb, query, db, data=None, claims=None, error=None):
         grades[c['grade']] = grades.get(c['grade'], 0) + 1
     out = {'tool': 'mtg', 'version': __version__, 'verb': verb, 'query': query,
            'collection': {'db': str(db), **kb.release(db)},
+           'grounding': grounding(db, verb),
            'summary': {'claims': len(claims), 'by_grade': grades},
            'read_me_first': 'Each claim carries its own kind and grade. decision_grade on one kind (inventory, rules_text, '
                             'mechanics) says nothing about the others. performance is never decision_grade in v0, and '
@@ -73,13 +89,19 @@ def main(argv=None):
     s = sub.add_parser('compare'); s.add_argument('deck'); s.add_argument('swaps', nargs='+', help='OUT=IN pairs')
     s.add_argument('--workbook'); s.add_argument('--engine-games', type=int, default=0)
     s = sub.add_parser('check'); s.add_argument('claims', help='JSON file with a list of claims, or - for stdin')
+    s = sub.add_parser('dio'); s.add_argument('term', help='a concept, mechanic or section number, e.g. persistence, blink, 6.4')
+    s.add_argument('--limit', type=int, default=5); s.add_argument('--max-chars', type=int, default=2500)
     a = p.parse_args(argv)
     query = {k: v for k, v in vars(a).items() if k not in ('verb', 'db') and v not in (None, False)}
-    if not Path(a.db).exists():
-        print(json.dumps(envelope(a.verb, query, a.db, error=f'collection database not found: {a.db} (see data/README.md)'), indent=2))
+    if a.verb != 'dio' and not Path(a.db).exists():
+        print(json.dumps(envelope(a.verb, query, a.db, error=f'collection database not found: {a.db}. Install it with '
+                                  'python3 tools/kb_bootstrap.py install (see data/README.md). The DIO itself needs no '
+                                  'database: python3 -m mtgtools dio TERM'), indent=2))
         return 2
     try:
-        if a.verb == 'compare':
+        if a.verb == 'dio':
+            data, claims = dio.lookup(a.term, a.limit, a.max_chars)
+        elif a.verb == 'compare':
             data, claims = verbs.compare(a.deck, a.swaps, _workbook(a), a.engine_games)
         else:
             with closing(kb.connect(a.db)) as c:

@@ -10,6 +10,7 @@ The repo is public; the inventory Sheet it was built around is not. To run the e
 
 ## Start here
 
+0. **Asking about cards, decks or interactions (agents included)?** Run `python3 tools/kb_bootstrap.py status`, then follow [`docs/AGENT_GUIDE.md`](docs/AGENT_GUIDE.md). It routes the question through the KB and the DIO instead of a fresh reading of Oracle text.
 1. `codex_++/project.purpose.md`: what this project is for (P-00) and the contracts (P-01 to P-08) that changes must not break.
 2. `docs/handoff/START_HERE.md` and `docs/handoff/00_CURRENT_STATE.md`: what exists, with its numbers and open decisions.
 3. `docs/charter/`: the proposed Deck Behavioral Model charter v0.1, pending Zach's review.
@@ -19,7 +20,7 @@ The repo is public; the inventory Sheet it was built around is not. To run the e
 
 | Path | What | Authority over |
 |---|---|---|
-| `kb/` | SQLite knowledgebase v0.2.1 (r20261028) as released: build, migrate, query (`kbq.py`), audit, review overlay, Oracle refresh snapshots, doctrine (`reference_sources/`), DIO addendum, vendored evaluator `kb/vendor/mtg_eval` (0.3.0+kb3) | derived candidate contracts, never hand-edited |
+| `kb/` | SQLite knowledgebase v0.2.1 (r20261030) as released: build, migrate, query (`kbq.py`), audit, review overlay, Oracle refresh snapshots, doctrine (`reference_sources/`), DIO addendum, vendored evaluator `kb/vendor/mtg_eval` (0.3.0+kb4) | derived candidate contracts, never hand-edited |
 | `grammar/` | Oracle grammar layer v0.2: Oracle phrases → templates → DIO concepts → candidate contracts; loop discovery; validation | candidate interpretations |
 | `review_packet/` | 330 candidate operations in 88 mechanical classes, waiting for Zach's class-level verdicts | none (a review queue) |
 | `evaluations/` | Deck reports from 2026-10-25 for all 13 decks | descriptive only |
@@ -28,7 +29,7 @@ The repo is public; the inventory Sheet it was built around is not. To run the e
 | `challenges/` | Append-only unresolved objections and known defects | n/a |
 | `codex_++/` | Project purpose, module purpose files, drift fixtures | design intent |
 | `collection/` | Bring-your-own collection database: schema, importers (CSV, Sheet .xlsx, decklists), Scryfall enrichment | the user's ownership and allocation (for Zach, a snapshot of the Sheet) |
-| `tools/` | `drift_check.py` (AEC checks), `ast_dependency_extractor.py` | n/a |
+| `tools/` | `kb_bootstrap.py` (KB status and install), `drift_check.py` (AEC checks), `ast_dependency_extractor.py` | n/a |
 | `docs/` | Handoff docs and the charter | n/a |
 | `data/` | Where the gitignored databases and inventory export go (see `data/README.md`) | n/a |
 
@@ -46,9 +47,12 @@ python3 -m unittest discover -s tests
 # grammar layer unit tests (no data needed)
 cd grammar && python3 -m unittest tests.py && cd ..
 
-# KB tests and queries: first put the databases in kb/ (see data/README.md)
+# KB tests and queries: first install the databases into kb/ (data/README.md)
+python3 tools/kb_bootstrap.py install
+python3 -m mtgtools dio "persistence"          # the DIO itself, no database needed
 cd kb && python3 -m unittest test_v02.py test_mtg_db.py test_acceptance.py
 python3 kbq.py card "Emmara, Soul of the Accord"
+# the evaluator: descriptive deck profiles from its own text patterns, not DIO contracts (C-012)
 PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/<export>.xlsx deck "Token Triumph"
 # ...or a collection database (docs/BRING_YOUR_OWN_COLLECTION.md)
 PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/my_collection.sqlite deck "My Deck"
