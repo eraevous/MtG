@@ -32,7 +32,7 @@ Zach's inventory authority is the live Google Sheet. Exports and the KB are snap
 This is the step the Codex thread skipped. For each card in question:
 
 1. **Read what the KB records:** run `python3 -m mtgtools card NAME`. It returns the Oracle text, the DIO contract readings (hooks, operations, requirement groups) and their review state.
-2. **If the card is not in the KB:** a card acquired after the KB's inventory snapshot has no contract yet. `card` says so. Annotate it yourself with the DIO procedure (`python3 -m mtgtools dio 11`): one Operation per ability that matters, with requirement groups, amplifiers and result, in DIO vocabulary (`dio 4` hooks, `dio 5` operations). Label that annotation `agent-drafted, not in KB`.
+2. **If the card is not in the KB:** a card acquired after the KB's inventory snapshot has no contract yet. `card` says so. Get its exact Oracle text from Scryfall (`https://api.scryfall.com/cards/named?exact=NAME`) when you have network access; if you work from memory, say so. Annotate it yourself with the DIO procedure (`python3 -m mtgtools dio 11`): one Operation per ability that matters, with requirement groups, amplifiers and result, in DIO vocabulary (`dio 4` hooks, `dio 5` operations). Label that annotation `agent-drafted, not in KB`.
 3. **Find what connects:**
    - `explore NAME` (focused mode) lists links and loop candidates touching the card.
    - `explore NAME --mode divergent` lists two-step chains through pathways the card does not use itself. This is where unconventional interactions show up.
@@ -46,7 +46,9 @@ This is the step the Codex thread skipped. For each card in question:
    - the route patterns in §10 (blink, bounce, sacrifice, laundering, …);
    - the persistence table in §6.4 for anything that changes zones, copies or turns face down;
    - addendum §6 for fuel and feedstock.
-6. **Check your draft:** `check` grades each claim in a draft answer by kind, and tests structured assertions (`mtgtools/README.md`).
+6. **When the verbs run out:** `explore` cannot seed from a card that is not in the KB, and a token whose characteristics the contracts do not record (Treasure, for example) gives unresolved noise. Then query the KB directly: `kb/kbq.py`, or read-only SQL (`mode=ro`) on `kb/mtg_cards_v0.2.sqlite`, for example owned cards whose contracts trigger on the hook your annotation produces. That is expected. Say which queries you ran.
+7. **Record what the KB missed:** when you find a connection the contracts do not support (a missing link, a contract that misreads Oracle text), list it in your answer as a KB gap. Append it to `challenges/ledger.jsonl` only if you were asked to change the repo.
+8. **Check your draft:** `check` grades each claim in a draft answer by kind, and tests structured assertions (`mtgtools/README.md`).
 
 `python3 -m mtgtools dio TERM` quotes the matching DIO sections, with file and line, and works with or without the KB. Its `reading_map` says where to start for common questions. Cite the sections you relied on.
 

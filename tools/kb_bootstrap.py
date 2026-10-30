@@ -180,6 +180,7 @@ def main(argv=None) -> int:
                     print(f'error: {pin["zip_name"]} is not in {", ".join(pin["search_dirs"])} and the download failed '
                           f'({e}). Ask Zach for the release zip, or pass --zip / --url. See data/README.md.', file=sys.stderr)
                     return 2
+        print(f'source: {zp}')
         for line in install(zp, pin=pin):
             print(line)
     except (ValueError, zipfile.BadZipFile, OSError) as e:
