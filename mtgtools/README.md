@@ -70,7 +70,7 @@ Same-card links show a card feeding itself, such as Terra's chapter IV returning
 
 The tools never move cards.
 
-**State of the evidence (r20261028).** 0 of 4,961 contracts are semantically reviewed, so today every mechanics claim is exploratory.
+**State of the evidence (r20261030).** 0 of 4,961 contracts are semantically reviewed, so today every mechanics claim is exploratory.
 
 ## Tests
 

@@ -104,7 +104,7 @@ class Verbs(unittest.TestCase):
     def test_envelope_names_its_collection(self):
         code, out = self.run_cli('context')
         self.assertEqual(code, 0)
-        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261028')
+        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261030')
         self.assertTrue(all({'kind', 'support', 'grade'} <= set(c) for c in out['claims']))
 
     def test_card_separates_oracle_text_from_contract_readings(self):
@@ -113,7 +113,7 @@ class Verbs(unittest.TestCase):
         kinds = {c['kind']: c for c in out['claims']}
         self.assertEqual(kinds['rules_text']['grade'], 'decision_grade')
         mech = [c for c in out['claims'] if c['kind'] == 'mechanics']
-        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261028
+        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261030
 
     def test_explore_works_without_a_seed_and_marks_discovery(self):
         code, out = self.run_cli('explore', '--ci', 'RG', '--limit', '5')

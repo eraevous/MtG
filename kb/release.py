@@ -11,12 +11,12 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import review as R, reconcile as RC, scenarios as SC
 
-INCLUDE = ['mtg_cards.sqlite', 'mtg_cards_v0.2.sqlite', 'schema.sql', 'schema_v02.sql', 'README.md', 'README_v0.2.md', 'RELEASE_NOTES_v0.2.1.md', 'RELEASE_NOTES_v0.2.1-r20261024.md', 'RELEASE_NOTES_v0.2.1-r20261024b.md', 'RELEASE_NOTES_v0.2.1-r20261024c.md', 'RELEASE_NOTES_v0.2.1-r20261024d.md', 'RELEASE_NOTES_v0.2.1-r20261028.md',
+INCLUDE = ['mtg_cards.sqlite', 'mtg_cards_v0.2.sqlite', 'schema.sql', 'schema_v02.sql', 'README.md', 'README_v0.2.md', 'RELEASE_NOTES_v0.2.1.md', 'RELEASE_NOTES_v0.2.1-r20261024.md', 'RELEASE_NOTES_v0.2.1-r20261024b.md', 'RELEASE_NOTES_v0.2.1-r20261024c.md', 'RELEASE_NOTES_v0.2.1-r20261024d.md', 'RELEASE_NOTES_v0.2.1-r20261028.md', 'RELEASE_NOTES_v0.2.1-r20261030.md',
            'ONTOLOGY_ALIGNMENT.md', 'CLAUDE_HANDOFF.md', 'AUDIT.json', 'VERSION.json',
            'addendum', 'overrides', 'refresh', 'scenarios', 'reports', 'reference_sources', 'vendor', 'mtg_eval_release',
            'MTG_Inventory_Governance_2026-10-18']
 SKIP = {'__pycache__', '.building'}
-RELEASE = 'mtg-kb-v0.2.1-r20261028'
+RELEASE = 'mtg-kb-v0.2.1-r20261030'
 
 
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
