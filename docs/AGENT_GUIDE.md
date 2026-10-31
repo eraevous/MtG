@@ -83,7 +83,8 @@ The rules behind this line:
 | A commander | Protocol v1.0 new-deck | the requirements profile, then the commander's hooks |
 | A mechanical thesis (sacrifice, blink, landfall) | v1.1/v1.2 inventory-first | `explore THEME --free`, then modules, color topology, commander |
 | A creature type (Merfolk, Elves) | typal-first, §6.2 (proposed, D-0016) | `typal TYPE` |
-| Swaps or transfers between decks | v1.2 portfolio allocation | `card NAME` availability tiers, donor-deck impact |
+| Swaps or transfers between decks that all stay playable | v1.2 portfolio allocation | `card NAME` availability tiers, donor-deck impact |
+| Retiring a deck to feed another | decommission, §6.5 (proposed, D-0017) | `release DONOR --to RECEIVER` |
 
 ### 6.2 Typal-first path (proposed)
 
@@ -116,7 +117,29 @@ Creature type → owned type population → generic type support → mechanical 
 
 ### 6.4 Reading inventory results
 
-Map columns by header name, never by position. Check your record count against the count the connector reported. In the 2026-10-31 test, a positional parser reported zero Merfolk out of 35.
+- Map columns by header name, never by position.
+- Check your record count against the count the connector reported. In the 2026-10-31 test, a positional parser reported zero Merfolk out of 35.
+- A deck's list is the rows with that Deck **and** Status "Current deck". A search for the deck's name anywhere in a row also returns its bench, its reserves and other decks' proposed borrowing. In the 2026-10-31 test, "TMNT" matched 158 rows, of which 92 were the deck. `mtgtools` already counts only current-deck rows.
+- A deck may be recorded under a name other than its commander's: Auntie Ool's deck is "Blight Curse". `mtgtools` accepts either name.
+
+### 6.5 Decommission: retiring a deck to feed another (proposed)
+
+Taking cards from a deck that stays playable is a v1.2 transfer: the donor's engine, replacements and deck floor stay constraints. Retiring the donor is a different operation, and its floor stops mattering. Physical custody still matters.
+
+1. **Decommission.** Settle the donor's final list and mark the decommission proposed. It becomes approved when Zach says so, and complete only when he confirms it physically. A protected donor needs Zach and Steph to agree.
+2. **Release audit.** `python3 -m mtgtools release DONOR --to RECEIVER` splits the donor's nonbasic cards four ways:
+   - already in the receiver: singleton, so no new slot;
+   - outside the receiver's color identity;
+   - a free copy exists elsewhere: no disassembly needed, so don't credit the decommission for it;
+   - unlocked only by the decommission.
+3. **Target absorption.** For each unlocked or free candidate, judge three things separately:
+   - its intrinsic value;
+   - its extracted value: how much of its function survives leaving the donor's engine;
+   - its absorbed value: what the receiver actually gains.
+
+   Test the links with `hypothesis`, and check the qualifiers. -1/-1 counters cancel +1/+1 counters. Proliferate adds only counters of kinds already there. Dies is not leaves the battlefield. A token-entry trigger that fires once per turn fires once for a batch.
+4. **Cuts.** Name the receiver cut for every add, and test the whole exchange (`compare RECEIVER OUT=IN …`). A cut from a protected receiver needs agreement. A recommendation is never a move.
+5. **Return.** Released copies the receiver doesn't take go back to the free pool. Allocations change in the Sheet only after physical confirmation, under archive-then-clone.
 
 ## Where things are
 

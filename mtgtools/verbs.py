@@ -299,11 +299,23 @@ def _loops(pool, only=None, ks=None):
     return out
 
 
+def _resolve_deck(c, deck):
+    """A deck by its inventory name, or by its commander's name ("Auntie Ool" is recorded as the deck Blight Curse)."""
+    decks = kb.decks(c)
+    for d in decks:
+        if d.lower() == deck.strip().lower():
+            return d
+    hits = sorted({r[0] for r in c.execute("select deck from deck_allocations where section='Commander' and counts_in_deck_100=1 "
+                                           'and lower(card_name) like ?', (deck.strip().lower() + '%',))})
+    if len(hits) == 1:
+        return hits[0]
+    raise LookupError(f'deck not found: {deck!r}' + (f'; commander matches several decks: {hits}' if hits else '') +
+                      f'; decks: {decks}')
+
+
 def _pool(c, ci=None, deck=None, free=False):
     if deck:
-        names = set(kb.deck_cards(c, deck))
-        if not names:
-            raise LookupError(f'deck not found: {deck!r}; decks: {kb.decks(c)}')
+        names = set(kb.deck_cards(c, _resolve_deck(c, deck)))
         return names
     out = set()
     for r in c.execute('select * from cards where owned_min>0'):
@@ -367,9 +379,8 @@ def context(c, deck=None):
                                 'preference', 'none'))
         return {'collection': {'owned_names': tot[0], 'copies': tot[1], 'names_with_free_copy': tot[2]}, 'policy': pol,
                 'decks': decks}, claims
+    deck = _resolve_deck(c, deck)
     cards = kb.deck_cards(c, deck)
-    if not cards:
-        raise LookupError(f'deck not found: {deck!r}; decks: {kb.decks(c)}')
     ov = kb.overlap(c, deck)
     ch = _charter(deck)
     size = c.execute('select sum(quantity) from deck_allocations where deck=? and counts_in_deck_100=1', (deck,)).fetchone()[0]
@@ -917,3 +928,68 @@ def typal(c, ctype, ci=None, free=False):
                             'inventory', 'collection_snapshot'))
     return {'creature_type': t, 'counts': counts, 'members_by_color_identity': by_ci, 'commander_candidates': shells,
             'identities_without_type_commander': uncovered, 'held_in_protected_decks': held, 'tag_gaps': gaps, 'reading': TYPAL_READING, **groups}, claims
+
+
+# ---------- deck decommission: release audit ----------
+
+MINUS_COUNTER = ('-1/-1 counter',)
+BASICS = {'Plains', 'Island', 'Swamp', 'Mountain', 'Forest', 'Wastes'}
+
+
+def release(c, donor, receiver):
+    """Release audit for retiring DONOR and absorbing into RECEIVER: which donor cards the receiver already runs, which can't
+    go there, which already have a free copy elsewhere (no disassembly needed), and which only the decommission unlocks.
+    A retiring donor's deck floor is not a constraint; physical custody still is. Nothing moves (P-05)."""
+    donor, receiver = _resolve_deck(c, donor), _resolve_deck(c, receiver)
+    if donor == receiver:
+        raise ValueError('donor and receiver are the same deck')
+    pol = _policy()
+    protected = set((pol or {}).get('protected_decks') or [])
+    rci = kb.deck_ci(c, receiver)
+    rcards = set(kb.deck_cards(c, receiver))
+    groups = {'already_in_receiver': [], 'outside_receiver_identity': [], 'free_copy_elsewhere': [], 'unlocked_by_decommission': []}
+    basics = 0
+    for name in kb.deck_cards(c, donor):
+        row = c.execute('select * from cards where card_name=?', (name,)).fetchone()
+        if name in BASICS:
+            basics += c.execute('select sum(quantity) from active_deck_cards where deck=? and card_name=?', (donor, name)).fetchone()[0]
+            continue
+        text = _rules_text(c, row).lower()
+        av = _availability(c, name, pol)
+        item = {'card': name, 'type_line': row['type_line'], 'color_identity': row['color_identity'] or 'C', 'free': row['free'],
+                'in_other_built_decks': {k: v for k, v in av['in_other_built_decks'].items() if k != donor},
+                'in_protected_decks': av['in_protected_decks']}
+        if any(p in text for p in MINUS_COUNTER):
+            item['check'] = 'mentions -1/-1 counters (lexical): they cancel +1/+1 counters (CR 704.5q); check which side gets them'
+        if name in rcards:
+            groups['already_in_receiver'].append(item)
+        elif not kb.legal_rules(c, row, rci)[0]:
+            groups['outside_receiver_identity'].append(item)
+        elif row['free'] > 0:
+            groups['free_copy_elsewhere'].append(item)
+        else:
+            groups['unlocked_by_decommission'].append(item)
+    counts = {g: len(v) for g, v in groups.items()}
+    minus = [x['card'] for x in groups['unlocked_by_decommission'] + groups['free_copy_elsewhere'] if 'check' in x]
+    claims = [claim(f"{donor} holds {sum(counts.values())} nonbasic names (+{basics} basic lands). For {receiver} ({rci}): "
+                    f"{counts['already_in_receiver']} are already in it, {counts['outside_receiver_identity']} are outside its "
+                    f"identity, {counts['free_copy_elsewhere']} have a free copy elsewhere (no disassembly needed), and "
+                    f"{counts['unlocked_by_decommission']} become available only if {donor} is taken apart.",
+                    'inventory', 'collection_snapshot'),
+              claim('A copy of a card the receiver already runs adds no slot: singleton. Released copies return to the free pool.',
+                    'rules_text', 'oracle')]
+    if donor in protected:
+        claims.append(claim(f'{donor} is a protected deck: decommissioning it needs agreement from Zach and Steph.',
+                            'preference', 'collection_policy', evidence=['decks/collection_policy.json']))
+    if receiver in protected:
+        claims.append(claim(f'{receiver} is protected: adding to it needs no release from anyone else, but every cut from it does.',
+                            'preference', 'collection_policy', evidence=['decks/collection_policy.json']))
+    if minus:
+        claims.append(claim(f'{len(minus)} candidates mention -1/-1 counters ({", ".join(minus)}). The KB contracts do not record '
+                            'counter type, so the tools cannot tell polarity; read each card.', 'mechanics', 'candidate',
+                            evidence=['C-015']))
+    claims.append(claim('This is a release audit, not an absorption verdict: which receiver cards to cut, and how much of each '
+                        "card's function survives leaving the donor's engine, still need hypothesis/compare and the deck charter.",
+                        'performance', 'none'))
+    return {'mode': 'decommission', 'donor': donor, 'receiver': receiver, 'receiver_color_identity': rci,
+            'donor_basic_lands': basics, 'counts': counts, **groups}, claims

@@ -21,6 +21,7 @@ A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_
 | `compare DECK OUT=IN …` | What does the evaluator's descriptive profile do under these swaps? | `python3 -m mtgtools compare TMNT "Crustacean Commando=Knockout Maneuver"` |
 | `dio TERM` | What does the ontology say? Quotes the DIO v3.1.1, addendum and A1–A7 sections that match, with file and line, plus a reading map. No database needed | `python3 -m mtgtools dio persistence`, `python3 -m mtgtools dio 7` |
 | `typal TYPE [--ci C] [--free]` | For a creature-type request: which owned cards have the type, which changelings and chosen-type cards support it, which commanders cover which color identities, and which copies sit in protected decks | `python3 -m mtgtools typal Merfolk` |
+| `release DONOR --to RECEIVER` | If DONOR is retired, which of its cards does RECEIVER already run, which can't it use, which have a free copy anyway, and which does only the decommission unlock? Decks resolve by name or by commander | `python3 -m mtgtools release "Auntie Ool" --to TMNT` |
 | `check FILE\|-` | For each claim in a draft answer, what does it rest on, what is missing, and does a structured assertion hold? | `echo '[{"text":"…","kind":"inventory","cards":["…"],"assert":{"free_min":1}}]' \| python3 -m mtgtools check -` |
 
 `explore` modes:
