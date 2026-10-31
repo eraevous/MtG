@@ -16,7 +16,7 @@ pip install .            # use `pip install --no-build-isolation .` when offline
 mtgeval --workbook /path/to/export.xlsx deck Vraska
 ```
 
-- **Workbook:** export the live canonical sheet (`1wv-uSSSlTIRAJp5qInwq0oppGUOX49_D2ni3vAnESxU`) as `.xlsx`. Do not use an archived workbook.
+- **Workbook:** export the live canonical sheet as `.xlsx`: the one titled exactly "MTG Master Inventory — Canonical", with no `_ARCHIVE` suffix (id `1f83bN2ULQmXJQkkRL_JxPvzq9gWMYwLFobhATCjkCpU` as of 2026-10-25; the id changes with every archive-then-clone). Do not use an archived workbook.
 - **Environment variable:** instead of passing `--workbook` every time, you can set `MTG_WORKBOOK=/path/to/export.xlsx`.
 - **Options:** `--games N` sets the number of goldfish games per deck version (default 5000). `--json` gives machine-readable output, and `--out file.md` saves the report.
 - **Turn engine:** `--engine-games N` sets games per engine scenario (default 300; `0` turns the engine off for a quick report). A deck report runs nine scenarios and takes about 10 to 40 seconds.
