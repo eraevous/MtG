@@ -57,6 +57,6 @@ Each stratum has only 20 cards, so the bounds are wide. The 95% upper bound is B
 
 - **Upper bounds are now Bonferroni-adjusted,** as above. Her figures match `compare.py` exactly. The point estimates are unchanged.
 - **Positive agreement is now reported alongside kappa.** On the untagged sample it is 0.21 counting YES or DEPENDS as positive, and 0.46 counting YES only. On the challenge set it is 1.00 and 0.96. The 94% raw agreement is mostly agreement on NO: the two reviewers rarely agree on which of the rare positives is real. That is why every positive here went through adjudication.
-- **Temporary tap or stun is tempo control, not spot removal.** This is written down as D-0013 (proposed) so that the next reviewer reads Homesickness the same way.
+- **Temporary tap or stun is tempo control, not spot removal.** This is written down as D-0013, accepted by Zach on 2026-10-30 as D-0014, so that the next reviewer reads Homesickness the same way.
 - **Provenance:** the label on each adjudicated answer says whether it rests on Zach's accepted policy (`accepted_policy`) or only on Claude's proposal (`proposed`). Neither is human-verified mechanical truth. Reviewer B's provenance is in `reviews/reviewer_B/README.md`.
 - **copy_effect stays an audit qualifier, not a new DIO primitive.** DIO v3.1.1 already models copying (`object.becomes_copy`, `token.create` as a copy, spell and ability copies, `trigger_multiplier`). The work left is deriving roles from those operations in context: Rite of Replication is intrinsically a token maker, and ramp only in context.
