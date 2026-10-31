@@ -27,4 +27,4 @@
 - `context --deck` role counts are detected candidates from the KB's role patterns, not verified roles. `sole_detected_candidates` means the only detected candidate, not a verified sole provider. A caveat claim (mechanics, exploratory until every card-role assignment in the summary is reviewed) says so, after the 2026-10-28 Golden Argosy error.
 - Collection policy (`decks/collection_policy.json`) is operational configuration. It records Zach's decision, and the tools never move cards.
 - `explore --mode divergent` with a seed returns two-step chains forward from the seed through pathways the seed does not use itself, scored so that narrow pathways come first. It is a heuristic for surfacing unrequested relationships, not a measure of value.
-- Coverage: in r20261028, 0 of 4,961 contracts are semantically reviewed, so mechanics claims are exploratory today.
+- Coverage: in r20261030, 0 of 4,961 contracts are semantically reviewed, so mechanics claims are exploratory today.
