@@ -1,13 +1,13 @@
 # 🛠️ MtG Charter: Principles to Build (and Review) By
 
-@ai-version: 0.1.1-draft · supersedes the inherited Cognitive-Scaffolding charter (S3, FAISS, Typer, LLM-client rules) · status: proposed, pending Zach's review
+@ai-version: 0.1.2-draft (adds rule 14 and the upstream AEC v0.3 rules, D-0020/D-0021 proposed) · supersedes the inherited Cognitive-Scaffolding charter (S3, FAISS, Typer, LLM-client rules) · status: proposed, pending Zach's review
 
 _Authored by build-project Claude (PR #2), which owns the MTG invariants. Reconciled into the repo shell by the AEC session (C-008): P-01 amended and authority scoped by subject, per Kate's review; `exists` items point at checks that are actually in this repo; rules 11–13 carried over from the shell charter. Build-project Claude is to review._
 
-Each principle is Rule → Why → Enforce. **Enforce** says what will make a violation fail, with its status: `exists` (a check runs today), `planned` (to build), or `review` (a human or the dissent review checks it). A rule is not called enforced until a violating fixture has been shown to fail.
+Each principle is Rule → Why → Enforce. **Enforce** says what will make a violation fail, with its status: `exists` (a check runs today), `planned` (to build), or `review` (a human or the dissent review checks it). A rule is not called enforced until a violating fixture has been shown to fail **and a clean decoy has been shown not to** (AEC constitution III: over-flagging is a failure too).
 
 ## Authority by subject (not a single ranking)
-Each kind of authority has its own subject; see the table in `codex_++/project.purpose.md`. Inventory Sheet → ownership and allocation. Scryfall Oracle, Comprehensive Rules and rulings → card mechanics. DIO v3.1.1 and accepted addenda A1–A7 → formal representation. Grammar layer and KB → reusable interpretation, by verification state. Evaluation protocols and deck goals → contextual usefulness. Observed games and frozen predictions → empirical evidence. Simulation → provisional only. Inventory never outranks Oracle on mechanics, and Oracle never outranks the Sheet on ownership.
+Each kind of authority has its own subject; see the table in `codex_++/project.purpose.md`. Inventory Sheet → ownership and allocation. Scryfall Oracle, Comprehensive Rules and rulings → card mechanics. DIO v3.1.1 and accepted addenda A1–A7 → formal representation. Grammar layer and KB → reusable interpretation, by verification state. Evaluation protocols and deck goals → contextual usefulness. Observed games and frozen predictions → empirical evidence. Simulation → provisional only. Inventory never outranks Oracle on mechanics, and Oracle never outranks the Sheet on ownership. The DIO answers representation questions; changing the DIO is Zach's decision (rule 14). A typed `authorized_by`, or a model's report that Zach approved something, is a claim of authorization, not verified consent (AEC upstream; failure mode P5).
 Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/project.purpose.md`, VISION.md and `decisions/`, and it can be challenged through evidence (`challenges/`). Operational authority (who runs and checks a task) belongs to tools, hooks and CI.
 
 1) No Silent Competing Card Semantics (P-01, as amended)
@@ -78,12 +78,19 @@ Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/proj
 - Why: A stale contract is worse than none.
 - Enforce: exists: `tools/drift_check.py` purpose check (error for a missing source, warning for a dependency mismatch).
 
+14) The DIO Is a Governed Source (P-09, proposed in D-0020)
+- Rule: The DIO files that govern representation (v3.1.1, its 2026-10-09 addendum, A1–A7 and the registry delta) are pinned by SHA-256 in `.aec/records.jsonl`. They change only through a `dio_revision` decision that Zach accepts, followed by a new version of the source record; DIO §13 decides minor vs major. A revision is run through `aec impact` so the contracts, purposes and decisions resting on the DIO are named for re-examination. The DIO's own parsimony rules apply to this repo's governance: one home per fact, derive the rest, keep negative results, and add a field, check or record type only when it improves a decision, a compression or a connection (DIO §2, §9, §12.6).
+- Why: The DIO governed every contract but was the one source no check watched; v3.1.2 is pending. See `docs/aec/DIO_AEC_REVIEW.md`.
+- Enforce: exists: `tools/drift_check.py` `governed` (error on changed or missing DIO bytes) and `mirror` (error when a decision record in `.aec/` disagrees with `decisions/`), each with violating fixtures and decoys in `tests/test_drift_check.py`. exists: CI runs `aec check` and the `.aec/scenarios/` impact examples from AEC pinned in `tools/aec_upstream.json`. review: whether anyone runs `aec impact` at the next DIO revision (C-021).
+
 ## ❌ Anti-Patterns to Ban
 - Hand-editing the KB, or any derived artifact, instead of rebuilding it from sources.
 - Promoting contracts by class, in bulk, or because a downstream tool accepted them.
 - Rankings or "best card" claims computed from graph density or simulation alone.
 - Hard-coded Sheet ids, card counts or "free card" claims without a dated inventory reference.
 - Rewriting past predictions, decisions or criteria in place.
+- Editing a DIO file in place, or quoting a DIO version that is not the pinned one, without a `dio_revision` decision.
+- A second home for a fact: vendored copies of AEC, decision status kept outside `decisions/`, hand-written DIO versions that disagree with `.aec/records.jsonl`.
 - Calling a rule enforced because a hook config exists, without a failing fixture.
 
 ## ✅ Definition of Done (per PR)
@@ -92,4 +99,5 @@ Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/proj
 - No new card-text interpretation outside grammar/KB.
 - Inventory resolved live; no plans written as moves.
 - Decision events / criteria versions appended, not edited, where a decision changed.
+- If a DIO file changed: a `dio_revision` decision, a new `SRC-dio` record version, and the `aec impact` output in the PR.
 - Purpose file updated or intent file added (G-13); tests pass; any new Enforce check has a violating fixture that fails.

@@ -1,0 +1,8 @@
+{
+  "_doc": "The upstream AEC kit this repo's .aec/ records follow (D-0021, proposed). AEC is not vendored: CI clones this commit and runs its CLI. Moving the pin is a repo decision; re-run the checks in .aec/README.md first.",
+  "repo": "https://github.com/eraevous/AEC",
+  "commit": "4decef6cdbe59d6d666e2778758815db7503f8ca",
+  "date": "2026-10-31",
+  "aec_version": "0.3 (check, impact, edges, code-impact, init, import-purpose, source)",
+  "forked_from": "bdf3f341af1617ad759625607efe44bb206a3d73"
+}

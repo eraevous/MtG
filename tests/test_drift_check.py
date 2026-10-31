@@ -128,6 +128,72 @@ class TestAppendOnly(Sandbox):
         self.assertIn(("append-only", "ledger.jsonl"), self.checks(D.run(self.root, base="HEAD"), "error"))
 
 
+class TestGovernedAndMirror(Sandbox):
+    """P-09 (proposed): a DIO source pinned in .aec/records.jsonl; decision records mirror the decision log."""
+
+    def setUp(self):
+        super().setUp()
+        (self.root / "ont").mkdir()
+        (self.root / "ont/dio.md").write_text("# DIO\nGate rule.\n")
+        (self.root / "ont/notes.md").write_text("ungoverned notes\n")
+        (self.root / ".aec").mkdir()
+        (self.root / "decisions.jsonl").write_text(
+            '{"id": "D-1", "status": "proposed"}\n{"id": "D-1", "status": "accepted"}\n')
+        self.records = [
+            {"id": "SRC-dio", "version": 1, "type": "source", "subject": "formal-representation",
+             "anchors": [{"path": "ont/dio.md", "sha256": D.sha256(self.root / "ont/dio.md"), "locator": "L1-2"}]},
+            {"id": "SRC-notes", "version": 1, "type": "source", "subject": "notes",
+             "anchors": [{"path": "ont/notes.md", "sha256": D.sha256(self.root / "ont/notes.md"), "locator": "L1"}]},
+            {"id": "D-1", "version": 1, "type": "decision", "status": "proposed"},
+            {"id": "D-1", "version": 2, "type": "decision", "status": "accepted"},
+        ]
+        self.write_records()
+        self.rules.update({"aec_records": ".aec/records.jsonl", "governed_subjects": ["formal-representation"],
+                           "decision_log": "decisions.jsonl"})
+        (self.root / "tools/drift_rules.json").write_text(json.dumps(self.rules))
+
+    def write_records(self):
+        lines = ["// comment lines are skipped"] + [json.dumps(r) for r in self.records]
+        (self.root / ".aec/records.jsonl").write_text("\n".join(lines) + "\n")
+
+    def test_clean(self):
+        self.assertEqual(D.run(self.root).items, [])
+
+    def test_edited_dio_is_an_error(self):
+        (self.root / "ont/dio.md").write_text("# DIO\nGate rule, renumbered.\n")
+        self.assertIn(("governed", "ont/dio.md"), self.checks(D.run(self.root), "error"))
+
+    def test_deleted_dio_is_an_error(self):
+        (self.root / "ont/dio.md").unlink()
+        self.assertIn(("governed", "ont/dio.md"), self.checks(D.run(self.root), "error"))
+
+    def test_ungoverned_source_change_is_not_flagged(self):
+        (self.root / "ont/notes.md").write_text("edited notes\n")
+        self.assertEqual(D.run(self.root).items, [])
+
+    def test_new_source_version_repins(self):
+        (self.root / "ont/dio.md").write_text("# DIO 3.1.2\n")
+        self.records.append({"id": "SRC-dio", "version": 2, "type": "source", "subject": "formal-representation",
+                             "anchors": [{"path": "ont/dio.md", "sha256": D.sha256(self.root / "ont/dio.md"),
+                                          "locator": "L1"}]})
+        self.write_records()
+        self.assertEqual(D.run(self.root).items, [])
+
+    def test_mirror_status_disagreement_is_an_error(self):
+        self.records.append({"id": "D-1", "version": 3, "type": "decision", "status": "rejected"})
+        self.write_records()
+        self.assertIn(("mirror", ".aec/records.jsonl"), self.checks(D.run(self.root), "error"))
+
+    def test_mirror_unknown_decision_is_an_error(self):
+        self.records.append({"id": "D-9", "version": 1, "type": "decision", "status": "proposed"})
+        self.write_records()
+        self.assertIn(("mirror", ".aec/records.jsonl"), self.checks(D.run(self.root), "error"))
+
+    def test_no_records_file_means_not_adopted(self):
+        (self.root / ".aec/records.jsonl").unlink()
+        self.assertEqual(D.run(self.root).items, [])
+
+
 class TestRealRepo(unittest.TestCase):
     def test_repo_has_no_drift_errors(self):
         report = D.run(ROOT)

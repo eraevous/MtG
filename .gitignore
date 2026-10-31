@@ -212,3 +212,6 @@ __marimo__/
 *.xlsx
 data/*
 !data/README.md
+
+# AEC edge snapshot: generated (aec edges), never committed (D-0021)
+.aec/edges.jsonl

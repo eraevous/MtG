@@ -11,8 +11,14 @@ Runs mechanical checks of the repo against its declared contracts:
                 (P-01: no undeclared competing semantic authority).                               [warning]
   append-only   Ledger files only grow: the base revision's content must be a prefix of
                 the current content (needs --base <git ref>).                                     [error]
+  governed      Sources under a governed subject in .aec/records.jsonl (the DIO: subject
+                formal-representation) still match their SHA-256 anchors. A DIO change is a
+                dio_revision decision plus a new source-record version (P-09, proposed).          [error]
+  mirror        Each decision record in .aec/records.jsonl has the same status as the latest
+                event with that id in decisions/decision_events.jsonl, which stays the one
+                decision log (D-0021, proposed).                                                  [error]
 
-This checks structure, not purpose. A clean run does not show that P-00..P-05 survived.
+This checks structure, not purpose. A clean run does not show that P-00..P-09 survived.
 See codex_++/project.purpose.md.
 
 Usage:
@@ -198,6 +204,86 @@ def check_append_only(root: Path, rules: dict, rep: Report, base: str):
                     "earlier entries with new entries instead")
 
 
+# --- AEC records: governed sources and the decision mirror -------------------------------------
+def load_jsonl(path: Path) -> list[dict]:
+    out = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line and not line.startswith("//"):
+            out.append(json.loads(line))
+    return out
+
+
+def latest_by_id(records: list[dict]) -> dict[str, dict]:
+    latest: dict[str, dict] = {}
+    for r in records:
+        if r.get("id") and r.get("version", 0) >= latest.get(r["id"], {}).get("version", 0):
+            latest[r["id"]] = r
+    return latest
+
+
+def aec_records(root: Path, rules: dict, rep: Report) -> dict[str, dict] | None:
+    rel = rules.get("aec_records")
+    if not rel or not (root / rel).exists():
+        return None
+    try:
+        return latest_by_id(load_jsonl(root / rel))
+    except (json.JSONDecodeError, UnicodeDecodeError) as ex:
+        rep.add("error", "governed", rel, f"cannot read AEC records: {ex}")
+        return None
+
+
+def check_governed(root: Path, rules: dict, rep: Report, records: dict[str, dict] | None):
+    subjects = set(rules.get("governed_subjects", []))
+    if records is None or not subjects:
+        return
+    for r in records.values():
+        if r.get("type") != "source" or r.get("subject") not in subjects:
+            continue
+        ref = f"{r['id']}@{r.get('version')}"
+        seen: set[str] = set()
+        for a in r.get("anchors", []):
+            path = a.get("path", "")
+            if a.get("root") or path in seen:
+                continue  # machine-local roots are AEC's business (aec check), not a repo pin
+            seen.add(path)
+            p = root / path
+            if not p.exists():
+                rep.add("error", "governed", path, f"governed source anchored by {ref} is missing")
+            elif sha256(p).lower() != str(a.get("sha256", "")).lower():
+                rep.add("error", "governed", path,
+                        f"governed source changed since {ref} pinned it ({r.get('subject')}). A DIO change is "
+                        "a dio_revision decision (P-09): append the decision event and a new version of the "
+                        "source record with the new SHA-256; never edit the old record")
+
+
+def check_mirror(root: Path, rules: dict, rep: Report, records: dict[str, dict] | None):
+    log_rel = rules.get("decision_log")
+    if records is None or not log_rel or not (root / log_rel).exists():
+        return
+    log = latest_by_id_lines(load_jsonl(root / log_rel))
+    for r in sorted(records.values(), key=lambda x: x["id"]):
+        if r.get("type") != "decision":
+            continue
+        ev = log.get(r["id"])
+        if ev is None:
+            rep.add("error", "mirror", rules.get("aec_records", ""),
+                    f"decision record {r['id']} has no event in {log_rel}; the log is the decision's home")
+        elif ev.get("status") != r.get("status"):
+            rep.add("error", "mirror", rules.get("aec_records", ""),
+                    f"{r['id']} is '{r.get('status')}' in the AEC records but '{ev.get('status')}' in {log_rel}. "
+                    "Append a new version of the record that matches the log")
+
+
+def latest_by_id_lines(events: list[dict]) -> dict[str, dict]:
+    """Decision events carry no version: a later line with the same id supersedes an earlier one."""
+    out: dict[str, dict] = {}
+    for e in events:
+        if e.get("id"):
+            out[e["id"]] = e
+    return out
+
+
 # --- driver -----------------------------------------------------------------------------------
 def run(root: Path = ROOT, base: str | None = None) -> Report:
     rules = load_rules(root)
@@ -205,6 +291,9 @@ def run(root: Path = ROOT, base: str | None = None) -> Report:
     check_frozen(root, rules, rep)
     check_purpose(root, rules, rep)
     check_semantic(root, rules, rep)
+    records = aec_records(root, rules, rep)
+    check_governed(root, rules, rep, records)
+    check_mirror(root, rules, rep, records)
     if base:
         check_append_only(root, rules, rep, base)
     return rep
