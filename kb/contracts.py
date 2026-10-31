@@ -20,8 +20,9 @@ compiled, and only those with a passing runtime scenario reach the evaluator.
 import json, re, unicodedata
 import kbfacts as F
 import mana as MANA
+import counters as COUNTERS
 
-DRAFTER_VERSION = 'contract-drafter-0.4.0'
+DRAFTER_VERSION = 'contract-drafter-0.5.0'   # 0.5.0: counter identity (counters.py, C-015/C-016)
 COMPILER_VERSION = 'contract-compiler-0.3.0'
 ADDENDUM_VERSION = 'DIO-3.1.1-kb-addendum-0.1'
 
@@ -155,6 +156,10 @@ def hook_object(event_text, legacy_id, name):
         hid = 'mana.spend'; q['threshold'] = {'measurement': 'total mana spent this turn', 'operator': 'crosses', 'reference': int(m.group(1))}
     elif 'sacrific' in e:
         hid = 'permanent.sacrifice'
+    elif re.search(r'\bcounters? (?:is|are) (?:put|placed)\b|\bputs? (?:one or more |a |an |\w+ )?[\w+/-]* ?counters? on\b', e):
+        hid = 'counter.put'               # C-016: a counter-placement listener; its kind is a qualifier (counters.py)
+    elif re.search(r'\bcounters? (?:is|are) removed\b|\bremoves? (?:one or more |a |an |\w+ )?[\w+/-]* ?counters?\b', e):
+        hid = 'counter.remove'
     else:
         verb = next((v for p, v in VERB_HOOK if re.search(p, e)), None)
         # the legacy row carries one hook for the whole trigger; each alternative gets the hook its own verb names
@@ -441,12 +446,41 @@ def draft(op, card, vocab, projections):
     if kind not in ('continuous', 'replacement'):
         for it in result['produces']: it.setdefault('act_time', 'on_resolution')
     contract['keyword_macro'] = keyword_macro(clause, card)
+    # counter identity (C-016): kind and holder for every counter the text puts, removes, moves, reads or requires
+    cfs = COUNTERS.facets(clause, ' or '.join(a.get('text', '') for a in trig['alternatives']) if trig else None, name)
+    contract['counters'] = {'drafter': COUNTERS.DRAFTER, 'facets': cfs} if cfs else None
+    put_kinds = COUNTERS.produced_kinds(cfs)
+    for it in result['produces']:
+        if it['id'] == 'counter.put' and put_kinds:
+            it['counter_kinds'] = sorted(set(put_kinds))
+    if any(f['role'] == 'proliferate' for f in cfs) and not any(it['id'] == 'counter.put' for it in result['produces']):
+        result['produces'].append({'id': 'counter.put', 'counter_kinds': ['present_kinds'], 'mode': 'proliferate',
+                                   'act_time': 'on_resolution', 'added_by': 'counters drafter (proliferate)'})
+    if any(f['role'] in ('remove', 'move') for f in cfs) and not any(it['id'] == 'counter.remove' for it in result['produces']):
+        rem = [f['kind'] for f in cfs if f['role'] in ('remove', 'move')]
+        on_cost = any('counter.remove' in x for x in contract['initiation']['cost']['on_payment'])
+        if not on_cost or len(rem) > 1:
+            result['produces'].append({'id': 'counter.remove', 'counter_kinds': sorted(set(rem)), 'act_time': 'on_resolution',
+                                       'added_by': 'counters drafter'})
+    for g in groups:
+        if g['class'] == 'cost':
+            for a in g['alternatives']:
+                if a.get('family') == 'remove_counters':
+                    k = COUNTERS.facets('remove ' + a.get('object', '') + ' counter', None, name)
+                    a['counter_kind'] = k[0]['kind'] if k else 'unread'
+        if g['class'] == 'trigger':
+            for a in g['alternatives']:
+                lf = [f for f in COUNTERS.facets('', a.get('text', ''), name) if f['role'].startswith('listen')]
+                if lf:
+                    a.setdefault('qualifiers', {})['counter_kind'] = lf[0]['kind']
+                    a['qualifiers']['counter_holder'] = lf[0]['holder']
     hook_ids = sorted({a['id'] for a in trig['alternatives'] if a.get('id')}) if trig else [h.strip() for h in (op['observes_hook'] or '').split(';') if h.strip()]
     contract['query_index'] = {  # derived for discovery queries (DIO §9: derived, never authoritative)
         'hook_ids': hook_ids,
         'hook_ids_in_vocabulary': all(h in vocab for h in hook_ids) if hook_ids else None,
         'hook_subject': hook_subject(trig['alternatives'][0]['text'] if trig else None, name),
-        'feeds': feeds(contract, effects)}
+        'feeds': feeds(contract, effects),
+        'counters': [{k: f[k] for k in ('role', 'kind', 'holder')} for f in cfs]}
     action = json.loads(proj['raw_ability_json']) if proj else None
     checks = validate(contract, card, action, proj, effects, vocab)
     return contract, action, checks
@@ -534,6 +568,10 @@ def feeds(contract, effects):
         if p.get('granted_to_other_object'): eff.discard(p['id'])
         if p['id'] == 'permanent.sacrifice' and p.get('actor') == 'granted ability': eff.discard(p['id'])
         if p['id'] == 'permanent.tap': eff.add('permanent.tap')
+        if p['id'] in ('counter.put', 'counter.remove') and p.get('act_time') == 'on_resolution': eff.add(p['id'])
+    cfs = (contract.get('counters') or {}).get('facets') or []
+    if cfs and 'counter.put' in eff and not COUNTERS.produced_kinds(cfs):
+        eff.discard('counter.put')      # "if you put a counter on a creature this turn" is a condition, not an output (C-015)
     return sorted(eff)
 
 

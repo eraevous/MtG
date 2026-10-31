@@ -65,6 +65,19 @@ class Qualifiers(unittest.TestCase):
         energy = self.k('Nissa', ['legendary creature'], feeds=['counter.put'])
         self.assertEqual(self.q(energy, 'counter.put', chapter, 'counter.put')[0], 'unresolved')
 
+    def test_counter_kinds_decide_counter_links(self):
+        # C-016: Hapatra hears -1/-1 counters; Leonardo puts +1/+1; Twitching Doll puts nest; proliferate depends on the board
+        hapatra = dict(self.k('Hapatra', ['legendary creature'], hooks=['counter.put']), counters=[{'role': 'listen_put', 'kind': '-1/-1', 'holder': 'permanent'}])
+        anyc = dict(self.k('Patron', ['creature'], hooks=['counter.put']), counters=[{'role': 'listen_put', 'kind': 'any', 'holder': 'permanent'}])
+        leo = dict(self.k('Leonardo', ['legendary creature'], feeds=['counter.put']), counters=[{'role': 'put', 'kind': '+1/+1', 'holder': 'permanent'}])
+        clasp = dict(self.k('Clasp', ['artifact'], feeds=['counter.put']), counters=[{'role': 'put', 'kind': '-1/-1', 'holder': 'permanent'}])
+        sage = dict(self.k('Sage', ['creature'], feeds=['counter.put']), counters=[{'role': 'proliferate', 'kind': 'present_kinds', 'holder': 'permanent_or_player'}])
+        q = lambda p, o: self.q(p, 'counter.put', o, 'counter.put')[0]
+        self.assertEqual(q(leo, hapatra), 'incompatible')
+        self.assertEqual(q(clasp, hapatra), 'compatible')
+        self.assertEqual(q(leo, anyc), 'compatible')
+        self.assertEqual(q(sage, hapatra), 'unresolved')
+
     def test_self_enter_needs_a_copy_or_return_of_that_card(self):
         light = self.k('Light', ['enchantment'], hooks=['battlefield.enter'], subject='self')
         talent = self.k('Talent', ['enchantment — class'], hooks=['battlefield.enter'], self_phrase=True)
@@ -139,7 +152,7 @@ class Verbs(unittest.TestCase):
         pinned = json.loads((ROOT / 'tools' / 'kb_release.json').read_text(encoding='utf-8'))['release']
         self.assertEqual(out['collection']['release'], pinned)
         self.assertEqual(out['grounding']['level'], 'kb_grounded')
-        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261030')
+        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261031')
         self.assertTrue(all({'kind', 'support', 'grade'} <= set(c) for c in out['claims']))
 
     def test_card_separates_oracle_text_from_contract_readings(self):
@@ -148,7 +161,7 @@ class Verbs(unittest.TestCase):
         kinds = {c['kind']: c for c in out['claims']}
         self.assertEqual(kinds['rules_text']['grade'], 'decision_grade')
         mech = [c for c in out['claims'] if c['kind'] == 'mechanics']
-        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261030
+        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261031
 
     def test_explore_works_without_a_seed_and_marks_discovery(self):
         code, out = self.run_cli('explore', '--ci', 'RG', '--limit', '5')

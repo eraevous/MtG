@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 
 from . import kb
+import counters as COUNTERS   # kb/counters.py, on the path via mtgtools.kb
 from .claims import claim, REVIEWED_STATES
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -67,6 +68,7 @@ def _contracts(c, names=None):
         out.append({'contract_id': r['contract_id'], 'card': r['card_name'], 'text': r['exact_text'], 'kind': r['operation_kind'],
                     'state': r['queue_state'], 'feeds': qi.get('feeds') or [], 'hooks': qi.get('hook_ids') or [],
                     'hook_subject': qi.get('hook_subject'), 'triggers': triggers, 'targets': targets,
+                    'counters': qi.get('counters') or [],
                     'faces': [f.strip().lower() for f in (r['type_line'] or '').split('//')]})
     return out
 
@@ -166,7 +168,18 @@ def _qualify(p, eff, o, hook, vocab):
     trig = o['triggers'].get(hook) or {}
     self_obs = _self_obs(o, hook)
     if hook == 'counter.put':
-        return 'unresolved', 'counter_type_unknown', 'counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)'
+        made = [f['kind'] for f in p.get('counters') or [] if f['role'] in ('put', 'enters_with', 'proliferate')]
+        heard = [f['kind'] for f in o.get('counters') or [] if f['role'] == 'listen_put']
+        if not made or not heard:
+            return 'unresolved', 'counter_type_unknown', 'counter kind is not recorded on both contracts (a Saga chapter needs lore counters on that Saga)'
+        verdicts = {COUNTERS.match(m, h) for m in made for h in heard}
+        pair = f"{'/'.join(sorted(set(made)))} -> {'/'.join(sorted(set(heard)))}"
+        if 'compatible' in verdicts:
+            return 'unresolved' if self_obs else 'compatible', 'counter_kind', f'counter kind matches ({pair}); recipient not checked' + \
+                ('; the observer watches only itself' if self_obs else '')
+        if 'possible' in verdicts:
+            return 'unresolved', 'counter_kind_possible', f'kind depends on what is already there ({pair}): proliferate or generic counters'
+        return 'incompatible', 'counter_kind', f'different counter kinds ({pair})'
     own = eff in ENTER_EFFECTS and eff != 'token.create' and not p['targets']     # the producer puts its own card onto the battlefield
     if self_obs:
         if p['card'] == o['card'] and own:
@@ -398,6 +411,15 @@ def context(c, deck=None):
             'roles': {k: ov[k] for k in ('evidence', 'role_counts', 'reviewed_role_counts', 'sole_detected_candidates')}}, claims
 
 
+def _counter_facets(c, name):
+    """Card-level counter facets (drafted, not reviewed) from the KB's derived_facts, or None if the KB predates them."""
+    try:
+        r = c.execute("select value_json from derived_facts where fact_kind='counter_facets' and card_name=?", (name,)).fetchone()
+    except Exception:
+        return None
+    return json.loads(r[0]) if r else {'facets': [], 'order_note': None}
+
+
 def card(c, name):
     row = _card_row(c, name)
     name = row['card_name']
@@ -419,7 +441,15 @@ def card(c, name):
     for k in d['contracts']:
         claims.append(claim(f"Contract reading of: {k['exact_text']}", 'mechanics', k['queue_state'],
                             evidence=[k['contract_id']] + k['failed_checks']))
+    cf = _counter_facets(c, name)
+    if cf and cf['facets']:
+        kinds = sorted({f"{f['role']} {f['kind']} ({f['holder']})" for f in cf['facets']})
+        claims.append(claim('Counter facets: ' + '; '.join(kinds) + '. Drafted from rules text; kinds are kept, sign is not '
+                            'assumed (DIO v3.1.1 state table).', 'mechanics', 'candidate', evidence=['derived_facts.counter_facets']))
+        if cf.get('order_note'):
+            claims.append(claim(cf['order_note'], 'rules_text', 'oracle', evidence=['CR 614.1c', 'CR 704.3', 'CR 704.5f', 'CR 704.5q']))
     data = {'card': d['card'], 'custody': d['custody'], 'held_by': dest['held_by'], 'availability': av,
+            'counters': cf['facets'] if cf else None,
             'legal_in_decks': [x['deck'] for x in dest['destinations'] if x['legal']],
             'contracts': [{k: x[k] for k in ('contract_id', 'operation_kind', 'queue_state', 'exact_text', 'failed_checks')} for x in d['contracts']],
             'reconciliation': d['reconciliation']}
@@ -959,7 +989,14 @@ def release(c, donor, receiver):
         item = {'card': name, 'type_line': row['type_line'], 'color_identity': row['color_identity'] or 'C', 'free': row['free'],
                 'in_other_built_decks': {k: v for k, v in av['in_other_built_decks'].items() if k != donor},
                 'in_protected_decks': av['in_protected_decks']}
-        if any(p in text for p in MINUS_COUNTER):
+        cf = _counter_facets(c, name)
+        if cf is not None:
+            minus_roles = sorted({f['role'] for f in cf['facets'] if f['kind'] == '-1/-1'})
+            if minus_roles:
+                item['counters'] = {'-1/-1': minus_roles}
+                item['check'] = ('-1/-1 counters (' + ', '.join(minus_roles) + '): they cancel +1/+1 counters (CR 704.5q)'
+                                 + ('; ' + cf['order_note'] if cf.get('order_note') else ''))
+        elif any(p in text for p in MINUS_COUNTER):
             item['check'] = 'mentions -1/-1 counters (lexical): they cancel +1/+1 counters (CR 704.5q); check which side gets them'
         if name in rcards:
             groups['already_in_receiver'].append(item)
@@ -985,9 +1022,12 @@ def release(c, donor, receiver):
         claims.append(claim(f'{receiver} is protected: adding to it needs no release from anyone else, but every cut from it does.',
                             'preference', 'collection_policy', evidence=['decks/collection_policy.json']))
     if minus:
-        claims.append(claim(f'{len(minus)} candidates mention -1/-1 counters ({", ".join(minus)}). The KB contracts do not record '
-                            'counter type, so the tools cannot tell polarity; read each card.', 'mechanics', 'candidate',
-                            evidence=['C-015']))
+        facet_kb = _counter_facets(c, minus[0]) is not None
+        claims.append(claim(f'{len(minus)} candidates put, require or remove -1/-1 counters ({", ".join(minus)}). '
+                            + ('Each carries its counter roles (drafted counter facets, not reviewed); whether they help or hurt '
+                               'depends on which permanent gets them, so read the roles against the receiver.' if facet_kb else
+                               'This KB predates counter facets, so the match is lexical; read each card.'),
+                            'mechanics', 'candidate', evidence=['derived_facts.counter_facets' if facet_kb else 'C-015']))
     claims.append(claim('This is a release audit, not an absorption verdict: which receiver cards to cut, and how much of each '
                         "card's function survives leaving the donor's engine, still need hypothesis/compare and the deck charter.",
                         'performance', 'none'))
