@@ -51,7 +51,7 @@ print(result['title'], len(result['sections']))
 
 ## Refresh procedure, preserving archives
 
-1. Keep the working canonical: https://docs.google.com/spreadsheets/d/1wv-uSSSlTIRAJp5qInwq0oppGUOX49_D2ni3vAnESxU/edit
+1. Keep the working canonical: the Google Sheet titled exactly "MTG Master Inventory — Canonical" (no `_ARCHIVE` suffix). Its id changes with every archive-then-clone; as of 2026-10-25 it is https://docs.google.com/spreadsheets/d/1f83bN2ULQmXJQkkRL_JxPvzq9gWMYwLFobhATCjkCpU/edit
 2. For **major structural changes**, first create and verify a frozen timestamped workbook in the Archive folder. Archives must never be used as the live build input.
 3. Export the **working** Google Sheet to a local `.xlsx` file. The included DB is based on a mounted snapshot of that canonical workbook; the live sheet metadata was verified as last modified on 2026-10-15 at 19:03:42 UTC.
 4. Regenerate atomically to a fresh output path (do not alter the source XLSX):
