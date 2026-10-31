@@ -24,8 +24,9 @@ The DIO documents are in the repo (`kb/reference_sources/`, `kb/addendum/`) and 
 
 - `python3 -m mtgtools context [--deck D]` lists what is in the collection or a deck, and what its charter says.
 - `python3 -m mtgtools card NAME` gives where the copies are, by policy tier (`decks/collection_policy.json`).
+- `python3 -m mtgtools typal TYPE` does the same for a whole creature type and its support cards (§6.2).
 
-Zach's inventory authority is the live Google Sheet. Exports and the KB are snapshots. Say which snapshot you used: every `mtgtools` envelope names it under `collection`.
+Zach's inventory authority is the live Google Sheet titled exactly "MTG Master Inventory — Canonical". Find it by title, not by a stored id (`docs/DOCUMENT_PRECEDENCE.md` §3). Exports and the KB are snapshots. Say which snapshot you used: every `mtgtools` envelope names it under `collection`.
 
 ## 3. Ontology-grounded discovery
 
@@ -69,6 +70,54 @@ The rules behind this line:
 - **Hypothetical and unowned cards.** Label them as such.
 - **Authority.** Oracle text and the rules decide mechanics; the DIO decides representation; Zach decides intent. Disagreeing with a candidate contract is fine and useful. Record it as a disagreement, never as a fix.
 
+## 6. Construction requests: route first, ask little
+
+**Why.** Zach's blind ChatGPT test on 2026-10-31 asked only "I would like a Merfolk deck." The agent found the inventory, but no procedure told it what kind of construction problem it had. A search for the word "Merfolk" missed the type's strongest support (Harmonized Crescendo, Gathering Stone, Kindred Summons, Distant Melody, Urza's Incubator). The test's conclusion: the gap is between the request and the analysis, not in the ontology.
+
+**Which document governs** is in `docs/DOCUMENT_PRECEDENCE.md`. Read it when two sources disagree.
+
+### 6.1 Name the problem
+
+| The request names | Path | Starts with |
+|---|---|---|
+| A commander | Protocol v1.0 new-deck | the requirements profile, then the commander's hooks |
+| A mechanical thesis (sacrifice, blink, landfall) | v1.1/v1.2 inventory-first | `explore THEME --free`, then modules, color topology, commander |
+| A creature type (Merfolk, Elves) | typal-first, §6.2 (proposed, D-0016) | `typal TYPE` |
+| Swaps or transfers between decks | v1.2 portfolio allocation | `card NAME` availability tiers, donor-deck impact |
+
+### 6.2 Typal-first path (proposed)
+
+Creature type → owned type population → generic type support → mechanical clusters → color topology → commander candidates → functional completion.
+
+1. `python3 -m mtgtools typal TYPE` lists, with availability under the collection policy:
+   - `members`: the type is on the type line, creatures and Kindred spells alike;
+   - `every_type`: Changeling and effects that grant every creature type;
+   - `names_the_type`: cards whose text names the type (Seahunter);
+   - `type_support`: chosen-type and shared-type cards (Kindred Summons, Gathering Stone);
+   - `tagged_only`: cards with a typal tag but no chosen-type wording, probably about another type.
+
+   It also gives `commander_candidates` (owned members that can be commander, with how many members and support cards fit each identity), `identities_without_type_commander` and `held_in_protected_decks`. Lexical hits are retrieval candidates. Read each card before you count it.
+2. Find mechanical clusters among the members with `explore CARD` on the members that matter. The type is the identity; the clusters are what the deck does.
+3. Lay out the color options side by side, and do not rank them on thematic fit alone. Merfolk example: mono-U behind Emperor Mihail II has 21 members; W–U has 32 but no owned Merfolk commander.
+4. Add ordinary functions (ramp, removal, draw, protection) from the free pool.
+5. **Check the qualifiers before counting a payoff.** DIO §4.1 lists creature type and chosen type as qualifier axes.
+   - A card put onto the battlefield was not cast: Seahunter does not trigger Emperor Mihail II.
+   - Changeling applies in every zone.
+   - A Kindred spell has a creature type without being a creature.
+   - Convoke taps creatures to pay a cost, which is not activating a mana ability (A1).
+6. Never plan around a card whose every copy is in a protected deck. Name it and offer the free alternative.
+
+### 6.3 Progressive requirements
+
+- Start from provisional defaults and state them: Commander format, owned cards only, no copies taken from protected decks, a casual-focused power level.
+- Do everything you can without the person first: census, color options, commander candidates.
+- Then ask at most two questions, and only ones whose answer changes the next decision. For Merfolk: "Mono-blue behind Emperor Mihail II, or white–blue with a non-Merfolk commander?" and "Combat army or value engine?"
+- Do not send a questionnaire, and do not commit to a 100-card list before the color option is settled.
+
+### 6.4 Reading inventory results
+
+Map columns by header name, never by position. Check your record count against the count the connector reported. In the 2026-10-31 test, a positional parser reported zero Merfolk out of 35.
+
 ## Where things are
 
 | What | Path |
@@ -78,4 +127,5 @@ The rules behind this line:
 | Grammar and rules vocabulary registry | `kb/reference_sources/MTG_Grammar_Rules_Vocabulary_Registry_v0.1.json` |
 | Evaluation Protocol v1.2 addendum, Kairos–GATE | `kb/reference_sources/` |
 | Tool reference | `mtgtools/README.md` |
+| Which document governs; resolving the inventory by title | `docs/DOCUMENT_PRECEDENCE.md` |
 | KB pin and download location | `tools/kb_release.json`, `data/README.md` |

@@ -1,8 +1,12 @@
-"""The read-only verbs over the KB (the seventh, dio, lives in dio.py). Each returns a dict that the CLI wraps in the common envelope.
+"""The read-only verbs over the KB (dio lives in dio.py). Each returns a dict that the CLI wraps in the common envelope.
 
 Card meaning comes only from the KB (contracts, Oracle rules text) and the grammar layer's loop discovery (P-01).
-Nothing here parses card text. Interaction links are candidates unless both contracts are semantically reviewed (P-03),
+Apart from the declared lookup in `typal` (below), nothing here parses card text. Interaction links are candidates unless both contracts are semantically reviewed (P-03),
 and exploration output is never a ranking of card quality (P-04).
+
+@ai-semantic-role: candidate-source
+Only `typal` reads rules text, as a declared lexical lookup for retrieval (labelled lexical_match, C-014); every other verb
+reads contracts.
 """
 import csv
 import json
@@ -782,3 +786,134 @@ def check(c, items):
         out.append(cl)
     return {'checked': len(out), 'by_verdict': _count(out, 'verdict'),
             'assert_keys': {k: list(v) for k, v in ASSERTS.items()}}, out
+
+
+# ---------- typal census ----------
+
+# KB capability tags (from the Sheet's Roles column) that mark a card as working with a creature type in general
+TYPAL_TAGS = {'Changeling', 'Choose a creature type', 'Creature-type synergy', 'Typal payoff'}
+GENERIC_TAGS = {'Changeling', 'Choose a creature type'}   # the other two also mark cards about one fixed type (Goblins, Orcs)
+# declared lexical lookups over the KB's rules text; they find candidates for retrieval and never decide mechanics (P-01)
+EVERY_TYPE_PHRASES = ('is every creature type', "it's every creature type", "they're every creature type", 'all creature types')
+CHOSEN_TYPE_PHRASES = ('choose a creature type', 'chosen type', 'creature type of your choice', 'shares a creature type',
+                       'share a creature type')
+TYPAL_READING = ['Membership is the type line in the snapshot. Whether a payoff counts a card is a qualifier question the DIO '
+                 'decides, not this census: cast versus enters (a card put onto the battlefield was not cast), Changeling in '
+                 'every zone, and Kindred spells that have a creature type without being creatures (dio 4.1, dio changeling).',
+                 'Lexical hits are declared text lookups over the KB rules text. They widen retrieval; they are not contract '
+                 'readings and they are not verified.']
+
+
+def _rules_text(c, row):
+    r = c.execute("select rules_text from rules_text where card_name=? and authority='oracle_refresh'", (row['card_name'],)).fetchone()
+    return (r[0] if r and r[0] else row['oracle_text']) or ''
+
+
+def _subtypes(type_line):
+    """Subtype words per face: what follows the dash on each face of the type line."""
+    out = set()
+    for face in (type_line or '').split('//'):
+        if '—' in face:
+            out.update(w.lower() for w in face.split('—', 1)[1].split())
+    return out
+
+
+def typal(c, ctype, ci=None, free=False):
+    """Inventory-first census for a creature type: members, every-type cards, generic type support and cards that name the
+    type, each with availability under the collection policy. A retrieval aid for a typal request, not a ranking (P-04)."""
+    import re
+    t = ctype.strip().lower()
+    if t.endswith('s') and t not in _vocab(c) and t[:-1] in _vocab(c):
+        t = t[:-1]
+    if t not in _vocab(c):
+        raise LookupError(f'{ctype!r} is not a type-line word in this collection, so no owned card has it as a type')
+    word = re.compile(r'\b' + re.escape(t) + r'(s|es)?\b', re.I)
+    pol = _policy()
+    tags = {}
+    for r in c.execute('select card_name,capability from capability_claims where capability in (%s)' % ','.join('?' * len(TYPAL_TAGS)),
+                       tuple(TYPAL_TAGS)):
+        tags.setdefault(r['card_name'], set()).add(r['capability'])
+    groups = {'members': [], 'every_type': [], 'names_the_type': [], 'type_support': [], 'tagged_only': []}
+    gaps = []
+    for row in c.execute('select * from cards where owned_min>0 order by card_name'):
+        name = row['card_name']
+        if ci is not None and not kb.legal_rules(c, row, ci)[0]:
+            continue
+        if free and row['free'] <= 0:
+            continue
+        text = _rules_text(c, row).lower()
+        own = sorted(tags.get(name, ()))
+        basis, group = [], None
+        if t in _subtypes(row['type_line']):
+            group = 'members'
+            basis.append('type_line')
+        elif 'changeling' in (row['keywords_stored'] or '').lower() or 'Changeling' in own:
+            group = 'every_type'
+            basis.append('keyword:Changeling' if 'changeling' in (row['keywords_stored'] or '').lower() else 'tag:Changeling')
+        elif any(p in text for p in EVERY_TYPE_PHRASES):
+            group = 'every_type'
+            basis.append('lexical:every creature type')
+        elif word.search(text):
+            group = 'names_the_type'
+            basis.append(f'lexical:names {t}')
+        elif set(own) & GENERIC_TAGS or any(p in text for p in CHOSEN_TYPE_PHRASES):
+            group = 'type_support'
+            basis += ['tag:' + x for x in own if x in GENERIC_TAGS]
+            if any(p in text for p in CHOSEN_TYPE_PHRASES):
+                basis.append('lexical:chosen type')
+        elif own:
+            group = 'tagged_only'
+            basis += ['tag:' + x for x in own]
+        if not group:
+            continue
+        if group in ('every_type', 'type_support') and not set(own) & GENERIC_TAGS:
+            gaps.append(name)
+        av = _availability(c, name, pol)
+        groups[group].append({'card': name, 'type_line': row['type_line'], 'color_identity': row['color_identity'] or 'C',
+                              'owned': row['owned_min'], 'free': row['free'], 'basis': basis, 'kb_tags': own,
+                              'can_be_commander': row['can_be_commander_stored'] == 'Yes',
+                              'kind': ('kindred' if 'kindred' in (row['type_line'] or '').lower() else
+                                       'creature' if 'creature' in (row['type_line'] or '').lower() else 'other'),
+                              'in_protected_decks': av['in_protected_decks'], 'in_other_built_decks': av['in_other_built_decks'],
+                              'usable_without_asking': av['usable_without_asking'], 'usable_by_agreement': av['usable_by_agreement']})
+    members = groups['members']
+    by_ci = _count(members, 'color_identity')
+    shells = []
+    for cmd in [m for m in members if m['can_be_commander']]:
+        cci = ''.join(x for x in cmd['color_identity'] if x in kb.COLORS)
+        legal = lambda g: [x for x in groups[g] if set(x['color_identity']) - {'C'} <= set(cci)]
+        shells.append({'commander': cmd['card'], 'color_identity': cmd['color_identity'],
+                       'commander_usable_without_asking': cmd['usable_without_asking'],
+                       'members_in_identity': len(legal('members')), 'every_type_in_identity': len(legal('every_type')),
+                       'names_the_type_in_identity': len(legal('names_the_type')),
+                       'type_support_in_identity': len(legal('type_support'))})
+    covered = {s['color_identity'] for s in shells}
+    uncovered = sorted(k for k in by_ci if not any(set(k) - {'C'} <= set(x) for x in covered))
+    counts = {g: len(v) for g, v in groups.items()}
+    held = sorted({x['card'] for g, v in groups.items() if g != 'tagged_only' for x in v
+                   if x['in_protected_decks'] and x['usable_without_asking'] <= 0})
+    claims = [claim(f"The snapshot holds {counts['members']} owned card names with {t} on the type line "
+                    f"({sum(m['owned'] for m in members)} copies, {sum(m['free'] for m in members)} free); by color identity: "
+                    + ', '.join(f'{k} {v}' for k, v in sorted(by_ci.items(), key=lambda kv: -kv[1])) + '.',
+                    'inventory', 'collection_snapshot'),
+              claim(f"Beyond members: {counts['every_type']} every-type cards (Changeling and type-granting effects), "
+                    f"{counts['type_support']} cards that work with a chosen or shared creature type, and {counts['names_the_type']} "
+                    f"cards whose text names {t}. {counts['tagged_only']} more carry a typal tag without chosen-type wording, "
+                    'probably about one other type (tagged_only). Read each before counting it.',
+                    'rules_text', 'lexical_match', discovery='requested')]
+    if uncovered:
+        claims.append(claim(f"No owned {t} commander covers color identit{'y' if len(uncovered) == 1 else 'ies'} "
+                            f"{', '.join(uncovered)}, which hold {sum(by_ci[k] for k in uncovered)} member names; a shell there "
+                            f'needs a commander from outside the type.', 'inventory', 'collection_snapshot'))
+    if held:
+        claims.append(claim(f"{len(held)} of these have every copy in a protected deck and are not available without agreement: "
+                            + ', '.join(held) + '.', 'inventory', 'collection_snapshot', evidence=['decks/collection_policy.json']))
+    if gaps:
+        claims.append(claim(f'{len(gaps)} cards were found only by text lookup; the KB capability tags miss them: '
+                            + ', '.join(gaps) + '. This is a data-layer gap (Sheet Roles), not a tool result.',
+                            'rules_text', 'lexical_match', evidence=['capability_claims']))
+    if not shells:
+        claims.append(claim(f'No owned {t} can be your commander, so a {t} deck needs a commander from outside the type.',
+                            'inventory', 'collection_snapshot'))
+    return {'creature_type': t, 'counts': counts, 'members_by_color_identity': by_ci, 'commander_candidates': shells,
+            'identities_without_type_commander': uncovered, 'held_in_protected_decks': held, 'tag_gaps': gaps, 'reading': TYPAL_READING, **groups}, claims

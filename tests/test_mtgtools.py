@@ -265,6 +265,34 @@ class Verbs(unittest.TestCase):
         self.assertEqual(len(caveat), 1)
         self.assertEqual(caveat[0]['grade'], 'exploratory')
 
+    # Zach's blind ChatGPT Merfolk test, 2026-10-31: a search for the word missed the type's generic support
+    def test_typal_census_finds_members_support_and_protected_copies(self):
+        code, out = self.run_cli('typal', 'Merfolk')
+        self.assertEqual(code, 0)
+        d = out['data']
+        self.assertEqual(d['counts']['members'], 35)
+        self.assertEqual(d['members_by_color_identity'], {'U': 21, 'W': 7, 'WU': 4, 'UB': 2, 'UG': 1})
+        self.assertEqual(sum(m['free'] for m in d['members']), 75)
+        self.assertIn('kindred', {m['kind'] for m in d['members'] if m['card'] == 'Wanderwine Farewell'})
+        found = {x['card'] for g in ('every_type', 'type_support', 'names_the_type') for x in d[g]}
+        for name in ('Harmonized Crescendo', 'Gathering Stone', 'Kindred Judgment', 'Kindred Summons', 'Distant Melody',
+                     "Urza's Incubator", 'Omni-Changeling', 'Seahunter'):
+            self.assertIn(name, found)
+        for name in ('Distant Melody', "Urza's Incubator", 'Secluded Courtyard', 'Unclaimed Territory'):
+            self.assertIn(name, d['held_in_protected_decks'])
+        self.assertEqual({s['commander'] for s in d['commander_candidates']},
+                         {'Emperor Mihail II', 'Orysa, Tide Choreographer', 'Tatyova, Steward of Tides', 'Vohar, Vodalian Desecrator'})
+        self.assertEqual(d['identities_without_type_commander'], ['W', 'WU'])
+        self.assertIn('Gathering Stone', d['tag_gaps'])           # the Sheet Roles tags miss it: a data-layer gap
+        for k, v in d['counts'].items():                         # the counts agree with the lists they summarise
+            self.assertEqual(v, len(d[k]))
+        lexical = [c for c in out['claims'] if c['support'] == 'lexical_match']
+        self.assertTrue(lexical and all(c['grade'] == 'exploratory' for c in lexical))
+
+    def test_typal_rejects_a_word_no_type_line_has(self):
+        code, out = self.run_cli('typal', 'Merfolkk')
+        self.assertEqual(code, 2)
+
 
 if __name__ == '__main__':
     unittest.main()

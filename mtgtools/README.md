@@ -20,11 +20,14 @@ A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_
 | `hypothesis A B [--effect E] [--ci C]` | What would have to hold for A and B to interact, which links are unverified, and what argues against it? | `python3 -m mtgtools hypothesis "Cauldron of Essence" Knightfisher` |
 | `compare DECK OUT=IN …` | What does the evaluator's descriptive profile do under these swaps? | `python3 -m mtgtools compare TMNT "Crustacean Commando=Knockout Maneuver"` |
 | `dio TERM` | What does the ontology say? Quotes the DIO v3.1.1, addendum and A1–A7 sections that match, with file and line, plus a reading map. No database needed | `python3 -m mtgtools dio persistence`, `python3 -m mtgtools dio 7` |
+| `typal TYPE [--ci C] [--free]` | For a creature-type request: which owned cards have the type, which changelings and chosen-type cards support it, which commanders cover which color identities, and which copies sit in protected decks | `python3 -m mtgtools typal Merfolk` |
 | `check FILE\|-` | For each claim in a draft answer, what does it rest on, what is missing, and does a structured assertion hold? | `echo '[{"text":"…","kind":"inventory","cards":["…"],"assert":{"free_min":1}}]' \| python3 -m mtgtools check -` |
 
 `explore` modes:
 - **focused** (default with a seed): links and loop candidates that touch the seed. This answers what was asked (`discovery: requested`).
 - **divergent** (default without a seed): with a seed, two-step chains *forward from the seed* through pathways the seed does not use itself, narrow pathways first. Without a seed, links and loops across the pool, rarest pathways first. This surfaces what nobody asked about (`discovery: unrequested`).
+
+`typal` buckets: `members` (the type line has the type, Kindred spells included), `every_type` (Changeling keyword, or text granting every creature type), `names_the_type`, `type_support` (chosen-type or shared-type wording, or the KB tags `Choose a creature type`/`Changeling`), and `tagged_only` (a typal tag without chosen-type wording, usually about another type). Members and the Changeling keyword come from recorded fields. Every other bucket comes from a declared lexical lookup over the KB rules text (`basis: lexical:…`, support `lexical_match`). Those hits are retrieval candidates, never contract readings (P-01). `tag_gaps` lists the cards that only the lookup found, because the KB capability tags miss them; that is a data-layer gap. Whether a payoff counts a card (cast or enters, Changeling in every zone, Kindred) is decided by the DIO qualifiers, not by the census.
 
 ## Reading the output
 

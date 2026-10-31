@@ -9,7 +9,7 @@ Everything here is a read-only snapshot. The live inventory is a Google Sheet, n
 | Folder | Contents |
 |---|---|
 | `00_CURRENT_STATE.md` | Project status brief: architecture, inventory, extraction pass, KB, grammar layer, evaluator, open decisions. |
-| `01_inventory/` | xlsx export of the canonical Sheet, taken 2026-10-24 after the mechanics extraction pass (sha256 `d7a2d191…4bab4`). It has 38 tabs. Collection and Deck Allocations have their header on row 4. |
+| `01_inventory/` | xlsx export of the canonical Sheet, taken 2026-10-24 after the mechanics extraction pass (sha256 `d7a2d191…4bab4`). It has 41 tabs (an earlier version of this guide said 38, which was wrong). Collection and Deck Allocations have their header on row 4. |
 | `02_knowledgebase/` | `mtg_kb_v0.2.1-r20261024d.zip` is the full KB release: both SQLite databases, the query and audit tools, the tests, the scenarios, the vendored evaluator and the doctrine documents. Its release notes and README are also unzipped next to it. |
 | `03_evaluator/` | `current_evaluations_20261025/` holds fresh reports, run today: one inventory report and one deck report for each of the 13 decks. `01_deck_headlines.md` gathers the summary block of every deck report. Also here: the evaluator README and CHANGELOG, and the frozen 2026-10-20 predictions (never edit these; score them only against reported games). |
 | `04_mechanics_review_packet/` | The 330 new candidate operations grouped into 88 mechanical classes, ready for Zach's class-level review. Includes the README and the scripts that produced them. |

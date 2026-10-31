@@ -1,4 +1,4 @@
-"""Command line: one program, seven read-only verbs, JSON out.
+"""Command line: one program, eight read-only verbs, JSON out.
 
   python3 -m mtgtools context [--deck Vraska]
   python3 -m mtgtools card "Terra, Magical Adept"
@@ -7,6 +7,7 @@
   python3 -m mtgtools compare TMNT "Crustacean Commando=Knockout Maneuver" [--workbook export.xlsx]
   python3 -m mtgtools check claims.json        (a JSON list of {text, kind, cards[], deck?, assert?})
   python3 -m mtgtools dio "persistence"        (quote DIO sections; needs no database)
+  python3 -m mtgtools typal Merfolk [--ci WU] [--free]   (creature-type census: members, changelings, type support, availability)
 
 --db picks the collection: any SQLite built by kb/migrate_v02.py (default kb/mtg_cards_v0.2.sqlite).
 """
@@ -91,6 +92,7 @@ def main(argv=None):
     s = sub.add_parser('check'); s.add_argument('claims', help='JSON file with a list of claims, or - for stdin')
     s = sub.add_parser('dio'); s.add_argument('term', help='a concept, mechanic or section number, e.g. persistence, blink, 6.4')
     s.add_argument('--limit', type=int, default=5); s.add_argument('--max-chars', type=int, default=2500)
+    s = sub.add_parser('typal'); s.add_argument('creature_type'); s.add_argument('--ci'); s.add_argument('--free', action='store_true')
     a = p.parse_args(argv)
     query = {k: v for k, v in vars(a).items() if k not in ('verb', 'db') and v not in (None, False)}
     if a.verb != 'dio' and not Path(a.db).exists():
@@ -111,6 +113,8 @@ def main(argv=None):
                     data, claims = verbs.card(c, a.name)
                 elif a.verb == 'explore':
                     data, claims = verbs.explore(c, a.seed, a.ci, a.deck, a.free, a.mode, a.limit)
+                elif a.verb == 'typal':
+                    data, claims = verbs.typal(c, a.creature_type, a.ci, a.free)
                 elif a.verb == 'hypothesis':
                     data, claims = verbs.hypothesis(c, a.a, a.b, a.effect, a.ci)
                 else:
