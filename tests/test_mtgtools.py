@@ -293,6 +293,29 @@ class Verbs(unittest.TestCase):
         code, out = self.run_cli('typal', 'Merfolkk')
         self.assertEqual(code, 2)
 
+    # Zach's blind ChatGPT decommission test, 2026-10-31 (Auntie Ool / Blight Curse into TMNT)
+    def test_deck_resolves_by_commander_name(self):
+        code, out = self.run_cli('context', '--deck', 'Auntie Ool')
+        self.assertEqual(code, 0)
+        self.assertEqual(out['data']['deck'], 'Blight Curse')
+
+    def test_release_separates_what_disassembly_actually_unlocks(self):
+        code, out = self.run_cli('release', 'Auntie Ool', '--to', 'TMNT')
+        self.assertEqual(code, 0)
+        d = out['data']
+        self.assertEqual((d['donor'], d['receiver']), ('Blight Curse', 'TMNT'))
+        self.assertEqual(d['counts'], {'already_in_receiver': 12, 'outside_receiver_identity': 0, 'free_copy_elsewhere': 10,
+                                       'unlocked_by_decommission': 60})
+        self.assertEqual(sum(d['counts'].values()) + 0, 82)
+        names = lambda g: {x['card'] for x in d[g]}
+        self.assertIn('Devoted Druid', names('already_in_receiver'))
+        self.assertIn('Nesting Grounds', names('free_copy_elsewhere'))
+        self.assertIn("Puca's Covenant", names('unlocked_by_decommission'))
+        self.assertTrue(all('check' in x for x in d['unlocked_by_decommission'] if x['card'] == 'Everlasting Torment'))
+        # only Current deck rows count: TMNT's bench and Oops' proposed borrowing are not allocations
+        code, ctx = self.run_cli('context', '--deck', 'TMNT')
+        self.assertEqual(len(ctx['data']['cards']), 92)
+
 
 if __name__ == '__main__':
     unittest.main()
