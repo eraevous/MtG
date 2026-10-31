@@ -92,6 +92,38 @@ class Qualifiers(unittest.TestCase):
         self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', etb)[:2], ('unresolved', 'same_card'))
 
 
+class Ontology(unittest.TestCase):
+    """The DIO lookup and the grounding label run everywhere: an agent without the KB can still consult the ontology."""
+    def run_cli(self, *args):
+        from mtgtools.cli import main
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            code = main(list(args))
+        return code, json.loads(buf.getvalue())
+
+    def test_dio_needs_no_database(self):
+        code, out = self.run_cli('--db', str(ROOT / 'no_such.sqlite'), 'dio', 'persistence')
+        self.assertEqual(code, 0)
+        self.assertEqual(out['grounding']['level'], 'doctrine')
+        self.assertEqual(out['claims'], [])
+        heads = [s['heading'] for s in out['data']['sections']]
+        self.assertTrue(any('6.4 The persistence table' in h for h in heads), heads)
+
+    def test_dio_section_number_finds_that_section_first(self):
+        _, out = self.run_cli('dio', '7', '--limit', '1')
+        self.assertIn('7. CONNECTIONS', out['data']['sections'][0]['heading'])
+
+    def test_dio_reads_the_addendum_numbered_headings(self):
+        _, out = self.run_cli('dio', 'feedstock')
+        self.assertTrue(any(s['source'].startswith('DIO v3.1.1 addendum') for s in out['data']['sections']))
+
+    def test_missing_kb_is_labelled_and_points_to_the_bootstrap(self):
+        code, out = self.run_cli('--db', str(ROOT / 'no_such.sqlite'), 'card', 'Sol Ring')
+        self.assertEqual(code, 2)
+        self.assertEqual(out['grounding']['level'], 'doctrine_only')
+        self.assertIn('tools/kb_bootstrap.py install', out['error'])
+
+
 @unittest.skipUnless(DB.exists(), 'KB database not present (data/README.md)')
 class Verbs(unittest.TestCase):
     def run_cli(self, *args):
@@ -104,6 +136,9 @@ class Verbs(unittest.TestCase):
     def test_envelope_names_its_collection(self):
         code, out = self.run_cli('context')
         self.assertEqual(code, 0)
+        pinned = json.loads((ROOT / 'tools' / 'kb_release.json').read_text(encoding='utf-8'))['release']
+        self.assertEqual(out['collection']['release'], pinned)
+        self.assertEqual(out['grounding']['level'], 'kb_grounded')
         self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261030')
         self.assertTrue(all({'kind', 'support', 'grade'} <= set(c) for c in out['claims']))
 

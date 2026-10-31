@@ -2,6 +2,22 @@
 
 These rules apply to Claude Code, Codex or any other coding agent. They implement AEC (formerly Codex++): the repo carries its own purpose, decisions and objections, so agents can work as collaborators that notice drift, not as autocomplete.
 
+## Card, deck or interaction questions: ground them first
+
+Before you analyse any card, deck, swap or interaction (not only before you change code), do this:
+
+```bash
+python3 tools/kb_bootstrap.py status     # kb_grounded / kb_unpinned / doctrine_only
+python3 tools/kb_bootstrap.py install    # if the KB databases are missing
+```
+
+Then follow **`docs/AGENT_GUIDE.md`**:
+- Read cards through the KB with `python3 -m mtgtools card | explore | hypothesis | check`.
+- Consult the DIO (Deck Interaction Ontology) with `python3 -m mtgtools dio TERM`. It needs no database.
+- End the answer with a grounding line: KB release, DIO sections used, which cards you annotated yourself.
+
+The evaluator (`mtg_eval`) is not ontology-grounded: its roles come from its own text patterns (C-012). If the KB is unavailable, say plainly that your interaction analysis is your own reading of Oracle text.
+
 ## Read first, in order of precedence
 
 1. `codex_++/project.purpose.md`: **P-00 to P-08**. If a change would break one, stop and raise it (see Drift below).

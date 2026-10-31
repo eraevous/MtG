@@ -1,0 +1,9 @@
+{
+  "_doc": "The KB release this checkout's code expects, and where tools/kb_bootstrap.py can get it. Update with every KB release (kb/release.py). Database hashes are not repeated here: they come from kb/MANIFEST.sha256.",
+  "release": "mtg-kb-v0.2.1-r20261030",
+  "zip_name": "mtg_kb_v0.2.1-r20261030.zip",
+  "zip_sha256": "a4ae8646e689c32997bd6ebb203ffd3047366d3fd583104be1d36325adb4bcf3",
+  "url": "https://github.com/eraevous/MtG/releases/download/kb-r20261030/mtg_kb_v0.2.1-r20261030.zip",
+  "databases": ["mtg_cards_v0.2.sqlite", "mtg_cards.sqlite"],
+  "search_dirs": ["data", "/mnt/project-files/mechanics-kernel/sqlite-kb"]
+}
