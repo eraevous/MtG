@@ -65,6 +65,19 @@ class Qualifiers(unittest.TestCase):
         energy = self.k('Nissa', ['legendary creature'], feeds=['counter.put'])
         self.assertEqual(self.q(energy, 'counter.put', chapter, 'counter.put')[0], 'unresolved')
 
+    def test_counter_kinds_decide_counter_links(self):
+        # C-016: Hapatra hears -1/-1 counters; Leonardo puts +1/+1; Twitching Doll puts nest; proliferate depends on the board
+        hapatra = dict(self.k('Hapatra', ['legendary creature'], hooks=['counter.put']), counters=[{'role': 'listen_put', 'kind': '-1/-1', 'holder': 'permanent'}])
+        anyc = dict(self.k('Patron', ['creature'], hooks=['counter.put']), counters=[{'role': 'listen_put', 'kind': 'any', 'holder': 'permanent'}])
+        leo = dict(self.k('Leonardo', ['legendary creature'], feeds=['counter.put']), counters=[{'role': 'put', 'kind': '+1/+1', 'holder': 'permanent'}])
+        clasp = dict(self.k('Clasp', ['artifact'], feeds=['counter.put']), counters=[{'role': 'put', 'kind': '-1/-1', 'holder': 'permanent'}])
+        sage = dict(self.k('Sage', ['creature'], feeds=['counter.put']), counters=[{'role': 'proliferate', 'kind': 'present_kinds', 'holder': 'permanent_or_player'}])
+        q = lambda p, o: self.q(p, 'counter.put', o, 'counter.put')[0]
+        self.assertEqual(q(leo, hapatra), 'incompatible')
+        self.assertEqual(q(clasp, hapatra), 'compatible')
+        self.assertEqual(q(leo, anyc), 'compatible')
+        self.assertEqual(q(sage, hapatra), 'unresolved')
+
     def test_self_enter_needs_a_copy_or_return_of_that_card(self):
         light = self.k('Light', ['enchantment'], hooks=['battlefield.enter'], subject='self')
         talent = self.k('Talent', ['enchantment — class'], hooks=['battlefield.enter'], self_phrase=True)
@@ -139,7 +152,7 @@ class Verbs(unittest.TestCase):
         pinned = json.loads((ROOT / 'tools' / 'kb_release.json').read_text(encoding='utf-8'))['release']
         self.assertEqual(out['collection']['release'], pinned)
         self.assertEqual(out['grounding']['level'], 'kb_grounded')
-        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261030')
+        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261031')
         self.assertTrue(all({'kind', 'support', 'grade'} <= set(c) for c in out['claims']))
 
     def test_card_separates_oracle_text_from_contract_readings(self):
@@ -148,7 +161,7 @@ class Verbs(unittest.TestCase):
         kinds = {c['kind']: c for c in out['claims']}
         self.assertEqual(kinds['rules_text']['grade'], 'decision_grade')
         mech = [c for c in out['claims'] if c['kind'] == 'mechanics']
-        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261030
+        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261031
 
     def test_explore_works_without_a_seed_and_marks_discovery(self):
         code, out = self.run_cli('explore', '--ci', 'RG', '--limit', '5')
@@ -292,6 +305,29 @@ class Verbs(unittest.TestCase):
     def test_typal_rejects_a_word_no_type_line_has(self):
         code, out = self.run_cli('typal', 'Merfolkk')
         self.assertEqual(code, 2)
+
+    # Zach's blind ChatGPT decommission test, 2026-10-31 (Auntie Ool / Blight Curse into TMNT)
+    def test_deck_resolves_by_commander_name(self):
+        code, out = self.run_cli('context', '--deck', 'Auntie Ool')
+        self.assertEqual(code, 0)
+        self.assertEqual(out['data']['deck'], 'Blight Curse')
+
+    def test_release_separates_what_disassembly_actually_unlocks(self):
+        code, out = self.run_cli('release', 'Auntie Ool', '--to', 'TMNT')
+        self.assertEqual(code, 0)
+        d = out['data']
+        self.assertEqual((d['donor'], d['receiver']), ('Blight Curse', 'TMNT'))
+        self.assertEqual(d['counts'], {'already_in_receiver': 12, 'outside_receiver_identity': 0, 'free_copy_elsewhere': 10,
+                                       'unlocked_by_decommission': 60})
+        self.assertEqual(sum(d['counts'].values()) + 0, 82)
+        names = lambda g: {x['card'] for x in d[g]}
+        self.assertIn('Devoted Druid', names('already_in_receiver'))
+        self.assertIn('Nesting Grounds', names('free_copy_elsewhere'))
+        self.assertIn("Puca's Covenant", names('unlocked_by_decommission'))
+        self.assertTrue(all('check' in x for x in d['unlocked_by_decommission'] if x['card'] == 'Everlasting Torment'))
+        # only Current deck rows count: TMNT's bench and Oops' proposed borrowing are not allocations
+        code, ctx = self.run_cli('context', '--deck', 'TMNT')
+        self.assertEqual(len(ctx['data']['cards']), 92)
 
 
 if __name__ == '__main__':

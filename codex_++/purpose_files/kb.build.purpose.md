@@ -10,7 +10,7 @@
 @ai-generated: true
 @ai-verified: false
 @ai-risk-pii: none
-@ai-dependencies: bridge_v02, contracts, freeze_check, kb_policy, kbfacts, oracle_refresh, reconcile, review, scenarios, sqlite_bridge
+@ai-dependencies: bridge_v02, contracts, counters, freeze_check, kb_policy, kbfacts, oracle_refresh, reconcile, review, scenarios, sqlite_bridge
 @ai-contracts: P-01, P-03
 
 ### Inputs and outputs
@@ -24,6 +24,7 @@
 - Semantic review and runtime readiness are separate states. A human 'verified' must cite passing scenarios.
 - Test test_rebuild_is_byte_identical_under_another_hash_seed fails here (challenge C-001).
 - Capability (role) claims come from Oracle-text regexes in vendor/mtg_eval/semantics.py. `machine_supported` means only that a pattern matched; nobody reviewed it. The role summary (kbq.overlap) reports them as detected candidates (`sole_detected_candidates`, `reviewed_role_counts`). kb patch 3 (r20261028) excludes flicker, own-side and helper/blocker-only scopes from `wipe`. kb patch 4 (r20261030) reads roles that live only in reminder text by name: predefined tokens (Treasure, Gold, Lander, Powerstone, Clue, Food) and token-making keywords (afterlife, living weapon, incubate, ...). Reminder text stays stripped.
+- Counter identity (r20261031, counters.py): every contract carries `counters.facets` ({role, kind, holder}; kind is +1/+1, -1/-1, a named kind, `any` for generic wording, or `present_kinds` for proliferate), and `derived_facts` holds card-level `counter_facets` that add keyword macros (persist, infect, wither, modular, sagas, ...), "enters with" lines and granted keywords, with an order-of-operations note for cards that enter with -1/-1 counters (CR 614.1c, 704.3, 704.5f, 704.5q). Facets are drafted, never reviewed. counters.py is a second reader of counter text beside the grammar layer's counter_kind (C-017): converge them, don't grow both.
 
 ### Notes
 - Drafted by the AEC session from the 2026-10-25 handoff docs, as an import-time description. Build-project Claude should review it, and this note goes away once it has.

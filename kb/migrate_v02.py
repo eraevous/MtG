@@ -16,6 +16,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+import counters as COUNTERS
 import kbfacts as F, contracts as K, review as R, oracle_refresh as O, reconcile as RC, scenarios as SC
 from freeze_check import is_archive
 
@@ -209,6 +210,15 @@ def main():
     inv0 = SQLiteInventory(a.v01)  # the Sheet-text reading too, so policy=False (v0.1-equivalent inventory) also runs without regex
     for kind, key, card, val in F.derive(inv0):
         con.execute('insert or ignore into derived_facts values(?,?,?,?,?)', (kind, key, card, F.dumps(val), DERIVATION_VERSION)); n += 1
+    # card-level counter identity (C-015/C-016): keyword macros and "enters with" statics that no operation contract holds
+    nf = 0
+    for r in con.execute('select c.card_name, c.type_line, coalesce(t.rules_text, c.oracle_text) txt from cards c '
+                         'left join rules_text t using(card_name) order by c.card_name').fetchall():
+        fs = COUNTERS.card_facets(r['txt'], r['card_name'], r['type_line'])
+        if fs:
+            val = {'drafter': COUNTERS.CARD_DRAFTER, 'facets': fs, 'order_note': COUNTERS.counter_order_note(fs)}
+            con.execute('insert into derived_facts values(?,?,?,?,?)', ('counter_facets', 'rules_text', r['card_name'], F.dumps(val), COUNTERS.CARD_DRAFTER)); nf += 1
+    print('counter facets', nf)
     print('derived facts', n, 'rows', con.execute('select count(*) from derived_facts').fetchone()[0])
 
     # 5. contracts + validation -------------------------------------------------------
