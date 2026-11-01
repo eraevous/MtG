@@ -13,6 +13,7 @@ import json
 from pathlib import Path
 
 from . import kb
+import counters as COUNTERS   # kb/counters.py, on the path via mtgtools.kb
 from .claims import claim, REVIEWED_STATES
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -67,6 +68,7 @@ def _contracts(c, names=None):
         out.append({'contract_id': r['contract_id'], 'card': r['card_name'], 'text': r['exact_text'], 'kind': r['operation_kind'],
                     'state': r['queue_state'], 'feeds': qi.get('feeds') or [], 'hooks': qi.get('hook_ids') or [],
                     'hook_subject': qi.get('hook_subject'), 'triggers': triggers, 'targets': targets,
+                    'counters': qi.get('counters') or [],
                     'faces': [f.strip().lower() for f in (r['type_line'] or '').split('//')]})
     return out
 
@@ -166,7 +168,18 @@ def _qualify(p, eff, o, hook, vocab):
     trig = o['triggers'].get(hook) or {}
     self_obs = _self_obs(o, hook)
     if hook == 'counter.put':
-        return 'unresolved', 'counter_type_unknown', 'counter type and recipient are not recorded in the contracts (a Saga chapter needs lore counters on that Saga)'
+        made = [f['kind'] for f in p.get('counters') or [] if f['role'] in ('put', 'enters_with', 'proliferate')]
+        heard = [f['kind'] for f in o.get('counters') or [] if f['role'] == 'listen_put']
+        if not made or not heard:
+            return 'unresolved', 'counter_type_unknown', 'counter kind is not recorded on both contracts (a Saga chapter needs lore counters on that Saga)'
+        verdicts = {COUNTERS.match(m, h) for m in made for h in heard}
+        pair = f"{'/'.join(sorted(set(made)))} -> {'/'.join(sorted(set(heard)))}"
+        if 'compatible' in verdicts:
+            return 'unresolved' if self_obs else 'compatible', 'counter_kind', f'counter kind matches ({pair}); recipient not checked' + \
+                ('; the observer watches only itself' if self_obs else '')
+        if 'possible' in verdicts:
+            return 'unresolved', 'counter_kind_possible', f'kind depends on what is already there ({pair}): proliferate or generic counters'
+        return 'incompatible', 'counter_kind', f'different counter kinds ({pair})'
     own = eff in ENTER_EFFECTS and eff != 'token.create' and not p['targets']     # the producer puts its own card onto the battlefield
     if self_obs:
         if p['card'] == o['card'] and own:
@@ -299,11 +312,23 @@ def _loops(pool, only=None, ks=None):
     return out
 
 
+def _resolve_deck(c, deck):
+    """A deck by its inventory name, or by its commander's name ("Auntie Ool" is recorded as the deck Blight Curse)."""
+    decks = kb.decks(c)
+    for d in decks:
+        if d.lower() == deck.strip().lower():
+            return d
+    hits = sorted({r[0] for r in c.execute("select deck from deck_allocations where section='Commander' and counts_in_deck_100=1 "
+                                           'and lower(card_name) like ?', (deck.strip().lower() + '%',))})
+    if len(hits) == 1:
+        return hits[0]
+    raise LookupError(f'deck not found: {deck!r}' + (f'; commander matches several decks: {hits}' if hits else '') +
+                      f'; decks: {decks}')
+
+
 def _pool(c, ci=None, deck=None, free=False):
     if deck:
-        names = set(kb.deck_cards(c, deck))
-        if not names:
-            raise LookupError(f'deck not found: {deck!r}; decks: {kb.decks(c)}')
+        names = set(kb.deck_cards(c, _resolve_deck(c, deck)))
         return names
     out = set()
     for r in c.execute('select * from cards where owned_min>0'):
@@ -367,9 +392,8 @@ def context(c, deck=None):
                                 'preference', 'none'))
         return {'collection': {'owned_names': tot[0], 'copies': tot[1], 'names_with_free_copy': tot[2]}, 'policy': pol,
                 'decks': decks}, claims
+    deck = _resolve_deck(c, deck)
     cards = kb.deck_cards(c, deck)
-    if not cards:
-        raise LookupError(f'deck not found: {deck!r}; decks: {kb.decks(c)}')
     ov = kb.overlap(c, deck)
     ch = _charter(deck)
     size = c.execute('select sum(quantity) from deck_allocations where deck=? and counts_in_deck_100=1', (deck,)).fetchone()[0]
@@ -385,6 +409,15 @@ def context(c, deck=None):
                         'mechanics', 'semantic_reviewed' if ov['role_counts'] and ov['reviewed_role_counts'] == ov['role_counts'] else 'candidate'))
     return {'deck': deck, 'color_identity': kb.deck_ci(c, deck), 'cards': cards, 'charter': ch,
             'roles': {k: ov[k] for k in ('evidence', 'role_counts', 'reviewed_role_counts', 'sole_detected_candidates')}}, claims
+
+
+def _counter_facets(c, name):
+    """Card-level counter facets (drafted, not reviewed) from the KB's derived_facts, or None if the KB predates them."""
+    try:
+        r = c.execute("select value_json from derived_facts where fact_kind='counter_facets' and card_name=?", (name,)).fetchone()
+    except Exception:
+        return None
+    return json.loads(r[0]) if r else {'facets': [], 'order_note': None}
 
 
 def card(c, name):
@@ -408,7 +441,15 @@ def card(c, name):
     for k in d['contracts']:
         claims.append(claim(f"Contract reading of: {k['exact_text']}", 'mechanics', k['queue_state'],
                             evidence=[k['contract_id']] + k['failed_checks']))
+    cf = _counter_facets(c, name)
+    if cf and cf['facets']:
+        kinds = sorted({f"{f['role']} {f['kind']} ({f['holder']})" for f in cf['facets']})
+        claims.append(claim('Counter facets: ' + '; '.join(kinds) + '. Drafted from rules text; kinds are kept, sign is not '
+                            'assumed (DIO v3.1.1 state table).', 'mechanics', 'candidate', evidence=['derived_facts.counter_facets']))
+        if cf.get('order_note'):
+            claims.append(claim(cf['order_note'], 'rules_text', 'oracle', evidence=['CR 614.1c', 'CR 704.3', 'CR 704.5f', 'CR 704.5q']))
     data = {'card': d['card'], 'custody': d['custody'], 'held_by': dest['held_by'], 'availability': av,
+            'counters': cf['facets'] if cf else None,
             'legal_in_decks': [x['deck'] for x in dest['destinations'] if x['legal']],
             'contracts': [{k: x[k] for k in ('contract_id', 'operation_kind', 'queue_state', 'exact_text', 'failed_checks')} for x in d['contracts']],
             'reconciliation': d['reconciliation']}
@@ -917,3 +958,78 @@ def typal(c, ctype, ci=None, free=False):
                             'inventory', 'collection_snapshot'))
     return {'creature_type': t, 'counts': counts, 'members_by_color_identity': by_ci, 'commander_candidates': shells,
             'identities_without_type_commander': uncovered, 'held_in_protected_decks': held, 'tag_gaps': gaps, 'reading': TYPAL_READING, **groups}, claims
+
+
+# ---------- deck decommission: release audit ----------
+
+MINUS_COUNTER = ('-1/-1 counter',)
+BASICS = {'Plains', 'Island', 'Swamp', 'Mountain', 'Forest', 'Wastes'}
+
+
+def release(c, donor, receiver):
+    """Release audit for retiring DONOR and absorbing into RECEIVER: which donor cards the receiver already runs, which can't
+    go there, which already have a free copy elsewhere (no disassembly needed), and which only the decommission unlocks.
+    A retiring donor's deck floor is not a constraint; physical custody still is. Nothing moves (P-05)."""
+    donor, receiver = _resolve_deck(c, donor), _resolve_deck(c, receiver)
+    if donor == receiver:
+        raise ValueError('donor and receiver are the same deck')
+    pol = _policy()
+    protected = set((pol or {}).get('protected_decks') or [])
+    rci = kb.deck_ci(c, receiver)
+    rcards = set(kb.deck_cards(c, receiver))
+    groups = {'already_in_receiver': [], 'outside_receiver_identity': [], 'free_copy_elsewhere': [], 'unlocked_by_decommission': []}
+    basics = 0
+    for name in kb.deck_cards(c, donor):
+        row = c.execute('select * from cards where card_name=?', (name,)).fetchone()
+        if name in BASICS:
+            basics += c.execute('select sum(quantity) from active_deck_cards where deck=? and card_name=?', (donor, name)).fetchone()[0]
+            continue
+        text = _rules_text(c, row).lower()
+        av = _availability(c, name, pol)
+        item = {'card': name, 'type_line': row['type_line'], 'color_identity': row['color_identity'] or 'C', 'free': row['free'],
+                'in_other_built_decks': {k: v for k, v in av['in_other_built_decks'].items() if k != donor},
+                'in_protected_decks': av['in_protected_decks']}
+        cf = _counter_facets(c, name)
+        if cf is not None:
+            minus_roles = sorted({f['role'] for f in cf['facets'] if f['kind'] == '-1/-1'})
+            if minus_roles:
+                item['counters'] = {'-1/-1': minus_roles}
+                item['check'] = ('-1/-1 counters (' + ', '.join(minus_roles) + '): they cancel +1/+1 counters (CR 704.5q)'
+                                 + ('; ' + cf['order_note'] if cf.get('order_note') else ''))
+        elif any(p in text for p in MINUS_COUNTER):
+            item['check'] = 'mentions -1/-1 counters (lexical): they cancel +1/+1 counters (CR 704.5q); check which side gets them'
+        if name in rcards:
+            groups['already_in_receiver'].append(item)
+        elif not kb.legal_rules(c, row, rci)[0]:
+            groups['outside_receiver_identity'].append(item)
+        elif row['free'] > 0:
+            groups['free_copy_elsewhere'].append(item)
+        else:
+            groups['unlocked_by_decommission'].append(item)
+    counts = {g: len(v) for g, v in groups.items()}
+    minus = [x['card'] for x in groups['unlocked_by_decommission'] + groups['free_copy_elsewhere'] if 'check' in x]
+    claims = [claim(f"{donor} holds {sum(counts.values())} nonbasic names (+{basics} basic lands). For {receiver} ({rci}): "
+                    f"{counts['already_in_receiver']} are already in it, {counts['outside_receiver_identity']} are outside its "
+                    f"identity, {counts['free_copy_elsewhere']} have a free copy elsewhere (no disassembly needed), and "
+                    f"{counts['unlocked_by_decommission']} become available only if {donor} is taken apart.",
+                    'inventory', 'collection_snapshot'),
+              claim('A copy of a card the receiver already runs adds no slot: singleton. Released copies return to the free pool.',
+                    'rules_text', 'oracle')]
+    if donor in protected:
+        claims.append(claim(f'{donor} is a protected deck: decommissioning it needs agreement from Zach and Steph.',
+                            'preference', 'collection_policy', evidence=['decks/collection_policy.json']))
+    if receiver in protected:
+        claims.append(claim(f'{receiver} is protected: adding to it needs no release from anyone else, but every cut from it does.',
+                            'preference', 'collection_policy', evidence=['decks/collection_policy.json']))
+    if minus:
+        facet_kb = _counter_facets(c, minus[0]) is not None
+        claims.append(claim(f'{len(minus)} candidates put, require or remove -1/-1 counters ({", ".join(minus)}). '
+                            + ('Each carries its counter roles (drafted counter facets, not reviewed); whether they help or hurt '
+                               'depends on which permanent gets them, so read the roles against the receiver.' if facet_kb else
+                               'This KB predates counter facets, so the match is lexical; read each card.'),
+                            'mechanics', 'candidate', evidence=['derived_facts.counter_facets' if facet_kb else 'C-015']))
+    claims.append(claim('This is a release audit, not an absorption verdict: which receiver cards to cut, and how much of each '
+                        "card's function survives leaving the donor's engine, still need hypothesis/compare and the deck charter.",
+                        'performance', 'none'))
+    return {'mode': 'decommission', 'donor': donor, 'receiver': receiver, 'receiver_color_identity': rci,
+            'donor_basic_lands': basics, 'counts': counts, **groups}, claims
