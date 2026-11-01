@@ -370,3 +370,58 @@ class Verbs(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+@unittest.skipUnless(DB.exists(), 'KB database not installed (python3 tools/kb_bootstrap.py install)')
+class Find(unittest.TestCase):
+    """Kate's acceptance cases for find (2026-11-01): retrieval with evidence classes, never a completeness claim."""
+    def run_cli(self, *args):
+        from mtgtools.cli import main
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            code = main(['--db', str(DB), 'find', *args])
+        return code, json.loads(buf.getvalue())
+
+    def test_sacrifice_outlets_label_one_shot_spells(self):
+        _, out = self.run_cli('--role', 'sacrifice', '--ci', 'B', '--free')
+        per = {x['card']: x for x in out['data']['performs']}
+        self.assertTrue(per['Viscera Seer']['shape']['repeatable'])
+        self.assertEqual(per['Bone Splinters']['shape']['kind'], 'one-shot spell')
+
+    def test_payoffs_are_listed_apart_from_outlets(self):
+        _, out = self.run_cli('--role', 'sacrifice', '--free', '--limit', '1000')
+        performs = {x['card'] for x in out['data']['performs']}
+        supports = {x['card'] for x in out['data']['supports']}
+        self.assertIn('Viscera Seer', performs)
+        self.assertNotIn('Viscera Seer', supports)
+
+    def test_ci_means_commander_color_identity(self):
+        _, out = self.run_cli('--role', 'protection', '--ci', 'WUB', '--free', '--limit', '500')
+        self.assertTrue(all(set(x['color_identity']) <= set('WUBC') for x in out['data']['performs']))
+
+    def test_conditional_wipe_is_flagged(self):
+        _, out = self.run_cli('--role', 'wipe', '--limit', '500')
+        amalia = next(x for x in out['data']['performs'] if x['card'] == 'Amalia Benavides Aguirre')
+        self.assertTrue(amalia['shape']['conditional'])
+
+    def test_protected_only_card_is_never_free(self):
+        _, out = self.run_cli('--role', 'ramp', '--free', '--limit', '1000')
+        self.assertNotIn('Sol Ring', {x['card'] for x in out['data']['performs']})   # every copy is in a deck
+
+    def test_every_answer_is_nonexhaustive_and_dates_both_sources(self):
+        _, out = self.run_cli('--role', 'tutor', '--ci', 'C', '--free')
+        self.assertTrue(any('Nonexhaustive' in l for l in out['data']['limitations']))
+        f = out['data']['freshness']
+        self.assertTrue(f['kb_release'] and f['inventory_snapshot_modified_utc'])
+
+    def test_unknown_role_lists_the_known_ones(self):
+        code, out = self.run_cli('--role', 'vibes')
+        self.assertEqual(code, 2)
+        self.assertIn('sacrifice', out['error'])
+
+    def test_missing_card_is_not_assumed_acquired(self):
+        from mtgtools.cli import main
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            main(['--db', str(DB), 'card', 'Cyclonic Rift'])
+        self.assertIn('not owned', json.loads(buf.getvalue())['error'])

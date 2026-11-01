@@ -40,8 +40,9 @@ def _card_row(c, name):
         return c.execute('select * from cards where card_name=?', (hits[0],)).fetchone()
     if hits:
         raise LookupError(f'card not found: {name!r}; did you mean one of {hits}')
-    raise LookupError(f'card not found: {name!r}. The KB holds only cards in the inventory snapshot it was built from, so a '
-                      'card acquired since has no contract until the next KB release. Meanwhile annotate it by hand '
+    raise LookupError(f'card not found: {name!r}. The KB holds only the cards in the inventory snapshot it was built from, so '
+                      'either the card is not owned, or it was acquired after that snapshot, or the name is spelled differently; '
+                      'the KB cannot tell which. If it is owned, it has no contract until the next KB release: annotate it by hand '
                       '(python3 -m mtgtools dio 11), label that reading as agent-drafted, and explore the owned side with '
                       'explore THEME or explore OWNED_CARD.')
 
@@ -1108,3 +1109,140 @@ def release(c, donor, receiver):
                         'performance', 'none'))
     return {'mode': 'decommission', 'donor': donor, 'receiver': receiver, 'receiver_color_identity': rci,
             'donor_basic_lands': basics, 'counts': counts, **groups}, claims
+
+
+# ---------- find: functional retrieval (Kate, 2026-11-01) ----------
+
+# A role is a KB capability (mtg_eval role or Collection.Roles tag). A family pairs the cards that perform a function with
+# the cards that support (pay off) it, so an outlet and a payoff are never counted as the same match. Retrieval only: the
+# capabilities come from the KB's capability_claims; this table names them, it reads no Oracle text (P-01).
+ROLE_FAMILIES = {
+    'sacrifice': {'performs': ['sac_outlet', 'Sacrifice outlet'], 'supports': ['death_payoff', 'Death trigger']},
+    'tokens': {'performs': ['token_maker', 'artifact_token', 'Token maker'], 'supports': ['token_payoff', 'Token multiplier']},
+    'lifegain': {'performs': ['lifegain_source', 'Lifegain'], 'supports': ['lifegain_payoff']},
+    'counters': {'performs': ['counter_source', 'Counters', 'Proliferate'],
+                 'supports': ['counter_payoff', 'counter_multiplier', 'Counter payoff', 'Counter multiplier']},
+    'artifacts': {'performs': ['artifact_token'], 'supports': ['artifact_payoff', 'Artifact synergy']},
+    'landfall': {'performs': ['land_drop', 'Land search'], 'supports': ['landfall_payoff', 'Landfall', 'Lands matter']},
+    'spells': {'performs': ['instant_sorcery'], 'supports': ['spell_payoff', 'Spellslinger payoff']},
+    'graveyard': {'performs': ['self_mill', 'Mill', 'Surveil'], 'supports': ['recursion', 'reanimation', 'Recursion', 'Graveyard']},
+    'blink': {'performs': ['blink', 'Blink / flicker'], 'supports': ['etb_value', 'ETB value', 'ETB payoff']},
+}
+ROLE_ALIASES = {
+    'removal': ['spot_removal', 'Removal'], 'spot_removal': ['spot_removal', 'Removal'], 'wipe': ['wipe', 'Board wipe'],
+    'protection': ['protection', 'Protection', 'Indestructible'], 'draw': ['draw', 'Card draw'],
+    'ramp': ['ramp', 'Ramp', 'Mana dork', 'Mana rock'], 'fixing': ['fixing', 'Mana fixing'],
+    'recursion': ['recursion', 'reanimation', 'Recursion'], 'counterspell': ['counterspell', 'Counterspell'],
+    'copy': ['copy', 'Copy'], 'tutor': ['Tutor'], 'closer': ['closer'], 'sac_outlet': ['sac_outlet', 'Sacrifice outlet'],
+    'death_payoff': ['death_payoff', 'Death trigger'], 'token_maker': ['token_maker', 'Token maker'],
+    'token_multiplier': ['Token multiplier'], 'bounce': ['Bounce', 'Creature bounce'],
+}
+EVIDENCE_CLASS = {'unverified_inventory_tag': 'inventory_tag_only', 'unverified_tag_only': 'inventory_tag_only',
+                  'machine_supported': 'detected_candidate', 'machine_inferred': 'detected_candidate'}
+CLASS_RANK = {'reviewed_capability': 0, 'detected_candidate': 1, 'inventory_tag_only': 2}
+SHAPE = {'activate': 'activated (repeatable while you can pay)', 'trigger': 'triggered', 'cast': 'one-shot spell',
+         'continuous': 'static', 'replacement': 'replacement', 'composite': 'composite'}
+
+
+def _find_roles(c, role):
+    r = role.strip()
+    if r.lower() in ROLE_FAMILIES:
+        return r.lower(), ROLE_FAMILIES[r.lower()]
+    if r.lower() in ROLE_ALIASES:
+        return r.lower(), {'performs': ROLE_ALIASES[r.lower()], 'supports': []}
+    known = {x[0] for x in c.execute('select distinct capability from capability_claims')}
+    hit = next((k for k in known if k.lower() == r.lower()), None)
+    if hit:
+        return hit, {'performs': [hit], 'supports': []}
+    raise LookupError(f'role not known: {role!r}. Families (performs + supports): {sorted(ROLE_FAMILIES)}; roles: '
+                      f'{sorted(ROLE_ALIASES)}; or any capability recorded in the KB, e.g. {sorted(known)[:12]} ...')
+
+
+def _shape(c, name, phrase, type_line=''):
+    """How the matched ability works, from the KB contract whose text holds the matched phrase: activated, triggered,
+    one-shot, and whether the contract records an unbound condition (Amalia's wipe needs power exactly 20)."""
+    if not phrase:
+        return None
+    for r in c.execute('select contract_id,operation_kind,exact_text,contract_json from current_contracts where card_name=?', (name,)):
+        if phrase.lower() in (r['exact_text'] or '').lower():
+            unbound = [u for u in json.loads(r['contract_json']).get('unbound') or [] if 'conditional' in u or 'unless' in u]
+            spell = any(w in (type_line or '').lower() for w in ('instant', 'sorcery'))
+            return {'contract': r['contract_id'], 'kind': 'one-shot spell' if spell else SHAPE.get(r['operation_kind'], r['operation_kind']),
+                    'repeatable': r['operation_kind'] == 'activate' and not spell,
+                    'conditional': bool(unbound), 'condition_note': '; '.join(unbound) or None, 'text': r['exact_text']}
+    return None
+
+
+def find(c, role, ci=None, free=False, limit=40):
+    """Owned cards the KB records as performing (or supporting) a function, with the evidence behind each match. Retrieval,
+    not ranking and not a claim of completeness: no match means none detected, not none exist."""
+    name, fam = _find_roles(c, role)
+    pol = _policy()
+    reviewed = {(r['card_name'], r['subject_id']) for r in c.execute(
+        "select card_name,subject_id from review_overlay where subject_kind='capability_claim' and decision='verified'")}
+    sides, excluded = {}, []
+    for side in ('performs', 'supports'):
+        caps = fam[side]
+        if not caps:
+            continue
+        cards = {}
+        for r in c.execute('select cc.*, cd.free, cd.owned_min from capability_claims cc join cards cd using(card_name) '
+                           'where cd.owned_min>0 and cc.capability in (%s)' % ','.join('?' * len(caps)), tuple(caps)):
+            if r['claim_status'] == 'machine_contradicted':
+                excluded.append({'card': r['card_name'], 'capability': r['capability'], 'reason': 'the KB marks this role claim contradicted by Oracle text'})
+                continue
+            cls = 'reviewed_capability' if any(r['card_name'] == n and r['capability'] in s for n, s in reviewed) \
+                else EVIDENCE_CLASS.get(r['claim_status'], 'inventory_tag_only')
+            ev = r['evidence_text']
+            if ev and ev.startswith('{'):
+                ev = json.loads(ev).get('oracle')
+            cards.setdefault(r['card_name'], []).append({'capability': r['capability'], 'source': r['source'],
+                                                         'claim_status': r['claim_status'], 'class': cls, 'matched_text': ev})
+        rows = []
+        for n, evs in cards.items():
+            row = c.execute('select * from cards where card_name=?', (n,)).fetchone()
+            if free and row['free'] <= 0:
+                continue
+            if ci is not None and not kb.legal_rules(c, row, ci)[0]:
+                continue
+            best = min(evs, key=lambda e: CLASS_RANK[e['class']])['class']
+            phrase = next((e['matched_text'] for e in evs if e['source'] == 'oracle_rule_match' and e['matched_text']), None)
+            av = _availability(c, n, pol)
+            rows.append({'card': n, 'class': best, 'color_identity': row['color_identity'] or 'C', 'type_line': row['type_line'],
+                         'mana_value': row['mana_value'], 'shape': _shape(c, n, phrase, row['type_line']),
+                         'evidence': sorted(evs, key=lambda e: (CLASS_RANK[e['class']], e['source'], e['capability'])),
+                         'availability': {k: av[k] for k in ('free', 'usable_without_asking', 'usable_by_agreement', 'in_protected_decks')}})
+        rows.sort(key=lambda x: (CLASS_RANK[x['class']], bool(x['shape'] and x['shape']['conditional']), x['card']))
+        sides[side] = rows
+    counts = {s: {'total': len(v), **_count(v, 'class')} for s, v in sides.items()}
+    where = ', '.join(x for x in ((f'legal in {ci} color identity' if ci is not None else ''), ('with a free copy' if free else 'owned')) if x)
+    claims = []
+    for s, v in sides.items():
+        verb = 'perform' if s == 'performs' else 'support (pay off)'
+        if v:
+            claims.append(claim(f"{len(v)} {where} cards are recorded to {verb} {name}: "
+                                f"{counts[s].get('detected_candidate', 0)} detected candidates, {counts[s].get('inventory_tag_only', 0)} "
+                                f"inventory tags only, {counts[s].get('reviewed_capability', 0)} reviewed.", 'mechanics', 'candidate',
+                                evidence=['capability_claims']))
+        else:
+            claims.append(claim(f'No matching candidates detected that {verb} {name} ({where}). Role detection is incomplete, so this '
+                                'does not show that no suitable card exists.', 'mechanics', 'candidate'))
+    cond = [x['card'] for v in sides.values() for x in v if x['shape'] and x['shape']['conditional']]
+    if cond:
+        claims.append(claim(f"{len(cond)} matches rest on an ability whose contract records an unbound condition; read before "
+                            f"counting them: {', '.join(cond[:10])}" + (' ...' if len(cond) > 10 else '') + '.', 'mechanics', 'candidate'))
+    rel = kb.release(c.execute('pragma database_list').fetchone()[2])
+    data = {'role': name, 'families': fam, 'ci': ci, 'free': free, 'counts': counts,
+            'performs': sides.get('performs', [])[:limit], 'supports': sides.get('supports', [])[:limit],
+            'excluded_contradicted': excluded[:limit],
+            'freshness': {'kb_release': rel.get('release'), 'kb_built_utc': rel.get('built_utc'),
+                          'inventory_snapshot_modified_utc': rel.get('inventory_snapshot_modified_utc'),
+                          'note': 'Card meaning comes from the KB release; ownership and availability come from the inventory '
+                                  'snapshot it was built from. Neither date says anything about the other, and neither is the live Sheet.'},
+            'evidence_classes': {'reviewed_capability': 'a semantically reviewed capability claim (review overlay)',
+                                 'detected_candidate': "an unreviewed role detected from Oracle text by the KB's rule match or the evaluator's patterns (C-012)",
+                                 'inventory_tag_only': 'a Collection.Roles tag in the inventory, with no detected text support'},
+            'limitations': ['Nonexhaustive: a card the detectors miss does not appear. No match means none detected.',
+                            "Roles come from capability_claims (Collection.Roles tags and the evaluator's text patterns), not from DIO contracts (C-012).",
+                            'shape comes from the contract whose text holds the matched phrase; it is missing when no contract holds it.']}
+    return data, claims
