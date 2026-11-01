@@ -1,6 +1,6 @@
 # 🛠️ MtG Charter: Principles to Build (and Review) By
 
-@ai-version: 0.1.2-draft (adds rule 14 and the upstream AEC v0.3 rules, D-0020/D-0021 proposed) · supersedes the inherited Cognitive-Scaffolding charter (S3, FAISS, Typer, LLM-client rules) · status: proposed, pending Zach's review
+@ai-version: 0.1.2-draft (adds rule 14 and the upstream AEC v0.3 rules, D-0020/D-0021 accepted by Zach 2026-11-01) · supersedes the inherited Cognitive-Scaffolding charter (S3, FAISS, Typer, LLM-client rules) · status: proposed, pending Zach's review
 
 _Authored by build-project Claude (PR #2), which owns the MTG invariants. Reconciled into the repo shell by the AEC session (C-008): P-01 amended and authority scoped by subject, per Kate's review; `exists` items point at checks that are actually in this repo; rules 11–13 carried over from the shell charter. Build-project Claude is to review._
 
@@ -78,7 +78,7 @@ Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/proj
 - Why: A stale contract is worse than none.
 - Enforce: exists: `tools/drift_check.py` purpose check (error for a missing source, warning for a dependency mismatch).
 
-14) The DIO Is a Governed Source (P-09, proposed in D-0020)
+14) The DIO Is a Governed Source (P-09, D-0020, accepted by Zach 2026-11-01)
 - Rule: The DIO files that govern representation (v3.1.1, its 2026-10-09 addendum, A1–A7 and the registry delta) are pinned by SHA-256 in `.aec/records.jsonl`. They change only through a `dio_revision` decision that Zach accepts, followed by a new version of the source record; DIO §13 decides minor vs major. A revision is run through `aec impact` so the contracts, purposes and decisions resting on the DIO are named for re-examination. The DIO's own parsimony rules apply to this repo's governance: one home per fact, derive the rest, keep negative results, and add a field, check or record type only when it improves a decision, a compression or a connection (DIO §2, §9, §12.6).
 - Why: The DIO governed every contract but was the one source no check watched; v3.1.2 is pending. See `docs/aec/DIO_AEC_REVIEW.md`.
 - Enforce: exists: `tools/drift_check.py` `governed` (error on changed or missing DIO bytes) and `mirror` (error when a decision record in `.aec/` disagrees with `decisions/`), each with violating fixtures and decoys in `tests/test_drift_check.py`. exists: CI runs `aec check` and the `.aec/scenarios/` impact examples from AEC pinned in `tools/aec_upstream.json`. review: whether anyone runs `aec impact` at the next DIO revision (C-021).

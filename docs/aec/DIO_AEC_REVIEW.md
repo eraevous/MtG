@@ -1,6 +1,6 @@
 # DIO and AEC: a comparative review
 
-Status: **review and proposals** (2026-10-31, claude-aec). Nothing here is accepted. The proposals it leads to are D-0020 and D-0021 in `decisions/decision_events.jsonl`, and the open questions are C-020 to C-022 in `challenges/ledger.jsonl`. Zach decides.
+Status: **review** (2026-10-31, claude-aec). Zach accepted both proposals, D-0020 and D-0021, on 2026-11-01. The rest is the agent's analysis, not decisions. The proposals it leads to are D-0020 and D-0021 in `decisions/decision_events.jsonl`, and the open questions are C-020 to C-022 in `challenges/ledger.jsonl`. Zach decides.
 
 Asked by Zach on 2026-10-31: "a comparative review between DIO and the development engine system ... DIO should be incorporated as part of the intentions and purposes and other pieces of AEC ... update this project's development kit with new AEC branches and reconcile."
 

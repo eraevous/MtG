@@ -27,7 +27,7 @@ He builds from boosters, precons and his existing collection, and does not buy s
 
 Discovery comes before judgment. The Deck Interaction Ontology makes relationships across mechanics expressible (bounce, blink, sacrifice, counters, object identity, recursion), so that unconventional interactions can be found before anyone knows whether they are good. Building the ontology was itself a form of discovery.
 
-### The ontology and AEC are the same discipline at two levels (proposed, D-0020)
+### The ontology and AEC are the same discipline at two levels (D-0020, accepted by Zach 2026-11-01)
 
 The DIO asks of a card line what AEC asks of a conclusion about the work: what must hold (the gate rule; `depends_on`), what persists through a change (the persistence rule; `id@version` and rebaseline), what status a link has (verified, conditional, candidate, unknown; evidence tiers), and whether a new part earns its place (DIO §12.6; CHARTER 9). Both were built to stop the same failure: plausible intermediate results presented as justified conclusions. So the DIO is not only data this repo reads. It is a governed source in the AEC layer (P-09): pinned, revised only by Zach's decision, and impact-checked when it changes. Its parsimony rules bind the governance too. The comparison is in `docs/aec/DIO_AEC_REVIEW.md`.
 

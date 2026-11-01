@@ -6,7 +6,7 @@
 @ai-role: project_contract
 @ai-version: 0.1.2
 @schema-version: 0.3
-@status: proposed. Pending Zach's review. Wording was reviewed by Kate in the coordination thread, 2026-10-26. 0.1.2 adds P-09 (DIO as a governed source), proposed in D-0020 at Zach's request of 2026-10-31.
+@status: proposed. Pending Zach's review. Wording was reviewed by Kate in the coordination thread, 2026-10-26. 0.1.2 adds P-09 (DIO as a governed source), proposed in D-0020 at Zach's request of 2026-10-31 and accepted by Zach on 2026-11-01. P-09 is accepted; the rest of the file is still pending review.
 @change-procedure: Edit only with Zach's explicit approval. Record the change as a decision event in `decisions/decision_events.jsonl`. Earlier wording is kept in Git history and is never rewritten in place.
 
 ---
@@ -75,7 +75,7 @@ The system keeps revisions to the questions, objectives and criteria behind deci
 
 - **Status: an obligation, not yet built.** `decisions/criteria/` holds only a README so far.
 
-## P-09: The DIO is a governed source, and its discipline binds this repo's governance (proposed, D-0020)
+## P-09: The DIO is a governed source, and its discipline binds this repo's governance (accepted, D-0020)
 
 The Deck Interaction Ontology is the project's domain ontology. It is part of what AEC protects here, not just data the code reads.
 
@@ -97,7 +97,7 @@ There is no single ranking. Each kind of authority has its own subject.
 |---|---|---|
 | Ownership and allocation | Canonical inventory Google Sheet | Archive-then-clone: the Sheet id changes with every edit, so consumers resolve the current id and never embed it permanently. Inventory proposals are not physical transfers. |
 | Card mechanics | Scryfall Oracle text, the Comprehensive Rules and rulings | Refreshed as an explicit, versioned operation, never inside a query. |
-| Formal representation | DIO v3.1.1, its addendum and the compatibility addendum A1–A7 | A valid mechanic the DIO can't express becomes an ontology change proposal, not undocumented compiler semantics. The DIO answers representation questions; revising the DIO is Zach's decision (`dio_revision`, P-09, proposed). |
+| Formal representation | DIO v3.1.1, its addendum and the compatibility addendum A1–A7 | A valid mechanic the DIO can't express becomes an ontology change proposal, not undocumented compiler semantics. The DIO answers representation questions; revising the DIO is Zach's decision (`dio_revision`, P-09). |
 | Reusable interpretation | Grammar layer and KB contracts, by verification state | Candidates stay candidates (P-01, P-03). |
 | Contextual usefulness | Evaluation Protocol v1.0–v1.2 and deck goals | Descriptive while typed coverage is low. |
 | Empirical evidence | Observed games and frozen predictions | Scored only against the criteria version frozen with them. |
@@ -113,9 +113,9 @@ Operational authority (which tool or agent runs or checks a task) belongs to `AG
 | undeclared semantic authority | P-01 | `tools/drift_check.py` (heuristic: non-owner code reading `oracle_text` without a declared role) | automated (warning) |
 | purpose-file source and dependency sync | structural | `tools/drift_check.py` | automated |
 | append-only ledgers | P-03, P-06 | `tools/drift_check.py --base <ref>` | automated in CI |
-| governed DIO sources (proposed) | P-09 | `tools/drift_check.py` `governed`: anchored bytes in `.aec/records.jsonl` must match | automated |
-| decision mirror (proposed) | P-06 | `tools/drift_check.py` `mirror`: a `decision` record in `.aec/records.jsonl` must match the latest status in `decisions/` | automated |
-| DIO revision impact (proposed) | P-08, P-09 | `aec impact .aec/records.jsonl .aec/scenarios/<change>.jsonl` (AEC pinned in `tools/aec_upstream.json`) | on demand |
+| governed DIO sources | P-09 | `tools/drift_check.py` `governed`: anchored bytes in `.aec/records.jsonl` must match | automated |
+| decision mirror | P-06 | `tools/drift_check.py` `mirror`: a `decision` record in `.aec/records.jsonl` must match the latest status in `decisions/` | automated |
+| DIO revision impact | P-08, P-09 | `aec impact .aec/records.jsonl .aec/scenarios/<change>.jsonl` (AEC pinned in `tools/aec_upstream.json`) | on demand |
 | F-P01 to F-P05 behavioral fixtures | P-01 to P-05 | dissent review plus seeded diffs (see `codex_++/fixtures/README.md`) | specified, not yet automated |
 
 **A passing structural check is not evidence that the purpose survived.** P-04 in particular needs judgment-level review.

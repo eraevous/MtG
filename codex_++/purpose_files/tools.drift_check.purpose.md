@@ -21,7 +21,7 @@
 
 ### Risks, invariants and known gaps
 - Structural only. A clean run is not evidence that P-00 to P-09 survived.
-- `governed` reads the latest version of each `source` record whose subject is in `governed_subjects` and fails when an anchored repo file's bytes differ. It re-implements only AEC's raw-byte digest, not locators or roots, so it runs without an AEC checkout. AEC (`aec check`) stays the full anchor check. (0.2.0, D-0020 proposed)
+- `governed` reads the latest version of each `source` record whose subject is in `governed_subjects` and fails when an anchored repo file's bytes differ. It re-implements only AEC's raw-byte digest, not locators or roots, so it runs without an AEC checkout. AEC (`aec check`) stays the full anchor check. (0.2.0, D-0020)
 - `mirror` compares status only. It does not check that a decision's text or dependencies match the log.
 - The semantic-authority check is a heuristic (it flags oracle_text plus regex outside the owners), so it gives warnings only.
 
