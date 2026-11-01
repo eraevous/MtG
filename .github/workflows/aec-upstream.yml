@@ -1,0 +1,60 @@
+# Weekly check of upstream AEC (option B, Zach 2026-11-01; D-0022 proposed).
+# If eraevous/AEC main has moved past tools/aec_upstream.json and MtG's records still pass at the new commit,
+# open a PR that moves the pin. If a check fails, open (or update) an issue instead. Nothing merges by itself.
+# Needs: Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests".
+name: aec-upstream
+on:
+  schedule:
+    - cron: "0 14 * * 1"   # Mondays 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test MtG's records against the upstream head
+        id: sync
+        run: |
+          set +e
+          python3 tools/aec_sync.py --test --write --report "$RUNNER_TEMP/report.md" --github-output "$GITHUB_OUTPUT"
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+      - name: Open a PR that moves the pin
+        if: steps.sync.outputs.moved == 'true' && steps.sync.outputs.code == '0'
+        run: |
+          BRANCH="aec/upstream-${{ steps.sync.outputs.short }}"
+          if git ls-remote --exit-code origin "refs/heads/$BRANCH" >/dev/null; then
+            echo "$BRANCH already exists; a PR for this upstream commit is already open or was handled"; exit 0
+          fi
+          python3 tools/drift_check.py
+          python3 -m unittest discover -s tests
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git commit -am "Move the AEC upstream pin to ${{ steps.sync.outputs.short }} (aec_sync: all checks passed)"
+          git push -u origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" --assignee eraevous \
+            --title "Move the AEC upstream pin to ${{ steps.sync.outputs.short }}" --body-file "$RUNNER_TEMP/report.md"
+          # A PR opened with GITHUB_TOKEN does not trigger pull_request workflows; run CI on the branch explicitly.
+          gh workflow run ci.yml --ref "$BRANCH"
+      - name: Open or update an issue when a check fails
+        if: steps.sync.outputs.code == '3'
+        run: |
+          TITLE="AEC upstream ${{ steps.sync.outputs.short }} fails MtG's records"
+          N=$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number')
+          if [ -n "$N" ]; then gh issue comment "$N" --body-file "$RUNNER_TEMP/report.md";
+          else gh issue create --title "$TITLE" --assignee eraevous --body-file "$RUNNER_TEMP/report.md"; fi
+      - name: Network or usage error
+        if: steps.sync.outputs.code == '2'
+        run: exit 1
