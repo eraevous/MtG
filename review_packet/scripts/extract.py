@@ -1,6 +1,7 @@
 """Mechanics extraction pass 2026-10-24: Oracle text -> Mechanics · Operations candidate rows, for owned cards with no
 operations. Segmentation and hooks come from the grammar layer (grammar 0.2.0 / semantics 0.1.1); the row format
 follows the 2026-10-11 extraction. Every row is a candidate, never verified."""
+# @ai-semantic-role: candidate-source  (P-01: writes Review Queue candidate rows; never treated as truth)
 import sqlite3, json, re, urllib.parse, collections, csv, openpyxl
 KB = sqlite3.connect('file:/mnt/project-files/mechanics-kernel/sqlite-kb/mtg_cards_v0.2.sqlite?mode=ro', uri=True)
 GL = sqlite3.connect('gl_scratch.sqlite')
