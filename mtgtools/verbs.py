@@ -10,6 +10,7 @@ reads contracts.
 """
 import csv
 import json
+import re
 from pathlib import Path
 
 from . import kb
@@ -45,6 +46,37 @@ def _card_row(c, name):
                       'explore THEME or explore OWNED_CARD.')
 
 
+# events a cost records under on_payment that other cards can observe (Viscera Seer's "Sacrifice a creature:" feeds Blood
+# Artist). The KB's query_index.feeds lists only resolution effects, so these are read from the cost itself.
+COST_FEEDS = ('permanent.sacrifice', 'card.discard')
+
+
+def _paid_events(j):
+    """{effect: object filter of what is paid} for the observable events in a contract's cost ('this' = the card itself)."""
+    out = {}
+    for g in (j.get('initiation') or {}).get('requirement_groups') or []:
+        if g.get('class') != 'cost':
+            continue
+        for alt in g.get('alternatives') or []:
+            for ev in alt.get('on_payment') or []:
+                base, _, obj = ev.partition(' [')
+                if base in COST_FEEDS:
+                    out.setdefault(base, (alt.get('object_filter') or obj.rstrip(']') or None))
+    return out
+
+
+def _own_names(card, type_line=None):
+    """How a card's text names itself: its full name, the short name before a comma ("Jet enters"), and for a legendary
+    card without a comma its first word ("Sharuum enters" on Sharuum the Hegemon)."""
+    out = set()
+    legendary = 'legendary' in (type_line or '').lower()
+    for face in card.lower().split(' // '):
+        out.update({face + ' ', face.split(',')[0] + ' '})
+        if legendary and ',' not in face and ' ' in face:
+            out.add(face.split()[0] + ' ')
+    return tuple(out)
+
+
 def _contracts(c, names=None):
     """Current contracts with their review state and query index, optionally for a set of card names."""
     out = []
@@ -60,13 +92,23 @@ def _contracts(c, names=None):
             for alt in g.get('alternatives') or []:
                 if g.get('class') == 'trigger' and alt.get('id'):
                     phrase = (alt.get('text') or '').lower()
-                    triggers[alt['id']] = {'filter': (alt.get('qualifiers') or {}).get('object_filter'),
-                                           'self': alt.get('subject') == 'this' or phrase.startswith(('this ', '~ ')),
-                                           'parsed': bool(alt.get('qualifiers'))}
+                    q = alt.get('qualifiers') or {}
+                    t = {'filter': q.get('object_filter'),
+                         'self': alt.get('subject') == 'this' or phrase.startswith(('this ', '~ ') + _own_names(r['card_name'], r['type_line'])),
+                         'others': bool(q.get('other')) or phrase.startswith(('another ', 'a ', 'an ', 'each ', 'one or more ')),
+                         'parsed': bool(q)}
+                    have = triggers.get(alt['id'])
+                    if have:   # "this creature or another creature dies": one event id, two alternatives
+                        keep = t if t['others'] or not have['others'] else have
+                        t = dict(keep, self=have['self'] and t['self'], others=have['others'] or t['others'])
+                    triggers[alt['id']] = t
                 elif g.get('class') == 'eligibility' and 'target' in (alt.get('text') or ''):
                     targets.append(alt['text'])
+        feeds = list(qi.get('feeds') or [])
+        paid = _paid_events(j)
+        paid = {e: f for e, f in paid.items() if e not in feeds}
         out.append({'contract_id': r['contract_id'], 'card': r['card_name'], 'text': r['exact_text'], 'kind': r['operation_kind'],
-                    'state': r['queue_state'], 'feeds': qi.get('feeds') or [], 'hooks': qi.get('hook_ids') or [],
+                    'state': r['queue_state'], 'feeds': feeds + sorted(paid), 'paid': paid, 'hooks': qi.get('hook_ids') or [],
                     'hook_subject': qi.get('hook_subject'), 'triggers': triggers, 'targets': targets,
                     'counters': qi.get('counters') or [],
                     'faces': [f.strip().lower() for f in (r['type_line'] or '').split('//')]})
@@ -148,6 +190,8 @@ def _fits_target(p, o, vocab):
     for raw, tt in zip(p['targets'], _target_types(p['targets'], vocab)):
         if any(x in raw.lower() for x in ('opponent controls', "don't control", 'opponent owns')):
             continue
+        if not tt and re.search(r'\btarget (player|opponent)s?\b', raw.lower()) and 'any target' not in raw.lower():
+            continue      # a player is not a card in the collection
         if not tt:
             return None
         r = [_face_matches(tt, f, vocab) for f in o['faces']]
@@ -160,7 +204,10 @@ def _fits_target(p, o, vocab):
 
 def _self_obs(o, hook):
     """The observer triggers only on its own card ("When this enchantment enters"): from the hook subject or the trigger's event phrase."""
-    return o['hook_subject'] == 'self' or (o['triggers'].get(hook) or {}).get('self', False)
+    t = o['triggers'].get(hook) or {}
+    if t.get('others'):        # "this creature or another creature dies" also watches other objects, whatever hook_subject says
+        return False
+    return o['hook_subject'] == 'self' or t.get('self', False)
 
 
 def _qualify(p, eff, o, hook, vocab):
@@ -203,6 +250,22 @@ def _qualify(p, eff, o, hook, vocab):
         if any(x is True for x in checks):
             return 'unresolved', 'face', f"only one face of {p['card']} matches {filt or implied}"
         return 'unresolved', 'filter_undecidable', f'filter "{filt}" not decidable from type lines'
+    if eff in p.get('paid', {}):
+        obj = p['paid'][eff]
+        where = f"paid as a cost ({p['text'].split(':')[0].strip()})"
+        if not (filt or implied):
+            return 'unresolved', 'paid_no_filter', f'{where}; no object filter recorded'
+        if not obj:
+            return 'unresolved', 'paid_object_unknown', f'{where}; the paid object is not recorded'
+        need = ' '.join(x for x in (filt, implied) if x)
+        if 'token' in need.split() or 'nontoken' in need.split():
+            return 'unresolved', 'paid_object', f'{where}; token or nontoken not decidable'
+        faces = p['faces'] if obj == 'this' else [obj.lower()]
+        checks = [(_face_matches(filt, f, vocab) if filt else True) and (_face_matches(implied, f, vocab) if implied else True)
+                  for f in faces]
+        if all(x is True for x in checks):
+            return 'compatible', 'paid_object', f"{where}: the paid {'card' if obj == 'this' else obj} matches {need}"
+        return 'unresolved', 'paid_object', f"{where}: the paid {obj} may not be {need} (an artifact can also be a creature)"
     if eff == 'token.create':
         return 'unresolved', 'token_unknown', "the token's characteristics are not recorded" + (f" (it acts on: {'; '.join(p['targets'])})" if p['targets'] else '')
     return ('unresolved', 'object_unknown', 'the produced object is not recorded') if (filt or implied) else \
@@ -279,15 +342,22 @@ def _acts_on(ks, a, b, vocab):
     return out
 
 
+NOT_A_LOOP = ('unsupported_by_contracts', 'once_only')   # listed under loops_contested, never as loops
+
+
 def _loops(pool, only=None, ks=None):
     """Loop candidates from the grammar layer's collection discovery, restricted to a card pool. With contracts `ks`, each
     loop is checked against the KB: a step whose effect no KB contract of that card produces is marked unsupported_by_contracts (absence in incomplete contracts is not proof the step can't happen)."""
     if not LOOPS_CSV.exists():
         return []
-    feeds = {}
+    feeds, final, spells = {}, set(), set()
     for k in ks or []:
         for f in k['feeds']:
             feeds.setdefault(k['card'], set()).update([f] + kb.FEEDS.get(f, []))
+        if any(x['kind'] == 'finality' and x['role'] in ('enters_with', 'put') for x in k['counters']):
+            final.add(k['card'])
+        if k['faces'] and all(('instant' in f or 'sorcery' in f) and 'adventure' not in f for f in k['faces']):
+            spells.add(k['card'])
     out, seen = [], set()
     with open(LOOPS_CSV, newline='', encoding='utf-8') as f:
         for r in csv.DictReader(f):
@@ -305,10 +375,13 @@ def _loops(pool, only=None, ks=None):
                   'capacity_limited': r['capacity_limited'] == '1', 'kb_check': 'not_checked'}
             if ks is not None:
                 bad = [f"{n}: no recorded KB contract produces {e}" for n, e in ((a, r['A_produces']), (b, r['B_output'])) if e not in feeds.get(n, set())]
-                lp['kb_check'] = 'unsupported_by_contracts' if bad else 'kb_consistent'
-                lp['kb_note'] = '; '.join(bad)
+                once = [f'{n} gets a finality counter, so the next time it would die it is exiled: the cycle runs at most once'
+                        for n in sorted(final & {a, b})]
+                once += [f'{n} is an instant or sorcery: it resolves once, so it cannot repeat the cycle' for n in sorted(spells & {a, b})]
+                lp['kb_check'] = 'unsupported_by_contracts' if bad else 'once_only' if once else 'kb_consistent'
+                lp['kb_note'] = '; '.join(bad or once)
             out.append(lp)
-    out.sort(key=lambda x: (x['kb_check'] == 'unsupported_by_contracts', CERTAINTY_ORDER.get(x['certainty'], 9), not x['both_fully_parsed'], x['cards']))
+    out.sort(key=lambda x: (x['kb_check'] in NOT_A_LOOP, CERTAINTY_ORDER.get(x['certainty'], 9), not x['both_fully_parsed'], x['cards']))
     return out
 
 
@@ -586,14 +659,16 @@ def _link_claim(l, disc=None):
 
 def _put_loops(data, loops, limit):
     """Loops the KB contradicts are listed apart, so a contested loop never hides as a lead (and never hides the cards)."""
-    ok = [l for l in loops if l['kb_check'] != 'unsupported_by_contracts']
-    bad = [l for l in loops if l['kb_check'] == 'unsupported_by_contracts']
+    ok = [l for l in loops if l['kb_check'] not in NOT_A_LOOP]
+    bad = [l for l in loops if l['kb_check'] in NOT_A_LOOP]
     data['loops_total'] = len(ok)
     data['loops'] = ok[:limit]
     data['loops_contested'] = {'total': len(bad), 'note': 'the grammar layer proposed these, but no KB contract on one side '
-                               'records the step. That is lack of support in incomplete contracts, not proof the loop is invalid, '
-                               'and the cards may still interact in other ways (see hypothesis)',
-                               'examples': [{'cards': l['cards'], 'certainty': l['certainty'], 'kb_note': l['kb_note']} for l in bad[:limit]]}
+                               'records the step (unsupported_by_contracts), or a recorded counter ends it after one pass (once_only). Unsupported is '
+                               'lack of support in incomplete contracts, not proof the loop is invalid, and the cards may still interact '
+                               'in other ways (see hypothesis)',
+                               'examples': [{'cards': l['cards'], 'certainty': l['certainty'], 'kb_check': l['kb_check'],
+                                             'kb_note': l['kb_note']} for l in bad[:limit]]}
 
 
 def _loop_claims(claims, loops, where, disc):
@@ -660,8 +735,8 @@ def hypothesis(c, a, b, effect=None, ci=None):
     if effect:
         acts_on = [x for x in acts_on if effect in x['produces']]
     all_loops = [l for l in _loops({a, b}, ks=ks) if set(l['cards']) == {a, b}]
-    loops = [l for l in all_loops if l['kb_check'] != 'unsupported_by_contracts']
-    contested = [l for l in all_loops if l['kb_check'] == 'unsupported_by_contracts']
+    loops = [l for l in all_loops if l['kb_check'] not in NOT_A_LOOP]
+    contested = [l for l in all_loops if l['kb_check'] in NOT_A_LOOP]
     disconfirming = [f"rejected link {l['producer']} ({l['produces']}) -> {l['observer']} via {l['hook']}: {l['qualifier_note']}"
                      for l in rejected]
     disconfirming += [f"contested loop ({l['certainty']}): {l['kb_note']}" for l in contested]

@@ -105,6 +105,33 @@ class Qualifiers(unittest.TestCase):
         self.assertEqual(self.q(self.terra_return, 'card.return_to_battlefield', etb)[:2], ('unresolved', 'same_card'))
 
 
+    def test_a_sacrifice_cost_feeds_a_dies_trigger(self):
+        # 2026-11-01 practical-question run: Viscera Seer's "Sacrifice a creature:" is a cost, so query_index.feeds omits it
+        seer = dict(self.k('Seer', ['creature'], feeds=['permanent.sacrifice']), paid={'permanent.sacrifice': 'creature'},
+                    text='Sacrifice a creature: Scry 1.')
+        artist = self.k('Artist', ['creature'], hooks=['permanent.dies'], subject='self', filt='creature')
+        artist['triggers']['permanent.dies'].update(others=True)        # "this creature or another creature dies"
+        self.assertEqual(self.q(seer, 'permanent.sacrifice', artist, 'permanent.dies')[:2], ('compatible', 'paid_object'))
+        altar = dict(seer, paid={'permanent.sacrifice': 'artifact'})
+        self.assertEqual(self.q(altar, 'permanent.sacrifice', artist, 'permanent.dies')[0], 'unresolved')   # artifact creatures exist
+
+    def test_this_or_another_is_not_self_only(self):
+        artist = self.k('Artist', ['creature'], hooks=['permanent.dies'], subject='self', filt='creature')
+        self.assertTrue(self.v._self_obs(artist, 'permanent.dies'))
+        artist['triggers']['permanent.dies'].update(others=True)
+        self.assertFalse(self.v._self_obs(artist, 'permanent.dies'))
+
+    def test_a_player_target_never_acts_on_a_card(self):
+        drain = self.k('Artist', ['creature'], targets=['target player'])
+        seer = self.k('Seer', ['creature'])
+        self.assertFalse(self.v._fits_target(drain, seer, self.VOCAB))
+
+    def test_a_legendary_card_named_by_its_short_name_is_self(self):
+        # "When Sharuum enters" on Sharuum the Hegemon was read as watching every permanent enter
+        self.assertIn('sharuum ', self.v._own_names('Sharuum the Hegemon', 'Legendary Artifact Creature — Sphinx'))
+        self.assertIn('jet ', self.v._own_names('Jet, Freedom Fighter', 'Legendary Creature — Human Rebel'))
+        self.assertNotIn('blood ', self.v._own_names('Blood Artist', 'Creature — Vampire'))
+
 class Ontology(unittest.TestCase):
     """The DIO lookup and the grounding label run everywhere: an agent without the KB can still consult the ontology."""
     def run_cli(self, *args):
@@ -254,6 +281,17 @@ class Verbs(unittest.TestCase):
         self.assertTrue(d['loops_contested'])
         bounce = [x for x in d['acts_on'] if x['actor'] == 'Decoction Module']
         self.assertTrue(bounce and 'card.return_to_hand' in bounce[0]['produces'])
+
+    def test_a_finality_counter_ends_a_loop_after_one_pass(self):
+        d = self.hyp('Cirith Ungol Patrol', 'Wolfbat')
+        self.assertFalse(d['loops'])
+        self.assertEqual({l['kb_check'] for l in d['loops_contested']}, {'once_only'})
+
+    def test_sacrifice_outlet_links_to_aristocrat(self):
+        d = self.hyp('Viscera Seer', 'Blood Artist')
+        self.assertTrue(any(l['produces'] == 'permanent.sacrifice' and l['hook'] == 'permanent.dies' and l['qualifiers'] == 'compatible'
+                            for l in d['links']))
+        self.assertFalse(d['acts_on'])                                 # Blood Artist targets a player, not Viscera Seer
 
     def test_unsupported_theme_names_the_supported_ones(self):
         code, out = self.run_cli('explore', 'saga')
