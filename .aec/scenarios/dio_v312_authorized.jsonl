@@ -1,0 +1,3 @@
+// Worked example (D-0021, proposed). The same revision once Zach accepts it as a dio_revision decision.
+// Expected: rebaseline, not drift: re-examine each dependent against v3.1.2. Decisions still go to Zach for review.
+{"change":"revise","target":"SRC-dio@1","new":"SRC-dio@2","by":"kate","authorized_by":"AU-zach","revision":"R-dio-3.1.2","reason":"DIO v3.1.2 accepted (hypothetical)"}

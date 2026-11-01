@@ -25,6 +25,7 @@ The evaluator (`mtg_eval`) is not ontology-grounded: its roles come from its own
 3. `docs/charter/`: the proposed product charter, pending review.
 4. `VISION.md` and `docs/handoff/00_CURRENT_STATE.md`: context and current numbers.
 5. The relevant `codex_++/purpose_files/*.purpose.md` for each module you touch.
+6. If you touch the DIO or the AEC layer: `.aec/README.md` and `docs/aec/DIO_AEC_REVIEW.md`. The DIO files are pinned (P-09, proposed); editing one takes a `dio_revision` decision that Zach accepts, then a new `SRC-dio` record version.
 
 If a spec, plan or task (from Spec Kit or anything else) conflicts with the project purpose, **the purpose wins until Zach decides otherwise**. Do not resolve the conflict yourself. Log it in `challenges/ledger.jsonl` and say so.
 
@@ -74,6 +75,8 @@ python3 -m unittest discover -s tests
 # if you touched kb/ and the data is present (data/README.md):
 (cd kb && python3 -m unittest test_v02.py test_mtg_db.py test_acceptance.py)   # baseline: 60/61, C-001
 ```
+
+Optional, needs an AEC checkout at the commit in `tools/aec_upstream.json` (CI runs it): `PYTHONPATH=../AEC/src python3 -m aec check .aec/records.jsonl`. See `.aec/README.md`.
 
 Then update the purpose file of any module whose behavior changed, and append a decision event if you changed design.
 

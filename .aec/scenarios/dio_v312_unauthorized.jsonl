@@ -1,0 +1,3 @@
+// Worked example (D-0021, proposed). Kate's DIO v3.1.2 candidate (2026-10-17) replaces v3.1.1 before Zach accepts it.
+// Expected: everything pinned to SRC-dio@1 is stale; decisions are only flagged for review. SRC-dio@2 is hypothetical, so impact also notes it is not in the store.
+{"change":"revise","target":"SRC-dio@1","new":"SRC-dio@2","by":"kate","authorized_by":null,"reason":"DIO v3.1.2 candidate addendum (action_id vs simultaneity_group, keyword-macro events)"}

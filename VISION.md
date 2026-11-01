@@ -27,6 +27,10 @@ He builds from boosters, precons and his existing collection, and does not buy s
 
 Discovery comes before judgment. The Deck Interaction Ontology makes relationships across mechanics expressible (bounce, blink, sacrifice, counters, object identity, recursion), so that unconventional interactions can be found before anyone knows whether they are good. Building the ontology was itself a form of discovery.
 
+### The ontology and AEC are the same discipline at two levels (proposed, D-0020)
+
+The DIO asks of a card line what AEC asks of a conclusion about the work: what must hold (the gate rule; `depends_on`), what persists through a change (the persistence rule; `id@version` and rebaseline), what status a link has (verified, conditional, candidate, unknown; evidence tiers), and whether a new part earns its place (DIO §12.6; CHARTER 9). Both were built to stop the same failure: plausible intermediate results presented as justified conclusions. So the DIO is not only data this repo reads. It is a governed source in the AEC layer (P-09): pinned, revised only by Zach's decision, and impact-checked when it changes. Its parsimony rules bind the governance too. The comparison is in `docs/aec/DIO_AEC_REVIEW.md`.
+
 ## Scope principle
 **The core orchestrates existing capabilities around a defensible decision. It does not duplicate them.**
 
@@ -46,7 +50,7 @@ Automated Oracle parsing, a comprehensive knowledgebase, general-purpose network
 
 **Observed (October 2026):** through a run of locally reasonable steps, the simulator and evaluator developed independently of the governing semantic representation. They repeatedly parsed card text, while the ontology and existing semantic data stayed largely disconnected. No test failed.
 
-**Diagnosis (Kate's and Claude's interpretation, not established history):** this allowed competing interpretations of card meaning, and it moved effort away from deck-building decisions toward simulation machinery. The AEC layer here (`codex_++/`, `decisions/`, `challenges/`, `tools/drift_check.py`) exists to make that kind of drift visible early.
+**Diagnosis (Kate's and Claude's interpretation, not established history):** this allowed competing interpretations of card meaning, and it moved effort away from deck-building decisions toward simulation machinery. The AEC layer here (`codex_++/`, `decisions/`, `challenges/`, `.aec/`, `tools/drift_check.py`) exists to make that kind of drift visible early. Upstream AEC names implementation, architectural and coordination drift; this project adds **semantic drift**, code diverging from the domain ontology, which is the drift above.
 
 It must not repeat the mistake one level up: **the repository is infrastructure for the Magic project, not the other way round.** Governance features have to justify their cost.
 

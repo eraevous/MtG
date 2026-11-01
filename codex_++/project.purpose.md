@@ -4,9 +4,9 @@
 
 @ai-path: project
 @ai-role: project_contract
-@ai-version: 0.1.1
+@ai-version: 0.1.2
 @schema-version: 0.3
-@status: proposed. Pending Zach's review. Wording was reviewed by Kate in the coordination thread, 2026-10-26.
+@status: proposed. Pending Zach's review. Wording was reviewed by Kate in the coordination thread, 2026-10-26. 0.1.2 adds P-09 (DIO as a governed source), proposed in D-0020 at Zach's request of 2026-10-31.
 @change-procedure: Edit only with Zach's explicit approval. Record the change as a decision event in `decisions/decision_events.jsonl`. Earlier wording is kept in Git history and is never rewritten in place.
 
 ---
@@ -75,7 +75,17 @@ The system keeps revisions to the questions, objectives and criteria behind deci
 
 - **Status: an obligation, not yet built.** `decisions/criteria/` holds only a README so far.
 
-_P-06 to P-08 come from Kate's charter amendments 2 to 4, as formalized by build-project Claude in PR #2, and were reconciled here (C-008)._
+## P-09: The DIO is a governed source, and its discipline binds this repo's governance (proposed, D-0020)
+
+The Deck Interaction Ontology is the project's domain ontology. It is part of what AEC protects here, not just data the code reads.
+
+- **Pinned.** The governing DIO files (v3.1.1, its 2026-10-09 addendum, the A1–A7 compatibility addendum and its registry delta) are `source` records with raw-byte SHA-256 anchors in `.aec/records.jsonl`. A change to those bytes without a new source-record version is drift.
+- **Revised only by decision.** A DIO revision (a new version, an addendum, or an accepted candidate such as v3.1.2) is a decision event of kind `dio_revision`, accepted by Zach. The DIO's own rule decides minor vs major (DIO §13).
+- **Revisions are impact-checked.** P-01, P-02, P-04 and the accepted decisions that rest on the DIO record that dependency (`depends_on`), so a revision names what must be re-examined. An authorized revision is a rebaseline, not drift (P-08).
+- **Its discipline applies one level up.** The DIO's parsimony rules govern AEC artifacts in this repo too: one home per fact, derive the rest (DIO §2, §9); keep negative and unknown results (§7, §14); a new field, check or record type is rejected unless it improves a decision, a compression or a connection (§12.6). This is P-00's "governance features must justify their cost", stated in the ontology's own terms.
+- **Drift test (fixture F-P09):** a PR edits a DIO file in `kb/reference_sources/` (for example, renumbers a section or changes the persistence table) without a `dio_revision` decision. `tools/drift_check.py` must fail, even though every other test passes.
+
+_P-06 to P-08 come from Kate's charter amendments 2 to 4, as formalized by build-project Claude in PR #2, and were reconciled here (C-008). P-09 was proposed by the AEC session on 2026-10-31 at Zach's request ("DIO should be incorporated as part of the intentions and purposes and other pieces of AEC"); see `docs/aec/DIO_AEC_REVIEW.md`._
 
 ---
 
@@ -87,7 +97,7 @@ There is no single ranking. Each kind of authority has its own subject.
 |---|---|---|
 | Ownership and allocation | Canonical inventory Google Sheet | Archive-then-clone: the Sheet id changes with every edit, so consumers resolve the current id and never embed it permanently. Inventory proposals are not physical transfers. |
 | Card mechanics | Scryfall Oracle text, the Comprehensive Rules and rulings | Refreshed as an explicit, versioned operation, never inside a query. |
-| Formal representation | DIO v3.1.1, its addendum and the compatibility addendum A1–A7 | A valid mechanic the DIO can't express becomes an ontology change proposal, not undocumented compiler semantics. |
+| Formal representation | DIO v3.1.1, its addendum and the compatibility addendum A1–A7 | A valid mechanic the DIO can't express becomes an ontology change proposal, not undocumented compiler semantics. The DIO answers representation questions; revising the DIO is Zach's decision (`dio_revision`, P-09, proposed). |
 | Reusable interpretation | Grammar layer and KB contracts, by verification state | Candidates stay candidates (P-01, P-03). |
 | Contextual usefulness | Evaluation Protocol v1.0–v1.2 and deck goals | Descriptive while typed coverage is low. |
 | Empirical evidence | Observed games and frozen predictions | Scored only against the criteria version frozen with them. |
@@ -103,6 +113,9 @@ Operational authority (which tool or agent runs or checks a task) belongs to `AG
 | undeclared semantic authority | P-01 | `tools/drift_check.py` (heuristic: non-owner code reading `oracle_text` without a declared role) | automated (warning) |
 | purpose-file source and dependency sync | structural | `tools/drift_check.py` | automated |
 | append-only ledgers | P-03, P-06 | `tools/drift_check.py --base <ref>` | automated in CI |
+| governed DIO sources (proposed) | P-09 | `tools/drift_check.py` `governed`: anchored bytes in `.aec/records.jsonl` must match | automated |
+| decision mirror (proposed) | P-06 | `tools/drift_check.py` `mirror`: a `decision` record in `.aec/records.jsonl` must match the latest status in `decisions/` | automated |
+| DIO revision impact (proposed) | P-08, P-09 | `aec impact .aec/records.jsonl .aec/scenarios/<change>.jsonl` (AEC pinned in `tools/aec_upstream.json`) | on demand |
 | F-P01 to F-P05 behavioral fixtures | P-01 to P-05 | dissent review plus seeded diffs (see `codex_++/fixtures/README.md`) | specified, not yet automated |
 
 **A passing structural check is not evidence that the purpose survived.** P-04 in particular needs judgment-level review.
