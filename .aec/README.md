@@ -21,6 +21,16 @@ PYTHONPATH=../AEC/src python3 -m aec source show SRC-dio@1 --max-lines 40       
 python3 tools/drift_check.py                                                       # 'governed' and 'mirror' need no AEC checkout
 ```
 
+## Keeping AEC current (D-0022)
+
+MtG runs AEC only at the commit pinned in `tools/aec_upstream.json`. Every Monday, `.github/workflows/aec-upstream.yml` runs `tools/aec_sync.py`. It asks whether upstream `main` has moved; if so, it clones the new head and runs `aec check` and every scenario here. If all pass, it opens a PR that moves the pin, with the upstream commit list and the check results, and runs CI on it. If any fail, it opens or updates an issue with the output instead. Nothing merges by itself, and merging the PR is the decision to adopt that AEC version. You can run it any time from the Actions tab (Run workflow) or by hand:
+
+```bash
+python3 tools/aec_sync.py                  # is the pin current?
+python3 tools/aec_sync.py --test           # test MtG's records at the upstream head
+python3 tools/aec_sync.py --test --write   # and move the pin if everything passes
+```
+
 ## When the DIO changes
 
 1. Zach accepts the revision: append a decision event of kind `dio_revision` to `decisions/decision_events.jsonl`.
