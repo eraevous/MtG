@@ -25,7 +25,7 @@ The evaluator (`mtg_eval`) is not ontology-grounded: its roles come from its own
 3. `docs/charter/`: the proposed product charter, pending review.
 4. `VISION.md` and `docs/handoff/00_CURRENT_STATE.md`: context and current numbers.
 5. The relevant `codex_++/purpose_files/*.purpose.md` for each module you touch.
-6. If you touch the DIO or the AEC layer: `.aec/README.md` and `docs/aec/DIO_AEC_REVIEW.md`. The DIO files are pinned (P-09, proposed); editing one takes a `dio_revision` decision that Zach accepts, then a new `SRC-dio` record version.
+6. If you touch the DIO or the AEC layer: `.aec/README.md` and `docs/aec/DIO_AEC_REVIEW.md`. The DIO files are pinned (P-09, accepted 2026-11-01); editing one takes a `dio_revision` decision that Zach accepts, then a new `SRC-dio` record version.
 
 If a spec, plan or task (from Spec Kit or anything else) conflicts with the project purpose, **the purpose wins until Zach decides otherwise**. Do not resolve the conflict yourself. Log it in `challenges/ledger.jsonl` and say so.
 

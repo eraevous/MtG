@@ -1,6 +1,6 @@
 # .aec: AEC reasoning records for MtG
 
-Status: **proposed** (D-0021). Format: AEC v0.3 records, upstream `eraevous/AEC` pinned in `tools/aec_upstream.json`.
+Status: **accepted** (D-0021, Zach, 2026-11-01). Format: AEC v0.3 records, upstream `eraevous/AEC` pinned in `tools/aec_upstream.json`.
 
 This directory puts the Deck Interaction Ontology (DIO) into AEC's records, so that a DIO revision can be checked for impact before anyone has to remember what rests on it. Why, and what was compared, is in `docs/aec/DIO_AEC_REVIEW.md`.
 

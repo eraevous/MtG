@@ -13,10 +13,10 @@ Runs mechanical checks of the repo against its declared contracts:
                 the current content (needs --base <git ref>).                                     [error]
   governed      Sources under a governed subject in .aec/records.jsonl (the DIO: subject
                 formal-representation) still match their SHA-256 anchors. A DIO change is a
-                dio_revision decision plus a new source-record version (P-09, proposed).          [error]
+                dio_revision decision plus a new source-record version (P-09).                    [error]
   mirror        Each decision record in .aec/records.jsonl has the same status as the latest
                 event with that id in decisions/decision_events.jsonl, which stays the one
-                decision log (D-0021, proposed).                                                  [error]
+                decision log (D-0021).                                                            [error]
 
 This checks structure, not purpose. A clean run does not show that P-00..P-09 survived.
 See codex_++/project.purpose.md.
