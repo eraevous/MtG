@@ -1,4 +1,4 @@
-"""Command line: one program, nine read-only verbs, JSON out.
+"""Command line: one program, ten read-only verbs, JSON out.
 
   python3 -m mtgtools context [--deck Vraska]
   python3 -m mtgtools card "Terra, Magical Adept"
@@ -9,6 +9,7 @@
   python3 -m mtgtools dio "persistence"        (quote DIO sections; needs no database)
   python3 -m mtgtools typal Merfolk [--ci WU] [--free]   (creature-type census: members, changelings, type support, availability)
   python3 -m mtgtools release "Auntie Ool" --to TMNT    (decommission audit: what retiring a deck unlocks for another)
+  python3 -m mtgtools find --role sacrifice --ci B --free   (owned cards that perform or support a function, with evidence)
 
 --db picks the collection: any SQLite built by kb/migrate_v02.py (default kb/mtg_cards_v0.2.sqlite).
 """
@@ -95,6 +96,8 @@ def main(argv=None):
     s.add_argument('--limit', type=int, default=5); s.add_argument('--max-chars', type=int, default=2500)
     s = sub.add_parser('typal'); s.add_argument('creature_type'); s.add_argument('--ci'); s.add_argument('--free', action='store_true')
     s = sub.add_parser('release'); s.add_argument('donor'); s.add_argument('--to', dest='receiver', required=True)
+    s = sub.add_parser('find'); s.add_argument('--role', required=True, help='a family (sacrifice, tokens, ...), a role (removal, protection, ...) or a KB capability')
+    s.add_argument('--ci'); s.add_argument('--free', action='store_true'); s.add_argument('--limit', type=int, default=40)
     a = p.parse_args(argv)
     query = {k: v for k, v in vars(a).items() if k not in ('verb', 'db') and v not in (None, False)}
     if a.verb != 'dio' and not Path(a.db).exists():
@@ -117,6 +120,8 @@ def main(argv=None):
                     data, claims = verbs.explore(c, a.seed, a.ci, a.deck, a.free, a.mode, a.limit)
                 elif a.verb == 'release':
                     data, claims = verbs.release(c, a.donor, a.receiver)
+                elif a.verb == 'find':
+                    data, claims = verbs.find(c, a.role, a.ci, a.free, a.limit)
                 elif a.verb == 'typal':
                     data, claims = verbs.typal(c, a.creature_type, a.ci, a.free)
                 elif a.verb == 'hypothesis':

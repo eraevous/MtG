@@ -5,7 +5,7 @@
 @ai-source-file: mtgtools/verbs.py
 @ai-role: query
 @ai-intent: "Answer an LLM's questions with evidence and say how far each answer is established; surface relationships it did not ask about."
-@ai-version: 0.2.1
+@ai-version: 0.4.0
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -29,3 +29,6 @@
 - `explore --mode divergent` with a seed returns two-step chains forward from the seed through pathways the seed does not use itself, scored so that narrow pathways come first. It is a heuristic for surfacing unrequested relationships, not a measure of value.
 - Coverage: in r20261031, 0 of 4,961 contracts are semantically reviewed, so mechanics claims are exploratory today.
 - Counter links (r20261031): a `counter.put` link is compatible only when the producer's counter kind matches the listener's (a listener for `any` accepts every kind); a +1/+1 producer against a -1/-1 listener is rejected as incompatible, and proliferate or generic producers stay unresolved (`counter_kind_possible`). `card` reports the card's counter facets and order-of-operations note; `release` lists each candidate's -1/-1 roles from the KB facets, and falls back to the lexical flag only on a KB that predates them.
+- Cost payment events (0.3.1, C-023): a cost's `on_payment` sacrifice or discard feeds links (`basis: paid_object`), because `query_index.feeds` lists resolution effects only. A trigger with a "this or another" alternative is not self-only; a trigger naming its own card ("Sharuum enters") is. Loops through a finality-counter return or an instant/sorcery are `once_only` under `loops_contested`. The first two are read-time workarounds to retire when C-023 lands in a KB release.
+- `find` (0.4.0, Kate 2026-11-01): retrieval over `capability_claims` by a declared role vocabulary (ROLE_FAMILIES / ROLE_ALIASES), never Oracle text. Evidence classes: reviewed_capability (review overlay), detected_candidate (rule match / evaluator patterns, C-012), inventory_tag_only (Collection.Roles). `shape` (repeatable / one-shot / conditional) comes from the contract whose exact text holds the matched phrase and its recorded `unbound` conditions. Every answer is nonexhaustive and reports KB and inventory freshness separately.
+

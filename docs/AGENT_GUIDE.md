@@ -25,6 +25,7 @@ The DIO documents are in the repo (`kb/reference_sources/`, `kb/addendum/`) and 
 - `python3 -m mtgtools context [--deck D]` lists what is in the collection or a deck, and what its charter says.
 - `python3 -m mtgtools card NAME` gives where the copies are, by policy tier (`decks/collection_policy.json`).
 - `python3 -m mtgtools typal TYPE` does the same for a whole creature type and its support cards (§6.2).
+- `python3 -m mtgtools find --role ROLE [--ci C] [--free]` lists owned cards the KB records as performing a function (or, for a family such as `sacrifice`, supporting it), each with its evidence class and matched text. It is retrieval, not a ranking and not complete: say "no matching candidates detected", never "no such card exists". Its roles come from capability_claims, not DIO contracts (C-012).
 
 Zach's inventory authority is the live Google Sheet titled exactly "MTG Master Inventory — Canonical". Find it by title, not by a stored id (`docs/DOCUMENT_PRECEDENCE.md` §3). Exports and the KB are snapshots. Say which snapshot you used: every `mtgtools` envelope names it under `collection`.
 

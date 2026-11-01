@@ -1,2 +1,2 @@
 """mtg: read-only MTG analysis tools for conversational AIs (CLI + JSON). See mtgtools/README.md."""
-__version__ = '0.3.1'
+__version__ = '0.4.0'
