@@ -1,8 +1,13 @@
 {
   "_doc": "The upstream AEC kit this repo's .aec/ records follow (D-0021). AEC is not vendored: CI clones this commit and runs its CLI. .github/workflows/aec-upstream.yml (D-0022) checks upstream weekly and opens a PR that moves this pin when MtG's records still pass; merging it is the decision. By hand: python3 tools/aec_sync.py --test --write.",
   "repo": "https://github.com/eraevous/AEC",
-  "commit": "4decef6cdbe59d6d666e2778758815db7503f8ca",
-  "date": "2026-10-31",
-  "aec_version": "0.3 (check, impact, edges, code-impact, init, import-purpose, source)",
-  "forked_from": "bdf3f341af1617ad759625607efe44bb206a3d73"
+  "commit": "9f57e1957a1d79bd03ae5d25f9e1e737fc237de1",
+  "date": "2026-11-01",
+  "forked_from": "bdf3f341af1617ad759625607efe44bb206a3d73",
+  "history": [
+    {
+      "commit": "4decef6cdbe59d6d666e2778758815db7503f8ca",
+      "date": "2026-10-31"
+    }
+  ]
 }
