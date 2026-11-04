@@ -151,7 +151,8 @@ def build(as_of, inventory, decks=(), policy=None, out=None, base=DEFAULT_BASE):
         c.execute('insert into deck_allocations(row_id,card_name,deck,status_raw,status_group,quantity,section,physically_assigned,'
                   'counts_in_deck_100,raw_json) values (?,?,?,?,?,?,?,?,?,?)',
                   (i, a['name'], a['deck'], a['status'] or 'Allocated', 'planned' if planned else 'allocated', a['qty'],
-                   a['section'] or None, 0 if planned else 1, 0 if a['section'].lower() in ('maybe', 'sideboard', 'considering') else 1,
+                   a['section'] or None, 0 if planned else 1,
+                   0 if planned or a['section'].lower() in ('maybe', 'sideboard', 'considering') else 1,
                    json.dumps({'source': 'asof_fixture', **a})))
     over = {}
     for k in keep:
