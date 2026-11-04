@@ -34,9 +34,16 @@ def grounding(db, verb):
         return {'level': 'doctrine_only', 'note': 'No KB database: nothing here rests on DIO contracts. Run '
                 'python3 tools/kb_bootstrap.py install. Until then label interaction claims as your own reading of Oracle text.'}
     pinned = json.loads(PIN.read_text(encoding='utf-8'))['release'] if PIN.exists() else None
-    rel = kb.release(db).get('release')
-    return {'level': 'kb_grounded' if rel and rel == pinned else 'kb_unpinned', 'release': rel, 'pinned_release': pinned,
-            'note': 'Mechanics come from DIO candidate contracts in the KB (0 semantically reviewed unless a claim says so).'}
+    r = kb.release(db)
+    rel = r.get('release')
+    out = {'level': 'kb_grounded' if rel and (r.get('base_release') or rel) == pinned else 'kb_unpinned', 'release': rel,
+           'pinned_release': pinned,
+           'note': 'Mechanics come from DIO candidate contracts in the KB (0 semantically reviewed unless a claim says so).'}
+    if r.get('as_of'):
+        out['as_of'] = r['as_of']
+        out['note'] += (f" Ownership, deck lists and policy are as of {r['as_of']} (tools/asof_kb.py); cards not owned on "
+                        'that date are absent.')
+    return out
 
 
 def envelope(verb, query, db, data=None, claims=None, error=None):
@@ -66,6 +73,9 @@ def _workbook(a):
     wb = a.workbook or os.environ.get('MTG_WORKBOOK')
     if wb:
         return wb
+    if kb.release(a.db).get('as_of'):
+        raise LookupError('compare reads an inventory workbook, and this is an as-of collection: pass the workbook from that '
+                          'date with --workbook (or MTG_WORKBOOK); the export in data/ is a later inventory')
     found = sorted((ROOT / 'data').glob('*.xlsx'))
     if not found:
         raise LookupError('compare needs --workbook, MTG_WORKBOOK or an export in data/ (see data/README.md)')
