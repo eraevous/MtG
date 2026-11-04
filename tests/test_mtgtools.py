@@ -478,3 +478,20 @@ class AsOf(unittest.TestCase):
     def test_compare_refuses_todays_workbook(self):
         out = self.run_cli('compare', 'Test', 'Sol Ring=Blood Artist')
         self.assertIn('as-of collection', out.get('error', ''))
+
+    def test_no_later_state_outside_card_keyed_tables(self):
+        # source_sheet_rows held every sheet of the later workbook (Collection, Plans, Photo Intake ...): no card_name column,
+        # so the prune missed it. It, the stored doctrine copies and the live-sheet pointers must not survive into the copy.
+        import sqlite3
+        c = sqlite3.connect(f'file:{self.db}?mode=ro', uri=True)
+        try:
+            for t in ('source_sheet_rows', 'reference_documents'):
+                self.assertEqual(c.execute(f'select count(*) from {t}').fetchone()[0], 0, t)
+            for k, v in c.execute("select key, value from meta where key in ('canonical_sheet_id', 'canonical_url')"):
+                self.assertTrue(v.startswith('redacted:asof-'), k)
+            orphan = c.execute('select count(*) from compile_losses where contract_id not in '
+                               '(select contract_id from operation_contracts)').fetchone()[0]
+            self.assertEqual(orphan, 0)
+        finally:
+            c.close()
+        self.assertIn('source_sheet_rows', self.man['counts']['later_state_cleared'])
