@@ -179,7 +179,7 @@ class Verbs(unittest.TestCase):
         pinned = json.loads((ROOT / 'tools' / 'kb_release.json').read_text(encoding='utf-8'))['release']
         self.assertEqual(out['collection']['release'], pinned)
         self.assertEqual(out['grounding']['level'], 'kb_grounded')
-        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261031')
+        self.assertEqual(out['collection']['release'], 'mtg-kb-v0.2.1-r20261104')
         self.assertTrue(all({'kind', 'support', 'grade'} <= set(c) for c in out['claims']))
 
     def test_card_separates_oracle_text_from_contract_readings(self):
@@ -188,7 +188,7 @@ class Verbs(unittest.TestCase):
         kinds = {c['kind']: c for c in out['claims']}
         self.assertEqual(kinds['rules_text']['grade'], 'decision_grade')
         mech = [c for c in out['claims'] if c['kind'] == 'mechanics']
-        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261031
+        self.assertTrue(mech and all(c['grade'] == 'exploratory' for c in mech))   # nothing is reviewed in r20261104
 
     def test_explore_works_without_a_seed_and_marks_discovery(self):
         code, out = self.run_cli('explore', '--ci', 'RG', '--limit', '5')
@@ -257,11 +257,11 @@ class Verbs(unittest.TestCase):
         self.assertEqual(code, 0)
         return out['data']
 
-    def test_copy_of_a_self_enter_enchantment_is_a_lead_not_a_blank(self):
+    def test_copy_of_a_self_enter_enchantment_triggers_on_the_copy(self):
         d = self.hyp('Terra, Magical Adept', 'Banishing Light')
-        reentry = [l for l in d['links'] if l['observer'] == 'Banishing Light' and l['basis'] == 'reentry_of_target']
-        self.assertTrue(reentry)
-        self.assertEqual(reentry[0]['qualifiers'], 'unresolved')       # the contracts don't record that the token is a copy
+        enters = [l for l in d['links'] if l['observer'] == 'Banishing Light' and l['basis'] == 'copy_enters']
+        self.assertTrue(enters)
+        self.assertEqual(enters[0]['qualifiers'], 'compatible')        # C-024: the contract records the token copies its target
         self.assertTrue(any(x['actor'].startswith('Terra') and x['acts_on'] == 'Banishing Light' for x in d['acts_on']))
 
     def test_terra_cycle_is_a_same_card_link(self):

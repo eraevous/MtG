@@ -66,7 +66,7 @@ This is the step the Codex thread skipped. For each card in question:
 
 End every card, deck or interaction answer with a grounding line. For example:
 
-> **Grounding:** KB `mtg-kb-v0.2.1-r20261031` (kb_grounded); DIO v3.1.1 §7, §10, addendum §6. Mechanics are candidate contracts, 0 semantically reviewed. Card X and Card Y are not in the KB: agent-drafted annotation. Evaluator used for curve only.
+> **Grounding:** KB `mtg-kb-v0.2.1-r20261104` (kb_grounded); DIO v3.1.1 §7, §10, addendum §6. Mechanics are candidate contracts, 0 semantically reviewed. Card X and Card Y are not in the KB: agent-drafted annotation. Evaluator used for curve only.
 
 The rules behind this line:
 

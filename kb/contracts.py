@@ -21,8 +21,9 @@ import json, re, unicodedata
 import kbfacts as F
 import mana as MANA
 import counters as COUNTERS
+import sagas as SAGAS
 
-DRAFTER_VERSION = 'contract-drafter-0.5.0'   # 0.5.0: counter identity (counters.py, C-015/C-016)
+DRAFTER_VERSION = 'contract-drafter-0.6.0'   # 0.6.0: Oracle faces, clause costs, Saga chapters, token copies (sagas.py, C-024); 0.5.0: counter identity
 COMPILER_VERSION = 'contract-compiler-0.3.0'
 ADDENDUM_VERSION = 'DIO-3.1.1-kb-addendum-0.1'
 
@@ -389,22 +390,57 @@ def keyword_macro(clause, card):
 
 
 # ---------------------------------------------------------------- drafting
-def draft(op, card, vocab, projections):
+def locate_face(clause, fs, oracle_faces=None):
+    """(face, source): the one face whose text holds the clause. The inventory row's faces first; when its text is not split
+    per face (no '//' lines), the Oracle refresh faces (rules authority, card_faces with face_source 'scryfall')."""
+    for src, cand in (('inventory_row', fs), ('oracle', oracle_faces or [])):
+        hits = [f for f in cand if f.get('oracle_text') and norm(clause) in norm(f['oracle_text'])]
+        if len(hits) == 1:
+            return hits[0], src
+    return None, None
+
+
+def clause_payment(clause):
+    """The printed cost of an activated ability ("Trance — {4}{R}{G}, {T}: ..." -> "{4}{R}{G}, {T}"), for rows with no payment recorded."""
+    head = re.sub(r'^[^—:"]{1,40}?\s+—\s+', '', clause.strip())
+    m = re.match(r'^([^:"]+?):\s', head)
+    return m.group(1).strip() if m else ''
+
+
+def draft(op, card, vocab, projections, oracle_faces=None):
     """Return (operation_contract, proposed_action or None, checks[list of (id,result,detail)])."""
     name, clause = op['card_name'], op['oracle_clause'] or ''
     kind = KIND.get(op['operation_kind'])
     fs = faces(card)
+    face_source = None
     if len(fs) > 1:
-        hits = [f for f in fs if f['oracle_text'] and norm(clause) in norm(f['oracle_text'])]
-        face = hits[0] if len(hits) == 1 else None
+        face, face_source = locate_face(clause, fs, oracle_faces)
     else:
-        face = fs[0]
-    costs, cost_unread = parse_costs(op['payment_consumes'], name)
+        face, face_source = fs[0], 'single_face'
+    face_type = (face or {}).get('type_line') or (card['type_line'] if len(fs) == 1 else '')
+    face_text = (face or {}).get('oracle_text') or (card['oracle_text'] if len(fs) == 1 else '')
+    saga = SAGAS.chapter(clause, face_type, face_text)
+    if saga and kind in (None, 'continuous', 'trigger'):
+        kind = 'trigger'          # a chapter ability is a triggered ability (CR 714.2b), whatever the row said
+    payment, payment_source = op['payment_consumes'], 'row'
+    if kind == 'activate' and not (payment or '').strip():
+        payment, payment_source = clause_payment(clause), 'clause'
+    costs, cost_unread = parse_costs(payment, name)
     method = 'base'
     if kind == 'cast' and face and face.get('mana_cost'):
         mc = MANA.parse_cost(face['mana_cost'])
         if mc: costs = [dict(mc, text=face['mana_cost'], source='mana cost of the spell')] + costs
     groups, unbound, body = requirement_groups(clause, op, kind, costs, name)
+    cps = SAGAS.copies(clause, name)
+    for cond in SAGAS.bound_conditions(cps):   # "if it's a Saga, put ... lore counters on it" is bound by the copy reading
+        if not re.search(r'(?<!activate only )(?<!activate this ability only )\bif\b', norm(body).replace(cond, '')):
+            unbound = [u for u in unbound if not u.startswith('conditional "if"')]
+    if saga:
+        t = saga['trigger']
+        groups.insert(0, {'id': 'g_trigger', 'class': 'trigger', 'checkpoint': 'trigger', 'trigger_word': 'chapter',
+                          'alternatives': [{'id': 'counter.put', 'subject': 'this', 'text': 'this Saga gets a lore counter',
+                                            'qualifiers': {'counter_kind': 'lore', 'counter_holder': 'permanent', 'chapters': saga['chapters'],
+                                                           'condition': t['condition'], 'rule': t['rule']}}]})
     effects = [e.strip() for e in (op['result_produces'] or '').split(';') if e.strip()]
     result = result_of(effects, clause, name, op['object_transition'], op['modifies'])
     amps = amplifiers_of(norm(body))
@@ -416,7 +452,8 @@ def draft(op, card, vocab, projections):
     trig = next((g for g in groups if g['class'] == 'trigger'), None)
     contract = {
         'schema': 'DIO-3.1.1/operation', 'id': op['operation_id'], 'kind': kind, 'legacy_kind': op['operation_kind'],
-        'source_unit': {'card': name, 'face': face['face_name'] if face else None, 'oracle_text_sha256': card['oracle_text_sha256']},
+        'source_unit': {'card': name, 'face': face['face_name'] if face else None, 'face_source': face_source,
+                        'oracle_text_sha256': card['oracle_text_sha256']},
         'exact_text': clause,
         'initiation': {
             'requirement_groups': groups, 'amplifiers': amps,
@@ -424,7 +461,7 @@ def draft(op, card, vocab, projections):
             'cost': {'method': method, 'components': [g['id'] for g in groups if g['class'] == 'cost'],
                      'on_payment': [e for c in costs for e in c.get('on_payment', [])],
                      'remembered': ['X'] if any(c.get('has_x') for c in costs) else [],
-                     'mana_restrictions': None},
+                     'mana_restrictions': None, 'payment_source': payment_source},
             'choice': choice_of(clause)},
         'result': result,
         'modality': 'may' if re.search(r'\byou may\b', norm(clause)) else 'must',
@@ -446,12 +483,28 @@ def draft(op, card, vocab, projections):
     if kind not in ('continuous', 'replacement'):
         for it in result['produces']: it.setdefault('act_time', 'on_resolution')
     contract['keyword_macro'] = keyword_macro(clause, card)
+    contract['saga'] = saga
+    contract['copies'] = cps or None
+    if cps:
+        tok = [it for it in result['produces'] if it['id'] == 'token.create']
+        if not tok:
+            tok = [{'id': 'token.create', 'act_time': 'on_resolution', 'added_by': SAGAS.DRAFTER}]
+            result['produces'].append(tok[0])
+        tok[0]['copy_of'] = [{k: c[k] for k in ('source', 'filter', 'object_text', 'except', 'rule')} for c in cps]
+        for c in cps:
+            tc = c.get('then_counters')
+            if tc:
+                result['produces'].append({'id': 'counter.put', 'counter_kinds': [tc['kind']], 'amount': tc['amount'], 'up_to': tc['up_to'],
+                                           'recipient': 'created_token', 'condition': tc['condition'], 'act_time': 'on_resolution',
+                                           'added_by': SAGAS.DRAFTER})
     # counter identity (C-016): kind and holder for every counter the text puts, removes, moves, reads or requires
-    cfs = COUNTERS.facets(clause, ' or '.join(a.get('text', '') for a in trig['alternatives']) if trig else None, name)
+    cfs = COUNTERS.facets(clause, ' or '.join(a.get('text', '') for a in trig['alternatives']) if trig and not saga else None, name)
+    if saga:
+        cfs = cfs + [{'role': 'listen_put', 'kind': 'lore', 'holder': 'permanent', 'text': 'chapter ' + ', '.join(map(str, saga['chapters']))}]
     contract['counters'] = {'drafter': COUNTERS.DRAFTER, 'facets': cfs} if cfs else None
     put_kinds = COUNTERS.produced_kinds(cfs)
     for it in result['produces']:
-        if it['id'] == 'counter.put' and put_kinds:
+        if it['id'] == 'counter.put' and put_kinds and not it.get('recipient'):
             it['counter_kinds'] = sorted(set(put_kinds))
     if any(f['role'] == 'proliferate' for f in cfs) and not any(it['id'] == 'counter.put' for it in result['produces']):
         result['produces'].append({'id': 'counter.put', 'counter_kinds': ['present_kinds'], 'mode': 'proliferate',
@@ -478,7 +531,7 @@ def draft(op, card, vocab, projections):
     contract['query_index'] = {  # derived for discovery queries (DIO §9: derived, never authoritative)
         'hook_ids': hook_ids,
         'hook_ids_in_vocabulary': all(h in vocab for h in hook_ids) if hook_ids else None,
-        'hook_subject': hook_subject(trig['alternatives'][0]['text'] if trig else None, name),
+        'hook_subject': 'self' if saga else hook_subject(trig['alternatives'][0]['text'] if trig else None, name),
         'feeds': feeds(contract, effects),
         'counters': [{k: f[k] for k in ('role', 'kind', 'holder')} for f in cfs]}
     action = json.loads(proj['raw_ability_json']) if proj else None
@@ -503,7 +556,10 @@ def validate(c, card, action, proj, effects, vocab):
     else: add('C04_hook', 'pass')
     add('C05_face', 'pass' if c['source_unit']['face'] else 'fail', 'multi-face card: clause not located on exactly one face' if not c['source_unit']['face'] else c['source_unit']['face'])
     src = c['evidence']['source_status']
-    add('C06_source_annotation', 'fail' if src == 'requires_manual_annotation' else 'pass', src)
+    if src == 'requires_manual_annotation' and c.get('saga'):
+        add('C06_source_annotation', 'warn', f"{src}: chapter trigger drafted by {c['saga']['drafter']} (CR 714); not reviewed")
+    else:
+        add('C06_source_annotation', 'fail' if src == 'requires_manual_annotation' else 'pass', src)
     comps = [g for g in c['initiation']['requirement_groups'] if g['class'] == 'cost']
     cu = [u for u in c['unbound'] if u.startswith('cost component')]
     if c['kind'] == 'activate' and not comps: add('C07_costs', 'fail', 'activated ability without a parsed cost')
