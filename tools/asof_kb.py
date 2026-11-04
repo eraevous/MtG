@@ -11,6 +11,9 @@ What changes in the copy:
   * deck_allocations is replaced by the fixture's deck lists (or by the inventory's deck column when no deck files are given);
   * inventory-derived tags (cards.roles_stored, capability_claims from Collection.Roles) are dropped, because they were
     written into a later inventory; text-derived claims stay;
+  * tables with no card_name column that hold later state are emptied: source_sheet_rows (every sheet of the release's
+    source workbook) and reference_documents (doctrine copies dated later than most as-of dates); meta's pointers to the
+    live canonical sheet are redacted;
   * SOURCE_MANIFEST.json beside it names the fixture, its sha256 and the as-of date, and lists fixture names the KB lacks;
   * collection_policy.json beside it is the dated policy if one is given, and otherwise records that none is known
     (mtgtools then reports the policy as unknown instead of reading today's decks/collection_policy.json).
@@ -39,6 +42,8 @@ QTY_COLS = ('qty', 'quantity', 'count', 'copies')
 DECK_COLS = ('deck', 'allocation', 'deck_name')
 PLANNED = ('planned', 'proposed', 'wishlist', 'hypothetical', 'not_built', 'not built')
 BASICS = {'Plains', 'Island', 'Swamp', 'Mountain', 'Forest', 'Wastes'}
+LATER_STATE_TABLES = ('source_sheet_rows', 'reference_documents')
+LIVE_META_KEYS = ('canonical_sheet_id', 'canonical_url')
 
 
 def _col(header, options):
@@ -129,6 +134,14 @@ def build(as_of, inventory, decks=(), policy=None, out=None, base=DEFAULT_BASE):
         if 'card_name' in [r[1] for r in c.execute(f'pragma table_info("{t}")')]:
             pruned[t] = c.execute(f'delete from "{t}" where card_name not in (select card_name from keep)').rowcount
 
+    # contract-keyed tables (compile_losses, validation_checks, ...) have no card_name: keep only rows of surviving contracts
+    if 'operation_contracts' in tables:
+        for t in tables:
+            cols = [r[1] for r in c.execute(f'pragma table_info("{t}")')]
+            if 'contract_id' in cols and 'card_name' not in cols:
+                pruned[t] = c.execute(f'delete from "{t}" where contract_id not in '
+                                      '(select contract_id from operation_contracts)').rowcount
+
     c.execute('delete from deck_allocations')
     assigned = defaultdict(int)
     for i, a in enumerate(alloc, 1):
@@ -148,6 +161,17 @@ def build(as_of, inventory, decks=(), policy=None, out=None, base=DEFAULT_BASE):
         c.execute('update cards set owned_min=?, assigned=?, free=?, roles_stored=NULL, availability_stored=NULL where card_name=?',
                   (o, s, o - s, k))
     dropped_tags = c.execute("delete from capability_claims where source='Collection.Roles'").rowcount
+    # tables without a card_name column escape the prune above but still carry the later collection: the raw rows of every
+    # sheet of the release's source workbook (Collection, Deck Allocations, Plans, Photo Intake ...) and the doctrine copies
+    # stored in the DB (dated later than most as-of dates). meta also points at the live canonical sheet. Clear them all.
+    later_state = {}
+    for t in LATER_STATE_TABLES:
+        if t in tables:
+            later_state[t] = c.execute(f'delete from "{t}"').rowcount
+    if 'meta' in tables:
+        later_state['meta_redacted'] = c.execute(
+            f"update meta set value='redacted:asof-{as_of}' where key in ({','.join('?' * len(LIVE_META_KEYS))})",
+            LIVE_META_KEYS).rowcount
     c.execute("insert into card_fts(card_fts) values('rebuild')")
     c.commit()
     c.execute('vacuum')
@@ -165,6 +189,7 @@ def build(as_of, inventory, decks=(), policy=None, out=None, base=DEFAULT_BASE):
                                 'drive_modified_utc': None, 'note': f'as-of fixture for {as_of}'},
            'counts': {'owned_names': len(keep), 'copies': sum(owned.values()), 'deck_rows': len(alloc),
                       'decks': sorted({a['deck'] for a in alloc}), 'rows_pruned': pruned, 'inventory_tags_dropped': dropped_tags,
+                      'later_state_cleared': later_state,
                       'append_only_triggers_dropped_in_copy': len(triggers)},
            'gaps': {'fixture_names_not_in_kb': dict(sorted(missing.items())), 'deck_names_not_in_kb': dict(sorted(deck_missing.items())),
                     'assigned_exceeds_owned': over}}
