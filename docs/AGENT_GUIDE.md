@@ -16,6 +16,10 @@ python3 tools/kb_bootstrap.py status
 | `kb_unpinned` | A KB is present but it is a different release. | Go on, and cite the release `mtgtools` reports. |
 | `doctrine_only` | No KB database. | Run `python3 tools/kb_bootstrap.py install`. It looks for the pinned release zip in `data/` and in the Claude project files, then tries the GitHub release asset. Pass `--zip PATH` if someone gives you the zip. |
 
+**No network (ChatGPT's Python sandbox and similar).** The sandbox cannot clone the repo or download the release, but it can run both from attached files: unzip the repo zip, then `python3 tools/kb_bootstrap.py install --zip <KB zip>`. Both are stdlib only. `docs/chatgpt/PROJECT_INSTRUCTIONS.md` says which two files to attach.
+
+**What counts as "the tool".** `mtgtools` against the KB release. The inventory Sheet's Mechanics tabs, Operations rows and Review Queue are raw candidate data the KB was built from; reading them is not using the tool. On 2026-11-04 a ChatGPT build for Steph's Terra deck reported its "tool use" as five Sheet tabs and "executable KB: not run", because nothing told it otherwise.
+
 If the install fails, you can still continue, but read section 5 first: every interaction claim must then say it is your own reading.
 
 The DIO documents are in the repo (`kb/reference_sources/`, `kb/addendum/`) and need no database.
