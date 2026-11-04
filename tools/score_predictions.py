@@ -35,6 +35,8 @@ Per-measure rules (derived; Zach has not yet accepted them, see D-0026):
               behaviour: rebuilt_within_3 (y / n), the prediction lines' own wording ("rebuild
               a threatening board within about three turns"). y = strength, n = weakness.
               Wipe with rebuilt_within_3 blank = not observable.
+              NOTE: rebuilt_within_3 is a derived observation. It is not among the observations
+              listed in the frozen "How to score" section; see the challenge ledger (C-025 topic).
   contention  column bodies_on_costs (y / n / blank), the section's "bodies spent on costs
               instead of attacks". Answered = the deck reached the midgame with bodies to spend;
               y = weakness shown, n = not shown. Only weaknesses were predicted.
@@ -131,7 +133,7 @@ def load_games(path: Path) -> list[dict]:
             if r[col] not in YN:
                 raise Refused(f"{where}: {col} must be y, n or blank, got {r[col]!r}")
         for col in ("pod_size", "turns", "wipe_turn", "commander_removals"):
-            if r[col] and not r[col].isdigit():
+            if r[col] and not (r[col].isascii() and r[col].isdigit()):
                 raise Refused(f"{where}: {col} must be a whole number or blank, got {r[col]!r}")
         r["how"] = r["how"].lower()
         if r["how"] not in HOW:
@@ -197,6 +199,7 @@ def score(pred: dict, games: list[dict]) -> dict:
                 row["status"] = "not observable yet" if s + c == 0 else "scored"
             lines.append(row)
     return {"games": len({g["game_id"] for g in games}),
+            "rows": len(games), "scorable": len(games) - len(skipped),
             "synthetic": any(g["game_id"].upper().startswith("SYNTH") for g in games),
             "skipped": [{"game_id": g["game_id"], "deck": g["deck"], "why": why} for g, why in skipped],
             "lines": lines}
@@ -206,7 +209,7 @@ def render(result: dict) -> str:
     out = []
     if result["synthetic"]:
         out.append("SYNTHETIC DATA in the games file: these verdicts are a test, not evidence.")
-    out.append(f"{result['games']} games recorded. Frozen predictions 2026-10-20 (hash verified).")
+    out.append(f"{result['rows']} rows, {result['scorable']} scorable. Frozen predictions 2026-10-20 (hash verified).")
     for s in result["skipped"]:
         out.append(f"  not scored: {s['game_id']} {s['deck']}: {s['why']}")
     for r in result["lines"]:
@@ -217,7 +220,7 @@ def render(result: dict) -> str:
             out.append(f"{head}: supported {r['supported']}, contradicted {r['contradicted']}  ({detail})")
         else:
             out.append(f"{head}: {r['status']}")
-    out.append("Rules: fixed for " + ", ".join(FIXED_RULES) + "; not fixed for " + ", ".join(NOT_FIXED_RULES)
+    out.append("Rules: derived readings pending D-0026 (not accepted, not frozen) for " + ", ".join(FIXED_RULES) + "; not fixed for " + ", ".join(NOT_FIXED_RULES)
                + " (see the docstring of tools/score_predictions.py).")
     return "\n".join(out)
 
