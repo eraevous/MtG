@@ -27,7 +27,7 @@ No contract was approved, and nothing was promoted to verified. Every new readin
   - Counters put "on it" right after the copy are a separate `counter.put` with `recipient: created_token`, amount, up-to and condition. Terra: lore, up to 3, "if it's a Saga".
   - That condition is bound, so it no longer counts as an unbound "if" (C09).
   - 36 contracts record a copy.
-- **C06_source_annotation gate (proposed, D-0024).** A row the Sheet marks `requires_manual_annotation` still fails C06, except when it is a chapter ability whose trigger the saga drafter supplied. That case is a `warn` that names the drafter and says the contract is not reviewed. This moves those contracts from `blocked` to `ready_for_review`, which means a person can review them. It does not mean anyone has reviewed them.
+- **C06_source_annotation gate (proposed, D-0025).** A row the Sheet marks `requires_manual_annotation` still fails C06, except when it is a chapter ability whose trigger the saga drafter supplied. That case is a `warn` that names the drafter and says the contract is not reviewed. This moves those contracts from `blocked` to `ready_for_review`, which means a person can review them. It does not mean anyone has reviewed them.
   - C06 fails: 350 → 320.
 - Overall:
   - Contracts with a failing check: 3,220 → 3,113.

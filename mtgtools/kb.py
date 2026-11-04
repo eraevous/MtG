@@ -27,4 +27,5 @@ def release(db):
     j = json.loads(m.read_text(encoding='utf-8'))
     inv = j.get('inventory_source', {})
     return {'release': j.get('release'), 'built_utc': j.get('built_utc'),
-            'inventory_snapshot_sha256': inv.get('input_sha256'), 'inventory_snapshot_modified_utc': inv.get('drive_modified_utc')}
+            'inventory_snapshot_sha256': inv.get('input_sha256'), 'inventory_snapshot_modified_utc': inv.get('drive_modified_utc'),
+            **({'as_of': j['as_of']['date'], 'base_release': j['as_of'].get('base_release')} if j.get('as_of') else {})}

@@ -505,8 +505,16 @@ def _pool(c, ci=None, deck=None, free=False):
     return out
 
 
-def _policy():
-    """Who may use this collection and which decks are protected (decks/collection_policy.json), or None if not recorded."""
+def _policy(c=None):
+    """Who may use this collection and which decks are protected, or None if not recorded. A collection_policy.json beside
+    the database wins over decks/collection_policy.json (an as-of database built by tools/asof_kb.py carries its dated
+    policy there, or {"not_recorded": true} so that today's policy is never applied to a past collection)."""
+    if c is not None:
+        main = next((r[2] for r in c.execute('pragma database_list') if r[1] == 'main'), None)
+        local = Path(main).parent / 'collection_policy.json' if main else None
+        if local and local.exists():
+            j = json.loads(local.read_text(encoding='utf-8'))
+            return None if j.get('not_recorded') else j
     return json.loads(POLICY.read_text(encoding='utf-8')) if POLICY.exists() else None
 
 
@@ -543,7 +551,7 @@ def context(c, deck=None):
         tot = c.execute('select count(*),sum(owned_min),sum(free>0) from cards where owned_min>0').fetchone()
         claims = [claim(f'The collection snapshot holds {tot[1]} copies of {tot[0]} owned card names; {tot[2]} names have a free copy.',
                         'inventory', 'collection_snapshot')]
-        pol = _policy()
+        pol = _policy(c)
         if pol:
             prot = pol.get('protected_decks') or []
             for d in decks:
@@ -596,7 +604,7 @@ def card(c, name):
                     evidence=[f"rules_text.authority={rt.get('authority')}", f"oracle_run_id={rt.get('oracle_run_id')}"]),
               claim(f"Owned {d['custody']['owned']}, free {d['custody']['free']}, assigned {d['custody']['assigned']}.",
                     'inventory', 'collection_snapshot')]
-    pol = _policy()
+    pol = _policy(c)
     av = _availability(c, name, pol)
     if pol:
         claims.append(claim(f"Under the collection policy: {av['usable_without_asking']} usable without asking; "
@@ -910,7 +918,7 @@ def _verdict(c, kind, rows, missing, asserts):
         raise ValueError(f'unknown assert key(s) {bad} for {kind}; allowed: {list(allowed)}')
     if missing or not rows:
         return 'UNKNOWN', ['not every named card is in this collection'] + missing
-    pol = _policy()
+    pol = _policy(c)
     why, ok = [], True
     for r in rows:
         n = r['card_name']
@@ -1036,7 +1044,7 @@ def typal(c, ctype, ci=None, free=False):
     if t not in _vocab(c):
         raise LookupError(f'{ctype!r} is not a type-line word in this collection, so no owned card has it as a type')
     word = re.compile(r'\b' + re.escape(t) + r'(s|es)?\b', re.I)
-    pol = _policy()
+    pol = _policy(c)
     tags = {}
     for r in c.execute('select card_name,capability from capability_claims where capability in (%s)' % ','.join('?' * len(TYPAL_TAGS)),
                        tuple(TYPAL_TAGS)):
@@ -1140,7 +1148,7 @@ def release(c, donor, receiver):
     donor, receiver = _resolve_deck(c, donor), _resolve_deck(c, receiver)
     if donor == receiver:
         raise ValueError('donor and receiver are the same deck')
-    pol = _policy()
+    pol = _policy(c)
     protected = set((pol or {}).get('protected_decks') or [])
     rci = kb.deck_ci(c, receiver)
     rcards = set(kb.deck_cards(c, receiver))
@@ -1268,7 +1276,7 @@ def find(c, role, ci=None, free=False, limit=40):
     """Owned cards the KB records as performing (or supporting) a function, with the evidence behind each match. Retrieval,
     not ranking and not a claim of completeness: no match means none detected, not none exist."""
     name, fam = _find_roles(c, role)
-    pol = _policy()
+    pol = _policy(c)
     reviewed = {(r['card_name'], r['subject_id']) for r in c.execute(
         "select card_name,subject_id from review_overlay where subject_kind='capability_claim' and decision='verified'")}
     sides, excluded = {}, []
@@ -1328,6 +1336,7 @@ def find(c, role, ci=None, free=False, limit=40):
             'excluded_contradicted': excluded[:limit],
             'freshness': {'kb_release': rel.get('release'), 'kb_built_utc': rel.get('built_utc'),
                           'inventory_snapshot_modified_utc': rel.get('inventory_snapshot_modified_utc'),
+                          **({'inventory_as_of': rel['as_of']} if rel.get('as_of') else {}),
                           'note': 'Card meaning comes from the KB release; ownership and availability come from the inventory '
                                   'snapshot it was built from. Neither date says anything about the other, and neither is the live Sheet.'},
             'evidence_classes': {'reviewed_capability': 'a semantically reviewed capability claim (review overlay)',

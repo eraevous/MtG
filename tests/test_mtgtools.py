@@ -425,3 +425,56 @@ class Find(unittest.TestCase):
         with redirect_stdout(buf):
             main(['--db', str(DB), 'card', 'Cyclonic Rift'])
         self.assertIn('not owned', json.loads(buf.getvalue())['error'])
+
+
+@unittest.skipUnless(DB.exists(), 'KB database not installed (python3 tools/kb_bootstrap.py install)')
+class AsOf(unittest.TestCase):
+    """tools/asof_kb.py: a past collection for replaying historical questions (Kate's preflight, 2026-11-04)."""
+    @classmethod
+    def setUpClass(cls):
+        import tempfile
+        sys.path.insert(0, str(ROOT / 'tools'))
+        import asof_kb
+        cls.tmp = tempfile.TemporaryDirectory()
+        d = Path(cls.tmp.name)
+        (d / 'inv.csv').write_text('name,qty\nViscera Seer,1\nBlood Artist,2\nSol Ring,1\nNo Such Card,1\n', encoding='utf-8')
+        (d / 'Test.csv').write_text('name,qty,status\nBlood Artist,1,\nViscera Seer,1,proposed\n', encoding='utf-8')
+        cls.man = asof_kb.build('2026-10-06', d / 'inv.csv', [d / 'Test.csv'], None, d / 'db')
+        cls.db = d / 'db' / DB.name
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def run_cli(self, *args):
+        from mtgtools.cli import main
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            main(['--db', str(self.db), *args])
+        return json.loads(buf.getvalue())
+
+    def test_only_cards_owned_on_the_date_exist(self):
+        self.assertIn('card not found', self.run_cli('card', 'Sharuum the Hegemon')['error'])
+        self.assertEqual(self.man['counts']['owned_names'], 3)
+        self.assertEqual(self.man['gaps']['fixture_names_not_in_kb'], {'No Such Card': 1})
+
+    def test_planned_rows_do_not_hold_copies(self):
+        a = self.run_cli('card', 'Viscera Seer')['data']
+        self.assertEqual(a['custody'], {'owned': 1, 'assigned': 0, 'free': 1, 'locations': []})
+        self.assertEqual(a['availability']['planned_only'], {'Test': 'proposed'})
+        b = self.run_cli('card', 'Blood Artist')['data']['custody']
+        self.assertEqual((b['owned'], b['assigned'], b['free']), (2, 1, 1))
+
+    def test_todays_policy_is_not_applied(self):
+        texts = [c['text'] for c in self.run_cli('context')['claims']]
+        self.assertTrue(any('No collection policy is recorded' in t for t in texts))
+        self.assertFalse(any('TMNT' in t for t in texts))
+
+    def test_grounding_names_the_date(self):
+        g = self.run_cli('context')['grounding']
+        self.assertEqual(g['as_of'], '2026-10-06')
+        self.assertEqual(g['level'], 'kb_grounded')
+
+    def test_compare_refuses_todays_workbook(self):
+        out = self.run_cli('compare', 'Test', 'Sol Ring=Blood Artist')
+        self.assertIn('as-of collection', out.get('error', ''))

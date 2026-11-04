@@ -5,7 +5,7 @@
 @ai-source-file: mtgtools/verbs.py
 @ai-role: query
 @ai-intent: "Answer an LLM's questions with evidence and say how far each answer is established; surface relationships it did not ask about."
-@ai-version: 0.4.0
+@ai-version: 0.4.1
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -33,3 +33,4 @@
 - Cost payment events (0.3.1, C-023): a cost's `on_payment` sacrifice or discard feeds links (`basis: paid_object`), because `query_index.feeds` lists resolution effects only. A trigger with a "this or another" alternative is not self-only; a trigger naming its own card ("Sharuum enters") is. Loops through a finality-counter return or an instant/sorcery are `once_only` under `loops_contested`. The first two are read-time workarounds to retire when C-023 lands in a KB release.
 - `find` (0.4.0, Kate 2026-11-01): retrieval over `capability_claims` by a declared role vocabulary (ROLE_FAMILIES / ROLE_ALIASES), never Oracle text. Evidence classes: reviewed_capability (review overlay), detected_candidate (rule match / evaluator patterns, C-012), inventory_tag_only (Collection.Roles). `shape` (repeatable / one-shot / conditional) comes from the contract whose exact text holds the matched phrase and its recorded `unbound` conditions. Every answer is nonexhaustive and reports KB and inventory freshness separately.
 
+- As-of collections (0.4.1, Kate 2026-11-04): a database built by `tools/asof_kb.py` carries a dated `collection_policy.json` (or `not_recorded`) and an `as_of` manifest. Verbs read that policy instead of today's, grounding and `find` freshness name the date, and `compare` needs the dated workbook. Card meaning stays at the base release.
