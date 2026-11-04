@@ -1,0 +1,7 @@
+game_id,date,pod_size,pod,deck,deck_version,turns,winner,how,stalled_vs_blockers,wipe_turn,wipe_kind,rebuilt_within_3,commander_removals,ran_out_of_mana,bodies_on_costs,note
+SYNTH-01,2026-11-01,4,SYNTHETIC pod,Sharuum,synthetic-v1,11,SYNTHETIC player,close,n,6,destroy,y,2,n,y,SYNTHETIC test row: not a real game
+SYNTH-02,2026-11-02,4,SYNTHETIC pod,TMNT,synthetic-v1,5,SYNTHETIC player,mana-screw,,,,,0,,,SYNTHETIC test row: nothing observable
+SYNTH-03,2026-10-15,4,SYNTHETIC pod,Dina,synthetic-v1,9,SYNTHETIC player,stall,y,6,destroy,n,0,y,n,SYNTHETIC test row: predates the freeze
+SYNTH-04,2026-11-03,4,SYNTHETIC pod,Vraska,synthetic-v1,9,SYNTHETIC player,stall,y,,,,3,n,y,SYNTHETIC test row: excluded deck
+SYNTH-05,2026-11-03,4,SYNTHETIC pod,Token Triumph,synthetic-v1,9,SYNTHETIC player,close,n,,,,0,n,n,SYNTHETIC test row: no frozen prediction
+SYNTH-06,2026-10-20,4,SYNTHETIC pod,Ashling,synthetic-v1,9,SYNTHETIC player,stall,y,,,,0,n,n,SYNTHETIC test row: same day as freeze
