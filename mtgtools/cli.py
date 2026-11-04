@@ -90,6 +90,11 @@ def _read_claims(path):
 
 
 def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):   # card names carry non-ASCII (Lórien, Æther); a Windows cp1252 console would crash
+        try:
+            stream.reconfigure(encoding='utf-8')
+        except (AttributeError, ValueError):
+            pass
     p = argparse.ArgumentParser(prog='mtg', description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--db', default=str(kb.DEFAULT_DB), help='collection database (default: kb/mtg_cards_v0.2.sqlite)')
     sub = p.add_subparsers(dest='verb', required=True)

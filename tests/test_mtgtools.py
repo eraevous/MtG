@@ -462,6 +462,8 @@ class AsOf(unittest.TestCase):
         a = self.run_cli('card', 'Viscera Seer')['data']
         self.assertEqual(a['custody'], {'owned': 1, 'assigned': 0, 'free': 1, 'locations': []})
         self.assertEqual(a['availability']['planned_only'], {'Test': 'proposed'})
+        texts = [c['text'] for c in self.run_cli('context', '--deck', 'Test')['claims']]
+        self.assertTrue(any(t.startswith('Test counts 1 cards toward its 100') for t in texts), texts)   # planned rows do not count
         b = self.run_cli('card', 'Blood Artist')['data']['custody']
         self.assertEqual((b['owned'], b['assigned'], b['free']), (2, 1, 1))
 
