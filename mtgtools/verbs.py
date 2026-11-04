@@ -106,14 +106,98 @@ def _contracts(c, names=None):
                 elif g.get('class') == 'eligibility' and 'target' in (alt.get('text') or ''):
                     targets.append(alt['text'])
         feeds = list(qi.get('feeds') or [])
+        produces = (j.get('result') or {}).get('produces') or []
+        copies = [x for it in produces if it.get('id') == 'token.create' for x in it.get('copy_of') or []]
+        copy_counters = [it for it in produces if it.get('id') == 'counter.put' and it.get('recipient') == 'created_token']
+        if copy_counters and 'counter.put' not in feeds:
+            feeds.append('counter.put')
+        saga = j.get('saga') or None
         paid = _paid_events(j)
         paid = {e: f for e, f in paid.items() if e not in feeds}
         out.append({'contract_id': r['contract_id'], 'card': r['card_name'], 'text': r['exact_text'], 'kind': r['operation_kind'],
                     'state': r['queue_state'], 'feeds': feeds + sorted(paid), 'paid': paid, 'hooks': qi.get('hook_ids') or [],
                     'hook_subject': qi.get('hook_subject'), 'triggers': triggers, 'targets': targets,
-                    'counters': qi.get('counters') or [],
+                    'counters': qi.get('counters') or [], 'copies': copies, 'copy_counters': copy_counters, 'produces': produces,
+                    'chapters': (saga or {}).get('chapters') or [], 'all_chapters': (saga or {}).get('all_chapters') or [],
                     'faces': [f.strip().lower() for f in (r['type_line'] or '').split('//')]})
+    chapters = {}
+    for k in out:
+        chapters.setdefault(k['card'], set()).update(k['chapters'] + k['all_chapters'])
+    for k in out:
+        k['card_chapters'] = sorted(chapters.get(k['card']) or [])
     return out
+
+
+def _copy_fit(p, o, vocab):
+    """Could p's token be a copy of o's card? True / False / None, from the copy readings p's contract records (C-024)."""
+    best = False
+    for cp in p.get('copies') or []:
+        if cp['source'] == 'self':
+            r = p['card'] == o['card']
+        elif cp['source'] in ('target', 'chosen') and cp.get('filter'):
+            if 'token' in cp['filter'].split() and cp['source'] == 'chosen':
+                r = None                                  # populate copies a token, never a card from the collection itself
+            elif any(x in cp['filter'] for x in ('opponent controls', "don't control")):
+                r = False
+            else:
+                rs = [_face_matches(cp['filter'], f, vocab) for f in o['faces']]
+                r = True if any(x is True for x in rs) else (None if any(x is None for x in rs) else False)
+        else:
+            r = None
+        if r is True:
+            return True
+        if r is None:
+            best = None
+    return best
+
+
+def _copy_link(p, eff, o, hook, vocab):
+    """(status, basis, reason) for a token-copy producer, or None when p records no copy reading for this pathway."""
+    if not p.get('copies') or eff not in ('token.create', 'counter.put'):
+        return None
+    self_obs = _self_obs(o, hook)
+    if eff == 'counter.put':
+        if not (self_obs and o['chapters']):
+            return None
+        puts = [x for x in p['copy_counters'] if 'lore' in (x.get('counter_kinds') or [])]
+        if not puts:
+            return None
+        fit = _copy_fit(p, o, vocab)
+        if fit is False:
+            return 'incompatible', 'copy_target', f"{o['card']} cannot be what {p['card']} copies"
+        if 'saga' not in ' '.join(o['faces']):
+            return 'incompatible', 'copy_not_saga', f"{o['card']} is not a Saga, so the copy gets no lore counters"
+        add = puts[0].get('amount')
+        n = add if isinstance(add, int) else 0
+        reached = [x for x in o['card_chapters'] if x <= 1 + n]
+        mine = [x for x in o['chapters'] if x in reached]
+        why = (f"the token copy of {o['card']} has its chapter abilities (CR 707.2). It enters with one lore counter (CR 714.3a), "
+               f"then gets {'up to ' if puts[0].get('up_to') else ''}{add} more, so chapters {', '.join(map(str, reached)) or 'none'} of "
+               f"{o['card_chapters'] and max(o['card_chapters'])} trigger on the copy (CR 714.2c); this ability is chapter "
+               f"{', '.join(map(str, o['chapters']))}" + ('' if mine else ', which the copy does not reach'))
+        if not mine:
+            return 'incompatible', 'copy_chapters', why
+        return ('compatible' if fit else 'unresolved'), 'copy_chapters', why + ('' if fit else '; whether this card can be the copied object is not decidable from type lines')
+    # token.create
+    fit = _copy_fit(p, o, vocab)
+    if self_obs:
+        if fit is True:
+            return 'compatible', 'copy_enters', f"the token copy of {o['card']} has its abilities (CR 707.2) and enters, so its own enter trigger fires for the copy"
+        if fit is False:
+            return 'incompatible', 'copy_target', f"{o['card']} cannot be what {p['card']} copies"
+        return 'unresolved', 'copy_enters', f"only if {p['card']} copies {o['card']} itself"
+    trig = o['triggers'].get(hook) or {}
+    need = ' '.join(x for x in (trig.get('filter'), HOOK_TYPE.get(hook)) if x)
+    if not need:
+        return None
+    filts = [cp['filter'] for cp in p['copies'] if cp.get('filter')]
+    typed = [w for w in need.split() if w not in _FILLER and w != 'permanent']
+    if not typed:
+        return 'unresolved', 'copy_type', f"the trigger's object filter records no type beyond \"{need}\" (a chosen type or other condition may apply)"
+    if filts and all(_face_matches(need, f, vocab) is True for f in filts):
+        art = 'an' if need[:1] in 'aeiou' else 'a'
+        return 'compatible', 'copy_type', f"the token is a copy of a {' or '.join(filts)}, so it is {art} {need}"
+    return 'unresolved', 'copy_type', f"the token copies {' or '.join(filts) or 'an object'}; whether it is a {need} depends on what is copied"
 
 
 def _link_state(p, o):
@@ -215,7 +299,13 @@ def _qualify(p, eff, o, hook, vocab):
     """(status, basis, reason): status is 'compatible' | 'unresolved' | 'incompatible' for producer effect -> observer hook, from recorded qualifiers only."""
     trig = o['triggers'].get(hook) or {}
     self_obs = _self_obs(o, hook)
+    cl = _copy_link(p, eff, o, hook, vocab)
+    if cl:
+        return cl
     if hook == 'counter.put':
+        if self_obs and p.get('copy_counters') and not any(it.get('id') == 'counter.put' and not it.get('recipient')
+                                                         for it in p.get('produces') or []):
+            return 'incompatible', 'counter_recipient', f"{p['card']} puts its counters on the token it creates, not on {o['card']}"
         made = [f['kind'] for f in p.get('counters') or [] if f['role'] in ('put', 'enters_with', 'proliferate')]
         heard = [f['kind'] for f in o.get('counters') or [] if f['role'] == 'listen_put']
         if not made or not heard:
@@ -289,7 +379,8 @@ def _links(contracts, only=None, c=None):
                     self_obs = _self_obs(o, hook)
                     if o['contract_id'] == p['contract_id']:
                         continue
-                    if self_obs and not ((eff in REENTRY_EFFECTS and p['targets']) or (eff in ENTER_EFFECTS and o['card'] == p['card'])):
+                    if self_obs and not ((eff in REENTRY_EFFECTS and p['targets']) or (eff in ENTER_EFFECTS and o['card'] == p['card'])
+                                         or (p['copies'] and (eff == 'token.create' or (eff == 'counter.put' and o['chapters'])))):
                         continue                        # a self trigger sees only its own card entering; not a candidate at all
                     if only is not None and p['card'] not in only and o['card'] not in only:
                         continue

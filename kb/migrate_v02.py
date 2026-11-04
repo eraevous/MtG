@@ -224,10 +224,13 @@ def main():
     # 5. contracts + validation -------------------------------------------------------
     proj = {}
     for r in con.execute('select * from projected_abilities order by card_name,ability_index'): proj.setdefault(r['card_name'], []).append(dict(r))
+    ofaces = {}   # Oracle refresh faces (rules authority) for clauses the inventory row does not split by face (C-024)
+    for r in con.execute("select * from card_faces where face_source='scryfall' order by card_name, face_index"):
+        ofaces.setdefault(r['card_name'], []).append(dict(r))
     nc = 0
     for op in con.execute('select * from candidate_operations order by operation_id').fetchall():
         op = dict(op)
-        contract, action, checks = K.draft(op, cards[op['card_name']], vocab, proj.get(op['card_name'], []))
+        contract, action, checks = K.draft(op, cards[op['card_name']], vocab, proj.get(op['card_name'], []), ofaces.get(op['card_name']))
         csha = K.contract_sha(contract, action)
         con.execute('insert into operation_contracts values(?,?,?,?,?,?,?,?,?,?,?,?,?)',
                     (op['operation_id'], 1, csha, op['card_name'], op['operation_id'], contract['source_unit']['face'], contract['exact_text'],

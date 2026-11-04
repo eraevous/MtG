@@ -1,7 +1,7 @@
 {
- "release": "mtg-kb-v0.2.1-r20261031",
+ "release": "mtg-kb-v0.2.1-r20261104",
  "schema_version": "0.2.1",
- "built_utc": "2026-10-31T21:00:00+00:00",
+ "built_utc": "2026-11-04T04:00:00+00:00",
  "authorities": {
   "inventory": "working Google Sheet (cards.* via the v0.1 import; never edited)",
   "rules_text": "Scryfall Oracle, refresh run ed02ffb54a5b1a9d (rules_text table)",
@@ -53,15 +53,15 @@
  },
  "versions": {
   "derivation_version": "kbfacts-0.2.1/mtg_eval_0.3.0+kb4",
-  "drafter_version": "contract-drafter-0.5.0",
+  "drafter_version": "contract-drafter-0.6.0",
   "compiler_version": "contract-compiler-0.3.0",
   "mtg_eval_vendored": "0.3.0+kb4",
   "migrate": "migrate_v02-0.2.1"
  },
  "database": {
   "file": "mtg_cards_v0.2.sqlite",
-  "sha256": "1ae7c88ca49070cd384a310325babfc84537f51dcf4115493a19c0ee366c4e22",
-  "bytes": 106819584,
+  "sha256": "ee0f455f088f885657e28fe346800fc9d12e037dba972c91acbaeda75c54bc4a",
+  "bytes": 107118592,
   "counts": {
    "cards": 3520,
    "candidate_operations": 4961,
@@ -69,9 +69,9 @@
    "derived_facts": 39358,
    "oracle_ids": 3519,
    "queue": {
-    "blocked": 3216,
+    "blocked": 3109,
     "quarantined": 7,
-    "ready_for_review": 1738
+    "ready_for_review": 1845
    },
    "verification": {
     "oracle_identity_confirmed": 4958,
@@ -86,6 +86,6 @@
    "compiled_actions": 0
   }
  },
- "rebuild": "python migrate_v02.py --v01 mtg_cards.sqlite --out mtg_cards_v0.2.sqlite --overlay overrides/review_overlay.jsonl --refresh-dir refresh --source-modified 2026-10-24T23:57:02.816Z --built-utc 2026-10-31T21:00:00+00:00",
+ "rebuild": "python migrate_v02.py --v01 mtg_cards.sqlite --out mtg_cards_v0.2.sqlite --overlay overrides/review_overlay.jsonl --refresh-dir refresh --source-modified 2026-10-24T23:57:02.816Z --built-utc 2026-11-04T04:00:00+00:00",
  "tests": "python -m unittest test_v02.py test_mtg_db.py test_acceptance.py"
 }
