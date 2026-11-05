@@ -1,8 +1,11 @@
 {
-  "_doc": "The upstream AEC kit this repo's .aec/ records follow (D-0021). AEC is not vendored: CI clones this commit and runs its CLI. .github/workflows/aec-upstream.yml (D-0022) checks upstream weekly and opens a PR that moves this pin when MtG's records still pass; merging it is the decision. By hand: python3 tools/aec_sync.py --test --write.",
-  "repo": "https://github.com/eraevous/AEC",
-  "commit": "4decef6cdbe59d6d666e2778758815db7503f8ca",
-  "date": "2026-10-31",
-  "aec_version": "0.3 (check, impact, edges, code-impact, init, import-purpose, source)",
-  "forked_from": "bdf3f341af1617ad759625607efe44bb206a3d73"
+  "_doc": "The upstream Telosmith (formerly AEC) kit this repo's .aec/ records follow (D-0021). It is not vendored: CI installs this commit and runs its CLI. .github/workflows/aec-upstream.yml (D-0022) checks upstream weekly and opens a PR that moves this pin when MtG's records still pass; merging it is the decision. By hand: python3 tools/aec_sync.py --test --write.",
+  "repo": "https://github.com/eraevous/Telosmith",
+  "commit": "b0e202fa4b2087679901620c999f1968f6c62b0e",
+  "date": "2026-11-05",
+  "aec_version": "0.5.0 on main (tag v0.5.0 not yet cut; check, impact, edges, snapshot, code-impact --exit-code, init, append, import-purpose, source)",
+  "forked_from": "bdf3f341af1617ad759625607efe44bb206a3d73",
+  "history": [
+    {"repo": "https://github.com/eraevous/AEC", "commit": "4decef6cdbe59d6d666e2778758815db7503f8ca", "date": "2026-10-31", "note": "old AEC repo; moved to Telosmith 2026-11-05 (HO-MTG-20261105-AF0N, DEC-095)"}
+  ]
 }

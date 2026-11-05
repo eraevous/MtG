@@ -1,5 +1,5 @@
-# Weekly check of upstream AEC (option B, Zach 2026-11-01; D-0022 proposed).
-# If eraevous/AEC main has moved past tools/aec_upstream.json and MtG's records still pass at the new commit,
+# Weekly check of upstream Telosmith, formerly AEC (option B, Zach 2026-11-01; D-0022 proposed).
+# If the repo in tools/aec_upstream.json (eraevous/Telosmith since 2026-11-05) has moved past tools/aec_upstream.json and MtG's records still pass at the new commit,
 # open a PR that moves the pin. If a check fails, open (or update) an issue instead. Nothing merges by itself.
 # Needs: Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests".
 name: aec-upstream
