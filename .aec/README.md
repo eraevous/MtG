@@ -1,6 +1,6 @@
 # .aec: AEC reasoning records for MtG
 
-Status: **accepted** (D-0021, Zach, 2026-11-01). Format: AEC v0.3 records, upstream `eraevous/AEC` pinned in `tools/aec_upstream.json`.
+Status: **accepted** (D-0021, Zach, 2026-11-01). Format: AEC v0.3 records, upstream `eraevous/Telosmith` (formerly `eraevous/AEC`; moved 2026-11-05, DEC-095) pinned by commit in `tools/aec_upstream.json`. CI also runs Telosmith's `code-impact` (report-only, job summary) and `.claude/settings.json` runs its hook beside `tools/drift_check.py`; both report, neither blocks an edit.
 
 This directory puts the Deck Interaction Ontology (DIO) into AEC's records, so that a DIO revision can be checked for impact before anyone has to remember what rests on it. Why, and what was compared, is in `docs/aec/DIO_AEC_REVIEW.md`.
 
@@ -14,10 +14,10 @@ This directory puts the Deck Interaction Ontology (DIO) into AEC's records, so t
 ## Commands
 
 ```bash
-git clone https://github.com/eraevous/AEC ../AEC && git -C ../AEC checkout $(python3 -c "import json;print(json.load(open('tools/aec_upstream.json'))['commit'])")
-PYTHONPATH=../AEC/src python3 -m aec check .aec/records.jsonl                     # structural; prints each DIO anchor's state
-PYTHONPATH=../AEC/src python3 -m aec impact .aec/records.jsonl .aec/scenarios/dio_v312_authorized.jsonl
-PYTHONPATH=../AEC/src python3 -m aec source show SRC-dio@1 --max-lines 40          # quote the pinned DIO sections
+pip install "git+https://github.com/eraevous/Telosmith.git@$(python3 -c "import json;print(json.load(open('tools/aec_upstream.json'))['commit'])")"   # or PYTHONPATH=../Telosmith/src at that commit
+python3 -m aec edges . -o .aec/edges.jsonl && python3 -m aec check .aec/records.jsonl --edges .aec/edges.jsonl   # structural; prints each DIO anchor's state, fails on dangling code: links
+python3 -m aec impact .aec/records.jsonl .aec/scenarios/dio_v312_authorized.jsonl
+python3 -m aec source show SRC-dio@1 --max-lines 40          # quote the pinned DIO sections
 python3 tools/drift_check.py                                                       # 'governed' and 'mirror' need no AEC checkout
 ```
 

@@ -215,3 +215,6 @@ data/*
 
 # AEC edge snapshot: generated (aec edges), never committed (D-0021)
 .aec/edges.jsonl
+# Telosmith snapshots: the Claude hook's HEAD snapshot and CI's merge-base snapshot, regenerated on every run
+.aec/hook-before.jsonl
+.aec/before.jsonl
