@@ -41,6 +41,7 @@ This is the step the Codex thread skipped. For each card in question:
 2. **If the card is not in the KB:** a card acquired after the KB's inventory snapshot has no contract yet. `card` says so. Get its exact Oracle text from Scryfall (`https://api.scryfall.com/cards/named?exact=NAME`) when you have network access; if you work from memory, say so. Annotate it yourself with the DIO procedure (`python3 -m mtgtools dio 11`): one Operation per ability that matters, with requirement groups, amplifiers and result, in DIO vocabulary (`dio 4` hooks, `dio 5` operations). Label that annotation `agent-drafted, not in KB`.
 3. **Find what connects:**
    - `explore NAME` (focused mode) lists links and loop candidates touching the card.
+   - Its card pool defaults to the seed's color identity. For a deck question, pass the commander's colors (`--ci WUBRG`) or `--deck`: `explore "Summon: Choco/Mog"` alone leaves out Terra (five colors) and finds nothing, while `--ci WUBRG` finds the copy link.
    - `explore NAME --mode divergent` lists two-step chains through pathways the card does not use itself. This is where unconventional interactions show up.
    - For a card that is not in the KB, explore from the owned side instead: a theme (`landfall`, `sacrifice_conversion`, `self_mill`, …) or the owned cards its hooks would feed.
 4. **Test each candidate connection:** `hypothesis A B` reports what must hold, which links are unverified, and what argues against the connection. Then apply the DIO's three checks before you call it real (`dio 7`):
