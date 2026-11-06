@@ -23,14 +23,17 @@ The repo is public; the inventory Sheet it was built around is not. To run the e
 | `kb/` | SQLite knowledgebase v0.2.1 (r20261104) as released: build, migrate, query (`kbq.py`), audit, review overlay, Oracle refresh snapshots, doctrine (`reference_sources/`), DIO addendum, vendored evaluator `kb/vendor/mtg_eval` (0.3.0+kb4) | derived candidate contracts, never hand-edited |
 | `grammar/` | Oracle grammar layer v0.2: Oracle phrases → templates → DIO concepts → candidate contracts; loop discovery; validation | candidate interpretations |
 | `review_packet/` | 330 candidate operations in 88 mechanical classes, waiting for Zach's class-level verdicts | none (a review queue) |
-| `evaluations/` | Deck reports from 2026-10-25 for all 13 decks | descriptive only |
+| `evaluations/` | Deck reports from 2026-10-25 for all 13 decks, the evaluator README and CHANGELOG, and later audits (role detector, incremental tool value, interaction fixtures, practical regression) | descriptive only |
 | `predictions/` | The **frozen** 2026-10-20 predictions. Never edit them; score them only against reported games | prospective evidence |
 | `decisions/` | Append-only design decisions and versioned criteria | provenance of design intent |
 | `challenges/` | Append-only unresolved objections and known defects | n/a |
-| `codex_++/` | Project purpose, module purpose files, drift fixtures | design intent |
+| `codex_++/` | Project purpose, module purpose files, intent notes, drift fixtures | design intent |
+| `mtgtools/` | `python3 -m mtgtools`: ten read-only verbs over the KB with JSON out (`card`, `explore`, `hypothesis`, `dio`, `typal`, `find`, ...); the agent-facing tool (`mtgtools/README.md`, `docs/AGENT_GUIDE.md`) | none (retrieval with evidence grades) |
+| `decks/` | `collection_policy.json` (protected decks and availability tiers) and deck charters | Zach's allocation policy and deck intent |
+| `kernel/` | Semantic kernel v0.2.1e and its invariant suite, regression material superseded by `kb/` and `grammar/` (`kernel/README.md`) | n/a |
 | `collection/` | Bring-your-own collection database: schema, importers (CSV, Sheet .xlsx, decklists), Scryfall enrichment | the user's ownership and allocation (for Zach, a snapshot of the Sheet) |
-| `tools/` | `kb_bootstrap.py` (KB status and install), `drift_check.py` (AEC checks), `ast_dependency_extractor.py` | n/a |
-| `docs/` | Handoff docs and the charter | n/a |
+| `tools/` | `kb_bootstrap.py` (KB status and install; pin in `kb_release.json`), `drift_check.py` (AEC checks; rules in `drift_rules.json`), `aec_sync.py`, `asof_kb.py`, `score_predictions.py`, `ast_dependency_extractor.py` | n/a |
+| `docs/` | `AGENT_GUIDE.md`, `BRING_YOUR_OWN_COLLECTION.md`, `DOCUMENT_PRECEDENCE.md`, the 2026-10-25 handoff snapshot (`handoff/`), the proposed charter (`charter/`), AEC notes, ChatGPT project instructions, game log, proposals | n/a |
 | `data/` | Where the gitignored databases and inventory export go (see `data/README.md`) | n/a |
 
 Zach's inventory authority is the Google Sheet "MTG Master Inventory — Canonical", not anything in this repo (see `kb/inventory_adapter.py`). Anyone else's is their own collection database (`collection/`).
@@ -58,7 +61,7 @@ PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/<export>.xlsx deck "Tok
 PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/my_collection.sqlite deck "My Deck"
 ```
 
-Known baseline: 60 of 61 KB tests pass. The reproducibility test fails, and it also fails on the untouched release (challenge C-001).
+Known baseline on the pinned release (r20261104): `Ran 61 tests ... OK (skipped=1, expected failures=2)`. The two expected failures are Necrobloom binding gaps marked in `kb/test_acceptance.py`; the skip needs the source workbook. The rebuild-reproducibility test passed here (Python 3.13); challenge C-001 recorded it failing on 2026-10-26 and is still open in the ledger.
 
 ## Development model
 

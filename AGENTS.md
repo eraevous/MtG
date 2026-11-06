@@ -73,10 +73,10 @@ python3 tools/drift_check.py --base origin/main   # no errors
 python3 -m unittest discover -s tests
 (cd grammar && python3 -m unittest tests.py)
 # if you touched kb/ and the data is present (data/README.md):
-(cd kb && python3 -m unittest test_v02.py test_mtg_db.py test_acceptance.py)   # baseline: 60/61, C-001
+(cd kb && python3 -m unittest test_v02.py test_mtg_db.py test_acceptance.py)   # baseline: 61 run, OK (1 skipped, 2 expected failures); C-001 still open
 ```
 
-Optional, needs an AEC checkout at the commit in `tools/aec_upstream.json` (CI runs it): `PYTHONPATH=../AEC/src python3 -m aec check .aec/records.jsonl`. See `.aec/README.md`.
+Optional, needs Telosmith (formerly AEC) at the commit in `tools/aec_upstream.json`, installed with pip or checked out beside the repo (CI runs it): `PYTHONPATH=../Telosmith/src python3 -m aec check .aec/records.jsonl`. See `.aec/README.md`.
 
 Then update the purpose file of any module whose behavior changed, and append a decision event if you changed design.
 

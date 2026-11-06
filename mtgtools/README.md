@@ -8,7 +8,7 @@ Standard library only. Python 3.10+.
 
 The verbs read the KB database, which is not in Git. `python3 tools/kb_bootstrap.py install` puts `mtg_cards_v0.2.sqlite` in `kb/` (details in `data/README.md`). `dio` needs no database. `compare` also needs an inventory export (`--workbook`, `MTG_WORKBOOK`, or the newest `data/*.xlsx`).
 
-A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_v02.py` from your own export. A plain "bring your own collection" path is planned separately.
+A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_v02.py` from your own export. For building that collection database from a CSV, Sheet export or decklists, see `docs/BRING_YOUR_OWN_COLLECTION.md`.
 
 ## Verbs
 
