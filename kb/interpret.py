@@ -20,6 +20,17 @@ Each reading cites at least one of: a CR rule number (702.52, 704.5q, 106.12a), 
 decides it) or "ruling:YYYY-MM-DD" (a Scryfall ruling). A reading with no evidence is refused, so is an "agreed"
 outcome with fewer than two parties.
 
+Optional fields (Kate's round-17 protocol amendments, 2026-11-07; PROPOSALS Zach has not adopted, so none is
+required and every one is vocabulary-checked when present):
+  --layer mechanics|dio_representation|deck_role     which of the three questions the row answers (amendment 1)
+  per reading: "independent": true|false, "uncertainty": "...", "scenario": "..."   recorded before seeing the
+      other party's reading, with the reader's own uncertainty and a concrete scenario (amendment 2)
+  --disagreement-type oracle_rules|ontology_representation|contextual_role|insufficient_evidence   only on a
+      contested or needs-zach row (amendment 3)
+  --scenarios scenarios.json  {"positive": "...", "near_miss": "...", "kb_output_changed": true|false|null}
+      a positive scenario and a near-miss counterexample for the reading, and whether KB/evaluator output changed
+      when they were run (null = not run yet) (amendment 4)
+
 Like review.py and reconcile.py, the file is hash-chained (chain.py): each line's id is the SHA-256 of the previous
 id and the record body, so editing, reordering or deleting a line breaks `verify`. The log is the only home of these
 readings (DIO section 2, one home per fact); nothing replays it into the SQLite build, and mtgtools reads it only as
@@ -36,7 +47,9 @@ sys.path.insert(0, str(HERE))
 import chain
 
 FIELDS = ['utc', 'subject_kind', 'card_or_mechanic', 'oracle_id', 'oracle_text_sha256', 'contract_id', 'in_kb', 'kb_release',
-          'question', 'readings', 'outcome', 'verification_state', 'source', 'recorded_by', 'notes', 'supersedes']
+          'question', 'readings', 'outcome', 'verification_state', 'source', 'recorded_by', 'notes', 'supersedes',
+          # optional, from Kate's round-17 amendments (proposals): absent hashes as None, so rows without them stay valid
+          'layer', 'disagreement_type', 'scenarios']
 ID_KEY = 'interpretation_id'
 DEFAULT = HERE / 'overrides' / 'interpretations.jsonl'
 DEFAULT_DB = HERE / 'mtg_cards_v0.2.sqlite'
@@ -47,6 +60,11 @@ CANDIDATE = 'candidate'
 CR_RE = re.compile(r'^\d{3}(\.\d+[a-z]?)?$')          # 702, 702.52, 704.5q, 106.12a
 RULING_RE = re.compile(r'^ruling:\d{4}-\d{2}-\d{2}$')
 READING_KEYS = ('party', 'model', 'reading', 'cr_citations')
+# Kate round 17 (kairos/kate-round-17.md), amendments 1-4. Proposals: optional until Zach adopts or drops them.
+LAYERS = ('mechanics', 'dio_representation', 'deck_role')                                   # 1: which question
+READING_OPTIONAL = {'independent': bool, 'uncertainty': str, 'scenario': str}               # 2: independent first reading
+DISAGREEMENT_TYPES = ('oracle_rules', 'ontology_representation', 'contextual_role', 'insufficient_evidence')  # 3
+SCENARIO_KEYS = ('positive', 'near_miss', 'kb_output_changed')                              # 4: executable consequences
 
 
 def read(path=DEFAULT): return chain.read(path, FIELDS, ID_KEY)
@@ -69,19 +87,41 @@ def check(body):
     readings = body.get('readings')
     if not isinstance(readings, list) or not readings: raise ValueError('readings must be a non-empty list')
     for i, r in enumerate(readings):
-        if not isinstance(r, dict) or set(r) != set(READING_KEYS):
-            raise ValueError(f'reading {i}: keys must be exactly {READING_KEYS}')
+        if not isinstance(r, dict) or not set(READING_KEYS) <= set(r) or not set(r) <= set(READING_KEYS) | set(READING_OPTIONAL):
+            raise ValueError(f'reading {i}: keys must be {READING_KEYS}, optionally {tuple(READING_OPTIONAL)}')
         for k in ('party', 'model', 'reading'):
             if not isinstance(r[k], str) or not r[k].strip(): raise ValueError(f'reading {i}: {k} is required')
         cites = r['cr_citations']
         if not isinstance(cites, list) or not cites: raise ValueError(f'reading {i}: cr_citations must name at least one of a CR rule, "oracle" or "ruling:YYYY-MM-DD"')
         for c in cites:
             if not citation_ok(c): raise ValueError(f'reading {i}: citation {c!r} is not a CR rule number, "oracle" or "ruling:YYYY-MM-DD"')
+        for k, t in READING_OPTIONAL.items():   # amendment 2, when used
+            if k in r and (not isinstance(r[k], t) or (t is str and not r[k].strip())):
+                raise ValueError(f'reading {i}: {k} must be a non-empty {t.__name__}')
     parties = {r['party'] for r in readings}
     if body['outcome'] in ('agreed', 'contested') and len(parties) < 2:
         raise ValueError(f'outcome {body["outcome"]!r} needs readings from at least two parties; one party is needs-zach')
     if body.get('supersedes') and not re.fullmatch(r'[0-9a-f]{64}', body['supersedes']):
         raise ValueError('supersedes must be an interpretation_id')
+    check_optional(body)
+
+
+def check_optional(body):
+    """Kate's round-17 amendments as optional fields. Absent is fine (they are proposals); present means well-formed."""
+    if body.get('layer') is not None and body['layer'] not in LAYERS:
+        raise ValueError(f'layer must be one of {LAYERS}')
+    dt = body.get('disagreement_type')
+    if dt is not None:
+        if dt not in DISAGREEMENT_TYPES: raise ValueError(f'disagreement_type must be one of {DISAGREEMENT_TYPES}')
+        if body['outcome'] == 'agreed': raise ValueError('an agreed row has no disagreement_type')
+    sc = body.get('scenarios')
+    if sc is not None:
+        if not isinstance(sc, dict) or set(sc) != set(SCENARIO_KEYS):
+            raise ValueError(f'scenarios keys must be exactly {SCENARIO_KEYS}')
+        for k in ('positive', 'near_miss'):   # a pair: a reading with only a confirming case has not been tested
+            if not isinstance(sc[k], str) or not sc[k].strip(): raise ValueError(f'scenarios.{k} is required when scenarios are given')
+        if sc['kb_output_changed'] not in (True, False, None):
+            raise ValueError('scenarios.kb_output_changed must be true, false or null (not run yet)')
 
 
 def bind_to_kb(db, name, contract_id):
@@ -135,17 +175,24 @@ def main(argv=None):
     a.add_argument('--oracle-id', help='for a card that is not in the KB')
     a.add_argument('--recorded-by', default=None, help='actor id (default: RELAYKIT_ACTOR or interpret.py)')
     a.add_argument('--notes'); a.add_argument('--supersedes')
+    # Kate round 17 amendments (proposals): optional, vocabulary-checked when given
+    a.add_argument('--layer', choices=LAYERS, help='which of the three questions this row answers (mechanics / DIO representation / deck role)')
+    a.add_argument('--disagreement-type', choices=DISAGREEMENT_TYPES, help='why the parties differ; contested or needs-zach rows only')
+    a.add_argument('--scenarios', help='JSON file: {"positive", "near_miss", "kb_output_changed": true|false|null}; - for stdin')
     s = sub.add_parser('show'); s.add_argument('--name')
     sub.add_parser('verify')
     x = ap.parse_args(argv)
     if x.cmd == 'add':
-        readings = json.load(sys.stdin) if x.readings == '-' else json.loads(Path(x.readings).read_text(encoding='utf-8'))
+        def load(arg): return json.load(sys.stdin) if arg == '-' else json.loads(Path(arg).read_text(encoding='utf-8'))
+        readings = load(x.readings)
+        scenarios = load(x.scenarios) if x.scenarios else None
         kb = bind_to_kb(x.db, x.name, x.contract) if x.kind == 'card' else {'in_kb': False, 'oracle_id': None, 'oracle_text_sha256': None, 'kb_release': None}
         if x.oracle_id and not kb['in_kb']: kb['oracle_id'] = x.oracle_id
         body = {'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'), 'subject_kind': x.kind,
                 'card_or_mechanic': x.name, 'contract_id': x.contract, **kb, 'question': x.question, 'readings': readings,
                 'outcome': x.outcome, 'verification_state': CANDIDATE, 'source': x.source,
-                'recorded_by': x.recorded_by or os.environ.get('RELAYKIT_ACTOR') or 'interpret.py', 'notes': x.notes, 'supersedes': x.supersedes}
+                'recorded_by': x.recorded_by or os.environ.get('RELAYKIT_ACTOR') or 'interpret.py', 'notes': x.notes, 'supersedes': x.supersedes,
+                'layer': x.layer, 'disagreement_type': x.disagreement_type, 'scenarios': scenarios}
         print(json.dumps(add(x.file, body), indent=1, ensure_ascii=False))
     elif x.cmd == 'show':
         rows = read(x.file)
@@ -154,7 +201,10 @@ def main(argv=None):
         rows = read(x.file)
         by = {}
         for r in rows: by[r['outcome']] = by.get(r['outcome'], 0) + 1
+        # Kate's measure (round 17, a proposal): what matters is whether readings were tested, not how many agreed
+        tested = sum(1 for r in rows if r.get('scenarios'))
         print(json.dumps({'lines': len(rows), 'chain': 'ok', 'by_outcome': by, 'stale_text': stale(x.file, x.db),
+                          'with_scenarios': tested, 'kb_output_changed': sum(1 for r in rows if (r.get('scenarios') or {}).get('kb_output_changed') is True),
                           'promoted': 0, 'note': 'every row is a candidate; promotion happens in review.py or decisions/, never here'}, indent=1))
 
 

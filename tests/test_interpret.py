@@ -86,6 +86,41 @@ class Refusals(Sandbox):
         with self.assertRaises(ValueError): I.add(self.log, body(in_kb=True, oracle_id=None))
 
 
+class KateAmendments(Sandbox):
+    """Kate's round-17 amendments (kairos/kate-round-17.md) are PROPOSALS: the fields are optional, so a row
+    without them is still valid, and vocabulary-checked when present, so adopting them later needs no schema change."""
+
+    def test_absent_is_valid_and_hashes_as_none(self):
+        rec = I.add(self.log, body())
+        self.assertEqual((rec.get('layer'), rec.get('disagreement_type'), rec.get('scenarios')), (None, None, None))
+        self.assertEqual(I.read(self.log)[0]['interpretation_id'], rec['interpretation_id'])
+
+    def test_layer_vocabulary(self):
+        for ok in I.LAYERS: I.add(self.log, body(layer=ok))
+        with self.assertRaises(ValueError): I.add(self.log, body(layer='strategy'))
+
+    def test_independent_reading_fields(self):
+        r = dict(reading(), independent=True, uncertainty='low: "instead" is replacement wording', scenario='7 named lands, Plant trigger')
+        I.add(self.log, body(readings=[r, reading(party='kate')]))
+        with self.assertRaises(ValueError): I.add(self.log, body(readings=[dict(reading(), independent='yes'), reading(party='kate')]))
+        with self.assertRaises(ValueError): I.add(self.log, body(readings=[dict(reading(), uncertainty=''), reading(party='kate')]))
+
+    def test_disagreement_type_only_on_disagreement(self):
+        I.add(self.log, body(outcome='contested', disagreement_type='ontology_representation'))
+        I.add(self.log, body(outcome='needs-zach', disagreement_type='contextual_role'))
+        with self.assertRaises(ValueError): I.add(self.log, body(outcome='agreed', disagreement_type='oracle_rules'))
+        with self.assertRaises(ValueError): I.add(self.log, body(outcome='contested', disagreement_type='vibes'))
+
+    def test_scenarios_come_as_a_pair(self):
+        sc = {'positive': 'Seven differently named lands, Plant enters: a Zombie instead.', 'near_miss': 'Seven lands, two share a name: a Plant.', 'kb_output_changed': None}
+        I.add(self.log, body(scenarios=sc))
+        I.add(self.log, body(scenarios=dict(sc, kb_output_changed=True)))
+        with self.assertRaises(ValueError): I.add(self.log, body(scenarios={'positive': 'only the happy path'}))
+        with self.assertRaises(ValueError): I.add(self.log, body(scenarios=dict(sc, near_miss='')))
+        with self.assertRaises(ValueError): I.add(self.log, body(scenarios=dict(sc, kb_output_changed='maybe')))
+        with self.assertRaises(ValueError): I.add(self.log, body(scenarios=dict(sc, extra=1)))
+
+
 class Chain(Sandbox):
     def test_append_chains_and_edit_breaks(self):
         r1 = I.add(self.log, body()); r2 = I.add(self.log, body(question='Is dredge 2 a replacement of the draw?'))
@@ -139,6 +174,23 @@ class Cli(Sandbox):
                          '--readings', '-', '--outcome', 'needs-zach', '--source', 'unit-test', stdin=json.dumps([reading(cites=('701.27a',))]))
         self.assertEqual(m.returncode, 0, m.stderr)
         self.assertFalse(json.loads(m.stdout)['in_kb'])
+
+    def test_optional_flags_round_trip(self):
+        d = Path(self.tmp.name)
+        (d / 'readings.json').write_text(json.dumps([dict(reading(), independent=True), dict(reading(party='kate', model='gpt-5-mini'), independent=True)]), encoding='utf-8')
+        (d / 'scen.json').write_text(json.dumps({'positive': 'p', 'near_miss': 'n', 'kb_output_changed': False}), encoding='utf-8')
+        r = self.run_cli('add', '--kind', 'card', '--name', 'The Necrobloom', '--question', 'Replace or add?', '--readings', str(d / 'readings.json'),
+                         '--outcome', 'contested', '--source', 'unit-test', '--layer', 'dio_representation',
+                         '--disagreement-type', 'ontology_representation', '--scenarios', str(d / 'scen.json'))
+        self.assertEqual(r.returncode, 0, r.stderr)
+        rec = json.loads(r.stdout)
+        self.assertEqual((rec['layer'], rec['disagreement_type'], rec['scenarios']['kb_output_changed']), ('dio_representation', 'ontology_representation', False))
+        self.assertTrue(all(x['independent'] for x in rec['readings']))
+        v = json.loads(self.run_cli('verify').stdout)
+        self.assertEqual((v['chain'], v['with_scenarios'], v['kb_output_changed'], v['promoted']), ('ok', 1, 0, 0))
+        bad = self.run_cli('add', '--kind', 'card', '--name', 'The Necrobloom', '--question', 'q', '--readings', str(d / 'readings.json'),
+                           '--outcome', 'agreed', '--source', 'unit-test', '--disagreement-type', 'oracle_rules')
+        self.assertNotEqual(bad.returncode, 0)
 
 
 if __name__ == '__main__':

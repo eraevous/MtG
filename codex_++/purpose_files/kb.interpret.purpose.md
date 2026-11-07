@@ -5,7 +5,7 @@
 @ai-source-file: kb/interpret.py
 @ai-role: ledger_writer
 @ai-intent: "Record dialogic readings of Oracle text as evidence for a later review or decision, never as a review."
-@ai-version: 0.1.0
+@ai-version: 0.2.0
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -16,7 +16,7 @@
 ### Inputs and outputs
 | Direction | What |
 |---|---|
-| In | A question about a card or mechanic; readings `[{party, model, reading, cr_citations}]`; an outcome (`agreed`, `contested`, `needs-zach`); the KB release database, read-only, to bind a card row to its oracle_id and current Oracle text SHA |
+| In | A question about a card or mechanic; readings `[{party, model, reading, cr_citations}]` (optionally `independent`, `uncertainty`, `scenario` per reading); an outcome (`agreed`, `contested`, `needs-zach`); optional `layer`, `disagreement_type`, `scenarios {positive, near_miss, kb_output_changed}`; the KB release database, read-only, to bind a card row to its oracle_id and current Oracle text SHA |
 | Out | One appended line in `kb/overrides/interpretations.jsonl`, chained to the previous line (`prev`, `interpretation_id`) |
 
 ### Risks, invariants and known gaps
@@ -27,4 +27,5 @@
 - Read-time trust: the readings are model and human judgments labelled by `party` and `model`. A row from a cheaper model carries that model's name so a reader can weigh it (DEC-152 allows cheaper models for the dialogue).
 
 ### Notes
+- 0.2.0 (2026-11-07): Kate's round-17 protocol amendments carried as **optional, vocabulary-checked** fields (`layer`, per-reading `independent`/`uncertainty`/`scenario`, `disagreement_type`, `scenarios`). They are proposals Zach has not adopted; absent fields hash as `None`, so adopting or dropping them later needs no schema change. `verify` counts rows with scenarios and rows whose scenarios changed KB output (Kate's proposed measure). Policy: `overrides/INTERPRETATIONS_POLICY.md`.
 - Added 2026-11-07 for DEC-152 (HO-MTG-20261107-92QA), on branch `mtg/interpretations-log`. The alternative, an `mtgtools interpret add` verb, was rejected because `mtgtools.cli` is read-only by contract and writing an override would change its responsibility (AGENTS.md Drift trigger). A read-only `mtgtools interpret show` may follow.

@@ -9,3 +9,16 @@ This is an addendum to `REVIEW_POLICY.md`. It lives in its own file because `REV
 - `agreed` and `contested` need at least two distinct parties (`party`, not `model`: two models under one actor are one voice). One party can only record `needs-zach`.
 - A card row binds to the KB's current `oracle_text_sha256`, `oracle_id` and release. `interpret.py verify` reports rows whose card text has since changed. A `--contract` id is optional context, checked for existence and ownership, not bound by SHA: the question is about the text, which outlives a drafter version.
 - The log is the only home of these readings (DIO §2). Nothing replays it into the SQLite build. A tool that wants to show readings beside a `card` answer reads this file.
+
+## Optional fields: Kate's round-17 protocol amendments (2026-11-07; **proposals, not adopted**)
+
+Kate agreed to the dialogue protocol with four amendments (relay-kit-private `kairos/kate-round-17.md`, provenance Kate → Abigail → coordinator, verification against the source thread pending). Zach has not decided them. They are carried as **optional** fields so he can adopt or drop them without a schema change; a row without them is valid, a row with them is vocabulary-checked.
+
+| Amendment | Field | Vocabulary / shape |
+|---|---|---|
+| 1. Separate "what does the card do", "how does the DIO represent it", "what role in this deck" | `layer` | `mechanics` \| `dio_representation` \| `deck_role` |
+| 2. Independent first readings (Oracle text, CR citations, interpretation, uncertainty, concrete scenario, before seeing the other's) | per reading: `independent`, `uncertainty`, `scenario` | bool; non-empty strings |
+| 3. Record the disagreement type; don't resolve substantive disagreement by model consensus | `disagreement_type` | `oracle_rules` \| `ontology_representation` \| `contextual_role` \| `insufficient_evidence`; refused on an `agreed` row |
+| 4. Test executable consequences: a positive scenario and a near-miss counterexample; capture whether KB/evaluator output changes | `scenarios` | `{positive, near_miss, kb_output_changed: true\|false\|null}`; the pair is required together, `null` = not run yet |
+
+`interpret.py verify` reports `with_scenarios` and `kb_output_changed` counts beside the outcome counts, because Kate's proposed measure of the dialogue is whether it reduces recurring mechanical errors and improves deck decisions, not how many readings are agreed. Nothing here changes who promotes (Zach) or the `candidate` invariant.
