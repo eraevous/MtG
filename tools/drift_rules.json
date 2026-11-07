@@ -16,6 +16,7 @@
     "kb/overrides/review_overlay.jsonl",
     "kb/overrides/verified_reviews.jsonl",
     "kb/overrides/oracle_reconciliation.jsonl",
+    "kb/overrides/interpretations.jsonl",
     ".aec/records.jsonl"
   ]
 }
