@@ -179,6 +179,7 @@ def reconcile(collection, intake, *, require_finish=False):
             'review_required': 'YES' if issues else 'NO', 'review_reason': '; '.join(issues),
             'printings': '; '.join(f"{r['set_code'] or '?'} #{r['collector_number'] or '?'}"
                                    f" [{r['finish'] or 'finish unknown'}] ×{r['quantity']}" for r in incoming)})
+    flagged_proposals = sum(row['review_required'] == 'YES' for row in proposals)
     accounted = sum(r['new_copies'] for r in proposals)
     accepted_row_ids = {id(v) for group in candidates.values() for v in group}
     skipped = sum(r['quantity'] for r in details if id(r) not in accepted_row_ids)
@@ -188,7 +189,8 @@ def reconcile(collection, intake, *, require_finish=False):
         'collection_names_read': len(collection),
         'intake_rows_read': len(details), 'intake_physical_copies_read': sum(r['quantity'] for r in details),
         'proposal_names': len(proposals), 'proposal_copies': accounted,
-        'review_rows': len(review), 'skipped_copies': skipped,
+        'review_rows': len(review), 'flagged_proposals': flagged_proposals,
+        'requires_review': bool(review or flagged_proposals), 'skipped_copies': skipped,
         'finish_unspecified_rows': sum(not r['finish'] for r in details if r['identity_status'] == 'accepted'),
         'review': review,
         'limits': ['Source CSV may not be the latest canonical Sheet; the caller must verify title and freshness.',
@@ -229,7 +231,7 @@ def main(argv=None):
     print(json.dumps({'out': str(out), 'status': report['status'], 'proposal_names': report['proposal_names'],
                       'proposal_copies': report['proposal_copies'], 'review_rows': report['review_rows']},
                      ensure_ascii=False))
-    return 0 if not report['review_rows'] else 1
+    return 1 if report['requires_review'] else 0
 
 
 if __name__ == '__main__':
