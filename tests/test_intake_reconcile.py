@@ -76,6 +76,8 @@ class IntakeTests(unittest.TestCase):
         p,_,s=r.reconcile(self.inventory,row)
         self.assertIn('finish unknown',p[0]['printings'])
         self.assertIn('some_printing_finishes_unspecified',p[0]['review_reason'])
+        self.assertEqual(s['flagged_proposals'], 1)
+        self.assertTrue(s['requires_review'])
         p,_,s=r.reconcile(self.inventory,row,require_finish=True)
         self.assertEqual(p,[])
         self.assertEqual(s['review'][0]['reason'],'finish_unspecified')
@@ -105,7 +107,7 @@ class IntakeTests(unittest.TestCase):
 
     def test_end_to_end_does_not_mutate_inputs(self):
         inp=self.root/'verified.csv'
-        inp.write_text('Card Name,Quantity,Set Code,Collector Number,Notes\nHallowed Fountain,1,rtr,241,voice intake\n', encoding='utf8')
+        inp.write_text('Card Name,Quantity,Set Code,Collector Number,Finish,Notes\nHallowed Fountain,1,rtr,241,nonfoil,voice intake\n', encoding='utf8')
         before=(r.digest(self.collection),r.digest(inp))
         out=self.root/'staging'
         argv=['--collection',str(self.collection),'--intake',str(inp),'--output',str(out),
