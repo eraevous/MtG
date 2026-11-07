@@ -2,6 +2,20 @@
 
 > Resolve dictated card identities through Scryfall efficiently and conservatively, returning reviewable staging artifacts without altering ownership.
 
+@ai-path: collection.voice_intake
+@ai-source-file: collection/voice_intake.py
+@ai-role: adapter
+@ai-intent: "Identify card printings from transcribed speech-to-text without mutating an inventory."
+@ai-version: 0.1.0
+@schema-version: 0.3
+@ai-generated: true
+@ai-verified: false
+@ai-risk-pii: low (dictation may describe privately held cards; no user data is committed)
+@ai-dependencies: ext:Scryfall API
+@ai-used-by: optional collection import after owner review
+@ai-contracts: P-01, P-05
+@ai-semantic-role: candidate-source
+
 ## Contract
 - In: transcribed text; explicit names, set codes and collector numbers; Scryfall's card-collection batch endpoint, with bounded optional fuzzy suggestions.
 - Out: source-linked per-line JSON review and a CSV containing **only exact accepted** Scryfall identities.
