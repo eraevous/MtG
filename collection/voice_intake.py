@@ -57,7 +57,7 @@ def fold(text):
 def parse(text):
     chunks = re.split(r"(?:\r?\n|;|\bnext card\b|\bnew card\b)", text, flags=re.I)
     return [parse_line(t.strip(" ,.: \t"), i)
-            for i, t in enumerate(c for c in chunks if c.strip(" ,.: \t"), 1)]
+            for i, t in enumerate((c for c in chunks if c.strip(" ,.: \t")), 1)]
 
 
 def parse_line(raw, line):
