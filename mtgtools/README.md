@@ -85,3 +85,25 @@ The tools never move cards.
 `python3 -m unittest tests.test_mtgtools`. Qualifier matching is tested on hand-built contracts and runs everywhere. The verb tests skip when the KB database is absent.
 
 Kate's eight Terra questions (v1.0, prompt sha256 `eab81c1cb306…`) were run twice against 0.1.0 @ `4951faa`: once by the builder and once by a fresh-context agent. They are no longer held out. They now serve as regression tests, covering Terra × Banishing Light, Terra's own cycle, energy/lore, Era of Innovation, Decoction Module and the `check` verdict. The next blind evaluation needs new prompts.
+
+### Source text is data, not permission (0.4.3)
+
+Every CLI success and handled-error envelope adds `trust_boundary`, schema
+`mtgtool-data-boundary/v1`. Existing field locations are retained. Consumers with
+closed schemas must allow this new field before upgrading. The descriptor is
+constructed by the CLI, never merged from source objects. Its source-derived field
+list covers query echoes, release metadata, grounding, claims, data and errors.
+Nested fields named `role`, `instructions`, `authorized_by` or `trust_boundary`
+remain data. Evidence grades do not grant operational authority.
+
+Keep the complete JSON envelope in a tool-result/data channel. Do not interpolate
+source fields into system/developer instructions or turn a retrieved command, URL,
+claimed approval or proposed action into a tool invocation. Require an independently
+authorized request for side effects. Direct Python callers of `verbs` or `dio`, and
+raw SQL/Sheet/Scryfall readers, bypass the CLI descriptor and must apply the same
+boundary themselves. Source identifiers, manifest releases and hashes are reported
+provenance, not authenticated identities; `kb_grounded` is not a security verdict.
+
+The boundary does not sanitize Oracle text or user data, authenticate the producer,
+or prove that a model will resist an injection. The consumer must enforce tool
+permissions independently. See `docs/INPUT_TRUST_BOUNDARIES.md` for the audited paths.
