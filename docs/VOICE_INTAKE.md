@@ -26,6 +26,12 @@ CMM 396
 
 Best input is **set code + collector number**: `CMM 396`, or `set code CMM number 396`, optionally with a name and quantity. The set/number combination identifies the exact printing; an incorrect spoken name is marked **review** rather than accepted. Otherwise an exact card name works. If no exact name exists, the tool tries up to five fuzzy suggestions (configurable with `--fuzzy-budget`), **always marked review**.
 
+A name plus set code without a collector number (for example, `Sol Ring set CMM`) preserves that set restriction. A response from another set is marked **review** and excluded from the CSV.
+
+Bare number words can be part of a card name: `Seven Dwarves` is checked alongside the quantity interpretation in the same batch. An exact full-name match keeps quantity one; if both interpretations match, the JSON records both quantities and requires review. If neither matches exactly, fuzzy lookup uses the unstripped name with quantity one and keeps the alternate interpretation visible. Say `seven copies of ...` or use a numeric quantity to make the quantity explicit. Extra name interpretations count toward the 75-identifier batch limit.
+
+Name matching uses the existing collection matcher: full names before front faces, never a back-face-only exact match. Back-face-only fuzzy suggestions still require review.
+
 Use the two-to-six-character **set code**, not the full set name or a visual symbol description. Speak digits for collector numbers; free-form spoken number words are not confidently reassembled.
 
 ## Output and authority

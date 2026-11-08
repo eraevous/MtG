@@ -13,12 +13,16 @@ import json
 import re
 import sys
 import time
-import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
+
+if __package__:
+    from .mtgcollection import fold, name_matcher
+else:
+    from mtgcollection import fold, name_matcher
 
 COLLECTION_URL = "https://api.scryfall.com/cards/collection"
 NAMED_URL = "https://api.scryfall.com/cards/named"
@@ -26,7 +30,7 @@ USER_AGENT = "eraevous-MtG-voice-intake/0.1 (+https://github.com/eraevous/MtG)"
 MIN_REQUEST_INTERVAL = 0.55  # Scryfall's card endpoints: no faster than 2/s
 WORD_QTY = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
             "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
-QTY = r"(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten)"
+QTY = r"(?:\d+|(?:one|two|three|four|five|six|seven|eight|nine|ten)\b)"
 SET_CODE = r"(?:[A-Za-z0-9]{2,6}|[A-Za-z](?:\s+[A-Za-z]){1,5})"
 NUMBER = r"[0-9]+[A-Za-z★*]?"
 
@@ -40,18 +44,14 @@ class Entry:
     set_code: str = ""
     collector_number: str = ""
     error: str = ""
+    alternate_name: str = ""
 
     def identifier(self):
         if self.set_code and self.collector_number:
             return {"set": self.set_code, "collector_number": self.collector_number}
         if self.name:
-            return {"name": self.name}
+            return {"name": self.name, **({"set": self.set_code} if self.set_code else {})}
         return None
-
-
-def fold(text):
-    return re.sub(r"[^a-z0-9]", "", unicodedata.normalize("NFKD", text)
-                  .encode("ascii", "ignore").decode().lower())
 
 
 def parse(text):
@@ -61,10 +61,21 @@ def parse(text):
 
 
 def parse_line(raw, line):
+    e = _parse_line(raw, line)
+    # A bare number word may belong to the card name, not its quantity.
+    word = re.match(r"^(one|two|three|four|five|six|seven|eight|nine|ten)\b(.*)$", raw, re.I)
+    if e.name and word and not re.match(r"^\s+(?:x\b|copies?\b|cards?\s+of\b)", word[2], re.I):
+        original = _parse_line(raw, line, quantity=False)
+        if original.name and original.name != e.name:
+            e.alternate_name = original.name
+    return e
+
+
+def _parse_line(raw, line, quantity=True):
     e = Entry(line, raw)
     t = raw.strip().strip(".;")
     prefix = re.match(rf"^(?P<n>{QTY})\s*(?:x\s*|copies?\s+of\s+|cards?\s+of\s+|copies?\s+)?(?P<rest>.+)$", t, re.I)
-    if prefix and not re.match(r"^(?:number|#)\b", prefix["rest"], re.I):
+    if quantity and prefix and not re.match(r"^(?:number|#)\b", prefix["rest"], re.I):
         n = prefix["n"].lower()
         e.quantity = int(n) if n.isdecimal() else WORD_QTY[n]
         t = prefix["rest"].strip()
@@ -107,6 +118,10 @@ def parse_line(raw, line):
     return e
 
 
+class RateLimitError(RuntimeError):
+    """Abort the entire intake after a rate-limit response."""
+
+
 class ScryfallClient:
     def __init__(self, opener=None, sleep=None, clock=None):
         self.opener = opener or urllib.request.urlopen
@@ -133,7 +148,7 @@ class ScryfallClient:
                 return json.load(response)
         except urllib.error.HTTPError as err:
             if err.code == 429:
-                raise RuntimeError("Scryfall rate limited (429): stop and retry later") from err
+                raise RateLimitError("Scryfall rate limited (429): stop and retry later") from err
             raise RuntimeError(f"Scryfall HTTP {err.code}; inventory unchanged") from err
         except (urllib.error.URLError, TimeoutError) as err:
             raise RuntimeError(f"Scryfall unavailable: {err}; inventory unchanged") from err
@@ -149,8 +164,30 @@ class ScryfallClient:
         url = NAMED_URL + "?" + urllib.parse.urlencode({"fuzzy": name})
         try:
             return self.request(url)
+        except RateLimitError:
+            raise
         except RuntimeError:
             return None
+
+
+def unique_name_match(cards, name):
+    """Use collection precedence, but do not choose an arbitrary tied printing."""
+    winner = matching_card(cards, name)
+    if winner is None:
+        return None
+    for candidate in cards:
+        # A lower-priority face cannot displace a full name. A tied identity can.
+        other = matching_card([candidate, winner], name)
+        if other.get("id") != winner.get("id"):
+            return None
+    return winner
+
+
+def matching_card(cards, name):
+    winner = name_matcher(cards)(name)
+    if winner and "//" in name and fold(name) != fold(winner.get("name", "")):
+        return None
+    return winner
 
 
 def resolve(entries, client, fuzzy_budget=5):
@@ -159,48 +196,66 @@ def resolve(entries, client, fuzzy_budget=5):
         ident = e.identifier() if not e.error else None
         if ident is None:
             continue
-        key = json.dumps(ident, sort_keys=True)
-        if key not in seen:
-            seen.add(key)
-            identifiers.append(ident)
+        options = [ident]
+        if e.alternate_name and not (e.set_code and e.collector_number):
+            options.append({"name": e.alternate_name,
+                            **({"set": e.set_code} if e.set_code else {})})
+        for option in options:
+            key = json.dumps(option, sort_keys=True)
+            if key not in seen:
+                seen.add(key)
+                identifiers.append(option)
     cards = client.collection(identifiers) if identifiers else []
     by_print = {(c.get("set", "").lower(), str(c.get("collector_number", ""))): c for c in cards}
-    by_name = {}
-    for c in cards:
-        for name in [c.get("name", "")] + [face.get("name", "") for face in c.get("card_faces", [])]:
-            if name:
-                by_name.setdefault(fold(name), []).append(c)
 
     results, fuzzy_used = [], 0
     for e in entries:
         row = {"line": e.line, "spoken": e.raw, "quantity": e.quantity,
                "requested_name": e.name or None, "requested_set": e.set_code or None,
                "requested_number": e.collector_number or None}
+        if e.alternate_name:
+            row["alternate_name"] = e.alternate_name
+            row["alternate_quantity"] = 1
         if e.error or not e.identifier():
             results.append({**row, "status": "unresolved", "reason": e.error or "no identifier"})
             continue
         if e.set_code and e.collector_number:
             card = by_print.get((e.set_code, e.collector_number))
+            candidates = [card] if card else []
         else:
-            matches = by_name.get(fold(e.name), [])
-            card = matches[0] if len({c.get("id") for c in matches}) == 1 else None
+            # Prefer the requested set even if another entry returned another printing.
+            candidates = [c for c in cards if not e.set_code or c.get("set", "").lower() == e.set_code]
+            if not candidates:
+                candidates = cards  # Preserve a mismatched result for explicit review below.
+            card = None
+        primary = unique_name_match(candidates, e.name) if e.name else None
+        alternate = unique_name_match(candidates, e.alternate_name) if e.alternate_name else None
+        match = lambda name: matching_card(candidates, name)
+        ambiguous_quantity = bool(e.alternate_name and match(e.name) and match(e.alternate_name))
+        name = e.name
+        if alternate or (e.alternate_name and not primary):
+            name = e.alternate_name
+            row.update(quantity=1, requested_name=name)
+            row.update(alternate_name=e.name, alternate_quantity=e.quantity)
+        if not (e.set_code and e.collector_number):
+            card = alternate or primary
         method = "batch-exact"
-        if card is None and e.name and not (e.set_code and e.collector_number) and fuzzy_used < fuzzy_budget:
+        if card is None and name and not (e.set_code and e.collector_number) and fuzzy_used < fuzzy_budget:
             fuzzy_used += 1
-            card = client.fuzzy(e.name)
+            card = client.fuzzy(name)
             method = "fuzzy-suggestion"
         if not card or card.get("object") == "error":
             results.append({**row, "status": "unresolved",
                             "reason": "not found (or fuzzy budget exhausted)"})
             continue
-        spoken_names = {fold(card.get("name", ""))} | {
-            fold(face.get("name", "")) for face in card.get("card_faces", [])}
-        mismatch = bool(e.name and e.set_code and e.collector_number
-                        and fold(e.name) not in spoken_names)
-        status = "review" if mismatch or method == "fuzzy-suggestion" else "accepted"
-        results.append({**row, "status": status,
-                        "reason": "spoken name differs from set+number printing" if mismatch else
-                                  "fuzzy name suggestion; confirm first" if method == "fuzzy-suggestion" else None,
+        mismatch = bool(name and e.set_code and e.collector_number
+                        and not matching_card([card], name))
+        set_mismatch = bool(e.set_code and e.set_code != card.get("set", "").lower())
+        reason = ("spoken set differs from resolved printing" if set_mismatch else
+                  "number word may be quantity or part of card name; confirm first" if ambiguous_quantity else
+                  "spoken name differs from set+number printing" if mismatch else
+                  "fuzzy name suggestion; confirm first" if method == "fuzzy-suggestion" else None)
+        results.append({**row, "status": "review" if reason else "accepted", "reason": reason,
                         "name": card.get("name"), "set_code": card.get("set"),
                         "collector_number": str(card.get("collector_number", "")),
                         "scryfall_id": card.get("id"), "scryfall_uri": card.get("scryfall_uri"),

@@ -109,5 +109,165 @@ class VoiceIntakeTests(unittest.TestCase):
         self.assertEqual(len(list(csv.DictReader(io.StringIO(csv_content(report))))), 0)
 
 
+
+class IntakeSafetyTests(unittest.TestCase):
+    @staticmethod
+    def batch(cards):
+        # A synthetic response, independent of endpoint identifier behavior.
+        class BatchTransport(FakeTransport):
+            def __call__(self, req, timeout):
+                if req.full_url == COLLECTION_URL:
+                    self.requests.append(req)
+                    return Response({"data": cards})
+                return super().__call__(req, timeout)
+        return BatchTransport([])
+
+    def test_set_without_number_never_accepts_other_set(self):
+        fake = self.batch([card(set_code="c21", n="263")])
+        report = resolve(parse("Sol Ring set CMM"), client(fake))
+        self.assertEqual(json.loads(fake.requests[0].data)["identifiers"],
+                         [{"name": "Sol Ring", "set": "cmm"}])
+        self.assertEqual(report["cards"][0]["status"], "review")
+        self.assertIn("set differs", report["cards"][0]["reason"])
+        self.assertEqual(len(list(csv.DictReader(io.StringIO(csv_content(report))))), 0)
+
+    def test_set_without_number_prefers_requested_set(self):
+        fake = self.batch([card(set_code="c21", n="263"), card()])
+        report = resolve(parse("Sol Ring set CMM; Sol Ring set C21 number 263"), client(fake))
+        self.assertEqual(report["accepted"], 2)
+        self.assertEqual([r["set_code"] for r in report["cards"]], ["cmm", "c21"])
+
+    def test_number_word_names_resolve_without_inflating_quantity(self):
+        names = ["Seven Dwarves", "One with Nothing", "Two-Headed Giant"]
+        fake = FakeTransport([card(n, n=str(i)) for i, n in enumerate(names)])
+        report = resolve(parse(";".join(names)), client(fake))
+        self.assertEqual(report["accepted"], 3)
+        self.assertEqual(report["requests"], 1)
+        self.assertEqual([r["quantity"] for r in report["cards"]], [1, 1, 1])
+        self.assertEqual([r["requested_name"] for r in report["cards"]], names)
+
+    def test_explicit_quantity_and_printing_stay_supported(self):
+        fake = FakeTransport([card("Seven Dwarves")])
+        report = resolve(parse("two copies of Seven Dwarves; Seven Dwarves set CMM number 396"), client(fake))
+        self.assertEqual(report["accepted"], 2)
+        self.assertEqual([r["quantity"] for r in report["cards"]], [2, 1])
+
+    def test_both_number_word_interpretations_require_review(self):
+        fake = FakeTransport([card("Seven Dwarves"), card("Dwarves", n="2")])
+        report = resolve(parse("Seven Dwarves"), client(fake))
+        self.assertEqual(report["review"], 1)
+        row = report["cards"][0]
+        self.assertEqual((row["quantity"], row["alternate_quantity"]), (1, 7))
+        self.assertIn("quantity", row["reason"])
+        self.assertEqual(len(list(csv.DictReader(io.StringIO(csv_content(report))))), 0)
+
+    def test_quantity_ambiguity_survives_multiple_printings(self):
+        for duplicate_name in ("Dwarves", "Seven Dwarves"):
+            with self.subTest(duplicate_name=duplicate_name):
+                fake = self.batch([card("Seven Dwarves"), card("Dwarves", n="2"),
+                                   card(duplicate_name, n="3")])
+                report = resolve(parse("Seven Dwarves"), client(fake), 0)
+                self.assertEqual(report["review"], 1)
+                self.assertEqual(report["accepted"], 0)
+
+    def test_uncertain_number_word_fuzzy_does_not_inflate_quantity(self):
+        fake = FakeTransport([], {"Seven Dwarves": card("Seven Dwarves")})
+        report = resolve(parse("Seven Dwarves"), client(fake))
+        self.assertEqual(report["review"], 1)
+        self.assertEqual(report["cards"][0]["quantity"], 1)
+        self.assertEqual(report["cards"][0]["alternate_quantity"], 7)
+
+    def test_word_quantity_before_nameless_printing(self):
+        report = resolve(parse("two CMM 396; two set CMM number 396"), client(FakeTransport()))
+        self.assertEqual(report["accepted"], 2)
+        self.assertEqual([r["quantity"] for r in report["cards"]], [2, 2])
+
+    def test_number_word_prefix_is_not_part_of_longer_word(self):
+        entry = parse("Oneirophage")[0]
+        self.assertEqual((entry.name, entry.quantity), ("Oneirophage", 1))
+
+    def test_multiple_printings_never_choose_arbitrarily(self):
+        for cards in [[card(), card(set_code="c21", n="263")],
+                      [card(), card(n="999")]]:
+            with self.subTest(cards=cards):
+                report = resolve(parse("Sol Ring"), client(self.batch(cards)), 0)
+                self.assertEqual(report["accepted"], 0)
+
+    def test_same_front_alias_different_cards_is_ambiguous(self):
+        cards = [card("Front // Back One"), card("Front // Back Two", n="2")]
+        for c in cards:
+            c["card_faces"] = [{"name": n} for n in c["name"].split(" // ")]
+        report = resolve(parse("Front"), client(self.batch(cards + cards[:1])), 0)
+        self.assertEqual(report["accepted"], 0)
+
+    def test_two_face_names_require_complete_name_match(self):
+        printing = card("Front // Correct Back")
+        printing["card_faces"] = [{"name": "Front"}, {"name": "Correct Back"}]
+        batch = self.batch([printing])
+
+        report = resolve(parse("Front // Wrong Back set CMM number 396"),
+                         client(batch), 0)
+        self.assertEqual(report["cards"][0]["status"], "review")
+        self.assertIn("differs", report["cards"][0]["reason"])
+        self.assertEqual(csv_content(report).count("\n"), 1)
+
+        report = resolve(parse("Front // Wrong Back; Front // Correct Back"),
+                         client(self.batch([printing])), 0)
+        self.assertEqual([row["status"] for row in report["cards"]],
+                         ["unresolved", "accepted"])
+
+    def test_429_aborts_fuzzy_and_batch_paths(self):
+        import urllib.error
+        from collection.voice_intake import RateLimitError
+        for rate_on_post, expected_calls in [(False, 2), (True, 1)]:
+            with self.subTest(rate_on_post=rate_on_post):
+                calls = []
+                def opener(req, timeout):
+                    calls.append(req)
+                    if rate_on_post or req.get_method() == "GET":
+                        raise urllib.error.HTTPError(req.full_url, 429, "limited", {}, None)
+                    return Response({"data": []})
+                c = client(opener)
+                with self.assertRaises(RateLimitError):
+                    resolve(parse(";".join("Unknown Card " + str(i) for i in range(10))), c)
+                self.assertEqual(len(calls), expected_calls)
+
+    def test_429_cli_exits_fatal_without_writing_artifacts(self):
+        import tempfile
+        import urllib.error
+        from contextlib import redirect_stderr
+        from unittest.mock import patch
+        from collection import voice_intake
+        def opener(req, timeout):
+            if req.get_method() == "GET":
+                raise urllib.error.HTTPError(req.full_url, 429, "limited", {}, None)
+            return Response({"data": []})
+        c = client(opener)
+        with tempfile.TemporaryDirectory() as tmp:
+            csv_path, review_path = Path(tmp) / "out.csv", Path(tmp) / "review.json"
+            with patch.object(voice_intake, "ScryfallClient", return_value=c), \
+                 patch("sys.stdin", io.StringIO("Unknown Card")), redirect_stderr(io.StringIO()):
+                exit_code = voice_intake.main(["-", "--csv", str(csv_path), "--review", str(review_path)])
+            self.assertEqual(exit_code, 2)
+            self.assertFalse(csv_path.exists())
+            self.assertFalse(review_path.exists())
+
+    def test_back_face_cannot_be_exact_acceptance(self):
+        delver = card("Delver of Secrets // Insectile Aberration")
+        delver["card_faces"] = [{"name": "Delver of Secrets"}, {"name": "Insectile Aberration"}]
+        report = resolve(parse("Insectile Aberration; Delver of Secrets"), client(self.batch([delver])), 0)
+        self.assertEqual([r["status"] for r in report["cards"]], ["unresolved", "accepted"])
+        report = resolve(parse("Insectile Aberration set CMM number 396"), client(self.batch([delver])), 0)
+        self.assertEqual(report["review"], 1)
+
+    def test_exact_full_name_wins_over_other_cards_back_face(self):
+        rampant = card("Rampant Growth")
+        student = card("Studious First-Year // Rampant Growth", n="2")
+        student["card_faces"] = [{"name": "Studious First-Year"}, {"name": "Rampant Growth"}]
+        report = resolve(parse("Rampant Growth; Studious First-Year"),
+                         client(self.batch([rampant, student])), 0)
+        self.assertEqual(report["accepted"], 2)
+        self.assertEqual([r["name"] for r in report["cards"]], [rampant["name"], student["name"]])
+
 if __name__ == "__main__":
     unittest.main()
