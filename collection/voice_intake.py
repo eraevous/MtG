@@ -20,9 +20,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 if __package__:
-    from .mtgcollection import name_matcher
+    from .mtgcollection import fold, name_matcher
 else:
-    from mtgcollection import name_matcher
+    from mtgcollection import fold, name_matcher
 
 COLLECTION_URL = "https://api.scryfall.com/cards/collection"
 NAMED_URL = "https://api.scryfall.com/cards/named"
@@ -172,14 +172,21 @@ class ScryfallClient:
 
 def unique_name_match(cards, name):
     """Use collection precedence, but do not choose an arbitrary tied printing."""
-    winner = name_matcher(cards)(name)
+    winner = matching_card(cards, name)
     if winner is None:
         return None
     for candidate in cards:
         # A lower-priority face cannot displace a full name. A tied identity can.
-        other = name_matcher([candidate, winner])(name)
+        other = matching_card([candidate, winner], name)
         if other.get("id") != winner.get("id"):
             return None
+    return winner
+
+
+def matching_card(cards, name):
+    winner = name_matcher(cards)(name)
+    if winner and "//" in name and fold(name) != fold(winner.get("name", "")):
+        return None
     return winner
 
 
@@ -223,7 +230,7 @@ def resolve(entries, client, fuzzy_budget=5):
             card = None
         primary = unique_name_match(candidates, e.name) if e.name else None
         alternate = unique_name_match(candidates, e.alternate_name) if e.alternate_name else None
-        match = name_matcher(candidates)
+        match = lambda name: matching_card(candidates, name)
         ambiguous_quantity = bool(e.alternate_name and match(e.name) and match(e.alternate_name))
         name = e.name
         if alternate or (e.alternate_name and not primary):
@@ -242,7 +249,7 @@ def resolve(entries, client, fuzzy_budget=5):
                             "reason": "not found (or fuzzy budget exhausted)"})
             continue
         mismatch = bool(name and e.set_code and e.collector_number
-                        and not name_matcher([card])(name))
+                        and not matching_card([card], name))
         set_mismatch = bool(e.set_code and e.set_code != card.get("set", "").lower())
         reason = ("spoken set differs from resolved printing" if set_mismatch else
                   "number word may be quantity or part of card name; confirm first" if ambiguous_quantity else

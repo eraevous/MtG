@@ -6,7 +6,7 @@
 @ai-source-file: collection/voice_intake.py
 @ai-role: adapter
 @ai-intent: "Identify card printings from transcribed speech-to-text without mutating an inventory."
-@ai-version: 0.1.1
+@ai-version: 0.1.2
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -20,7 +20,7 @@
 - In: transcribed text; explicit names, set codes and collector numbers; Scryfall's card-collection batch endpoint, with bounded optional fuzzy suggestions.
 - Out: source-linked per-line JSON review and a CSV containing **only exact accepted** Scryfall identities.
 - One request per ≤75 unique exact identifiers, not one lookup per card.
-- Name matching delegates to `mtgcollection.name_matcher`: full names take precedence over front faces; back-face-only names are never exact matches.
+- Name matching delegates to `mtgcollection.name_matcher`: full names take precedence over front-face aliases; supplied two-face names must match the complete normalized name; back-face-only names are never exact matches.
 - A spoken set code is retained in the identifier even without a collector number; a resolved-set disagreement requires review.
 - Bare leading number words retain both name/quantity interpretations in the batch. Prefer the unstripped exact name with quantity one; if both interpretations match, require review. Explicit quantities remain supported.
 - HTTP 429 aborts the entire run, including fuzzy fallback, before writing staging outputs.

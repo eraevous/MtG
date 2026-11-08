@@ -200,6 +200,22 @@ class IntakeSafetyTests(unittest.TestCase):
         report = resolve(parse("Front"), client(self.batch(cards + cards[:1])), 0)
         self.assertEqual(report["accepted"], 0)
 
+    def test_two_face_names_require_complete_name_match(self):
+        printing = card("Front // Correct Back")
+        printing["card_faces"] = [{"name": "Front"}, {"name": "Correct Back"}]
+        batch = self.batch([printing])
+
+        report = resolve(parse("Front // Wrong Back set CMM number 396"),
+                         client(batch), 0)
+        self.assertEqual(report["cards"][0]["status"], "review")
+        self.assertIn("differs", report["cards"][0]["reason"])
+        self.assertEqual(csv_content(report).count("\n"), 1)
+
+        report = resolve(parse("Front // Wrong Back; Front // Correct Back"),
+                         client(self.batch([printing])), 0)
+        self.assertEqual([row["status"] for row in report["cards"]],
+                         ["unresolved", "accepted"])
+
     def test_429_aborts_fuzzy_and_batch_paths(self):
         import urllib.error
         from collection.voice_intake import RateLimitError
