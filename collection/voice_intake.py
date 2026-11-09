@@ -428,6 +428,19 @@ def main(argv=None):
     if not 0 <= a.fuzzy_budget <= 20:
         p.error("--fuzzy-budget must be between 0 and 20")
     try:
+        if a.transcript == "-":
+            import os
+            import stat
+            try:
+                stdin_stat = os.fstat(sys.stdin.fileno())
+            except (AttributeError, OSError, ValueError):
+                stdin_stat = None
+            if stdin_stat is not None and stat.S_ISREG(stdin_stat.st_mode):
+                for label, path in (("CSV output", a.csv), ("review output", a.review)):
+                    if path:
+                        output = Path(path)
+                        if output.exists() and os.path.samestat(stdin_stat, output.stat()):
+                            raise ValueError(f"capture input and {label} must refer to different files")
         validate_paths([("capture input", None if a.transcript == "-" else a.transcript), ("inventory input", a.inventory)],
                        [("CSV output", a.csv), ("review output", a.review)])
         text = sys.stdin.read() if a.transcript == "-" else Path(a.transcript).read_text(encoding="utf-8-sig")
