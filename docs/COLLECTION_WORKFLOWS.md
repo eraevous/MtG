@@ -41,10 +41,11 @@ The canonical Sheet stores ownership and existing deck assignments. A separate a
 
 ### Staging CLI (implemented)
 
-First, identify dictated names and printings through PR #36 (when available):
+First, identify transcript or structured CSV captures with an inventory-first lookup. Supply a recent local Collection CSV as identity hints. This does not establish current ownership, and no existing printing is copied onto a new name-only entry:
 
 ```bash
 python3 collection/voice_intake.py dictated.txt \
+  --inventory canonical_Collection_export.csv \
   --review voice_review.json --csv intake_verified.csv
 ```
 
@@ -58,6 +59,8 @@ python3 collection/intake_reconcile.py \
   --output data/intake_20261107_review
 ```
 
+For photo-derived or other structured capture, use `--input-format csv` with the same inventory-first resolver (see `docs/VOICE_INTAKE.md`). Only unresolved identities leave the machine, in batches when supported.
+
 For already-reviewed rows, use `--intake intake_verified.csv`. The JSON version keeps ambiguous/unresolved lines in the review packet; the accepted CSV contains only positively identified rows. Use `--require-finish` if unknown finishes must be held until physical inspection.
 
 Outputs:
@@ -65,7 +68,7 @@ Outputs:
 * `proposal.csv`: before/after **proposed minimum quantities**, estimated new free copies, deck allocation unchanged, explicit review flags.
 * `review.json`: exception list and source hashes; state is always `PROPOSAL_ONLY_NOT_APPLIED`.
 
-**Important:** PR #36's verified CSV does not currently preserve a foil/finish field from dictation. Add finish to the capture/accepted CSV contract before treating it as a lossless ingestion path for the November 7 seven-foil batch. Without that, review the `Voice intake` staging workbook and add a `Finish` column to the CSV before running reconciliation. A `Finish` value must be explicitly observed, never guessed.
+**Important:** Transcript parsing does not extract foil/finish. Structured CSV capture now preserves an explicit `Finish` field through review JSON and accepted CSV; review the physical cards or staging workbook before supplying it. Unknown finish never means nonfoil. Reconciliation flags missing set/collector details even if finish was supplied, so a local name-only hit cannot silently become a fully identified physical printing.
 
 The command validates named headers, rejects source-title mismatches, preserved existing deck copies, checks quantities and reports absent/ambiguous names as candidates rather than claiming they are unowned. It never modifies the Sheet, the KB, or a deck.
 

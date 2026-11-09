@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dictated MTG card entries → Scryfall batch lookup → reviewable CSV and JSON.
+"""MTG transcript/CSV entries → inventory first → batch lookup → reviewable staging.
 
 Input is speech-to-text, NOT raw audio. Never writes inventory or KB.
 Python 3.10+, standard library only. See docs/VOICE_INTAKE.md.
@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import io
 import json
 import re
@@ -45,6 +46,8 @@ class Entry:
     collector_number: str = ""
     error: str = ""
     alternate_name: str = ""
+    finish: str = ""
+    language: str = ""
 
     def identifier(self):
         if self.set_code and self.collector_number:
@@ -116,6 +119,99 @@ def _parse_line(raw, line, quantity=True):
     if len(e.name) < 2 or e.name.isdecimal():
         e.error = "Not enough information to identify a card"
     return e
+
+
+def csv_rows(text):
+    """Read a named-header CSV, including canonical exports with a title preamble."""
+    lines = list(csv.reader(io.StringIO(text), strict=True))
+    for offset, header in enumerate(lines[:12]):
+        if "Card Name" in header or "Name" in header:
+            if len(header) != len(set(header)) or {"Card Name", "Name"} <= set(header):
+                raise ValueError("CSV has duplicate or ambiguous name headers")
+            name_key = "Card Name" if "Card Name" in header else "Name"
+            rows = []
+            for line, cells in enumerate(lines[offset + 1:], offset + 2):
+                if not any(c.strip() for c in cells):
+                    continue
+                if len(cells) > len(header):
+                    raise ValueError(f"CSV row {line} has more cells than headers")
+                row = dict(zip(header, cells + [""] * (len(header) - len(cells))))
+                rows.append((line, row, name_key))
+            return rows
+    raise ValueError("CSV requires Card Name or Name header in the first 12 rows")
+
+
+def parse_csv(text):
+    """Structured capture for photos, lists and other adapters; no quantity-word parsing."""
+    entries = []
+    for line, row, name_key in csv_rows(text):
+        quantity = row.get("Quantity", "1").strip()
+        valid_quantity = bool(re.fullmatch(r"[0-9]+", quantity)) and int(quantity) > 0
+        e = Entry(line, row.get("Original Dictation") or row.get("Source Text") or row[name_key],
+                  quantity=int(quantity) if valid_quantity else 0,
+                  name=row[name_key].strip(), set_code=row.get("Set Code", "").strip().lower(),
+                  collector_number=row.get("Collector Number", "").strip(),
+                  finish=row.get("Finish", "").strip(), language=row.get("Language", "").strip())
+        if not valid_quantity:
+            e.error = "Quantity must be a positive whole number"
+        elif e.collector_number and not e.set_code:
+            e.error = "Collector number without an identifiable set code"
+        elif not e.identifier():
+            e.error = "Not enough information to identify a card"
+        entries.append(e)
+    return entries
+
+
+class InventoryIndex:
+    """Read-only identity hints, never ownership or a current-Oracle authority.
+
+    Only explicit physical Set Code / Collector Number columns constrain printing.
+    A Scryfall URL in a card-level inventory is NOT a record of the owned printing.
+    """
+    def __init__(self, text):
+        self.rows = []
+        self.by_name, self.by_folded, self.by_print = {}, {}, {}
+        for line, row, name_key in csv_rows(text):
+            name = row[name_key].strip()
+            if not name:
+                raise ValueError(f"Inventory row {line} has no card name")
+            item = {"name": name, "set": row.get("Set Code", "").strip().lower(),
+                    "collector_number": row.get("Collector Number", "").strip(), "line": line}
+            self.rows.append(item)
+            self.by_name.setdefault(name.casefold(), []).append(item)
+            if fold(name):
+                self.by_folded.setdefault(fold(name), []).append(item)
+            if item["set"] and item["collector_number"]:
+                self.by_print.setdefault((item["set"], item["collector_number"]), []).append(item)
+        self.provenance = {"text_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                           "rows": len(self.rows), "freshness": "not_verified",
+                           "role": "identity_hints_only_not_current_ownership"}
+
+    def match(self, entry):
+        if entry.error or entry.quantity <= 0 or not entry.identifier():
+            return None
+        # A snapshot cannot prove the other quantity/name interpretation does not exist.
+        if entry.alternate_name:
+            return None
+        exact_print = bool(entry.set_code and entry.collector_number)
+        if exact_print:
+            candidates = self.by_print.get((entry.set_code, entry.collector_number), [])
+            if entry.name and any(fold(c["name"]) != fold(entry.name) for c in candidates):
+                return None
+        else:
+            candidates = self.by_name.get(entry.name.casefold()) or self.by_folded.get(fold(entry.name), [])
+            if entry.set_code:
+                candidates = [c for c in candidates if c["set"] == entry.set_code]
+        # Duplicate holdings are fine, conflicting identities/normalized aliases are not.
+        if len({c["name"] for c in candidates}) != 1:
+            return None
+        return {"name": candidates[0]["name"], "set_code": entry.set_code or None,
+                "collector_number": entry.collector_number or None,
+                "scryfall_id": None, "scryfall_uri": None,
+                "method": "inventory-exact", "status": "accepted", "reason": None,
+                "identity_scope": "set_and_number" if exact_print else "card_name",
+                "printing_status": "recorded_set_and_number_match" if exact_print else "not_identified",
+                "inventory_rows": [c["line"] for c in candidates]}
 
 
 class RateLimitError(RuntimeError):
@@ -190,9 +286,13 @@ def matching_card(cards, name):
     return winner
 
 
-def resolve(entries, client, fuzzy_budget=5):
+def resolve(entries, client, fuzzy_budget=5, inventory=None):
+    entries = list(entries)
+    local = [inventory.match(e) if inventory else None for e in entries]
     identifiers, seen = [], set()
-    for e in entries:
+    for e, hit in zip(entries, local):
+        if hit or e.quantity <= 0:
+            continue
         ident = e.identifier() if not e.error else None
         if ident is None:
             continue
@@ -209,15 +309,21 @@ def resolve(entries, client, fuzzy_budget=5):
     by_print = {(c.get("set", "").lower(), str(c.get("collector_number", ""))): c for c in cards}
 
     results, fuzzy_used = [], 0
-    for e in entries:
+    fuzzy_cache = {}
+    for e, hit in zip(entries, local):
         row = {"line": e.line, "spoken": e.raw, "quantity": e.quantity,
                "requested_name": e.name or None, "requested_set": e.set_code or None,
-               "requested_number": e.collector_number or None}
+               "requested_number": e.collector_number or None,
+               "finish": e.finish or None, "language": e.language or None}
         if e.alternate_name:
             row["alternate_name"] = e.alternate_name
             row["alternate_quantity"] = 1
-        if e.error or not e.identifier():
-            results.append({**row, "status": "unresolved", "reason": e.error or "no identifier"})
+        if e.error or e.quantity <= 0 or not e.identifier():
+            results.append({**row, "status": "unresolved",
+                            "reason": e.error or "invalid quantity or no identifier"})
+            continue
+        if hit:
+            results.append({**row, **hit})
             continue
         if e.set_code and e.collector_number:
             card = by_print.get((e.set_code, e.collector_number))
@@ -240,9 +346,11 @@ def resolve(entries, client, fuzzy_budget=5):
         if not (e.set_code and e.collector_number):
             card = alternate or primary
         method = "batch-exact"
-        if card is None and name and not (e.set_code and e.collector_number) and fuzzy_used < fuzzy_budget:
-            fuzzy_used += 1
-            card = client.fuzzy(name)
+        if card is None and name and not (e.set_code and e.collector_number):
+            if name not in fuzzy_cache and fuzzy_used < fuzzy_budget:
+                fuzzy_used += 1
+                fuzzy_cache[name] = client.fuzzy(name)
+            card = fuzzy_cache.get(name)
             method = "fuzzy-suggestion"
         if not card or card.get("object") == "error":
             results.append({**row, "status": "unresolved",
@@ -260,7 +368,16 @@ def resolve(entries, client, fuzzy_budget=5):
                         "collector_number": str(card.get("collector_number", "")),
                         "scryfall_id": card.get("id"), "scryfall_uri": card.get("scryfall_uri"),
                         "method": method})
-    return {"source": "Scryfall API", "entries": len(entries), "requests": client.requests,
+    source = "Inventory snapshot" if inventory else "Scryfall API"
+    if inventory and client.requests:
+        source += " + Scryfall API"
+    return {"source": source,
+            "inventory": inventory.provenance if inventory else None,
+            "inventory_matches": sum(hit is not None for hit in local),
+            "limits": ["Inventory matches are recorded identity hints, not current ownership or Oracle verification.",
+                       "An absent inventory name is not evidence of being unowned.",
+                       "Unknown printing, finish or language is never inferred from an existing copy."],
+            "entries": len(entries), "requests": client.requests,
             "accepted": sum(r["status"] == "accepted" for r in results),
             "review": sum(r["status"] == "review" for r in results),
             "unresolved": sum(r["status"] == "unresolved" for r in results),
@@ -270,33 +387,72 @@ def resolve(entries, client, fuzzy_budget=5):
 def csv_content(report):
     out = io.StringIO()
     writer = csv.DictWriter(out,
-        fieldnames=["Card Name", "Quantity", "Set Code", "Collector Number", "Notes"],
+        fieldnames=["Card Name", "Quantity", "Set Code", "Collector Number", "Finish", "Language", "Method", "Notes"],
         lineterminator="\n")
     writer.writeheader()
     for r in report["cards"]:
         if r["status"] == "accepted":
             writer.writerow({"Card Name": r["name"], "Quantity": r["quantity"],
                              "Set Code": r["set_code"], "Collector Number": r["collector_number"],
-                             "Notes": f"voice-intake line {r['line']}"})
+                             "Finish": r.get("finish"), "Language": r.get("language"),
+                             "Method": r["method"],
+                             "Notes": f"intake line {r['line']}; {r['method']}"})
     return out.getvalue()
 
 
+def validate_paths(inputs, outputs):
+    """Reject input/output and output/output aliases before lookup or any writes."""
+    paths = [(label, Path(path), False) for label, path in inputs if path]
+    paths += [(label, Path(path), True) for label, path in outputs if path]
+    for i, (left_label, left, left_output) in enumerate(paths):
+        for right_label, right, right_output in paths[i + 1:]:
+            if not (left_output or right_output):
+                continue
+            aliases = left.resolve() == right.resolve()
+            if not aliases and left.exists() and right.exists():
+                aliases = left.samefile(right)
+            if aliases:
+                raise ValueError(f"{left_label} and {right_label} must refer to different files")
+
+
 def main(argv=None):
-    p = argparse.ArgumentParser(description="Fast batch Scryfall lookup from speech-to-text; no inventory edits")
+    p = argparse.ArgumentParser(description="Inventory-first transcript/CSV intake, then batch Scryfall lookup; no inventory edits")
     p.add_argument("transcript", help="UTF-8 file or '-' for stdin")
+    p.add_argument("--inventory", help="Local inventory CSV identity hints (read-only; no ownership assertions)")
+    p.add_argument("--input-format", choices=("text", "csv"), default="text",
+                   help="Transcript text, or structured CSV from any capture adapter")
     p.add_argument("--csv", help="Write exact accepted entries (review before importing)")
     p.add_argument("--review", help="Write complete review JSON (default stdout)")
     p.add_argument("--fuzzy-budget", type=int, default=5, help="Max fuzzy suggestions (0–20)")
     a = p.parse_args(argv)
     if not 0 <= a.fuzzy_budget <= 20:
         p.error("--fuzzy-budget must be between 0 and 20")
-    text = sys.stdin.read() if a.transcript == "-" else Path(a.transcript).read_text(encoding="utf-8-sig")
-    entries = parse(text)
+    try:
+        if a.transcript == "-":
+            import os
+            import stat
+            try:
+                stdin_stat = os.fstat(sys.stdin.fileno())
+            except (AttributeError, OSError, ValueError):
+                stdin_stat = None
+            if stdin_stat is not None and stat.S_ISREG(stdin_stat.st_mode):
+                for label, path in (("CSV output", a.csv), ("review output", a.review)):
+                    if path:
+                        output = Path(path)
+                        if output.exists() and os.path.samestat(stdin_stat, output.stat()):
+                            raise ValueError(f"capture input and {label} must refer to different files")
+        validate_paths([("capture input", None if a.transcript == "-" else a.transcript), ("inventory input", a.inventory)],
+                       [("CSV output", a.csv), ("review output", a.review)])
+        text = sys.stdin.read() if a.transcript == "-" else Path(a.transcript).read_text(encoding="utf-8-sig")
+        entries = parse_csv(text) if a.input_format == "csv" else parse(text)
+        inventory = InventoryIndex(Path(a.inventory).read_text(encoding="utf-8-sig")) if a.inventory else None
+    except (OSError, ValueError, csv.Error) as exc:
+        p.error(str(exc))
     if not entries:
         p.error("no cards found in transcript")
     client = ScryfallClient()
     try:
-        report = resolve(entries, client, a.fuzzy_budget)
+        report = resolve(entries, client, a.fuzzy_budget, inventory=inventory)
     except RuntimeError as exc:
         print(json.dumps({"error": str(exc), "entries": len(entries),
                           "requests": client.requests}), file=sys.stderr)

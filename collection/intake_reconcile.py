@@ -21,7 +21,7 @@ from pathlib import Path
 CANONICAL_TITLE = 'MTG Master Inventory — Canonical'
 MANDATORY = ('Card Name', 'Known Qty (min)', 'Copies in Decks', 'Copies Free', 'Current Deck(s)')
 DETAIL_COLUMNS = ('source_line', 'card_name', 'quantity', 'set_code', 'collector_number',
-                  'finish', 'identity_status', 'identity_evidence', 'source_text', 'notes')
+                  'finish', 'language', 'identity_status', 'identity_evidence', 'source_text', 'notes')
 RECON_COLUMNS = ('card_name', 'match_status', 'canonical_row', 'known_qty_before',
                  'new_copies', 'proposed_known_qty_min', 'copies_in_decks',
                  'free_before', 'proposed_free_min', 'current_decks', 'review_required',
@@ -84,7 +84,8 @@ def read_intake(path):
             rows.append({'source_line': item.get('line', i), 'card_name': item.get('name') or '',
                          'quantity': item.get('quantity'), 'set_code': item.get('set_code') or '',
                          'collector_number': item.get('collector_number') or '',
-                         'finish': item.get('finish') or '', 'identity_status': status,
+                         'finish': item.get('finish') or '', 'language': item.get('language') or '',
+                         'identity_status': status,
                          'identity_evidence': item.get('method') or '',
                          'source_text': item.get('spoken') or '',
                          'notes': item.get('reason') or ''})
@@ -98,7 +99,7 @@ def read_intake(path):
         result.append({'source_line': row.get('Line', i), 'card_name': row['Card Name'],
                        'quantity': row['Quantity'], 'set_code': row.get('Set Code') or '',
                        'collector_number': row.get('Collector Number') or '',
-                       'finish': row.get('Finish') or '',
+                       'finish': row.get('Finish') or '', 'language': row.get('Language') or '',
                        'identity_status': row.get('Status') or 'accepted',
                        'identity_evidence': row.get('Method') or 'accepted-csv',
                        'source_text': row.get('Original Dictation') or '',
@@ -167,6 +168,8 @@ def reconcile(collection, intake, *, require_finish=False):
             issues.append('existing_overallocated')
         if base and free_before != max(0, before - assigned):
             issues.append('current_free_does_not_equal_qty_minus_deck_copies')
+        if any(not r['set_code'] or not r['collector_number'] for r in incoming):
+            issues.append('some_printing_identifiers_unspecified')
         if any(not r['finish'] for r in incoming):
             issues.append('some_printing_finishes_unspecified')
         proposals.append({
@@ -178,7 +181,7 @@ def reconcile(collection, intake, *, require_finish=False):
             'current_decks': base['row']['Current Deck(s)'] if base else '',
             'review_required': 'YES' if issues else 'NO', 'review_reason': '; '.join(issues),
             'printings': '; '.join(f"{r['set_code'] or '?'} #{r['collector_number'] or '?'}"
-                                   f" [{r['finish'] or 'finish unknown'}] ×{r['quantity']}" for r in incoming)})
+                                   f" [{r['finish'] or 'finish unknown'}; {r['language'] or 'language unknown'}] ×{r['quantity']}" for r in incoming)})
     flagged_proposals = sum(row['review_required'] == 'YES' for row in proposals)
     accounted = sum(r['new_copies'] for r in proposals)
     accepted_row_ids = {id(v) for group in candidates.values() for v in group}
