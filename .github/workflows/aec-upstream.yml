@@ -51,6 +51,8 @@ jobs:
           persist-credentials: false
       - name: Check candidate in a disposable container without credentials or network
         run: |
+          # Reject a source-root symlink before Docker resolves the host bind path.
+          test -d candidate/src && test ! -L candidate/src
           docker pull python:3.12-slim
           mkdir "$RUNNER_TEMP/aec-input"
           cp -R .aec "$RUNNER_TEMP/aec-input/.aec"

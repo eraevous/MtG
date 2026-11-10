@@ -42,6 +42,7 @@ const github={rest:{git:{
         check=workflow.split('  check:',1)[1].split('  publish:',1)[0]
         writer=workflow.split('  publish:',1)[1]
         self.assertNotIn(': write',check)
+        self.assertIn('test ! -L candidate/src',check)
         self.assertIn('--network none',check)
         self.assertIn('--read-only',check)
         self.assertIn('persist-credentials: false',check)
