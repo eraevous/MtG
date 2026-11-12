@@ -90,6 +90,22 @@ class ConsumptionNotCitation(unittest.TestCase):
         self.assertTrue({e for es in R.ROLE_MAP.values() for e in es} <= known)
 
 
+class LandsAreNotRamp(unittest.TestCase):
+    """Codex review on #42: a land's own mana is mana base, not ramp (mtg_eval semantics)."""
+    def test_land_mana_is_not_ramp(self):
+        g = R.grounded_record({'land': {'status': 'supported', 'evidence': {'oracle': 'type line'}}},
+                              {'c.op1': ['mana.add']}, type_line='Land')
+        self.assertNotIn('ramp', g)
+
+    def test_land_that_puts_lands_onto_the_battlefield_is_ramp(self):
+        g = R.grounded_record({}, {'c.op1': ['mana.add', 'land_to_battlefield']}, type_line='Land')
+        self.assertEqual(g['ramp']['status'], 'supported')
+
+    def test_nonland_mana_is_ramp(self):
+        g = R.grounded_record({}, {'c.op1': ['mana.add']}, type_line='Artifact')
+        self.assertEqual(g['ramp']['status'], 'supported')
+
+
 class EffectiveContractState(unittest.TestCase):
     """Codex review on #42: respect current versions and review/quarantine decisions."""
     def test_rejected_contract_is_not_read(self):

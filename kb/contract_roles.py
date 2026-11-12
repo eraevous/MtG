@@ -26,7 +26,7 @@ import json, sqlite3
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-MAP_VERSION = 'contract-roles-0.1.1'
+MAP_VERSION = 'contract-roles-0.1.2'
 VERIFICATION_STATE = 'candidate'
 
 # evaluator role -> DIO event ids (kb/events.py vocabulary) that make a contract perform it.
@@ -63,7 +63,10 @@ def contract_feeds(con, name):
     return {cid: f for cid, (f, st) in contract_states(con, name).items() if st not in EXCLUDED_STATES}
 
 
-def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None, states=None):
+LAND_NOT_RAMP = {'ramp': {'mana.add'}}   # mtg_eval semantics: a land's own mana is mana base, not ramp
+
+
+def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None, states=None, type_line=None):
     """Merge the evaluator's pattern record with what the card's contracts say. Pure function.
     feeds_by_contract: {contract_id: [feeds]} or {contract_id: ([feeds], queue_state)}. Contracts whose
     queue_state is rejected or quarantined are left out; verification_state is semantic_reviewed only
@@ -85,7 +88,9 @@ def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None,
             v['evidence']['fallback_reason'] = reason
             if excluded: v['evidence']['excluded_contracts'] = excluded
         return rec
+    is_land = 'land' in str(type_line or '').lower()
     for role, events in role_map.items():
+        if is_land and role in LAND_NOT_RAMP: events = [e for e in events if e not in LAND_NOT_RAMP[role]]
         hits = sorted(cid for cid, fs in feeds_by_contract.items() if set(fs) & set(events))
         prior = (pattern_rec or {}).get(role)
         if prior and 'label' in (prior.get('evidence') or {}):
@@ -109,6 +114,11 @@ def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None,
     return rec
 
 
+def _type_line(inv, name):
+    row = (getattr(inv, 'cards', None) or {}).get(name)
+    return str(row['Type Line']) if row is not None else None
+
+
 def install(inv, role_map=None):
     """Make inv.record() contract-grounded. inv is a SQLiteInventory (has .db and .record)."""
     con = inv.db
@@ -120,7 +130,8 @@ def install(inv, role_map=None):
     cache = {}
     def record(name):
         if name not in cache:
-            cache[name] = grounded_record(pattern_record(name), contract_states(con, name), role_map, release)
+            cache[name] = grounded_record(pattern_record(name), contract_states(con, name), role_map, release,
+                                         type_line=_type_line(inv, name))
         return cache[name]
     inv.record = record
     inv._rec = {}
@@ -176,7 +187,7 @@ def role_report(database, names, role_map=None):
     out = {}
     for n in names:
         pat = inv.record(n) if n in inv.cards else {}
-        g = grounded_record(pat, contract_states(inv.db, n), role_map)
+        g = grounded_record(pat, contract_states(inv.db, n), role_map, type_line=_type_line(inv, n))
         out[n] = {r: {'status': v['status'], 'basis': v['evidence']['basis'], 'pattern_status': (pat.get(r) or {}).get('status')}
                   for r, v in sorted(g.items())}
     return out
