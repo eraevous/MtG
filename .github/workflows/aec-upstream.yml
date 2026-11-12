@@ -57,6 +57,9 @@ jobs:
           mkdir "$RUNNER_TEMP/aec-input"
           cp -R .aec "$RUNNER_TEMP/aec-input/.aec"
           cp tools/aec_sync.py "$RUNNER_TEMP/aec-input/aec_sync.py"
+          # Copy the files the records anchor (trusted base checkout) so the candidate checks real bytes.
+          # Runner Python, not candidate code; relative regular files only, no symlinks or '..'.
+          python3 -I -B .github/scripts/aec-copy-anchors.py "$RUNNER_TEMP/aec-input"
           docker run --rm --network none --read-only --cap-drop ALL \
             --security-opt no-new-privileges --user 65534:65534 --pids-limit 128 \
             --memory 512m --cpus 2 --tmpfs /tmp:rw,noexec,nosuid,size=64m \
