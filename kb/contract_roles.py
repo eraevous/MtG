@@ -26,7 +26,7 @@ import json, sqlite3
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-MAP_VERSION = 'contract-roles-0.1.0'
+MAP_VERSION = 'contract-roles-0.1.1'
 VERIFICATION_STATE = 'candidate'
 
 # evaluator role -> DIO event ids (kb/events.py vocabulary) that make a contract perform it.
@@ -43,22 +43,47 @@ ROLE_MAP = {
 }
 
 
-def contract_feeds(con, name):
-    """{contract_id: [feeds]} for a card, or {} when the KB has no contract for it."""
+EXCLUDED_STATES = ('quarantined', 'rejected')   # validation_queue states that disqualify a contract
+
+
+def contract_states(con, name):
+    """{contract_id: (feeds, queue_state)} for the card's *current* contract versions, with the KB's
+    effective review/reconciliation state (validation_queue). {} when the KB has no contract for it."""
     out = {}
-    for cid, cj in con.execute('select contract_id, contract_json from operation_contracts where card_name=?', (name,)):
-        out[cid] = list((json.loads(cj).get('query_index') or {}).get('feeds') or [])
+    q = ('select k.contract_id, k.contract_json, q.queue_state from current_contracts k '
+         'join validation_queue q on q.contract_id=k.contract_id and q.contract_version=k.contract_version '
+         'where k.card_name=?')
+    for cid, cj, state in con.execute(q, (name,)):
+        out[cid] = (list((json.loads(cj).get('query_index') or {}).get('feeds') or []), state)
     return out
 
 
-def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None):
-    """Merge the evaluator's pattern record with what the card's contracts say. Pure function."""
+def contract_feeds(con, name):
+    """{contract_id: [feeds]} for usable contracts (rejected or quarantined ones left out)."""
+    return {cid: f for cid, (f, st) in contract_states(con, name).items() if st not in EXCLUDED_STATES}
+
+
+def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None, states=None):
+    """Merge the evaluator's pattern record with what the card's contracts say. Pure function.
+    feeds_by_contract: {contract_id: [feeds]} or {contract_id: ([feeds], queue_state)}. Contracts whose
+    queue_state is rejected or quarantined are left out; verification_state is semantic_reviewed only
+    when every contract a role rests on is, otherwise candidate."""
     role_map = ROLE_MAP if role_map is None else role_map
+    states, feeds = dict(states or {}), {}
+    for cid, v in (feeds_by_contract or {}).items():
+        if isinstance(v, tuple): feeds[cid], states[cid] = v
+        else: feeds[cid] = v
+    excluded = sorted(c for c in feeds if states.get(c) in EXCLUDED_STATES)
+    had_contracts = bool(feeds)
+    feeds_by_contract = {c: f for c, f in feeds.items() if c not in excluded}
     rec = {}
     for role, v in (pattern_rec or {}).items():
         rec[role] = {'status': v['status'], 'evidence': dict(v.get('evidence') or {}, basis='text_pattern_fallback')}
     if not feeds_by_contract:
-        for v in rec.values(): v['evidence']['fallback_reason'] = 'no KB contract for this card'
+        reason = 'all KB contracts rejected or quarantined' if had_contracts else 'no KB contract for this card'
+        for v in rec.values():
+            v['evidence']['fallback_reason'] = reason
+            if excluded: v['evidence']['excluded_contracts'] = excluded
         return rec
     for role, events in role_map.items():
         hits = sorted(cid for cid, fs in feeds_by_contract.items() if set(fs) & set(events))
@@ -67,8 +92,12 @@ def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None)
             # a human judgment label (tmnt_function_labels) outranks both readers; keep it, note the contract
             rec[role]['evidence'].update(basis='human_label', contract_says='supported' if hits else 'not_in_contract')
             continue
-        ev = {'basis': 'dio_contract', 'contracts': hits or sorted(feeds_by_contract), 'events': list(events),
-              'map_version': MAP_VERSION, 'verification_state': VERIFICATION_STATE}
+        rest_on = hits or sorted(feeds_by_contract)
+        reviewed = all(states.get(c) == 'semantic_reviewed' for c in rest_on)
+        ev = {'basis': 'dio_contract', 'contracts': rest_on, 'events': list(events), 'map_version': MAP_VERSION,
+              'contract_states': {c: states.get(c, 'unknown') for c in rest_on},
+              'verification_state': 'semantic_reviewed' if reviewed else VERIFICATION_STATE}
+        if excluded: ev['excluded_contracts'] = excluded
         if release: ev['kb_release'] = release
         if prior: ev['pattern_status'] = prior['status']
         if hits:
@@ -91,7 +120,7 @@ def install(inv, role_map=None):
     cache = {}
     def record(name):
         if name not in cache:
-            cache[name] = grounded_record(pattern_record(name), contract_feeds(con, name), role_map, release)
+            cache[name] = grounded_record(pattern_record(name), contract_states(con, name), role_map, release)
         return cache[name]
     inv.record = record
     inv._rec = {}
@@ -107,6 +136,33 @@ def open_grounded_evaluator(database, **kw):
     from bridge_v02 import open_evaluator
     ev = open_evaluator(database, **kw)
     install(ev.inv)
+    wrap_card(ev)
+    return ev
+
+
+CAPABILITY_SECTION = 'Capability record (evidence per function)'
+
+
+def wrap_card(ev):
+    """Make Evaluator.card() show each role's basis: mtg_eval's table keeps only oracle/tag/label."""
+    plain = ev.card
+    def card(name, deck=None):
+        res = plain(name, deck)
+        n = res['title'].split(': ', 1)[1]
+        rec = ev.inv.record(n)
+        for heading, rows in res['sections']:
+            if heading != CAPABILITY_SECTION or not isinstance(rows, list): continue
+            for row in rows:
+                e = (rec.get(row.get('function')) or {}).get('evidence') or {}
+                row['basis'] = e.get('basis', '')
+                row['contracts'] = ', '.join(e.get('contracts', []))
+                row['verification'] = e.get('verification_state', '') if e.get('basis') == 'dio_contract' else ''
+                row['pattern status'] = e.get('pattern_status', '')
+                row['fallback reason'] = e.get('fallback_reason', '')
+        res['limitations'].append(f"Roles: {ev.inv.role_source['basis']} ({ev.inv.role_source['map_version']}, "
+                                  f"KB {ev.inv.role_source['kb_release']}); contract roles are candidates unless marked semantic_reviewed.")
+        return res
+    ev.card = card
     return ev
 
 
@@ -120,7 +176,7 @@ def role_report(database, names, role_map=None):
     out = {}
     for n in names:
         pat = inv.record(n) if n in inv.cards else {}
-        g = grounded_record(pat, contract_feeds(inv.db, n), role_map)
+        g = grounded_record(pat, contract_states(inv.db, n), role_map)
         out[n] = {r: {'status': v['status'], 'basis': v['evidence']['basis'], 'pattern_status': (pat.get(r) or {}).get('status')}
                   for r, v in sorted(g.items())}
     return out
