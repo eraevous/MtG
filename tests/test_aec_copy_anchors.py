@@ -40,6 +40,16 @@ class CopyAnchors(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 C.copy_anchors(root, Path(td) / 'out')
 
+    def test_symlink_guard_is_not_an_and_list(self):
+        # Copilot review on #41: `a && b` under bash -e fails open when `a` fails
+        wf = (ROOT / '.github/workflows/aec-upstream.yml').read_text()
+        check = wf.split('  check:', 1)[1].split('  publish:', 1)[0]
+        lines = [l.strip() for l in check.splitlines()]
+        self.assertIn('test -d candidate/src', lines)
+        self.assertIn('test ! -L candidate/src', lines)
+        self.assertLess(check.index('test ! -L candidate/src'), check.index('docker run'))
+        self.assertNotIn('test -d candidate/src &&', check)
+
     def test_workflow_runs_the_copier_before_the_container(self):
         wf = (ROOT / '.github/workflows/aec-upstream.yml').read_text()
         check = wf.split('  check:', 1)[1].split('  publish:', 1)[0]
