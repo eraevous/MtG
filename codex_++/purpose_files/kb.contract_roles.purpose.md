@@ -5,7 +5,7 @@
 @ai-source-file: kb/contract_roles.py
 @ai-role: evaluator_adapter
 @ai-intent: "Downstream consumes upstream: the evaluator's role claims come from the contracts the KB owns, with every role carrying its basis."
-@ai-version: 0.1.2
+@ai-version: 0.1.3
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -26,3 +26,4 @@
 - Not covered: removal/wipe scope, recursion, protection, closers, and the derived_facts readers (clauses, wipe_kind, resource ledger) still come from the 0.3.0 patterns. Contract feeds are said to be "for its controller" but Swords to Plowshares feeds life.gain (the exiled creature's controller gains): a KB gap, raised for a dialogue round.
 - 0.1.1 (Codex review on #42): reads `current_contracts` joined to `validation_queue`; `rejected` and `quarantined` contracts are left out (listed as `excluded_contracts`); `verification_state` is `semantic_reviewed` only when every contract a role rests on is, else `candidate`, with `contract_states` beside it. `open_grounded_evaluator().card()` adds basis, contracts, verification, pattern status and fallback reason to the capability table, plus a roles line under limitations.
 - 0.1.2 (Codex review on #42): a land's own `mana.add` is not ramp (mtg_eval's rule); `land_to_battlefield` still is.
+- 0.1.3 (Copilot review on #42): contract roles are always `candidate` (ROLE_MAP is unreviewed; source review states stay in `contract_states`); hand labels are read independently, so a false label with no pattern hit still blocks a contract role; `tag_only`/`contradicted` stay uncertain when the contract is silent; labelled roles keep basis `human_label` on every path; deck/module/compare/upgrades/build/inventory/transfer/portfolio reports carry a roles line and `data.role_source`.

@@ -129,11 +129,41 @@ class EffectiveContractState(unittest.TestCase):
     def test_verification_state_is_carried_not_assumed(self):
         con = fixture({'Test Card': {'c.op1': ['card.draw']}}, states={'c.op1': 'semantic_reviewed'})
         ev = R.install(FakeInventory(con, PATTERN)).record('Test Card')['draw']['evidence']
-        self.assertEqual(ev['verification_state'], 'semantic_reviewed')
+        self.assertEqual(ev['verification_state'], 'candidate')   # ROLE_MAP is unreviewed: a reviewed contract doesn't promote the role
+        self.assertEqual(ev['contract_states'], {'c.op1': 'semantic_reviewed'})
         con = fixture({'Test Card': {'c.op1': ['card.draw']}}, states={'c.op1': 'blocked'})
         ev = R.install(FakeInventory(con, PATTERN)).record('Test Card')['draw']['evidence']
         self.assertEqual(ev['verification_state'], 'candidate')
         self.assertEqual(ev['contract_states'], {'c.op1': 'blocked'})
+
+
+class CopilotReviewFindings(unittest.TestCase):
+    """Copilot review on #42."""
+    def test_false_label_without_pattern_hit_blocks_the_contract_role(self):
+        g = R.grounded_record({}, {'c.op1': ['token.create']}, labels={'token_maker': False})
+        self.assertEqual(g['token_maker']['status'], 'contradicted')
+        self.assertEqual(g['token_maker']['evidence']['basis'], 'human_label')
+        self.assertEqual(g['token_maker']['evidence']['contract_says'], 'supported')
+
+    def test_tag_only_without_contract_hit_stays_uncertain(self):
+        g = R.grounded_record({'draw': {'status': 'tag_only', 'evidence': {'tag': True}}}, {'c.op1': ['mana.add']})
+        self.assertEqual(g['draw']['status'], 'tag_only')
+        self.assertEqual(g['draw']['evidence']['contract_says'], 'not_in_contract')
+
+    def test_label_basis_survives_the_no_contract_path(self):
+        g = R.grounded_record({'wipe': {'status': 'supported', 'evidence': {'label': True, 'oracle': 'destroy all'}}}, {})
+        self.assertEqual(g['wipe']['evidence']['basis'], 'human_label')
+        self.assertNotIn('fallback_reason', g['wipe']['evidence'])
+
+    def test_role_dependent_reports_carry_role_source(self):
+        class FakeEv:
+            def __init__(self):
+                self.inv = R.install(FakeInventory(fixture({}), PATTERN), labels_for=lambda n: {})
+            def deck(self, name, games=None):
+                return {'title': f'Deck: {name}', 'limitations': [], 'data': {}, 'sections': []}
+        res = R.wrap_reports(FakeEv()).deck('Test')
+        self.assertTrue(any('candidate' in x for x in res['limitations']))
+        self.assertEqual(res['data']['role_source']['map_version'], R.MAP_VERSION)
 
 
 class CardResultShowsBasis(unittest.TestCase):
