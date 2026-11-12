@@ -39,3 +39,13 @@ python3 tools/aec_sync.py --test --write   # and move the pin if everything pass
 4. Append new versions of the dependents once they are re-examined.
 
 A clean `aec check` or `drift_check` is a structural result. It does not show that the DIO is right, that a contract follows it, or that P-00 survived.
+
+### Updater execution boundary
+
+The updater separates trusted planning, disposable candidate checks, and fresh publication
+jobs. Candidate Python runs without network, credentials, a writable checkout, or access
+to the publisher. Publication reconstructs only `tools/aec_upstream.json` from the trusted
+base and planned full SHA. Candidate output is retained in the linked Actions run, never
+imported as a patch or instructions. A pass is untrusted compatibility evidence, not an
+independent security review; bump PRs remain drafts for review. A moved main fails closed
+and requires a rerun. Existing candidate branches are never overwritten automatically.

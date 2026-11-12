@@ -1,60 +1,95 @@
-# Weekly check of upstream Telosmith, formerly AEC (option B, Zach 2026-11-01; D-0022 proposed).
-# If the repo in tools/aec_upstream.json (eraevous/Telosmith since 2026-11-05) has moved past tools/aec_upstream.json and MtG's records still pass at the new commit,
-# open a PR that moves the pin. If a check fails, open (or update) an issue instead. Nothing merges by itself.
-# Needs: Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests".
+# Candidate code never shares a runner or writable filesystem with the publisher.
 name: aec-upstream
 on:
   schedule:
-    - cron: "0 14 * * 1"   # Mondays 14:00 UTC
+    - cron: "0 14 * * 1"
   workflow_dispatch:
-
-permissions:
-  contents: write
-  pull-requests: write
-  issues: write
-  actions: write
-
+permissions: {}
+concurrency:
+  group: aec-upstream
+  cancel-in-progress: false
 jobs:
-  sync:
+  plan:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ github.token }}
+    permissions:
+      contents: read
+    outputs:
+      candidate: ${{ steps.plan.outputs.candidate }}
+      base: ${{ github.sha }}
+      moved: ${{ steps.plan.outputs.moved }}
+    steps:
+      - uses: actions/github-script@v7
+        id: plan
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const file = await github.rest.repos.getContent({owner,repo,path:'tools/aec_upstream.json',ref:context.sha});
+            const pin = JSON.parse(Buffer.from(file.data.content,'base64').toString('utf8'));
+            if (pin.repo !== 'https://github.com/eraevous/Telosmith' || !/^[a-f0-9]{40}$/.test(pin.commit)) throw Error('Unexpected pin');
+            const head = await github.rest.repos.getCommit({owner:'eraevous',repo:'Telosmith',ref:'main'});
+            if (!/^[a-f0-9]{40}$/.test(head.data.sha)) throw Error('Invalid upstream SHA');
+            core.setOutput('candidate',head.data.sha);
+            core.setOutput('moved',String(head.data.sha !== pin.commit));
+  check:
+    needs: plan
+    if: needs.plan.outputs.moved == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-      - name: Test MtG's records against the upstream head
-        id: sync
+          ref: ${{ needs.plan.outputs.base }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: eraevous/Telosmith
+          ref: ${{ needs.plan.outputs.candidate }}
+          path: candidate
+          persist-credentials: false
+      - name: Check candidate in a disposable container without credentials or network
         run: |
-          set +e
-          python3 tools/aec_sync.py --test --write --report "$RUNNER_TEMP/report.md" --github-output "$GITHUB_OUTPUT"
-          echo "code=$?" >> "$GITHUB_OUTPUT"
-      - name: Open a PR that moves the pin
-        if: steps.sync.outputs.moved == 'true' && steps.sync.outputs.code == '0'
-        run: |
-          BRANCH="aec/upstream-${{ steps.sync.outputs.short }}"
-          if git ls-remote --exit-code origin "refs/heads/$BRANCH" >/dev/null; then
-            echo "$BRANCH already exists; a PR for this upstream commit is already open or was handled"; exit 0
-          fi
-          python3 tools/drift_check.py
-          python3 -m unittest discover -s tests
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b "$BRANCH"
-          git commit -am "Move the AEC upstream pin to ${{ steps.sync.outputs.short }} (aec_sync: all checks passed)"
-          git push -u origin "$BRANCH"
-          gh pr create --base main --head "$BRANCH" --assignee eraevous \
-            --title "Move the AEC upstream pin to ${{ steps.sync.outputs.short }}" --body-file "$RUNNER_TEMP/report.md"
-          # A PR opened with GITHUB_TOKEN does not trigger pull_request workflows; run CI on the branch explicitly.
-          gh workflow run ci.yml --ref "$BRANCH"
-      - name: Open or update an issue when a check fails
-        if: steps.sync.outputs.code == '3'
-        run: |
-          TITLE="AEC upstream ${{ steps.sync.outputs.short }} fails MtG's records"
-          N=$(gh issue list --state open --search "in:title \"$TITLE\"" --json number --jq '.[0].number')
-          if [ -n "$N" ]; then gh issue comment "$N" --body-file "$RUNNER_TEMP/report.md";
-          else gh issue create --title "$TITLE" --assignee eraevous --body-file "$RUNNER_TEMP/report.md"; fi
-      - name: Network or usage error
-        if: steps.sync.outputs.code == '2'
-        run: exit 1
+          # Reject a source-root symlink before Docker resolves the host bind path.
+          # Separate commands: under bash -e a failure inside an && list (not last) does not stop the step.
+          test -d candidate/src
+          test ! -L candidate/src
+          docker pull python:3.12-slim
+          mkdir "$RUNNER_TEMP/aec-input"
+          cp -R .aec "$RUNNER_TEMP/aec-input/.aec"
+          cp tools/aec_sync.py "$RUNNER_TEMP/aec-input/aec_sync.py"
+          # Copy the files the records anchor (trusted base checkout) so the candidate checks real bytes.
+          # Runner Python, not candidate code; relative regular files only, no symlinks or '..'.
+          python3 -I -B .github/scripts/aec-copy-anchors.py "$RUNNER_TEMP/aec-input"
+          docker run --rm --network none --read-only --cap-drop ALL \
+            --security-opt no-new-privileges --user 65534:65534 --pids-limit 128 \
+            --memory 512m --cpus 2 --tmpfs /tmp:rw,noexec,nosuid,size=64m \
+            -v "$RUNNER_TEMP/aec-input:/input:ro" -v "$PWD/candidate/src:/candidate:ro" \
+            -w /input python:3.12-slim python -B -c \
+            'from pathlib import Path; import aec_sync; r=aec_sync.run_checks(Path("/candidate"),Path("/input")); print(r); raise SystemExit(0 if r and all(x["ok"] for x in r) else 1)'
+  publish:
+    needs: [plan, check]
+    if: always() && needs.plan.result == 'success' && needs.plan.outputs.moved == 'true' && contains(fromJSON('["success","failure","cancelled"]'), needs.check.result)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.plan.outputs.base }}
+          persist-credentials: false
+      - name: Publish only a reconstructed pin or failure notice
+        uses: actions/github-script@v7
+        env:
+          CANDIDATE: ${{ needs.plan.outputs.candidate }}
+          BASE: ${{ needs.plan.outputs.base }}
+          CHECK_RESULT: ${{ needs.check.result }}
+        with:
+          script: |
+            const publish = require('./.github/scripts/aec-publish.cjs');
+            await publish({github, context, core});
