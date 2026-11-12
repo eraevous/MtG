@@ -138,7 +138,7 @@ class CardResultShowsBasis(unittest.TestCase):
         self.assertEqual(rows['draw']['pattern status'], 'supported')
 
 
-@unittest.skipUnless(DB.exists(), 'KB release DB not installed (python3 tools/kb_bootstrap.py install)')
+@unittest.skipUnless(DB.exists(), 'KB database not installed (python3 tools/kb_bootstrap.py install)')
 class AgainstPinnedKB(unittest.TestCase):
     def test_cultivate_search_is_not_a_draw(self):
         # pattern reader counts Cultivate as draw; its contract feeds card.search + land_to_battlefield (candidate)
