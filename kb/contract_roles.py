@@ -26,7 +26,7 @@ import json, sqlite3
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-MAP_VERSION = 'contract-roles-0.1.4'
+MAP_VERSION = 'contract-roles-0.1.5'
 VERIFICATION_STATE = 'candidate'
 
 # evaluator role -> DIO event ids (kb/events.py vocabulary) that make a contract perform it.
@@ -112,9 +112,6 @@ def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None,
     for role, v in (pattern_rec or {}).items():
         basis = 'human_label' if role in labels else 'text_pattern_fallback'
         rec[role] = {'status': v['status'], 'evidence': dict(v.get('evidence') or {}, basis=basis)}
-    for role, ok in labels.items():   # a false label with no pattern hit still blocks the role
-        if role not in rec and not ok:
-            rec[role] = {'status': 'contradicted', 'evidence': {'label': False, 'basis': 'human_label'}}
     if not feeds_by_contract:
         reason = 'all KB contracts rejected or quarantined' if had_contracts else 'no KB contract for this card'
         for v in rec.values():
@@ -129,8 +126,13 @@ def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None,
         prior = (pattern_rec or {}).get(role)
         if role in labels:
             # a human judgment label (tmnt_function_labels) outranks both readers; keep it, note the contract
-            if role not in rec:   # true label, no pattern hit
-                rec[role] = {'status': 'supported', 'evidence': {'label': True, 'basis': 'human_label'}}
+            if role not in rec:   # label, no pattern hit
+                if labels[role]:
+                    rec[role] = {'status': 'supported', 'evidence': {'label': True, 'basis': 'human_label'}}
+                elif hits:        # false label vetoes the contract: a contradiction only where there is positive evidence
+                    rec[role] = {'status': 'contradicted', 'evidence': {'label': False, 'basis': 'human_label'}}
+                else:
+                    continue      # false label, no evidence anywhere: agreement, nothing to record
             rec[role]['evidence']['contract_says'] = 'supported' if hits else 'not_in_contract'
             continue
         rest_on = hits or sorted(feeds_by_contract)
@@ -139,7 +141,9 @@ def grounded_record(pattern_rec, feeds_by_contract, role_map=None, release=None,
               'verification_state': VERIFICATION_STATE}
         if excluded: ev['excluded_contracts'] = excluded
         if release: ev['kb_release'] = release
-        if prior: ev['pattern_status'] = prior['status']
+        if prior:
+            ev['pattern_status'] = prior['status']
+            ev = dict(prior.get('evidence') or {}, **ev)   # keep oracle/tag evidence (inventory_assessment reads evidence.tag)
         if hits:
             rec[role] = {'status': 'supported', 'evidence': ev}
         elif prior and prior['status'] in UNCERTAIN:

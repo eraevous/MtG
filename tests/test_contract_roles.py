@@ -166,6 +166,20 @@ class CopilotReviewFindings(unittest.TestCase):
         self.assertEqual(res['data']['role_source']['map_version'], R.MAP_VERSION)
 
 
+class CopilotSecondReview(unittest.TestCase):
+    """Copilot review on #42 (second pass)."""
+    def test_false_label_without_any_evidence_records_nothing(self):
+        self.assertNotIn('token_maker', R.grounded_record({}, {'c.op1': ['card.draw']}, labels={'token_maker': False}))
+        self.assertNotIn('wipe', R.grounded_record({}, {}, labels={'wipe': False}))
+
+    def test_contract_evidence_keeps_the_tag(self):
+        g = R.grounded_record({'draw': {'status': 'tag_only', 'evidence': {'tag': True}}}, {'c.op1': ['mana.add']})
+        self.assertTrue(g['draw']['evidence']['tag'])
+        self.assertEqual(g['draw']['evidence']['basis'], 'dio_contract')
+        g = R.grounded_record({'draw': {'status': 'supported', 'evidence': {'tag': True, 'oracle': 'draw a card'}}}, {'c.op1': ['card.draw']})
+        self.assertEqual(g['draw']['evidence']['oracle'], 'draw a card')
+
+
 class CounterKinds(unittest.TestCase):
     """Codex review on #42: counter_source means +1/+1 counters or proliferate, not any counter."""
     def put(self, **kw):
