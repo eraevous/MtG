@@ -87,7 +87,7 @@ class ConsumptionNotCitation(unittest.TestCase):
 
     def test_role_map_events_are_in_the_kb_event_vocabulary(self):
         known = {'card.draw', 'mana.add', 'land_to_battlefield', 'spell.countered', 'token.create', 'counter.put', 'life.gain'}
-        self.assertTrue({e for es in R.ROLE_MAP.values() for e in es} <= known)
+        self.assertTrue({e.split(':')[0] for es in R.ROLE_MAP.values() for e in es} <= known)
 
 
 class LandsAreNotRamp(unittest.TestCase):
@@ -164,6 +164,27 @@ class CopilotReviewFindings(unittest.TestCase):
         res = R.wrap_reports(FakeEv()).deck('Test')
         self.assertTrue(any('candidate' in x for x in res['limitations']))
         self.assertEqual(res['data']['role_source']['map_version'], R.MAP_VERSION)
+
+
+class CounterKinds(unittest.TestCase):
+    """Codex review on #42: counter_source means +1/+1 counters or proliferate, not any counter."""
+    def put(self, **kw):
+        return {'result': {'produces': [dict({'id': 'counter.put'}, **kw)]}}
+
+    def test_charge_counters_are_not_a_counter_source(self):
+        q = R.counter_qualifiers(self.put(counter_kinds=['charge']), ['counter.put'])
+        self.assertEqual(q, [])
+        self.assertNotIn('counter_source', R.grounded_record({}, {'c.op1': ['counter.put'] + q}))
+
+    def test_plus_one_counters_and_proliferate_are(self):
+        self.assertEqual(R.counter_qualifiers(self.put(counter_kinds=['+1/+1']), ['counter.put']), ['counter.put:+1/+1'])
+        q = R.counter_qualifiers(self.put(counter_kinds=['present_kinds'], mode='proliferate'), ['counter.put'])
+        self.assertEqual(q, ['counter.put:proliferate'])
+        self.assertEqual(R.grounded_record({}, {'c.op1': ['counter.put'] + q})['counter_source']['status'], 'supported')
+
+    def test_no_qualifier_when_feeds_dropped_counter_put(self):
+        # kb/contracts.py feeds() drops counter.put when it is only a condition (C-015)
+        self.assertEqual(R.counter_qualifiers(self.put(counter_kinds=['+1/+1']), []), [])
 
 
 class CardResultShowsBasis(unittest.TestCase):

@@ -26,7 +26,7 @@ import json, sqlite3
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-MAP_VERSION = 'contract-roles-0.1.3'
+MAP_VERSION = 'contract-roles-0.1.4'
 VERIFICATION_STATE = 'candidate'
 
 # evaluator role -> DIO event ids (kb/events.py vocabulary) that make a contract perform it.
@@ -38,12 +38,24 @@ ROLE_MAP = {
     'ramp': ['mana.add', 'land_to_battlefield'],
     'counterspell': ['spell.countered'],
     'token_maker': ['token.create'],
-    'counter_source': ['counter.put'],
+    'counter_source': ['counter.put:+1/+1', 'counter.put:proliferate'],   # kind-qualified: see counter_qualifiers()
     'lifegain_source': ['life.gain'],
 }
 
 
 EXCLUDED_STATES = ('quarantined', 'rejected')   # validation_queue states that disqualify a contract
+
+
+def counter_qualifiers(contract, feeds):
+    """counter.put is kind-blind; mtg_eval's counter_source means +1/+1 counters or proliferate. Add
+    'counter.put:+1/+1' / 'counter.put:proliferate' from result.produces, only when the contract feeds counter.put."""
+    if 'counter.put' not in feeds: return []
+    q = set()
+    for it in (contract.get('result') or {}).get('produces') or []:
+        if it.get('id') != 'counter.put': continue
+        if '+1/+1' in (it.get('counter_kinds') or []): q.add('counter.put:+1/+1')
+        if it.get('mode') == 'proliferate': q.add('counter.put:proliferate')
+    return sorted(q)
 
 
 def contract_states(con, name):
@@ -54,7 +66,9 @@ def contract_states(con, name):
          'join validation_queue q on q.contract_id=k.contract_id and q.contract_version=k.contract_version '
          'where k.card_name=?')
     for cid, cj, state in con.execute(q, (name,)):
-        out[cid] = (list((json.loads(cj).get('query_index') or {}).get('feeds') or []), state)
+        c = json.loads(cj)
+        feeds = list((c.get('query_index') or {}).get('feeds') or [])
+        out[cid] = (feeds + counter_qualifiers(c, feeds), state)
     return out
 
 
