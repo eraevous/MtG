@@ -23,7 +23,7 @@ Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/proj
 3) Claims Carry Evidence and a Verification State (P-03)
 - Rule: Every mechanics or deck claim names its evidence and its state: candidate, ready_for_review, semantic_reviewed, runtime-ready, quarantined, rejected or review_stale. Semantic review and runtime readiness are separate. A contract never gains authority because the evaluator consumes it successfully. Nothing is auto-promoted or mass-approved. A human `verified` review must cite passing scenarios.
 - Why: Generated contracts look authoritative. Zero of 4,961 are human-reviewed today.
-- Enforce: exists: KB verification states, append-only review overlay (`kb/test_v02.py` rejects update and delete; `tools/drift_check.py` append-only check on `kb/overrides/*.jsonl` in CI), scenario-backed reviews (61 KB tests; 60 pass here, see C-001). planned: a behavioural test that the evaluator refuses or flags unverified input in decision-grade output.
+- Enforce: exists: KB verification states, append-only review overlay (`kb/test_v02.py` rejects update and delete; `tools/drift_check.py` append-only check on `kb/overrides/*.jsonl` in CI), scenario-backed reviews (61 KB tests, run in CI by the `kb` job since C-006; the byte-identical rebuild test passes only under the SQLite that wrote the release, see C-001). planned: a behavioural test that the evaluator refuses or flags unverified input in decision-grade output.
 
 4) Discovery Stays Separate from Judgment (P-04, amendment 1)
 - Rule: Exploratory interaction hypotheses (between cards, modules or whole decks) may precede verification and need not become KB contracts. Only decision-grade claims pass the verification gate. Interaction graphs describe what might connect. They never rank card quality on their own.
@@ -66,7 +66,7 @@ Design authority (purpose, criteria) is Zach's. It is recorded in `codex_++/proj
 11) The KB Is Derived; Oracle Refresh Is Explicit
 - Rule: Rebuild the KB from the Sheet export, the overrides and the Oracle refresh snapshots. Never hand-edit SQLite. Oracle refreshes are explicit, versioned operations that write append-only snapshots to `kb/refresh/`, never run inside a query, and never erase manual corrections.
 - Why: One rebuildable source of derived truth.
-- Enforce: exists: KB rebuild and refresh-replay tests (`kb/test_acceptance.py`, `kb/test_v02.py`). Byte-identical rebuild fails in this environment (C-001).
+- Enforce: exists: KB rebuild and refresh-replay tests (`kb/test_acceptance.py`, `kb/test_v02.py`). C-001 (2026-11-16): the rebuild is content-identical under any SQLite (`tests/test_kb_rebuild_content.py`, run in CI); byte identity holds only under the SQLite that wrote the release (3.53.1 for r20261104).
 
 12) Standard Library Only
 - Rule: Project code uses only the Python standard library. Optional heavy dependencies must be guarded.
