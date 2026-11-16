@@ -22,5 +22,5 @@
 ### Risks, invariants and known gaps
 - Never edits a database (CHARTER: rebuild, never hand-edit). It only replaces a file with the released one, after the hash matches.
 - A zip with the pinned name must match the pinned sha256. Any other zip is accepted only if its databases match kb/MANIFEST.sha256.
-- The download URL works only once the zip is published as a GitHub release asset (C-006). Until then it finds the zip in data/ or the Claude project files.
+- The download URL is a public GitHub release asset (C-006), so install works from any clone and in CI (the `kb` job in .github/workflows/ci.yml). It also finds the zip in data/ or the Claude project files.
 - Every KB release must update tools/kb_release.json. tests/test_kb_bootstrap.py checks it names the release kb/SOURCE_MANIFEST.json describes.

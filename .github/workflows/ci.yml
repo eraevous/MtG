@@ -61,4 +61,31 @@ jobs:
       - name: Grammar layer unit tests
         working-directory: grammar
         run: python3 -m unittest tests.py -v
-      # KB suite needs the release databases (data/README.md, challenge C-006).
+      # KB suite needs the release databases (data/README.md, challenge C-006): see the kb job below.
+
+  kb:
+    # C-006: the pinned KB release is a public GitHub release asset, so CI installs it (sha256-checked against
+    # tools/kb_release.json and kb/MANIFEST.sha256) and runs the KB suites. The inventory workbook is still
+    # absent, so the evaluator tests that need it stay skipped.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the pinned KB release
+        run: |
+          python3 tools/kb_bootstrap.py install
+          python3 tools/kb_bootstrap.py status
+      - name: KB suites (kb/)
+        # KB_SKIP_REBUILD skips only T7's byte-identical rebuild, which is defined only under the SQLite
+        # library that wrote the release (C-001); tests/test_kb_rebuild_content.py checks content identity
+        # here and byte identity wherever the SQLite matches.
+        env:
+          KB_SKIP_REBUILD: "1"
+        working-directory: kb
+        run: python3 -W ignore::ResourceWarning -m unittest test_v02.py test_mtg_db.py test_acceptance.py
+      - name: Repo tests with the KB present (includes the rebuild content check)
+        run: python3 -m unittest discover -s tests
