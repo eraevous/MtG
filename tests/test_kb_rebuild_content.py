@@ -75,8 +75,8 @@ class HelperTests(unittest.TestCase):
             self.assertNotEqual(content_sha256(a), content_sha256(c_))  # different rows
 
 
-@unittest.skipUnless(DB.exists() and V01.exists(), 'KB databases not installed (python3 tools/kb_bootstrap.py install)')
-@unittest.skipIf(os.environ.get('KB_SKIP_CONTENT_REBUILD'), 'KB_SKIP_CONTENT_REBUILD set')
+# Same skip reason as the other KB-backed tests: the shared kairos-checks suite allows only known reasons.
+@unittest.skipUnless(DB.exists() and V01.exists(), 'KB database not installed (python3 tools/kb_bootstrap.py install)')
 class RebuildReproducibility(unittest.TestCase):
     """Rebuild once under another hash seed, then compare with the shipped database."""
 
