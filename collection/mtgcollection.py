@@ -123,14 +123,28 @@ def ensure_card(con, name):
     con.execute('insert or ignore into cards(card_name) values(?)', (name,))
 
 
+# Largest quantity one row may hold. SQLite stores at most a 64-bit integer, and the owned view sums rows,
+# so an unbounded cell ('1e20') crashed an import with OverflowError instead of naming the row. A billion
+# copies is far above any real collection and keeps sums of many rows inside SQLite's range.
+MAX_QTY = 10 ** 9
+
+
+def check_qty(v: int, raw) -> int:
+    if v < 0 or v > MAX_QTY:
+        raise ValueError(f'quantity must be a whole number from 0 to {MAX_QTY}, got {raw!r}')
+    return v
+
+
 def parse_qty(raw, default=1):
     s = str(raw if raw is not None else '').strip()
     if s == '':
         return default
+    if re.fullmatch(r'[+-]?\d+', s):   # exact: float() rounds integers above 2**53
+        return check_qty(int(s), raw)
     v = float(s)
-    if v < 0 or not v.is_integer():
+    if not v.is_integer():   # also nan and inf
         raise ValueError(f'quantity must be a whole number >= 0, got {raw!r}')
-    return int(v)
+    return check_qty(int(v), raw)
 
 
 def finish_of(raw):
@@ -361,7 +375,7 @@ def parse_decklist(text, commanders=()):
         sec = section
         if name.casefold() in cmd or '*CMDR*' in tail.upper() or re.search(r'\[[^\]]*commander', tail, re.I):
             sec = 'Commander'
-        out.append((name, int(m.group('qty')), sec))
+        out.append((name, check_qty(int(m.group('qty')), raw), sec))
     return out, skipped
 
 
