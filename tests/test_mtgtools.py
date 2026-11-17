@@ -34,6 +34,21 @@ class Grading(unittest.TestCase):
             claim('x', 'vibes', 'oracle')
 
 
+class Counting(unittest.TestCase):
+    """The count helpers feed the summary fields of explore (by_reason, links_by_pathway, hooks_by_link_count, ...)."""
+
+    def test_count_keeps_first_seen_order(self):
+        from mtgtools.verbs import _count
+        rows = [{'k': 'b'}, {'k': 'a'}, {'k': 'b'}, {'k': 'c'}]
+        self.assertEqual(list(_count(rows, 'k').items()), [('b', 2), ('a', 1), ('c', 1)])
+        self.assertIs(type(_count(rows, 'k')), dict)
+
+    def test_top_is_largest_first_and_stable_on_ties(self):
+        from mtgtools.verbs import _top
+        self.assertEqual(list(_top({'x': 1, 'y': 3, 'z': 1, 'w': 3}, 3).items()), [('y', 3), ('w', 3), ('x', 1)])
+        self.assertEqual(_top({}, 5), {})
+
+
 class Qualifiers(unittest.TestCase):
     """Qualifier matching on hand-built contracts, so it runs in CI without the KB database."""
     VOCAB = {'legendary', 'creature', 'enchantment', 'saga', 'artifact', 'artificer', 'human', 'wizard', 'land', 'aura'}

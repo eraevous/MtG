@@ -11,6 +11,7 @@ reads contracts.
 import csv
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 from . import kb
@@ -410,10 +411,7 @@ def _split(links):
 
 
 def _rejected_summary(rejected, n=5):
-    by = {}
-    for l in rejected:
-        by[l['qualifier_note']] = by.get(l['qualifier_note'], 0) + 1
-    return {'total': len(rejected), 'by_reason': dict(sorted(by.items(), key=lambda x: -x[1])[:10]),
+    return {'total': len(rejected), 'by_reason': _top(_count(rejected, 'qualifier_note'), 10),
             'examples': [{k: l[k] for k in ('producer', 'produces', 'observer', 'hook', 'qualifier_note')} for l in rejected[:n]]}
 
 
@@ -734,11 +732,11 @@ def explore(c, seed=None, ci=None, deck=None, free=False, mode='focused', limit=
         if not data['theme_pathways']['links_on_them']:
             data['theme_pathways']['note'] = ('no contract in this pool observes the theme\'s own pathways, so the links below come '
                                               'from other abilities of the themed cards and say little about the theme itself')
-    data['links_by_pathway'] = {f'{k[0]} -> {k[1]}': n for k, n in sorted(_count_paths(links).items(), key=lambda x: -x[1])[:20]}
+    data['links_by_pathway'] = {f'{k[0]} -> {k[1]}': n for k, n in _top(_count_paths(links), 20).items()}
     data['rejected_links'] = _rejected_summary(rejected)
     data['links'] = _spread(links, limit)
     _put_loops(data, loops, limit)
-    data['hooks_by_link_count'] = dict(sorted(_count(links, 'hook').items(), key=lambda x: -x[1])[:15])
+    data['hooks_by_link_count'] = _top(_count(links, 'hook'), 15)
     for l in data['links']:
         claims.append(_link_claim(l, disc))
     _loop_claims(claims, data['loops'], '', disc)
@@ -783,10 +781,7 @@ def _pathway(l):
 
 
 def _count_paths(links):
-    out = {}
-    for l in links:
-        out[_pathway(l)] = out.get(_pathway(l), 0) + 1
-    return out
+    return dict(Counter(_pathway(l) for l in links))
 
 
 def _spread(links, limit):
@@ -814,10 +809,13 @@ def _spread(links, limit):
 
 
 def _count(rows, key):
-    out = {}
-    for r in rows:
-        out[r[key]] = out.get(r[key], 0) + 1
-    return out
+    """Occurrences of each value of rows[i][key], in first-seen order."""
+    return dict(Counter(r[key] for r in rows))
+
+
+def _top(counts, n):
+    """The n largest counts, largest first; ties keep their first-seen order."""
+    return dict(sorted(counts.items(), key=lambda x: -x[1])[:n])
 
 
 def hypothesis(c, a, b, effect=None, ci=None):
