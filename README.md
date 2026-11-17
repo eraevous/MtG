@@ -61,7 +61,7 @@ PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/<export>.xlsx deck "Tok
 PYTHONPATH=vendor python3 -m mtg_eval --workbook ../data/my_collection.sqlite deck "My Deck"
 ```
 
-Known baseline on the pinned release (r20261104): `Ran 61 tests ... OK (skipped=1, expected failures=2)`. The two expected failures are Necrobloom binding gaps marked in `kb/test_acceptance.py`; the skip needs the source workbook. The rebuild-reproducibility test passed here (Python 3.13); challenge C-001 recorded it failing on 2026-10-26 and is still open in the ledger.
+Known baseline on the pinned release (r20261104): `Ran 61 tests ... OK (skipped=1, expected failures=2)`. The two expected failures are Necrobloom binding gaps marked in `kb/test_acceptance.py`; the skip needs the source workbook. The byte-identical rebuild test (T7) passes only under the SQLite that wrote the release (3.53.1 for r20261104); under another SQLite run the suites with `KB_SKIP_REBUILD=1` and rely on `tests/test_kb_rebuild_content.py`, which checks that the rebuild's content is identical under any SQLite. Challenge C-001 is resolved on this basis (2026-11-16, `challenges/ledger.jsonl`), and CI's `kb` job runs these suites (C-006).
 
 ## Development model
 
