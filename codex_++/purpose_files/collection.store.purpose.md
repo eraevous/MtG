@@ -22,6 +22,7 @@
 | Out | `collection/schema.sql` database; read back by `kb/vendor/mtg_eval/collection_db.py` as Collection / Deck Allocations rows with the Sheet's headers |
 
 ### Risks, invariants and known gaps
+- Every quantity (CSV, Sheet allocation or decklist count) is a whole number from 0 to `MAX_QTY` (10^9). Anything else stops the import with an error naming the file, row and card, before it reaches SQLite (whose 64-bit integers the owned sums must stay inside).
 - Owned, in-deck and free counts are views over holdings and allocations, never stored, so they cannot drift from each other.
 - Only `Current deck` and `Companion` allocations move copies. Every other status is a plan (P-05: plans are not moves).
 - Card data is a cache of Oracle data or of the user's own Sheet columns, not an authority. `ETB Tapped` and `Can Be Commander` are pattern-derived index hints (declared `candidate-source`, P-01), matching the canonical Sheet's own hint columns.

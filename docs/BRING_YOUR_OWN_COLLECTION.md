@@ -54,7 +54,7 @@ Import your collection **before** your decks. A deck line like `1 Fire` then att
 python3 collection/mtgcollection.py import-csv data/my_collection.sqlite export.csv --source moxfield
 ```
 
-The importer recognises the column names that Moxfield, Archidekt, ManaBox, Deckbox, Deckstats and TCGplayer exports use. It only needs a **name** column. A **quantity** column is optional: if there isn't one, each row counts as one copy. Where they exist, set code, collector number, foil/finish, language and condition are stored per row.
+The importer recognises the column names that Moxfield, Archidekt, ManaBox, Deckbox, Deckstats and TCGplayer exports use. It only needs a **name** column. A **quantity** column is optional: if there isn't one, each row counts as one copy. A quantity must be a whole number from 0 to 1,000,000,000; the import stops and names the row otherwise. Where they exist, set code, collector number, foil/finish, language and condition are stored per row.
 
 | Field | Accepted headers (case and spacing ignored) |
 |---|---|

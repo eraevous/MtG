@@ -120,6 +120,24 @@ class CollectionTests(unittest.TestCase):
         owned = dict(self.con.execute('select card_name, owned from owned'))
         self.assertEqual(owned['Evolving Wilds'], 4)   # two sources, each counted once
 
+    def test_oversized_quantities_are_refused_by_row_not_crashed(self):
+        # regression: '1e20' (or a 20-digit count) reached SQLite and crashed the import with OverflowError
+        p = Path(self.tmp.name) / 'big.csv'
+        for bad in ('1e20', '9223372036854775807', str(mc.MAX_QTY + 1)):
+            p.write_text(f'Name,Count\nSol Ring,1\nCraw Wurm,{bad}\n', encoding='utf-8')
+            with self.assertRaises(SystemExit) as e:
+                mc.import_csv(self.con, p, 'big')
+            self.assertIn('row 3 (Craw Wurm)', str(e.exception))
+        with self.assertRaises(ValueError):
+            mc.parse_decklist('99999999999999999999 Sol Ring\n')
+        with self.assertRaises(ValueError):
+            mc.replace_allocations(self.con, [{'Card Name': 'Sol Ring', 'Deck': 'D', 'Quantity': '1e20'}])
+        self.assertEqual(mc.parse_qty(str(mc.MAX_QTY)), mc.MAX_QTY)
+        self.assertEqual((mc.parse_qty('3.0'), mc.parse_qty(''), mc.parse_qty('', 0)), (3, 1, 0))
+        for bad in ('-1', '1.5', 'nan', 'inf'):
+            with self.assertRaises(ValueError):
+                mc.parse_qty(bad)
+
     def test_names_only_list_counts_one_each(self):
         p = Path(self.tmp.name) / 'names.csv'
         p.write_text('Name\nSol Ring\nCraw Wurm\n', encoding='utf-8')
