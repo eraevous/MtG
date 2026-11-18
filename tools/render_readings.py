@@ -67,6 +67,13 @@ def render(env):
         for r in v['readings']:
             cites = ', '.join(r.get('cr_citations') or [])
             out.append(f"Reading by {r.get('party')} ({r.get('model')}), citing {cites}:\n\n" + _quote(r.get('reading')) + '\n')
+            if r.get('uncertainty'):
+                out.append(f"Uncertainty stated by {r.get('party')}:\n\n" + _quote(r['uncertainty']) + '\n')
+            if r.get('scenario'):
+                out.append(f"Scenario from {r.get('party')}:\n\n" + _quote(r['scenario']) + '\n')
+        for k, label in (('positive', 'Positive scenario'), ('near_miss', 'Near-miss scenario')):
+            if (v.get('scenarios') or {}).get(k):
+                out.append(f'{label}:\n\n' + _quote(v['scenarios'][k]) + '\n')
         if v['notes']:
             out.append('Notes:\n\n' + _quote(v['notes']) + '\n')
         out.append(f"Source: {v['source']}\n")

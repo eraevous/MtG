@@ -41,8 +41,8 @@ def _row_view(r, superseded_by, current_sha):
         text_changed = current_sha != r.get('oracle_text_sha256')
     return {'interpretation_id': r['interpretation_id'], 'utc': r.get('utc'), 'subject_kind': r.get('subject_kind'),
             'question': r.get('question'), 'outcome': r.get('outcome'), 'layer': r.get('layer'),
-            'disagreement_type': r.get('disagreement_type'), 'contract_id': r.get('contract_id'),
-            'readings': [{k: x.get(k) for k in ('party', 'model', 'reading', 'cr_citations', 'party_kind', 'independent')
+            'disagreement_type': r.get('disagreement_type'), 'scenarios': r.get('scenarios'), 'contract_id': r.get('contract_id'),
+            'readings': [{k: x.get(k) for k in ('party', 'model', 'reading', 'cr_citations', 'uncertainty', 'scenario', 'party_kind', 'independent')
                           if x.get(k) is not None} for x in (r.get('readings') or [])],
             'verification_state': CANDIDATE, 'logged_state': r.get('verification_state'),
             'oracle_text_changed_since': text_changed, 'superseded_by': superseded_by,

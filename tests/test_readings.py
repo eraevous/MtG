@@ -119,6 +119,18 @@ class Renderer(Sandbox):
         self.assertIn('> Yes.', page)
         self.assertNotRegex(page.lower(), r'\bverified\b')
 
+    def test_reader_uncertainty_and_scenarios_survive(self):
+        rs = row()['readings']
+        rs[1] = dict(rs[1], uncertainty='medium: no ruling in hand', scenario='Proliferate two creatures.')
+        I.add(self.log, row(readings=rs, scenarios={'positive': 'P case', 'near_miss': 'N case', 'kb_output_changed': None}))
+        data, claims = R.reading('Evolution Sage', log=self.log)
+        v = data['current'][0]
+        self.assertEqual(v['readings'][1]['uncertainty'], 'medium: no ruling in hand')
+        self.assertEqual(v['scenarios']['near_miss'], 'N case')
+        page = RR.render({'data': data, 'claims': claims, 'grounding': {'level': 'log_only'}, 'collection': {}})
+        for text in ('medium: no ruling in hand', 'Proliferate two creatures.', 'P case', 'N case'):
+            self.assertIn(text, page)
+
     def test_refuses_an_output_directory_git_tracks(self):
         with self.assertRaises(SystemExit):
             RR.main(['--out', str(ROOT / 'docs' / 'readings'), 'Evolution Sage'])
