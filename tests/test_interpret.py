@@ -101,7 +101,7 @@ class KateAmendments(Sandbox):
 
     def test_independent_reading_fields(self):
         r = dict(reading(), independent=True, uncertainty='low: "instead" is replacement wording', scenario='7 named lands, Plant trigger')
-        I.add(self.log, body(readings=[r, reading(party='kate')]))
+        I.add(self.log, body(readings=[r, reading(party='kate', model='gpt-5-mini')]))
         with self.assertRaises(ValueError): I.add(self.log, body(readings=[dict(reading(), independent='yes'), reading(party='kate')]))
         with self.assertRaises(ValueError): I.add(self.log, body(readings=[dict(reading(), uncertainty=''), reading(party='kate')]))
 
@@ -191,6 +191,43 @@ class Cli(Sandbox):
         bad = self.run_cli('add', '--kind', 'card', '--name', 'The Necrobloom', '--question', 'q', '--readings', str(d / 'readings.json'),
                            '--outcome', 'agreed', '--source', 'unit-test', '--disagreement-type', 'oracle_rules')
         self.assertNotEqual(bad.returncode, 0)
+
+
+class ZachAnswers20261118(Sandbox):
+    """HO-MTG-20261118-KN82 (Zach, Choices rev 50): Q1 second party, Q7 cr_edition, C20Q(3) closing a needs-zach row."""
+
+    def test_same_family_pair_needs_fresh_context_label(self):
+        two_claudes = [reading(), reading(party='claude:fresh')]
+        with self.assertRaises(ValueError): I.add(self.log, body(readings=two_claudes))
+        ok = [reading(), dict(reading(party='claude:fresh'), party_kind='fresh_context_claude')]
+        rec = I.add(self.log, body(readings=ok))
+        self.assertEqual(I.pair_kind(rec), 'same_family_fresh_context')
+        self.assertEqual(I.pair_kind(body()), 'cross_family')
+        with self.assertRaises(ValueError): I.add(self.log, body(readings=[reading(), dict(reading(party='kate', model='gpt-5-mini'), party_kind='friend')]))
+
+    def test_cr_edition_optional_and_checked(self):
+        old = I.add(self.log, body())                       # a row without the field keeps hashing as before
+        self.assertNotIn('cr_edition', old)
+        import chain   # without the late field, the pinned chain.py reads the file identically
+        self.assertEqual(chain.read(self.log, I.FIELDS, I.ID_KEY), I.read(self.log))
+        new = I.add(self.log, body(cr_edition='2026-11-06'))
+        self.assertEqual(new['cr_edition'], '2026-11-06')
+        with self.assertRaises(ValueError): I.add(self.log, body(cr_edition='Nov 2026'))
+        self.assertEqual(len(I.read(self.log)), 2)
+        lines = self.log.read_text(encoding='utf-8').splitlines()   # editing the late field still breaks the chain
+        self.log.write_text('\n'.join(lines[:-1] + [lines[-1].replace('2026-11-06', '2026-11-07')]) + '\n', encoding='utf-8')
+        with self.assertRaises(ValueError): I.read(self.log)
+
+    def test_closed_supersedes_needs_zach_only(self):
+        agreed = I.add(self.log, body())
+        nz = I.add(self.log, body(readings=[reading()], outcome='needs-zach'))
+        closing = dict(body(readings=[], outcome='closed', notes='Zach: "Not sure"'), supersedes=nz['interpretation_id'])
+        with self.assertRaises(ValueError): I.add(self.log, dict(closing, supersedes=agreed['interpretation_id']))
+        with self.assertRaises(ValueError): I.add(self.log, dict(closing, notes=None))
+        with self.assertRaises(ValueError): I.add(self.log, dict(closing, supersedes=None))
+        rec = I.add(self.log, closing)
+        self.assertEqual((rec['outcome'], rec['verification_state']), ('closed', I.CANDIDATE))
+        with self.assertRaises(ValueError): I.add(self.log, body(readings=[], outcome='needs-zach'))   # only closed may be empty
 
 
 if __name__ == '__main__':

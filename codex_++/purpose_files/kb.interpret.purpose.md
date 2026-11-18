@@ -5,18 +5,18 @@
 @ai-source-file: kb/interpret.py
 @ai-role: ledger_writer
 @ai-intent: "Record dialogic readings of Oracle text as evidence for a later review or decision, never as a review."
-@ai-version: 0.2.0
+@ai-version: 0.3.0
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
 @ai-risk-pii: none
-@ai-dependencies: chain
+@ai-dependencies: kbfacts
 @ai-contracts: P-01, P-03, P-06
 
 ### Inputs and outputs
 | Direction | What |
 |---|---|
-| In | A question about a card or mechanic; readings `[{party, model, reading, cr_citations}]` (optionally `independent`, `uncertainty`, `scenario` per reading); an outcome (`agreed`, `contested`, `needs-zach`); optional `layer`, `disagreement_type`, `scenarios {positive, near_miss, kb_output_changed}`; the KB release database, read-only, to bind a card row to its oracle_id and current Oracle text SHA |
+| In | A question about a card or mechanic; readings `[{party, model, reading, cr_citations}]` (optionally `independent`, `uncertainty`, `scenario` per reading); an outcome (`agreed`, `contested`, `needs-zach`, `closed`); optional per-reading `party_kind`; optional `cr_edition`; optional `layer`, `disagreement_type`, `scenarios {positive, near_miss, kb_output_changed}`; the KB release database, read-only, to bind a card row to its oracle_id and current Oracle text SHA |
 | Out | One appended line in `kb/overrides/interpretations.jsonl`, chained to the previous line (`prev`, `interpretation_id`) |
 
 ### Risks, invariants and known gaps
@@ -27,5 +27,6 @@
 - Read-time trust: the readings are model and human judgments labelled by `party` and `model`. A row from a cheaper model carries that model's name so a reader can weigh it (DEC-152 allows cheaper models for the dialogue).
 
 ### Notes
+- 0.3.0 (2026-11-18, HO-MTG-20261118-KN82, Zach's Choices rev 50 answers): Q1, a fresh-context Claude counts as the second party when Kate is unavailable; a same-family pair must mark that reading `party_kind: fresh_context_claude`, and `verify` reports each pair's kind from the models. Q7, optional `cr_edition` (default 2026-11-06), hashed only when present so the 15 earlier rows keep their ids; because `chain.py` is release-pinned (kb/MANIFEST.sha256), this module now reads and appends the chain itself with the same hashing (`kbfacts`), and a test checks it agrees with `chain.read` on rows without the field. C20Q(3), outcome `closed` supersedes a needs-zach row Zach can't answer, with notes and no reading; `verify` lists `open_needs_zach`.
 - 0.2.0 (2026-11-07): Kate's round-17 protocol amendments carried as **optional, vocabulary-checked** fields (`layer`, per-reading `independent`/`uncertainty`/`scenario`, `disagreement_type`, `scenarios`). They are proposals Zach has not adopted; absent fields hash as `None`, so adopting or dropping them later needs no schema change. `verify` counts rows with scenarios and rows whose scenarios changed KB output (Kate's proposed measure). Policy: `overrides/INTERPRETATIONS_POLICY.md`.
 - Added 2026-11-07 for DEC-152 (HO-MTG-20261107-92QA), on branch `mtg/interpretations-log`. The alternative, an `mtgtools interpret add` verb, was rejected because `mtgtools.cli` is read-only by contract and writing an override would change its responsibility (AGENTS.md Drift trigger). A read-only `mtgtools interpret show` may follow.
