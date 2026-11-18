@@ -14,6 +14,7 @@
 --db picks the collection: any SQLite built by kb/migrate_v02.py (default kb/mtg_cards_v0.2.sqlite).
 """
 import argparse
+from collections import Counter
 import json
 from contextlib import closing
 import os
@@ -48,9 +49,7 @@ def grounding(db, verb):
 
 def envelope(verb, query, db, data=None, claims=None, error=None):
     claims = claims or []
-    grades = {}
-    for c in claims:
-        grades[c['grade']] = grades.get(c['grade'], 0) + 1
+    grades = dict(Counter(c['grade'] for c in claims))
     out = {'tool': 'mtg', 'version': __version__, 'verb': verb, 'query': query,
            'trust_boundary': {
                'schema': 'mtgtool-data-boundary/v1',
