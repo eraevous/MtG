@@ -1,4 +1,4 @@
-"""Command line: one program, ten read-only verbs, JSON out.
+"""Command line: one program, eleven read-only verbs, JSON out.
 
   python3 -m mtgtools context [--deck Vraska]
   python3 -m mtgtools card "Terra, Magical Adept"
@@ -10,6 +10,7 @@
   python3 -m mtgtools typal Merfolk [--ci WU] [--free]   (creature-type census: members, changelings, type support, availability)
   python3 -m mtgtools release "Auntie Ool" --to TMNT    (decommission audit: what retiring a deck unlocks for another)
   python3 -m mtgtools find --role sacrifice --ci B --free   (owned cards that perform or support a function, with evidence)
+  python3 -m mtgtools reading proliferate      (interpretation-log rows for a card or mechanic; candidate only; KB optional)
 
 --db picks the collection: any SQLite built by kb/migrate_v02.py (default kb/mtg_cards_v0.2.sqlite).
 """
@@ -21,7 +22,7 @@ import os
 import sys
 from pathlib import Path
 
-from . import __version__, dio, kb, verbs
+from . import __version__, dio, kb, readings, verbs
 
 ROOT = Path(__file__).resolve().parent.parent
 PIN = ROOT / 'tools' / 'kb_release.json'
@@ -31,6 +32,9 @@ def grounding(db, verb):
     """What this answer's card meaning rests on, so a reader can tell KB-grounded output from text-only fallback."""
     if verb == 'dio':
         return {'level': 'doctrine', 'note': 'DIO text only; no claim about a card.'}
+    if verb == 'reading' and not Path(db).exists():
+        return {'level': 'log_only', 'note': 'Interpretation log only, no KB database: Oracle-text drift and KB contracts are '
+                'not checked. Every reading is a candidate either way.'}
     if not Path(db).exists():
         return {'level': 'doctrine_only', 'note': 'No KB database: nothing here rests on DIO contracts. Run '
                 'python3 tools/kb_bootstrap.py install. Until then label interaction claims as your own reading of Oracle text.'}
@@ -125,9 +129,10 @@ def main(argv=None):
     s = sub.add_parser('release'); s.add_argument('donor'); s.add_argument('--to', dest='receiver', required=True)
     s = sub.add_parser('find'); s.add_argument('--role', required=True, help='a family (sacrifice, tokens, ...), a role (removal, protection, ...) or a KB capability')
     s.add_argument('--ci'); s.add_argument('--free', action='store_true'); s.add_argument('--limit', type=int, default=40)
+    s = sub.add_parser('reading'); s.add_argument('name', help='a card or mechanic as the interpretation log names it')
     a = p.parse_args(argv)
     query = {k: v for k, v in vars(a).items() if k not in ('verb', 'db') and v not in (None, False)}
-    if a.verb != 'dio' and not Path(a.db).exists():
+    if a.verb not in ('dio', 'reading') and not Path(a.db).exists():
         print(json.dumps(envelope(a.verb, query, a.db, error=f'collection database not found: {a.db}. Install it with '
                                   'python3 tools/kb_bootstrap.py install (see data/README.md). The DIO itself needs no '
                                   'database: python3 -m mtgtools dio TERM'), indent=2))
@@ -135,6 +140,12 @@ def main(argv=None):
     try:
         if a.verb == 'dio':
             data, claims = dio.lookup(a.term, a.limit, a.max_chars)
+        elif a.verb == 'reading':
+            if Path(a.db).exists():
+                with closing(kb.connect(a.db)) as c:
+                    data, claims = readings.reading(a.name, c)
+            else:
+                data, claims = readings.reading(a.name)
         elif a.verb == 'compare':
             data, claims = verbs.compare(a.deck, a.swaps, _workbook(a), a.engine_games)
         else:

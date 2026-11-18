@@ -1,12 +1,12 @@
 # mtg: tools a conversational AI can think with
 
-Ten read-only verbs over Zach's MTG knowledgebase, with JSON output. A chat model (Claude, ChatGPT, …) calls them to answer exploratory questions such as "what could Terra do beyond the obvious enchantment plan?" The tools return the evidence and how far it is established. The model does the conversation, and the person decides.
+Eleven read-only verbs over Zach's MTG knowledgebase, with JSON output. A chat model (Claude, ChatGPT, …) calls them to answer exploratory questions such as "what could Terra do beyond the obvious enchantment plan?" The tools return the evidence and how far it is established. The model does the conversation, and the person decides.
 
 Standard library only. Python 3.10+.
 
 ## Setup
 
-The verbs read the KB database, which is not in Git. `python3 tools/kb_bootstrap.py install` puts `mtg_cards_v0.2.sqlite` in `kb/` (details in `data/README.md`). `dio` needs no database. `compare` also needs an inventory export (`--workbook`, `MTG_WORKBOOK`, or the newest `data/*.xlsx`).
+The verbs read the KB database, which is not in Git. `python3 tools/kb_bootstrap.py install` puts `mtg_cards_v0.2.sqlite` in `kb/` (details in `data/README.md`). `dio` and `reading` need no database. `compare` also needs an inventory export (`--workbook`, `MTG_WORKBOOK`, or the newest `data/*.xlsx`).
 
 A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_v02.py` from your own export. For building that collection database from a CSV, Sheet export or decklists, see `docs/BRING_YOUR_OWN_COLLECTION.md`.
 
@@ -23,6 +23,7 @@ A different collection: pass `--db path/to/your.sqlite`, built with `kb/migrate_
 | `typal TYPE [--ci C] [--free]` | For a creature-type request: which owned cards have the type, which changelings and chosen-type cards support it, which commanders cover which color identities, and which copies sit in protected decks | `python3 -m mtgtools typal Merfolk` |
 | `release DONOR --to RECEIVER` | If DONOR is retired, which of its cards does RECEIVER already run, which can't it use, which have a free copy anyway, and which does only the decommission unlock? Decks resolve by name or by commander | `python3 -m mtgtools release "Auntie Ool" --to TMNT` |
 | `find --role ROLE [--ci C] [--free]` | Which owned cards does the KB record as performing a function (sac outlets, removal, protection, ...) or, for a family, supporting it (death payoffs)? Each match shows its evidence class (reviewed / detected candidate / inventory tag only), the matched text, whether the ability is repeatable, one-shot or conditional, and availability. Nonexhaustive: no match means none detected | `python3 -m mtgtools find --role sacrifice --ci B --free` |
+| `reading NAME` | What have two readers said about this card or mechanic, did they agree, and has its Oracle text changed since? Rows from the interpretation log, every one a candidate; superseded rows listed apart. A rendered page is `python3 tools/render_readings.py` into gitignored `build/readings/`. No database needed | `python3 -m mtgtools reading "Evolution Sage"` |
 | `check FILE\|-` | For each claim in a draft answer, what does it rest on, what is missing, and does a structured assertion hold? | `echo '[{"text":"…","kind":"inventory","cards":["…"],"assert":{"free_min":1}}]' \| python3 -m mtgtools check -` |
 
 `explore` modes:
