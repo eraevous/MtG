@@ -73,3 +73,11 @@ class Boundaries(unittest.TestCase):
                 self.assertEqual(code, 2)
                 self.assertIn('error', result)
                 self.assertEqual(result['trust_boundary']['operational_authority'], 'none')
+
+
+class VerbTable(unittest.TestCase):
+    def test_every_verb_dispatches_exactly_once(self):
+        sub = next(x for x in cli._parser()._actions if x.dest == 'verb')
+        verbs = set(sub.choices)
+        self.assertEqual(verbs, set(cli.NO_KB) | set(cli.WITH_KB))
+        self.assertFalse(set(cli.NO_KB) & set(cli.WITH_KB))
