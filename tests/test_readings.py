@@ -152,6 +152,32 @@ class Renderer(Sandbox):
                 RR.fetch('Evolution Sage')
         self.assertIn('printed no JSON (exit 1): sqlite3.DatabaseError', str(e.exception))
 
+    # Kate's records for #56 (kate-replies:replies/HO-MTG-20261119-EFWD--b77c61d4598b.md): RENDER-INLINE-01, FETCH-NO-JSON-01.
+    def test_inline_folding_covers_cr_and_crlf_too(self):   # RENDER-INLINE-01
+        for brk in ('\n', '\r\n', '\r'):
+            with self.subTest(brk=repr(brk)):
+                self.assertEqual(RR._inline(f'claude:mtg{brk}{brk}## verified'), 'claude:mtg ## verified')
+        self.assertEqual(RR._inline('Evolution Sage'), 'Evolution Sage')
+        self.assertEqual(RR._inline('a \t  b'), 'a b')
+
+    def test_multiline_fields_stay_quoted_across_blank_lines(self):   # RENDER-INLINE-01
+        quoted = RR._quote('first\n\n## verified\r\nlast')
+        self.assertTrue(all(ln.startswith('>') for ln in quoted.splitlines()), quoted)
+
+    def test_no_json_error_edge_cases(self):   # FETCH-NO-JSON-01
+        for stderr, code, want in (('', 1, '(exit 1): no output'), ('', 0, '(exit 0): no output'),
+                                   ('one\ntwo\nlast line\n', 2, '(exit 2): last line')):
+            with self.subTest(stderr=stderr, code=code):
+                done = type('P', (), {'stdout': '', 'stderr': stderr, 'returncode': code})()
+                with patch.object(RR.subprocess, 'run', return_value=done):
+                    with self.assertRaises(SystemExit) as e:
+                        RR.fetch('Evolution Sage')
+                self.assertIn(want, str(e.exception))
+                self.assertEqual(len(str(e.exception).splitlines()), 1)
+        ok = type('P', (), {'stdout': '{"data": {}}', 'stderr': '', 'returncode': 0})()
+        with patch.object(RR.subprocess, 'run', return_value=ok):
+            self.assertEqual(RR.fetch('Evolution Sage'), {'data': {}})
+
     def test_refuses_an_output_directory_git_tracks(self):
         with self.assertRaises(SystemExit):
             RR.main(['--out', str(ROOT / 'docs' / 'readings'), 'Evolution Sage'])
