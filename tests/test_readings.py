@@ -27,10 +27,11 @@ SHA = 'a' * 64
 
 def row(**kw):
     b = {'utc': '2026-11-18T00:00:00+00:00', 'subject_kind': 'card', 'card_or_mechanic': 'Evolution Sage', 'oracle_id': 'test-oracle-id',
+    # Model names set the family (interpret.family): a claude/gpt pair is cross-family, so KN82 Q1's same-family rule doesn't apply.
          'oracle_text_sha256': SHA, 'contract_id': 'card.Evolution%20Sage.op001', 'in_kb': True, 'kb_release': 'test',
          'question': 'Is proliferate a put-counter event?',
-         'readings': [{'party': 'claude:mtg', 'model': 'm1', 'reading': 'Yes.', 'cr_citations': ['701.27a']},
-                      {'party': 'kate', 'model': 'm2', 'reading': 'Yes.', 'cr_citations': ['122.6']}],
+         'readings': [{'party': 'claude:mtg', 'model': 'claude-test', 'reading': 'Yes.', 'cr_citations': ['701.27a']},
+                      {'party': 'kate', 'model': 'gpt-test', 'reading': 'Yes.', 'cr_citations': ['122.6']}],
          'outcome': 'agreed', 'verification_state': I.CANDIDATE, 'source': 'unit-test', 'recorded_by': 'unit-test',
          'notes': 'KB gap: feeds is empty.', 'supersedes': None}
     b.update(kw)
