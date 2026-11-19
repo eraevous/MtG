@@ -8,7 +8,9 @@
 Each page is a cache of `python3 -m mtgtools reading NAME`, never a home: it is rebuilt from the log and the KB, is
 never committed (build/ is in .gitignore, and the script refuses an output directory git does not ignore), and says
 `candidate` on every reading. It reads the verb's JSON and nothing else, so mtgtools stays a non-writer (the reviewer's
-condition on D-0033). Rendered text is quoted data: readings are printed inside blockquotes, not as headings.
+condition on D-0033). Rendered text is quoted data: readings are printed inside blockquotes, not as headings, and every
+log value printed inside a line (subject, party, model, citations, source, ids) is folded onto that line, so a line
+break in a row cannot start a heading of its own (interpret.check only requires those fields to be non-empty).
 """
 import argparse
 import json
@@ -43,10 +45,19 @@ def slug(name):
 def fetch(name, db=None):
     cmd = [sys.executable, '-m', 'mtgtools'] + (['--db', db] if db else []) + ['reading', name]
     p = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
-    env = json.loads(p.stdout)
+    try:
+        env = json.loads(p.stdout)
+    except json.JSONDecodeError:
+        why = (p.stderr or '').strip().splitlines()[-1:] or ['no output']
+        raise SystemExit(f'mtgtools reading {name!r} printed no JSON (exit {p.returncode}): {why[0]}')
     if 'error' in env:
         raise SystemExit(f'mtgtools reading {name!r}: {env["error"]}')
     return env
+
+
+def _inline(value):
+    """A log value printed inside a line: every line break and run of whitespace becomes one space."""
+    return ' '.join(str(value if value is not None else '').split())
 
 
 def _quote(text):
@@ -55,35 +66,36 @@ def _quote(text):
 
 def render(env):
     d, b = env['data'], env['data']['banner']
-    out = [f"# Readings: {d['subject']} (candidate)\n",
+    out = [f"# Readings: {_inline(d['subject'])} (candidate)\n",
            HEADER.format(head=(b['log_head'] or 'none')[:12], rows=b['log_rows'], chain=b['chain'],
                          release=('none (log only)' if env['grounding']['level'] == 'log_only' else env['collection'].get('release') or 'unknown'), promoted=b['promoted'])]
     if not d['current']:
         out.append('No current rows: nobody has asked about this yet. That is not the same as settled.\n')
     for v in d['current']:
         changed = ' · **Oracle text changed since this reading**' if v['oracle_text_changed_since'] else ''
-        out.append(f"## {v['outcome']} · candidate · `{v['interpretation_id'][:10]}`{changed}\n")
+        out.append(f"## {_inline(v['outcome'])} · candidate · `{_inline(v['interpretation_id'][:10])}`{changed}\n")
         out.append('Question:\n\n' + _quote(v['question']) + '\n')
         for r in v['readings']:
-            cites = ', '.join(r.get('cr_citations') or [])
-            out.append(f"Reading by {r.get('party')} ({r.get('model')}), citing {cites}:\n\n" + _quote(r.get('reading')) + '\n')
+            cites = _inline(', '.join(r.get('cr_citations') or []))
+            out.append(f"Reading by {_inline(r.get('party'))} ({_inline(r.get('model'))}), citing {cites}:\n\n" + _quote(r.get('reading')) + '\n')
             if r.get('uncertainty'):
-                out.append(f"Uncertainty stated by {r.get('party')}:\n\n" + _quote(r['uncertainty']) + '\n')
+                out.append(f"Uncertainty stated by {_inline(r.get('party'))}:\n\n" + _quote(r['uncertainty']) + '\n')
             if r.get('scenario'):
-                out.append(f"Scenario from {r.get('party')}:\n\n" + _quote(r['scenario']) + '\n')
+                out.append(f"Scenario from {_inline(r.get('party'))}:\n\n" + _quote(r['scenario']) + '\n')
         for k, label in (('positive', 'Positive scenario'), ('near_miss', 'Near-miss scenario')):
             if (v.get('scenarios') or {}).get(k):
                 out.append(f'{label}:\n\n' + _quote(v['scenarios'][k]) + '\n')
         if v['notes']:
             out.append('Notes:\n\n' + _quote(v['notes']) + '\n')
-        out.append(f"Source: {v['source']}\n")
+        out.append(f"Source: {_inline(v['source'])}\n")
     if d['superseded']:
         out.append('## Superseded\n')
-        out += [f"- `{v['interpretation_id'][:10]}` ({v['outcome']}) superseded by `{v['superseded_by'][:10]}`" for v in d['superseded']]
+        out += [f"- `{_inline(v['interpretation_id'][:10])}` ({_inline(v['outcome'])}) superseded by `{_inline(v['superseded_by'][:10])}`"
+                for v in d['superseded']]
         out.append('')
     if d['kb_contracts']:
         out.append('## KB contracts (candidate unless semantic_reviewed)\n')
-        out += [f"- `{k['contract_id']}`: {k['queue_state']}" + (f" ({', '.join(k['failed_checks'])})" if k['failed_checks'] else '')
+        out += [f"- `{_inline(k['contract_id'])}`: {_inline(k['queue_state'])}" + (f" ({_inline(', '.join(k['failed_checks']))})" if k['failed_checks'] else '')
                 for k in d['kb_contracts']]
         out.append('')
     out.append('## Limits\n')
