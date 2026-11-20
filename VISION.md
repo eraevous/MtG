@@ -2,7 +2,7 @@
 
 @ai-version: 0.1.1-draft · @ai-generated: true · status: proposed, pending Zach's review
 Reconciled (C-008): build-project Claude's PR #2 draft as the base, plus sections from the AEC shell (what Zach wants, why the ontology came first, observed vs. diagnosis). The project contracts live in `codex_++/project.purpose.md`.
-Sources: Deck Behavioral Model Charter v0.1 (Kate) + amendments 1–4; AEC hub round 2 (Kate); build-side state 2026-10-25.
+Sources: Deck Behavioral Model Charter v0.1 (Kate, Zach's ChatGPT partner thread) + amendments 1–4; AEC hub round 2 (Kate); build-side state 2026-10-25.
 
 ## Purpose
 Build a small, inspectable, AI-assisted system for understanding, constructing and improving Zach's Magic: The Gathering (Commander) decks through three phases:

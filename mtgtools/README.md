@@ -85,7 +85,7 @@ The tools never move cards.
 
 `python3 -m unittest tests.test_mtgtools`. Qualifier matching is tested on hand-built contracts and runs everywhere. The verb tests skip when the KB database is absent.
 
-Kate's eight Terra questions (v1.0, prompt sha256 `eab81c1cb306…`) were run twice against 0.1.0 @ `4951faa`: once by the builder and once by a fresh-context agent. They are no longer held out. They now serve as regression tests, covering Terra × Banishing Light, Terra's own cycle, energy/lore, Era of Innovation, Decoction Module and the `check` verdict. The next blind evaluation needs new prompts.
+The eight Terra questions by Kate (Zach's ChatGPT partner thread) (v1.0, prompt sha256 `eab81c1cb306…`) were run twice against 0.1.0 @ `4951faa`: once by the builder and once by a fresh-context agent. They are no longer held out. They now serve as regression tests, covering Terra × Banishing Light, Terra's own cycle, energy/lore, Era of Innovation, Decoction Module and the `check` verdict. The next blind evaluation needs new prompts.
 
 ### Source text is data, not permission (0.4.3)
 
