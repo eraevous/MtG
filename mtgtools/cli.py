@@ -105,12 +105,34 @@ def _read_claims(path):
         return json.load(f)
 
 
-def main(argv=None):
-    for stream in (sys.stdout, sys.stderr):   # card names carry non-ASCII (Lórien, Æther); a Windows cp1252 console would crash
-        try:
-            stream.reconfigure(encoding='utf-8')
-        except (AttributeError, ValueError):
-            pass
+def _reading(a):
+    """reading works from the interpretation log alone; the KB, when present, adds Oracle-drift and contract checks."""
+    if not Path(a.db).exists():
+        return readings.reading(a.name)
+    with closing(kb.connect(a.db)) as c:
+        return readings.reading(a.name, c)
+
+
+# Verbs that need no KB connection: each takes the parsed arguments.
+NO_KB = {
+    'dio': lambda a: dio.lookup(a.term, a.limit, a.max_chars),
+    'reading': _reading,
+    'compare': lambda a: verbs.compare(a.deck, a.swaps, _workbook(a), a.engine_games),
+}
+# Verbs that read the KB: each takes an open connection and the parsed arguments.
+WITH_KB = {
+    'context': lambda c, a: verbs.context(c, a.deck),
+    'card': lambda c, a: verbs.card(c, a.name),
+    'explore': lambda c, a: verbs.explore(c, a.seed, a.ci, a.deck, a.free, a.mode, a.limit),
+    'hypothesis': lambda c, a: verbs.hypothesis(c, a.a, a.b, a.effect, a.ci),
+    'check': lambda c, a: verbs.check(c, _read_claims(a.claims)),
+    'typal': lambda c, a: verbs.typal(c, a.creature_type, a.ci, a.free),
+    'release': lambda c, a: verbs.release(c, a.donor, a.receiver),
+    'find': lambda c, a: verbs.find(c, a.role, a.ci, a.free, a.limit),
+}
+
+
+def _parser():
     p = argparse.ArgumentParser(prog='mtg', description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('--db', default=str(kb.DEFAULT_DB), help='collection database (default: kb/mtg_cards_v0.2.sqlite)')
     sub = p.add_subparsers(dest='verb', required=True)
@@ -130,7 +152,23 @@ def main(argv=None):
     s = sub.add_parser('find'); s.add_argument('--role', required=True, help='a family (sacrifice, tokens, ...), a role (removal, protection, ...) or a KB capability')
     s.add_argument('--ci'); s.add_argument('--free', action='store_true'); s.add_argument('--limit', type=int, default=40)
     s = sub.add_parser('reading'); s.add_argument('name', help='a card or mechanic as the interpretation log names it')
-    a = p.parse_args(argv)
+    return p
+
+
+def _run(a):
+    if a.verb in NO_KB:
+        return NO_KB[a.verb](a)
+    with closing(kb.connect(a.db)) as c:
+        return WITH_KB[a.verb](c, a)
+
+
+def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):   # card names carry non-ASCII (Lórien, Æther); a Windows cp1252 console would crash
+        try:
+            stream.reconfigure(encoding='utf-8')
+        except (AttributeError, ValueError):
+            pass
+    a = _parser().parse_args(argv)
     query = {k: v for k, v in vars(a).items() if k not in ('verb', 'db') and v not in (None, False)}
     if a.verb not in ('dio', 'reading') and not Path(a.db).exists():
         print(json.dumps(envelope(a.verb, query, a.db, error=f'collection database not found: {a.db}. Install it with '
@@ -138,35 +176,7 @@ def main(argv=None):
                                   'database: python3 -m mtgtools dio TERM'), indent=2))
         return 2
     try:
-        if a.verb == 'dio':
-            data, claims = dio.lookup(a.term, a.limit, a.max_chars)
-        elif a.verb == 'reading':
-            if Path(a.db).exists():
-                with closing(kb.connect(a.db)) as c:
-                    data, claims = readings.reading(a.name, c)
-            else:
-                data, claims = readings.reading(a.name)
-        elif a.verb == 'compare':
-            data, claims = verbs.compare(a.deck, a.swaps, _workbook(a), a.engine_games)
-        else:
-            with closing(kb.connect(a.db)) as c:
-                if a.verb == 'context':
-                    data, claims = verbs.context(c, a.deck)
-                elif a.verb == 'card':
-                    data, claims = verbs.card(c, a.name)
-                elif a.verb == 'explore':
-                    data, claims = verbs.explore(c, a.seed, a.ci, a.deck, a.free, a.mode, a.limit)
-                elif a.verb == 'release':
-                    data, claims = verbs.release(c, a.donor, a.receiver)
-                elif a.verb == 'find':
-                    data, claims = verbs.find(c, a.role, a.ci, a.free, a.limit)
-                elif a.verb == 'typal':
-                    data, claims = verbs.typal(c, a.creature_type, a.ci, a.free)
-                elif a.verb == 'hypothesis':
-                    data, claims = verbs.hypothesis(c, a.a, a.b, a.effect, a.ci)
-                else:
-                    items = _read_claims(a.claims)
-                    data, claims = verbs.check(c, items)
+        data, claims = _run(a)
     except (LookupError, ValueError, KeyError) as e:
         print(json.dumps(envelope(a.verb, query, a.db, error=str(e.args[0] if e.args else e)), indent=2, ensure_ascii=False))
         return 2
