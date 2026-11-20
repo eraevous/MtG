@@ -1,6 +1,6 @@
 # MtG: deck interaction, building and evaluation tools
 
-Zach's Magic: The Gathering (Commander) project. It holds the tools that help him **conceive, explore and compile** decks from the cards he actually owns, plus the governance layer (AEC/Codex++) that keeps AI-assisted development of those tools aimed at that purpose.
+Zach's Magic: The Gathering (Commander) project. It holds the tools that help him **conceive, explore and compile** decks from the cards he actually owns, plus the governance layer that keeps AI-assisted development of those tools aimed at that purpose. That layer is AEC (formerly Codex++; its upstream project is now named Telosmith): requirements traceability from purpose to code, with drift detection when the two come apart.
 
 > **Status (2026-10-26):** the 2026-10-25 handoff has been imported as-is. Nothing in the mechanics data is human-verified. Every operation and contract is a *candidate*. The evaluator's numbers are descriptive profiles, not rankings. See `docs/handoff/00_CURRENT_STATE.md`.
 
@@ -25,15 +25,15 @@ The repo is public; the inventory Sheet it was built around is not. To run the e
 | `review_packet/` | 330 candidate operations in 88 mechanical classes, waiting for Zach's class-level verdicts | none (a review queue) |
 | `evaluations/` | Deck reports from 2026-10-25 for all 13 decks, the evaluator README and CHANGELOG, and later audits (role detector, incremental tool value, interaction fixtures, practical regression) | descriptive only |
 | `predictions/` | The **frozen** 2026-10-20 predictions. Never edit them; score them only against reported games | prospective evidence |
-| `decisions/` | Append-only design decisions and versioned criteria | provenance of design intent |
-| `challenges/` | Append-only unresolved objections and known defects | n/a |
+| `decisions/` | Append-only design decisions (in the manner of architecture decision records, ADRs) and versioned criteria | provenance of design intent |
+| `challenges/` | Append-only unresolved objections (effective challenge, in model-risk terms) and known defects | n/a |
 | `codex_++/` | Project purpose, module purpose files, intent notes, drift fixtures | design intent |
 | `mtgtools/` | `python3 -m mtgtools`: ten read-only verbs over the KB with JSON out (`card`, `explore`, `hypothesis`, `dio`, `typal`, `find`, ...); the agent-facing tool (`mtgtools/README.md`, `docs/AGENT_GUIDE.md`) | none (retrieval with evidence grades) |
 | `decks/` | `collection_policy.json` (protected decks and availability tiers) and deck charters | Zach's allocation policy and deck intent |
 | `kernel/` | Semantic kernel v0.2.1e and its invariant suite, regression material superseded by `kb/` and `grammar/` (`kernel/README.md`) | n/a |
 | `collection/` | Bring-your-own collection database: schema, importers (CSV, Sheet .xlsx, decklists), Scryfall enrichment | the user's ownership and allocation (for Zach, a snapshot of the Sheet) |
 | `tools/` | `kb_bootstrap.py` (KB status and install; pin in `kb_release.json`), `drift_check.py` (AEC checks; rules in `drift_rules.json`), `aec_sync.py`, `asof_kb.py`, `score_predictions.py`, `ast_dependency_extractor.py` | n/a |
-| `docs/` | `AGENT_GUIDE.md`, `BRING_YOUR_OWN_COLLECTION.md`, `DOCUMENT_PRECEDENCE.md`, the 2026-10-25 handoff snapshot (`handoff/`), the proposed charter (`charter/`), AEC notes, ChatGPT project instructions, game log, proposals | n/a |
+| `docs/` | `AGENT_GUIDE.md`, `BRING_YOUR_OWN_COLLECTION.md`, `DOCUMENT_PRECEDENCE.md`, the 2026-10-25 handoff snapshot (`handoff/`), the proposed charter (`charter/`), AEC notes, the project instructions for ChatGPT (Kate, Zach's ChatGPT partner thread), game log, proposals | n/a |
 | `data/` | Where the gitignored databases and inventory export go (see `data/README.md`) | n/a |
 
 Zach's inventory authority is the Google Sheet "MTG Master Inventory — Canonical", not anything in this repo (see `kb/inventory_adapter.py`). Anyone else's is their own collection database (`collection/`).
