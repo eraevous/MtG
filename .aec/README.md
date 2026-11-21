@@ -14,12 +14,20 @@ This directory puts the Deck Interaction Ontology (DIO) into AEC's records, so t
 ## Commands
 
 ```bash
-pip install "git+https://github.com/eraevous/Telosmith.git@$(python3 -c "import json;print(json.load(open('tools/aec_upstream.json'))['commit'])")"   # or PYTHONPATH=../Telosmith/src at that commit
+pip install "git+https://github.com/eraevous/Telosmith.git@$(python3 -c "import json;print(json.load(open('tools/aec_upstream.json'))['commit'])")"   # the editor hook needs exactly this install (below); for CLI use, PYTHONPATH=../Telosmith/src at that commit also works
 python3 -m aec edges . -o .aec/edges.jsonl && python3 -m aec check .aec/records.jsonl --edges .aec/edges.jsonl   # structural; prints each DIO anchor's state, fails on dangling code: links
 python3 -m aec impact .aec/records.jsonl .aec/scenarios/dio_v312_authorized.jsonl
 python3 -m aec source show SRC-dio@1 --max-lines 40          # quote the pinned DIO sections
 python3 tools/drift_check.py                                                       # 'governed' and 'mirror' need no AEC checkout
 ```
+
+## The editor hook (one line, since 2026-11-20)
+
+`.claude/settings.json` runs Telosmith's hook through the one-line launcher from `aec init --hook-style line` (HO-AEC-20261117-DBN5, Telosmith propagation step D). The hook body (`aec hook project`: symlink refusal, edges refresh, `aec check`, `code-impact`) lives in the installed package, so a Telosmith fix reaches this repo by moving the pin, not by editing the settings file.
+
+- **It runs only the aec pinned here.** Before any aec code runs, the launcher reads `commit` from `tools/aec_upstream.json` and accepts only a non-editable `pip install git+…@<that commit>` outside this repo. A `pip install --user` works too (Telosmith#99). A source checkout on `PYTHONPATH`, an editable install, another commit or no install exits 1 with one line saying which and the install command; for another commit the line names both the pinned and the installed commit. **Not supported, on purpose:** a source checkout or editable install, which the old inline hook did run. Exit codes otherwise match the old inline hook (0 clean, 2 records problem or symlink refusal).
+- **Moving the pin moves the hook.** After a pin PR from `aec-upstream.yml` merges, reinstall with the command above or the hook refuses until you do.
+- **Rollback:** revert the PR that installed the line (it restores the hook and the pin together), or, with Telosmith installed at the pinned commit (b91f78b or later), run `aec init --hooks --hook-style inline` in an empty directory and copy the second hook entry of its `.aec/snippets/claude-settings.json` back over this one.
 
 ## Keeping AEC current (D-0022)
 
