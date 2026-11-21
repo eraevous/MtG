@@ -1,6 +1,6 @@
 # Challenges
 
-Unresolved objections, open tensions and known defects that must not disappear just because a task finished or a spec changed. One JSON object per line in `ledger.jsonl`, append only (CI-enforced).
+This is the repo's effective-challenge log (the term is from model risk management, SR 11-7): unresolved objections, open tensions and known defects that must not disappear just because a task finished or a spec changed. One JSON object per line in `ledger.jsonl`, append only (CI-enforced).
 
 Fields: `id` (C-NNN), `utc`, `raised_by`, `against` (contract, decision, file or doc), `claim`, `evidence`, `severity` (`info`, `minor`, `major`, `blocking`), `status` (`open`, `resolved`, `wont_fix`, `superseded`), `disposition`.
 
