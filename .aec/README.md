@@ -1,5 +1,7 @@
 # .aec: AEC reasoning records for MtG
 
+AEC is requirements traceability from purpose to code, with drift detection: when a source such as the DIO changes, `aec impact` lists what rested on it to re-examine (suspect links). Its upstream is Telosmith.
+
 Status: **accepted** (D-0021, Zach, 2026-11-01). Format: AEC v0.3 records, upstream `eraevous/Telosmith` (formerly `eraevous/AEC`; moved 2026-11-05, DEC-095) pinned by commit in `tools/aec_upstream.json`. CI also runs Telosmith's `code-impact` (report-only, job summary) and `.claude/settings.json` runs its hook beside `tools/drift_check.py`; both report, neither blocks an edit.
 
 This directory puts the Deck Interaction Ontology (DIO) into AEC's records, so that a DIO revision can be checked for impact before anyone has to remember what rests on it. Why, and what was compared, is in `docs/aec/DIO_AEC_REVIEW.md`.

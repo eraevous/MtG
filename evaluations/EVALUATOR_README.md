@@ -38,7 +38,7 @@ mtgeval --workbook /path/to/export.xlsx deck Vraska
 | What happens if this card moves? | `transfer CARD FROM TO [--backfill C] [--cut C]` | [Cauldron Dina → Necrobloom](examples/transfer_cauldron.md) |
 | Where should one free copy go? | `portfolio CARD [--objective ROLE]` | [Duty Beyond Death](examples/portfolio_duty.md) |
 
-Kate's example ("Evaluate Sharuum against my entire free pool, identify the three weakest functional areas, and show me the best five potential upgrades without raiding Dina") is this one command:
+An example from Kate, Zach's ChatGPT partner thread ("Evaluate Sharuum against my entire free pool, identify the three weakest functional areas, and show me the best five potential upgrades without raiding Dina") is this one command:
 
 ```sh
 mtgeval upgrades Sharuum --protect Dina --transfers --top 5

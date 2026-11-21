@@ -1,6 +1,6 @@
 # Decisions
 
-An append-only record of **design decisions** (Kate's amendment, 2026-10-26). This is separate from KB contract reviews, which live in `kb/overrides/review_overlay.jsonl`.
+An append-only record of **design decisions**, in the manner of architecture decision records (ADRs): a later line can supersede an earlier one, which stays as written. The log was Kate's amendment (Kate is Zach's ChatGPT partner thread), 2026-10-26. This is separate from KB contract reviews, which live in `kb/overrides/review_overlay.jsonl`.
 
 A decision here is a card swap, the acceptance or rejection of an architectural thesis, a change to the success criteria, a scope change, or a change to a purpose contract. One JSON object per line in `decision_events.jsonl`:
 
