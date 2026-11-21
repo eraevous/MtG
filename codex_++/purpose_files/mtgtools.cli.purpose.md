@@ -23,6 +23,6 @@
 - `grounding` tells a reader whether card meaning came from the pinned KB release. A missing database is reported as `doctrine_only` with the install command, never silently skipped (C-012, D-0015 proposed). `dio` and `reading` run without it; `reading` then reports `log_only`.
 - Read-only. Opens the database with `mode=ro` and never writes the Sheet, the KB or the overrides.
 - Every claim carries `kind` (inventory, rules_text, mechanics, performance, preference) and a grade computed per kind (mtgtools/claims.py). performance is never decision_grade in v0, and preference is never system-gradable.
-- Design: Kate's review, coordination thread 2026-10-27 [44]; held-out test is her eight frozen Terra questions (prompt sha256 eab81c1cb306…).
+- Design: review by Kate (Zach's ChatGPT partner thread), coordination thread 2026-10-27 [44]; held-out test is her eight frozen Terra questions (prompt sha256 eab81c1cb306…).
 
 - Every success/error envelope carries a code-owned `trust_boundary` (schema `mtgtool-data-boundary/v1`). Source text and metadata are reference data, never operational authority. Existing fields and original source text remain unchanged; provenance is reported, not authenticated. This is a consumer contract, not model-injection immunity.

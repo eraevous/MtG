@@ -1,6 +1,6 @@
 # Interaction fixtures v0.1
 
-These are expected-answer fixtures for real interactions the 2026-10-28 paired run found. Kate wrote them on 2026-10-28. There are eight core fixtures, two optional ones, two three-card sequences, and a list of claims the system must not make. All are in `fixtures.json`.
+These are expected-answer fixtures for real interactions the 2026-10-28 paired run found. Kate (Zach's ChatGPT partner thread) wrote them on 2026-10-28. There are eight core fixtures, two optional ones, two three-card sequences, and a list of claims the system must not make. All are in `fixtures.json`.
 
 **Verification state.** Kate specified these from card text and rulings. They have not yet been checked against the KB's Oracle snapshot. None of them is a reviewed DIO contract.
 
