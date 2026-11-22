@@ -11,6 +11,8 @@ All of these are machine-derived candidates, and none is reviewed.
 
 ## Kate's acceptance criteria (2026-10-29)
 
+_Kate is Zach's ChatGPT partner thread._
+
 | Requirement | Status |
 |---|---|
 | Gold Pan: fixing via Treasure | detected (`tests/test_role_classifier.py`) |

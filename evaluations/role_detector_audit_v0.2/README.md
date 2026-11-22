@@ -1,6 +1,6 @@
 # Role audit v0.2: blind review of undetected roles
 
-- **Selections (frozen, accepted by Kate on 2026-10-28):**
+- **Selections (frozen, accepted by Kate (Zach's ChatGPT partner thread) on 2026-10-28):**
   - `blind_packet.jsonl` has 360 card-role pairs with no claim of that role from any source: 9 roles × in-deck/outside × 20, seeded. Population sizes are in `population.json`.
   - `challenge_packet.jsonl` has 54 hard-mechanism items. These are for mechanism checks only and are never used for population estimates.
 - **Reviewer inputs:** `reviewer/batch_01..09.jsonl` holds all 414 items shuffled together under opaque ids R001–R414, with only item, role, card, type line and Oracle text. Give reviewers these batches and `REVIEWER_GUIDE.md`, and nothing else.

@@ -1,6 +1,6 @@
 # Practical-question regression corpus v0.1 (frozen 2026-11-01)
 
-These are the ten everyday questions from the first practical run (mtgtools 0.3.0, KB r20261031). The builder chose and graded them, so per Kate (2026-11-01) they are regression cases, not held-out evidence. The next blind test uses real questions from Zach and Steph.
+These are the ten everyday questions from the first practical run (mtgtools 0.3.0, KB r20261031). The builder chose and graded them, so per Kate (Zach's ChatGPT partner thread) (2026-11-01) they are regression cases, not held-out evidence. The next blind test uses real questions from Zach and Steph.
 
 | # | Question | Verb | 0.3.0 behavior | Expected now | Test |
 |---|---|---|---|---|---|
