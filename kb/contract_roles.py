@@ -198,6 +198,8 @@ def open_grounded_evaluator(database, **kw):
     install(ev.inv)
     wrap_card(ev)
     wrap_reports(ev)
+    from kb.profile_reports import install_profiles
+    install_profiles(ev)
     return ev
 
 
@@ -218,7 +220,7 @@ def wrap_reports(ev):
         def wrapped(*a, _plain=plain, **k):
             res = _plain(*a, **k)
             if isinstance(res, dict) and 'limitations' in res:
-                res['limitations'].append(roles_line(ev))
+                res['limitations'] = list(res['limitations']) + [roles_line(ev)]
                 if isinstance(res.get('data'), dict): res['data']['role_source'] = dict(ev.inv.role_source)
             return res
         setattr(ev, meth, wrapped)
@@ -245,7 +247,7 @@ def wrap_card(ev):
                 row['pattern status'] = e.get('pattern_status', '')
                 row['contract says'] = e.get('contract_says', '')
                 row['fallback reason'] = e.get('fallback_reason', '')
-        res['limitations'].append(roles_line(ev))
+        res['limitations'] = list(res['limitations']) + [roles_line(ev)]
         return res
     ev.card = card
     return ev

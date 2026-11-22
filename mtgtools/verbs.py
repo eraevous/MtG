@@ -889,7 +889,8 @@ def compare(deck, swaps, workbook, engine_games=0):
     sys.path.insert(0, str(ROOT / 'kb' / 'vendor'))
     from mtg_eval.api import Evaluator
     from mtg_eval import report
-    ev = Evaluator(str(workbook), engine_games=engine_games)
+    from kb.profile_reports import install_profiles
+    ev = install_profiles(Evaluator(str(workbook), engine_games=engine_games))
     res = json.loads(report.to_json(ev.compare(deck, [tuple((x.split('=', 1) + [''])[:2]) for x in swaps])))
     claims = [claim(f'Evaluator profile change for {deck} with swaps {swaps}; descriptive only.', 'performance', 'evaluator_model',
                     evidence=['kb/vendor/mtg_eval compare', f'workbook {Path(workbook).name}'])]
