@@ -5,7 +5,7 @@
 @ai-source-file: kb/profile_reports.py
 @ai-role: evaluator_adapter
 @ai-intent: "Give current decks and proposed exchanges the same numeric before/after representation."
-@ai-version: 0.1.0
+@ai-version: 0.1.1
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -18,3 +18,5 @@
 Uses existing evaluator deck/card alias resolution and DeckState. Does not change recommendations, goldfish simulation, allocations or pinned semantics. Build restores its temporary _state capture even on failure; the existing build and this adapter are not thread safe. Other report methods and direct unwrapped Evaluator/bridge_v02 callers are explicitly out of scope. Legacy goldfish sections keep their original semantics and are not strict composition demand.
 
 Tests: tests/test_deck_profile.py, including all four real vendor reports over a synthetic collection database through the existing collection adapter.
+
+0.1.1 display correction: rendered panels expose absolute composition, curve, candidate supply, strict demand and all draw windows for current/full proposals and each individual swap or incomplete cut. Probability values are percentages and their changes are percentage points; nulls render as unknown. The numeric profile payload and model are unchanged. Synthetic rendered-output tests cover 38-to-40 lands, standalone cuts, upgrade/build panels, unresolved faces and equal-source timing-unknown controls.

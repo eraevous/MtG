@@ -1,6 +1,6 @@
 # Deterministic composition profiles (draft)
 
-The grounded evaluator and `mtgtools compare` attach `data.composition_profile` to their reports. It uses the existing read-only inventory adapter and the same physical `DeckState` as the evaluator. It is descriptive and exploratory, not a ranking or a playability certificate.
+The grounded evaluator and `mtgtools compare` attach `data.composition_profile` to their reports. It uses the existing read-only inventory adapter and the same physical `DeckState` as the evaluator. It is descriptive and exploratory, not a ranking or a playability certificate. Rendered reports show full current/proposed panels and each individual swap or standalone cut, including absolute curves, supply, demand and draw probabilities. Probability values display as percentages, changes as percentage points, and nulls as `unknown`; the JSON probability units remain unchanged.
 
 ```python
 from kb.contract_roles import open_grounded_evaluator

@@ -1,5 +1,6 @@
 """Synthetic physical lists only: regressions for composition, uncertainty and adapters."""
 import json
+import copy
 from fractions import Fraction
 from pathlib import Path
 import sqlite3
@@ -220,7 +221,7 @@ class Reports(unittest.TestCase):
         install_profiles(self.ev)
         r = self.ev.deck(name='alias')
         self.assertEqual(r['data']['composition_profile']['library_count'], 99)
-        self.assertEqual(len(r['sections']), 1)
+        self.assertEqual(sum(h.startswith('Physical composition') for h, _ in r['sections']), 1)
     def test_compare_generator_and_resolved_names(self):
         p = self.ev.compare(deck='alias', swaps=iter([('Outlet Tutor', 'outlet alias')]))['data']['composition_profile']
         self.assertEqual(p['after']['roles']['sac_outlet']['supported_slots'], 1)
@@ -241,6 +242,79 @@ class Reports(unittest.TestCase):
             data, claims = compare('alias', ['Outlet Tutor=Outlet'], 'synthetic.xlsx')
         self.assertIn('composition_profile', data['evaluator']['data'])
         self.assertTrue(claims)
+
+
+class RenderedProfiles(unittest.TestCase):
+    def setUp(self):
+        self.ev = install_profiles(ReportEvaluator())
+        self.ev.inv.decks['Synthetic'] = [('Leader', 1, 'Commander'), ('Basic', 38, 'Land'),
+                                          ('Outlet Tutor', 1, 'Nonland'), ('Spell', 60, 'Nonland')]
+
+    def render(self, result):
+        from mtg_eval.report import markdown
+        return markdown(dict(title='Synthetic display', summary=[], conclusive=(False, 'synthetic'), **result))
+
+    def test_38_to_40_full_proposal_absolute_values_probabilities_and_individuals(self):
+        result = self.ev.compare('Synthetic', [('Spell', 'Basic'), ('Spell', 'Basic')])
+        text = self.render(result)
+        self.assertIn('Current vs full proposal', text)
+        self.assertIn('| land: known count (types overlap) | 38 cards | 40 cards | +2 cards |', text)
+        self.assertIn('| land: percent of library | 38.384 % | 40.404 % | +2.020 percentage points |', text)
+        profile_data = result['data']['composition_profile']
+        before = profile_data['before']['odds']['opening_seven']['land_cards']['at_least_3'] * 100
+        after = profile_data['after']['odds']['opening_seven']['land_cards']['at_least_3'] * 100
+        self.assertIn(f'| P(at least 3 land cards) | {before:.3f} % | {after:.3f} % | {after-before:+.3f} percentage points |', text)
+        self.assertIn('P(exactly 4 land cards)', text)
+        self.assertIn('P(at least 1 detected tutor slot)', text)
+        self.assertIn('Turn 3 on play, skip first draw (9 seen)', text)
+        self.assertIn('Turn 3 on draw / multiplayer (10 seen)', text)
+        self.assertIn('no mulligan', text)
+        self.assertIn('Individual swap 1: Spell -> Basic', text)
+        self.assertIn('Individual swap 2: Spell -> Basic', text)
+        self.assertIn('| land: known count (types overlap) | 38 cards | 39 cards | +1 cards |', text)
+        for label in ('Nonland MV 6', 'Library spell demand', 'Commander demand (separate)',
+                      'Generic mana', 'True C mana', '{G/W} conditional, not paid',
+                      'W potential sources (colors overlap)', 'Mean known nonland mana value'):
+            self.assertIn(label, text)
+
+    def test_standalone_cut_is_incomplete_with_full_panel(self):
+        text = self.render(self.ev.compare('Synthetic', [('Basic', None)]))
+        self.assertIn('Standalone cut 1: Basic -> (no addition)', text)
+        self.assertIn('proposed: incomplete (98 library cards)', text)
+        self.assertIn('| land: known count (types overlap) | 38 cards | 37 cards | -1 cards |', text)
+        self.assertIn('Incomplete-list odds describe only supplied slots', text)
+        self.assertIn('Seen is not castable, a land drop or mill', text)
+
+    def test_upgrade_panels_and_single_build(self):
+        text = self.render(self.ev.upgrades('Synthetic'))
+        self.assertIn('Individual swap 1: Outlet Tutor -> Outlet', text)
+        self.assertIn('Standalone cut 1: Outlet Tutor -> (no addition)', text)
+        self.assertIn('proposed: incomplete (98 library cards)', text)
+        build = self.render(self.ev.build('Leader', n_lands=38))
+        self.assertIn('Proposed build list', build)
+        self.assertIn('| land: known count (types overlap) | 38 cards |', build)
+
+    def test_equal_potential_sources_do_not_hide_unknown_timing(self):
+        for name in ('Dual', 'Tired Dual'):
+            self.ev.inv.cards[name]['Produces'] = 'WG'
+        self.ev.inv.decks['Synthetic'][1] = ('Basic', 37, 'Land')
+        self.ev.inv.decks['Synthetic'].append(('Dual', 1, 'Land'))
+        text = self.render(self.ev.compare('Synthetic', [('Dual', 'Tired Dual')]))
+        self.assertIn('| W potential sources (colors overlap) | 1 cards | 1 cards | +0 cards |', text)
+        self.assertIn('| Usable availability: opening_usable_sources | unknown | unknown | unknown |', text)
+        self.assertIn('Entry hints are candidate evidence, not opening mana availability', text)
+
+    def test_unknown_odds_and_json_payload_are_preserved(self):
+        from kb.profile_reports import composition_sections
+        result = self.ev.compare('Synthetic', [('Basic', 'Flexible')])
+        payload = result['data']['composition_profile']
+        snapshot = copy.deepcopy(payload)
+        composition_sections(payload)
+        self.assertEqual(payload, snapshot)
+        text = self.render(result)
+        row = next(line for line in text.splitlines() if line.startswith('| P(0–1 land cards)'))
+        self.assertTrue(row.endswith('| unknown | unknown |'))
+        self.assertIn('unresolved optional faces: Flexible', text)
 
 
 class ExistingEvaluatorIntegration(unittest.TestCase):
