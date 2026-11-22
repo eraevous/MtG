@@ -45,6 +45,17 @@ class Boundaries(unittest.TestCase):
             self.assertNotIn(PAYLOAD, result['grounding']['note'])
             self.assertEqual(result['trust_boundary']['operational_authority'], 'none')
 
+    def test_envelope_reads_the_manifest_once_for_collection_and_grounding(self):
+        with tempfile.TemporaryDirectory() as td:
+            db = Path(td) / 'db.sqlite'
+            db.touch()
+            (Path(td) / 'SOURCE_MANIFEST.json').write_text(json.dumps({'release': 'r-test', 'as_of': {'date': '2026-01-01'}}))
+            with patch.object(cli.kb, 'release', wraps=cli.kb.release) as release:
+                result = cli.envelope('card', {}, db)
+            self.assertEqual(release.call_count, 1)
+            self.assertEqual(result['collection']['release'], result['grounding']['release'])
+            self.assertEqual(result['grounding']['as_of'], '2026-01-01')
+
     def test_scryfall_oracle_text_is_not_scrubbed(self):
         self.assertEqual(fields_from_scryfall({'oracle_text': PAYLOAD})['oracle_text'], PAYLOAD)
 
