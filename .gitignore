@@ -218,3 +218,9 @@ data/*
 # Telosmith snapshots: the Claude hook's HEAD snapshot and CI's merge-base snapshot, regenerated on every run
 .aec/hook-before.jsonl
 .aec/before.jsonl
+
+# Inventory-derived per-deck working files (ownership/allocation of Zach's cards) stay off public main (DEC-265 (9), HO-MTG-20261123-X6QE).
+# Keep them outside the repo or under private/; the archived copy lives in relay-kit-private.
+vraska_hits.json
+*_hits.json
+private/
