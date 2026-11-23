@@ -1,5 +1,7 @@
 # mtg-eval 0.3.0: Commander evaluation over the canonical inventory
 
+> **In this repository.** This is the 0.3.0 release README, carried over as written. Here the package is the vendored copy `kb/vendor/mtg_eval` (0.3.0+kb4), so "this folder" below means `kb/vendor`: run `cd kb/vendor && python3 -m mtg_eval --workbook /path/to/export.xlsx deck Vraska`. The release's `examples/`, its `tests/` (`test_engine.py`, `test_regression.py`, the `expected_<sha12>.json` snapshots) and `tools/make_examples.sh`, `tools/make_expected.py` and `tools/predict.py` stayed with the release and are not in this repository. The nearest reports here are in [`current_evaluations_20261025/`](current_evaluations_20261025/); the Example column links to those where one exists and names the release example otherwise.
+
 `mtg-eval` is one program for card, deck, module, swap, build, inventory, transfer and portfolio questions. Every question reads the same inventory and the same card record.
 
 The program never writes to the inventory. Swaps and transfers are hypothetical: they are reported, never applied.
@@ -28,15 +30,15 @@ mtgeval --workbook /path/to/export.xlsx deck Vraska
 
 | Question | Command | Example |
 |---|---|---|
-| What does this card do, and what does the evaluator miss? | `card NAME [--deck D]` | [card_altered_ego](examples/card_altered_ego.md), [card_inspiring_call](examples/card_inspiring_call.md) |
-| How does this deck work, and where is it thin? | `deck NAME` | [Vraska](examples/deck_Vraska.md), [Sharuum](examples/deck_Sharuum.md), [Shanid](examples/deck_Shanid.md), [Brigid](examples/deck_Brigid.md), [Rootha](examples/deck_Rootha.md), [TMNT](examples/deck_TMNT.md) |
-| How often can this multi-card module assemble? | `module DECK MODULE` | [TMNT go_wide](examples/module_tmnt_go_wide.md), [Dina aristocrats](examples/module_dina_aristocrats.md) |
-| Is this substitution better? | `compare DECK "OUT=IN" ...` | [TMNT Knockout](examples/compare_tmnt_knockout.md), [Counter Blitz Duty](examples/compare_counter_blitz_duty.md) |
-| What are the best upgrades? | `upgrades DECK [--protect D ...] [--transfers] [--top 5]` | [Sharuum, never from Dina](examples/upgrades_sharuum_no_dina.md), [Vraska](examples/upgrades_vraska.md) |
-| Build a deck around this commander from free cards | `build COMMANDER` | [Balmor](examples/build_balmor.md) |
-| State of the collection | `inventory` | [inventory](examples/inventory.md) |
-| What happens if this card moves? | `transfer CARD FROM TO [--backfill C] [--cut C]` | [Cauldron Dina → Necrobloom](examples/transfer_cauldron.md) |
-| Where should one free copy go? | `portfolio CARD [--objective ROLE]` | [Duty Beyond Death](examples/portfolio_duty.md) |
+| What does this card do, and what does the evaluator miss? | `card NAME [--deck D]` | card_altered_ego, card_inspiring_call (release examples) |
+| How does this deck work, and where is it thin? | `deck NAME` | [Vraska](current_evaluations_20261025/deck_Vraska.md), [Sharuum](current_evaluations_20261025/deck_Sharuum.md), [Shanid](current_evaluations_20261025/deck_Shanid.md), [Brigid](current_evaluations_20261025/deck_Brigid.md), [Rootha](current_evaluations_20261025/deck_Rootha.md), [TMNT](current_evaluations_20261025/deck_TMNT.md) |
+| How often can this multi-card module assemble? | `module DECK MODULE` | TMNT go_wide, Dina aristocrats (release examples) |
+| Is this substitution better? | `compare DECK "OUT=IN" ...` | TMNT Knockout, Counter Blitz Duty (release examples) |
+| What are the best upgrades? | `upgrades DECK [--protect D ...] [--transfers] [--top 5]` | Sharuum never from Dina, Vraska (release examples) |
+| Build a deck around this commander from free cards | `build COMMANDER` | Balmor (release example) |
+| State of the collection | `inventory` | [inventory](current_evaluations_20261025/00_inventory.md) |
+| What happens if this card moves? | `transfer CARD FROM TO [--backfill C] [--cut C]` | Cauldron Dina → Necrobloom (release example) |
+| Where should one free copy go? | `portfolio CARD [--objective ROLE]` | Duty Beyond Death (release example) |
 
 An example from Kate, Zach's ChatGPT partner thread ("Evaluate Sharuum against my entire free pool, identify the three weakest functional areas, and show me the best five potential upgrades without raiding Dina") is this one command:
 

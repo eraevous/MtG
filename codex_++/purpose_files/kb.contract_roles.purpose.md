@@ -5,7 +5,7 @@
 @ai-source-file: kb/contract_roles.py
 @ai-role: evaluator_adapter
 @ai-intent: "Downstream consumes upstream: the evaluator's role claims come from the contracts the KB owns, with every role carrying its basis."
-@ai-version: 0.1.6
+@ai-version: 0.1.7
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -31,3 +31,5 @@
 - 0.1.5 (Copilot review on #42, second pass): a false hand label records `contradicted` only when a contract would otherwise support the role (otherwise nothing, so no false uncertainty); contract evidence keeps the prior oracle/tag evidence.
 
 - 0.1.6: open_grounded_evaluator installs the additive physical composition adapter for deck/compare/upgrades/build. Roles and pinned vendor semantics are unchanged; limitations lists are copied before extension to avoid mutating vendor shared constants. See docs/DECK_COMPOSITION_PROFILE.md for incomplete-list and data-gap semantics.
+
+0.1.7: role report wrappers preserve the underlying callable signature with functools.wraps, so the profile adapter binds positional and keyword calls through open_grounded_evaluator. Synthetic factory regressions execute deck, compare, upgrades and build while checking both role provenance and composition output.

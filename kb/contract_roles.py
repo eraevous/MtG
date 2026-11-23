@@ -24,6 +24,7 @@ Use open_grounded_evaluator() instead of bridge_v02.open_evaluator(); the defaul
 """
 import json, sqlite3
 from pathlib import Path
+from functools import wraps
 
 HERE = Path(__file__).resolve().parent
 MAP_VERSION = 'contract-roles-0.1.5'
@@ -217,6 +218,7 @@ def wrap_reports(ev):
     for meth in REPORTS:
         plain = getattr(ev, meth, None)
         if plain is None: continue
+        @wraps(plain)
         def wrapped(*a, _plain=plain, **k):
             res = _plain(*a, **k)
             if isinstance(res, dict) and 'limitations' in res:

@@ -5,6 +5,7 @@ kb.mana; optional mana production facts belong to current KB contracts. Candidat
 production is not a claim of opening availability, castability or land drops.
 """
 from collections import Counter
+from copy import deepcopy
 from fractions import Fraction
 from math import comb, isfinite
 import json
@@ -128,6 +129,41 @@ def mana_evidence(inv, name):
             'colors_incomplete': untyped or not evidence, 'contracts': evidence}
 
 
+def _role_measure(evidence, n, aliases):
+    """Count each side's physical slots; absent role evidence is unknown coverage."""
+    supported = uncertain = None
+    if evidence is not None and all('quantity' in v and 'roles' in v for v in evidence.values()) and sum(v['quantity'] for v in evidence.values()) == n:
+        supported = uncertain = 0
+        for entry in evidence.values():
+            rec, quantity = entry['roles'], entry['quantity']
+            if any(rec.get(r, {}).get('status') == 'supported' for r in aliases):
+                supported += quantity
+            elif not any(r in rec for r in aliases) or any(rec.get(r, {}).get('status') in ('tag_only', 'contradicted') for r in aliases):
+                uncertain += quantity
+    return {'supported_slots': supported, 'unknown_slots': uncertain, 'aliases': sorted(aliases),
+            'percent_library': 100 * supported / n if n and supported is not None else None}
+
+
+def _align_roles(before, after):
+    """Use a stable compared vocabulary without mutating either caller's snapshot.
+
+    Only omitted roles are computed from that side's own evidence. Explicit null
+    metrics/probabilities remain not computed; no other side's coverage is copied.
+    """
+    before, after = deepcopy(before), deepcopy(after)
+    vocabulary = before['roles'].keys() | after['roles'].keys()
+    for side, other in ((before, after), (after, before)):
+        for role in sorted(vocabulary - side['roles'].keys()):
+            aliases = set(other['roles'][role].get('aliases', ())) | {role}
+            measure = _role_measure(side.get('card_evidence'), side['library_count'], aliases)
+            side['roles'][role] = measure
+            for window in side['odds'].values():
+                k = measure['supported_slots']
+                probability = (distribution(side['library_count'], k, window['cards_seen']) or {}).get('at_least_1') if k is not None else None
+                window['roles'].setdefault(role, probability)
+    return before, after
+
+
 def profile(inv, library, commanders=(), companion=(), role_groups=None):
     """One reusable profile for an explicit list of physical slots (multiplicity retained).
 
@@ -187,14 +223,7 @@ def profile(inv, library, commanders=(), companion=(), role_groups=None):
     all_roles = set(role_groups or {}) | {r for rec in records.values() for r in rec}
     for role in sorted(all_roles):
         aliases = set((role_groups or {}).get(role, [])) | {role}
-        supported, uncertain = set(), set()
-        for i, name in enumerate(library):
-            rec = records[name]
-            if any(rec.get(r, {}).get('status') == 'supported' for r in aliases): supported.add(i)
-            if name not in inv.cards or not any(r in rec for r in aliases) or any(
-                    rec.get(r, {}).get('status') in ('tag_only', 'contradicted') for r in aliases): uncertain.add(i)
-        roles[role] = {'supported_slots': len(supported), 'unknown_slots': len(uncertain - supported),
-                       'aliases': sorted(aliases), 'percent_library': 100 * len(supported) / n if n else None}
+        roles[role] = _role_measure(facts, n, aliases)
     for i, name in enumerate(library):
         for c in mana_cache[name]['colors']: color_slots[c].add(i)
     complete = n + len(commanders) == 100 and len(commanders) in (1, 2)
@@ -230,9 +259,11 @@ def profile(inv, library, commanders=(), companion=(), role_groups=None):
 def compare_profiles(before, after):
     """Numeric leaf deltas with units implied by their path; unknown stays null.
 
-    Missing categories in a count map mean zero (e.g. a role or curve bin lost).
+    Missing sparse count categories mean zero (e.g. a curve bin lost).
+    Roles first align to a shared vocabulary using independent per-side evidence.
     Coverage, state and evidence stay on both full profiles, never subtracted.
     """
+    before, after = _align_roles(before, after)
     roots = ('library_count', 'commander_count', 'companion_count', 'types', 'lands',
              'mana_value', 'demand', 'supply', 'roles', 'odds')
     changes = []

@@ -31,12 +31,18 @@ CERTAINTY_ORDER = {'guaranteed': 0, 'optional': 1, 'conditional': 2, 'possible':
 
 # ---------- shared lookups ----------
 
+def _like_prefix(text):
+    """A LIKE pattern matching names that start with `text` taken literally: `%`, `_` and `\\` in a typed name are
+    escaped (use with ESCAPE '\\'), so they can never widen the match to a different card or deck."""
+    return text.replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_') + '%'
+
+
 def _card_row(c, name):
     row = c.execute('select * from cards where card_name=?', (name,)).fetchone()
     if row:
         return row
-    hits = [r[0] for r in c.execute('select card_name from cards where lower(card_name) like ? order by card_name limit 8',
-                                    (name.lower() + '%',))]
+    hits = [r[0] for r in c.execute("select card_name from cards where lower(card_name) like ? escape '\\' "
+                                    'order by card_name limit 8', (_like_prefix(name.lower()),))]
     if len(hits) == 1:
         return c.execute('select * from cards where card_name=?', (hits[0],)).fetchone()
     if hits:
@@ -482,7 +488,7 @@ def _resolve_deck(c, deck):
         if d.lower() == deck.strip().lower():
             return d
     hits = sorted({r[0] for r in c.execute("select deck from deck_allocations where section='Commander' and counts_in_deck_100=1 "
-                                           'and lower(card_name) like ?', (deck.strip().lower() + '%',))})
+                                           "and lower(card_name) like ? escape '\\'", (_like_prefix(deck.strip().lower()),))})
     if len(hits) == 1:
         return hits[0]
     raise LookupError(f'deck not found: {deck!r}' + (f'; commander matches several decks: {hits}' if hits else '') +

@@ -1,0 +1,8 @@
+# Profile adapter and comparison remediation
+
+These two findings were supplied by independent review; this change is remediation by the original builder, not independent acceptance. The independent review delivery must be rechecked separately. No reviewer attribution or review state is changed.
+
+1. The role-report wrapper hid the vendor method signature before the profile wrapper bound named arguments. Preserve that signature with functools.wraps rather than reorder or duplicate adapters. Tests build a synthetic KB and invoke the actual documented open_grounded_evaluator factory with default facts/policy handling, then exercise deck, compare, upgrades and smoke build through positional and keyword routes. Role-source metadata and rendered role/profile sections remain present.
+2. Missing role dictionary keys were treated as zero coverage. Align omitted roles across comparison snapshots, calculating each side from its own physical quantities and role evidence using the same counting helper as ordinary profiles. Explicit nulls remain not computed. Supported absence is zero; unknown coverage is not. Tests cover a 99-card list in both directions, full and individual swap data/display, an incomplete 98-slot cut, and missing evidence. Caller snapshots are not mutated.
+
+The regression suite fails against the pre-fix code, including the reported KeyError name/deck routes, and passes after the fixes. Inputs are synthetic; no card meaning, vendor code, inventory, verification state or recommendation algorithm changes. Current main is merged without rewriting prior branch history to retain upstream fixes; the sole documentation conflict keeps both additions.

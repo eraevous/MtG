@@ -5,7 +5,7 @@
 @ai-source-file: kb/deck_profile.py
 @ai-role: evaluator_adapter
 @ai-intent: "Make the composition consequences of a proposed list or cut inspectable without introducing another card rule engine."
-@ai-version: 0.1.0
+@ai-version: 0.1.1
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
@@ -19,3 +19,5 @@ Outputs: counts/percentages, strict printed cost demand via kb.mana, candidate p
 Unknown types suppress land odds; unknown roles never become supported roles. Role probabilities describe access to the detected supported slots, not all possible providers. Incomplete lists retain conditional supplied-list counts and odds, explicitly labelled incomplete. Size completeness is not legality. Multi-face uncertainty is preserved instead of flattening a flexible land face into an additional card. Entry hints are not opening usability. Artifact creatures producing mana are categorized as dorks; card type percentages still overlap. `other` is the complement of land/creature/enchantment/artifact among known types and therefore includes instants, sorceries, planeswalkers and battles.
 
 Tests: tests/test_deck_profile.py (synthetic only), including exact small-population arithmetic, identity and one-cut comparisons, role alias unions, typed costs, optional faces, production/entry uncertainty and rejected evidence.
+
+0.1.1: comparison snapshots align omitted roles to a shared vocabulary using each side's own physical quantities and role evidence. Unknown coverage is independently computed, never zero-filled from an absent dictionary key. Explicit not-computed nulls remain null; detected supported absence remains zero when the evidence is available. Inputs are not mutated. Regression tests cover both exchange directions, full and individual comparisons, and incomplete cuts.
