@@ -14,6 +14,7 @@ import json
 import re
 import sqlite3
 import os
+import pathlib
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -197,7 +198,7 @@ HOOK_OF = None
 
 def compare_contracts(db, kb):
     """Agreement between this registry's concepts and the 0.3.0 drafted contracts, ability by ability."""
-    kbc = sqlite3.connect(f'file:{kb}?mode=ro', uri=True)
+    kbc = sqlite3.connect(pathlib.Path(kb).resolve().as_uri() + '?mode=ro', uri=True)
     contracts = collections.defaultdict(list)
     import grammar
     for name, text, cj in kbc.execute('SELECT card_name, exact_text, contract_json FROM operation_contracts'):

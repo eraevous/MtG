@@ -139,5 +139,40 @@ class SpanAccounting(unittest.TestCase):
         self.assertEqual(comp, 'complete')
 
 
+class ReadOnlyKbOpen(unittest.TestCase):
+    """build.load_collection and metrics.compare_contracts open the KB read-only, even when its path holds '#' or '?'.
+
+    Before 2026-11-24 they built 'file:{path}?mode=ro' by hand: a '#' in the path cut the URI there, so SQLite
+    opened a truncated path read-write, dropped mode=ro, and created a stray empty database (security idle cycle).
+    """
+
+    def test_hash_in_path_is_not_truncated_and_stays_read_only(self):
+        import sqlite3
+        import tempfile
+        import build
+        import metrics
+        with tempfile.TemporaryDirectory() as d:
+            folder = os.path.join(d, 'C#kb?x')
+            os.mkdir(folder)
+            kb = os.path.join(folder, 'kb.sqlite')
+            con = sqlite3.connect(kb)
+            con.execute('CREATE TABLE external_oracle (card_name TEXT, oracle_id TEXT)')
+            con.execute("INSERT INTO external_oracle VALUES ('Sol Ring', 'oid-1')")
+            con.execute('CREATE TABLE operation_contracts (card_name TEXT, exact_text TEXT, contract_json TEXT)')
+            con.commit()
+            con.close()
+            before = sorted(os.listdir(d))
+            self.assertEqual(build.load_collection(kb), {'oid-1': 'Sol Ring'})
+            reg = sqlite3.connect(':memory:')
+            reg.executescript(
+                'CREATE TABLE concept (concept_id, dio_ref);'
+                'CREATE TABLE card (oracle_id, kb_card_name, in_collection);'
+                'CREATE TABLE ability (ability_id, oracle_id, kind, text);'
+                'CREATE TABLE part (ability_id, frame_id);'
+                'CREATE TABLE frame_concept_edge (frame_id, concept_id);')
+            metrics.compare_contracts(reg, kb)
+            self.assertEqual(sorted(os.listdir(d)), before, 'opening the KB created a stray file')
+
+
 if __name__ == '__main__':
     unittest.main()

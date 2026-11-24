@@ -11,6 +11,7 @@ import gzip
 import hashlib
 import json
 import os
+import pathlib
 import sqlite3
 import sys
 import time
@@ -56,7 +57,7 @@ def sha(s):
 
 
 def load_collection(kb):
-    con = sqlite3.connect(f'file:{kb}?mode=ro', uri=True)
+    con = sqlite3.connect(pathlib.Path(kb).resolve().as_uri() + '?mode=ro', uri=True)
     rows = con.execute('SELECT card_name, oracle_id FROM external_oracle WHERE oracle_id IS NOT NULL').fetchall()
     return {oid: name for name, oid in rows}
 
