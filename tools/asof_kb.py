@@ -57,10 +57,11 @@ def _col(header, options):
 def _rows(path):
     with open(path, newline='', encoding='utf-8-sig') as f:
         r = csv.DictReader(f)
-        name, qty = _col(r.fieldnames or [], NAME_COLS), _col(r.fieldnames or [], QTY_COLS)
+        header = r.fieldnames or []
+        name, qty = _col(header, NAME_COLS), _col(header, QTY_COLS)
         if not name:
             raise SystemExit(f'{path}: no name column (one of {NAME_COLS})')
-        deck, section, status = _col(r.fieldnames, DECK_COLS), _col(r.fieldnames, ('section',)), _col(r.fieldnames, ('status',))
+        text = {k: _col(header, opts) for k, opts in (('deck', DECK_COLS), ('section', ('section',)), ('status', ('status',)))}
         for row in r:
             n = (row.get(name) or '').strip()
             if not n:
@@ -69,9 +70,7 @@ def _rows(path):
                 q = int(float(row.get(qty) or 1)) if qty else 1
             except ValueError:
                 q = 1
-            yield {'name': n, 'qty': q, 'deck': (row.get(deck) or '').strip() if deck else '',
-                   'section': (row.get(section) or '').strip() if section else '',
-                   'status': (row.get(status) or '').strip() if status else ''}
+            yield {'name': n, 'qty': q, **{k: (row.get(col) or '').strip() if col else '' for k, col in text.items()}}
 
 
 def _resolver(c):
@@ -129,16 +128,16 @@ def build(as_of, inventory, decks=(), policy=None, out=None, base=DEFAULT_BASE):
     c.executemany('insert into keep values (?)', [(k,) for k in keep])
     tables = [n for (n,) in c.execute("select name from sqlite_master where type='table' and name not like 'card_fts%' "
                                        "and name not like 'sqlite_%'")]
+    cols = {t: {r[1] for r in c.execute(f'pragma table_info("{t}")')} for t in tables}   # schema read once; deletes keep it
     pruned = {}
     for t in tables:
-        if 'card_name' in [r[1] for r in c.execute(f'pragma table_info("{t}")')]:
+        if 'card_name' in cols[t]:
             pruned[t] = c.execute(f'delete from "{t}" where card_name not in (select card_name from keep)').rowcount
 
     # contract-keyed tables (compile_losses, validation_checks, ...) have no card_name: keep only rows of surviving contracts
     if 'operation_contracts' in tables:
         for t in tables:
-            cols = [r[1] for r in c.execute(f'pragma table_info("{t}")')]
-            if 'contract_id' in cols and 'card_name' not in cols:
+            if 'contract_id' in cols[t] and 'card_name' not in cols[t]:
                 pruned[t] = c.execute(f'delete from "{t}" where contract_id not in '
                                       '(select contract_id from operation_contracts)').rowcount
 
