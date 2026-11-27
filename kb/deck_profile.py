@@ -64,7 +64,8 @@ def demand(rows):
     conditional = Counter()
     for row in rows:
         cost = _text(row.get('Mana Cost')) if row else ''
-        if not cost or '//' in cost:
+        # Multi-face rows may keep the joined type line with only the front cost: unresolved.
+        if not cost or '//' in cost or '//' in _text(row.get('Type Line')):
             out['unknown_cards'] += 1
             continue
         parsed = parse_cost(cost)
@@ -138,7 +139,7 @@ def _role_measure(evidence, n, aliases):
             rec, quantity = entry['roles'], entry['quantity']
             if any(rec.get(r, {}).get('status') == 'supported' for r in aliases):
                 supported += quantity
-            elif not any(r in rec for r in aliases) or any(rec.get(r, {}).get('status') in ('tag_only', 'contradicted') for r in aliases):
+            elif not any(r in rec for r in aliases) or any(rec.get(r, {}).get('status') in ('tag_only', 'contradicted', 'not_in_contract') for r in aliases):
                 uncertain += quantity
     return {'supported_slots': supported, 'unknown_slots': uncertain, 'aliases': sorted(aliases),
             'percent_library': 100 * supported / n if n and supported is not None else None}

@@ -21,3 +21,5 @@ Unknown types suppress land odds; unknown roles never become supported roles. Ro
 Tests: tests/test_deck_profile.py (synthetic only), including exact small-population arithmetic, identity and one-cut comparisons, role alias unions, typed costs, optional faces, production/entry uncertainty and rejected evidence.
 
 0.1.1: comparison snapshots align omitted roles to a shared vocabulary using each side's own physical quantities and role evidence. Unknown coverage is independently computed, never zero-filled from an absent dictionary key. Explicit not-computed nulls remain null; detected supported absence remains zero when the evidence is available. Inputs are not mutated. Regression tests cover both exchange directions, full and individual comparisons, and incomplete cuts.
+
+0.1.2 (Copilot/Codex review on #62): a `not_in_contract` role (pattern detected, candidate contracts silent) counts as unknown coverage, never supported and never resolved absence. Strict demand treats any row whose type line contains `//` as unresolved, because the collection importer can keep the joined type line with only the front-face cost; this applies to library and commander demand.

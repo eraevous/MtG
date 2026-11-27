@@ -143,6 +143,16 @@ class Composition(unittest.TestCase):
         p = self.get()
         self.assertEqual(p['roles']['draw']['supported_slots'], 0)
         self.assertEqual(p['card_evidence']['Spell']['roles']['draw']['evidence']['basis'], 'text_pattern_fallback')
+    def test_not_in_contract_is_unknown_coverage_not_support_or_absence(self):
+        self.inv.records['Spell'] = {'draw': {'status': 'not_in_contract', 'evidence': {'basis': 'dio_contract'}}}
+        p = profile(self.inv, ['Spell'] * 10)
+        self.assertEqual((p['roles']['draw']['supported_slots'], p['roles']['draw']['unknown_slots']), (0, 10))
+    def test_multiface_type_line_with_front_cost_is_unresolved_demand(self):
+        d = demand([card('Sorcery // Land', '{2}{G}')])
+        self.assertEqual((d['unknown_cards'], d['known_cards'], d['colored']['G'], d['complete']), (1, 0, 0, False))
+        self.inv.cards['Leader'] = card('Creature // Land', '{C}{G}')
+        p = profile(self.inv, ['Basic'] * 10, ['Leader'])
+        self.assertFalse(p['demand']['commanders']['complete'])
 
 
 class Production(unittest.TestCase):
