@@ -1,0 +1,13 @@
+# Deterministic deck composition slice
+
+Add one reusable profile outside the pinned evaluator and attach it at existing report seams. The concrete decision it supports is whether a proposed change alters a deck's physical composition, typed printed costs, detected role access or candidate mana-source evidence. It performs no ranking or allocation.
+
+Dissent review (P-01/P-02/P-03; CHARTER 9): extending reports could silently create a second semantics engine, or turn uncertain production into opening mana guarantees. Evidence for that concern: the existing goldfish normalizes C as generic and may use C for unknown sources. Counter-evidence/alternative: reuse kb.mana for strict costs, current typed KB contracts and existing inventory fields for candidate production, inv.record() for roles, and the existing physical DeckState. No Oracle text is interpreted here. If unknowns are silently converted to certainty, composition deltas would mislead a cut decision. Test unknown types, role unions, rejected contracts, true C, optional faces and entry hints; leave opening mana availability null. All new public fixtures are synthetic.
+
+Scope left deliberately: full face/zone semantics; unconditional/conditional/fetch usable-source evaluation; timing after commander casting or tapping; additional and alternative spell costs; legality; full role coverage. Module, inventory, transfer and portfolio reports and direct unwrapped vendor/bridge consumers are not wired. Fathom integration is deferred; JSON is available without adding that dependency. Existing reports' legacy goldfish numbers are unchanged and not certified by this work.
+
+Build has a temporary internal deck; capture its physical state during the existing call and restore the wrapper in finally. This preserves multiplicity without reconstructing the vendor's deduplicated display list or rerunning its selection algorithm. As before, build on one evaluator instance must not run concurrently.
+
+Validation: focused synthetic cases plus actual evaluator/collection-adapter integration; required repository, grammar, drift and KB suites. Use KB_SKIP_REBUILD=1 only for the documented SQLite-version byte-identity exception; content rebuild stays in the repository suite. No dependency installation or repository setup changes.
+
+Display acceptance correction: the initial report renderer left important absolute metrics and individual changes in JSON only. Expand the existing display projection into labelled current/proposed and individual panels; retain all model calculations and the composition_profile JSON shape. Regression tests assert human-readable 38-to-40 land counts and probability units, incomplete cuts, and unknown timing even with equal potential source counts.

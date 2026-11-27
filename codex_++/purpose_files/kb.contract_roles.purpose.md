@@ -5,12 +5,12 @@
 @ai-source-file: kb/contract_roles.py
 @ai-role: evaluator_adapter
 @ai-intent: "Downstream consumes upstream: the evaluator's role claims come from the contracts the KB owns, with every role carrying its basis."
-@ai-version: 0.1.5
+@ai-version: 0.1.7
 @schema-version: 0.3
 @ai-generated: true
 @ai-verified: false
 @ai-risk-pii: none
-@ai-dependencies: bridge_v02, sqlite_bridge
+@ai-dependencies: bridge_v02, sqlite_bridge, ext:kb.profile_reports
 @ai-contracts: P-01, P-03, P-06
 
 ### Inputs and outputs
@@ -29,3 +29,7 @@
 - 0.1.3 (Copilot review on #42): contract roles are always `candidate` (ROLE_MAP is unreviewed; source review states stay in `contract_states`); hand labels are read independently, so a false label with no pattern hit still blocks a contract role; `tag_only`/`contradicted` stay uncertain when the contract is silent; labelled roles keep basis `human_label` on every path; deck/module/compare/upgrades/build/inventory/transfer/portfolio reports carry a roles line and `data.role_source`.
 - 0.1.4 (Codex review on #42): counter_source needs a kind-qualified event (`counter.put:+1/+1` or `counter.put:proliferate`, derived from `result.produces`); charge, loyalty, -1/-1 and other counters no longer count.
 - 0.1.5 (Copilot review on #42, second pass): a false hand label records `contradicted` only when a contract would otherwise support the role (otherwise nothing, so no false uncertainty); contract evidence keeps the prior oracle/tag evidence.
+
+- 0.1.6: open_grounded_evaluator installs the additive physical composition adapter for deck/compare/upgrades/build. Roles and pinned vendor semantics are unchanged; limitations lists are copied before extension to avoid mutating vendor shared constants. See docs/DECK_COMPOSITION_PROFILE.md for incomplete-list and data-gap semantics.
+
+0.1.7: role report wrappers preserve the underlying callable signature with functools.wraps, so the profile adapter binds positional and keyword calls through open_grounded_evaluator. Synthetic factory regressions execute deck, compare, upgrades and build while checking both role provenance and composition output.
